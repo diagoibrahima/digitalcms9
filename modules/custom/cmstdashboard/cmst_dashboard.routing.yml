@@ -1,0 +1,7 @@
+cmst_dashboard.panel_page:
+  path: '/dashboard'
+  defaults:
+    _controller: '\Drupal\cmst_dashboard\Controller\PanelController::displayPanelPage'
+    _title: 'Cmst Dashboard'
+  requirements:
+    _permission: 'access content'
