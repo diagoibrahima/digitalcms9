@@ -1,0 +1,151 @@
+aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-h-screen.tw-text-white.tw-font-semibold {
+  background-color: #036672 !important;
+  width: 260px !important;
+}
+
+.dialog-off-canvas-main-canvas {
+  background: #e5e7eb;
+}
+
+.tw-shadow.tw-text-right.tw-px-8 {
+  text-align: right !important;
+  line-height: 3em;
+  background: white;
+  border-bottom: solid 0.5px #e2e2e2;
+}
+
+.md\:tw-flex-1.tw-p-4.block-contenu {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+h1.js-quickedit-page-title {
+  line-height: 4em;
+  background: white;
+  -webkit-box-shadow: 0px 4px 4px -3px;
+          box-shadow: 0px 4px 4px -3px;
+}
+
+h1.js-quickedit-page-title {
+  line-height: 4em;
+  background: white;
+  -webkit-box-shadow: 0px 4px 4px -3px;
+          box-shadow: 0px 4px 4px -3px;
+}
+
+h1.js-quickedit-page-title span.quickedit-field {
+  margin-left: 2rem;
+  font-size: 1.5rem;
+}
+
+div#block-searchform {
+  margin: 2rem;
+}
+
+div#block-searchform [type=search] {
+  -webkit-appearance: textfield;
+  border-radius: 5px;
+  width: 360px;
+  height: 2.5rem;
+}
+
+nav#block-mainnavigation {
+  margin: 20px 20px;
+}
+
+nav#block-mainnavigation ul li {
+  line-height: 2.5em;
+  font-weight: normal;
+}
+
+form#search-block-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100% !important;
+}
+
+div#edit-actions {
+  line-height: 2.5rem;
+  margin: 0px 20px;
+}
+
+div#edit-actions #edit-submit {
+  border-radius: 5px !important;
+  width: 100px !important;
+  color: white !important;
+  background: linear-gradient(45deg, #10b981, #059669) !important;
+  border: cornsilk !important;
+}
+
+div#datatable_wrapper {
+  margin: 2rem;
+}
+
+div#block-views-block-course-liste-block-1 {
+  margin: 1.5rem;
+}
+
+div#block-views-block-course-liste-block-1 .tw-item-card {
+  height: 166px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+  border-radius: 0.5rem;
+  border-width: 1px;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+div#block-views-block-course-liste-block-1 .tw-item-card p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+div#block-views-block-course-liste-block-1 .tw-item-card:hover {
+  -webkit-box-shadow: 1px 0px 7px gainsboro;
+          box-shadow: 1px 0px 7px gainsboro;
+}
+
+div#block-views-block-course-liste-block-1 .tw-item-card .numberomodul {
+  font-size: 0.8rem !important;
+  color: gray;
+}
+
+.md\:tw-flex-1.tw-p-4.block-contenu {
+  background: #f3f4f6;
+}
+
+tr.color-edite-countrie td:nth-child(3) {
+  color: #149b2c !important;
+}
+
+tr.color-edite-user td:nth-child(4) {
+  color: #149b2c !important;
+}
+
+nav#block-mainnavigation ul li:hover {
+  background: #05505c;
+}
+
+nav#block-mainnavigation ul li:active {
+  background: #05505c;
+}
+
+div#block-addanewcourse {
+  position: absolute;
+  z-index: 9999;
+  right: 7%;
+  margin: 20px;
+}
+
+div#block-addanewcourse a.tw-action-new.tw-btn.tw-btn-primary {
+  background: linear-gradient(45deg, #10b981, #059669);
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  -webkit-box-shadow: 0px 1px 3px #5d3b3b;
+          box-shadow: 0px 1px 3px #5d3b3b;
+}
+/*# sourceMappingURL=style.css.map */

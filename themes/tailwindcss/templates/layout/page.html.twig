@@ -63,13 +63,9 @@
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="md:tw-flex tw--mx-4">
-      <div class="md:tw-flex-1 tw-p-4">
-        {{ page.content }}
-      </div>{# /.layout-content #}
-
+    <div class="md:tw-flex tw--mx-4"> {##}
       {% if page.sidebar_first %}
-        <aside class="md:tw-w-1/4 tw-p-4" role="complementary">
+        <aside class="md:tw-w-1/4 tw-p-4 tw-bg-green-500 tw-h-screen tw-text-white tw-font-semibold" role="complementary">
           {{ page.sidebar_first }}
         </aside>
       {% endif %}
@@ -79,6 +75,10 @@
           {{ page.sidebar_second }}
         </aside>
       {% endif %}
+
+       <div class="md:tw-flex-1 tw-p-4 block-contenu">
+        {{ page.content }}
+      </div>{# /.layout-content #}
     </div>
   </main>
 
