@@ -26,11 +26,6 @@ h1.js-quickedit-page-title {
           box-shadow: 0px 4px 4px -3px;
 }
 
-h1.js-quickedit-page-title span.quickedit-field {
-  margin-left: 2rem;
-  font-size: 1.5rem;
-}
-
 div#block-searchform {
   margin: 2rem;
 }
@@ -151,8 +146,6 @@ a.tw-action-new.tw-btn.tw-btn-primary {
   padding: 10px;
   border-radius: 5px;
   color: white;
-  -webkit-box-shadow: 0px 1px 3px #5d3b3b;
-          box-shadow: 0px 1px 3px #5d3b3b;
   position: absolute;
   top: -90px;
   right: 2em;
@@ -164,5 +157,29 @@ a.tw-action-new.tw-btn.tw-btn-primary:hover {
 
 .add-course-btn {
   top: -80px !important;
+}
+
+article.contextual-region.node {
+  margin: 2rem;
+  background: white;
+  -webkit-box-shadow: 1px 1px 6px #23161640;
+          box-shadow: 1px 1px 6px #23161640;
+  border-radius: 5px;
+  padding: 15px;
+  width: 65%;
+}
+
+div#block-filsdariane {
+  padding: 2rem 0rem 0rem 2rem;
+  color: gray;
+}
+
+div#block-views-block-module-et-sub-block-1-2 {
+  margin: 2rem;
+}
+
+div#block-views-block-module-et-sub-block-1-2 h3 {
+  background: red;
+  line-height: 2rem;
 }
 /*# sourceMappingURL=style.css.map */
