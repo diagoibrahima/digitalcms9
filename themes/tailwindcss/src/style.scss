@@ -18,17 +18,12 @@ aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-h-screen.tw-text-white.tw-font-sem
     margin: 0px !important;
     padding: 0px !important;
   }
-  h1.js-quickedit-page-title {
-   
-    line-height: 4em;
-    background: white;
-    box-shadow: 0px 4px 4px -3px;
-  }
+ 
 
 
 h1.js-quickedit-page-title {
  
-    line-height: 4em;
+    line-height: 3em;
     background: white;
     box-shadow: 0px 4px 4px -3px;
 
@@ -86,30 +81,7 @@ div#datatable_wrapper {
 div#block-views-block-course-liste-block-1 {
   margin: 1.5rem;
 
-  .tw-item-card {
-    height: 166px;
-    --tw-bg-opacity: 1;
-    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-    --tw-border-opacity: 1;
-    border-color: rgba(229, 231, 235, var(--tw-border-opacity));
-    border-radius: 0.5rem;
-    border-width: 1px;
-    padding: 1rem;
-    margin: 0.5rem;
 
-    p {
-      font-size: 0.875rem;
-      line-height: 1.25rem;
-  }
-&:hover {
-    box-shadow: 1px 0px 7px gainsboro;
-}
-.numberomodul {
-  font-size: 0.8rem !important;
-  color: gray;
-}
-
-}
 }
 
 .md\:tw-flex-1.tw-p-4.block-contenu {
@@ -132,18 +104,75 @@ nav#block-mainnavigation ul li:active {
   background: #05505c;
 }
 
-div#block-addanewcourse {
-  position: absolute;
-  z-index: 2;
-  right: 7%;
-  margin: 20px;
 
-  a.tw-action-new.tw-btn.tw-btn-primary {
-    background: linear-gradient(45deg, #10b981, #059669);
-    padding: 10px;
-    border-radius: 5px;
-    color: white;
-    box-shadow: 0px 1px 3px #5d3b3b;
+
+nav#block-tailwindcss-tools li {
+  margin: 20px;
 }
+
+h1.js-quickedit-page-title {
+  font-size: 1.5rem !important;
+  padding-left: 2rem !important;
 }
+
+.tw-item-card {
+
+  height: 166px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+  border-radius: 0.5rem;
+  border-width: 1px;
+  padding: 1rem;
+  margin: 0.5rem;
+  position: relative;
+
+  p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+&:hover {
+  box-shadow: 1px 0px 7px gainsboro;
+}
+.numberomodul {
+font-size: 0.8rem !important;
+color: gray;
+margin-right: 6rem;
+}
+
+.section-button-course {
+  position: absolute;
+  bottom: 10px !important;
+}
+
+}
+.views-view-grid.horizontal.cols-4.clearfix {
+  margin: 1.5rem;
+}
+
+
+
+a.tw-action-new.tw-btn.tw-btn-primary {
+  background: linear-gradient(45deg, #10b981, #059669);
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0px 1px 3px #5d3b3b;
+  position: absolute;
+  top: -90px;
+  right: 2em;
+
+  &:hover {
+    background: linear-gradient(
+45deg
+,#00ffaa,#014731);
+  }
+
+}
+
+.add-course-btn{
+  top: -80px !important;
+}
+
 
