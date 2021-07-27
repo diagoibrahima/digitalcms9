@@ -1,0 +1,11 @@
+name: Libraries Provider Font Awesome
+type: module
+description: Defines fontawesome as library to be used with libraries provider.
+Package: Libraries
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+# Information added by Drupal.org packaging script on 2021-01-05
+version: '8.x-5.15001'
+project: 'lp_fontawesome'
+datestamp: 1609868767
