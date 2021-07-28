@@ -182,4 +182,8 @@ div#block-views-block-module-et-sub-block-1-2 h3 {
   background: red;
   line-height: 2rem;
 }
+
+span.link-text {
+  font-weight: initial;
+}
 /*# sourceMappingURL=style.css.map */
