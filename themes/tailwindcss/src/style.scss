@@ -175,7 +175,7 @@ a.tw-action-new.tw-btn.tw-btn-primary {
 article.contextual-region.node {
   margin: 2rem;
   background: white;
-  box-shadow: 1px 1px 6px #23161640;
+  box-shadow: 1px 1px 6px #2316161a;
   border-radius: 5px;
   padding: 15px;
   width: 65%;
@@ -189,13 +189,97 @@ div#block-filsdariane {
 div#block-views-block-module-et-sub-block-1-2 {
   margin: 2rem;
 
-  h3{
-    background: red;
-    line-height: 2rem;
-  }
+  
 }
 
 
 span.link-text {
   font-weight: initial;
+}
+
+.blockmodule-des > h3 {
+  color: gray;
+  background: white;
+  line-height: 5rem;
+  width: 70%;
+  font-size: 1.5rem;
+  font-weight: 200;
+  padding: 0px 20px;
+  border-bottom:1px solid  #80808036 ;
+  position: relative;
+
+  &:hover{
+    background:rgb(238, 251, 245);
+  }
+  
+ 
+}
+
+.blockmodule-des > div {
+  display: none;
+} 
+
+
+.blockmodule-des-open > div {
+
+  width: 70% !important;
+  background:rgb(238, 251, 245) !important;
+  padding: 5px 20px !important;
+
+  a:hover {
+    color: blue;
+}
+}
+
+
+.blockmodule-des-modale  {
+  opacity: 0 !important;
+}
+
+svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 {
+  position: absolute;
+  right: 1%;
+  margin: 25px 20px;
+}
+
+.colore-black{
+  background:rgb(238, 251, 245) !important;
+}
+
+.ch-rotation{
+  transform: rotate(180deg) !important;
+}
+
+span.expandall-minimizeall-button.cursor-pointer {
+  color: blue;
+  line-height: 2rem;
+}
+
+
+.tw-btn-action-new {
+  border-width: 2px;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  min-height: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding: 0rem 3rem;
+  color: #149b2c;
+
+  &:hover{
+    color: #ffffff;
+    background: #149b2c;
+  }
+}
+
+.tw-btn-action-new {
+  --tw-border-opacity: 1;
+  border-color: rgba(16, 185, 129, var(--tw-border-opacity));
+  border-radius: 0.5rem;
+  border-style: dashed;
+}
+.tw-h-16 {
+  height: 4rem;
 }
