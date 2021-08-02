@@ -253,6 +253,7 @@ svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.tex
 span.expandall-minimizeall-button.cursor-pointer {
   color: blue;
   line-height: 2rem;
+  cursor: pointer;
 }
 
 
@@ -270,7 +271,10 @@ span.expandall-minimizeall-button.cursor-pointer {
 
   &:hover{
     color: #ffffff;
-    background: #149b2c;
+    background: linear-gradient(
+      45deg
+      ,#00ffaa,#014731);
+    border-style:hidden;
   }
 }
 
