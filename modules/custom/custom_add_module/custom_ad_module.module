@@ -1,0 +1,24 @@
+<?php
+/**
+ * @file
+ * File for writing module related helper functions
+ */
+
+ use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implement hook_entity_presave()
+ */
+
+ function add_module_type_node_presave($node){
+    if($node->hasField('field_course')){
+        $status= $node->get('status')->getValue()[0]['value'];
+        $identity = $_GET['cours'];
+        $entityType = 'Course';
+        $entity = \Drupal::entityTypeManager()->getStorage($entityType)->load($identity);
+
+        $node->set('field_course'),$entity);
+
+    }
+ 
+ }
