@@ -55,7 +55,7 @@ form#search-block-form {
 
 div#edit-actions {
   line-height: 2.5rem;
-  margin: 0px 20px;
+  margin: 10px 20px;
 }
 
 div#edit-actions #edit-submit {
@@ -126,10 +126,14 @@ h1.js-quickedit-page-title {
           box-shadow: 1px 0px 7px gainsboro;
 }
 
-.tw-item-card .numberomodul {
+.tw-item-card span.section-buttom {
+  line-height: 70px;
+}
+
+.tw-item-card span.section-buttom .numberomodul {
   font-size: 0.8rem !important;
   color: gray;
-  margin-right: 6rem;
+  margin-right: 5rem;
 }
 
 .tw-item-card .section-button-course {
@@ -198,10 +202,12 @@ span.link-text {
   background: #eefbf5;
 }
 
+/* 
 .blockmodule-des > div {
-  display: none;
-}
+display: none;
+} 
 
+*/
 .blockmodule-des-open > div {
   width: 70% !important;
   background: #eefbf5 !important;
@@ -267,5 +273,110 @@ span.expandall-minimizeall-button.cursor-pointer {
 
 .tw-h-16 {
   height: 4rem;
+}
+
+.listes-courses > a {
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+div#block-views-block-module-liste-block-1 {
+  margin: 2em;
+}
+
+.blockmodule-titre-module {
+  color: gray;
+  background: white;
+  line-height: 5rem;
+  width: 70%;
+  font-size: 1.5rem;
+  font-weight: 200;
+  padding: 0px 20px;
+  border-bottom: 1px solid #80808036;
+  position: relative;
+}
+
+.blockmodule-titre-module:hover {
+  background: #eefbf5;
+}
+
+.blockmodule-submodule {
+  width: 70%;
+}
+
+.blockmodule-submodule .blockmodule-titre-submodule {
+  width: 70%;
+}
+
+.blockmodule-submodule .blockmodule-titre-submodule:hover {
+  color: blue;
+}
+
+form#node-course-form {
+  margin-top: 40px;
+}
+
+.js-form-item.form-item.js-form-type-vertical-tabs.form-item-.js-form-item-.form-no-label {
+  display: none;
+}
+
+div#block-tailwindcss-content {
+  margin-top: 30px;
+}
+
+.js-form-item.form-item.js-form-type-textfield.form-item-title-0-value.js-form-item-title-0-value,
+.js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-course-0-target-id.js-form-item-field-course-0-target-id,
+.js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-module-0-target-id.js-form-item-field-module-0-target-id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 95%;
+  margin: auto;
+  padding: 15px 0px;
+}
+
+input#edit-preview {
+  display: none;
+}
+
+.js-form-item.form-item.js-form-type-checkbox.form-item-status-value.js-form-item-status-value {
+  display: none;
+}
+
+form#node-course-form, form#node-module-form, form#node-sub-module-form {
+  margin-top: 40px;
+  background: white;
+  width: 80%;
+  margin: auto;
+  -webkit-box-shadow: 0px 1px 4px 1px #02020221;
+          box-shadow: 0px 1px 4px 1px #02020221;
+  border-radius: 0.25rem;
+  height: 300px;
+}
+
+form#node-course-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value, form#node-module-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value, form#node-sub-module-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value {
+  width: 95%;
+  margin: auto;
+}
+
+form#node-course-form textarea, form#node-module-form textarea, form#node-sub-module-form textarea {
+  overflow: auto;
+  border: 1px #a0aebf solid;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+form#node-course-form input#edit-title-0-value, form#node-course-form input#edit-field-course-0-target-id, form#node-course-form input#edit-field-module-0-target-id, form#node-module-form input#edit-title-0-value, form#node-module-form input#edit-field-course-0-target-id, form#node-module-form input#edit-field-module-0-target-id, form#node-sub-module-form input#edit-title-0-value, form#node-sub-module-form input#edit-field-course-0-target-id, form#node-sub-module-form input#edit-field-module-0-target-id {
+  border-radius: 0.25rem;
+  line-height: 2;
+}
+
+form#node-module-form, form#node-sub-module-form {
+  height: 400px !important;
 }
 /*# sourceMappingURL=style.css.map */
