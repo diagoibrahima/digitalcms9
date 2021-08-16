@@ -236,9 +236,11 @@ display: none;
   width: 75% !important;
   background:rgb(238, 251, 245) !important;
   padding: 5px 20px !important;
-
-  a:hover {
-    color: blue;
+  .blockmodule-description-submodule{
+    &:hover {
+      color: rgb(17, 150, 238);
+  }
+ 
 }
 }
 
@@ -339,12 +341,15 @@ div#block-views-block-module-liste-block-1 {
 
 .blockmodule-submodule {
   width: 70%;
+ 
 
   .blockmodule-titre-submodule{
+    font-size: 18px;
+    font-weight: 500;
+    color: gray;
+    padding: 10px 0px;
     width: 70%;
-    &:hover {
-      color: blue;
-    }
+    
   }
 }
 form#node-course-form {
@@ -362,7 +367,8 @@ div#block-tailwindcss-content {
 
 .js-form-item.form-item.js-form-type-textfield.form-item-title-0-value.js-form-item-title-0-value ,
 .js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-course-0-target-id.js-form-item-field-course-0-target-id , 
-.js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-module-0-target-id.js-form-item-field-module-0-target-id{
+.js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-module-0-target-id.js-form-item-field-module-0-target-id ,
+.js-form-item.form-item.js-form-type-textfield.form-item-field-message-0-value.js-form-item-field-message-0-value{
   display: flex;
   flex-direction: column;
   width: 95%;
@@ -381,7 +387,7 @@ input#edit-preview {
   display: none;
 }
 
-form#node-course-form ,form#node-module-form ,form#node-sub-module-form ,.node-course__edit-form {
+form#node-course-form ,form#node-module-form ,form#node-sub-module-form ,.node-course__edit-form , .node-form{
   margin-top: 40px;
   background: white;
   width: 80%;
@@ -402,7 +408,7 @@ form#node-course-form ,form#node-module-form ,form#node-sub-module-form ,.node-c
     width: 100%;
 }
 
-input#edit-title-0-value , input#edit-field-course-0-target-id ,input#edit-field-module-0-target-id{
+input#edit-title-0-value , input#edit-field-course-0-target-id ,input#edit-field-module-0-target-id ,input#edit-field-message-0-value{
   border-radius: 0.25rem;
   line-height: 2;
 }
@@ -439,4 +445,51 @@ form#node-module-form ,form#node-sub-module-form{
   }
  
   
+}
+
+.blockmodule-description-submodule {
+  border: 1px solid #80808063;
+  padding: 20px;
+  margin: 20px 0px;
+}
+
+form#node-sub-module-edit-form {
+  height: 330px;
+}
+
+/*
+.views-col {
+  position: relative;
+
+  a.addcourseoncard {
+    position: absolute;
+    right: -68%;
+  }
+}
+
+*/
+
+.views-col.col-1.addcourse-blank .tw-item-card {
+  color: green;
+  border: 2px solid #059669;
+  border-style: dashed;
+  position: relative;
+  cursor: pointer !important;
+
+  &:hover{
+
+  color: rgb(255, 255, 255);
+  border: 2px solid #059669;
+  background:#059669 !important;
+  cursor: pointer !important;
+
+  }
+
+
+  a.addcoursebutton {
+    position: absolute;
+    margin: auto;
+    top: 40%;
+    left: 30%;
+}
 }
