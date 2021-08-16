@@ -83,6 +83,7 @@ div#block-views-block-course-liste-block-1 {
 
 .md\:tw-flex-1.tw-p-4.block-contenu {
   background: rgb(243, 244, 246);
+  position: relative;
 }
 
 
@@ -184,7 +185,7 @@ article.contextual-region.node {
   box-shadow: 1px 1px 6px #2316161a;
   border-radius: 5px;
   padding: 15px;
-  width: 65%;
+  width: 70%;
 }
 
 div#block-filsdariane {
@@ -226,11 +227,13 @@ display: none;
 } 
 
 */
+.blockmodule-titre-module-green{
+  background:rgb(238, 251, 245) !important;
+}
 
+.blockmodule-submodule {
 
-.blockmodule-des-open > div {
-
-  width: 70% !important;
+  width: 75% !important;
   background:rgb(238, 251, 245) !important;
   padding: 5px 20px !important;
 
@@ -244,10 +247,16 @@ display: none;
   opacity: 0 !important;
 }
 
-svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 {
+.expand-minimize-button{
   position: absolute;
   right: 1%;
   margin: 25px 20px;
+  cursor: pointer;
+  z-index: 99999999999999999999999 !important;
+}
+
+.blockmodule-titre-module > a {
+  z-index: -1 !important;
 }
 
 .colore-black{
@@ -259,9 +268,12 @@ svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.tex
 }
 
 span.expandall-minimizeall-button.cursor-pointer {
-  color: blue;
+  color: rgba(59, 131, 246, 0.931);
   line-height: 2rem;
   cursor: pointer;
+  position:absolute;
+  top: -35px;
+  left: 67%;
 }
 
 
@@ -276,6 +288,8 @@ span.expandall-minimizeall-button.cursor-pointer {
   padding-bottom: 1rem;
   padding: 0rem 3rem;
   color: #149b2c;
+  margin: 6rem 1rem;
+  width: 21.5%;
 
   &:hover{
     color: #ffffff;
@@ -311,7 +325,7 @@ div#block-views-block-module-liste-block-1 {
   color: gray;
   background: white;
   line-height: 5rem;
-  width: 70%;
+  width: 75%;
   font-size: 1.5rem;
   font-weight: 200;
   padding: 0px 20px;
@@ -367,7 +381,7 @@ input#edit-preview {
   display: none;
 }
 
-form#node-course-form ,form#node-module-form ,form#node-sub-module-form {
+form#node-course-form ,form#node-module-form ,form#node-sub-module-form ,.node-course__edit-form {
   margin-top: 40px;
   background: white;
   width: 80%;
@@ -397,4 +411,32 @@ input#edit-title-0-value , input#edit-field-course-0-target-id ,input#edit-field
 }
 form#node-module-form ,form#node-sub-module-form{
   height: 400px !important;
+}
+
+.seconde-side-bar {
+  position: absolute;
+  right: 0;
+  top: 150px;
+}
+
+.tw-p-3 {
+  padding: .75rem!important;
+  margin: 0 3rem 0rem 0rem;
+  text-align: center;
+}
+
+
+
+
+.contextual-region.js-view-dom-id-66ad6204a8e45abc4904582549c94ff60f90b8350b29b31028a79a806abbddd4 >header {
+  display: none;
+}
+.tw-grid.tw-grid-cols-4.tw-gap-1.tw-place-items-stretch>p {
+  color: #5656568f;
+
+  &:hover{
+    color: #149b2c;
+  }
+ 
+  
 }
