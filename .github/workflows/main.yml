@@ -8,11 +8,12 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
 
-    - name: Copy folder content recursively to remote
+    - name: copy file via ssh password
       uses: appleboy/scp-action@master
       with:
-        local: /modules
-        remote: /home/dev/web/drupal-dev-lms.wcar-t4d.info/public_html
         host: ${{ secrets.HOST }}
         username: ${{ secrets.SSH_USER }}
         password: ${{ secrets.PASSWORD }}
+        port: 22
+        source: ""
+        target: "/home/dev/web/drupal-dev-lms.wcar-t4d.info/public_html"
