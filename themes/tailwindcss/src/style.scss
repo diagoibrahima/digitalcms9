@@ -470,7 +470,7 @@ form#node-sub-module-edit-form {
 */
 
 .views-col.col-1.addcourse-blank .tw-item-card {
-  color: green;
+  color: #059669;
   border: 2px solid #059669;
   border-style: dashed;
   position: relative;
@@ -492,4 +492,14 @@ form#node-sub-module-edit-form {
     top: 40%;
     left: 30%;
 }
+}
+a.addcoursebutton:before {
+  content: '';
+  position: absolute;
+  height: 164px;
+  width: 225px;
+  background: red;
+  top: -66px;
+  right: -69px;
+  opacity: 0;
 }
