@@ -1,13 +1,12 @@
-on: push
-name: 🚀 Deploy website on push
+name: scp files
+on: [push]
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v2
-
+    - uses: actions/checkout@master
     - name: copy file via ssh password
       uses: appleboy/scp-action@master
       with:
@@ -15,5 +14,5 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         password: ${{ secrets.PASSWORD }}
         port: 22
-        source: "./"
+        source: "testedb.sql"
         target: "/home/dev/web/drupal-dev-lms.wcar-t4d.info/public_html"
