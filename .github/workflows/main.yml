@@ -15,5 +15,5 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         password: ${{ secrets.PASSWORD }}
         port: 22
-        source: ""
+        source: "./"
         target: "/home/dev/web/drupal-dev-lms.wcar-t4d.info/public_html"
