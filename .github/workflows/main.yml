@@ -16,3 +16,4 @@ jobs:
         port: 22
         source: "./*"
         target: "/home/dev/web/drupal-dev-lms.wcar-t4d.info/public_html"
+        strip_components: 1
