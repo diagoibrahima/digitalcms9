@@ -10,8 +10,8 @@ jobs:
     - name: copy file via ssh password
       uses: Flaavius/ssh-commands@1.0
       with:
-        local: testedb.sql
-        remote: /home/dev/web/drupal-dev-lms.wcar-t4d.info/public_html
+        command: scp testedb.sql /home/dev/web/drupal-dev-lms.wcar-t4d.info/public_html/
         host: ${{ secrets.HOST }}
         username: ${{ secrets.SSH_USER }}
         password: ${{ secrets.PASSWORD }}
+        port: 22
