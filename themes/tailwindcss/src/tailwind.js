@@ -1,91 +1,26 @@
-
-//var number = parseInt(jQuery('.numberofmodule').text());
-//number==0 || number==1 ?  jQuery('.numberofmodule').append('module'):jQuery('.numberofmodule').append('modules')
-//var numberofmodule = jQuery('.views-label-field-modulelibele').text('Nbmodule').length;
-//console.log(numberofmodule);
-//jQuery('.item-list').append(numberofmodule+"nombre de module");
 jQuery(document).ready(function() {
 
+ jQuery('.blockmodule-submodule').hide();
+ jQuery('<h1 class="titre-cms-translation">CMS Translation</h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name'); 
+ jQuery('<i class="fa fa-fw fa-user"></i>').insertBefore('input#edit-name');
+ jQuery('<i class="fa fa-fw fa-lock"></i>').insertBefore('input#edit-pass');
+ jQuery('.views-view-grid.horizontal.cols-4.clearfix .views-row').last().append('<div class="views-col col-1 addcourse-blank" style="width: 25%;"><div class="views-field views-field-nothing"><span class="field-content"><div class=" tw-item-card "><a href="node/add/course_" class="addcoursebutton" tabindex="-1">New Course</a></div></div> ');
+ jQuery('#edit-name').attr('placeholder','  Username');
+ jQuery('#edit-pass').attr('placeholder','  Password');
 
-  //jQuery('<div class="courer">').insertBefore('.listes-courses > a');
- 
- // jQuery('</div>').insertAfter('.item-list');
+  // Expand switch for one single learning module 
+  jQuery('.module-section').click(function(){
+  var moduleIndex = jQuery(this).index();
+  jQuery('.field-content:eq('+moduleIndex+') .blockmodule-submodule').toggle('fast');
+  jQuery('.field-content:eq('+moduleIndex+') .fa-chevron-down').toggleClass( 'ch-rotation' );
+  jQuery('.field-content:eq('+moduleIndex+') .blockmodule-titre-module').addClass('blockmodule-titre-module-green');
+  });
 
-
- //jQuery('.listes-courses > a').prependTo('.item-list');
-
-    
-
-    
-
-        
-
-       
-
-
-
- //jQuery('#edit-submit').val('Create');
- jQuery('.js-form-item.form-item.js-form-type-textfield.form-item-title-0-value.js-form-item-title-0-value label').html('Label');
-
-    jQuery('.item-list').each(function()
-    {
-      var totmarks=0;
-
-    //  console.log(this); 
-
-        jQuery(this).find('.views-label').each(function()
-        {
-     
-
-      var marks = jQuery(this).text();
-    
-       
-          
-           if (marks.length!==0)
-            {
-              totmarks+=parseFloat(marks);
-              //console.log(totmarks);
-             
-            }
-        });
-        console.log(totmarks);
-       
-        if(totmarks == 0 || totmarks == 1){
-
-           jQuery(this).find('ul').html(totmarks  +' Module');
-        }
-       else
-       jQuery(this).find('ul').html(totmarks  +' Modules');
-       
-    });
-
-   
-
-
-
-
-
-
-
-
-
-        jQuery('.blockmodule-des>h3').append('<i class="expand-minimize-button fas text-light text-xl font-thin text-gray-400 fa-chevron-down"></i>');
-        jQuery('.blockmodule-des>h3 , .fa-chevron-down , .expandall-minimizeall-button').click(function() {
-        jQuery('.blockmodule-des').addClass('blockmodule-des-open');
-        jQuery('.contextual').addClass('blockmodule-des-modale');
-    });
-
-    jQuery('.blockmodule-des>h3 , .fa-chevron-down ').click(function() {
-    jQuery('.blockmodule-des>div').toggle();
-    jQuery('h3').toggleClass( 'colore-black' ); 
-    jQuery('.fa-chevron-down').toggleClass( 'ch-rotation' );
-
-    });
-
-
+      // Expand All 
     jQuery('.expandall-minimizeall-button').click(function() {
-    jQuery('.blockmodule-des>div').toggle();
+    jQuery('.blockmodule-submodule').toggle('fast');
     jQuery('h3').toggleClass( 'colore-black' ); 
+    jQuery('.blockmodule-titre-module').addClass('blockmodule-titre-module-green');
     jQuery('.fa-chevron-down').toggleClass( 'ch-rotation' );
     var expand = (jQuery('.expandall-minimizeall-button').text());
     expand == "Expand all" ?  jQuery('.expandall-minimizeall-button').text('Minimize') : jQuery('.expandall-minimizeall-button').text('Expand all')

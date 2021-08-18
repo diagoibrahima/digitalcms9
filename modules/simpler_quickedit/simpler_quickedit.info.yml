@@ -1,0 +1,12 @@
+name: Simpler Quickedit
+description: Improve the user experience of accessing the in place editor
+package: User interface
+type: module
+core_version_requirement: ^8.8 || ^9
+dependencies:
+  - drupal:quickedit
+
+# Information added by Drupal.org packaging script on 2021-04-23
+version: '1.0.2'
+project: 'simpler_quickedit'
+datestamp: 1619186617

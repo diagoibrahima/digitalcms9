@@ -1,0 +1,13 @@
+field.formatter.third_party.simpler_quickedit.info:
+  type: mapping
+  label: 'Simpler quickedit settings'
+  mapping:
+    click:
+      type: boolean
+      label: Simple Click
+    edit:
+      type: boolean
+      label: Quickedit button
+    editHover:
+      type: boolean
+      label: Quickedit button on hover

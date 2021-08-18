@@ -1,4 +1,8 @@
-aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-h-screen.tw-text-white.tw-font-semibold {
+body {
+  background: #e5e7eb !important;
+}
+
+aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
   background-color: #036672 !important;
   width: 260px !important;
 }
@@ -62,7 +66,7 @@ div#edit-actions #edit-submit {
   border-radius: 5px !important;
   width: 100px !important;
   color: white !important;
-  background: linear-gradient(45deg, #10b981, #059669) !important;
+  background: linear-gradient(45deg, #10b981, #059669);
   border: cornsilk !important;
 }
 
@@ -76,6 +80,7 @@ div#block-views-block-course-liste-block-1 {
 
 .md\:tw-flex-1.tw-p-4.block-contenu {
   background: #f3f4f6;
+  position: relative;
 }
 
 tr.color-edite-countrie td:nth-child(3) {
@@ -145,13 +150,27 @@ h1.js-quickedit-page-title {
   margin: 1.5rem;
 }
 
+.contextual-region.js-view-dom-id-b82e9ab7de4495462d18a5cca39c676a79b2cecc4b4c668ea533ec13fd66e43d a.tw-action-new.tw-btn.tw-btn-primary {
+  background: linear-gradient(45deg, #10b981, #059669);
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  position: absolute;
+  top: -90px !important;
+  right: 2em;
+}
+
+.contextual-region.js-view-dom-id-b82e9ab7de4495462d18a5cca39c676a79b2cecc4b4c668ea533ec13fd66e43d a.tw-action-new.tw-btn.tw-btn-primary:hover {
+  background: linear-gradient(45deg, #00ffaa, #014731);
+}
+
 a.tw-action-new.tw-btn.tw-btn-primary {
   background: linear-gradient(45deg, #10b981, #059669);
   padding: 10px;
   border-radius: 5px;
   color: white;
   position: absolute;
-  top: -90px;
+  top: 62px !important;
   right: 2em;
 }
 
@@ -170,7 +189,7 @@ article.contextual-region.node {
           box-shadow: 1px 1px 6px #2316161a;
   border-radius: 5px;
   padding: 15px;
-  width: 65%;
+  width: 70%;
 }
 
 div#block-filsdariane {
@@ -208,24 +227,34 @@ display: none;
 } 
 
 */
-.blockmodule-des-open > div {
-  width: 70% !important;
+.blockmodule-titre-module-green {
+  background: #eefbf5 !important;
+}
+
+.blockmodule-submodule {
+  width: 75% !important;
   background: #eefbf5 !important;
   padding: 5px 20px !important;
 }
 
-.blockmodule-des-open > div a:hover {
-  color: blue;
+.blockmodule-submodule .blockmodule-description-submodule:hover {
+  color: #1196ee;
 }
 
 .blockmodule-des-modale {
   opacity: 0 !important;
 }
 
-svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 {
+.expand-minimize-button {
   position: absolute;
   right: 1%;
   margin: 25px 20px;
+  cursor: pointer;
+  z-index: 99999999999999999999999 !important;
+}
+
+.blockmodule-titre-module > a {
+  z-index: -1 !important;
 }
 
 .colore-black {
@@ -238,9 +267,12 @@ svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.tex
 }
 
 span.expandall-minimizeall-button.cursor-pointer {
-  color: blue;
+  color: rgba(59, 131, 246, 0.931);
   line-height: 2rem;
   cursor: pointer;
+  position: absolute;
+  top: -48px;
+  left: 67%;
 }
 
 .tw-btn-action-new {
@@ -256,6 +288,8 @@ span.expandall-minimizeall-button.cursor-pointer {
   padding-bottom: 1rem;
   padding: 0rem 3rem;
   color: #149b2c;
+  margin: 6rem 0rem;
+  width: 21.5%;
 }
 
 .tw-btn-action-new:hover {
@@ -289,7 +323,7 @@ div#block-views-block-module-liste-block-1 {
   color: gray;
   background: white;
   line-height: 5rem;
-  width: 70%;
+  width: 75%;
   font-size: 1.5rem;
   font-weight: 200;
   padding: 0px 20px;
@@ -306,11 +340,11 @@ div#block-views-block-module-liste-block-1 {
 }
 
 .blockmodule-submodule .blockmodule-titre-submodule {
+  font-size: 18px;
+  font-weight: 500;
+  color: gray;
+  padding: 10px 0px;
   width: 70%;
-}
-
-.blockmodule-submodule .blockmodule-titre-submodule:hover {
-  color: blue;
 }
 
 form#node-course-form {
@@ -327,7 +361,8 @@ div#block-tailwindcss-content {
 
 .js-form-item.form-item.js-form-type-textfield.form-item-title-0-value.js-form-item-title-0-value,
 .js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-course-0-target-id.js-form-item-field-course-0-target-id,
-.js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-module-0-target-id.js-form-item-field-module-0-target-id {
+.js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-module-0-target-id.js-form-item-field-module-0-target-id,
+.js-form-item.form-item.js-form-type-textfield.form-item-field-message-0-value.js-form-item-field-message-0-value {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -348,7 +383,7 @@ input#edit-preview {
   display: none;
 }
 
-form#node-course-form, form#node-module-form, form#node-sub-module-form {
+form#node-course-form, form#node-module-form, form#node-sub-module-form, .node-course__edit-form, .node-form {
   margin-top: 40px;
   background: white;
   width: 80%;
@@ -359,24 +394,233 @@ form#node-course-form, form#node-module-form, form#node-sub-module-form {
   height: 300px;
 }
 
-form#node-course-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value, form#node-module-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value, form#node-sub-module-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value {
+form#node-course-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value, form#node-module-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value, form#node-sub-module-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value, .node-course__edit-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value, .node-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value {
   width: 95%;
   margin: auto;
 }
 
-form#node-course-form textarea, form#node-module-form textarea, form#node-sub-module-form textarea {
+form#node-course-form textarea, form#node-module-form textarea, form#node-sub-module-form textarea, .node-course__edit-form textarea, .node-form textarea {
   overflow: auto;
   border: 1px #a0aebf solid;
   border-radius: 0.25rem;
   width: 100%;
 }
 
-form#node-course-form input#edit-title-0-value, form#node-course-form input#edit-field-course-0-target-id, form#node-course-form input#edit-field-module-0-target-id, form#node-module-form input#edit-title-0-value, form#node-module-form input#edit-field-course-0-target-id, form#node-module-form input#edit-field-module-0-target-id, form#node-sub-module-form input#edit-title-0-value, form#node-sub-module-form input#edit-field-course-0-target-id, form#node-sub-module-form input#edit-field-module-0-target-id {
+form#node-course-form input#edit-title-0-value, form#node-course-form input#edit-field-course-0-target-id, form#node-course-form input#edit-field-module-0-target-id, form#node-course-form input#edit-field-message-0-value, form#node-course-form .js-form-item, form#node-module-form input#edit-title-0-value, form#node-module-form input#edit-field-course-0-target-id, form#node-module-form input#edit-field-module-0-target-id, form#node-module-form input#edit-field-message-0-value, form#node-module-form .js-form-item, form#node-sub-module-form input#edit-title-0-value, form#node-sub-module-form input#edit-field-course-0-target-id, form#node-sub-module-form input#edit-field-module-0-target-id, form#node-sub-module-form input#edit-field-message-0-value, form#node-sub-module-form .js-form-item, .node-course__edit-form input#edit-title-0-value, .node-course__edit-form input#edit-field-course-0-target-id, .node-course__edit-form input#edit-field-module-0-target-id, .node-course__edit-form input#edit-field-message-0-value, .node-course__edit-form .js-form-item, .node-form input#edit-title-0-value, .node-form input#edit-field-course-0-target-id, .node-form input#edit-field-module-0-target-id, .node-form input#edit-field-message-0-value, .node-form .js-form-item {
   border-radius: 0.25rem;
   line-height: 2;
 }
 
 form#node-module-form, form#node-sub-module-form {
   height: 400px !important;
+}
+
+.seconde-side-bar {
+  position: absolute;
+  right: 0;
+  top: 150px;
+}
+
+.tw-p-3 {
+  padding: 0.75rem !important;
+  margin: 0 2rem 0rem 1rem;
+  text-align: center;
+}
+
+.contextual-region.js-view-dom-id-66ad6204a8e45abc4904582549c94ff60f90b8350b29b31028a79a806abbddd4 > header {
+  display: none;
+}
+
+.tw-grid.tw-grid-cols-4.tw-gap-1.tw-place-items-stretch > p {
+  color: #5656568f;
+}
+
+.tw-grid.tw-grid-cols-4.tw-gap-1.tw-place-items-stretch > p:hover {
+  color: #149b2c;
+}
+
+.blockmodule-description-submodule {
+  border: 1px solid #80808063;
+  padding: 20px;
+  margin: 20px 0px;
+}
+
+form#node-sub-module-edit-form {
+  height: 330px;
+}
+
+/*
+.views-col {
+  position: relative;
+
+  a.addcourseoncard {
+    position: absolute;
+    right: -68%;
+  }
+}
+
+*/
+.views-col.col-1.addcourse-blank .tw-item-card {
+  color: #059669;
+  border: 2px solid #059669;
+  border-style: dashed;
+  position: relative;
+  cursor: pointer !important;
+}
+
+.views-col.col-1.addcourse-blank .tw-item-card:hover {
+  color: white;
+  border: 2px solid #059669;
+  background: #059669 !important;
+  cursor: pointer !important;
+}
+
+.views-col.col-1.addcourse-blank .tw-item-card a.addcoursebutton {
+  position: absolute;
+  margin: auto;
+  top: 40%;
+  left: 30%;
+}
+
+a.addcoursebutton:before {
+  content: '';
+  position: absolute;
+  height: 164px;
+  width: 225px;
+  background: red;
+  top: -66px;
+  right: -69px;
+  opacity: 0;
+}
+
+.contextual-toolbar-tab.toolbar-tab {
+  left: 92%;
+  background: #ff0000;
+  position: absolute;
+}
+
+/*
+nav#toolbar-bar , div#toolbar-item-administration-tray ,li.menu-item.menu-item--expanded , li.menu-item , #toolbar-administration, #toolbar-administration *{
+  background: #036672;
+}
+
+#toolbar-administration, #toolbar-administration * {
+  box-sizing: border-box;
+  color: white;
+}
+
+#toolbar-administration, #toolbar-administration *:hover {
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+}
+*/
+article.contextual-region.node:before {
+  content: '';
+  background: #c7c3c3;
+  height: 550px;
+  width: 1px;
+  position: absolute;
+  right: -18px;
+  top: 0;
+}
+
+.listee-des-module-sub-module {
+  margin-top: 60px !important;
+}
+
+#edit-delete {
+  border-radius: 5px !important;
+  width: 100px !important;
+  color: white !important;
+  background: linear-gradient(45deg, #e53e3e, #e53e3e) !important;
+  border: cornsilk !important;
+  padding: 10px;
+}
+
+.dialog-off-canvas-main-canvas {
+  background: #e5e7eb;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dialog-off-canvas-main-canvas form#user-login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #e5e7eb;
+  margin-top: 100px;
+}
+
+.dialog-off-canvas-main-canvas form#user-login-form div#edit-actions {
+  line-height: 2.5rem;
+  margin: 10px 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.dialog-off-canvas-main-canvas form#user-login-form .js-form-item {
+  text-align: center;
+}
+
+.dialog-off-canvas-main-canvas form#user-login-form .svg-inline--fa.fa-fw {
+  width: 1.25em;
+  margin: 0px 15px;
+  color: #adb5bd;
+}
+
+.dialog-off-canvas-main-canvas form#user-login-form label {
+  display: none;
+}
+
+.dialog-off-canvas-main-canvas form#user-login-form:before {
+  content: '';
+  background: #e5e7eb;
+  position: absolute;
+  height: 130px;
+  width: 100%;
+  top: 0;
+}
+
+.dialog-off-canvas-main-canvas form#user-login-form input#edit-submit {
+  background: #6174d1 !important;
+  width: 25% !important;
+  margin-left: 51px;
+}
+
+.dialog-off-canvas-main-canvas form#user-login-form input {
+  line-height: 3;
+  border-radius: 0.25rem;
+  width: 60%;
+}
+
+.dialog-off-canvas-main-canvas form#user-login-form div#edit-name--description, .dialog-off-canvas-main-canvas form#user-login-form div#edit-pass--description {
+  opacity: 0;
+}
+
+.dialog-off-canvas-main-canvas form#user-login-form h1.titre-cms-translation {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 40px 0px;
+  color: #4B5366;
+  margin-left: 50px;
+}
+
+.md\:tw-flex-1.tw-p-4.block-contenu {
+  min-height: 650px;
 }
 /*# sourceMappingURL=style.css.map */
