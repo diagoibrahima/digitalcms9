@@ -2,7 +2,7 @@ on: push
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: 🎉 Deploying cmst translation
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
