@@ -9,7 +9,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Copy folder content recursively to remote
-      uses: garygrossgarten/github-action-scp@v0.7.3
+      uses: garygrossgarten/github-action-scp@release
       with:
         local: diagoibrahima
         remote: /home/dev/web/drupal-dev-lms.wcar-t4d.info/public_html
