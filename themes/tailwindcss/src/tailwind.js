@@ -1,8 +1,12 @@
 jQuery(document).ready(function() {
 
-  jQuery('.blockmodule-submodule').hide();
-
-  jQuery('.views-view-grid.horizontal.cols-4.clearfix .views-row').last().append('<div class="views-col col-1 addcourse-blank" style="width: 25%;"><div class="views-field views-field-nothing"><span class="field-content"><div class=" tw-item-card "><a href="node/add/course_" class="addcoursebutton" tabindex="-1">New Course</a></div></div> ');
+ jQuery('.blockmodule-submodule').hide();
+ jQuery('<h1 class="titre-cms-translation">CMS Translation</h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name'); 
+ jQuery('<i class="fa fa-fw fa-user"></i>').insertBefore('input#edit-name');
+ jQuery('<i class="fa fa-fw fa-lock"></i>').insertBefore('input#edit-pass');
+ jQuery('.views-view-grid.horizontal.cols-4.clearfix .views-row').last().append('<div class="views-col col-1 addcourse-blank" style="width: 25%;"><div class="views-field views-field-nothing"><span class="field-content"><div class=" tw-item-card "><a href="node/add/course_" class="addcoursebutton" tabindex="-1">New Course</a></div></div> ');
+ jQuery('#edit-name').attr('placeholder','  Username');
+ jQuery('#edit-pass').attr('placeholder','  Password');
 
   // Expand switch for one single learning module 
   jQuery('.module-section').click(function(){
