@@ -7,10 +7,19 @@ jQuery(document).ready(function() {
  jQuery('.views-view-grid.horizontal.cols-4.clearfix .views-row').last().append('<div class="views-col col-1 addcourse-blank" style="width: 25%;"><div class="views-field views-field-nothing"><span class="field-content"><div class=" tw-item-card "><a href="node/add/course_" class="addcoursebutton" tabindex="-1">New Course</a></div></div> ');
  jQuery('#edit-name').attr('placeholder','  Username');
  jQuery('#edit-pass').attr('placeholder','  Password');
+ jQuery('input[type="search"]').attr('placeholder','  Search');
+ jQuery('span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer').click(function(){
+  console.log(this.text());
+  jQuery('.tw-switch-editing-button').toggleClass( 'turneditone' );
+
+ });
+ 
+
 
   // Expand switch for one single learning module 
   jQuery('.module-section').click(function(){
-  var moduleIndex = jQuery(this).index();
+  var moduleIndex = jQuery(this).index()+2;
+  console.log(moduleIndex);
   jQuery('.field-content:eq('+moduleIndex+') .blockmodule-submodule').toggle('fast');
   jQuery('.field-content:eq('+moduleIndex+') .fa-chevron-down').toggleClass( 'ch-rotation' );
   jQuery('.field-content:eq('+moduleIndex+') .blockmodule-titre-module').addClass('blockmodule-titre-module-green');
