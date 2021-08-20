@@ -1,0 +1,43 @@
+<?php
+
+function course_update_form_alter(&$form, &$form_state, $form_id) {
+
+
+//$entity_type='course';
+//$entity = \Drupal::entityTypeManager()->getStorage('node')->load($id);
+//$entity = \Drupal::entityTypeManager()->getStorage($entity_type)->load($id);
+ //print_r($form_id);
+ //print_r($id);
+if ($form_id == 'node_module_form') {
+/*
+$nid  = \Drupal::request()->query->get('coursid');
+
+if (is_numeric($nid) && isset($form['field_course'])) {
+      //autocomplete select field references
+      $form['field_course']['widget']['#default_value'] = $nid;
+      //disable field
+      $form['field_course']['#disabled'] = TRUE;
+      //pass my ID like argument in my field to filter only pages referenced
+      $form['field_course']['widget']['target_id']['#selection_settings']['view']['arguments'][] = $nid;
+    }*/
+
+//$nid = $_GET['coursid'];
+//$node = \Drupal\node\Entity\Node::load($nid);
+//$node_reference_field_name = \Drupal\node\Entity\Node::load($nid);
+//$coursename = $node->getTitle();
+//$ref = $node->getTitle().'('.$nid.')';
+/*
+    $form['field_course'] = array(
+      '#type' => 'textfield',
+      '#title' => t('New article'),
+      '#markup' => t('Entity referrence'),
+      '#value' => $node->getTitle().'('.$nid.')',
+    );
+*/
+
+/*$form['field_course']['nid']['nid']['#value']  = $node_reference_field_name->Libele; 
+  return $form;
+*/
+}
+
+}

@@ -1,0 +1,60 @@
+/* As not using contextual links, we don't need all the visual indicators on all fields we can edit */
+.quickedit-field.quickedit-highlighted,
+.quickedit-form.quickedit-highlighted,
+.quickedit-field .quickedit-highlighted,
+.quickedit-field.quickedit-editable,
+.quickedit-field .quickedit-editable {
+  box-shadow: none;
+  cursor: default;
+}
+
+.quickedit-form.quickedit-editing,
+.quickedit-field.quickedit-editing {
+  box-shadow: 0 0 0 1px #74b7ff, 0 0 0 2px #007fff;
+}
+
+/* Edit */
+
+/* Click*/
+.quickedit-field.simpler_quickedit_click {
+  cursor: pointer;
+}
+
+/* Pencil */
+.simpler_quickedit-element{
+  position: relative;
+}
+
+.simpler_quickedit-do {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+
+.contextual .trigger:hover {
+  background-image: url(../../../../core/misc/icons/787878/pencil.svg);
+}
+.contextual .trigger {
+  width: 26px !important;
+  height: 26px !important;
+  text-indent: -9999px;
+  background-image: url(../../../../core/misc/icons/bebebe/pencil.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 16px 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 13px;
+  background-color: #fff;
+  background-attachment: scroll;
+}
+
+.simpler_quickedit-editHover .contextual {
+  display: none;
+}
+.simpler_quickedit-editHover:hover .contextual {
+  display: block;
+}

@@ -60,8 +60,6 @@ $silicium_offer = (isset($config['silicium_offer']) AND !empty($config['silicium
 public function blockValidate($form, FormStateInterface $form_state) {
     
     $silicium_offer = $form_state->getValue('panel_block_silicium_offer');
-
-    
     
   }
 

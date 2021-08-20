@@ -1,0 +1,8 @@
+simpler_quickedit.base:
+  js:
+    js/simpler_quickedit.js: {}
+  css:
+    theme:
+      css/simpler_quickedit.css: {}
+  dependencies:
+    - quickedit/quickedit

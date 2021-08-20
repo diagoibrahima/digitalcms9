@@ -64,21 +64,17 @@
 
 .paragraphs-dragdrop__item {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   position: relative;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 100%;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   min-height: var(--dnd-item-min-height);
@@ -156,7 +152,6 @@
 .paragraphs-dragdrop__item .paragraphs-summary-wrapper,
 .paragraphs-dragdrop__item .paragraphs-dragdrop-wrapper {
   -webkit-box-flex: 1;
-  -webkit-flex: 1 0 calc(100% - var(--dnd-icon-size));
       -ms-flex: 1 0 calc(100% - var(--dnd-icon-size));
           flex: 1 0 calc(100% - var(--dnd-icon-size));
   width: calc(100% - var(--dnd-icon-size));
@@ -164,11 +159,9 @@
 
 .paragraphs-dragdrop__item .paragraphs-summary-wrapper {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   height: 1.538em;
@@ -178,7 +171,6 @@
 
 .paragraphs-dragdrop__handle {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   position: absolute;
@@ -186,14 +178,11 @@
   bottom: 0;
   left: 0;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 var(--dnd-icon-size);
       -ms-flex: 0 0 var(--dnd-icon-size);
           flex: 0 0 var(--dnd-icon-size);
-  -webkit-align-self: stretch;
-      -ms-flex-item-align: stretch;
-          align-self: stretch;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   width: var(--dnd-icon-size);
@@ -206,9 +195,8 @@
 [dir="rtl"] .paragraphs-dragdrop__handle {
   right: 0;
   left: auto;
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .sortable-chosen > .paragraphs-dragdrop__handle {
@@ -259,3 +247,4 @@
   padding: 0 0.5em;
   line-height: 1.538em;
 }
+/*# sourceMappingURL=paragraphs.dragdrop.css.map */

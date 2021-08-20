@@ -1,0 +1,15 @@
+course.createcourse:
+  path: '/create-course'
+  defaults:
+    #_form: '\Drupal\course\Form\CourseForm'
+     _controller: 'Drupal\course\Controller\CourseController::createCourse'
+     title: 'Create Course'
+  requirements:
+    _permission: 'access content'
+
+course.getCourseList:
+  path: '/course-list'
+  defaults:
+    _controller: '\Drupal\course\Controller\CourseController::getCourseList'
+  requirements:
+    _permission: 'access content'
