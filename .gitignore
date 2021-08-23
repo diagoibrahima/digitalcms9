@@ -49,7 +49,6 @@
 /.htaccess
 /autoload.php
 /example.gitignore
-/index.php
 /LICENSE.txt
 /README.txt
 /robots.txt
