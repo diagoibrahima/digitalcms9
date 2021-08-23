@@ -46,13 +46,13 @@
 /.eslintignore
 /.eslintrc.json
 /.gitattributes
-/.htaccess
-/autoload.php
-/example.gitignore
-/LICENSE.txt
-/README.txt
-/robots.txt
-/update.php
+#/.htaccess
+#/autoload.php
+#/example.gitignore
+#/LICENSE.txt
+#/README.txt
+#/robots.txt
+#/update.php
 /web.config
 
 /.vscode/
