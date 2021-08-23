@@ -635,7 +635,7 @@ td.edite-button-countrie.views-field.views-field-edit-node, .edite-button {
 }
 
 article.node footer {
-  display: none;
+  display: none !important;
 }
 
 .node-content div div:nth-child(1) {
@@ -658,7 +658,7 @@ form#user-login-form:after {
   content: '';
   background: #e4e7eb;
   width: 100%;
-  height: 378px;
+  height: 575px;
   position: absolute;
   bottom: 0;
 }
