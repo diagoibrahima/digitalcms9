@@ -1,0 +1,85 @@
+<?php
+
+/**
+ * @file
+ * Simpler quickedit module.
+ */
+
+use Drupal\Core\Entity\Entity\EntityViewDisplay;
+
+/**
+ * Implements hook_field_formatter_settings_summary_alter().
+ */
+function simpler_quickedit_field_formatter_settings_summary_alter(&$summary, $context) {
+  if ($context['formatter']->getThirdPartySetting('simpler_quickedit', 'click')) {
+    $summary[] = t('Quickedit through click');
+  }
+  if ($context['formatter']->getThirdPartySetting('simpler_quickedit', 'edit')) {
+    $summary[] = t('Quickedit through always visible edit button');
+  }
+  if ($context['formatter']->getThirdPartySetting('simpler_quickedit', 'editHover')) {
+    $summary[] = t('Quickedit through edit button visible on hover');
+  }
+}
+
+/**
+ * Implements hook_field_formatter_third_party_settings_form().
+ */
+function simpler_quickedit_field_formatter_third_party_settings_form($plugin, $field_definition, $view_mode, $form, $form_state) {
+  $element = [];
+
+  $element['click'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Quickedit through click'),
+    '#default_value' => $plugin->getThirdPartySetting('simpler_quickedit', 'click'),
+  ];
+
+  $element['edit'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Quickedit through edit button always visible'),
+    '#default_value' => $plugin->getThirdPartySetting('simpler_quickedit', 'edit'),
+  ];
+
+  $element['editHover'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Quickedit through edit button visible on hover'),
+    '#default_value' => $plugin->getThirdPartySetting('simpler_quickedit', 'editHover'),
+  ];
+
+  return $element;
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function simpler_quickedit_preprocess_field(&$variables) {
+  $entity = $variables['element']['#object'];
+  $view_mode = $variables['element']['#view_mode'];
+  $field_name = $variables['element']['#field_name'];
+  // Drill down to field formatter settings.
+  $render_display = EntityViewDisplay::collectRenderDisplay($entity, $view_mode);
+  $field_display = $render_display->getComponent($field_name);
+
+  // Add simpler quick edit library.
+  if (isset($field_display['third_party_settings']['simpler_quickedit'])) {
+    $addLibrary = FALSE;
+    if ($field_display['third_party_settings']['simpler_quickedit']['click']) {
+      $variables['attributes']['class'][] = 'simpler_quickedit_click';
+      $addLibrary = TRUE;
+    }
+    if ($field_display['third_party_settings']['simpler_quickedit']['edit']) {
+      $variables['attributes']['class'][] = 'simpler_quickedit_edit';
+      $addLibrary = TRUE;
+    }
+    if ($field_display['third_party_settings']['simpler_quickedit']['editHover']) {
+      $variables['attributes']['class'][] = 'simpler_quickedit_editHover';
+      $addLibrary = TRUE;
+    }
+    if ($addLibrary) {
+      $variables['attributes']['class'][] = 'simpler_quickedit';
+      $variables['#attached']['library'][] = 'simpler_quickedit/simpler_quickedit.base';
+    }
+  }
+
+  // Should we remove quickedit from other fields?
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,uBAAuB,CAAC;EACtB,gBAAgB,EAAE,OAAO;CAC1B",
+    "sources": [
+        "paragraphs.unpublished.scss"
+    ],
+    "names": [],
+    "file": "paragraphs.unpublished.css"
+}

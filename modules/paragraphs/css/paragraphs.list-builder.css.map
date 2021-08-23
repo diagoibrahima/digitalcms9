@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,qBAAqB,CAAC;EACpB,KAAK,EAAE,IAAI;CAIZ;;AALD,AAEE,qBAFmB,CAEnB,GAAG,CAAC;EACF,OAAO,EAAE,KAAK;CACf",
+    "sources": [
+        "paragraphs.list-builder.scss"
+    ],
+    "names": [],
+    "file": "paragraphs.list-builder.css"
+}
