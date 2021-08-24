@@ -44,13 +44,13 @@ turneoff == "Turn editing on" ?  jQuery('.tw-switch-editing-button').text('Turn 
 
 
 
- // Expand switch for one single learning module 
+ // for to add automatic Moduler number for exmple Module : 1 ......Module N 
  jQuery('.module-section').each(function(){
   
   var moduleIndexee = jQuery(this).index();
   console.log(moduleIndexee);
 
-  jQuery(this).find('.blockmodule-titre-module span').html('Module '+moduleIndexee+':');
+  jQuery(this).find('.blockmodule-titre-module span').html('Module '+moduleIndexee+': ');
  
 
   });
