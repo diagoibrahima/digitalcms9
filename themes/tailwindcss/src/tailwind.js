@@ -23,7 +23,7 @@ turneoff == "Turn editing on" ?  jQuery('.tw-switch-editing-button').text('Turn 
   // Expand switch for one single learning module 
   jQuery('.module-section').click(function(){
   var moduleIndex = jQuery(this).index()+2;
-  console.log(moduleIndex);
+ 
   jQuery('.field-content:eq('+moduleIndex+') .blockmodule-submodule').toggle('fast');
   jQuery('.field-content:eq('+moduleIndex+') .fa-chevron-down').toggleClass( 'ch-rotation' );
   jQuery('.field-content:eq('+moduleIndex+') .blockmodule-titre-module').addClass('blockmodule-titre-module-green');
@@ -41,3 +41,16 @@ turneoff == "Turn editing on" ?  jQuery('.tw-switch-editing-button').text('Turn 
     });
 
 });
+
+
+
+ // Expand switch for one single learning module 
+ jQuery('.module-section').each(function(){
+  
+  var moduleIndexee = jQuery(this).index();
+  console.log(moduleIndexee);
+
+  jQuery(this).find('.blockmodule-titre-module span').html('Module '+moduleIndexee+':');
+ 
+
+  });
