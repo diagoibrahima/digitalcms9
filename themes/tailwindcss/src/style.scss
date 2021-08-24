@@ -656,3 +656,23 @@ article.contextual-region.node:before {
   min-height: 650px;
 }
 
+.add-module{
+
+color: #149b2c;
+border: solid 2px;
+border-style: dashed;
+border-radius: 8px;
+line-height: 3;
+text-align: center;
+width: 80%;
+margin: auto 20px;
+position: absolute;
+z-index: 10;
+padding: 0px;
+
+}
+a.use-ajax{
+    padding-left: 63%;
+    color: #191818;
+    background: #eefbf5;
+}
