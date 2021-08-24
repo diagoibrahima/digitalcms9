@@ -287,7 +287,6 @@ display: none;
 
 .colore-black{
   background:rgb(238, 251, 245) !important;
-    width: 75%;
 }
 
 .ch-rotation{
@@ -476,7 +475,7 @@ form#node-module-form ,form#node-sub-module-form{
 .blockmodule-description-submodule {
   border: 1px solid #80808063;
   padding: 20px;
- 
+  margin: 20px 0px;
 }
 
 form#node-sub-module-edit-form {
@@ -761,25 +760,4 @@ span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2
 45deg
 ,#00ffaa,#009a69);
   color: white !important;
-}
-
-.add-module{
-
-color: #149b2c;
-border: solid 2px;
-border-style: dashed;
-border-radius: 8px;
-line-height: 3;
-text-align: center;
-width: 80%;
-margin: auto 20px;
-position: absolute;
-z-index: 10;
-padding: 0px;
-
-}
-a.use-ajax{
-    padding-left: 63%;
-    color: #191818;
-    background: #eefbf5;
 }
