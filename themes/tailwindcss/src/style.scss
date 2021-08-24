@@ -287,6 +287,7 @@ display: none;
 
 .colore-black{
   background:rgb(238, 251, 245) !important;
+  width: 75%;
 }
 
 .ch-rotation{
@@ -472,9 +473,12 @@ form#node-module-form ,form#node-sub-module-form{
 }
 
 .blockmodule-description-submodule {
-  border: 1px solid #80808063;
+   padding: 20px; 
+
+}
+.message{
+ border: 1px solid #80808063;
   padding: 20px;
-  margin: 20px 0px;
 }
 
 form#node-sub-module-edit-form {
@@ -675,3 +679,34 @@ a.use-ajax{
     color: #191818;
     background: #eefbf5;
 }
+
+.breadcum{
+margin-left: 4%;
+margin-bottom: -3%;
+margin-top: 3%;
+color: #4B5366;
+}
+.node-content{
+.quickedit-field {
+a {
+    --tw-text-opacity: 1;
+    color: rgba(107, 114, 128, var(--tw-text-opacity));} 
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 300;
+}
+}
+
+.add-translation{
+color: #149b2c;
+border: solid 2px;
+border-style: dashed;
+border-radius: 8px;
+line-height: 3;
+text-align: center;
+width: 25%;
+margin-left: 5%;
+z-index: 10;
+
+}
+
