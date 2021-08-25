@@ -14,9 +14,9 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
       env:
-        DB_NAME: ${{ DB_NAME }}
-        DB_USER: ${{ DB_USER }}
-        DB_PASSWORD: ${{ DB_PASSWORD }}
+        DB_NAME: ${{ secrets.DB_NAME }}
+        DB_USER: ${{ secrets.DB_USER }}
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
 
     - name: Copy folder content recursively to remote
       uses: garygrossgarten/github-action-scp@release
