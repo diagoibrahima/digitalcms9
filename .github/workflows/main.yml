@@ -2,7 +2,9 @@ on:
   pull_request:
     branches:
       - main
-  
+
+
+
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -11,6 +13,10 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
+      env:
+        DB_NAME: ${{ DB_NAME }}
+        DB_USER: ${{ DB_USER }}
+        DB_PASSWORD: ${{ DB_PASSWORD }}
 
     - name: Copy folder content recursively to remote
       uses: garygrossgarten/github-action-scp@release
