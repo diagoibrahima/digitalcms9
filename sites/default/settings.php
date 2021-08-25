@@ -796,12 +796,12 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
    include $app_root . '/' . $site_path . '/settings.local.php';
  }
 $databases['default']['default'] = array (
-  'database' => 'cmstranslation',
-  'username' => 'root',
-  'password' => '',
+  'database' => getenv("DB_NAME"),
+  'username' => getenv("DB_USER"),
+  'password' => getenv("DB_PASSWORD"),
   'prefix' => '',
   'host' => 'localhost',
-  'port' => '3306',
+  'port' => '',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
