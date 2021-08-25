@@ -797,7 +797,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  }
 $databases['default']['default'] = array (
   'database' => 'dev_drupal_lms',
-  'username' => 'root',
+  'username' => 'dev_drupal_lms',
   'password' => '',
   'prefix' => '',
   'host' => 'localhost',
