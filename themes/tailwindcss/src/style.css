@@ -625,7 +625,7 @@ article.contextual-region.node:before {
 }
 
 .md\:tw-flex-1.tw-p-4.block-contenu {
-  min-height: 650px;
+  min-height: 1000px;
 }
 
 .add-module {
@@ -680,5 +680,23 @@ a.use-ajax {
 
 .activitylogMessage {
   margin-top: 28%;
+}
+
+form#user-login-form:after {
+  content: '';
+  background: #e4e7eb;
+  position: absolute;
+  height: 227px;
+  width: 100%;
+  z-index: 99999999999999999999;
+  bottom: 0;
+}
+
+nav#block-logout ul {
+  margin-left: 1.2rem;
+}
+
+nav#block-logout svg {
+  opacity: 0;
 }
 /*# sourceMappingURL=style.css.map */
