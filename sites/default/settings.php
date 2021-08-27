@@ -795,6 +795,19 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
    include $app_root . '/' . $site_path . '/settings.local.php';
  }
+/*
+$databases['default']['default'] = array (
+  'database' => 'dev_drupal_lms',
+  'username' => 'dev_drupal_lms',
+  'password' => 'dev_drupal_lms',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
+*/
+
 $databases['default']['default'] = array (
   'database' => 'dev_drupal_lms',
   'username' => 'dev_drupal_lms',

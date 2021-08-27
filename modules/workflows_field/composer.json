@@ -1,0 +1,16 @@
+{
+  "name": "drupal/workflows_field",
+  "type": "drupal-module",
+  "description": "Workflows Field",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/workflows_field",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/workflows_field",
+    "source": "https://git.drupalcode.org/project/workflows_field"
+  },
+  "require": {
+    "drupal/core": "^8.9 || ^9"
+  }
+}
