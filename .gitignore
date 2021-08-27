@@ -1,4 +1,4 @@
-#/node_modules
+/node_modules
 
 /module/contrib/
 /profiles/contrib/
@@ -32,7 +32,7 @@
 /sites/simpletest
 
 # Ignore drupal core (if not versioning drupal sources)
-/core
+#/core
 /modules/README.txt
 /profiles/README.txt
 /sites/README.txt
