@@ -162,24 +162,6 @@ span.section-buttom {
 }
 
 
- 
-.contextual-region.js-view-dom-id-b82e9ab7de4495462d18a5cca39c676a79b2cecc4b4c668ea533ec13fd66e43d a.tw-action-new.tw-btn.tw-btn-primary {
-  background: linear-gradient(45deg, #10b981, #059669);
-  padding: 10px;
-  border-radius: 5px;
-  color: white;
-  position: absolute;
-  top: -90px !important;
-  right: 2em;
-
-  &:hover {
-    background: linear-gradient(
-45deg
-,#00ffaa,#014731);
-  }
-
-}
-
 
 a.tw-action-new.tw-btn.tw-btn-primary {
   background: linear-gradient(45deg, #10b981, #059669);
@@ -187,8 +169,9 @@ a.tw-action-new.tw-btn.tw-btn-primary {
   border-radius: 5px;
   color: white;
   position: absolute;
-  top: 62px !important;
+  top: 11px !important;
   right: 2em;
+  z-index: 9999999999;
 
   &:hover {
     background: linear-gradient(
@@ -419,7 +402,7 @@ form#node-course-form ,form#node-module-form ,form#node-sub-module-form ,.node-c
   margin: auto;
   box-shadow: 0px 1px 4px 1px #02020221;
   border-radius:0.25rem;
-  height: 300px;
+  height: 380px;
 
   .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value {
     width: 95%;
@@ -720,7 +703,7 @@ form#user-login-form:after {
   content: '';
   background: #e4e7eb;
   position: absolute;
-  height: 227px;
+  height: 576px;
   width: 100%;
   z-index: 99999999999999999999;
   bottom: 0;
