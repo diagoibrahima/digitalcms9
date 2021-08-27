@@ -796,9 +796,9 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
    include $app_root . '/' . $site_path . '/settings.local.php';
  }
 $databases['default']['default'] = array (
-  'database' => getenv("DB_NAME"),
-  'username' => getenv("DB_USER"),
-  'password' => getenv("DB_PASSWORD"),
+  'database' => 'dev_drupal_lms',
+  'username' => 'dev_drupal_lms',
+  'password' => 'dev_drupal_lms',
   'prefix' => '',
   'host' => 'localhost',
   'port' => '',
