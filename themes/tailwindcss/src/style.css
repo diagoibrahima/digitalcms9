@@ -696,7 +696,12 @@ nav#block-logout ul {
   margin-left: 1.2rem;
 }
 
-nav#block-logout svg {
+nav#block-logout ul li a svg:nth-child(1) {
   opacity: 0;
+}
+
+svg.svg-inline--fa.fa-sign-in-alt.fa-w-16.logout-menu {
+  margin-right: 5px;
+  margin-left: -20px;
 }
 /*# sourceMappingURL=style.css.map */
