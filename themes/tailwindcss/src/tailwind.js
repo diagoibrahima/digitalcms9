@@ -8,6 +8,8 @@ jQuery(document).ready(function() {
  jQuery('#edit-name').attr('placeholder','  Username');
  jQuery('#edit-pass').attr('placeholder','  Password');
 
+ jQuery('<i class="fa fa-sign-in logout-menu" aria-hidden="true"></i>').insertBefore('nav#block-logout ul li a span');
+
   // Expand switch for one single learning module 
   jQuery('.module-section').click(function(){
   var moduleIndex = jQuery(this).index();
