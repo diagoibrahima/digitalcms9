@@ -156,7 +156,7 @@ a.tw-action-new.tw-btn.tw-btn-primary {
   border-radius: 5px;
   color: white;
   position: absolute;
-  top: 11px !important;
+  top: 60px !important;
   right: 2em;
   z-index: 9999999999;
 }
@@ -169,7 +169,7 @@ a.tw-action-new.tw-btn.tw-btn-primary:hover {
   top: -80px !important;
 }
 
-article.contextual-region.node {
+article.node {
   margin: 2rem;
   background: white;
   -webkit-box-shadow: 1px 1px 6px #2316161a;
@@ -505,7 +505,7 @@ nav#toolbar-bar , div#toolbar-item-administration-tray ,li.menu-item.menu-item--
   color: rgb(0, 0, 0);
 }
 */
-article.contextual-region.node:before {
+article.node:before {
   content: '';
   background: #c7c3c3;
   height: 550px;
