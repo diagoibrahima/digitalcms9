@@ -186,7 +186,7 @@ a.tw-action-new.tw-btn.tw-btn-primary {
 }
 
 
-article.contextual-region.node {
+article.node {
   margin: 2rem;
   background: white;
   box-shadow: 1px 1px 6px #2316161a;
@@ -538,7 +538,7 @@ nav#toolbar-bar , div#toolbar-item-administration-tray ,li.menu-item.menu-item--
 */
 
 
-article.contextual-region.node:before {
+article.node:before {
   content: '';
   background: #c7c3c3;
   height: 550px;
