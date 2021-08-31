@@ -10,6 +10,7 @@ jQuery(document).ready(function() {
 
  jQuery('<i class="fa fa-sign-in logout-menu" aria-hidden="true"></i>').insertBefore('nav#block-logout ul li a span');
 
+ jQuery('option[value="_none"]').remove();
   // Expand switch for one single learning module  old
   /*
   jQuery('.module-section').click(function(){
