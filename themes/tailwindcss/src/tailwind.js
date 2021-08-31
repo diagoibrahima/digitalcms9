@@ -10,13 +10,25 @@ jQuery(document).ready(function() {
 
  jQuery('<i class="fa fa-sign-in logout-menu" aria-hidden="true"></i>').insertBefore('nav#block-logout ul li a span');
 
-  // Expand switch for one single learning module 
+  // Expand switch for one single learning module  old
+  /*
   jQuery('.module-section').click(function(){
   var moduleIndex = jQuery(this).index();
   jQuery('.field-content:eq('+moduleIndex+') .blockmodule-submodule').toggle('fast');
   jQuery('.field-content:eq('+moduleIndex+') .fa-chevron-down').toggleClass( 'ch-rotation' );
   jQuery('.field-content:eq('+moduleIndex+') .blockmodule-titre-module').addClass('blockmodule-titre-module-green');
   });
+*/
+
+  // Expand switch for one single learning module  new
+  jQuery('.listee-des-module-sub-module').click(function(){
+
+    var moduleIndex = jQuery(this).parent().index();
+    console.log(moduleIndex);
+    jQuery('.blockmodule-titre-module:eq('+moduleIndex+') .blockmodule-submodule').toggle('fast');
+    jQuery('.field-content:eq('+moduleIndex+') .fa-chevron-down').toggleClass( 'ch-rotation' );
+    jQuery('.field-content:eq('+moduleIndex+') .blockmodule-titre-module').addClass('blockmodule-titre-module-green');
+    });
 
       // Expand All 
     jQuery('.expandall-minimizeall-button').click(function() {

@@ -179,6 +179,10 @@ article.node {
   width: 70%;
 }
 
+article.node footer {
+  display: none;
+}
+
 div#block-filsdariane {
   padding: 2rem 0rem 0rem 2rem;
   color: gray;
@@ -517,6 +521,7 @@ article.node:before {
 
 .listee-des-module-sub-module {
   margin-top: 60px !important;
+  position: relative;
 }
 
 #edit-delete {
@@ -653,6 +658,13 @@ a.use-ajax {
   color: rgba(107, 114, 128, var(--tw-text-opacity));
 }
 
+.node-content div div:nth-child(1) {
+  color: gray;
+  font-size: 25px;
+  font-weight: 100;
+  margin: 5px auto;
+}
+
 .add-translation {
   color: #149b2c;
   border: solid 2px;
@@ -690,5 +702,13 @@ nav#block-logout ul li a svg:nth-child(1) {
 svg.svg-inline--fa.fa-sign-in-alt.fa-w-16.logout-menu {
   margin-right: 5px;
   margin-left: -20px;
+}
+
+div#block-views-block-add-module-button-block-1 {
+  position: relative;
+}
+
+.contextual-region {
+  position: inherit !important;
 }
 /*# sourceMappingURL=style.css.map */
