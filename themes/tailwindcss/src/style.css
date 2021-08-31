@@ -349,7 +349,6 @@ form#node-course-form {
 
 div#block-tailwindcss-content {
   margin-top: 30px;
-  position: relative;
 }
 
 .js-form-item.form-item.js-form-type-textfield.form-item-title-0-value.js-form-item-title-0-value,
@@ -512,7 +511,7 @@ article.node:before {
   height: 550px;
   width: 1px;
   position: absolute;
-  right: -18px;
+  right: 25%;
   top: 0;
 }
 
