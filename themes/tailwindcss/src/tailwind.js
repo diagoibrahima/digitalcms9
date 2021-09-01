@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-
+jQuery('.add-module').hide();
  jQuery('.blockmodule-submodule').hide();
  jQuery('<h1 class="titre-cms-translation">CMS Translation</h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name'); 
  jQuery('<i class="fa fa-fw fa-user"></i>').insertBefore('input#edit-name');
