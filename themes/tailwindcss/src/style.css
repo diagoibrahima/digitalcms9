@@ -723,4 +723,9 @@ div#edit-field-course-wrapper {
 #block-views-block-module-liste-block-1 {
   position: relative !important;
 }
+
+span.section-buttom {
+  position: absolute;
+  bottom: -25px;
+}
 /*# sourceMappingURL=style.css.map */
