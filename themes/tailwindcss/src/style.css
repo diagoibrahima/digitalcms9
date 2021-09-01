@@ -762,7 +762,12 @@ span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2
 
 a.use-ajax {
   padding-left: 81% !important;
-  color: #191818;
+  color: rgba(59, 131, 246, 0.931);
   position: relative;
+  font-weight: 200;
+}
+
+svg.svg-inline--fa.fa-plus-square.fa-w-14 {
+  margin: auto 10px;
 }
 /*# sourceMappingURL=style.css.map */
