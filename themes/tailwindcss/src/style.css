@@ -177,6 +177,7 @@ article.node {
   border-radius: 5px;
   padding: 15px;
   width: 70%;
+  position: relative !important;
 }
 
 article.node footer {
@@ -511,7 +512,7 @@ article.node:before {
   height: 550px;
   width: 1px;
   position: absolute;
-  right: 25%;
+  right: -2.5%;
   top: 0;
 }
 
@@ -637,9 +638,8 @@ a.use-ajax {
 }
 
 .breadcum {
-  margin-left: 4%;
-  margin-bottom: -3%;
-  margin-top: 3%;
+  margin: 20px auto;
+  margin-left: 3%;
   color: #4B5366;
 }
 
@@ -726,6 +726,10 @@ div#edit-field-course-wrapper {
 
 span.section-buttom {
   position: absolute;
-  bottom: -25px;
+  bottom: -20px;
+}
+
+div#block-views-block-content-completion-block-1 {
+  margin-top: 48px;
 }
 /*# sourceMappingURL=style.css.map */
