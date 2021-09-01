@@ -774,3 +774,41 @@ span.section-buttom {
 div#block-views-block-content-completion-block-1 {
   margin-top: 48px;
 }
+
+span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer {
+  position: absolute;
+  margin: auto;
+  top: -76px;
+  z-index: 9;
+  left: 62px;
+  border: solid 1px;
+  padding: 5px;
+  color: #149b2c;
+  border: solid 2px;
+  border-style: dashed;
+  border-radius: 8px;
+  line-height: 3;
+  text-align: center;
+  width: 80%;
+  margin: auto 20px;
+  position: absolute;
+  z-index: 10;
+
+  &:hover {
+    color: #ffffff;
+    background: linear-gradient(
+45deg
+,#00ffaa,#014731);
+    border-style: hidden;
+}
+  
+}
+
+.turneditone {
+  background: linear-gradient(
+45deg
+,#00ffaa,#009a69);
+  color: white !important;
+}
+
+
