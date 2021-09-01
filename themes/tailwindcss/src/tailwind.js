@@ -1,7 +1,8 @@
 jQuery(document).ready(function() {
 
  jQuery('.blockmodule-submodule').hide();
- jQuery('.add-module').hide();
+ jQuery('.add-module , .use-ajax').hide();
+// jQuery('.a.use-ajax').hide();
  jQuery('<h1 class="titre-cms-translation">CMS Translation</h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name'); 
  jQuery('<i class="fa fa-fw fa-user"></i>').insertBefore('input#edit-name');
  jQuery('<i class="fa fa-fw fa-lock"></i>').insertBefore('input#edit-pass');
@@ -18,7 +19,8 @@ jQuery(document).ready(function() {
  jQuery('span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer').click(function(){
   jQuery('.tw-switch-editing-button').toggleClass( 'turneditone' );
   var turneoff = (jQuery('.tw-switch-editing-button').text());
-  jQuery('.add-module').toggle();
+  jQuery('.add-module , .use-ajax').toggle();
+  //jQuery('.a.use-ajax').toggle();
 
 turneoff == "Turn editing on" ?  jQuery('.tw-switch-editing-button').text('Turn editing off') : jQuery('.tw-switch-editing-button').text('Turn editing on')
  });
