@@ -631,6 +631,13 @@ article.node:before {
   padding: 0px;
 }
 
+.add-module:hover {
+  background: linear-gradient(45deg, #00ffaa, #014731);
+  border-style: hidden;
+  color: white;
+  line-height: 3.4;
+}
+
 a.use-ajax {
   padding-left: 63%;
   color: #191818;
@@ -736,31 +743,30 @@ div#block-views-block-content-completion-block-1 {
 span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer {
   position: absolute;
   margin: auto;
-  top: -76px;
-  z-index: 9;
-  left: 62px;
+  top: -88px;
+  left: 40px;
   border: solid 1px;
   padding: 5px;
   color: #149b2c;
   border: solid 2px;
-  border-style: dashed;
   border-radius: 8px;
-  line-height: 3;
+  line-height: 2.1;
   text-align: center;
-  width: 80%;
+  width: 66%;
   margin: auto 20px;
-  position: absolute;
   z-index: 10;
 }
 
 span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer:hover {
-  color: #ffffff;
+  color: #ffffff !important;
   background: linear-gradient(45deg, #00ffaa, #014731);
   border-style: hidden;
+  line-height: 2.5;
 }
 
 .turneditone {
   background: linear-gradient(45deg, #00ffaa, #009a69);
   color: white !important;
+  border: none !important;
 }
 /*# sourceMappingURL=style.css.map */
