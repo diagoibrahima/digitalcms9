@@ -245,7 +245,7 @@ display: none;
 
 .blockmodule-submodule {
 
-  width: 75% !important;
+  width: 100% !important;
   background:rgb(238, 251, 245) !important;
   padding: 5px 20px !important;
   .blockmodule-description-submodule{
@@ -275,7 +275,7 @@ display: none;
 
 .colore-black{
   background:rgb(238, 251, 245) !important;
-  width: 75%;
+  width: 100%;
 }
 
 .ch-rotation{
@@ -288,7 +288,7 @@ span.expandall-minimizeall-button.cursor-pointer {
   cursor: pointer;
   position:absolute;
   top: -48px;
-  left: 67%;
+  left: 88%;
 }
 
 
@@ -340,7 +340,6 @@ div#block-views-block-module-liste-block-1 {
   color: gray;
   background: white;
   line-height: 5rem;
-  width: 75%;
   font-size: 1.5rem;
   font-weight: 200;
   padding: 0px 20px;
@@ -353,7 +352,7 @@ div#block-views-block-module-liste-block-1 {
 }
 
 .blockmodule-submodule {
-  width: 70%;
+  width: 100%;
  
 
   .blockmodule-titre-submodule{
@@ -552,10 +551,7 @@ article.node:before {
   top: 0;
 }
 
-.listee-des-module-sub-module{
-  margin-top: 60px !important;
-  position: relative;
-}
+
 
 #edit-delete {
   border-radius: 5px !important;
@@ -674,11 +670,7 @@ padding: 0px;
 }
 
 
-a.use-ajax{
-    padding-left: 63%;
-    color: #191818;
-    background: #eefbf5;
-}
+
 
 .breadcum {
   margin: 20px auto;
@@ -767,6 +759,8 @@ div#edit-field-course-wrapper {
 
 .listee-des-module-sub-module {
   position: relative !important;
+  margin-top: 60px !important;
+  width:75% !important;
 }
 
 
@@ -826,3 +820,8 @@ span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2
 }
 
 
+a.use-ajax {
+  padding-left: 81% !important;
+  color: #191818;
+  position: relative;
+}

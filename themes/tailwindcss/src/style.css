@@ -224,7 +224,7 @@ display: none;
 }
 
 .blockmodule-submodule {
-  width: 75% !important;
+  width: 100% !important;
   background: #eefbf5 !important;
   padding: 5px 20px !important;
 }
@@ -251,7 +251,7 @@ display: none;
 
 .colore-black {
   background: #eefbf5 !important;
-  width: 75%;
+  width: 100%;
 }
 
 .ch-rotation {
@@ -265,7 +265,7 @@ span.expandall-minimizeall-button.cursor-pointer {
   cursor: pointer;
   position: absolute;
   top: -48px;
-  left: 67%;
+  left: 88%;
 }
 
 .tw-btn-action-new {
@@ -316,7 +316,6 @@ div#block-views-block-module-liste-block-1 {
   color: gray;
   background: white;
   line-height: 5rem;
-  width: 75%;
   font-size: 1.5rem;
   font-weight: 200;
   padding: 0px 20px;
@@ -329,7 +328,7 @@ div#block-views-block-module-liste-block-1 {
 }
 
 .blockmodule-submodule {
-  width: 70%;
+  width: 100%;
 }
 
 .blockmodule-submodule .blockmodule-titre-submodule {
@@ -516,11 +515,6 @@ article.node:before {
   top: 0;
 }
 
-.listee-des-module-sub-module {
-  margin-top: 60px !important;
-  position: relative;
-}
-
 #edit-delete {
   border-radius: 5px !important;
   width: 100px !important;
@@ -638,12 +632,6 @@ article.node:before {
   line-height: 3.4;
 }
 
-a.use-ajax {
-  padding-left: 63%;
-  color: #191818;
-  background: #eefbf5;
-}
-
 .breadcum {
   margin: 20px auto;
   margin-left: 3%;
@@ -721,6 +709,8 @@ div#edit-field-course-wrapper {
 
 .listee-des-module-sub-module {
   position: relative !important;
+  margin-top: 60px !important;
+  width: 75% !important;
 }
 
 #block-views-block-add-module-button-block-1 {
@@ -768,5 +758,11 @@ span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2
   background: linear-gradient(45deg, #00ffaa, #009a69);
   color: white !important;
   border: none !important;
+}
+
+a.use-ajax {
+  padding-left: 81% !important;
+  color: #191818;
+  position: relative;
 }
 /*# sourceMappingURL=style.css.map */
