@@ -2,6 +2,10 @@ jQuery(document).ready(function() {
 
  jQuery('.blockmodule-submodule').hide();
  jQuery('.add-module , .use-ajax').hide();
+ jQuery('option[value="_none"]').remove();
+
+ 
+
 // jQuery('.a.use-ajax').hide();
  jQuery('<h1 class="titre-cms-translation">CMS Translation</h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name'); 
  jQuery('<i class="fa fa-fw fa-user"></i>').insertBefore('input#edit-name');
@@ -17,10 +21,13 @@ jQuery(document).ready(function() {
 
 
  jQuery('span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer').click(function(){
+
   jQuery('.tw-switch-editing-button').toggleClass( 'turneditone' );
+
   var turneoff = (jQuery('.tw-switch-editing-button').text());
-  jQuery('.add-module , .use-ajax').toggle();
-  //jQuery('.a.use-ajax').toggle();
+  var expand = (jQuery('.expandall-minimizeall-button').text());
+  jQuery('.add-module , .use-ajax ').toggle();
+  jQuery('.blockmodule-titre-module').toggleClass('blockmodule-titre-module-expland');
 
 turneoff == "Turn editing on" ?  jQuery('.tw-switch-editing-button').text('Turn editing off') : jQuery('.tw-switch-editing-button').text('Turn editing on')
  });
@@ -60,11 +67,15 @@ jQuery('.module-section').click(function(){
     jQuery('.expandall-minimizeall-button').click(function() {
     jQuery('.blockmodule-submodule').toggle('fast');
     jQuery('h3').toggleClass( 'colore-black' ); 
-    jQuery('.blockmodule-titre-module').addClass('blockmodule-titre-module-green');
+    jQuery('.blockmodule-titre-module').toggleClass('blockmodule-titre-module-green');
     jQuery('.fa-chevron-down').toggleClass( 'ch-rotation' );
     var expand = (jQuery('.expandall-minimizeall-button').text());
-    expand == "Expand all" ?  jQuery('.expandall-minimizeall-button').text('Minimize') : jQuery('.expandall-minimizeall-button').text('Expand all')
-
+    expand == "Expand all" ?  jQuery('.expandall-minimizeall-button').text('Minimize')  : jQuery('.expandall-minimizeall-button').text('Expand all')
+    
+     
+   //  else jQuery('.use-ajax').toggle()
+    
+  //  expand == "Minimize" ? jQuery('.use-ajax').hide() : jQuery('.use-ajax').show()
     });
 
 });
@@ -79,3 +90,16 @@ jQuery('.module-section').click(function(){
  
 
   });
+
+
+  /*
+  
+  jQuery(document).ready(function() {
+
+  var expand = (jQuery('.expandall-minimizeall-button').text());
+  console.log(expand);
+ expand == "Expand all" ? jQuery('.use-ajax').hide() : jQuery('.expandall-minimizeall-button').text('Expand all')
+  });
+
+  */
+

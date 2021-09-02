@@ -312,6 +312,10 @@ div#block-views-block-module-liste-block-1 {
   margin: 2em;
 }
 
+.blockmodule-titre-module-expland {
+  margin: 10px auto;
+}
+
 .blockmodule-titre-module {
   color: gray;
   background: white;
@@ -711,6 +715,7 @@ div#edit-field-course-wrapper {
   position: relative !important;
   margin-top: 60px !important;
   width: 75% !important;
+  background: #edfbf4;
 }
 
 #block-views-block-add-module-button-block-1 {
@@ -745,13 +750,14 @@ span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2
   width: 66%;
   margin: auto 20px;
   z-index: 10;
+  line-height: 2.5;
 }
 
 span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer:hover {
   color: #ffffff !important;
   background: linear-gradient(45deg, #00ffaa, #014731);
   border-style: hidden;
-  line-height: 2.5;
+  line-height: 2.8;
 }
 
 .turneditone {
@@ -761,7 +767,7 @@ span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2
 }
 
 a.use-ajax {
-  padding-left: 81% !important;
+  padding-left: 78.9% !important;
   color: rgba(59, 131, 246, 0.931);
   position: relative;
   font-weight: 200;
@@ -769,5 +775,41 @@ a.use-ajax {
 
 svg.svg-inline--fa.fa-plus-square.fa-w-14 {
   margin: auto 10px;
+}
+
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons {
+  width: 500px !important;
+  border: none !important;
+}
+
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons div#edit-body-0-format--fHBn1xaNehc {
+  display: none;
+}
+
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons span#cke_1_bottom {
+  display: none;
+}
+
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons .node-form {
+  background: white !important;
+  width: 100%;
+  margin: auto !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border-radius: inherit !important;
+  border: none !important;
+}
+
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons .filter-help {
+  float: right;
+  display: none !important;
+}
+
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons .form-submit {
+  margin: .5em .4em .5em 0;
+  cursor: pointer;
+  background: #149b2c !important;
+  color: white !important;
+  border: white !important;
 }
 /*# sourceMappingURL=style.css.map */

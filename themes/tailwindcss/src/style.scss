@@ -334,6 +334,10 @@ span.expandall-minimizeall-button.cursor-pointer {
 div#block-views-block-module-liste-block-1 {
   margin: 2em;
 }
+.blockmodule-titre-module-expland {
+  margin: 10px auto;
+}
+
 
 .blockmodule-titre-module {
 
@@ -345,6 +349,7 @@ div#block-views-block-module-liste-block-1 {
   padding: 0px 20px;
   border-bottom: 1px solid #80808036;
   position: relative;
+  
 
   &:hover{
     background: #eefbf5;
@@ -761,6 +766,7 @@ div#edit-field-course-wrapper {
   position: relative !important;
   margin-top: 60px !important;
   width:75% !important;
+  background: #edfbf4;
 }
 
 
@@ -797,6 +803,7 @@ span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2
     width: 66%;
     margin: auto 20px;
     z-index: 10;
+    line-height: 2.5;
 
 
   &:hover {
@@ -805,7 +812,7 @@ span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2
 45deg
 ,#00ffaa,#014731);
     border-style: hidden;
-    line-height: 2.5;
+    line-height: 2.8;
 
 }
   
@@ -822,7 +829,7 @@ span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2
 
 
 a.use-ajax {
-  padding-left: 81% !important;
+  padding-left: 78.9% !important;
   color: rgba(59, 131, 246, 0.931);
   position: relative;
   font-weight: 200;
@@ -830,4 +837,40 @@ a.use-ajax {
 
 svg.svg-inline--fa.fa-plus-square.fa-w-14 {
   margin: auto 10px;
+}
+
+
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons {
+  width: 500px !important;
+  border: none !important;
+
+  div#edit-body-0-format--fHBn1xaNehc {
+    display: none;
+}
+
+span#cke_1_bottom {
+  display: none;
+}
+
+.node-form {
+ 
+  background: white !important;
+  width: 100%;
+  margin: auto !important;
+  box-shadow: none !important;
+  border-radius: inherit !important;
+  border: none !important;
+}
+
+.filter-help {
+  float: right;
+  display: none !important;
+}
+.form-submit  {
+  margin: .5em .4em .5em 0;
+  cursor: pointer;
+  background: #149b2c !important;
+  color: white !important;
+  border: rgb(255, 255, 255) !important;
+}
 }
