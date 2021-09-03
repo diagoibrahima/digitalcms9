@@ -673,7 +673,7 @@ article.node:before {
 }
 
 .activitylogMessage {
-  margin-top: 28%;
+  margin-top: 45px;
 }
 
 form#user-login-form:after {
@@ -840,12 +840,6 @@ div#block-views-block-messagetotranslate-block-1 {
   padding: 10px;
   -webkit-box-shadow: 0px 1px 4px 1px #02020221;
           box-shadow: 0px 1px 4px 1px #02020221;
-}
-
-.views-field.views-field-field-field-moduleinmessage, .views-field.views-field-field-course {
-  font-size: 12px;
-  font-weight: 200;
-  width: 70%;
 }
 
 .grid.grid-cols-2.gap-3.justify-items-stretch.items-stretch.no-resulte {
