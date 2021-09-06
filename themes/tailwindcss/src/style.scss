@@ -914,3 +914,48 @@ div#block-views-block-messagetotranslate-block-1 {
   border-radius: 10px;
   border: dashed #a8a8a8;
 }
+
+
+form#node-translation-form .field--name-field-message {
+  display: none;
+
+
+ 
+}
+
+input#edit-field-image-0-upload {
+  width: 100%;
+  height: 150px;
+  background: #6EE7B7;
+  border: none;
+  position: inherit;
+  position: relative;
+
+ &:before {
+    content: '';
+    background: #6EE7B7;
+    position: absolute;
+    height: 150px;
+    width: 91%;
+    z-index: 999999;
+}
+}
+
+img {
+  display: none;
+}
+
+label#edit-field-image-0--label {
+  display: none;
+}
+
+
+
+.js-form-item.form-item.js-form-type-managed-file.form-item-field-image-0.js-form-item-field-image-0 h1 {
+  position: absolute;
+  z-index: 99999999999999999;
+  font-size: 20px;
+  left: 35%;
+  top: 77px;
+  font-weight:400;
+}
