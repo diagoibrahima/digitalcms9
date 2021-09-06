@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
 
  jQuery('option[value="_none"]').remove();
 
-
+jQuery('<h1> Add Custom Image</h1>').insertBefore('#edit-field-image-0-upload');
 
 
 
