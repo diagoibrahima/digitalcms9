@@ -912,4 +912,33 @@ select#edit-field-channel, input#edit-field-langage-0-value, select#edit-field-v
   font-weight: 200;
   width: 100%;
 }
+
+div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(1) {
+  color: #a0aec0;
+}
+
+div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(3), div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(4) {
+  color: #718096;
+  font-size: 12px;
+}
+
+div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(5) {
+  color: green;
+  border: solid 1px;
+  width: 65px;
+  padding: 4px;
+  text-align: center;
+  border-radius: 5px;
+  margin: auto 185px;
+}
+
+div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(5):hover {
+  background: #059669;
+  color: white;
+}
+
+div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(4) {
+  position: absolute;
+  width: 165px;
+}
 /*# sourceMappingURL=style.css.map */
