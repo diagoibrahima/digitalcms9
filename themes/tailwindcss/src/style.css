@@ -68,6 +68,8 @@ div#edit-actions #edit-submit {
   color: white !important;
   background: linear-gradient(45deg, #10b981, #059669);
   border: cornsilk !important;
+  position: absolute;
+  left: 30px;
 }
 
 div#datatable_wrapper {
@@ -612,7 +614,7 @@ article.node:before {
 }
 
 .md\:tw-flex-1.tw-p-4.block-contenu {
-  min-height: 1000px;
+  min-height: 1200px;
 }
 
 .add-module {
@@ -826,7 +828,7 @@ svg.svg-inline--fa.fa-plus-square.fa-w-14 {
 form#node-translation-form {
   width: 64%;
   padding: 30px;
-  height: 828px;
+  height: 1030px;
   position: absolute;
   right: 40px;
 }
@@ -891,5 +893,23 @@ label#edit-field-image-0--label {
 
 div#edit-field-image-0--description {
   display: none;
+}
+
+.js-form-item.form-item.js-form-type-select.form-item-field-channel.js-form-item-field-channel, .js-form-item.form-item.js-form-type-select.form-item-field-videotype.js-form-item-field-videotype, .container-inline.js-form-item.form-item.js-form-type-select.form-item-moderation-state-0-state.js-form-item-moderation-state-0-state, .js-form-item.form-item.js-form-type-textfield.form-item-field-langage-0-value.js-form-item-field-langage-0-value {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+}
+
+select#edit-field-channel, input#edit-field-langage-0-value, select#edit-field-videotype, select#edit-moderation-state-0-state, input#edit-field-videoembeded-0-value {
+  border: solid 1px #000000;
+  border-radius: 5px;
+  height: 35px;
+  font-weight: 200;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
