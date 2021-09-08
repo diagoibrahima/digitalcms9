@@ -73,7 +73,7 @@ div#edit-actions {
     background: linear-gradient(45deg, #10b981, #059669);
     border: cornsilk !important;
     position: absolute;
-    left: 30px;
+    
 
     }
 
@@ -1008,4 +1008,25 @@ div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(5) {
 div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(4) {
   position: absolute;
   width: 165px;
+}
+
+.node-translation-form #edit-submit {
+  position: absolute;
+  left: 29px;
+}
+
+
+div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(3):before {
+  left: 29px;
+  content: '';
+  position: absolute;
+  width: 27.2%;
+  height: 1px;
+  z-index: 999999999999999;
+  background: #718096;
+  margin-top: -7px;
+}
+
+div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(2) {
+  padding: 0px 0px 10px 0px;
 }
