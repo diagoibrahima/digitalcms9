@@ -6,6 +6,21 @@ jQuery(document).ready(function() {
 
  
 
+
+//content completion 
+//nombre de message traduit
+var nombredemessagetraduit = (jQuery('div#block-views-block-testcompletion-block-1 header').text());
+//console.log(nombredemessagetraduit);
+//total message
+var totalmessage = (jQuery('div#block-views-block-completionnbmessage-block-1 header').text());
+//console.log(totalmessage);
+var pourcentage = nombredemessagetraduit*100/totalmessage;
+
+jQuery('div#block-views-block-completionnbmessage-block-1 header').append('<h1> voici le pourcentage '+pourcentage +'<h1>')
+jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html(pourcentage)
+
+
+
 // jQuery('.a.use-ajax').hide();
  jQuery('<h1 class="titre-cms-translation">CMS Translation</h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name'); 
  jQuery('<i class="fa fa-fw fa-user"></i>').insertBefore('input#edit-name');
@@ -23,7 +38,6 @@ jQuery('<h1> Add Custom Image</h1>').insertBefore('#edit-field-image-0-upload');
 
 
 
- 
 
 
  jQuery('span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer').click(function(){
