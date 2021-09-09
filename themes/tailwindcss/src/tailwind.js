@@ -14,11 +14,14 @@ var nombredemessagetraduit = (jQuery('div#block-views-block-testcompletion-block
 //total message
 var totalmessage = (jQuery('div#block-views-block-completionnbmessage-block-1 header').text());
 //console.log(totalmessage);
+var restotranslate=totalmessage-nombredemessagetraduit;
 var pourcentage = nombredemessagetraduit*100/totalmessage;
+var pourcentagemyInt = parseInt(pourcentage);
 
-jQuery('div#block-views-block-completionnbmessage-block-1 header').append('<h1> voici le pourcentage '+pourcentage +'<h1>')
-jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html(pourcentage)
-
+console.log(restotranslate);
+jQuery('.contentrestetotranslate').html(restotranslate +' '+'to translate');
+//jQuery('div#block-views-block-completionnbmessage-block-1 header').append('<h1> voici le pourcentage '+pourcentagemyInt +'<h1>')
+jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html(pourcentagemyInt+'%')
 
 
 // jQuery('.a.use-ajax').hide();
