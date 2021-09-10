@@ -961,4 +961,27 @@ div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(3):befor
 div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(2) {
   padding: 0px 0px 10px 0px;
 }
+
+div#block-views-block-testcompletion-block-1 header, div#block-views-block-completionnbmessage-block-1 header {
+  opacity: 0;
+  position: absolute;
+}
+
+.colo-midle {
+  color: orange !important;
+}
+
+.coloremidel {
+  background: #ffa50059 !important;
+  border: solid 1px orange !important;
+}
+
+.colo-midlegr {
+  color: #069668 !important;
+}
+
+.coloremidelgr {
+  background: #49b9954a !important;
+  border: solid 1px #069668 !important;
+}
 /*# sourceMappingURL=style.css.map */

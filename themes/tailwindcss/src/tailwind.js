@@ -4,7 +4,32 @@ jQuery(document).ready(function() {
  jQuery('.add-module , .use-ajax').hide();
  jQuery('option[value="_none"]').remove();
 
- 
+
+//content completion 
+//nombre de message traduit
+var nombredemessagetraduit = (jQuery('div#block-views-block-testcompletion-block-1 header').text());
+//console.log(nombredemessagetraduit);
+//total message
+var totalmessage = (jQuery('div#block-views-block-completionnbmessage-block-1 header').text());
+//console.log(totalmessage);
+var restotranslate=totalmessage-nombredemessagetraduit;
+var pourcentage = nombredemessagetraduit*100/totalmessage;
+var pourcentagemyInt = parseInt(pourcentage);
+
+
+jQuery('.contentrestetotranslate').html(restotranslate +' '+'to translate');
+//jQuery('div#block-views-block-completionnbmessage-block-1 header').append('<h1> voici le pourcentage '+pourcentagemyInt +'<h1>')
+jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html(pourcentagemyInt+'%')
+if(pourcentagemyInt >=33){
+  jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').addClass('colo-midle');
+  jQuery('p.tw-rounded.tw-bg-red-100.tw-border.tw-border-red-500.tw-text-gray-800.p-1').addClass('coloremidel');
+}
+if(pourcentagemyInt >=100){
+  jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').addClass('colo-midlegr');
+  jQuery('p.tw-rounded.tw-bg-red-100.tw-border.tw-border-red-500.tw-text-gray-800.p-1').addClass('coloremidelgr');
+  jQuery('p.tw-rounded.tw-bg-red-100.tw-border.tw-border-red-500.tw-text-gray-800.p-1').html('This course has been fully translated');
+}
+
 
 // jQuery('.a.use-ajax').hide();
  jQuery('<h1 class="titre-cms-translation">CMS Translation</h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name'); 
@@ -23,7 +48,6 @@ jQuery('<h1> Add Custom Image</h1>').insertBefore('#edit-field-image-0-upload');
 
 
 
- 
 
 
  jQuery('span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer').click(function(){
