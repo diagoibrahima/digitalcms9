@@ -1,7 +1,7 @@
 datatables:
   version: 1.x
   css:
-    //cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css: {}
+  //cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css: {}
   js:
     //cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js: {}
     js/datatables.js: {}

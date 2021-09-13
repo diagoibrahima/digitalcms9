@@ -10,7 +10,7 @@ jQuery(document).ready(function() {
 //content completion 
 //nombre de message traduit
 var nombredemessagetraduit = (jQuery('div#block-views-block-testcompletion-block-1 header').text());
-//console.log(nombredemessagetraduit);
+console.log(nombredemessagetraduit);
 //total message
 var totalmessage = (jQuery('div#block-views-block-completionnbmessage-block-1 header').text());
 //console.log(totalmessage);
