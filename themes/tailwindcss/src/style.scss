@@ -1056,3 +1056,32 @@ div#block-views-block-testcompletion-block-1 header , div#block-views-block-comp
   background: #49b9954a !important;
   border: solid 1px #069668 !important;
 }
+
+
+
+div#block-views-block-cardnbcours-block-1 , div#block-views-block-cardnbmessage-block-1 , div#block-views-block-cardnbmessagetranslated-block-1 , div#block-views-block-cardnbmodule-block-1{
+  background: linear-gradient(45deg, #10b981, #059669);
+  height: 100px;
+  width: 100px;
+  padding: 100px;
+  border-radius: 10px;
+  color: white;
+  font-size: 23px;
+  position: absolute !important;
+}
+
+div#block-views-block-cardnbcours-block-1 {
+  left: 4%;
+}
+
+div#block-views-block-cardnbmodule-block-1 {
+  left: 28%;
+}
+
+div#block-views-block-cardnbmessagetranslated-block-1 {
+  left: 52%;
+}
+
+div#block-views-block-cardnbmessage-block-1 {
+  left: 76%;
+}
