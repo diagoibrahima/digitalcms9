@@ -19,6 +19,8 @@ var pourcentagemyInt = parseInt(pourcentage);
 console.log(pourcentagemyInt);
 
 
+
+
 jQuery('.contentrestetotranslate').html(restotranslate +' '+'to translate');
 //jQuery('div#block-views-block-completionnbmessage-block-1 header').append('<h1> voici le pourcentage '+pourcentagemyInt +'<h1>')
 /*
@@ -38,6 +40,89 @@ if(pourcentagemyInt >=100){
   jQuery('p.tw-rounded.tw-bg-red-100.tw-border.tw-border-red-500.tw-text-gray-800.p-1').addClass('coloremidelgr');
   jQuery('p.tw-rounded.tw-bg-red-100.tw-border.tw-border-red-500.tw-text-gray-800.p-1').html('This course has been fully translated');
 }
+
+
+
+//Dasboard 
+
+let cours=(jQuery('div#block-views-block-cardnbcours-block-1 header').text());
+jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
+let messagesimpe=(jQuery('div#block-views-block-cardnbmessage-block-1 header').text());
+jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagaes').html(messagesimpe);
+let messagesimpetranslate=(jQuery('div#block-views-block-cardnbmessagetranslated-block-1 header').text());
+jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(messagesimpetranslate);
+let modulesdecourse=(jQuery('div#block-views-block-cardnbmodule-block-1 header').text());
+jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(modulesdecourse);
+
+
+
+
+
+// line chart
+const labels = [
+  'Cours',
+  'Modules',
+  'Messages translated',
+  'Messagaes',
+
+];
+const data = {
+  labels: labels,
+  datasets: [{
+      label: 'Dataset Digital CMS',
+      backgroundColor: '#1DAAE2',
+      borderColor: '#1DAAE2',
+      data: [ cours, modulesdecourse, messagesimpetranslate, messagesimpe,],
+  }]
+};
+
+const configLineChart = {
+  type: 'line',
+  data,
+  options: {}
+};
+
+var chartLine = new Chart(
+  document.getElementById('chartLine'),
+  configLineChart
+);
+
+//bar chart
+
+
+const labelsBarChart = [
+  'Cours',
+  'Modules',
+  'Messages translated',
+  'Messagaes',
+];
+const dataBarChart = {
+  labels: labelsBarChart,
+  datasets: [{
+    label: 'Dataset Digital CMS',
+    backgroundColor: '#1DAAE2',
+    borderColor: '#1DAAE2',
+    data: [ cours, modulesdecourse, messagesimpetranslate, messagesimpe,],
+  }]
+};
+
+const configBarChart = {
+  type: 'bar',
+  data: dataBarChart,
+  options: {}
+};
+
+
+var chartBar = new Chart(
+  document.getElementById('chartBar'),
+  configBarChart
+);
+
+
+
+
+
+
 
 
 // jQuery('.a.use-ajax').hide();
@@ -142,3 +227,7 @@ jQuery('.module-section').click(function(){
 
   */
 
+
+
+
+//chart js 
