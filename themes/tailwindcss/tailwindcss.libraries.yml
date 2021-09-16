@@ -10,3 +10,4 @@ global-styling:
     - core/jquery
     - core/jquery.once
     - core/drupalSettings
+    
