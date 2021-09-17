@@ -904,7 +904,7 @@ div#edit-field-image-0--description {
           flex-direction: column !important;
 }
 
-select#edit-field-channel, input#edit-field-langage-0-value, select#edit-field-videotype, select#edit-moderation-state-0-state, input#edit-field-videoembeded-0-value {
+select#edit-field-channel, input#edit-field-langage-0-value, select#edit-field-videotype, select#edit-moderation-state-0-state, input#edit-field-videoembeded-0-value, input#edit-field-video-0-uri {
   border: solid 1px #000000;
   border-radius: 5px;
   height: 35px;
@@ -1064,5 +1064,32 @@ div#block-views-block-dasbord-view-block-1 {
 div#block-views-block-testcompletion-block-1, div#block-views-block-completionnbmessage-block-1 {
   position: absolute;
   display: none;
+}
+
+span.message-channel {
+  color: blue;
+  background: #0000ff3b;
+  padding: 3px 6px;
+  margin: 3px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+span.message-langage {
+  background: #ff000036;
+  color: red;
+  padding: 3px 6px;
+  margin: 3px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+span.message-etat {
+  background: #11a02b36;
+  color: #11a02b;
+  padding: 3px 6px;
+  margin: 8px;
+  border-radius: 10px;
+  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */
