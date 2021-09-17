@@ -13,20 +13,18 @@ var nombredemessagetraduit = (jQuery('div#block-views-block-testcompletion-block
 var totalmessage = (jQuery('div#block-views-block-completionnbmessage-block-1 header').text());
 //console.log(totalmessage);
 var restotranslate=totalmessage-nombredemessagetraduit;
+
 var pourcentage = nombredemessagetraduit*100/totalmessage;
+
 var pourcentagemyInt = parseInt(pourcentage);
-
-console.log(pourcentagemyInt);
-
-
 
 
 jQuery('.contentrestetotranslate').html(restotranslate +' '+'to translate');
 //jQuery('div#block-views-block-completionnbmessage-block-1 header').append('<h1> voici le pourcentage '+pourcentagemyInt +'<h1>')
-/*
+
 if(pourcentagemyInt >=100){
   jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html(100+'%')
-}else  */
+}else  
 
 jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html(pourcentagemyInt+'%')
 
@@ -39,6 +37,10 @@ if(pourcentagemyInt >=100){
   jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').addClass('colo-midlegr');
   jQuery('p.tw-rounded.tw-bg-red-100.tw-border.tw-border-red-500.tw-text-gray-800.p-1').addClass('coloremidelgr');
   jQuery('p.tw-rounded.tw-bg-red-100.tw-border.tw-border-red-500.tw-text-gray-800.p-1').html('This course has been fully translated');
+}
+
+if((jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').text())=='NaN%'){
+  jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html('0 %')
 }
 
 
@@ -70,8 +72,8 @@ const data = {
   labels: labels,
   datasets: [{
       label: 'Dataset Digital CMS',
-      backgroundColor: '#1DAAE2',
-      borderColor: '#1DAAE2',
+      backgroundColor: '#036672',
+      borderColor: '#036672',
       data: [ cours, modulesdecourse, messagesimpetranslate, messagesimpe,],
   }]
 };
@@ -100,8 +102,8 @@ const dataBarChart = {
   labels: labelsBarChart,
   datasets: [{
     label: 'Dataset Digital CMS',
-    backgroundColor: '#1DAAE2',
-    borderColor: '#1DAAE2',
+    backgroundColor: '#036672',
+    borderColor: '#036672',
     data: [ cours, modulesdecourse, messagesimpetranslate, messagesimpe,],
   }]
 };

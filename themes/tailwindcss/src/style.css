@@ -693,7 +693,7 @@ nav#block-logout ul {
 }
 
 nav#block-logout ul li a svg:nth-child(1) {
-  opacity: 0;
+  opacity: 1;
 }
 
 svg.svg-inline--fa.fa-sign-in-alt.fa-w-16.logout-menu {
@@ -1024,7 +1024,7 @@ div#block-views-block-testcompletion-block-1 header, div#block-views-block-compl
   position: absolute;
   top: 0px;
   font-size: 45px;
-  color: #1daae2;
+  color: #036672;
   font-weight: bold;
   left: 54px;
 }
@@ -1033,7 +1033,7 @@ div#block-views-block-testcompletion-block-1 header, div#block-views-block-compl
   position: absolute;
   left: 16px;
   top: 20px;
-  color: #1DAAE2;
+  color: #036672;
   font-size: 26px;
 }
 
@@ -1060,5 +1060,10 @@ strong {
 
 div#block-views-block-dasbord-view-block-1 {
   margin-top: 37px;
+}
+
+div#block-views-block-testcompletion-block-1, div#block-views-block-completionnbmessage-block-1 {
+  position: absolute;
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
