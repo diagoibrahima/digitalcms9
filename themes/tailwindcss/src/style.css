@@ -68,7 +68,6 @@ div#edit-actions #edit-submit {
   color: white !important;
   background: linear-gradient(45deg, #10b981, #059669);
   border: cornsilk !important;
-  position: absolute;
 }
 
 div#datatable_wrapper {
@@ -682,7 +681,7 @@ form#user-login-form:after {
   content: '';
   background: #e4e7eb;
   position: absolute;
-  height: 576px;
+  height: 775px;
   width: 100%;
   z-index: 99999999999999999999;
   bottom: 0;
