@@ -72,7 +72,7 @@ div#edit-actions {
     color: white !important; 
     background: linear-gradient(45deg, #10b981, #059669);
     border: cornsilk !important;
-    position: absolute;
+    
     
 
     }
@@ -729,7 +729,7 @@ form#user-login-form:after {
   content: '';
   background: #e4e7eb;
   position: absolute;
-  height: 576px;
+  height: 775px;
   width: 100%;
   z-index: 99999999999999999999;
   bottom: 0;
@@ -743,7 +743,7 @@ nav#block-logout ul {
 
 
 nav#block-logout ul li a svg:nth-child(1) {
-  opacity: 0;
+  opacity: 1;
 }
 
 svg.svg-inline--fa.fa-sign-in-alt.fa-w-16.logout-menu {
@@ -972,11 +972,10 @@ div#edit-field-image-0--description {
 }
 
 
-select#edit-field-channel ,input#edit-field-langage-0-value , select#edit-field-videotype  , select#edit-moderation-state-0-state , input#edit-field-videoembeded-0-value{
+select#edit-field-channel ,input#edit-field-langage-0-value , select#edit-field-videotype  , select#edit-moderation-state-0-state , input#edit-field-videoembeded-0-value ,input#edit-field-video-0-uri{
   border: solid 1px #000000;
   border-radius: 5px;
   height: 35px;
-  
   font-weight: 200;
   width: 100%;
 }
@@ -1055,4 +1054,123 @@ div#block-views-block-testcompletion-block-1 header , div#block-views-block-comp
 .coloremidelgr {
   background: #49b9954a !important;
   border: solid 1px #069668 !important;
+}
+
+.grid-cols-1.card-dasboard {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.report-card {
+  height:100px;
+  width: 214px;
+  background: white;
+  border-radius: 10px;
+  border: solid 1px #e2e8f0;
+  position: relative;
+ transition: 1s;
+
+ 
+
+  &:hover {
+   
+    border: solid 1px #ffffff;
+    box-shadow: 1px 1px 4px 2px #e2e8f0;
+   
+}
+
+  .mt-8 {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    font-size: 18px;
+    color:#036572;
+    font-weight: 200;
+}
+
+
+span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours , span.rounded-full.text-white.badge.bg-red-400.text-xs.Module , span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated , span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagaes {
+  position: absolute;
+  top: 0px;
+  font-size: 45px;
+  color:#036672;
+  font-weight: bold;
+  left: 54px;
+}
+
+
+
+svg.svg-inline--fa.fa-book.fa-w-14 , svg.svg-inline--fa.fa-comment-dots.fa-w-16 , svg.svg-inline--fa.fa-language.fa-w-20 , svg.svg-inline--fa.fa-comment-dots.fa-w-16 , svg.svg-inline--fa.fa-th-list.fa-w-16 {
+  position: absolute;
+  left: 16px;
+  top: 20px;
+  color: #036672;
+  font-size: 26px;
+}
+
+
+}
+
+
+div#block-views-block-cardnbcours-block-1 ,div#block-views-block-cardnbmessage-block-1 , div#block-views-block-cardnbmessagetranslated-block-1 , div#block-views-block-cardnbmodule-block-1 {
+  position: absolute !important;
+  opacity: 0;
+}
+.tw-shadow-lg.tw-rounded-lg.tw-overflow-hidden {
+  background: white;
+  width: 95%;
+  margin: 35px auto;
+}
+
+
+strong {
+  padding: 15px;
+  color: #1daae2;
+  font-size: 30px;
+  background: white;
+  box-shadow: 0px 0px 1px 0px;
+  border-radius: 10px;
+}
+
+
+div#block-views-block-dasbord-view-block-1 {
+  margin-top: 37px;
+}
+
+
+div#block-views-block-testcompletion-block-1 , div#block-views-block-completionnbmessage-block-1{
+  position: absolute;
+  display: none;
+}
+
+
+span.message-channel {
+  color: blue;
+  background: #0000ff3b;
+  padding: 3px 6px;
+  margin: 3px;
+  border-radius: 10px;
+  font-size: 12px;
+
+}
+
+span.message-langage {
+  background: #ff000036;
+  color: red;
+  padding: 3px 6px;
+  margin: 3px;
+  border-radius: 10px;
+  font-size: 12px;
+
+}
+
+span.message-etat {
+  background: #11a02b36;
+  color: #11a02b;
+  padding: 3px 6px;
+  margin: 8px;
+  border-radius: 10px;
+   font-size: 12px;
+
 }
