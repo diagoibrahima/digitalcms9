@@ -878,14 +878,18 @@ span#cke_1_bottom {
 }
 }
 
-
-.show-message {
-  width: 35%;
-  background: white;
+span.message-etat {
+  background: #11a02b36;
+  color: #11a02b;
+  padding: 3px 6px;
+  margin: 8px;
   border-radius: 10px;
-  padding: 10px;
-  margin-left: 2em;
-  box-shadow: 1px 1px 6px #2316161a;
+   font-size: 12px;
+
+}
+
+div#block-views-block-listtranslation-block-1 {
+  width: 75%;
 }
 
 
@@ -1083,7 +1087,7 @@ div#block-views-block-testcompletion-block-1 header , div#block-views-block-comp
   .mt-8 {
     position: absolute;
     bottom: 15px;
-    left: 20px;
+    left: 16px;
     font-size: 18px;
     color:#036572;
     font-weight: 200;
@@ -1173,4 +1177,8 @@ span.message-etat {
   border-radius: 10px;
    font-size: 12px;
 
+}
+
+div#block-views-block-listtranslation-block-1 {
+  width: 75%;
 }
