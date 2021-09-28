@@ -1158,13 +1158,12 @@ span.message-channel {
 }
 
 span.message-langage {
-  background: #ff000036;
-  color: red;
+  background: #0094ff4d;
+  color: #0094ff;
   padding: 3px 6px;
   margin: 3px;
   border-radius: 10px;
   font-size: 12px;
-
 }
 
 span.message-etat {
@@ -1193,4 +1192,26 @@ div#block-views-block-listtranslation-block-1 {
     box-shadow: 1px 1px 6px #2316161a;
 }
 
+
+form#node-translation-edit-form{
+
+
+
+
+  div#edit-field-message-wrapper:before {
+    content: '';
+    position: absolute;
+    background: #6ee7b7;
+    height: 100px;
+    width: 80%;
+}
+.js-form-item.form-item.js-form-type-managed-file.form-item-field-image-0.js-form-item-field-image-0 h1 {
+  position: absolute;
+  z-index: 99999999999999999;
+  font-size: 20px;
+  left: 40%;
+  top: 316px;
+  font-weight: 400;
+}
+}
 
