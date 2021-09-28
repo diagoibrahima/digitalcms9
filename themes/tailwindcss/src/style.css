@@ -823,10 +823,6 @@ span.message-etat {
   font-size: 12px;
 }
 
-div#block-views-block-listtranslation-block-1 {
-  width: 75%;
-}
-
 form#node-translation-form {
   width: 64%;
   padding: 30px;
@@ -1097,11 +1093,17 @@ span.message-etat {
 }
 
 div#block-views-block-listtranslation-block-1 {
-  width: 75%;
+  width: 72%;
+  margin-left: 1.5rem;
 }
 
-.grid.grid-cols-2.gap-3.justify-items-stretch.items-stretch.no-resulte {
-  width: 95%;
-  margin: auto;
+.show-message {
+  background: white;
+  margin: 10px;
+  border-radius: 5px;
+  min-height: 135px;
+  padding: 10px;
+  -webkit-box-shadow: 1px 1px 6px #2316161a;
+          box-shadow: 1px 1px 6px #2316161a;
 }
 /*# sourceMappingURL=style.css.map */
