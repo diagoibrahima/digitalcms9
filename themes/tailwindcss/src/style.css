@@ -814,14 +814,13 @@ svg.svg-inline--fa.fa-plus-square.fa-w-14 {
   border: white !important;
 }
 
-.show-message {
-  width: 35%;
-  background: white;
+span.message-etat {
+  background: #11a02b36;
+  color: #11a02b;
+  padding: 3px 6px;
+  margin: 8px;
   border-radius: 10px;
-  padding: 10px;
-  margin-left: 2em;
-  -webkit-box-shadow: 1px 1px 6px #2316161a;
-          box-shadow: 1px 1px 6px #2316161a;
+  font-size: 12px;
 }
 
 form#node-translation-form {
@@ -1013,7 +1012,7 @@ div#block-views-block-testcompletion-block-1 header, div#block-views-block-compl
 .report-card .mt-8 {
   position: absolute;
   bottom: 15px;
-  left: 20px;
+  left: 16px;
   font-size: 18px;
   color: #036572;
   font-weight: 200;
@@ -1076,8 +1075,8 @@ span.message-channel {
 }
 
 span.message-langage {
-  background: #ff000036;
-  color: red;
+  background: #0094ff4d;
+  color: #0094ff;
   padding: 3px 6px;
   margin: 3px;
   border-radius: 10px;
@@ -1091,5 +1090,37 @@ span.message-etat {
   margin: 8px;
   border-radius: 10px;
   font-size: 12px;
+}
+
+div#block-views-block-listtranslation-block-1 {
+  width: 72%;
+  margin-left: 1.5rem;
+}
+
+.show-message {
+  background: white;
+  margin: 10px;
+  border-radius: 5px;
+  min-height: 135px;
+  padding: 10px;
+  -webkit-box-shadow: 1px 1px 6px #2316161a;
+          box-shadow: 1px 1px 6px #2316161a;
+}
+
+form#node-translation-edit-form div#edit-field-message-wrapper:before {
+  content: '';
+  position: absolute;
+  background: #6ee7b7;
+  height: 100px;
+  width: 80%;
+}
+
+form#node-translation-edit-form .js-form-item.form-item.js-form-type-managed-file.form-item-field-image-0.js-form-item-field-image-0 h1 {
+  position: absolute;
+  z-index: 99999999999999999;
+  font-size: 20px;
+  left: 40%;
+  top: 316px;
+  font-weight: 400;
 }
 /*# sourceMappingURL=style.css.map */
