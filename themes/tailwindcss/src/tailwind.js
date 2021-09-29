@@ -1,7 +1,7 @@
 jQuery(document).ready(function() {
 
- //jQuery('.blockmodule-submodule').hide();
- //jQuery('.add-module , .use-ajax').hide();
+ jQuery('.blockmodule-submodule').hide();
+ jQuery('.add-module , .use-ajax').hide();
  jQuery('option[value="_none"]').remove();
 
 
