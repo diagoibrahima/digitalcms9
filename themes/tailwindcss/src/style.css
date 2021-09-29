@@ -692,7 +692,7 @@ nav#block-logout ul {
 }
 
 nav#block-logout ul li a svg:nth-child(1) {
-  opacity: 1;
+  opacity: 0;
 }
 
 svg.svg-inline--fa.fa-sign-in-alt.fa-w-16.logout-menu {
