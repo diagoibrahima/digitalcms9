@@ -987,14 +987,20 @@ div#block-views-block-testcompletion-block-1 header, div#block-views-block-compl
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 96%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin: auto;
+}
+
+.crad-diagram {
+  position: relative;
+  margin-top: -25px;
 }
 
 .report-card {
   height: 100px;
-  width: 214px;
+  width: 235px;
   background: white;
   border-radius: 10px;
   border: solid 1px #e2e8f0;
@@ -1057,7 +1063,8 @@ strong {
 }
 
 div#block-views-block-dasbord-view-block-1 {
-  margin-top: 37px;
+  margin-top: -16px;
+  position: relative !important;
 }
 
 div#block-views-block-testcompletion-block-1, div#block-views-block-completionnbmessage-block-1 {
