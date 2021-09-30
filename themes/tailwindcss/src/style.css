@@ -1063,7 +1063,8 @@ strong {
 }
 
 div#block-views-block-dasbord-view-block-1 {
-  margin-top: 37px;
+  margin-top: -16px;
+  position: relative !important;
 }
 
 div#block-views-block-testcompletion-block-1, div#block-views-block-completionnbmessage-block-1 {
