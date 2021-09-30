@@ -148,9 +148,9 @@ jQuery('<h1> Add Custom Image</h1>').insertBefore('#edit-field-image-0-upload');
 // line chart
 const labels = [
   'Cours',
-  'Modules',
-  'Messages translated',
+  'Languages',
   'Messagaes',
+  'Messages translated',
 
 ];
 const data = {
@@ -159,7 +159,7 @@ const data = {
       label: 'Dataset Digital CMS',
       backgroundColor: '#036672',
       borderColor: '#036672',
-      data: [ cours, modulesdecourse, messagesimpetranslate, messagesimpe,],
+      data: [ cours, modulesdecourse,messagesimpe, messagesimpetranslate,],
   }]
 };
 
@@ -173,47 +173,6 @@ var chartLine = new Chart(
   document.getElementById('chartLine'),
   configLineChart
 );
-
-//bar chart
-
-
-const labelsBarChart = [
-  'Cours',
-  'Modules',
-  'Messages translated',
-  'Messagaes',
-];
-const dataBarChart = {
-  labels: labelsBarChart,
-  datasets: [{
-    label: 'Dataset Digital CMS',
-    backgroundColor: '#036672',
-    borderColor: '#036672',
-    data: [ cours, modulesdecourse, messagesimpetranslate, messagesimpe,],
-  }]
-};
-
-const configBarChart = {
-  type: 'bar',
-  data: dataBarChart,
-  options: {}
-};
-
-
-var chartBar = new Chart(
-  document.getElementById('chartBar'),
-  configBarChart
-);
-
-jQuery('.module-section').each(function(){
-  
-  var moduleIndexee = jQuery(this).index();
-  console.log(moduleIndexee);
-
-  jQuery(this).find('.blockmodule-titre-module span').html('Module '+moduleIndexee+':');
- 
-
-  });
 
 
 
