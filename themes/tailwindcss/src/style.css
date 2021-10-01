@@ -826,7 +826,7 @@ span.message-etat {
 form#node-translation-form {
   width: 64%;
   padding: 30px;
-  height: 1030px;
+  height: 730px;
   position: absolute;
   right: 40px;
 }
@@ -1139,5 +1139,38 @@ form#node-translation-edit-form .js-form-item.form-item.js-form-type-managed-fil
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+form#content-moderation-entity-moderation-form .entity-moderation-form {
+  margin: 2em 0;
+  padding-left: 1em;
+  border: 0px dashed #bbb;
+  background: #036572;
+  border-radius: 6px;
+  color: white;
+}
+
+form#content-moderation-entity-moderation-form select#edit-new-state {
+  height: 2rem;
+  border-radius: 5px;
+}
+
+form#content-moderation-entity-moderation-form input#edit-revision-log {
+  height: 2rem;
+  border-radius: 5px;
+  width: 62%;
+}
+
+form#content-moderation-entity-moderation-form .entity-moderation-form input[type=submit] {
+  margin-bottom: 1.2em;
+  color: white;
+  background: #ff9900;
+  border: white;
+  width: 99px;
+  position: absolute;
+  right: 70px;
+  top: 91px;
+  height: 2rem;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=style.css.map */
