@@ -692,7 +692,7 @@ nav#block-logout ul {
 }
 
 nav#block-logout ul li a svg:nth-child(1) {
-  opacity: 1;
+  opacity: 0;
 }
 
 svg.svg-inline--fa.fa-sign-in-alt.fa-w-16.logout-menu {
@@ -826,7 +826,7 @@ span.message-etat {
 form#node-translation-form {
   width: 64%;
   padding: 30px;
-  height: 1030px;
+  height: 730px;
   position: absolute;
   right: 40px;
 }
@@ -987,14 +987,20 @@ div#block-views-block-testcompletion-block-1 header, div#block-views-block-compl
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 96%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin: auto;
+}
+
+.crad-diagram {
+  position: relative;
+  margin-top: -25px;
 }
 
 .report-card {
   height: 100px;
-  width: 214px;
+  width: 235px;
   background: white;
   border-radius: 10px;
   border: solid 1px #e2e8f0;
@@ -1057,7 +1063,8 @@ strong {
 }
 
 div#block-views-block-dasbord-view-block-1 {
-  margin-top: 37px;
+  margin-top: -16px;
+  position: relative !important;
 }
 
 div#block-views-block-testcompletion-block-1, div#block-views-block-completionnbmessage-block-1 {
@@ -1122,5 +1129,48 @@ form#node-translation-edit-form .js-form-item.form-item.js-form-type-managed-fil
   left: 40%;
   top: 316px;
   font-weight: 400;
+}
+
+.js-form-item.form-item.js-form-type-select.form-item-field-field-moduleinmessage.js-form-item-field-field-moduleinmessage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form#content-moderation-entity-moderation-form .entity-moderation-form {
+  margin: 2em 0;
+  padding-left: 1em;
+  border: 0px dashed #bbb;
+  background: #036572;
+  border-radius: 6px;
+  color: white;
+}
+
+form#content-moderation-entity-moderation-form select#edit-new-state {
+  height: 2rem;
+  border-radius: 5px;
+}
+
+form#content-moderation-entity-moderation-form input#edit-revision-log {
+  height: 2rem;
+  border-radius: 5px;
+  width: 62%;
+}
+
+form#content-moderation-entity-moderation-form .entity-moderation-form input[type=submit] {
+  margin-bottom: 1.2em;
+  color: white;
+  background: #ff9900;
+  border: white;
+  width: 99px;
+  position: absolute;
+  right: 70px;
+  top: 91px;
+  height: 2rem;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,7 @@
 jQuery(document).ready(function() {
 
- //jQuery('.blockmodule-submodule').hide();
- //jQuery('.add-module , .use-ajax').hide();
+ jQuery('.blockmodule-submodule').hide();
+ jQuery('.add-module , .use-ajax').hide();
  jQuery('option[value="_none"]').remove();
 
 
@@ -145,43 +145,16 @@ jQuery('option[value="_none"]').remove();
 jQuery('<h1> Add Custom Image</h1>').insertBefore('#edit-field-image-0-upload');
 
 
-// line chart
-const labels = [
-  'Cours',
-  'Modules',
-  'Messages translated',
-  'Messagaes',
 
-];
-const data = {
-  labels: labels,
-  datasets: [{
-      label: 'Dataset Digital CMS',
-      backgroundColor: '#036672',
-      borderColor: '#036672',
-      data: [ cours, modulesdecourse, messagesimpetranslate, messagesimpe,],
-  }]
-};
-
-const configLineChart = {
-  type: 'line',
-  data,
-  options: {}
-};
-
-var chartLine = new Chart(
-  document.getElementById('chartLine'),
-  configLineChart
-);
 
 //bar chart
 
 
 const labelsBarChart = [
   'Cours',
-  'Modules',
-  'Messages translated',
-  'Messagaes',
+  'Languages',
+  'Messages',
+  'Messagaes translated',
 ];
 const dataBarChart = {
   labels: labelsBarChart,
