@@ -894,7 +894,7 @@ span.message-etat {
 form#node-translation-form {
   width: 64%;
   padding: 30px;
-  height: 730px;
+  height: 850px;
   position: absolute;
   right: 40px;
 }
@@ -1246,12 +1246,14 @@ form#content-moderation-entity-moderation-form{
   select#edit-new-state {
     height: 2rem;
     border-radius: 5px;
+    color: black;
 }
 
 input#edit-revision-log {
   height: 2rem;
   border-radius: 5px;
   width: 62%;
+  color: #000000;
 }
 
 .entity-moderation-form input[type=submit] {
@@ -1268,4 +1270,9 @@ input#edit-revision-log {
 }
 
 
+}
+
+
+p.tw-font-semibold {
+  color: #5555;
 }
