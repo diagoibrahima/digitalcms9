@@ -1179,4 +1179,8 @@ form#content-moderation-entity-moderation-form .entity-moderation-form input[typ
 p.tw-font-semibold {
   color: #5555;
 }
+
+pre.backtrace {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */
