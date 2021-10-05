@@ -1297,3 +1297,14 @@ p.tw-font-semibold {
 .report-card:nth-child(4) {
   background: linear-gradient(to right, #01a9ac, #01dbdf);
 }
+
+
+div[data-drupal-messages] {
+  color: white;
+  background: #0080009c;
+  width: 95%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
