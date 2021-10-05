@@ -1200,4 +1200,14 @@ p.tw-font-semibold {
   background: -webkit-gradient(linear, left top, right top, from(#01a9ac), to(#01dbdf));
   background: linear-gradient(to right, #01a9ac, #01dbdf);
 }
+
+div[data-drupal-messages] {
+  color: white;
+  background: #0080009c;
+  width: 95%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */
