@@ -1304,7 +1304,20 @@ div[data-drupal-messages] {
   background: #016d019c;
   width: 95%;
   margin: auto;
-  padding: 10px;
+  
   border-radius: 5px;
   text-align: center;
+}
+
+pre.backtrace {
+  display: none;
+}
+
+div[aria-label="Error message"] {
+  display: none;
+ 
+}
+
+div [aria-label="Status message"]{
+  padding: 10px;
 }
