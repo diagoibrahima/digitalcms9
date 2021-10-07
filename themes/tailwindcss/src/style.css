@@ -26,8 +26,8 @@ aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
 h1.js-quickedit-page-title {
   line-height: 3em;
   background: white;
-  -webkit-box-shadow: 0px 4px 4px -3px;
-          box-shadow: 0px 4px 4px -3px;
+  -webkit-box-shadow: 0px 2px 5px -3px;
+          box-shadow: 0px 2px 5px -3px;
 }
 
 div#block-searchform {
@@ -218,14 +218,15 @@ span.link-text {
 display: none;
 } 
 
-*/
-.blockmodule-titre-module-green {
-  background: #eefbf5 !important;
+
+.blockmodule-titre-module-green{
+  background:rgb(238, 251, 245) !important;
 }
 
+*/
 .blockmodule-submodule {
   width: 100% !important;
-  background: #eefbf5 !important;
+  /* background:rgb(238, 251, 245) !important; */
   padding: 5px 20px !important;
 }
 
@@ -716,7 +717,7 @@ div#edit-field-course-wrapper {
   position: relative !important;
   margin-top: 60px !important;
   width: 75% !important;
-  background: #edfbf4;
+  background: #ffffff;
 }
 
 #block-views-block-add-module-button-block-1 {
@@ -1020,7 +1021,7 @@ div#block-views-block-testcompletion-block-1 header, div#block-views-block-compl
   bottom: 15px;
   left: 16px;
   font-size: 18px;
-  color: #036572;
+  color: #ffffff;
   font-weight: 200;
 }
 
@@ -1028,7 +1029,7 @@ div#block-views-block-testcompletion-block-1 header, div#block-views-block-compl
   position: absolute;
   top: 0px;
   font-size: 45px;
-  color: #036672;
+  color: #ffffff;
   font-weight: bold;
   left: 54px;
 }
@@ -1037,7 +1038,7 @@ div#block-views-block-testcompletion-block-1 header, div#block-views-block-compl
   position: absolute;
   left: 16px;
   top: 20px;
-  color: #036672;
+  color: #ffffff;
   font-size: 26px;
 }
 
@@ -1177,6 +1178,47 @@ form#content-moderation-entity-moderation-form .entity-moderation-form input[typ
 }
 
 p.tw-font-semibold {
-  color: #5555;
+  color: #575757;
+}
+
+.report-card:nth-child(1) {
+  background: -webkit-gradient(linear, left top, right top, from(#fe9365), to(#feb798));
+  background: linear-gradient(to right, #fe9365, #feb798);
+}
+
+.report-card:nth-child(2) {
+  background: -webkit-gradient(linear, left top, right top, from(#0ac282), to(#0df3a3));
+  background: linear-gradient(to right, #0ac282, #0df3a3);
+}
+
+.report-card:nth-child(3) {
+  background: -webkit-gradient(linear, left top, right top, from(#fe5d70), to(#fe909d));
+  background: linear-gradient(to right, #fe5d70, #fe909d);
+}
+
+.report-card:nth-child(4) {
+  background: -webkit-gradient(linear, left top, right top, from(#01a9ac), to(#01dbdf));
+  background: linear-gradient(to right, #01a9ac, #01dbdf);
+}
+
+div[data-drupal-messages] {
+  color: white;
+  background: #016d019c;
+  width: 95%;
+  margin: auto;
+  border-radius: 5px;
+  text-align: center;
+}
+
+pre.backtrace {
+  display: none;
+}
+
+div[aria-label="Error message"] {
+  display: none;
+}
+
+div [aria-label="Status message"] {
+  padding: 10px;
 }
 /*# sourceMappingURL=style.css.map */

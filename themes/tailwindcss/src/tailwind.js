@@ -37,6 +37,7 @@ if(pourcentagemyInt >=100){
   jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').addClass('colo-midlegr');
   jQuery('p.tw-rounded.tw-bg-red-100.tw-border.tw-border-red-500.tw-text-gray-800.p-1').addClass('coloremidelgr');
   jQuery('p.tw-rounded.tw-bg-red-100.tw-border.tw-border-red-500.tw-text-gray-800.p-1').html('This course has been fully translated');
+  jQuery('p.tw-my-2.tw-text-center.tw-text-gray-500 span.contentrestetotranslate').html('');
 }
 
 if((jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').text())=='NaN%'){
@@ -84,7 +85,7 @@ jQuery('.module-section').click(function(){
       // Expand All 
     jQuery('.expandall-minimizeall-button').click(function() {
     jQuery('.blockmodule-submodule').toggle('fast');
-    jQuery('h3').toggleClass( 'colore-black' ); 
+    //jQuery('h3').toggleClass( 'colore-black' ); 
     jQuery('.blockmodule-titre-module').toggleClass('blockmodule-titre-module-green');
     jQuery('.fa-chevron-down').toggleClass( 'ch-rotation' );
     var expand = (jQuery('.expandall-minimizeall-button').text());
@@ -160,8 +161,8 @@ const dataBarChart = {
   labels: labelsBarChart,
   datasets: [{
     label: 'Dataset Digital CMS',
-    backgroundColor: '#036672',
-    borderColor: '#036672',
+    backgroundColor:'#36B1B4',
+    borderColor: '#36B1B4',
     data: [ cours, modulesdecourse, messagesimpetranslate, messagesimpe,],
   }]
 };
