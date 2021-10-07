@@ -1300,11 +1300,71 @@ p.tw-font-semibold {
 
 
 div[data-drupal-messages] {
-  color: white;
-  background: #016d019c;
+  color: rgb(0, 0, 0);
+  background:#49b9954a !important;
   width: 95%;
-  margin: auto;
-  padding: 10px;
+  margin: 20px auto;
   border-radius: 5px;
   text-align: center;
+  border: solid  1px #49b995 !important;
+}
+
+pre.backtrace {
+  display: none;
+}
+
+div[aria-label="Error message"] {
+  display: none;
+ 
+}
+
+div [aria-label="Status message"]{
+  padding: 10px;
+}
+
+
+input[data-drupal-selector="edit-field-contentmessage-0-value"] {
+  height: 260px;
+  width: 99%;
+  border-radius: 5px;
+}
+
+form#node-language-form {
+  height: 170px;
+}
+
+
+article[typeof="schema:Person"] {
+  
+    background: white;
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
+    padding: 38px;
+    text-align: center;
+
+
+  img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: 0px 0px 2px 0px;
+    margin: auto;
+    margin: auto auto 10px auto;
+}
+
+div:nth-child(3) a {
+  color: green;
+  background: #49b9954a !important;
+  border-radius: 51px;
+  padding: 5px;
+  line-height: 3;
+}
+
+
+div {
+  display: contents;
+}
+
+
 }
