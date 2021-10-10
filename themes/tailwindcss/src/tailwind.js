@@ -70,6 +70,34 @@ jQuery('.module-section').click(function(){
 
   */
 
+  jQuery( ".views-field.views-field-field-field-langage" ).each(function( index ) {
+  //  var langues= new Array();
+ var langues =jQuery( this ).text();
+
+  console.log((langues));
+
+//    console.log( index + ": " + jQuery( this ).text() );
+
+
+const arr = [langues];
+const countUnique = arr => {
+const counts = {};
+for (var i = 0; i < arr.length; i++) {
+counts[arr[i]] = (counts[arr[i]] || 0);
+};
+return Object.keys(counts).length;
+};
+
+console.log(countUnique(arr));
+
+  });
+
+
+
+ // let languesnumber= jQuery('.views-field.views-field-field-field-langage a').text();
+
+ // console.log(languesnumber);
+
 
 
   // Expand switch for one single learning module  new
@@ -131,7 +159,7 @@ turneoff == "Turn editing on" ?  jQuery('.tw-switch-editing-button').text('Turn 
 
 
 // jQuery('.a.use-ajax').hide();
-jQuery('<h1 class="titre-cms-translation">CMS Translation</h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name'); 
+jQuery('<h1 class="titre-cms-translation"> Content management and adaption platform </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name'); 
 jQuery('<i class="fa fa-fw fa-user"></i>').insertBefore('input#edit-name');
 jQuery('<i class="fa fa-fw fa-lock"></i>').insertBefore('input#edit-pass');
 jQuery('a.use-ajax').prepend('<i class="fas fa-plus-square"></i>');
@@ -153,14 +181,14 @@ jQuery('<h1> Add Custom Image</h1>').insertBefore('#edit-field-image-0-upload');
 
 const labelsBarChart = [
   'Cours',
-  'Languages',
+  'Localizations',
   'Messages',
-  'Messagaes translated',
+  'Messages translated',
 ];
 const dataBarChart = {
   labels: labelsBarChart,
   datasets: [{
-    label: 'Dataset Digital CMS',
+    label: 'Dataset Content management and adaption platform',
     backgroundColor:'#36B1B4',
     borderColor: '#36B1B4',
     data: [ cours, modulesdecourse, messagesimpetranslate, messagesimpe,],
