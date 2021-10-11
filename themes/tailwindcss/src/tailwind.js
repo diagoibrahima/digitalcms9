@@ -159,7 +159,7 @@ turneoff == "Turn editing on" ?  jQuery('.tw-switch-editing-button').text('Turn 
 
 
 // jQuery('.a.use-ajax').hide();
-jQuery('<h1 class="titre-cms-translation"> Content management and adaption platform </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name'); 
+jQuery('<h1 class="titre-cms-translation"> CONTENT MANAGEMENT AND ADAPTION PLATFORM </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name'); 
 jQuery('<i class="fa fa-fw fa-user"></i>').insertBefore('input#edit-name');
 jQuery('<i class="fa fa-fw fa-lock"></i>').insertBefore('input#edit-pass');
 jQuery('a.use-ajax').prepend('<i class="fas fa-plus-square"></i>');
