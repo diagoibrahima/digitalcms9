@@ -5,7 +5,7 @@ body{
 }
 
 aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
-    background-color:#036672 !important;
+    background-color:#1491c1 !important;
     width: 260px !important;
   }
   
@@ -1367,4 +1367,44 @@ div {
 }
 
 
+}
+
+
+.site-name.tw-text-2xl.tw-text-white.tw-font-semibold.titre-website{
+  font-size: 1rem !important;
+  background: #fafffd;
+  border-radius: 5px;
+  padding: 10px;
+  color: #036572 !important;
+  text-align: center;
+
+  &:hover {
+    background: #07a271 !important;
+    color: white !important;
+}
+
+  a.titre-website1 {
+    position: relative;
+
+
+    &:before{
+
+      content: '';
+      background: red;
+      height: 69px;
+      width: 233px;
+      position: absolute;
+      top: -13px;
+      left: -18px;
+      opacity: 0;
+
+    }
+
+}
+
+}
+
+
+input {
+  padding: 0px 0px 0px 10px;
 }
