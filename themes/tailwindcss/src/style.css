@@ -1307,6 +1307,36 @@ a.generatebutton {
   margin: 2rem;
 }
 
+a.moderationStateButtonSubmit {
+  background: #c0a612;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 1rem;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+a.moderationStateButtonApprove {
+  background: #25a70b;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 1rem;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+a.moderationStateButtonReject {
+  background: #a73407;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 1rem;
+  font-size: 15px;
+  cursor: pointer;
+}
+
 .channelgenerate a {
   display: none;
 }

@@ -3,7 +3,7 @@ jQuery(document).ready(function() {
  jQuery('.blockmodule-submodule').hide();
  jQuery('.add-module , .use-ajax').hide();
  jQuery('option[value="_none"]').remove();
-
+ jQuery('.entity-moderation-form .form-item label').html('');
 
 //content completion 
 //nombre de message traduit
@@ -69,6 +69,17 @@ jQuery( "a.generatebutton" ).click(function() {
   let messagetolacalise=(jQuery('article').html());
   jQuery('.channelgenerate ').append(messagetolacalise);
 });
+
+//MANAGE MODERATION STATE
+
+var moderationstate = (jQuery('.entity-moderation-form__item div#edit-current').text());
+
+console.log(moderationstate);
+
+jQuery( '<a class="moderationStateButtonReject" >Reject</a>').insertAfter('.js-quickedit-page-title span');
+jQuery( '<a class="moderationStateButtonApprove" >Approve</a>').insertAfter('.js-quickedit-page-title span');
+jQuery( '<a class="moderationStateButtonSubmit" >Submit</a>').insertAfter('.js-quickedit-page-title span');
+
 
 
 // Expand switch for one single learning module 
