@@ -1101,8 +1101,10 @@ span.message-etat {
 }
 
 div#block-views-block-listtranslation-block-1 {
-  width: 72%;
-  margin-left: 1.5rem;
+  width: 70%;
+  margin-left: 2rem;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .show-message {
@@ -1269,12 +1271,12 @@ article[typeof="schema:Person"] div {
   background: #fafffd;
   border-radius: 5px;
   padding: 10px;
-  color: #036572 !important;
+  color: #1391c1 !important;
   text-align: center;
 }
 
 .site-name.tw-text-2xl.tw-text-white.tw-font-semibold.titre-website:hover {
-  background: #07a271 !important;
+  background: #a5dff5d1 !important;
   color: white !important;
 }
 
@@ -1295,5 +1297,75 @@ article[typeof="schema:Person"] div {
 
 input {
   padding: 0px 0px 0px 10px;
+}
+
+a.generatebutton {
+  background: #13b5f3;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 2rem;
+}
+
+.channelgenerate a {
+  display: none;
+}
+
+.channelgenerate.sms img {
+  display: none;
+}
+
+.channelgenerate.sms {
+  background: #ffd2d2;
+  width: 70%;
+  padding: 22px;
+  margin-left: 2rem;
+  border-radius: 5px;
+  margin-top: 36px;
+}
+
+.channelgenerate.moodle {
+  background: #bbffbb;
+  width: 70%;
+  padding: 22px;
+  margin-left: 2rem;
+  border-radius: 5px;
+  margin-top: 36px;
+}
+
+.channelgenerate.whatsapp {
+  background: #f6afff;
+  width: 70%;
+  padding: 22px;
+  margin-left: 2rem;
+  border-radius: 5px;
+  margin-top: 36px;
+}
+
+.channelgenerate.telegrame {
+  background: #d1feff;
+  width: 70%;
+  padding: 22px;
+  margin-left: 2rem;
+  border-radius: 5px;
+  margin-top: 36px;
+}
+
+.channelgenerate.messanger {
+  background: #d2e2ff;
+  width: 70%;
+  padding: 22px;
+  margin-left: 2rem;
+  border-radius: 5px;
+  margin-top: 36px;
+  margin-bottom: 30px;
+}
+
+.channelgenerate:hover {
+  background: white !important;
+}
+
+.channelgenerategeneral .svg-inline--fa {
+  margin: 0px 10px 0px 0px;
 }
 /*# sourceMappingURL=style.css.map */
