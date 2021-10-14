@@ -57,6 +57,19 @@ jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslate
 let modulesdecourse=(jQuery('div#block-views-block-cardnbmodule-block-1 header').text());
 jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(modulesdecourse);
 
+//GENERATE CHANNEL
+
+jQuery( '<a class="generatebutton" >Generate</a>').insertAfter('article');
+
+jQuery( "a.generatebutton" ).click(function() {
+
+
+  jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms"><i class="fas fa-sms"></i>SMS</div> <br> <div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>MOODLE</div> <br>  <div class="channelgenerate whatsapp"><i class="fab fa-whatsapp"></i>WHATSAPP</div> <br>  <div class="channelgenerate telegrame"><i class="fab fa-telegram"></i>TELEGRAME</div> <br> <div class="channelgenerate messanger"><i class="fab fa-facebook-messenger"></i>MESSENGER</div> </div>').insertAfter('a.generatebutton');
+
+  let messagetolacalise=(jQuery('article').html());
+  jQuery('.channelgenerate ').append(messagetolacalise);
+});
+
 
 // Expand switch for one single learning module 
 /*
@@ -69,28 +82,6 @@ jQuery('.module-section').click(function(){
   });
 
   */
-
-  jQuery( ".views-field.views-field-field-field-langage" ).each(function( index ) {
-  //  var langues= new Array();
- var langues =jQuery( this ).text();
-
-  console.log((langues));
-
-//    console.log( index + ": " + jQuery( this ).text() );
-
-
-const arr = [langues];
-const countUnique = arr => {
-const counts = {};
-for (var i = 0; i < arr.length; i++) {
-counts[arr[i]] = (counts[arr[i]] || 0);
-};
-return Object.keys(counts).length;
-};
-
-console.log(countUnique(arr));
-
-  });
 
 
 
@@ -191,7 +182,7 @@ const dataBarChart = {
     label: 'Dataset Content management and adaption platform',
     backgroundColor:'#36B1B4',
     borderColor: '#36B1B4',
-    data: [ cours, modulesdecourse, messagesimpetranslate, messagesimpe,],
+    data: [ cours, modulesdecourse, messagesimpetranslate,'25%' ,],
   }]
 };
 
