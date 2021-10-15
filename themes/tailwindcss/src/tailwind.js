@@ -60,7 +60,7 @@ jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(modu
 //GENERATE CHANNEL
 
 
-jQuery("a.generatebutton").click(function() {
+  jQuery("a.generatebutton").click(function() {
 
 
   jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms"><i class="fas fa-sms"></i>SMS</div> <br> <div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>MOODLE</div> <br>  <div class="channelgenerate whatsapp"><i class="fab fa-whatsapp"></i>WHATSAPP</div> <br>  <div class="channelgenerate telegrame"><i class="fab fa-telegram"></i>TELEGRAME</div> <br> <div class="channelgenerate messanger"><i class="fab fa-facebook-messenger"></i>MESSENGER</div> </div>').insertAfter('a.generatebutton');
@@ -75,33 +75,46 @@ jQuery("a.generatebutton").click(function() {
 
 //MANAGE MODERATION STATE
 
-var moderationstate = (jQuery('.entity-moderation-form__item div#edit-current').text());
+var moderationstate = jQuery.trim(jQuery('.entity-moderation-form__item div#edit-current').text());
 
-moderationstate2 = moderationstate.split(" ").join("");
 
 console.log("paris");
 console.log(moderationstate);
-jQuery( '<a class="moderationStateButtonSubmit">Re-Submit</a>').insertAfter('.js-quickedit-page-title span');
-jQuery( '<a class="moderationStateButtonReject" >Reject</a>').insertAfter('.js-quickedit-page-title span');
-jQuery( '<a class="moderationStateButtonApprove" >Approve</a>').insertAfter('.js-quickedit-page-title span');
-jQuery( '<a class="moderationStateButtonSubmit" >Submit</a>').insertAfter('.js-quickedit-page-title span');
+
+
+if(moderationstate =="Draft"){
+jQuery('a.moderationStateButton.sforreview').remove();
+jQuery('a.moderationStateButton.approve').remove();
+jQuery('a.moderationStateButton.reject').remove();
+jQuery('a.moderationStateButton.rsubmit').remove();
+jQuery('a.moderationStateButton.submit').addClass('submitpositionleft');
 
 
 
-if(moderationstate2 =="Draft"){
-jQuery( '<a class="moderationStateButtonSubmit" >Sudbmit</a>').insertAfter('.js-quickedit-page-title span');
 }
 
-if(moderationstate2 =='Submit for review'){
-jQuery( '<a class="moderationStateButtonReject" >Reject</a>').insertAfter('.js-quickedit-page-title span');
-jQuery( '<a class="moderationStateButtonApprove" >Approve</a>').insertAfter('.js-quickedit-page-title span');
+if(moderationstate =='Submit for review'){
+jQuery('a.moderationStateButton.submit').remove();
+jQuery('a.moderationStateButton.sforreview').remove();
+jQuery('a.moderationStateButton.rsubmit').remove();
+jQuery('a.moderationStateButton.submit').addClass('submitpositionleft');
+
 }
 
-if(moderationstate2 =='Rjected'){
-jQuery( '<a class="moderationStateButtonSubmit">Re-Submit</a>').insertAfter('.js-quickedit-page-title span');
+if(moderationstate =='Rejected'){
+jQuery('a.moderationStateButton.sforreview').remove();
+jQuery('a.moderationStateButton.submit').remove();
+jQuery('a.moderationStateButton.approve').remove();
+jQuery('a.moderationStateButton.reject').remove();
+
 }
 
-if(moderationstate2 =='Approved'){
+if(moderationstate ==''){
+jQuery('a.moderationStateButton.sforreview').remove();
+jQuery('a.moderationStateButton.submit').remove();
+jQuery('a.moderationStateButton.approve').remove();
+jQuery('a.moderationStateButton.reject').remove();
+jQuery('a.moderationStateButton.rsubmit').remove();
 }
 
 
