@@ -5,6 +5,7 @@ jQuery(document).ready(function() {
  jQuery('option[value="_none"]').remove();
  jQuery('.entity-moderation-form .form-item label').html('');
 
+
 //content completion 
 //nombre de message traduit
 var nombredemessagetraduit = (jQuery('div#block-views-block-testcompletion-block-1 header').text());
@@ -74,22 +75,31 @@ jQuery( "a.generatebutton" ).click(function() {
 
 var moderationstate = (jQuery('.entity-moderation-form__item div#edit-current').text());
 
-console.log(moderationstate);
+moderationstate2 = moderationstate.split(" ").join("");
 
-if(moderationstate =='Draft'){
+console.log("paris");
+console.log(moderationstate);
+jQuery( '<a class="moderationStateButtonSubmit">Re-Submit</a>').insertAfter('.js-quickedit-page-title span');
+jQuery( '<a class="moderationStateButtonReject" >Reject</a>').insertAfter('.js-quickedit-page-title span');
+jQuery( '<a class="moderationStateButtonApprove" >Approve</a>').insertAfter('.js-quickedit-page-title span');
 jQuery( '<a class="moderationStateButtonSubmit" >Submit</a>').insertAfter('.js-quickedit-page-title span');
+
+
+
+if(moderationstate2 =="Draft"){
+jQuery( '<a class="moderationStateButtonSubmit" >Sudbmit</a>').insertAfter('.js-quickedit-page-title span');
 }
 
-if(moderationstate =='Ready for review'){
+if(moderationstate2 =='Submit for review'){
 jQuery( '<a class="moderationStateButtonReject" >Reject</a>').insertAfter('.js-quickedit-page-title span');
 jQuery( '<a class="moderationStateButtonApprove" >Approve</a>').insertAfter('.js-quickedit-page-title span');
 }
 
-if(moderationstate =='Rjected'){
-jQuery( '<a class="moderationStateButtonSubmit" >Re-Submit</a>').insertAfter('.js-quickedit-page-title span');
+if(moderationstate2 =='Rjected'){
+jQuery( '<a class="moderationStateButtonSubmit">Re-Submit</a>').insertAfter('.js-quickedit-page-title span');
 }
 
-if(moderationstate =='Approved'){
+if(moderationstate2 =='Approved'){
 }
 
 
