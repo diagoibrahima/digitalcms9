@@ -53,7 +53,8 @@ jQuery(document).ready(function() {
  let messagesimpe=(jQuery('div#block-views-block-cardnbmessage-block-1 header').text());
  jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagaes').html(messagesimpe);
  let messagesimpetranslate=(jQuery('div#block-views-block-cardnbmessagetranslated-block-1 header').text());
- jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(messagesimpetranslate);
+ //jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(messagesimpetranslate);
+ jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html('10%');
  let modulesdecourse=(jQuery('div#block-views-block-cardnbmodule-block-1 header').text());
  jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(modulesdecourse);
  
