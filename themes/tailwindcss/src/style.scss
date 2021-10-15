@@ -1268,7 +1268,7 @@ input#edit-revision-log {
   width: 99px;
   position: absolute;
   right: 70px;
-  top: 91px;
+  top: 70px;
   height: 2rem;
   border-radius: 5px;
 }
@@ -1543,8 +1543,10 @@ a.moderationStateButton.submit.submitpositionleft , a.moderationStateButton.appr
   padding: 5px;
   border-radius: 5px;
   color: white;
+  cursor: pointer;
 }
 
 a.moderationStateButton.reject {
   right: 120px;
+  background: red;
 }
