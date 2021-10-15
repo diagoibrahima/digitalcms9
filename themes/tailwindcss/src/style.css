@@ -66,7 +66,7 @@ div#edit-actions #edit-submit {
   border-radius: 5px !important;
   width: 100px !important;
   color: white !important;
-  background: linear-gradient(45deg, #10b981, #059669);
+  background: linear-gradient(45deg, #0c6385, #46ccff);
   border: cornsilk !important;
 }
 
@@ -151,7 +151,7 @@ h1.js-quickedit-page-title {
 }
 
 a.tw-action-new.tw-btn.tw-btn-primary {
-  background: linear-gradient(45deg, #10b981, #059669);
+  background: linear-gradient(45deg, #0c6385, #46ccff);
   padding: 10px;
   border-radius: 5px;
   color: white;
@@ -162,7 +162,7 @@ a.tw-action-new.tw-btn.tw-btn-primary {
 }
 
 a.tw-action-new.tw-btn.tw-btn-primary:hover {
-  background: linear-gradient(45deg, #00ffaa, #014731);
+  background: linear-gradient(45deg #46ccff, #0c6385);
 }
 
 .add-course-btn {
@@ -281,14 +281,14 @@ span.expandall-minimizeall-button.cursor-pointer {
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding: 0rem 3rem;
-  color: #149b2c;
+  color: #1491c1 !important;
   margin: 6rem 0rem;
   width: 21.5%;
 }
 
 .tw-btn-action-new:hover {
-  color: #ffffff;
-  background: linear-gradient(45deg, #00ffaa, #014731);
+  color: #ffffff !important;
+  background: linear-gradient(45deg, #1491c1, #03aff3);
   border-style: hidden;
 }
 
@@ -456,9 +456,13 @@ form#node-sub-module-edit-form {
 }
 
 */
+span.tw-text-green-500.align-right {
+  color: #1391c1 !important;
+}
+
 .views-col.col-1.addcourse-blank .tw-item-card {
-  color: #059669;
-  border: 2px solid #059669;
+  color: #1391c1;
+  border: 2px solid #1391c1;
   border-style: dashed;
   position: relative;
   cursor: pointer !important;
@@ -466,8 +470,8 @@ form#node-sub-module-edit-form {
 
 .views-col.col-1.addcourse-blank .tw-item-card:hover {
   color: white;
-  border: 2px solid #059669;
-  background: #059669 !important;
+  border: 2px solid #1391c1;
+  background: #1391c1 !important;
   cursor: pointer !important;
 }
 
@@ -617,7 +621,7 @@ article.node:before {
 }
 
 .add-module {
-  color: #149b2c;
+  color: #1491c1 !important;
   border: solid 2px;
   border-style: dashed;
   border-radius: 8px;
@@ -631,9 +635,9 @@ article.node:before {
 }
 
 .add-module:hover {
-  background: linear-gradient(45deg, #00ffaa, #014731);
+  background: linear-gradient(45deg, #1491c1, #016288) !important;
   border-style: hidden;
-  color: white;
+  color: white !important;
   line-height: 3.4;
 }
 
@@ -662,7 +666,7 @@ article.node:before {
 }
 
 .add-translation {
-  color: #11a02b;
+  color: #1491c1;
   border: solid 2px;
   border-style: dashed;
   border-radius: 8px;
@@ -671,7 +675,8 @@ article.node:before {
   width: 80%;
   margin-left: 5%;
   z-index: 10;
-  margin: 0px 22px;
+  margin: 20px 22px;
+  white-space: nowrap !important;
 }
 
 .activitylogMessage {
@@ -742,9 +747,9 @@ span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2
   margin: auto;
   top: -88px;
   left: 40px;
-  border: solid 1px;
+  border: solid #1491c1 1px !important;
   padding: 5px;
-  color: #149b2c;
+  color: #1491c1 !important;
   border: solid 2px;
   border-radius: 8px;
   line-height: 2.1;
@@ -757,13 +762,13 @@ span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2
 
 span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer:hover {
   color: #ffffff !important;
-  background: linear-gradient(45deg, #00ffaa, #014731);
+  background: linear-gradient(45deg, #1491c1, #089cd6);
   border-style: hidden;
   line-height: 2.8;
 }
 
 .turneditone {
-  background: linear-gradient(45deg, #00ffaa, #009a69);
+  background: linear-gradient(45deg, #1491c1, #089cd6);
   color: white !important;
   border: none !important;
 }
@@ -1205,12 +1210,12 @@ p.tw-font-semibold {
 
 div[data-drupal-messages] {
   color: black;
-  background: #49b9954a !important;
+  background: #1391c159 !important;
   width: 95%;
   margin: 20px auto;
   border-radius: 5px;
   text-align: center;
-  border: solid  1px #49b995 !important;
+  border: solid  1px #1390c1 !important;
 }
 
 pre.backtrace {
@@ -1430,5 +1435,14 @@ a.moderationStateButton.submit.submitpositionleft, a.moderationStateButton.appro
 a.moderationStateButton.reject {
   right: 120px;
   background: red;
+}
+
+form#node-messages-form {
+  height: 550px;
+  padding: 10px;
+}
+
+td.tw-text-green-400.views-field.views-field-view-node {
+  color: #1391c1 !important;
 }
 /*# sourceMappingURL=style.css.map */
