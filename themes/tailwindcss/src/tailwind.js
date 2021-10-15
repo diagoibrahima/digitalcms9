@@ -59,7 +59,6 @@ jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(modu
 
 //GENERATE CHANNEL
 
-jQuery( '<a class="generatebutton" >Generate</a>').insertAfter('div#block-views-block-generatechannelbutton-block-1');
 
 jQuery("a.generatebutton").click(function() {
 
@@ -69,7 +68,7 @@ jQuery("a.generatebutton").click(function() {
   let messagetolacalise=(jQuery('article').html());
   jQuery('.channelgenerate ').append(messagetolacalise);
   jQuery('a.generatebutton').html('<a class="cancelbutton"> Cancel </a>');
- // jQuery('a.generatebutton').removeClass('generatebutton');
+  jQuery('a.generatebutton').removeClass('generatebutton');
 
 
 });
