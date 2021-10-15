@@ -431,7 +431,7 @@ form#node-course-form ,form#node-module-form ,form#node-sub-module-form ,.node-c
     width: 100%;
 }
 
-input#edit-title-0-value , input#edit-field-course-0-target-id ,input#edit-field-module-0-target-id ,input#edit-field-message-0-value ,.js-form-item{
+input#edit-title-0-value , input#edit-field-course-0-target-id ,input#edit-field-module-0-target-id ,input#edit-field-message-0-value ,.js-form-item , input#edit-field-localization-tag-0-target-id{
   border-radius: 0.25rem;
   line-height: 2;
 }
@@ -1268,7 +1268,7 @@ input#edit-revision-log {
   width: 99px;
   position: absolute;
   right: 70px;
-  top: 91px;
+  top: 70px;
   height: 2rem;
   border-radius: 5px;
 }
@@ -1531,6 +1531,7 @@ a.cancelbutton {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 a.moderationStateButton {
   background: #bbbab8;
   color: white;
@@ -1549,4 +1550,54 @@ a.moderationStateButton {
     border-radius: 5px;
     top: 70px;
     color: white;
+=======
+
+form#node-localization-form {
+  width: 60%;
+  margin-left: 35%;
+  padding: 14px;
+  height: 511px;
+}
+
+
+div#block-views-block-messagetotranslate-block-1 {
+  width: 30%;
+  background: white;
+  border-radius: 5px;
+  position: absolute !important;
+  margin: 30px;
+  top: 123px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 1px 4px 1px #0a0a0a21;
+  box-shadow: 0px 1px 4px 1px #0a0a0a21;
+}
+
+
+
+.js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-localization-tag-0-target-id.js-form-item-field-localization-tag-0-target-id {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.block_moderation_state {
+  position: relative;
+}
+
+
+a.moderationStateButton.submit.submitpositionleft , a.moderationStateButton.approve , a.moderationStateButton.reject , a.moderationStateButton.rsubmit{
+  position: absolute;
+  top: -53px;
+  right: 34px;
+  background: #49b995;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+a.moderationStateButton.reject {
+  right: 120px;
+  background: red;
+>>>>>>> 7dc016fb6a6463b32ea992282cc9a607fe9c35b3
 }
