@@ -60,15 +60,18 @@ jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(modu
 
 //GENERATE CHANNEL
 
-jQuery( '<a class="generatebutton" >Generate</a>').insertAfter('article');
 
-jQuery( "a.generatebutton" ).click(function() {
+jQuery("a.generatebutton").click(function() {
 
 
   jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms"><i class="fas fa-sms"></i>SMS</div> <br> <div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>MOODLE</div> <br>  <div class="channelgenerate whatsapp"><i class="fab fa-whatsapp"></i>WHATSAPP</div> <br>  <div class="channelgenerate telegrame"><i class="fab fa-telegram"></i>TELEGRAME</div> <br> <div class="channelgenerate messanger"><i class="fab fa-facebook-messenger"></i>MESSENGER</div> </div>').insertAfter('a.generatebutton');
-
+ 
   let messagetolacalise=(jQuery('article').html());
   jQuery('.channelgenerate ').append(messagetolacalise);
+  jQuery('a.generatebutton').html('<a class="cancelbutton"> Cancel </a>');
+  jQuery('a.generatebutton').removeClass('generatebutton');
+
+
 });
 
 //MANAGE MODERATION STATE
@@ -103,6 +106,16 @@ if(moderationstate2 =='Approved'){
 }
 
 
+
+
+
+
+
+jQuery('a.cancelbutton').click(function() {
+    alert('hi');
+  jQuery('.channelgenerategeneral').html('b');
+
+});
 
 
 

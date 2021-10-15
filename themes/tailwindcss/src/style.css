@@ -1305,6 +1305,7 @@ a.generatebutton {
   padding: 5px;
   border-radius: 5px;
   margin: 2rem;
+  cursor: pointer;
 }
 
 a.moderationStateButtonSubmit {
@@ -1397,5 +1398,18 @@ a.moderationStateButtonReject {
 
 .channelgenerategeneral .svg-inline--fa {
   margin: 0px 10px 0px 0px;
+}
+
+div#block-views-block-generatechannelbutton-block-1 {
+  display: none;
+}
+
+a.cancelbutton {
+  background: red;
+  padding: 5px 5px;
+  border-radius: 5px;
+  color: white;
+  margin-left: 2rem;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
