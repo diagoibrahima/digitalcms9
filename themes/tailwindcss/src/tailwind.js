@@ -76,9 +76,24 @@ var moderationstate = (jQuery('.entity-moderation-form__item div#edit-current').
 
 console.log(moderationstate);
 
+if(moderationstate =='Draft'){
+jQuery( '<a class="moderationStateButtonSubmit" >Submit</a>').insertAfter('.js-quickedit-page-title span');
+}
+
+if(moderationstate =='Ready for review'){
 jQuery( '<a class="moderationStateButtonReject" >Reject</a>').insertAfter('.js-quickedit-page-title span');
 jQuery( '<a class="moderationStateButtonApprove" >Approve</a>').insertAfter('.js-quickedit-page-title span');
-jQuery( '<a class="moderationStateButtonSubmit" >Submit</a>').insertAfter('.js-quickedit-page-title span');
+}
+
+if(moderationstate =='Rjected'){
+jQuery( '<a class="moderationStateButtonSubmit" >Re-Submit</a>').insertAfter('.js-quickedit-page-title span');
+}
+
+if(moderationstate =='Approved'){
+}
+
+
+
 
 
 
