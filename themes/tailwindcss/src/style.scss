@@ -1251,6 +1251,8 @@ form#content-moderation-entity-moderation-form{
     background: #036572;
     border-radius: 6px;
     color: white;
+    position: absolute;
+    opacity: 0;
   }
 
 
@@ -1546,7 +1548,7 @@ a.moderationStateButton.submit.submitpositionleft , a.moderationStateButton.appr
   position: absolute;
   top: -53px;
   right: 34px;
-  background: #49b995;
+  background: linear-gradient(45deg, #0c6385, #46ccff);
   padding: 5px;
   border-radius: 5px;
   color: white;
@@ -1555,9 +1557,8 @@ a.moderationStateButton.submit.submitpositionleft , a.moderationStateButton.appr
 
 a.moderationStateButton.reject {
   right: 120px;
-  background: red;
+  background: gray;
 }
-
 
 form#node-messages-form {
   height: 550px;
@@ -1567,4 +1568,13 @@ form#node-messages-form {
 
 td.tw-text-green-400.views-field.views-field-view-node {
   color: #1391c1 !important;
+}
+
+.pstStatusModeration{
+
+    position: absolute;
+    left: 553px;
+    top: 4px;
+
+
 }

@@ -51,10 +51,10 @@ jQuery(document).ready(function() {
  let cours=(jQuery('div#block-views-block-cardnbcours-block-1 header').text());
  jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
  let messagesimpe=(jQuery('div#block-views-block-cardnbmessage-block-1 header').text());
- jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagaes').html(messagesimpe);
+ jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagaes').html('8');
  let messagesimpetranslate=(jQuery('div#block-views-block-cardnbmessagetranslated-block-1 header').text());
  //jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(messagesimpetranslate);
- jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html('10%');
+ jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html('25%');
  let modulesdecourse=(jQuery('div#block-views-block-cardnbmodule-block-1 header').text());
  jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(modulesdecourse);
  
@@ -79,6 +79,11 @@ jQuery(document).ready(function() {
  var moderationstate = jQuery.trim(jQuery('.entity-moderation-form__item div#edit-current').text());
  
  
+
+jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</span>').insertBefore('form#content-moderation-entity-moderation-form');
+
+
+
  console.log("paris");
  console.log(moderationstate);
  
@@ -129,8 +134,46 @@ jQuery(document).ready(function() {
    jQuery('.channelgenerategeneral').html('b');
  
  });
+
+
+// Click On moderation State button function______________________________________________________
+
+// +Submit content for review
+
+ jQuery('a.moderationStateButton.submit').click(function() {
+     //alert('submit content for reveiw');
+      jQuery('option[value="ready_for_review"]').prop('selected',true);
+      jQuery( "#edit-submit" ).click();
+
+
+ });
+
+// +re submit 
+ jQuery('a.moderationStateButton.rsubmit').click(function() {
+     //alert('submit content for reveiw');
+      jQuery('option[value="ready_for_review"]').prop('selected',true);
+      jQuery( "#edit-submit" ).click();
+
+
+ });
+
+// +Approve content 
+ jQuery('a.moderationStateButton.approve').click(function() {
+
+      jQuery('option[value="published"]').prop('selected',true);
+      jQuery( "#edit-submit" ).click();
  
+ });
+
+// +Reject content 
+ jQuery('a.moderationStateButton.reject').click(function() {
+      
+     jQuery('option[value="needs_work"]').prop('selected',true);
+     jQuery( "#edit-submit" ).click();
  
+ });
+ 
+ //______________________________________________________________________________________________
  
  
  // Expand switch for one single learning module 
@@ -233,7 +276,7 @@ jQuery(document).ready(function() {
  
  
  const labelsBarChart = [
-   'Cours',
+   'Content',
    'Localizations',
    'Messages',
    'Messages translated',
@@ -274,5 +317,4 @@ jQuery(document).ready(function() {
  
  
  });
- 
- 
+  
