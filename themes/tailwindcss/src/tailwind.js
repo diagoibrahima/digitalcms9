@@ -4,8 +4,47 @@ jQuery(document).ready(function() {
   jQuery('option[value="_none"]').remove();
   jQuery('.entity-moderation-form .form-item label').html('');
  
+let str = localStorage.getItem("channelVal");
+console.log(str);
+
+if(str=="Moodle"){
+ jQuery('#edit-field-localization-channel option[value="Moodle"]').prop('selected',true);
+ jQuery('#edit-field-localization-messagebody-0-value').show();
+ jQuery('#edit-field-localisation-message-0-value').hide();
+
+}else if(str=="Whatsapp"){
+ jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
+ jQuery('#edit-field-localisation-message-0-value').hide();
+ jQuery('#edit-field-localization-messagebody-0-value').show();
+
+}else if(str=="SMS"){
+ jQuery('#edit-field-localization-channel option[value="SMS"]').prop('selected',true);
+ jQuery('#edit-field-localization-messagebody-0-value').remove();
+ jQuery('#edit-field-localization-messagebody-wrapper').remove();
+ jQuery('#edit-field-localisation-message-0-value').show();
  
- //content completion 
+
+}else if(str=="Telegram"){
+ jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
+ jQuery('#edit-field-localisation-message-0-value').hide();
+ jQuery('#edit-field-localization-messagebody-0-value').show();
+
+}else if(str=="Messenger"){
+ jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
+ jQuery('#edit-field-localisation-message-0-value').hide();
+ jQuery('#edit-field-localization-messagebody-0-value').show();
+
+}else if(str=="IOGT"){
+ jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
+ jQuery('#edit-field-localisation-message-0-value').hide();
+ jQuery('#edit-field-localization-messagebody-0-value').show();
+
+}else{
+}
+
+
+ 
+ //content completion   
  //nombre de message traduit
  var nombredemessagetraduit = (jQuery('div#block-views-block-testcompletion-block-1 header').text());
  console.log(nombredemessagetraduit);
@@ -51,10 +90,10 @@ jQuery(document).ready(function() {
  let cours=(jQuery('div#block-views-block-cardnbcours-block-1 header').text());
  jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
  let messagesimpe=(jQuery('div#block-views-block-cardnbmessage-block-1 header').text());
- jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagaes').html(messagesimpe);
+ jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagaes').html('8');
  let messagesimpetranslate=(jQuery('div#block-views-block-cardnbmessagetranslated-block-1 header').text());
  //jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(messagesimpetranslate);
- jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html('10%');
+ jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html('25%');
  let modulesdecourse=(jQuery('div#block-views-block-cardnbmodule-block-1 header').text());
  jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(modulesdecourse);
  
@@ -64,21 +103,95 @@ jQuery(document).ready(function() {
    jQuery("a.generatebutton").click(function() {
  
  
-   jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms"><i class="fas fa-sms"></i>SMS</div> <br> <div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>MOODLE</div> <br>  <div class="channelgenerate whatsapp"><i class="fab fa-whatsapp"></i>WHATSAPP</div> <br>  <div class="channelgenerate telegrame"><i class="fab fa-telegram"></i>TELEGRAME</div> <br> <div class="channelgenerate messanger"><i class="fab fa-facebook-messenger"></i>MESSENGER</div> </div>').insertAfter('a.generatebutton');
+   jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fas fa-sms"></i>SMS</div> <br> <div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>MOODLE</div> <br>  <div class="channelgenerate whatsapp"><i class="fab fa-whatsapp"></i>WHATSAPP</div> <br>  <div class="channelgenerate telegrame"><i class="fab fa-telegram"></i>TELEGRAME</div> <br> <div class="channelgenerate messanger"><i class="fab fa-facebook-messenger"></i>MESSENGER</div> </div>').insertAfter('a.generatebutton');
   
    let messagetolacalise=(jQuery('article').html());
    jQuery('.channelgenerate ').append(messagetolacalise);
-   jQuery('a.generatebutton').html('<a class="cancelbutton"> Cancel </a>');
-   jQuery('a.generatebutton').removeClass('generatebutton');
- 
+   jQuery('a.generatebutton').hide();
+   jQuery('<a class="cancelbutton"> Cancel </a>').insertBefore('a.generatebutton');
+   //jQuery('a.generatebutton').removeClass('generatebutton');
+
+   jQuery('.cancelbutton').click(function() {
+
+    jQuery('.channelgenerategeneral').remove();
+    jQuery('a.generatebutton').show();
+    jQuery('a.cancelbutton').hide();
  
  });
+
+
+//Selectio channel option
+
+
+
+
+  jQuery('.sms').click(function() {
+
+      try {localStorage.setItem("channelVal", "SMS");} catch(e){}
+      jQuery('.sms').css('border-left', '6px solid #1491c1');
+      jQuery('.moodle').css('border', 'none');
+      jQuery('.whatsapp').css('border', 'none');
+      jQuery('.telegrame').css('border', 'none');
+      jQuery('.messanger').css('border', 'none');
+    
+ });
+
+  jQuery('.moodle').click(function() {
+      
+      try {localStorage.setItem("channelVal", "Moodle");} catch(e){}
+      jQuery('.sms').css('border', 'none');
+      jQuery('.moodle').css('border-left', '6px solid #1491c1');
+      jQuery('.whatsapp').css('border', 'none');
+      jQuery('.telegrame').css('border', 'none');
+      jQuery('.messanger').css('border', 'none');
+      jQuery('#edit-field-localization-channel option[value="Moodle"]').prop('selected',true);
+     
+ });
+
+  jQuery('.whatsapp').click(function() {
+
+      try {localStorage.setItem("channelVal", "Whatsapp");} catch(e){}
+      jQuery('.sms').css('border', 'none');
+      jQuery('.moodle').css('border', 'none');
+      jQuery('.whatsapp').css('border-left', '6px solid #1491c1');
+      jQuery('.telegrame').css('border', 'none');
+      jQuery('.messanger').css('border', 'none');
+     
+ });
+
+  jQuery('.telegrame').click(function() {
+
+      try {localStorage.setItem("channelVal", "Telegram");} catch(e){}
+      jQuery('.sms').css('border', 'none');
+      jQuery('.moodle').css('border', 'none');
+      jQuery('.whatsapp').css('border', 'none');
+      jQuery('.telegrame').css('border-left', '6px solid #1491c1');
+      jQuery('.messanger').css('border', 'none');
+     
+ });
+
+  jQuery('.messanger').click(function() {
+
+      try {localStorage.setItem("channelVal", "Messenger");} catch(e){}
+      jQuery('.sms').css('border', 'none');
+      jQuery('.moodle').css('border', 'none');
+      jQuery('.whatsapp').css('border', 'none');
+      jQuery('.telegrame').css('border', 'none');
+      jQuery('.messanger').css('border-left', '6px solid #1491c1');
+     
+ });
+ 
+ });
+
+
  
  //MANAGE MODERATION STATE
  
  var moderationstate = jQuery.trim(jQuery('.entity-moderation-form__item div#edit-current').text());
  
- 
+jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</span>').insertBefore('form#content-moderation-entity-moderation-form');
+
+
  console.log("paris");
  console.log(moderationstate);
  
@@ -89,7 +202,6 @@ jQuery(document).ready(function() {
  jQuery('a.moderationStateButton.reject').remove();
  jQuery('a.moderationStateButton.rsubmit').remove();
  jQuery('a.moderationStateButton.submit').addClass('submitpositionleft');
- 
  
  
  }
@@ -119,18 +231,47 @@ jQuery(document).ready(function() {
  }
  
  
+
+
+
+// Click On moderation State button function______________________________________________________
+
+// +Submit content for review
+
+ jQuery('a.moderationStateButton.submit').click(function() {
+     //alert('submit content for reveiw');
+      jQuery('option[value="ready_for_review"]').prop('selected',true);
+      jQuery( "#edit-submit" ).click();
+
+
+ });
+
+// +re submit 
+ jQuery('a.moderationStateButton.rsubmit').click(function() {
+     //alert('submit content for reveiw');
+      jQuery('option[value="ready_for_review"]').prop('selected',true);
+      jQuery( "#edit-submit" ).click();
+
+
+ });
+
+// +Approve content 
+ jQuery('a.moderationStateButton.approve').click(function() {
+
+      jQuery('option[value="published"]').prop('selected',true);
+      jQuery( "#edit-submit" ).click();
  
- 
- 
- 
- 
- jQuery('a.cancelbutton').click(function() {
-     alert('hi');
-   jQuery('.channelgenerategeneral').html('b');
+ });
+
+// +Reject content 
+ jQuery('a.moderationStateButton.reject').click(function() {
+      
+     jQuery('option[value="needs_work"]').prop('selected',true);
+     jQuery( "#edit-submit" ).click();
  
  });
  
- 
+ //______________________________________________________________________________________________
  
  
  // Expand switch for one single learning module 
@@ -178,11 +319,7 @@ jQuery(document).ready(function() {
    //  expand == "Minimize" ? jQuery('.use-ajax').hide() : jQuery('.use-ajax').show()
      });
  
- 
- 
- 
- 
- 
+
  
   jQuery('span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer').click(function(){
  
@@ -233,7 +370,7 @@ jQuery(document).ready(function() {
  
  
  const labelsBarChart = [
-   'Cours',
+   'Content',
    'Localizations',
    'Messages',
    'Messages translated',
@@ -270,9 +407,7 @@ jQuery(document).ready(function() {
  
    });
  
- 
- 
+
  
  });
- 
- 
+  
