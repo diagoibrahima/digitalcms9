@@ -5,7 +5,7 @@ body{
 }
 
 aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
-    background-color:#036672 !important;
+    background-color:#1491c1 !important;
     width: 260px !important;
   }
   
@@ -70,7 +70,8 @@ div#edit-actions {
     border-radius: 5px !important;
     width: 100px !important;
     color: white !important; 
-    background: linear-gradient(45deg, #10b981, #059669);
+    background: linear-gradient(
+      45deg, #0c6385, #46ccff);
     border: cornsilk !important;
     
     
@@ -167,7 +168,8 @@ span.section-buttom {
 
 
 a.tw-action-new.tw-btn.tw-btn-primary {
-  background: linear-gradient(45deg, #10b981, #059669);
+  background: linear-gradient(
+    45deg, #0c6385, #46ccff);
   padding: 10px;
   border-radius: 5px;
   color: white;
@@ -179,7 +181,7 @@ a.tw-action-new.tw-btn.tw-btn-primary {
   &:hover {
     background: linear-gradient(
 45deg
-,#00ffaa,#014731);
+#46ccff,  #0c6385);
   }
 
 }
@@ -307,15 +309,15 @@ span.expandall-minimizeall-button.cursor-pointer {
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding: 0rem 3rem;
-  color: #149b2c;
+  color:#1491c1 !important;
   margin: 6rem 0rem;
   width: 21.5%;
 
   &:hover{
-    color: #ffffff;
+    color: #ffffff !important;
     background: linear-gradient(
       45deg
-      ,#00ffaa,#014731);
+      ,#1491c1,#03aff3);
     border-style:hidden;
   }
 }
@@ -431,7 +433,7 @@ form#node-course-form ,form#node-module-form ,form#node-sub-module-form ,.node-c
     width: 100%;
 }
 
-input#edit-title-0-value , input#edit-field-course-0-target-id ,input#edit-field-module-0-target-id ,input#edit-field-message-0-value ,.js-form-item{
+input#edit-title-0-value , input#edit-field-course-0-target-id ,input#edit-field-module-0-target-id ,input#edit-field-message-0-value ,.js-form-item , input#edit-field-localization-tag-0-target-id{
   border-radius: 0.25rem;
   line-height: 2;
 }
@@ -452,6 +454,7 @@ form#node-module-form ,form#node-sub-module-form{
   padding: .75rem!important;
   margin: 0 2rem 0rem 1rem;
   text-align: center;
+  box-shadow: 1px 1px 6px #2316161a;
 }
 
 
@@ -492,10 +495,14 @@ form#node-sub-module-edit-form {
 }
 
 */
+span.tw-text-green-500.align-right {
+  color: #1391c1 !important;
+}
+
 
 .views-col.col-1.addcourse-blank .tw-item-card {
-  color: #059669;
-  border: 2px solid #059669;
+  color: #1391c1;
+  border: 2px solid #1391c1;
   border-style: dashed;
   position: relative;
   cursor: pointer !important;
@@ -503,8 +510,8 @@ form#node-sub-module-edit-form {
   &:hover{
 
   color: rgb(255, 255, 255);
-  border: 2px solid #059669;
-  background:#059669 !important;
+  border: 2px solid #1391c1;
+  background:#1391c1!important;
   cursor: pointer !important;
 
   }
@@ -550,7 +557,7 @@ nav#toolbar-bar , div#toolbar-item-administration-tray ,li.menu-item.menu-item--
 }
 */
 
-
+/*
 article.node:before {
   content: '';
   background: #c7c3c3;
@@ -560,7 +567,7 @@ article.node:before {
   right:-2.5%;
   top: 0;
 }
-
+*/
 
 
 #edit-delete {
@@ -654,9 +661,9 @@ article.node:before {
   min-height: 1200px;
 }
 
-.add-module{
+.add-module {
 
-color: #149b2c;
+color:#1491c1 !important;
 border: solid 2px;
 border-style: dashed;
 border-radius: 8px;
@@ -670,9 +677,9 @@ padding: 0px;
 &:hover{
   background: linear-gradient(
     45deg
-    ,#00ffaa,#014731);
+    ,#1491c1,#016288) !important;
         border-style: hidden;
-      color: white;
+      color: white !important;
       line-height: 3.4;
        
 }
@@ -709,7 +716,7 @@ div div:nth-child(1){
 }
 
 .add-translation {
-  color: #11a02b;
+  color: #1491c1;
   border: solid 2px;
   border-style: dashed;
   border-radius: 8px;
@@ -718,7 +725,8 @@ div div:nth-child(1){
   width: 80%;
   margin-left: 5%;
   z-index: 10;
-  margin: 0px 22px;
+  margin: 20px 22px;
+  white-space: nowrap !important;
 }
 
 .activitylogMessage{
@@ -798,9 +806,9 @@ span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2
     margin: auto;
     top: -88px;
     left: 40px;
-    border: solid 1px;
+    border: solid #1491c1 1px !important;
     padding: 5px;
-    color: #149b2c;
+    color: #1491c1 !important;
     border: solid 2px;
     border-radius: 8px;
     line-height: 2.1;
@@ -815,7 +823,7 @@ span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2
     color: #ffffff !important;
     background: linear-gradient(
 45deg
-,#00ffaa,#014731);
+,#1491c1,#089cd6);
     border-style: hidden;
     line-height: 2.8;
 
@@ -826,7 +834,7 @@ span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2
 .turneditone {
   background: linear-gradient(
 45deg
-,#00ffaa,#009a69);
+,#1491c1,#089cd6);
   color: white !important;
   border: none !important;
 }
@@ -994,7 +1002,7 @@ div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(3) , div
 }
 
 div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(5) {
-  color: green;
+  color:#1491c1 ;
   border: solid 1px;
   width: 65px;
   padding: 4px;
@@ -1003,7 +1011,7 @@ div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(5) {
   margin: auto 185px;
 
   &:hover{
-    background: #059669;
+    background:#1491c1 ;
     color: white;
   }
 }
@@ -1186,8 +1194,10 @@ span.message-etat {
 }
 
 div#block-views-block-listtranslation-block-1 {
-  width: 72%;
-  margin-left: 1.5rem;
+  width: 70%;
+  margin-left: 2rem;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 
@@ -1242,6 +1252,8 @@ form#content-moderation-entity-moderation-form{
     background: #036572;
     border-radius: 6px;
     color: white;
+    position: absolute;
+    opacity: 0;
   }
 
 
@@ -1266,7 +1278,7 @@ input#edit-revision-log {
   width: 99px;
   position: absolute;
   right: 70px;
-  top: 91px;
+  top: 70px;
   height: 2rem;
   border-radius: 5px;
 }
@@ -1301,12 +1313,12 @@ p.tw-font-semibold {
 
 div[data-drupal-messages] {
   color: rgb(0, 0, 0);
-  background:#49b9954a !important;
+  background:#1391c159 !important;
   width: 95%;
   margin: 20px auto;
   border-radius: 5px;
   text-align: center;
-  border: solid  1px #49b995 !important;
+  border: solid  1px #1390c1 !important;
 }
 
 pre.backtrace {
@@ -1367,4 +1379,224 @@ div {
 }
 
 
+}
+
+
+.site-name.tw-text-2xl.tw-text-white.tw-font-semibold.titre-website{
+  font-size: 1rem !important;
+  background: #fafffd;
+  border-radius: 5px;
+  padding: 10px;
+  color: #1391c1 !important;
+  text-align: center;
+
+  &:hover {
+    background: #a5dff5d1 !important;
+    color: white !important;
+}
+
+  a.titre-website1 {
+    position: relative;
+
+
+    &:before{
+
+      content: '';
+      background: red;
+      height: 69px;
+      width: 233px;
+      position: absolute;
+      top: -13px;
+      left: -18px;
+      opacity: 0;
+
+    }
+
+}
+
+}
+
+
+input {
+  padding: 0px 0px 0px 10px;
+}
+
+
+a.generatebutton {
+  background: #13b5f3;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+a.hidegeneratebutton {
+  background: forestgreen;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+
+.channelgenerate a {
+  display: none;
+}
+
+.channelgenerate.sms img {
+  display: none;
+}
+
+
+.channelgenerate.sms {
+  background: #ffd2d2;
+  width: 70%;
+  padding: 22px;
+  margin-left: 2rem;
+  border-radius: 5px;
+  margin-top: 36px;
+  box-shadow: 1px 1px 6px #2316161a;
+}
+
+.channelgenerate.moodle {
+  background: #bbffbb;
+  width: 70%;
+  padding: 22px;
+  margin-left: 2rem;
+  border-radius: 5px;
+  margin-top: 36px;
+  box-shadow: 1px 1px 6px #2316161a;
+}
+
+.channelgenerate.whatsapp{
+  background: #f6afff;
+  width: 70%;
+  padding: 22px;
+  margin-left: 2rem;
+  border-radius: 5px;
+  margin-top: 36px;
+  box-shadow: 1px 1px 6px #2316161a;
+}
+
+
+.channelgenerate.telegrame {
+  background: hsl(181, 100%, 91%);
+  width: 70%;
+  padding: 22px;
+  margin-left: 2rem;
+  border-radius: 5px;
+  margin-top: 36px;
+  box-shadow: 1px 1px 6px #2316161a;
+}
+
+
+.channelgenerate.messanger {
+  background: #d2e2ff;
+  width: 70%;
+  padding: 22px;
+  margin-left: 2rem;
+  border-radius: 5px;
+  margin-top: 36px;
+  margin-bottom: 30px;
+  box-shadow: 1px 1px 6px #2316161a;
+}
+
+.channelgenerate:hover {
+  background: white !important;
+}
+
+.channelgenerategeneral .svg-inline--fa {
+  margin: 0px 10px 0px 0px;
+}
+
+
+div#block-views-block-generatechannelbutton-block-1 {
+  display: none;
+}
+
+a.cancelbutton {
+  background: red;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+
+form#node-localization-form {
+  width: 60%;
+  margin-left: 35%;
+  padding: 14px;
+  height: 511px;
+}
+
+
+div#block-views-block-messagetotranslate-block-1 {
+  width: 30%;
+  background: white;
+  border-radius: 5px;
+  position: absolute !important;
+  margin: 30px;
+  top: 123px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 1px 4px 1px #0a0a0a21;
+  box-shadow: 0px 1px 4px 1px #0a0a0a21;
+}
+
+
+
+.js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-localization-tag-0-target-id.js-form-item-field-localization-tag-0-target-id {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.block_moderation_state {
+  position: relative;
+}
+
+
+a.moderationStateButton.submit.submitpositionleft , a.moderationStateButton.approve , a.moderationStateButton.reject , a.moderationStateButton.rsubmit{
+  position: absolute;
+  top: -53px;
+  right: 34px;
+  background: linear-gradient(45deg, #0c6385, #46ccff);
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+a.moderationStateButton.reject {
+  right: 120px;
+  background: gray;
+}
+
+form#node-messages-form {
+  height: 550px;
+  padding: 10px;
+}
+
+
+td.tw-text-green-400.views-field.views-field-view-node {
+  color: #1391c1 !important;
+}
+
+.pstStatusModeration{
+
+    position: absolute;
+    left: 553px;
+    top: 4px;
+}
+
+.show-message img{
+    display: block;
+    width: 100%;
+}
+div#block-views-block-list-localization-block-1 {
+    width: 95%;
+    margin: auto;
 }
