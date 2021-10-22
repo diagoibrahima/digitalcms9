@@ -454,6 +454,7 @@ form#node-module-form ,form#node-sub-module-form{
   padding: .75rem!important;
   margin: 0 2rem 0rem 1rem;
   text-align: center;
+  box-shadow: 1px 1px 6px #2316161a;
 }
 
 
@@ -556,7 +557,7 @@ nav#toolbar-bar , div#toolbar-item-administration-tray ,li.menu-item.menu-item--
 }
 */
 
-
+/*
 article.node:before {
   content: '';
   background: #c7c3c3;
@@ -566,7 +567,7 @@ article.node:before {
   right:-2.5%;
   top: 0;
 }
-
+*/
 
 
 #edit-delete {
@@ -1424,6 +1425,15 @@ input {
 a.generatebutton {
   background: #13b5f3;
   color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+a.hidegeneratebutton {
+  background: forestgreen;
+  color: white;
   padding: 5px;
   border-radius: 5px;
   margin: 2rem;
@@ -1447,6 +1457,7 @@ a.generatebutton {
   margin-left: 2rem;
   border-radius: 5px;
   margin-top: 36px;
+  box-shadow: 1px 1px 6px #2316161a;
 }
 
 .channelgenerate.moodle {
@@ -1456,6 +1467,7 @@ a.generatebutton {
   margin-left: 2rem;
   border-radius: 5px;
   margin-top: 36px;
+  box-shadow: 1px 1px 6px #2316161a;
 }
 
 .channelgenerate.whatsapp{
@@ -1465,6 +1477,7 @@ a.generatebutton {
   margin-left: 2rem;
   border-radius: 5px;
   margin-top: 36px;
+  box-shadow: 1px 1px 6px #2316161a;
 }
 
 
@@ -1475,6 +1488,7 @@ a.generatebutton {
   margin-left: 2rem;
   border-radius: 5px;
   margin-top: 36px;
+  box-shadow: 1px 1px 6px #2316161a;
 }
 
 
@@ -1486,6 +1500,7 @@ a.generatebutton {
   border-radius: 5px;
   margin-top: 36px;
   margin-bottom: 30px;
+  box-shadow: 1px 1px 6px #2316161a;
 }
 
 .channelgenerate:hover {
@@ -1503,7 +1518,7 @@ div#block-views-block-generatechannelbutton-block-1 {
 
 a.cancelbutton {
   background: red;
-  padding: 5px 5px;
+  padding: 10px;
   border-radius: 5px;
   color: white;
   margin-left: 2rem;
@@ -1575,6 +1590,13 @@ td.tw-text-green-400.views-field.views-field-view-node {
     position: absolute;
     left: 553px;
     top: 4px;
+}
 
-
+.show-message img{
+    display: block;
+    width: 100%;
+}
+div#block-views-block-list-localization-block-1 {
+    width: 95%;
+    margin: auto;
 }
