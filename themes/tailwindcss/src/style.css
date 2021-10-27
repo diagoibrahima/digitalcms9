@@ -1530,4 +1530,10 @@ div#edit-field-localization-messagebody-0-format {
 div#datatable_filter > label {
   color: #f3f4f6;
 }
+
+a.btn {
+  background: #1391c1;
+  color: white;
+  padding: 5px;
+}
 /*# sourceMappingURL=style.css.map */
