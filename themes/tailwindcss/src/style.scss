@@ -1667,6 +1667,8 @@ input#edit-field-contry-add-more {
 
 form#user-register-form {
   padding: 20px;
+  background: white;
+  margin: 30px;
   div#edit-actions #edit-submit {
   width: 160px !important;
 
@@ -1674,7 +1676,7 @@ form#user-register-form {
 
 div#edit-actions {
   line-height: 2.5rem;
-  margin: 10px 0px;
+  margin: 10px 0px !important;
 }
 }
 
@@ -1687,5 +1689,36 @@ input#edit-user-picture-0-upload {
 }
 
 input#edit-field-contry-0-target-id {
-  width: 196%;
+  width: 184%;
+}
+
+.password-strength__meter {
+  height: 0.75em  ;
+
+
+  margin-top: 0.5em;
+  background-color: lightgray;
+  display: none;
+}
+
+h4.label.js-form-required.form-required {
+  position: relative;
+  left: -221px !important;
+
+}
+
+div#block-tailwindcss-help {
+  position: relative;
+  left: 18px;
+}
+
+.tabledrag-toggle-weight-wrapper {
+  display: none;
+}
+
+
+div#block-tailwindcss-help {
+  position: relative;
+  left: 18px;
+  opacity: 0;
 }
