@@ -433,7 +433,7 @@ form#node-course-form ,form#node-module-form ,form#node-sub-module-form ,.node-c
     width: 100%;
 }
 
-input#edit-title-0-value , input#edit-field-course-0-target-id ,input#edit-field-module-0-target-id ,input#edit-field-message-0-value ,.js-form-item , input#edit-field-localization-tag-0-target-id{
+input#edit-title-0-value , input#edit-field-course-0-target-id ,input#edit-field-module-0-target-id ,input#edit-field-message-0-value ,.js-form-item , input#edit-field-localization-tag-0-target-id ,input#edit-field-field-submoduleinmessage-0-target-id{
   border-radius: 0.25rem;
   line-height: 2;
 }
@@ -978,14 +978,14 @@ div#edit-field-image-0--description {
   display: none;
 }
 
-.js-form-item.form-item.js-form-type-select.form-item-field-channel.js-form-item-field-channel , .js-form-item.form-item.js-form-type-select.form-item-field-videotype.js-form-item-field-videotype , .container-inline.js-form-item.form-item.js-form-type-select.form-item-moderation-state-0-state.js-form-item-moderation-state-0-state , .js-form-item.form-item.js-form-type-textfield.form-item-field-langage-0-value.js-form-item-field-langage-0-value {
+.js-form-item.form-item.js-form-type-select.form-item-field-channel.js-form-item-field-channel , .js-form-item.form-item.js-form-type-select.form-item-field-videotype.js-form-item-field-videotype , .container-inline.js-form-item.form-item.js-form-type-select.form-item-moderation-state-0-state.js-form-item-moderation-state-0-state , .js-form-item.form-item.js-form-type-textfield.form-item-field-langage-0-value.js-form-item-field-langage-0-value  {
   display: flex !important;
   flex-direction: column !important;
 }
 
 
-select#edit-field-channel ,input#edit-field-langage-0-value , select#edit-field-videotype  , select#edit-moderation-state-0-state , input#edit-field-videoembeded-0-value ,input#edit-field-video-0-uri{
-  border: solid 1px #000000;
+select#edit-field-channel ,input#edit-field-langage-0-value , select#edit-field-videotype  , select#edit-moderation-state-0-state , input#edit-field-videoembeded-0-value ,input#edit-field-video-0-uri ,select#edit-field-field-moduleinmessage , select#edit-field-localization-channel , select#edit-field-localization-langue{
+  border: solid 1px #a0aebe;
   border-radius: 5px;
   height: 35px;
   font-weight: 200;
@@ -1531,6 +1531,12 @@ form#node-localization-form {
   margin-left: 35%;
   padding: 14px;
   height: 511px;
+
+  div#edit-actions {
+    line-height: 2.5rem;
+    margin: 10px 0px ;
+
+}
 }
 
 
@@ -1576,7 +1582,7 @@ a.moderationStateButton.reject {
 }
 
 form#node-messages-form {
-  height: 550px;
+  height: 628px;
   padding: 10px;
 }
 
@@ -1599,4 +1605,33 @@ td.tw-text-green-400.views-field.views-field-view-node {
 div#block-views-block-list-localization-block-1 {
     width: 95%;
     margin: auto;
+}
+
+form#node-messages-edit-form {
+  height: 624px;
+  padding: 10px;
+}
+
+
+.js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-field-submoduleinmessage-0-target-id.js-form-item-field-field-submoduleinmessage-0-target-id {
+  display: flex;
+  flex-direction: column;
+}
+
+input#edit-field-field-submoduleinmessage-0-target-id {
+  width: 100%;
+}
+
+
+div#edit-actions {
+  line-height: 2.5rem;
+  margin: 10px 20px;
+}
+
+div#edit-field-localisation-message-wrapper {
+  display: none;
+}
+
+div#edit-field-messageid-wrapper {
+  display: none;
 }
