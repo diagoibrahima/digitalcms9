@@ -984,7 +984,7 @@ div#edit-field-image-0--description {
 }
 
 
-select#edit-field-channel ,input#edit-field-langage-0-value , select#edit-field-videotype  , select#edit-moderation-state-0-state , input#edit-field-videoembeded-0-value ,input#edit-field-video-0-uri ,select#edit-field-field-moduleinmessage , select#edit-field-localization-channel , select#edit-field-localization-langue{
+select#edit-field-channel ,input#edit-field-langage-0-value , select#edit-field-videotype  , select#edit-moderation-state-0-state , input#edit-field-videoembeded-0-value ,input#edit-field-video-0-uri ,select#edit-field-field-moduleinmessage , select#edit-field-localization-channel , select#edit-field-localization-langue , input#edit-mail , input#edit-name , input#edit-pass-pass1 , input#edit-pass-pass2 , select#edit-preferred-langcode , select#edit-timezone--2 , input#edit-field-contry-0-target-id , input#edit-path-0-alias , input#edit-user-picture-0-upload{
   border: solid 1px #a0aebe;
   border-radius: 5px;
   height: 35px;
@@ -1658,4 +1658,67 @@ a.btn {
   background: #1391c1;
   color: white;
   padding: 5px;
+}
+
+
+input#edit-field-contry-add-more {
+  display: none;
+}
+
+form#user-register-form {
+  padding: 20px;
+  background: white;
+  margin: 30px;
+  div#edit-actions #edit-submit {
+  width: 160px !important;
+
+}
+
+div#edit-actions {
+  line-height: 2.5rem;
+  margin: 10px 0px !important;
+}
+}
+
+.handle {
+  display: none;
+}
+
+input#edit-user-picture-0-upload {
+  padding: 2px;
+}
+
+input#edit-field-contry-0-target-id {
+  width: 184%;
+}
+
+.password-strength__meter {
+  height: 0.75em  ;
+
+
+  margin-top: 0.5em;
+  background-color: lightgray;
+  display: none;
+}
+
+h4.label.js-form-required.form-required {
+  position: relative;
+  left: -221px !important;
+
+}
+
+div#block-tailwindcss-help {
+  position: relative;
+  left: 18px;
+}
+
+.tabledrag-toggle-weight-wrapper {
+  display: none;
+}
+
+
+div#block-tailwindcss-help {
+  position: relative;
+  left: 18px;
+  opacity: 0;
 }
