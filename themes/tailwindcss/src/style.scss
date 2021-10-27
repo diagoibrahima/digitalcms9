@@ -1582,8 +1582,17 @@ a.moderationStateButton.reject {
 }
 
 form#node-messages-form {
-  height: 628px;
+  height: 580px;
   padding: 10px;
+
+  div#edit-actions {
+    line-height: 2.5rem;
+    margin: 10px 0px ;
+}
+div#edit-body-0-format {
+  display: none;
+}
+
 }
 
 
