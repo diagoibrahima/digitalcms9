@@ -1467,8 +1467,17 @@ a.moderationStateButton.reject {
 }
 
 form#node-messages-form {
-  height: 628px;
+  height: 580px;
   padding: 10px;
+}
+
+form#node-messages-form div#edit-actions {
+  line-height: 2.5rem;
+  margin: 10px 0px;
+}
+
+form#node-messages-form div#edit-body-0-format {
+  display: none;
 }
 
 td.tw-text-green-400.views-field.views-field-view-node {
