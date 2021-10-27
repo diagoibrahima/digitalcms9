@@ -403,7 +403,7 @@ form#node-course-form textarea, form#node-module-form textarea, form#node-sub-mo
   width: 100%;
 }
 
-form#node-course-form input#edit-title-0-value, form#node-course-form input#edit-field-course-0-target-id, form#node-course-form input#edit-field-module-0-target-id, form#node-course-form input#edit-field-message-0-value, form#node-course-form .js-form-item, form#node-course-form input#edit-field-localization-tag-0-target-id, form#node-module-form input#edit-title-0-value, form#node-module-form input#edit-field-course-0-target-id, form#node-module-form input#edit-field-module-0-target-id, form#node-module-form input#edit-field-message-0-value, form#node-module-form .js-form-item, form#node-module-form input#edit-field-localization-tag-0-target-id, form#node-sub-module-form input#edit-title-0-value, form#node-sub-module-form input#edit-field-course-0-target-id, form#node-sub-module-form input#edit-field-module-0-target-id, form#node-sub-module-form input#edit-field-message-0-value, form#node-sub-module-form .js-form-item, form#node-sub-module-form input#edit-field-localization-tag-0-target-id, .node-course__edit-form input#edit-title-0-value, .node-course__edit-form input#edit-field-course-0-target-id, .node-course__edit-form input#edit-field-module-0-target-id, .node-course__edit-form input#edit-field-message-0-value, .node-course__edit-form .js-form-item, .node-course__edit-form input#edit-field-localization-tag-0-target-id, .node-form input#edit-title-0-value, .node-form input#edit-field-course-0-target-id, .node-form input#edit-field-module-0-target-id, .node-form input#edit-field-message-0-value, .node-form .js-form-item, .node-form input#edit-field-localization-tag-0-target-id {
+form#node-course-form input#edit-title-0-value, form#node-course-form input#edit-field-course-0-target-id, form#node-course-form input#edit-field-module-0-target-id, form#node-course-form input#edit-field-message-0-value, form#node-course-form .js-form-item, form#node-course-form input#edit-field-localization-tag-0-target-id, form#node-course-form input#edit-field-field-submoduleinmessage-0-target-id, form#node-module-form input#edit-title-0-value, form#node-module-form input#edit-field-course-0-target-id, form#node-module-form input#edit-field-module-0-target-id, form#node-module-form input#edit-field-message-0-value, form#node-module-form .js-form-item, form#node-module-form input#edit-field-localization-tag-0-target-id, form#node-module-form input#edit-field-field-submoduleinmessage-0-target-id, form#node-sub-module-form input#edit-title-0-value, form#node-sub-module-form input#edit-field-course-0-target-id, form#node-sub-module-form input#edit-field-module-0-target-id, form#node-sub-module-form input#edit-field-message-0-value, form#node-sub-module-form .js-form-item, form#node-sub-module-form input#edit-field-localization-tag-0-target-id, form#node-sub-module-form input#edit-field-field-submoduleinmessage-0-target-id, .node-course__edit-form input#edit-title-0-value, .node-course__edit-form input#edit-field-course-0-target-id, .node-course__edit-form input#edit-field-module-0-target-id, .node-course__edit-form input#edit-field-message-0-value, .node-course__edit-form .js-form-item, .node-course__edit-form input#edit-field-localization-tag-0-target-id, .node-course__edit-form input#edit-field-field-submoduleinmessage-0-target-id, .node-form input#edit-title-0-value, .node-form input#edit-field-course-0-target-id, .node-form input#edit-field-module-0-target-id, .node-form input#edit-field-message-0-value, .node-form .js-form-item, .node-form input#edit-field-localization-tag-0-target-id, .node-form input#edit-field-field-submoduleinmessage-0-target-id {
   border-radius: 0.25rem;
   line-height: 2;
 }
@@ -912,8 +912,8 @@ div#edit-field-image-0--description {
           flex-direction: column !important;
 }
 
-select#edit-field-channel, input#edit-field-langage-0-value, select#edit-field-videotype, select#edit-moderation-state-0-state, input#edit-field-videoembeded-0-value, input#edit-field-video-0-uri {
-  border: solid 1px #000000;
+select#edit-field-channel, input#edit-field-langage-0-value, select#edit-field-videotype, select#edit-moderation-state-0-state, input#edit-field-videoembeded-0-value, input#edit-field-video-0-uri, select#edit-field-field-moduleinmessage, select#edit-field-localization-channel, select#edit-field-localization-langue {
+  border: solid 1px #a0aebe;
   border-radius: 5px;
   height: 35px;
   font-weight: 200;
@@ -1416,7 +1416,12 @@ form#node-localization-form {
   width: 60%;
   margin-left: 35%;
   padding: 14px;
-  height: 511px;
+  height: 666px;
+}
+
+form#node-localization-form div#edit-actions {
+  line-height: 2.5rem;
+  margin: 10px 0px;
 }
 
 div#block-views-block-messagetotranslate-block-1 {
@@ -1462,7 +1467,7 @@ a.moderationStateButton.reject {
 }
 
 form#node-messages-form {
-  height: 550px;
+  height: 628px;
   padding: 10px;
 }
 
@@ -1484,5 +1489,51 @@ td.tw-text-green-400.views-field.views-field-view-node {
 div#block-views-block-list-localization-block-1 {
   width: 95%;
   margin: auto;
+}
+
+form#node-messages-edit-form {
+  height: 624px;
+  padding: 10px;
+}
+
+.js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-field-submoduleinmessage-0-target-id.js-form-item-field-field-submoduleinmessage-0-target-id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+input#edit-field-field-submoduleinmessage-0-target-id {
+  width: 100%;
+}
+
+div#edit-actions {
+  line-height: 2.5rem;
+  margin: 10px 20px;
+}
+
+div#edit-field-localisation-message-wrapper {
+  display: none;
+}
+
+div#edit-field-messageid-wrapper {
+  display: none;
+}
+
+div#edit-field-localization-messagebody-0-format {
+  display: none;
+}
+
+div#datatable_filter > label {
+  color: #f3f4f6;
+}
+
+a.btn {
+  background: #1391c1;
+  color: white;
+  padding: 5px;
 }
 /*# sourceMappingURL=style.css.map */

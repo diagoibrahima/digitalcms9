@@ -356,6 +356,7 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
  jQuery('.views-view-grid.horizontal.cols-4.clearfix .views-row').last().append('<div class="views-col col-1 addcourse-blank" style="width: 25%;"><div class="views-field views-field-nothing"><span class="field-content"><div class=" tw-item-card "><a href="node/add/course_" class="addcoursebutton" tabindex="-1">New Course</a></div></div> ');
  jQuery('#edit-name').attr('placeholder','  Username');
  jQuery('#edit-pass').attr('placeholder','  Password');
+ jQuery('.dataTables_wrapper .dataTables_filter input').attr('placeholder',' Search');
  
  jQuery('<i class="fa fa-sign-in logout-menu" aria-hidden="true"></i>').insertBefore('nav#block-logout ul li a span');
  
