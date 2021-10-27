@@ -1530,7 +1530,7 @@ form#node-localization-form {
   width: 60%;
   margin-left: 35%;
   padding: 14px;
-  height: 511px;
+  height: 666px;
 
   div#edit-actions {
     line-height: 2.5rem;
@@ -1634,4 +1634,13 @@ div#edit-field-localisation-message-wrapper {
 
 div#edit-field-messageid-wrapper {
   display: none;
+}
+
+
+div#edit-field-localization-messagebody-0-format {
+  display: none;
+}
+
+div#datatable_filter > label {
+  color: #f3f4f6;
 }
