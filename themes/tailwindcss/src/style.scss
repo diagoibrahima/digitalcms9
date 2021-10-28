@@ -433,7 +433,7 @@ form#node-course-form ,form#node-module-form ,form#node-sub-module-form ,.node-c
     width: 100%;
 }
 
-input#edit-title-0-value , input#edit-field-course-0-target-id ,input#edit-field-module-0-target-id ,input#edit-field-message-0-value ,.js-form-item , input#edit-field-localization-tag-0-target-id{
+input#edit-title-0-value , input#edit-field-course-0-target-id ,input#edit-field-module-0-target-id ,input#edit-field-message-0-value ,.js-form-item , input#edit-field-localization-tag-0-target-id ,input#edit-field-field-submoduleinmessage-0-target-id{
   border-radius: 0.25rem;
   line-height: 2;
 }
@@ -978,14 +978,14 @@ div#edit-field-image-0--description {
   display: none;
 }
 
-.js-form-item.form-item.js-form-type-select.form-item-field-channel.js-form-item-field-channel , .js-form-item.form-item.js-form-type-select.form-item-field-videotype.js-form-item-field-videotype , .container-inline.js-form-item.form-item.js-form-type-select.form-item-moderation-state-0-state.js-form-item-moderation-state-0-state , .js-form-item.form-item.js-form-type-textfield.form-item-field-langage-0-value.js-form-item-field-langage-0-value {
+.js-form-item.form-item.js-form-type-select.form-item-field-channel.js-form-item-field-channel , .js-form-item.form-item.js-form-type-select.form-item-field-videotype.js-form-item-field-videotype , .container-inline.js-form-item.form-item.js-form-type-select.form-item-moderation-state-0-state.js-form-item-moderation-state-0-state , .js-form-item.form-item.js-form-type-textfield.form-item-field-langage-0-value.js-form-item-field-langage-0-value  {
   display: flex !important;
   flex-direction: column !important;
 }
 
 
-select#edit-field-channel ,input#edit-field-langage-0-value , select#edit-field-videotype  , select#edit-moderation-state-0-state , input#edit-field-videoembeded-0-value ,input#edit-field-video-0-uri{
-  border: solid 1px #000000;
+select#edit-field-channel ,input#edit-field-langage-0-value , select#edit-field-videotype  , select#edit-moderation-state-0-state , input#edit-field-videoembeded-0-value ,input#edit-field-video-0-uri ,select#edit-field-field-moduleinmessage , select#edit-field-localization-channel , select#edit-field-localization-langue , input#edit-mail , input#edit-name , input#edit-pass-pass1 , input#edit-pass-pass2 , select#edit-preferred-langcode , select#edit-timezone--2 , input#edit-field-contry-0-target-id , input#edit-path-0-alias , input#edit-user-picture-0-upload{
+  border: solid 1px #a0aebe;
   border-radius: 5px;
   height: 35px;
   font-weight: 200;
@@ -1530,7 +1530,13 @@ form#node-localization-form {
   width: 60%;
   margin-left: 35%;
   padding: 14px;
-  height: 511px;
+  height: 666px;
+
+  div#edit-actions {
+    line-height: 2.5rem;
+    margin: 10px 0px ;
+
+}
 }
 
 
@@ -1576,8 +1582,17 @@ a.moderationStateButton.reject {
 }
 
 form#node-messages-form {
-  height: 550px;
+  height: 580px;
   padding: 10px;
+
+  div#edit-actions {
+    line-height: 2.5rem;
+    margin: 10px 0px ;
+}
+div#edit-body-0-format {
+  display: none;
+}
+
 }
 
 
@@ -1599,4 +1614,114 @@ td.tw-text-green-400.views-field.views-field-view-node {
 div#block-views-block-list-localization-block-1 {
     width: 95%;
     margin: auto;
+<<<<<<< HEAD
+=======
+}
+
+form#node-messages-edit-form {
+  height: 624px;
+  padding: 10px;
+}
+
+
+.js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-field-submoduleinmessage-0-target-id.js-form-item-field-field-submoduleinmessage-0-target-id {
+  display: flex;
+  flex-direction: column;
+}
+
+input#edit-field-field-submoduleinmessage-0-target-id {
+  width: 100%;
+}
+
+
+div#edit-actions {
+  line-height: 2.5rem;
+  margin: 10px 20px;
+}
+
+div#edit-field-localisation-message-wrapper {
+  display: none;
+}
+
+div#edit-field-messageid-wrapper {
+  display: none;
+}
+
+
+div#edit-field-localization-messagebody-0-format {
+  display: none;
+}
+
+div#datatable_filter > label {
+  color: #f3f4f6;
+}
+
+a.btn {
+  background: #1391c1;
+  color: white;
+  padding: 5px;
+}
+
+
+input#edit-field-contry-add-more {
+  display: none;
+}
+
+form#user-register-form {
+  padding: 20px;
+  background: white;
+  margin: 30px;
+  div#edit-actions #edit-submit {
+  width: 160px !important;
+
+}
+
+div#edit-actions {
+  line-height: 2.5rem;
+  margin: 10px 0px !important;
+}
+}
+
+.handle {
+  display: none;
+}
+
+input#edit-user-picture-0-upload {
+  padding: 2px;
+}
+
+input#edit-field-contry-0-target-id {
+  width: 184%;
+}
+
+.password-strength__meter {
+  height: 0.75em  ;
+
+
+  margin-top: 0.5em;
+  background-color: lightgray;
+  display: none;
+}
+
+h4.label.js-form-required.form-required {
+  position: relative;
+  left: -221px !important;
+
+}
+
+div#block-tailwindcss-help {
+  position: relative;
+  left: 18px;
+}
+
+.tabledrag-toggle-weight-wrapper {
+  display: none;
+}
+
+
+div#block-tailwindcss-help {
+  position: relative;
+  left: 18px;
+  opacity: 0;
+>>>>>>> b5b8666bea2e5df9e3385483166907753916aaba
 }

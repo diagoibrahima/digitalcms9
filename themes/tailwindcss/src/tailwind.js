@@ -12,8 +12,11 @@ if(str=="Moodle"){
  jQuery('#edit-field-localization-messagebody-0-value').show();
  jQuery('#edit-field-localisation-message-0-value').hide();
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b5b8666bea2e5df9e3385483166907753916aaba
 }else if(str=="Whatsapp"){
  jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
  jQuery('#edit-field-localisation-message-0-value').hide();
@@ -378,6 +381,7 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
  jQuery('.views-view-grid.horizontal.cols-4.clearfix .views-row').last().append('<div class="views-col col-1 addcourse-blank" style="width: 25%;"><div class="views-field views-field-nothing"><span class="field-content"><div class=" tw-item-card "><a href="node/add/course_" class="addcoursebutton" tabindex="-1">New Course</a></div></div> ');
  jQuery('#edit-name').attr('placeholder','  Username');
  jQuery('#edit-pass').attr('placeholder','  Password');
+ jQuery('.dataTables_wrapper .dataTables_filter input').attr('placeholder',' Search');
  
  jQuery('<i class="fa fa-sign-in logout-menu" aria-hidden="true"></i>').insertBefore('nav#block-logout ul li a span');
  
