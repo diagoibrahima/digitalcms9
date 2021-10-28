@@ -1499,8 +1499,6 @@ div#block-views-block-list-localization-block-1 {
   width: 95%;
   margin: auto;
 }
-<<<<<<< HEAD
-=======
 
 form#node-messages-edit-form {
   height: 624px;
@@ -1605,5 +1603,20 @@ div#block-tailwindcss-help {
   left: 18px;
   opacity: 0;
 }
->>>>>>> b5b8666bea2e5df9e3385483166907753916aaba
+
+div#block-views-block-completionnblangue-block-1 {
+  position: absolute !important;
+  top: 0px;
+  opacity: 0;
+}
+
+div#block-views-block-completionnbmessage-block-1-2 {
+  position: absolute !important;
+  opacity: 0;
+}
+
+div#block-views-block-completionnbtraduction-block-1 {
+  position: absolute !important;
+  opacity: 0;
+}
 /*# sourceMappingURL=style.css.map */

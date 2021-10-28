@@ -43,11 +43,22 @@ if(str=="Moodle"){
 }
 
 
+ //Dasboard 
  
+ let cours=(jQuery('div#block-views-block-cardnbcours-block-1 header').text());
+console.log(cours);
+ jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
+ let messagesimpe=(jQuery('div#block-views-block-cardnbmessage-block-1 header').text());
+ jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagaes').html('8');
+ let messagesimpetranslate=(jQuery('div#block-views-block-cardnbmessagetranslated-block-1 header').text());
+ //jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(messagesimpetranslate);
+ jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html('25%');
+ let modulesdecourse=(jQuery('div#block-views-block-cardnbmodule-block-1 header').text());
+ jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(modulesdecourse);
  //content completion   
  //nombre de message traduit
  var nombredemessagetraduit = (jQuery('div#block-views-block-testcompletion-block-1 header').text());
- console.log(nombredemessagetraduit);
+ //console.log(nombredemessagetraduit);
  //total message
  var totalmessage = (jQuery('div#block-views-block-completionnbmessage-block-1 header').text());
  //console.log(totalmessage);
@@ -57,15 +68,21 @@ if(str=="Moodle"){
  
 // var pourcentagemyInt = parseInt(pourcentage);
 
+
+
+
+
+
+
  //______________________________________________________________________________________
 // Recuperation Nombre de message
 var NombreDeMessage = jQuery.trim(jQuery('div#block-views-block-completionnbmessage-block-1-2 header').text());
- console.log(NombreDeMessage);
+ //console.log(NombreDeMessage);
 // Calcule nb langue
 
 //Recuperation du nombre de localization
 var NombreDeLocalization = jQuery.trim(jQuery('div#block-views-block-completionnbtraduction-block-1 header').text());
- console.log(NombreDeLocalization);
+ //console.log(NombreDeLocalization);
 
 jQuery('.nombredelangue').each(function(i){
          langues = jQuery(this).html();
@@ -73,7 +90,7 @@ jQuery('.nombredelangue').each(function(i){
         //console.log(nb);
       });
 NblangueNblangue = parseInt(Nblangue);
-console.log(NblangueNblangue);
+//console.log(NblangueNblangue);
 
 // calcule du pourcentage 
 var pourcentage = NombreDeLocalization*100/NombreDeMessage*NblangueNblangue;
@@ -105,17 +122,7 @@ var pourcentagemyInt = parseInt(pourcentage);
  
  
  
- //Dasboard 
  
- let cours=(jQuery('div#block-views-block-cardnbcours-block-1 header').text());
- jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
- let messagesimpe=(jQuery('div#block-views-block-cardnbmessage-block-1 header').text());
- jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagaes').html('8');
- let messagesimpetranslate=(jQuery('div#block-views-block-cardnbmessagetranslated-block-1 header').text());
- //jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(messagesimpetranslate);
- jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html('25%');
- let modulesdecourse=(jQuery('div#block-views-block-cardnbmodule-block-1 header').text());
- jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(modulesdecourse);
  
  //GENERATE CHANNEL
  
@@ -212,8 +219,7 @@ var pourcentagemyInt = parseInt(pourcentage);
 jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</span>').insertBefore('form#content-moderation-entity-moderation-form');
 
 
- console.log("paris");
- console.log(moderationstate);
+
  
  
  if(moderationstate =="Draft"){
@@ -319,7 +325,7 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
      //console.log(this);
  
      var moduleIndex = jQuery(this).index();
-    console.log(moduleIndex);
+    //console.log(moduleIndex);
      jQuery('.blockmodule-submodule:eq('+moduleIndex+')').toggle('fast');
     
      });
@@ -402,7 +408,7 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
      label: 'Dataset Content management and adaption platform',
      backgroundColor:'#36B1B4',
      borderColor: '#36B1B4',
-     data: [ cours, modulesdecourse, messagesimpetranslate,'25%' ,],
+     data: [ 25, modulesdecourse, messagesimpetranslate,'25%' ,],
    }]
  };
  
@@ -421,14 +427,11 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
  jQuery('.module-section').each(function(){
    
    var moduleIndexee = jQuery(this).index();
-   console.log(moduleIndexee);
+   //console.log(moduleIndexee);
  
    jQuery(this).find('.blockmodule-titre-module span').html('Module '+moduleIndexee+':');
   
- 
    });
- 
-
  
  });
   
