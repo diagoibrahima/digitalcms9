@@ -12,6 +12,8 @@ if(str=="Moodle"){
  jQuery('#edit-field-localization-messagebody-0-value').show();
  jQuery('#edit-field-localisation-message-0-value').hide();
 
+
+
 }else if(str=="Whatsapp"){
  jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
  jQuery('#edit-field-localisation-message-0-value').hide();
@@ -53,17 +55,37 @@ if(str=="Moodle"){
  //console.log(totalmessage);
  var restotranslate=totalmessage-nombredemessagetraduit;
  
- var pourcentage = nombredemessagetraduit*100/totalmessage;
+ //var pourcentage = nombredemessagetraduit*100/totalmessage;
  
- var pourcentagemyInt = parseInt(pourcentage);
- 
- 
+// var pourcentagemyInt = parseInt(pourcentage);
+
+ //______________________________________________________________________________________
+// Recuperation Nombre de message
+var NombreDeMessage = jQuery.trim(jQuery('div#block-views-block-completionnbmessage-block-1-2 header').text());
+ console.log(NombreDeMessage);
+// Calcule nb langue
+
+//Recuperation du nombre de localization
+var NombreDeLocalization = jQuery.trim(jQuery('div#block-views-block-completionnbtraduction-block-1 header').text());
+ console.log(NombreDeLocalization);
+
+jQuery('.nombredelangue').each(function(i){
+         langues = jQuery(this).html();
+         Nblangue= i +1;
+        //console.log(nb);
+      });
+NblangueNblangue = parseInt(Nblangue);
+console.log(NblangueNblangue);
+
+// calcule du pourcentage 
+var pourcentage = NombreDeLocalization*100/NombreDeMessage*NblangueNblangue;
+var pourcentagemyInt = parseInt(pourcentage);
  jQuery('.contentrestetotranslate').html(restotranslate +' '+'to translate');
  //jQuery('div#block-views-block-completionnbmessage-block-1 header').append('<h1> voici le pourcentage '+pourcentagemyInt +'<h1>')
  
  if(pourcentagemyInt >=100){
    jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html(100+'%')
- }else  
+ }else 
  
  jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html(pourcentagemyInt+'%')
  
