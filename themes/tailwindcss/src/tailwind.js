@@ -12,11 +12,6 @@ if(str=="Moodle"){
  jQuery('#edit-field-localization-messagebody-0-value').show();
  jQuery('#edit-field-localisation-message-0-value').hide();
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> b5b8666bea2e5df9e3385483166907753916aaba
 }else if(str=="Whatsapp"){
  jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
  jQuery('#edit-field-localisation-message-0-value').hide();
