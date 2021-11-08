@@ -4,6 +4,15 @@ jQuery(document).ready(function() {
   jQuery('option[value="_none"]').remove();
   jQuery('.entity-moderation-form .form-item label').html('');
  
+
+
+
+
+
+
+
+
+
 let str = localStorage.getItem("channelVal");
 console.log(str);
 
@@ -39,22 +48,33 @@ if(str=="Moodle"){
  jQuery('#edit-field-localisation-message-0-value').hide();
  jQuery('#edit-field-localization-messagebody-0-value').show();
 
-}else{
+}else{ 
 }
 
 
- //Dasboard 
+ //Dasboard Card
  
  let cours=(jQuery('div#block-views-block-cardnbcours-block-1 header').text());
-console.log(cours);
  jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
+
  let messagesimpe=(jQuery('div#block-views-block-cardnbmessage-block-1 header').text());
- jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagaes').html('8');
+ jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messages').html(messagesimpe);
+
  let messagesimpetranslate=(jQuery('div#block-views-block-cardnbmessagetranslated-block-1 header').text());
  //jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(messagesimpetranslate);
  jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html('25%');
- let modulesdecourse=(jQuery('div#block-views-block-cardnbmodule-block-1 header').text());
- jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(modulesdecourse);
+
+ let nblocalization=(jQuery('div#block-views-block-cardnbmodule-block-1 header').text());
+ jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(nblocalization);
+
+
+
+
+
+
+
+
+
  //content completion   
  //nombre de message traduit
  var nombredemessagetraduit = (jQuery('div#block-views-block-testcompletion-block-1 header').text());
@@ -68,12 +88,6 @@ console.log(cours);
  
 // var pourcentagemyInt = parseInt(pourcentage);
 
-
-
-
-
-
-
  //______________________________________________________________________________________
 // Recuperation Nombre de message
 var NombreDeMessage = jQuery.trim(jQuery('div#block-views-block-completionnbmessage-block-1-2 header').text());
@@ -84,13 +98,21 @@ var NombreDeMessage = jQuery.trim(jQuery('div#block-views-block-completionnbmess
 var NombreDeLocalization = jQuery.trim(jQuery('div#block-views-block-completionnbtraduction-block-1 header').text());
  //console.log(NombreDeLocalization);
 
-jQuery('.nombredelangue').each(function(i){
+if (jQuery(".nombredelangue")[0]){
+    jQuery('.nombredelangue').each(function(i){
+
          langues = jQuery(this).html();
          Nblangue= i +1;
-        //console.log(nb);
       });
 NblangueNblangue = parseInt(Nblangue);
-//console.log(NblangueNblangue);
+} else {
+    NblangueNblangue=0;
+}
+
+
+
+
+
 
 // calcule du pourcentage 
 var pourcentage = NombreDeLocalization*100/NombreDeMessage*NblangueNblangue;
@@ -122,7 +144,7 @@ var pourcentagemyInt = parseInt(pourcentage);
  
  
  
- 
+
  
  //GENERATE CHANNEL
  
@@ -148,8 +170,6 @@ var pourcentagemyInt = parseInt(pourcentage);
 
 
 //Selectio channel option
-
-
 
 
   jQuery('.sms').click(function() {
@@ -371,8 +391,7 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
  
  
  
- 
- 
+
  
  // jQuery('.a.use-ajax').hide();
  jQuery('<h1 class="titre-cms-translation"> CONTENT MANAGEMENT AND ADAPTION PLATFORM </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name'); 
@@ -391,39 +410,25 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
  jQuery('<h1> Add Custom Image</h1>').insertBefore('#edit-field-image-0-upload');
  
  
+
+//bar chart
+
+const labelsBarChart = ['Content','Messages','Localizations','Messages localized'];
+
+const dataBarChart = {labels: labelsBarChart,datasets: [{label: 'Dataset Content management and adaption platform',backgroundColor:'#36B1B4',borderColor: '#36B1B4',
+data: [ cours, messagesimpe,nblocalization, 10]
+//data: [ cours, modulesdecourse, messagesimpetranslate, modulesdecourse ],
+}]};
+
+const configBarChart = {type: 'bar',data: dataBarChart};
+
+var chartBar = new Chart(document.getElementById('chartBar'),configBarChart);
+
+
+//bar chart__________________________________
  
- 
- //bar chart
- 
- 
- const labelsBarChart = [
-   'Content',
-   'Localizations',
-   'Messages',
-   'Messages translated',
- ];
- const dataBarChart = {
-   labels: labelsBarChart,
-   datasets: [{
-     label: 'Dataset Content management and adaption platform',
-     backgroundColor:'#36B1B4',
-     borderColor: '#36B1B4',
-     data: [ 25, modulesdecourse, messagesimpetranslate,'25%' ,],
-   }]
- };
- 
- const configBarChart = {
-   type: 'bar',
-   data: dataBarChart,
-   options: {}
- };
- 
- 
- var chartBar = new Chart(
-   document.getElementById('chartBar'),
-   configBarChart
- );
- 
+
+
  jQuery('.module-section').each(function(){
    
    var moduleIndexee = jQuery(this).index();
