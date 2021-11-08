@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains views_cm_current_state.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function views_cm_current_state_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the views_cm_current_state module.
+    case 'help.page.views_cm_current_state':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module provides the views field to get the current state of the content from content moderation.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

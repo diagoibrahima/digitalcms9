@@ -629,14 +629,14 @@ article.node:before {
 
     input#edit-submit {
       background: #6174d1 !important;
-      width: 25% !important;
+      width: 12% !important;
       margin-left: 51px;
   }
 
 
       input {
        
-        line-height: 3;
+        line-height: 2;
         border-radius: 0.25rem;
         width: 60%;
     }
@@ -725,7 +725,7 @@ div div:nth-child(1){
   width: 80%;
   margin-left: 5%;
   z-index: 10;
-  margin: 20px 22px;
+  margin: 48px 22px;
   white-space: nowrap !important;
 }
 
@@ -739,7 +739,7 @@ form#user-login-form:after {
   content: '';
   background: #e4e7eb;
   position: absolute;
-  height: 775px;
+  height: 816px;
   width: 100%;
   z-index: 99999999999999999999;
   bottom: 0;
@@ -1108,7 +1108,7 @@ div#block-views-block-testcompletion-block-1 header , div#block-views-block-comp
 }
 
 
-span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours , span.rounded-full.text-white.badge.bg-red-400.text-xs.Module , span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated , span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagaes {
+span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours , span.rounded-full.text-white.badge.bg-red-400.text-xs.Module , span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated , span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messages {
   position: absolute;
   top: 0px;
   font-size: 45px;
@@ -1530,7 +1530,7 @@ form#node-localization-form {
   width: 60%;
   margin-left: 35%;
   padding: 14px;
-  height: 666px;
+  height: 790px;
 
   div#edit-actions {
     line-height: 2.5rem;
@@ -1722,3 +1722,25 @@ div#block-tailwindcss-help {
   left: 18px;
   opacity: 0;
 }
+
+div#block-views-block-completionnblangue-block-1 {
+    position: absolute !important;
+    top: 0px;
+    opacity: 0;
+}
+
+div#block-views-block-completionnbmessage-block-1-2 {
+    position: absolute !important;
+    opacity: 0;
+}
+
+div#block-views-block-completionnbtraduction-block-1 {
+    position: absolute !important;
+    opacity: 0;
+}
+
+
+input#edit-pass {
+    width: 54% !important;
+}
+

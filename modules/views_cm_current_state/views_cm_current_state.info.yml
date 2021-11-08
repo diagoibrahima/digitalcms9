@@ -1,0 +1,14 @@
+name: 'Views content moderation current state'
+type: module
+description: 'This module provides the views field, to get the current state of the content from content moderation.'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'views'
+dependencies:
+  - drupal:views
+  - drupal:content_moderation
+
+# Information added by Drupal.org packaging script on 2021-02-19
+version: '2.0.1'
+project: 'views_cm_current_state'
+datestamp: 1613760458
