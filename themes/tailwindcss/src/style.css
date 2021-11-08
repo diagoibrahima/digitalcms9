@@ -602,7 +602,7 @@ article.node:before {
 }
 
 .dialog-off-canvas-main-canvas form#user-login-form input {
-  line-height: 3;
+  line-height: 2;
   border-radius: 0.25rem;
   width: 60%;
 }
@@ -1602,5 +1602,9 @@ div#block-tailwindcss-help {
   position: relative;
   left: 18px;
   opacity: 0;
+}
+
+input#edit-pass {
+  width: 58% !important;
 }
 /*# sourceMappingURL=style.css.map */

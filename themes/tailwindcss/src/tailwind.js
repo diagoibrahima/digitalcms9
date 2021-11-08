@@ -5,7 +5,7 @@ jQuery(document).ready(function() {
   jQuery('.entity-moderation-form .form-item label').html('');
  
 let str = localStorage.getItem("channelVal");
-console.log(str);
+
 
 if(str=="Moodle"){
  jQuery('#edit-field-localization-channel option[value="Moodle"]').prop('selected',true);
@@ -47,7 +47,7 @@ if(str=="Moodle"){
  //content completion   
  //nombre de message traduit
  var nombredemessagetraduit = (jQuery('div#block-views-block-testcompletion-block-1 header').text());
- console.log(nombredemessagetraduit);
+ 
  //total message
  var totalmessage = (jQuery('div#block-views-block-completionnbmessage-block-1 header').text());
  //console.log(totalmessage);
@@ -88,6 +88,7 @@ if(str=="Moodle"){
  //Dasboard 
  
  let cours=(jQuery('div#block-views-block-cardnbcours-block-1 header').text());
+
  jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
  let messagesimpe=(jQuery('div#block-views-block-cardnbmessage-block-1 header').text());
  jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagaes').html('8');
@@ -192,8 +193,7 @@ if(str=="Moodle"){
 jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</span>').insertBefore('form#content-moderation-entity-moderation-form');
 
 
- console.log("paris");
- console.log(moderationstate);
+
  
  
  if(moderationstate =="Draft"){
@@ -299,7 +299,7 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
      //console.log(this);
  
      var moduleIndex = jQuery(this).index();
-    console.log(moduleIndex);
+  
      jQuery('.blockmodule-submodule:eq('+moduleIndex+')').toggle('fast');
     
      });
@@ -374,7 +374,7 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
    'Content',
    'Localizations',
    'Messages',
-   'Messages translated',
+   'Messages translated'
  ];
  const dataBarChart = {
    labels: labelsBarChart,
@@ -382,7 +382,8 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
      label: 'Dataset Content management and adaption platform',
      backgroundColor:'#36B1B4',
      borderColor: '#36B1B4',
-     data: [ cours, modulesdecourse, messagesimpetranslate,'25%' ,],
+     //data: [ cours, modulesdecourse, messagesimpetranslate, modulesdecourse ],
+     data: [ 10, 39, 50, 60 ]
    }]
  };
  
@@ -401,7 +402,7 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
  jQuery('.module-section').each(function(){
    
    var moduleIndexee = jQuery(this).index();
-   console.log(moduleIndexee);
+ 
  
    jQuery(this).find('.blockmodule-titre-module span').html('Module '+moduleIndexee+':');
   
