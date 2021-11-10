@@ -104,7 +104,7 @@ if(str=="Moodle"){
    jQuery("a.generatebutton").click(function() {
  
  
-   jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fas fa-sms"></i>SMS</div> <br> <div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>MOODLE</div> <br>  <div class="channelgenerate whatsapp"><i class="fab fa-whatsapp"></i>WHATSAPP</div> <br>  <div class="channelgenerate telegrame"><i class="fab fa-telegram"></i>TELEGRAME</div> <br> <div class="channelgenerate messanger"><i class="fab fa-facebook-messenger"></i>MESSENGER</div> </div>').insertAfter('a.generatebutton');
+   jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fas fa-sms"></i>SMS</div> <br> <div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>MOODLE</div> <br>  <div class="channelgenerate whatsapp"><i class="fab fa-whatsapp"></i>WHATSAPP</div> <br>  <div class="channelgenerate telegrame"><i class="fab fa-telegram"></i>TELEGRAM</div> <br> <div class="channelgenerate messanger"><i class="fab fa-facebook-messenger"></i>MESSENGER</div> </div>').insertAfter('a.generatebutton');
   
    let messagetolacalise=(jQuery('article').html());
    jQuery('.channelgenerate ').append(messagetolacalise);
