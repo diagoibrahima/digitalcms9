@@ -1607,4 +1607,8 @@ div#block-tailwindcss-help {
 input#edit-pass {
   width: 58% !important;
 }
+
+.views-field.views-field-field-localisation- {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */
