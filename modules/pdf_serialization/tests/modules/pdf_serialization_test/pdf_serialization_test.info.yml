@@ -1,0 +1,12 @@
+name: 'PDF serialization test views'
+type: module
+description: 'Provides default views for pdf serialization tests.'
+package: Testing
+core_version_requirement: ^8.8 || ^9
+dependencies:
+  - pdf_serialization:pdf_serialization
+
+# Information added by Drupal.org packaging script on 2021-03-29
+version: '2.1.1'
+project: 'pdf_serialization'
+datestamp: 1617005551

@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '691d04f61e11c2d130f48afb02e850f6827038fa',
+    'reference' => '8d6906c9eeb8aa73e3cd43e16bf0ff0a3bfc7beb',
     'name' => 'drupal/legacy-project',
   ),
   'versions' => 
@@ -633,7 +633,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '691d04f61e11c2d130f48afb02e850f6827038fa',
+      'reference' => '8d6906c9eeb8aa73e3cd43e16bf0ff0a3bfc7beb',
     ),
     'drupal/link' => 
     array (
@@ -753,6 +753,15 @@ private static $installed = array (
       array (
         0 => '9.2.2',
       ),
+    ),
+    'drupal/pdf_serialization' => 
+    array (
+      'pretty_version' => '2.1.1',
+      'version' => '2.1.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2.1.1',
     ),
     'drupal/quickedit' => 
     array (
@@ -915,6 +924,15 @@ private static $installed = array (
         0 => '9.2.2',
       ),
     ),
+    'drupal/views_data_export' => 
+    array (
+      'pretty_version' => '1.0.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.0',
+    ),
     'drupal/views_ui' => 
     array (
       'replaced' => 
@@ -944,6 +962,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '0dbf5d78455d4d6a41d186da50adc1122ec066f4',
+    ),
+    'ezyang/htmlpurifier' => 
+    array (
+      'pretty_version' => 'v4.13.0',
+      'version' => '4.13.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '08e27c97e4c6ed02f37c5b2b20488046c8d90d75',
     ),
     'guzzlehttp/guzzle' => 
     array (
@@ -1026,6 +1053,33 @@ private static $installed = array (
       ),
       'reference' => '0ec57e8264ec92565974ead0d1724cf1026e10c1',
     ),
+    'maennchen/zipstream-php' => 
+    array (
+      'pretty_version' => '2.1.0',
+      'version' => '2.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c4c5803cc1f93df3d2448478ef79394a5981cc58',
+    ),
+    'markbaker/complex' => 
+    array (
+      'pretty_version' => '3.0.1',
+      'version' => '3.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ab8bc271e404909db09ff2d5ffa1e538085c0f22',
+    ),
+    'markbaker/matrix' => 
+    array (
+      'pretty_version' => '3.0.0',
+      'version' => '3.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c66aefcafb4f6c269510e9ac46b82619a904c576',
+    ),
     'masterminds/html5' => 
     array (
       'pretty_version' => '2.7.4',
@@ -1034,6 +1088,46 @@ private static $installed = array (
       array (
       ),
       'reference' => '9227822783c75406cfe400984b2f095cdf03d417',
+    ),
+    'mpdf/mpdf' => 
+    array (
+      'pretty_version' => 'v8.0.15',
+      'version' => '8.0.15.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd8a5294a6cc2e814c4157aecc8d7ac25014b18ed',
+    ),
+    'myclabs/deep-copy' => 
+    array (
+      'pretty_version' => '1.10.2',
+      'version' => '1.10.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '776f831124e9c62e1a2c601ecc52e776d8bb7220',
+      'replaced' => 
+      array (
+        0 => '1.10.2',
+      ),
+    ),
+    'myclabs/php-enum' => 
+    array (
+      'pretty_version' => '1.8.3',
+      'version' => '1.8.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b942d263c641ddb5190929ff840c68f78713e937',
+    ),
+    'paragonie/random_compat' => 
+    array (
+      'pretty_version' => 'v9.99.100',
+      'version' => '9.99.100.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '996434e5492cb4c3edcb9168db6fbb1359ef965a',
     ),
     'pear/archive_tar' => 
     array (
@@ -1071,6 +1165,15 @@ private static $installed = array (
       ),
       'reference' => 'b14fbe2ddb0b9f94f5b24cf08783d599f776fff0',
     ),
+    'phpoffice/phpspreadsheet' => 
+    array (
+      'pretty_version' => '1.20.0',
+      'version' => '1.20.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '44436f270bb134b4a94670f3d020a85dfa0a3c02',
+    ),
     'psr/cache' => 
     array (
       'pretty_version' => '1.0.1',
@@ -1102,6 +1205,15 @@ private static $installed = array (
       array (
         0 => '1.0',
       ),
+    ),
+    'psr/http-client' => 
+    array (
+      'pretty_version' => '1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2dfb5f6c5eff0e91e20e913f8c5452ed95b86621',
     ),
     'psr/http-factory' => 
     array (
@@ -1151,6 +1263,15 @@ private static $installed = array (
         0 => '1.0',
       ),
     ),
+    'psr/simple-cache' => 
+    array (
+      'pretty_version' => '1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '408d5eafb83c57f6365a3ca330ff23aa4a5fa39b',
+    ),
     'ralouphie/getallheaders' => 
     array (
       'pretty_version' => '3.0.3',
@@ -1173,6 +1294,15 @@ private static $installed = array (
       array (
         0 => 'v1.10.10',
       ),
+    ),
+    'setasign/fpdi' => 
+    array (
+      'pretty_version' => 'v2.3.6',
+      'version' => '2.3.6.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6231e315f73e4f62d72b73f3d6d78ff0eed93c31',
     ),
     'shama/baton' => 
     array (

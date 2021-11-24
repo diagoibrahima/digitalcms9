@@ -1,0 +1,9 @@
+services:
+  pdf_serialization.pdf_manager:
+    class: Drupal\pdf_serialization\PdfManager
+    arguments: ['@renderer', '@file_system']
+  pdf_serialization.encoder.pdf:
+    class: Drupal\pdf_serialization\Encoder\PdfEncoder
+    arguments: ['@renderer', '@pdf_serialization.pdf_manager']
+    tags:
+      - { name: encoder, format: pdf }

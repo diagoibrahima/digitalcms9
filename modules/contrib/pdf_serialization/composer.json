@@ -1,0 +1,10 @@
+{
+    "name": "drupal/pdf_serialization",
+    "description": "Provides Pdf as a serialization format.",
+    "type": "drupal-module",
+    "license": "GPL-2.0+",
+    "require": {
+        "drupal/views_data_export": "^1.0",
+        "mpdf/mpdf": "^8.0"
+    }
+}

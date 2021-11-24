@@ -1,0 +1,4 @@
+encoder_styles:
+  css:
+    theme:
+      css/pdf-encoder.css: {}
