@@ -1,0 +1,13 @@
+name: Translation template extractor
+description: Provides a web interface and an API to extract translatable text from the sources of installed components.
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: Multilingual
+dependencies:
+  - drupal:locale
+type: module
+
+# Information added by Drupal.org packaging script on 2020-09-08
+version: '8.x-1.0-alpha1'
+project: 'potx'
+datestamp: 1599562054

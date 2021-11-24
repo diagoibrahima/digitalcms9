@@ -1,0 +1,13 @@
+{
+    "name": "config_translation_po",
+    "type": "drupal-module",
+    "description": "Configuration Translations to po file",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/config_translation_po",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/config_translation_po",
+        "source": "http://cgit.drupalcode.org/config_translation_po"
+    }
+}

@@ -5,6 +5,7 @@ body {
 aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
   background-color: #1491c1 !important;
   width: 260px !important;
+  padding: 0px !important;
 }
 
 .dialog-off-canvas-main-canvas {
@@ -34,7 +35,7 @@ div#block-searchform {
   margin: 2rem;
 }
 
-div#block-searchform [type=search] {
+div#block-searchform [type="search"] {
   -webkit-appearance: textfield;
   border-radius: 5px;
   width: 360px;
@@ -205,7 +206,7 @@ span.link-text {
   font-size: 1.5rem;
   font-weight: 200;
   padding: 0px 20px;
-  border-bottom: 1px solid  #80808036;
+  border-bottom: 1px solid #80808036;
   position: relative;
 }
 
@@ -380,7 +381,11 @@ input#edit-preview {
   display: none;
 }
 
-form#node-course-form, form#node-module-form, form#node-sub-module-form, .node-course__edit-form, .node-form {
+form#node-course-form,
+form#node-module-form,
+form#node-sub-module-form,
+.node-course__edit-form,
+.node-form {
   margin-top: 40px;
   background: white;
   width: 80%;
@@ -391,24 +396,67 @@ form#node-course-form, form#node-module-form, form#node-sub-module-form, .node-c
   height: 380px;
 }
 
-form#node-course-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value, form#node-module-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value, form#node-sub-module-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value, .node-course__edit-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value, .node-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value {
+form#node-course-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
+form#node-module-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
+form#node-sub-module-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
+.node-course__edit-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
+.node-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value {
   width: 95%;
   margin: auto;
 }
 
-form#node-course-form textarea, form#node-module-form textarea, form#node-sub-module-form textarea, .node-course__edit-form textarea, .node-form textarea {
+form#node-course-form textarea,
+form#node-module-form textarea,
+form#node-sub-module-form textarea,
+.node-course__edit-form textarea,
+.node-form textarea {
   overflow: auto;
   border: 1px #a0aebf solid;
   border-radius: 0.25rem;
   width: 100%;
 }
 
-form#node-course-form input#edit-title-0-value, form#node-course-form input#edit-field-course-0-target-id, form#node-course-form input#edit-field-module-0-target-id, form#node-course-form input#edit-field-message-0-value, form#node-course-form .js-form-item, form#node-course-form input#edit-field-localization-tag-0-target-id, form#node-course-form input#edit-field-field-submoduleinmessage-0-target-id, form#node-module-form input#edit-title-0-value, form#node-module-form input#edit-field-course-0-target-id, form#node-module-form input#edit-field-module-0-target-id, form#node-module-form input#edit-field-message-0-value, form#node-module-form .js-form-item, form#node-module-form input#edit-field-localization-tag-0-target-id, form#node-module-form input#edit-field-field-submoduleinmessage-0-target-id, form#node-sub-module-form input#edit-title-0-value, form#node-sub-module-form input#edit-field-course-0-target-id, form#node-sub-module-form input#edit-field-module-0-target-id, form#node-sub-module-form input#edit-field-message-0-value, form#node-sub-module-form .js-form-item, form#node-sub-module-form input#edit-field-localization-tag-0-target-id, form#node-sub-module-form input#edit-field-field-submoduleinmessage-0-target-id, .node-course__edit-form input#edit-title-0-value, .node-course__edit-form input#edit-field-course-0-target-id, .node-course__edit-form input#edit-field-module-0-target-id, .node-course__edit-form input#edit-field-message-0-value, .node-course__edit-form .js-form-item, .node-course__edit-form input#edit-field-localization-tag-0-target-id, .node-course__edit-form input#edit-field-field-submoduleinmessage-0-target-id, .node-form input#edit-title-0-value, .node-form input#edit-field-course-0-target-id, .node-form input#edit-field-module-0-target-id, .node-form input#edit-field-message-0-value, .node-form .js-form-item, .node-form input#edit-field-localization-tag-0-target-id, .node-form input#edit-field-field-submoduleinmessage-0-target-id {
+form#node-course-form input#edit-title-0-value,
+form#node-course-form input#edit-field-course-0-target-id,
+form#node-course-form input#edit-field-module-0-target-id,
+form#node-course-form input#edit-field-message-0-value,
+form#node-course-form .js-form-item,
+form#node-course-form input#edit-field-localization-tag-0-target-id,
+form#node-course-form input#edit-field-field-submoduleinmessage-0-target-id,
+form#node-module-form input#edit-title-0-value,
+form#node-module-form input#edit-field-course-0-target-id,
+form#node-module-form input#edit-field-module-0-target-id,
+form#node-module-form input#edit-field-message-0-value,
+form#node-module-form .js-form-item,
+form#node-module-form input#edit-field-localization-tag-0-target-id,
+form#node-module-form input#edit-field-field-submoduleinmessage-0-target-id,
+form#node-sub-module-form input#edit-title-0-value,
+form#node-sub-module-form input#edit-field-course-0-target-id,
+form#node-sub-module-form input#edit-field-module-0-target-id,
+form#node-sub-module-form input#edit-field-message-0-value,
+form#node-sub-module-form .js-form-item,
+form#node-sub-module-form input#edit-field-localization-tag-0-target-id,
+form#node-sub-module-form input#edit-field-field-submoduleinmessage-0-target-id,
+.node-course__edit-form input#edit-title-0-value,
+.node-course__edit-form input#edit-field-course-0-target-id,
+.node-course__edit-form input#edit-field-module-0-target-id,
+.node-course__edit-form input#edit-field-message-0-value,
+.node-course__edit-form .js-form-item,
+.node-course__edit-form input#edit-field-localization-tag-0-target-id,
+.node-course__edit-form input#edit-field-field-submoduleinmessage-0-target-id,
+.node-form input#edit-title-0-value,
+.node-form input#edit-field-course-0-target-id,
+.node-form input#edit-field-module-0-target-id,
+.node-form input#edit-field-message-0-value,
+.node-form .js-form-item,
+.node-form input#edit-field-localization-tag-0-target-id,
+.node-form input#edit-field-field-submoduleinmessage-0-target-id {
   border-radius: 0.25rem;
   line-height: 2;
 }
 
-form#node-module-form, form#node-sub-module-form {
+form#node-module-form,
+form#node-sub-module-form {
   height: 400px !important;
 }
 
@@ -485,7 +533,7 @@ span.tw-text-green-500.align-right {
 }
 
 a.addcoursebutton:before {
-  content: '';
+  content: "";
   position: absolute;
   height: 164px;
   width: 225px;
@@ -587,7 +635,7 @@ article.node:before {
 }
 
 .dialog-off-canvas-main-canvas form#user-login-form:before {
-  content: '';
+  content: "";
   background: #e5e7eb;
   position: absolute;
   height: 130px;
@@ -607,7 +655,8 @@ article.node:before {
   width: 60%;
 }
 
-.dialog-off-canvas-main-canvas form#user-login-form div#edit-name--description, .dialog-off-canvas-main-canvas form#user-login-form div#edit-pass--description {
+.dialog-off-canvas-main-canvas form#user-login-form div#edit-name--description,
+.dialog-off-canvas-main-canvas form#user-login-form div#edit-pass--description {
   opacity: 0;
 }
 
@@ -615,7 +664,7 @@ article.node:before {
   font-size: 20px;
   font-weight: 700;
   margin: 40px 0px;
-  color: #4B5366;
+  color: #4b5366;
   margin-left: 50px;
 }
 
@@ -647,7 +696,7 @@ article.node:before {
 .breadcum {
   margin: 20px auto;
   margin-left: 3%;
-  color: #4B5366;
+  color: #4b5366;
 }
 
 .node-content .quickedit-field {
@@ -687,7 +736,7 @@ article.node:before {
 }
 
 form#user-login-form:after {
-  content: '';
+  content: "";
   background: #e4e7eb;
   position: absolute;
   height: 775px;
@@ -816,7 +865,7 @@ svg.svg-inline--fa.fa-plus-square.fa-w-14 {
 }
 
 .ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons .form-submit {
-  margin: .5em .4em .5em 0;
+  margin: 0.5em 0.4em 0.5em 0;
   cursor: pointer;
   background: #149b2c !important;
   color: white !important;
@@ -866,15 +915,15 @@ form#node-translation-form .field--name-field-message {
 input#edit-field-image-0-upload {
   width: 100%;
   height: 250px;
-  background: #6EE7B7;
+  background: #6ee7b7;
   border: none;
   position: inherit;
   position: relative;
 }
 
 input#edit-field-image-0-upload:before {
-  content: '';
-  background: #6EE7B7;
+  content: "";
+  background: #6ee7b7;
   position: absolute;
   height: 150px;
   width: 91%;
@@ -902,7 +951,10 @@ div#edit-field-image-0--description {
   display: none;
 }
 
-.js-form-item.form-item.js-form-type-select.form-item-field-channel.js-form-item-field-channel, .js-form-item.form-item.js-form-type-select.form-item-field-videotype.js-form-item-field-videotype, .container-inline.js-form-item.form-item.js-form-type-select.form-item-moderation-state-0-state.js-form-item-moderation-state-0-state, .js-form-item.form-item.js-form-type-textfield.form-item-field-langage-0-value.js-form-item-field-langage-0-value {
+.js-form-item.form-item.js-form-type-select.form-item-field-channel.js-form-item-field-channel,
+.js-form-item.form-item.js-form-type-select.form-item-field-videotype.js-form-item-field-videotype,
+.container-inline.js-form-item.form-item.js-form-type-select.form-item-moderation-state-0-state.js-form-item-moderation-state-0-state,
+.js-form-item.form-item.js-form-type-textfield.form-item-field-langage-0-value.js-form-item-field-langage-0-value {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -912,7 +964,24 @@ div#edit-field-image-0--description {
           flex-direction: column !important;
 }
 
-select#edit-field-channel, input#edit-field-langage-0-value, select#edit-field-videotype, select#edit-moderation-state-0-state, input#edit-field-videoembeded-0-value, input#edit-field-video-0-uri, select#edit-field-field-moduleinmessage, select#edit-field-localization-channel, select#edit-field-localization-langue, input#edit-mail, input#edit-name, input#edit-pass-pass1, input#edit-pass-pass2, select#edit-preferred-langcode, select#edit-timezone--2, input#edit-field-contry-0-target-id, input#edit-path-0-alias, input#edit-user-picture-0-upload {
+select#edit-field-channel,
+input#edit-field-langage-0-value,
+select#edit-field-videotype,
+select#edit-moderation-state-0-state,
+input#edit-field-videoembeded-0-value,
+input#edit-field-video-0-uri,
+select#edit-field-field-moduleinmessage,
+select#edit-field-localization-channel,
+select#edit-field-localization-langue,
+input#edit-mail,
+input#edit-name,
+input#edit-pass-pass1,
+input#edit-pass-pass2,
+select#edit-preferred-langcode,
+select#edit-timezone--2,
+input#edit-field-contry-0-target-id,
+input#edit-path-0-alias,
+input#edit-user-picture-0-upload {
   border: solid 1px #a0aebe;
   border-radius: 5px;
   height: 35px;
@@ -924,7 +993,8 @@ div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(1) {
   color: #a0aec0;
 }
 
-div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(3), div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(4) {
+div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(3),
+div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(4) {
   color: #718096;
   font-size: 12px;
 }
@@ -956,7 +1026,7 @@ div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(4) {
 
 div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(3):before {
   left: 29px;
-  content: '';
+  content: "";
   position: absolute;
   width: 27.2%;
   height: 1px;
@@ -969,7 +1039,8 @@ div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(2) {
   padding: 0px 0px 10px 0px;
 }
 
-div#block-views-block-testcompletion-block-1 header, div#block-views-block-completionnbmessage-block-1 header {
+div#block-views-block-testcompletion-block-1 header,
+div#block-views-block-completionnbmessage-block-1 header {
   opacity: 0;
   position: absolute;
 }
@@ -1026,14 +1097,17 @@ div#block-views-block-testcompletion-block-1 header, div#block-views-block-compl
 
 .report-card .mt-8 {
   position: absolute;
-  bottom: 15px;
-  left: 16px;
+  bottom: 10px;
+  left: 15px;
   font-size: 18px;
   color: #ffffff;
   font-weight: 200;
 }
 
-.report-card span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours, .report-card span.rounded-full.text-white.badge.bg-red-400.text-xs.Module, .report-card span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated, .report-card span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagaes {
+.report-card span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours,
+.report-card span.rounded-full.text-white.badge.bg-red-400.text-xs.Module,
+.report-card span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated,
+.report-card span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagaes {
   position: absolute;
   top: 0px;
   font-size: 45px;
@@ -1042,7 +1116,11 @@ div#block-views-block-testcompletion-block-1 header, div#block-views-block-compl
   left: 54px;
 }
 
-.report-card svg.svg-inline--fa.fa-book.fa-w-14, .report-card svg.svg-inline--fa.fa-comment-dots.fa-w-16, .report-card svg.svg-inline--fa.fa-language.fa-w-20, .report-card svg.svg-inline--fa.fa-comment-dots.fa-w-16, .report-card svg.svg-inline--fa.fa-th-list.fa-w-16 {
+.report-card svg.svg-inline--fa.fa-book.fa-w-14,
+.report-card svg.svg-inline--fa.fa-comment-dots.fa-w-16,
+.report-card svg.svg-inline--fa.fa-language.fa-w-20,
+.report-card svg.svg-inline--fa.fa-comment-dots.fa-w-16,
+.report-card svg.svg-inline--fa.fa-th-list.fa-w-16 {
   position: absolute;
   left: 16px;
   top: 20px;
@@ -1050,7 +1128,10 @@ div#block-views-block-testcompletion-block-1 header, div#block-views-block-compl
   font-size: 26px;
 }
 
-div#block-views-block-cardnbcours-block-1, div#block-views-block-cardnbmessage-block-1, div#block-views-block-cardnbmessagetranslated-block-1, div#block-views-block-cardnbmodule-block-1 {
+div#block-views-block-cardnbcours-block-1,
+div#block-views-block-cardnbmessage-block-1,
+div#block-views-block-cardnbmessagetranslated-block-1,
+div#block-views-block-cardnbmodule-block-1 {
   position: absolute !important;
   opacity: 0;
 }
@@ -1076,7 +1157,8 @@ div#block-views-block-dasbord-view-block-1 {
   position: relative !important;
 }
 
-div#block-views-block-testcompletion-block-1, div#block-views-block-completionnbmessage-block-1 {
+div#block-views-block-testcompletion-block-1,
+div#block-views-block-completionnbmessage-block-1 {
   position: absolute;
   display: none;
 }
@@ -1126,7 +1208,7 @@ div#block-views-block-listtranslation-block-1 {
 }
 
 form#node-translation-edit-form div#edit-field-message-wrapper:before {
-  content: '';
+  content: "";
   position: absolute;
   background: #6ee7b7;
   height: 100px;
@@ -1176,7 +1258,7 @@ form#content-moderation-entity-moderation-form input#edit-revision-log {
   color: #000000;
 }
 
-form#content-moderation-entity-moderation-form .entity-moderation-form input[type=submit] {
+form#content-moderation-entity-moderation-form .entity-moderation-form input[type="submit"] {
   margin-bottom: 1.2em;
   color: white;
   background: #ff9900;
@@ -1220,7 +1302,7 @@ div[data-drupal-messages] {
   margin: 20px auto;
   border-radius: 5px;
   text-align: center;
-  border: solid  1px #1390c1 !important;
+  border: solid 1px #1390c1 !important;
 }
 
 pre.backtrace {
@@ -1278,11 +1360,12 @@ article[typeof="schema:Person"] div {
 
 .site-name.tw-text-2xl.tw-text-white.tw-font-semibold.titre-website {
   font-size: 1rem !important;
-  background: #fafffd;
-  border-radius: 5px;
-  padding: 10px;
+  background: #ffffff;
+  border-radius: 0px;
+  padding: 12px;
   color: #1391c1 !important;
   text-align: center;
+  width: 100%;
 }
 
 .site-name.tw-text-2xl.tw-text-white.tw-font-semibold.titre-website:hover {
@@ -1295,7 +1378,7 @@ article[typeof="schema:Person"] div {
 }
 
 .site-name.tw-text-2xl.tw-text-white.tw-font-semibold.titre-website a.titre-website1:before {
-  content: '';
+  content: "";
   background: red;
   height: 69px;
   width: 233px;
@@ -1450,7 +1533,10 @@ div#block-views-block-messagetotranslate-block-1 {
   position: relative;
 }
 
-a.moderationStateButton.submit.submitpositionleft, a.moderationStateButton.approve, a.moderationStateButton.reject, a.moderationStateButton.rsubmit {
+a.moderationStateButton.submit.submitpositionleft,
+a.moderationStateButton.approve,
+a.moderationStateButton.reject,
+a.moderationStateButton.rsubmit {
   position: absolute;
   top: -53px;
   right: 34px;
@@ -1541,8 +1627,7 @@ div#datatable_filter > label {
 }
 
 a.btn {
-  background: #1391c1;
-  color: white;
+  color: #1391c1;
   padding: 5px;
 }
 
@@ -1610,5 +1695,9 @@ input#edit-pass {
 
 .views-field.views-field-field-localisation- {
   display: none;
+}
+
+.channelgenerate {
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
