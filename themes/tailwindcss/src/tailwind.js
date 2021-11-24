@@ -14,7 +14,7 @@ jQuery(document).ready(function() {
 
 
 let str = localStorage.getItem("channelVal");
-console.log(str);
+
 
 if(str=="Moodle"){
  jQuery('#edit-field-localization-channel option[value="Moodle"]').prop('selected',true);
@@ -78,7 +78,11 @@ if(str=="Moodle"){
  //content completion   
  //nombre de message traduit
  var nombredemessagetraduit = (jQuery('div#block-views-block-testcompletion-block-1 header').text());
+<<<<<<< HEAD
  //console.log(nombredemessagetraduit);
+=======
+ 
+>>>>>>> 1d1fc28149dad983db3c9f4e4d1f2943c6e938d7
  //total message
  var totalmessage = (jQuery('div#block-views-block-completionnbmessage-block-1 header').text());
  //console.log(totalmessage);
@@ -144,7 +148,22 @@ var pourcentagemyInt = parseInt(pourcentage);
  
  
  
+<<<<<<< HEAD
 
+=======
+ //Dasboard 
+ 
+ let cours=(jQuery('div#block-views-block-cardnbcours-block-1 header').text());
+
+ jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
+ let messagesimpe=(jQuery('div#block-views-block-cardnbmessage-block-1 header').text());
+ jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagaes').html('8');
+ let messagesimpetranslate=(jQuery('div#block-views-block-cardnbmessagetranslated-block-1 header').text());
+ //jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(messagesimpetranslate);
+ jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html('25%');
+ let modulesdecourse=(jQuery('div#block-views-block-cardnbmodule-block-1 header').text());
+ jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(modulesdecourse);
+>>>>>>> 1d1fc28149dad983db3c9f4e4d1f2943c6e938d7
  
  //GENERATE CHANNEL
  
@@ -152,7 +171,7 @@ var pourcentagemyInt = parseInt(pourcentage);
    jQuery("a.generatebutton").click(function() {
  
  
-   jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fas fa-sms"></i>SMS</div> <br> <div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>MOODLE</div> <br>  <div class="channelgenerate whatsapp"><i class="fab fa-whatsapp"></i>WHATSAPP</div> <br>  <div class="channelgenerate telegrame"><i class="fab fa-telegram"></i>TELEGRAME</div> <br> <div class="channelgenerate messanger"><i class="fab fa-facebook-messenger"></i>MESSENGER</div> </div>').insertAfter('a.generatebutton');
+   jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fas fa-sms"></i>SMS</div> <br> <div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>MOODLE</div> <br>  <div class="channelgenerate whatsapp"><i class="fab fa-whatsapp"></i>WHATSAPP</div> <br>  <div class="channelgenerate telegrame"><i class="fab fa-telegram"></i>TELEGRAM</div> <br> <div class="channelgenerate messanger"><i class="fab fa-facebook-messenger"></i>MESSENGER</div> </div>').insertAfter('a.generatebutton');
   
    let messagetolacalise=(jQuery('article').html());
    jQuery('.channelgenerate ').append(messagetolacalise);
@@ -345,7 +364,11 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
      //console.log(this);
  
      var moduleIndex = jQuery(this).index();
+<<<<<<< HEAD
     //console.log(moduleIndex);
+=======
+  
+>>>>>>> 1d1fc28149dad983db3c9f4e4d1f2943c6e938d7
      jQuery('.blockmodule-submodule:eq('+moduleIndex+')').toggle('fast');
     
      });
@@ -394,7 +417,7 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
 
  
  // jQuery('.a.use-ajax').hide();
- jQuery('<h1 class="titre-cms-translation"> CONTENT MANAGEMENT AND ADAPTION PLATFORM </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name'); 
+ jQuery('<h1 class="titre-cms-translation"> CONTENT MANAGEMENT AND ADAPTATION PLATFORM </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name'); 
  jQuery('<i class="fa fa-fw fa-user"></i>').insertBefore('input#edit-name');
  jQuery('<i class="fa fa-fw fa-lock"></i>').insertBefore('input#edit-pass');
  jQuery('a.use-ajax').prepend('<i class="fas fa-plus-square"></i>');
@@ -427,12 +450,52 @@ var chartBar = new Chart(document.getElementById('chartBar'),configBarChart);
 
 //bar chart__________________________________
  
+<<<<<<< HEAD
 
 
  jQuery('.module-section').each(function(){
    
    var moduleIndexee = jQuery(this).index();
    //console.log(moduleIndexee);
+=======
+ 
+ //bar chart
+ 
+ 
+ const labelsBarChart = [
+   'Content',
+   'Localizations',
+   'Messages',
+   'Messages translated'
+ ];
+ const dataBarChart = {
+   labels: labelsBarChart,
+   datasets: [{
+     label: 'Dataset Content management and adaption platform',
+     backgroundColor:'#36B1B4',
+     borderColor: '#36B1B4',
+     //data: [ cours, modulesdecourse, messagesimpetranslate, modulesdecourse ],
+     data: [ 10, 39, 50, 60 ]
+   }]
+ };
+ 
+ const configBarChart = {
+   type: 'bar',
+   data: dataBarChart,
+   options: {}
+ };
+ 
+ 
+ var chartBar = new Chart(
+   document.getElementById('chartBar'),
+   configBarChart
+ );
+ 
+ jQuery('.module-section').each(function(){
+   
+   var moduleIndexee = jQuery(this).index();
+ 
+>>>>>>> 1d1fc28149dad983db3c9f4e4d1f2943c6e938d7
  
    jQuery(this).find('.blockmodule-titre-module span').html('Module '+moduleIndexee+':');
   

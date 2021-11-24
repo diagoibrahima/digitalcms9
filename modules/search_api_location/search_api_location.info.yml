@@ -1,0 +1,13 @@
+type: module
+name: 'Search API location'
+description: 'Provides location based search for the Search API module'
+package: Search
+core_version_requirement: ^8.8 || ^9
+configure: search_api.overview
+dependencies:
+  - search_api:search_api
+
+# Information added by Drupal.org packaging script on 2020-10-13
+version: '8.x-1.0-alpha2'
+project: 'search_api_location'
+datestamp: 1602614415
