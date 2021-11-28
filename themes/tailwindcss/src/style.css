@@ -67,7 +67,7 @@ div#edit-actions #edit-submit {
   border-radius: 5px !important;
   width: 100px !important;
   color: white !important;
-  background: linear-gradient(45deg, #0c6385, #46ccff);
+  background: linear-gradient(45deg, #159dd3, #46ccff);
   border: cornsilk !important;
 }
 
@@ -152,7 +152,7 @@ h1.js-quickedit-page-title {
 }
 
 a.tw-action-new.tw-btn.tw-btn-primary {
-  background: linear-gradient(45deg, #0c6385, #46ccff);
+  background: linear-gradient(45deg, #159dd3, #46ccff);
   padding: 10px;
   border-radius: 5px;
   color: white;
@@ -688,7 +688,7 @@ article.node:before {
 }
 
 .add-module:hover {
-  background: linear-gradient(45deg, #1491c1, #016288) !important;
+  background: linear-gradient(45deg, #159dd3, #46ccff);
   border-style: hidden;
   color: white !important;
   line-height: 3.4;
@@ -1705,5 +1705,25 @@ div#block-views-block-completionnbtraduction-block-1 {
 
 input#edit-pass {
   width: 54% !important;
+}
+
+div#block-views-block-completionnblangue-block-1 {
+  display: none;
+}
+
+div#block-views-block-completionnbtraduction-block-1 {
+  display: none;
+}
+
+.views-field.views-field-nid {
+  display: none;
+}
+
+div#block-views-block-completionnbtraduction-block-1 {
+  display: none;
+}
+
+div#block-views-block-completionnbmessage-block-1-2 {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
