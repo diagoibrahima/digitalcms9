@@ -607,7 +607,26 @@ article.node:before {
   min-height: 1200px;
 }
 
+
+
+
 .add-module {
+  color: #34383a8c !important;
+  border: solid 2px;
+  border-style: dashed;
+  border-radius: 8px;
+  line-height: 3;
+  text-align: center;
+  width: 80%;
+  margin: auto 20px;
+  position: absolute;
+  z-index: 10;
+  padding: 0px;
+  pointer-events: none;
+  cursor: not-allowed;
+ 
+}
+.add-module-enable {
   color: #1491c1 !important;
   border: solid 2px;
   border-style: dashed;
@@ -619,6 +638,10 @@ article.node:before {
   position: absolute;
   z-index: 10;
   padding: 0px;
+  cursor: pointer;
+  pointer-events:visible !important;
+
+
   &:hover {
     background: linear-gradient(45deg, #1491c1, #016288) !important;
     border-style: hidden;
@@ -755,7 +778,7 @@ span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2
 
 .turneditone {
   background: linear-gradient(45deg, #1491c1, #089cd6);
-  color: white !important;
+  color:#089cd6!important;
   border: none !important;
 }
 
@@ -927,17 +950,14 @@ div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(4) {
 
 div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(5) {
   color: #1491c1;
-  border: solid 1px;
+ // border: solid 1px;
   width: 65px;
-  padding: 4px;
+ // padding: 4px;
   text-align: center;
   border-radius: 5px;
   margin: auto 185px;
 
-  &:hover {
-    background: #1491c1;
-    color: white;
-  }
+ 
 }
 
 div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(4) {

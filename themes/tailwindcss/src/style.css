@@ -679,7 +679,27 @@ article.node:before {
   min-height: 1200px;
 }
 
+<<<<<<< HEAD
 .dialog-off-canvas-main-canvas .add-module {
+=======
+.add-module {
+  color: #34383a8c !important;
+  border: solid 2px;
+  border-style: dashed;
+  border-radius: 8px;
+  line-height: 3;
+  text-align: center;
+  width: 80%;
+  margin: auto 20px;
+  position: absolute;
+  z-index: 10;
+  padding: 0px;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.add-module-enable {
+>>>>>>> 540a4b56bdef5a183eb097b2598f1ddbe163e22f
   color: #1491c1 !important;
   border: solid 2px;
   border-style: dashed;
@@ -691,10 +711,17 @@ article.node:before {
   position: absolute;
   z-index: 10;
   padding: 0px;
+  cursor: pointer;
+  pointer-events: visible !important;
 }
 
+<<<<<<< HEAD
 .dialog-off-canvas-main-canvas .add-module:hover {
   background: linear-gradient(45deg, #1491c1, #016288) !important;
+=======
+.add-module-enable:hover {
+  background: linear-gradient(45deg, #159dd3, #46ccff);
+>>>>>>> 540a4b56bdef5a183eb097b2598f1ddbe163e22f
   border-style: hidden;
   color: white !important;
   line-height: 3.4;
@@ -828,7 +855,7 @@ article.node:before {
 
 .dialog-off-canvas-main-canvas .turneditone {
   background: linear-gradient(45deg, #1491c1, #089cd6);
-  color: white !important;
+  color: #089cd6 !important;
   border: none !important;
 }
 
@@ -1009,20 +1036,22 @@ article.node:before {
 
 .dialog-off-canvas-main-canvas div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(5) {
   color: #1491c1;
-  border: solid 1px;
   width: 65px;
-  padding: 4px;
   text-align: center;
   border-radius: 5px;
   margin: auto 185px;
 }
 
+<<<<<<< HEAD
 .dialog-off-canvas-main-canvas div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(5):hover {
   background: #1491c1;
   color: white;
 }
 
 .dialog-off-canvas-main-canvas div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(4) {
+=======
+div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(4) {
+>>>>>>> 540a4b56bdef5a183eb097b2598f1ddbe163e22f
   position: absolute;
   width: 165px;
 }
