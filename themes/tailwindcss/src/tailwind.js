@@ -6,11 +6,11 @@ jQuery(document).ready(function() {
  
 let str = localStorage.getItem("channelVal");
 
-
+/*
 if(str=="Moodle"){
  jQuery('#edit-field-localization-channel option[value="Moodle"]').prop('selected',true);
  jQuery('#edit-field-localization-messagebody-0-value').show();
- jQuery('#edit-field-localisation-message-0-value').hide();
+ jQuery('#edit-field-localisation-message-0-value').show();
 
 }else if(str=="Whatsapp"){
  jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
@@ -40,9 +40,11 @@ if(str=="Moodle"){
  jQuery('#edit-field-localization-messagebody-0-value').show();
 
 }else{
+
+console.log(str);
 }
 
-
+*/
  
  //content completion   
  //nombre de message traduit

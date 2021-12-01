@@ -62,8 +62,7 @@ div#edit-actions {
     border-radius: 5px !important;
     width: 100px !important;
     color: white !important;
-    background: linear-gradient(
-      45deg, #159dd3, #46ccff);
+    background: linear-gradient(45deg, #0c6385, #46ccff);
     border: cornsilk !important;
   }
 }
@@ -145,8 +144,7 @@ h1.js-quickedit-page-title {
 }
 
 a.tw-action-new.tw-btn.tw-btn-primary {
-  background: linear-gradient(
-    45deg, #159dd3, #46ccff);
+  background: linear-gradient(45deg, #0c6385, #46ccff);
   padding: 10px;
   border-radius: 5px;
   color: white;
@@ -580,18 +578,15 @@ article.node:before {
       margin-left: 51px;
     }
 
-<<<<<<< HEAD
       input {
        
         line-height: 2;
         border-radius: 0.25rem;
         width: 60%;
-=======
     input {
       line-height: 2;
       border-radius: 0.25rem;
       width: 60%;
->>>>>>> 1d1fc28149dad983db3c9f4e4d1f2943c6e938d7
     }
     div#edit-name--description,
     div#edit-pass--description {
@@ -625,8 +620,7 @@ article.node:before {
   z-index: 10;
   padding: 0px;
   &:hover {
-    background: linear-gradient(
-      45deg, #159dd3, #46ccff);
+    background: linear-gradient(45deg, #1491c1, #016288) !important;
     border-style: hidden;
     color: white !important;
     line-height: 3.4;
@@ -832,6 +826,7 @@ div#block-views-block-messagetotranslate-block-1 {
   background: white;
   border-radius: 5px;
   position: absolute;
+  margin-top: 73px;
   margin: 30px;
   padding: 10px;
   box-shadow: 0px 1px 4px 1px #0a0a0a21;
@@ -1027,7 +1022,6 @@ div#block-views-block-completionnbmessage-block-1 header {
     font-size: 18px;
     color: #ffffff;
     font-weight: 200;
-<<<<<<< HEAD
 }
 
 
@@ -1042,16 +1036,14 @@ span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours , span.rounded-full
 
 
 
-svg.svg-inline--fa.fa-book.fa-w-14 , svg.svg-inline--fa.fa-comment-dots.fa-w-16 , svg.svg-inline--fa.fa-language.fa-w-20 , svg.svg-inline--fa.fa-comment-dots.fa-w-16 , svg.svg-inline--fa.fa-th-list.fa-w-16 {
+svg.svg-inline--fa.fa-book.fa-w-14 , svg.svg-inline--fa.fa-comment-dots.fa-w-16 , svg.svg-inline--fa.fa-comment-dots.fa-w-16 , svg.svg-inline--fa.fa-th-list.fa-w-16 {
   position: absolute;
   left: 16px;
   top: 20px;
   color: #ffffff;
   font-size: 26px;
 }
-=======
   }
->>>>>>> 1d1fc28149dad983db3c9f4e4d1f2943c6e938d7
 
   span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours,
   span.rounded-full.text-white.badge.bg-red-400.text-xs.Module,
@@ -1067,7 +1059,7 @@ svg.svg-inline--fa.fa-book.fa-w-14 , svg.svg-inline--fa.fa-comment-dots.fa-w-16 
 
   svg.svg-inline--fa.fa-book.fa-w-14,
   svg.svg-inline--fa.fa-comment-dots.fa-w-16,
-  svg.svg-inline--fa.fa-language.fa-w-20,
+
   svg.svg-inline--fa.fa-comment-dots.fa-w-16,
   svg.svg-inline--fa.fa-th-list.fa-w-16 {
     position: absolute;
@@ -1613,7 +1605,6 @@ div#block-tailwindcss-help {
   opacity: 0;
 }
 
-<<<<<<< HEAD
 div#block-views-block-completionnblangue-block-1 {
     position: absolute !important;
     top: 0px;
@@ -1633,7 +1624,6 @@ div#block-views-block-completionnbtraduction-block-1 {
 
 input#edit-pass {
     width: 54% !important;
-=======
 input#edit-pass {
   width: 58% !important;
 }
@@ -1644,27 +1634,52 @@ input#edit-pass {
 
 .channelgenerate {
   cursor: pointer;
->>>>>>> 1d1fc28149dad983db3c9f4e4d1f2943c6e938d7
+}
 }
 
-div#block-views-block-completionnblangue-block-1 {
-  display: none;
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
 }
 
-div#block-views-block-completionnbtraduction-block-1 {
-  display: none;
+.tooltip .tooltiptext {
+font-size: large;
+  visibility: hidden;
+  width: 300px;
+  background-color:#0094ff;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 70%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-
-.views-field.views-field-nid {
-  display: none;
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
 }
 
-
-div#block-views-block-completionnbtraduction-block-1 {
-  display: none;
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
-div#block-views-block-completionnbmessage-block-1-2 {
-  display: none;
-}
+.blockmodule-description-submodule .message {
+    &:hover {
+      background-color:#f3f4f6;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+  }
