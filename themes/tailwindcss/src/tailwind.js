@@ -190,8 +190,34 @@ console.log(str);
  
  });
 
+//disable draft status when adding localization
+jQuery('#edit-moderation-state-0-state').prop('disabled', true);
 
+
+// EDIT AND PREVIEW BUTTON
+ jQuery(".btn-group > .btn-edit").click(function(){
+
+   jQuery(this).addClass("active");
+   jQuery(".btn-group > .btn-preview").removeClass("active");
+jQuery('#cke_edit-field-localization-messagebody-0-value').show();
+ jQuery('.channelgenerategeneral').remove();
+});
+
+jQuery(".btn-group > .btn-preview").click(function(){
+
+   jQuery(this).addClass("active");
+   jQuery(".btn-group > .btn-edit").removeClass("active");
  
+   jQuery('#cke_edit-field-localization-messagebody-0-value').hide();
+
+  var chanelloc = jQuery('#edit-field-localization-channel').find(":selected").text();
+
+   console.log(chanelloc);
+
+   jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fas fa-sms"></i>SMS</div> <br> <div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>MOODLE</div> <br>  <div class="channelgenerate whatsapp"><i class="fab fa-whatsapp"></i>WHATSAPP</div> <br>  <div class="channelgenerate telegrame"><i class="fab fa-telegram"></i>TELEGRAM</div> <br> <div class="channelgenerate messanger"><i class="fab fa-facebook-messenger"></i>MESSENGER</div> </div>').insertAfter('#edit-field-localization-channel');
+});
+
+
  //MANAGE MODERATION STATE
  
  var moderationstate = jQuery.trim(jQuery('.entity-moderation-form__item div#edit-current').text());

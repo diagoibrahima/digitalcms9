@@ -64,6 +64,7 @@ div#edit-actions {
     color: white !important;
     background: linear-gradient(45deg, #0c6385, #46ccff);
     border: cornsilk !important;
+   margin-left: 83%;
   }
 }
 
@@ -1577,6 +1578,7 @@ form#user-register-form {
   margin: 30px;
   div#edit-actions #edit-submit {
     width: 160px !important;
+
   }
 
   div#edit-actions {
@@ -1703,3 +1705,20 @@ font-size: large;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
   }
+
+.btn:active
+{
+  background-color:yellow;
+}
+
+.btn.active
+{
+  color: white;
+  background-color:#0094ff;
+   
+}
+.btn-group{
+    width: 100px;
+    margin-top: -22%;
+    margin-left: 37%;
+}
