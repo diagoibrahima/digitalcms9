@@ -243,7 +243,7 @@ if(jQuery('#edit-field-localization-channel').find(":selected").text()=="SMS"){
 jQuery('.channelgenerate ').append(description);
 });
 
-//when changing the chanel throught drop down menu 
+//when changing the chanel throught drop down menuu
 
 jQuery('#edit-field-localization-channel').on('change', function()
 {
