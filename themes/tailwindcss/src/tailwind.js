@@ -211,9 +211,10 @@ jQuery('label[for="edit-moderation-state-0-state"]').hide();
 });
 
 jQuery(".btn-group > .btn-preview").click(function(){
-
+   var description = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].getData();
+   console.log(description);
   //let messagetoloc=(jQuery('#cke_1_contents').html());
-   //jQuery('.channelgenerate ').append(messagetoloc);
+   //jQuery('.channelgenerate ').append(description);
 
    jQuery(this).removeClass("tw-bg-blue-500");
    jQuery(this).addClass("tw-bg-blue-700");
@@ -239,12 +240,13 @@ if(jQuery('#edit-field-localization-channel').find(":selected").text()=="SMS"){
   jQuery( '<div class="channelgenerategeneral"><div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>IOGT</div></div>').insertAfter('#edit-field-localization-channel');
 }
 
-
+jQuery('.channelgenerate ').append(description);
 });
 
 //when changing the chanel throught drop down menu 
 jQuery('#edit-field-localization-channel').on('change', function()
 {
+  var description = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].getData();
    if(jQuery('#edit-field-localization-channel').find(":selected").text()=="SMS"){
   jQuery('.channelgenerategeneral').remove();
   jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fas fa-sms"></i>SMS</div> </div>').insertAfter('#edit-field-localization-channel');
@@ -264,6 +266,7 @@ jQuery('#edit-field-localization-channel').on('change', function()
   jQuery('.channelgenerategeneral').remove();
   jQuery( '<div class="channelgenerategeneral"><div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>IOGT</div></div>').insertAfter('#edit-field-localization-channel');
 }
+jQuery('.channelgenerate ').append(description);
 });
 
 

@@ -809,7 +809,7 @@ $databases['default']['default'] = array (
 */
 
 $databases['default']['default'] = array (
-  'database' => 'cmstranslation',
+  'database' => 'dev_drupal_lms',
   'username' => 'root',
   'password' => '',
   'prefix' => '',
