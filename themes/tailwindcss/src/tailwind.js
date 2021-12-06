@@ -196,6 +196,9 @@ jQuery('#edit-moderation-state-0-state').hide();
 jQuery('label[for="edit-moderation-state-0-state"]').hide();
 
 // EDIT AND PREVIEW BUTTON
+
+// When click on edit button
+
  jQuery(".btn-group > .btn-edit").click(function(){
 
    jQuery(this).removeClass("tw-bg-blue-500");
@@ -209,8 +212,15 @@ jQuery('label[for="edit-moderation-state-0-state"]').hide();
 
    jQuery(".btn-group > .btn-edit").prop('disabled', true);
    jQuery(".btn-group > .btn-preview").prop('disabled', false);
+   //jQuery('#edit-field-localization-channel').prop('disabled', false);
+
+   jQuery('#edit-field-localization-langue, #edit-field-localization-channel').show();
+   jQuery('label[for="edit-field-localization-langue"], label[for="edit-field-localization-channel"]').show();
+
+
 });
 
+// When click on preview button
 jQuery(".btn-group > .btn-preview").click(function(){
 
    // recuperer le contenu de ckeditor
@@ -223,6 +233,13 @@ jQuery(".btn-group > .btn-preview").click(function(){
 
    jQuery('label[for="edit-field-localization-messagebody-0-value"]').hide();
    jQuery('#cke_edit-field-localization-messagebody-0-value').hide();
+   //jQuery('#edit-field-localization-channel').prop('disabled', true);
+   //jQuery('#edit-field-localization-channel').hide();
+   //jQuery('#edit-field-localization-langue').hide();
+
+   jQuery('#edit-field-localization-langue, #edit-field-localization-channel').hide();
+   jQuery('label[for="edit-field-localization-langue"], label[for="edit-field-localization-channel"]').hide();
+   
 
    jQuery(".btn-group > .btn-edit").prop('disabled', false);
    jQuery(".btn-group > .btn-preview").prop('disabled', true);
@@ -241,34 +258,10 @@ if(jQuery('#edit-field-localization-channel').find(":selected").text()=="SMS"){
 }
 
 jQuery('.channelgenerate ').append(description);
+
 });
 
-//when changing the chanel throught drop down menuu
 
-jQuery('#edit-field-localization-channel').on('change', function()
-{
-  var description = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].getData();
-   if(jQuery('#edit-field-localization-channel').find(":selected").text()=="SMS"){
-  jQuery('.channelgenerategeneral').remove();
-  jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fas fa-sms"></i>SMS</div> </div>').insertAfter('#edit-field-localization-channel');
-}else if (jQuery('#edit-field-localization-channel').find(":selected").text()=="Whatsapp"){
-  jQuery('.channelgenerategeneral').remove();
-  jQuery( '<div class="channelgenerategeneral"><div class="channelgenerate whatsapp"><i class="fab fa-whatsapp"></i>WHATSAPP</div> </div>').insertAfter('#edit-field-localization-channel');
-}else if(jQuery('#edit-field-localization-channel').find(":selected").text()=="Telegram"){
-  jQuery('.channelgenerategeneral').remove();
-  jQuery( '<div class="channelgenerategeneral"><div class="channelgenerate telegrame"><i class="fab fa-telegram"></i>TELEGRAM</div> </div>').insertAfter('#edit-field-localization-channel');
-}else if(jQuery('#edit-field-localization-channel').find(":selected").text()=="Messenger"){
-  jQuery('.channelgenerategeneral').remove();
-  jQuery( '<div class="channelgenerategeneral"><div class="channelgenerate messanger"><i class="fab fa-facebook-messenger"></i>MESSENGER</div> </div>').insertAfter('#edit-field-localization-channel');
-}else if(jQuery('#edit-field-localization-channel').find(":selected").text()=="Moodle"){
-  jQuery('.channelgenerategeneral').remove();
-  jQuery( '<div class="channelgenerategeneral"><div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>MOODLE</div> </div>').insertAfter('#edit-field-localization-channel');
-}else if(jQuery('#edit-field-localization-channel').find(":selected").text()=="IOGT"){
-  jQuery('.channelgenerategeneral').remove();
-  jQuery( '<div class="channelgenerategeneral"><div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>IOGT</div></div>').insertAfter('#edit-field-localization-channel');
-}
-jQuery('.channelgenerate ').append(description);
-});
 
 
  //MANAGE MODERATION STATE
