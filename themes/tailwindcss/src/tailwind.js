@@ -8,9 +8,9 @@ jQuery(document).ready(function() {
   jQuery('option[value="_none"]').remove();
   jQuery('.entity-moderation-form .form-item label').html('');
  
+/*
 let str = localStorage.getItem("channelVal");
 
-/*
 if(str=="Moodle"){
  jQuery('#edit-field-localization-channel option[value="Moodle"]').prop('selected',true);
  jQuery('#edit-field-localization-messagebody-0-value').show();
@@ -105,7 +105,7 @@ console.log(str);
  jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(modulesdecourse);
  
  //GENERATE CHANNEL
- 
+ /*
  
    jQuery("a.generatebutton").click(function() {
  
@@ -189,6 +189,7 @@ console.log(str);
  });
  
  });
+*/ //END GENERATE CHANNEL
 
 //disable draft status when adding localization
 jQuery('#edit-moderation-state-0-state').hide();  
@@ -211,11 +212,10 @@ jQuery('label[for="edit-moderation-state-0-state"]').hide();
 });
 
 jQuery(".btn-group > .btn-preview").click(function(){
-   var description = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].getData();
-   console.log(description);
-  //let messagetoloc=(jQuery('#cke_1_contents').html());
-   //jQuery('.channelgenerate ').append(description);
 
+   // recuperer le contenu de ckeditor
+   var description = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].getData();
+ 
    jQuery(this).removeClass("tw-bg-blue-500");
    jQuery(this).addClass("tw-bg-blue-700");
    jQuery(".btn-group > .btn-edit").removeClass("tw-bg-blue-700"); 
@@ -244,6 +244,7 @@ jQuery('.channelgenerate ').append(description);
 });
 
 //when changing the chanel throught drop down menu 
+
 jQuery('#edit-field-localization-channel').on('change', function()
 {
   var description = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].getData();
