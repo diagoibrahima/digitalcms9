@@ -1373,59 +1373,57 @@ a.hidegeneratebutton {
 }
 
 .channelgenerate.sms {
-  background: #ffd2d2;
-  width: 70%;
+  background: grey;
+  width: 100%;
   padding: 22px;
-  margin-left: 2rem;
   border-radius: 5px;
-  margin-top: 36px;
+  margin-top: 25px;
   box-shadow: 1px 1px 6px #2316161a;
+  color: white;
 }
 
 .channelgenerate.moodle {
-  background: #bbffbb;
-  width: 70%;
+  background: #f98012;
+  width: 100%;
   padding: 22px;
-  margin-left: 2rem;
   border-radius: 5px;
-  margin-top: 36px;
+  margin-top: 25px;
   box-shadow: 1px 1px 6px #2316161a;
+  color: white;
 }
 
 .channelgenerate.whatsapp {
-  background: #f6afff;
-  width: 70%;
+  background: #25D366;
+  width: 100%;
   padding: 22px;
-  margin-left: 2rem;
   border-radius: 5px;
-  margin-top: 36px;
+  margin-top: 25px;
   box-shadow: 1px 1px 6px #2316161a;
+  color: white;
 }
 
 .channelgenerate.telegrame {
-  background: hsl(181, 100%, 91%);
-  width: 70%;
+  background: #0088CC;
+  width: 100%;
   padding: 22px;
-  margin-left: 2rem;
   border-radius: 5px;
-  margin-top: 36px;
+  margin-top: 25px;
   box-shadow: 1px 1px 6px #2316161a;
+  color: white;
 }
 
 .channelgenerate.messanger {
-  background: #d2e2ff;
-  width: 70%;
+  background: #006AFF;
+  width: 100%;
   padding: 22px;
-  margin-left: 2rem;
   border-radius: 5px;
-  margin-top: 36px;
+  margin-top: 25px;
   margin-bottom: 30px;
   box-shadow: 1px 1px 6px #2316161a;
+  color: white;
 }
 
-.channelgenerate:hover {
-  background: white !important;
-}
+
 
 .channelgenerategeneral .svg-inline--fa {
   margin: 0px 10px 0px 0px;
@@ -1706,19 +1704,10 @@ font-size: large;
     }
   }
 
-.btn:active
-{
-  background-color:yellow;
-}
 
-.btn.active
-{
-  color: white;
-  background-color:#0094ff;
-   
-}
+
 .btn-group{
     width: 100px;
-    margin-top: -22%;
-    margin-left: 37%;
+    margin-top: -29%;
+    margin-left: 36%;
 }

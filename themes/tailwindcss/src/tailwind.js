@@ -127,7 +127,7 @@ console.log(str);
  });
 
 
-//Selectio channel option
+//Selection channel option
 
 
 
@@ -191,35 +191,83 @@ console.log(str);
  });
 
 //disable draft status when adding localization
-jQuery('#edit-moderation-state-0-state').prop('disabled', true);
-
+jQuery('#edit-moderation-state-0-state').hide();  
+jQuery('label[for="edit-moderation-state-0-state"]').hide();
 
 // EDIT AND PREVIEW BUTTON
  jQuery(".btn-group > .btn-edit").click(function(){
 
-   jQuery(this).addClass("active");
+   jQuery(this).removeClass("tw-bg-blue-500");
+   jQuery(this).addClass("tw-bg-blue-700");
+   jQuery(".btn-group > .btn-preview").removeClass("tw-bg-blue-700");
+   jQuery(".btn-group > .btn-preview").addClass("tw-bg-blue-500");
+
    jQuery(".btn-group > .btn-preview").removeClass("active");
-jQuery('#cke_edit-field-localization-messagebody-0-value').show();
- jQuery('.channelgenerategeneral').remove();
+   jQuery('#cke_edit-field-localization-messagebody-0-value').show();
+   jQuery('.channelgenerategeneral').remove();
+
+   jQuery(".btn-group > .btn-edit").prop('disabled', true);
+   jQuery(".btn-group > .btn-preview").prop('disabled', false);
 });
 
 jQuery(".btn-group > .btn-preview").click(function(){
 
-   jQuery(this).addClass("active");
-   jQuery(".btn-group > .btn-edit").removeClass("active");
- 
+  //let messagetoloc=(jQuery('#cke_1_contents').html());
+   //jQuery('.channelgenerate ').append(messagetoloc);
+
+   jQuery(this).removeClass("tw-bg-blue-500");
+   jQuery(this).addClass("tw-bg-blue-700");
+   jQuery(".btn-group > .btn-edit").removeClass("tw-bg-blue-700"); 
+   jQuery(".btn-group > .btn-edit").addClass("tw-bg-blue-500");
+
+   jQuery('label[for="edit-field-localization-messagebody-0-value"]').hide();
    jQuery('#cke_edit-field-localization-messagebody-0-value').hide();
 
-  var chanelloc = jQuery('#edit-field-localization-channel').find(":selected").text();
+   jQuery(".btn-group > .btn-edit").prop('disabled', false);
+   jQuery(".btn-group > .btn-preview").prop('disabled', true);
+if(jQuery('#edit-field-localization-channel').find(":selected").text()=="SMS"){
+  jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fas fa-sms"></i>SMS</div> </div>').insertAfter('#edit-field-localization-channel');
+}else if (jQuery('#edit-field-localization-channel').find(":selected").text()=="Whatsapp"){
+  jQuery( '<div class="channelgenerategeneral"><div class="channelgenerate whatsapp"><i class="fab fa-whatsapp"></i>WHATSAPP</div> </div>').insertAfter('#edit-field-localization-channel');
+}else if(jQuery('#edit-field-localization-channel').find(":selected").text()=="Telegram"){
+  jQuery( '<div class="channelgenerategeneral"><div class="channelgenerate telegrame"><i class="fab fa-telegram"></i>TELEGRAM</div> </div>').insertAfter('#edit-field-localization-channel');
+}else if(jQuery('#edit-field-localization-channel').find(":selected").text()=="Messenger"){
+  jQuery( '<div class="channelgenerategeneral"><div class="channelgenerate messanger"><i class="fab fa-facebook-messenger"></i>MESSENGER</div> </div>').insertAfter('#edit-field-localization-channel');
+}else if(jQuery('#edit-field-localization-channel').find(":selected").text()=="Moodle"){
+  jQuery( '<div class="channelgenerategeneral"><div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>MOODLE</div> </div>').insertAfter('#edit-field-localization-channel');
+}else if(jQuery('#edit-field-localization-channel').find(":selected").text()=="IOGT"){
+  jQuery( '<div class="channelgenerategeneral"><div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>IOGT</div></div>').insertAfter('#edit-field-localization-channel');
+}
 
-   console.log(chanelloc);
 
-   jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fas fa-sms"></i>SMS</div> <br> <div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>MOODLE</div> <br>  <div class="channelgenerate whatsapp"><i class="fab fa-whatsapp"></i>WHATSAPP</div> <br>  <div class="channelgenerate telegrame"><i class="fab fa-telegram"></i>TELEGRAM</div> <br> <div class="channelgenerate messanger"><i class="fab fa-facebook-messenger"></i>MESSENGER</div> </div>').insertAfter('#edit-field-localization-channel');
+});
+
+//when changing the chanel throught drop down menu 
+jQuery('#edit-field-localization-channel').on('change', function()
+{
+   if(jQuery('#edit-field-localization-channel').find(":selected").text()=="SMS"){
+  jQuery('.channelgenerategeneral').remove();
+  jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fas fa-sms"></i>SMS</div> </div>').insertAfter('#edit-field-localization-channel');
+}else if (jQuery('#edit-field-localization-channel').find(":selected").text()=="Whatsapp"){
+  jQuery('.channelgenerategeneral').remove();
+  jQuery( '<div class="channelgenerategeneral"><div class="channelgenerate whatsapp"><i class="fab fa-whatsapp"></i>WHATSAPP</div> </div>').insertAfter('#edit-field-localization-channel');
+}else if(jQuery('#edit-field-localization-channel').find(":selected").text()=="Telegram"){
+  jQuery('.channelgenerategeneral').remove();
+  jQuery( '<div class="channelgenerategeneral"><div class="channelgenerate telegrame"><i class="fab fa-telegram"></i>TELEGRAM</div> </div>').insertAfter('#edit-field-localization-channel');
+}else if(jQuery('#edit-field-localization-channel').find(":selected").text()=="Messenger"){
+  jQuery('.channelgenerategeneral').remove();
+  jQuery( '<div class="channelgenerategeneral"><div class="channelgenerate messanger"><i class="fab fa-facebook-messenger"></i>MESSENGER</div> </div>').insertAfter('#edit-field-localization-channel');
+}else if(jQuery('#edit-field-localization-channel').find(":selected").text()=="Moodle"){
+  jQuery('.channelgenerategeneral').remove();
+  jQuery( '<div class="channelgenerategeneral"><div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>MOODLE</div> </div>').insertAfter('#edit-field-localization-channel');
+}else if(jQuery('#edit-field-localization-channel').find(":selected").text()=="IOGT"){
+  jQuery('.channelgenerategeneral').remove();
+  jQuery( '<div class="channelgenerategeneral"><div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>IOGT</div></div>').insertAfter('#edit-field-localization-channel');
+}
 });
 
 
  //MANAGE MODERATION STATE
- 
  var moderationstate = jQuery.trim(jQuery('.entity-moderation-form__item div#edit-current').text());
  
 jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</span>').insertBefore('form#content-moderation-entity-moderation-form');
