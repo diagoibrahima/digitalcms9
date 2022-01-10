@@ -1133,7 +1133,7 @@ article.node:before {
   left: 54px;
 }
 
-.dialog-off-canvas-main-canvas .report-card svg.svg-inline--fa.fa-book.fa-w-14, .dialog-off-canvas-main-canvas .report-card svg.svg-inline--fa.fa-comment-dots.fa-w-16, .dialog-off-canvas-main-canvas .report-card svg.svg-inline--fa.fa-comment-dots.fa-w-16, .dialog-off-canvas-main-canvas .report-card svg.svg-inline--fa.fa-th-list.fa-w-16 {
+.dialog-off-canvas-main-canvas .report-card svg.svg-inline--fa.fa-book.fa-w-14, .dialog-off-canvas-main-canvas .report-card svg.svg-inline--fa.fa-comment-dots.fa-w-16, .dialog-off-canvas-main-canvas .report-card svg.svg-inline--fa.fa-comment-dots.fa-w-16, .dialog-off-canvas-main-canvas .report-card svg.svg-inline--fa.fa-th-list.fa-w-16, .dialog-off-canvas-main-canvas .report-card .svg-inline--fa.fa-w-20 {
   position: absolute;
   left: 16px;
   top: 20px;
