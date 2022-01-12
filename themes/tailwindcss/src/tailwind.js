@@ -1,6 +1,7 @@
 jQuery(document).ready(function() {
   jQuery('.blockmodule-submodule').hide();
   jQuery('a.btn').hide();
+ // jQuery('a.addnewlocalisation').hide();
   jQuery('.use-ajax').hide();
   //jQuery("a.add-module ").unbind('click');
   //jQuerys(".add-module").attr("disabled",true);
@@ -401,6 +402,8 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
   jQuery('span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer').click(function(){
  
    jQuery('.tw-switch-editing-button').toggleClass( 'turneditone' );
+   jQuery('a.addnewlocalisation').toggleClass('afficher-add-new-localistion');
+   jQuery('a.detaillebody').toggleClass('addnewlocalisationcacher');
    jQuery('a.btn').toggle();
    jQuery('.add-module').toggleClass('add-module-enable');
  

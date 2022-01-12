@@ -1802,4 +1802,16 @@ input#edit-pass .channelgenerate {
   margin-top: -29%;
   margin-left: 36%;
 }
+
+a.addnewlocalisation {
+  display: none;
+}
+
+.afficher-add-new-localistion {
+  display: block !important;
+}
+
+.addnewlocalisationcacher {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */
