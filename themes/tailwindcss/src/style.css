@@ -1319,13 +1319,13 @@ p.tw-font-semibold {
 }
 
 .report-card:nth-child(3) {
-  background: -webkit-gradient(linear, left top, right top, from(#fe5d70), to(#fe909d));
-  background: linear-gradient(to right, #fe5d70, #fe909d);
+  background: -webkit-gradient(linear, left top, right top, from(#01a9ac), to(#01dbdf));
+  background: linear-gradient(to right, #01a9ac, #01dbdf);
 }
 
 .report-card:nth-child(4) {
-  background: -webkit-gradient(linear, left top, right top, from(#01a9ac), to(#01dbdf));
-  background: linear-gradient(to right, #01a9ac, #01dbdf);
+  background: -webkit-gradient(linear, left top, right top, from(#fe5d70), to(#fe909d));
+  background: linear-gradient(to right, #fe5d70, #fe909d);
 }
 
 div[data-drupal-messages] {
