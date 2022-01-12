@@ -769,17 +769,16 @@ span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2
   z-index: 10;
   line-height: 2.5;
 
-  &:hover {
-    color: #ffffff !important;
-    background: linear-gradient(45deg, #1491c1, #089cd6);
-    border-style: hidden;
-    line-height: 2.8;
-  }
+ 
+}
+
+span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer.turneditone {
+  color: white !important;
 }
 
 .turneditone {
   background: linear-gradient(45deg, #1491c1, #089cd6);
-  color:#089cd6!important;
+  color:#ffffff!important;
   border: none !important;
 }
 
@@ -1674,8 +1673,8 @@ font-size: large;
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  bottom: 70%;
-  left: 50%;
+  bottom: 100%;
+  left: 64.5%;
   margin-left: -60px;
   opacity: 0;
   transition: opacity 0.3s;
