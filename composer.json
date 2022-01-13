@@ -21,6 +21,7 @@
         "drupal/core-recommended": "^9.2.1",
         "drupal/core-vendor-hardening": "^9.2.1",
         "drupal/csv_serialization": "^2.0",
+        "drupal/entity_print": "2.x",
         "drupal/pdf_serialization": "^2.1",
         "phpoffice/phpspreadsheet": "^1.20"
     },
