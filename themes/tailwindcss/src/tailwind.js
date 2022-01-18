@@ -51,28 +51,41 @@ console.log(str);
 
 */
  
- //content completion   
+ //content completion ----------------  
+
  //nombre de message traduit
- var nombredemessagetraduit = (jQuery('div#block-views-block-testcompletion-block-1 header').text());
- 
+ var nombredemessagetraduit = parseInt((jQuery('div#block-views-block-completionnbtraduction-block-1 header').text()));
+
+// console.log(nombredemessagetraduit);
+
  //total message
- var totalmessage = (jQuery('div#block-views-block-completionnbmessage-block-1 header').text());
+ var totalmessage = parseInt((jQuery('div#block-views-block-completionnbmessage-block-1 header').text()));
  //console.log(totalmessage);
- var restotranslate=totalmessage-nombredemessagetraduit;
  
- var pourcentage = nombredemessagetraduit*100/totalmessage;
+ var nblangue = jQuery('.nombredelangue').length;
+ //console.log(nblangue);
+
+ //Nombre de message restant a traduire
+ var restotranslate=totalmessage-nombredemessagetraduit;
+
+ if(isNaN(restotranslate)){restotranslate=0;}
+console.log(restotranslate);
+
+ var pourcentage = nombredemessagetraduit*100/(totalmessage*nblangue);
  
  var pourcentagemyInt = parseInt(pourcentage);
  
+//console.log(pourcentagemyInt);
  
  jQuery('.contentrestetotranslate').html(restotranslate +' '+'to translate');
  //jQuery('div#block-views-block-completionnbmessage-block-1 header').append('<h1> voici le pourcentage '+pourcentagemyInt +'<h1>')
  
  if(pourcentagemyInt >=100){
-   jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html(100+'%')
- }else  
+   jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html(100+'%');
+   console.log(pourcentagemyInt);
+  }else  
  
- jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html(pourcentagemyInt+'%')
+ jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html(pourcentagemyInt+'%');
  
  if(pourcentagemyInt >=33){
    jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').addClass('colo-midle');
@@ -87,8 +100,9 @@ console.log(str);
  }
  
  if((jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').text())=='NaN%'){
-   jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html('0 %')
+   jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html('0 %');
  }
+
  
  
 
