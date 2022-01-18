@@ -810,8 +810,8 @@ $databases['default']['default'] = array (
 
 $databases['default']['default'] = array (
   'database' => 'dev_drupal_lms',
-  'username' => 'dev_drupal_lms',
-  'password' => 'dev_drupal_lms',
+  'username' => 'root',
+  'password' => '',
   'prefix' => '',
   'host' => 'localhost',
   'port' => '',

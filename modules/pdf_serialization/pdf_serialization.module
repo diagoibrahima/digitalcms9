@@ -1,0 +1,92 @@
+<?php
+
+/**
+ * @file
+ * PDF serialization module file.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\pdf_serialization\Plugin\views\style\PdfExport;
+
+/**
+ * Implements hook_help().
+ */
+function pdf_serialization_help($route_name, RouteMatchInterface $route_match) {
+  if ($route_name === 'help.page.pdf_serialization') {
+    $path = __DIR__ . '/README.md';
+
+    if (file_exists($path)) {
+      return '<pre>' . file_get_contents($path) . '</pre>';
+    }
+  }
+
+  return NULL;
+}
+
+/**
+ * Implements hook_views_plugins_style_alter().
+ */
+function pdf_serialization_views_plugins_style_alter(array &$plugins) {
+  // Set PdfExport class as data export class.
+  $plugins['data_export']['class'] = PdfExport::class;
+  $plugins['data_export']['provider'] = 'pdf_serialization';
+}
+
+/**
+ * Implements hook_theme().
+ */
+function pdf_serialization_theme() {
+  return [
+    'pdf_serialization_pdf' => [
+      'variables' => [
+        'content' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for form views_ui_edit_display_form form.
+ */
+function pdf_serialization_form_views_ui_edit_display_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Add 'PDF settings' to the right place.
+  if (isset($form['options']['style_options']['csv_settings'])) {
+    $storage = $form_state->getStorage();
+    $view = $storage['view']->get('storage');
+    $options = $view->get('display')[$storage['display_id']]['display_options']['style']['options'] ?? [];
+
+    // Set style options for pdf settings.
+    $form['options']['style_options']['pdf_settings'] = [
+      '#type' => 'details',
+      '#title' => t('PDF settings'),
+      '#tree' => TRUE,
+      '#states' => [
+        'visible' => [
+          ':input[name="style_options[formats]"]' => [
+            'value' => 'pdf',
+          ],
+        ],
+      ],
+      'format' => [
+        '#type' => 'select',
+        '#title' => t('Page format'),
+        '#description' => t('The page format used to export data.'),
+        '#options' => [
+          'a1' => t('A1'),
+          'a2' => t('A2'),
+          'a3' => t('A3'),
+          'a4' => t('A4'),
+          'a5' => t('A5'),
+        ],
+        '#default_value' => $options['pdf_settings']['format'] ?? 'a4',
+      ],
+      'show_page_number' => [
+        '#type' => 'checkbox',
+        '#title' => t('Show page number'),
+        '#description' => t('Indicates whether the page has a footer for a page number or no.'),
+        '#default_value' => $options['pdf_settings']['show_page_number'] ?? TRUE,
+      ],
+    ];
+  }
+}

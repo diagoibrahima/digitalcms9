@@ -1,0 +1,12 @@
+# Schema definition for the views style data export mapping of PDF settings.
+
+views.style.data_export.mapping.pdf_settings:
+  type: mapping
+  label: 'PDF settings'
+  mapping:
+    format:
+      type: string
+      label: 'Page format'
+    show_page_number:
+      type: integer
+      label: 'Show page number'

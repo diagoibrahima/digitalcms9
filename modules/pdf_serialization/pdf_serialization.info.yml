@@ -1,0 +1,14 @@
+name: 'Serialization (PDF)'
+type: module
+description: 'Provides PDF as a serialization format.'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: Web services
+dependencies:
+  - views_data_export:views_data_export
+  - drupal:serialization
+
+# Information added by Drupal.org packaging script on 2021-03-29
+version: '2.1.1'
+project: 'pdf_serialization'
+datestamp: 1617005551
