@@ -642,7 +642,7 @@ article.node:before {
   position: absolute;
   height: 130px;
   width: 100%;
-  top: 0;
+  top: -30px;
 }
 
 .dialog-off-canvas-main-canvas form#user-login-form input#edit-submit {
@@ -765,7 +765,7 @@ article.node:before {
   content: "";
   background: #e4e7eb;
   position: absolute;
-  height: 816px;
+  height: 904px;
   width: 100%;
   z-index: 99999999999999999999;
   bottom: 0;
@@ -1735,10 +1735,6 @@ div#block-views-block-completionnbtraduction-block-1 {
 }
 
 input#edit-pass {
-  width: 54% !important;
-}
-
-input#edit-pass input#edit-pass {
   width: 58% !important;
 }
 
@@ -1792,7 +1788,7 @@ input#edit-pass .channelgenerate {
 }
 
 .blockmodule-description-submodule .message:hover {
-  background-color: #f3f4f6;
+  background-color: #f1e9e9;
   -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
           box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }

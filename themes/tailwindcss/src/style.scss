@@ -570,7 +570,7 @@ article.node:before {
       position: absolute;
       height: 130px;
       width: 100%;
-      top: 0;
+      top: -30px;
     }
 
     input#edit-submit {
@@ -697,7 +697,7 @@ form#user-login-form:after {
   content: "";
   background: #e4e7eb;
   position: absolute;
-  height: 816px;
+  height: 904px;
   width: 100%;
   z-index: 99999999999999999999;
   bottom: 0;
@@ -1643,10 +1643,7 @@ div#block-views-block-completionnbtraduction-block-1 {
 
 
 input#edit-pass {
-    width: 54% !important;
-input#edit-pass {
-  width: 58% !important;
-}
+width: 58% !important;
 
 .views-field.views-field-field-localisation- {
   display: none;
