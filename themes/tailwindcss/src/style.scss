@@ -16,7 +16,7 @@ aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
   text-align: right !important;
   line-height: 3em;
   background: white;
-  border-bottom: solid 0.5px #e2e2e2;
+  border-bottom: solid 0.5px #ffffff;
 }
 
 .md\:tw-flex-1.tw-p-4.block-contenu {
@@ -25,9 +25,10 @@ aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
 }
 
 h1.js-quickedit-page-title {
-  line-height: 3em;
+  line-height: 2em;
   background: white;
-  box-shadow: 0px 2px 5px -3px;
+  color:#1391c1 !important;
+  box-shadow: 0px 2px 13px -3px #cfc8c8;
 }
 
 div#block-searchform {
@@ -145,14 +146,18 @@ h1.js-quickedit-page-title {
 }
 
 a.tw-action-new.tw-btn.tw-btn-primary {
-  background: linear-gradient(45deg, #0c6385, #46ccff);
-  padding: 10px;
-  border-radius: 5px;
-  color: white;
-  position: absolute;
-  top: 60px !important;
-  right: 2em;
-  z-index: 9999999999;
+  background: linear-gradient(
+    45deg
+    , #0c6385, #46ccff);
+        padding: 5px;
+        border-radius: 5px;
+        color: white;
+        position: absolute;
+        top: 55px !important;
+        right: 2em;
+        z-index: 9999999999;
+        width: 11%;
+        text-align: center;
 
   &:hover {
     background: linear-gradient(45deg #46ccff, #0c6385);
@@ -254,7 +259,7 @@ display: none;
 }
 
 span.expandall-minimizeall-button.cursor-pointer {
-  color: rgba(59, 131, 246, 0.931);
+  color:#1391c1;
   line-height: 2rem;
   cursor: pointer;
   position: absolute;
@@ -308,6 +313,7 @@ div#block-views-block-module-liste-block-1 {
 }
 
 .blockmodule-titre-module {
+  cursor: pointer;
   color: gray;
   background: white;
   line-height: 5rem;
@@ -415,7 +421,7 @@ form#node-sub-module-form {
 
 .tw-p-3 {
   padding: 0.75rem !important;
-  margin: 0 2rem 0rem 1rem;
+  margin: -1.5rem 2rem 0rem 1rem;
   text-align: center;
   box-shadow: 1px 1px 6px #2316161a;
 }
@@ -458,7 +464,6 @@ span.tw-text-green-500.align-right {
 .views-col.col-1.addcourse-blank .tw-item-card {
   color: #1391c1;
   border: 2px solid #1391c1;
-  border-style: dashed;
   position: relative;
   cursor: pointer !important;
 
@@ -774,17 +779,17 @@ div#block-views-block-content-completion-block-1 {
 span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer {
   position: absolute;
   margin: auto;
-  top: -88px;
+  top: -95px;
   left: 40px;
   border: solid #1491c1 1px !important;
-  padding: 5px;
+  padding: 0px;
   color: #1491c1 !important;
   border: solid 2px;
   border-radius: 8px;
   line-height: 2.1;
   text-align: center;
-  width: 66%;
-  margin: auto 20px;
+  width: 50%;
+  margin: auto 83px;
   z-index: 10;
   line-height: 2.5;
 
@@ -1807,5 +1812,16 @@ input#edit-name , input#edit-pass {
 
 .tw-container {
   max-width: 100% !important;
-  padding:0px !important;
+  padding:1.1% !important;
+}
+
+
+
+.tw-shadow.tw-text-right.tw-px-8 {
+  box-shadow: none !important;
+}
+
+
+div#edit-field-field-moduleinmessage-wrapper {
+  display: none;
 }
