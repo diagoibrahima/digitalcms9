@@ -340,10 +340,11 @@ form#node-course-form {
 .js-form-item.form-item.js-form-type-vertical-tabs.form-item-.js-form-item-.form-no-label {
   display: none;
 }
-
+/*
 div#block-tailwindcss-content {
-  margin-top: 30px;
+ margin-top: 30px;
 }
+*/
 
 .js-form-item.form-item.js-form-type-textfield.form-item-title-0-value.js-form-item-title-0-value,
 .js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-course-0-target-id.js-form-item-field-course-0-target-id,
@@ -376,6 +377,7 @@ form#node-sub-module-form,
   box-shadow: 0px 1px 4px 1px #02020221;
   border-radius: 0.25rem;
   height: 380px;
+  margin: 30px auto;
 
   .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value {
     width: 95%;
@@ -530,8 +532,7 @@ article.node:before {
 
 .dialog-off-canvas-main-canvas {
   background: #e5e7eb;
-
-  position: relative;
+  position:relative;
   display: flex;
   align-items: center;
 
@@ -541,7 +542,7 @@ article.node:before {
     align-items: center;
     justify-content: center;
     background: #e5e7eb;
-    margin-top: 100px;
+    margin-top:0px;
 
     div#edit-actions {
       line-height: 2.5rem;
@@ -557,13 +558,13 @@ article.node:before {
     .svg-inline--fa.fa-fw {
       width: 1.25em;
       margin: 0px 15px;
-      color: #adb5bd;
+      color: #ffffff;
     }
 
     label {
       display: none;
     }
-
+/*
     &:before {
       content: "";
       background: #e5e7eb;
@@ -571,12 +572,26 @@ article.node:before {
       height: 130px;
       width: 100%;
       top: -30px;
-    }
+    } 
+
+    */
 
     input#edit-submit {
-      background: #6174d1 !important;
-      width: 12% !important;
-      margin-left: 51px;
+      background: #1391c1 !important;
+    width: 30% !important;
+    margin-left: 0px;
+    border: solid 2px white !important;
+    border-radius: 20px !important;
+    transition: 0.3s;
+
+    &:hover {
+      background: #1555ac !important;
+      border: none !important;
+      width: 32% !important;
+      line-height: 2.4;
+  }
+
+
     }
 
       input {
@@ -584,11 +599,11 @@ article.node:before {
         line-height: 2;
         border-radius: 0.25rem;
         width: 60%;
-    input {
-      line-height: 2;
-      border-radius: 0.25rem;
-      width: 60%;
-    }
+        font-weight:200 !important;
+        color: white !important;
+   
+
+
     div#edit-name--description,
     div#edit-pass--description {
       opacity: 0;
@@ -605,7 +620,7 @@ article.node:before {
 }
 
 .md\:tw-flex-1.tw-p-4.block-contenu {
-  min-height: 1200px;
+  min-height: 100vh;
 }
 
 
@@ -693,6 +708,7 @@ article.node:before {
   margin-top: 45px;
 }
 
+/*
 form#user-login-form:after {
   content: "";
   background: #e4e7eb;
@@ -701,7 +717,9 @@ form#user-login-form:after {
   width: 100%;
   z-index: 99999999999999999999;
   bottom: 0;
-}
+} 
+
+*/
 
 nav#block-logout ul {
   margin-left: 1.2rem;
@@ -727,6 +745,7 @@ div#block-views-block-add-module-button-block-1 {
 div#edit-field-course-wrapper {
   display: none;
 }
+
 
 .listee-des-module-sub-module {
   position: relative !important;
@@ -934,7 +953,7 @@ input#edit-user-picture-0-upload {
   border: solid 1px #a0aebe;
   border-radius: 5px;
   height: 35px;
-  font-weight: 200;
+  font-weight: 200 !important;
   width: 100%;
 }
 
@@ -1013,7 +1032,7 @@ div#block-views-block-completionnbmessage-block-1 header {
   display: flex;
   width: 96%;
   justify-content: space-around;
-  margin: auto;
+  margin:40px auto;
 }
 
 .crad-diagram {
@@ -1279,6 +1298,7 @@ input[data-drupal-selector="edit-field-contentmessage-0-value"] {
 
 form#node-language-form {
   height: 170px;
+  margin: 30px auto;
 }
 
 article[typeof="schema:Person"] {
@@ -1288,6 +1308,7 @@ article[typeof="schema:Person"] {
   margin: auto;
   padding: 38px;
   text-align: center;
+  margin: 30px auto;
 
   img {
     max-width: 100%;
@@ -1643,8 +1664,8 @@ div#block-views-block-completionnbtraduction-block-1 {
 
 
 input#edit-pass {
-width: 58% !important;
 
+opacity: 1;
 .views-field.views-field-field-localisation- {
   display: none;
 }
@@ -1721,4 +1742,70 @@ a.addnewlocalisation {
 
 .addnewlocalisationcacher {
   display: none;
+}
+
+
+form#user-login-form {
+  width: 45%;
+  background: #1491c1 !important;
+  padding: 36px;
+  height: 100vh;
+} 
+
+h1.titre-cms-translation {
+  color: white;
+  font-size: 27px;
+  text-align: center;
+  font-weight: 800;
+  line-height: 2;
+  letter-spacing: 3px;
+  word-spacing: 10px;
+  margin: 30px;
+}
+
+div#edit-name--description {
+  color: white;
+  font-size: 15px;
+  opacity: 0;
+}
+
+div#edit-pass--description {
+  opacity: 0;
+  font-size: 10px;
+}
+
+form#user-login-form:before {
+  content: '';
+  background: url(https://www.unicef.org/wca/sites/unicef.org.wca/files/styles/hero_desktop/public/wca-programme-2017-education.jpg?itok=nvG0RG9p);
+  position: absolute;
+  height: 100%;
+  width: 55%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 0;
+  background-position: right;
+}
+
+
+
+input#edit-name , input#edit-pass {
+  background: #1391c1;
+  border: none !important;
+  border-bottom: solid 2px white !important;
+  border-radius: 0px !important;
+
+  &:focus-visible{
+   outline: none !important;
+
+  }
+  &::placeholder{
+    color: rgb(255, 255, 255) !important;
+
+  }
+}
+
+
+.tw-container {
+  max-width: 100% !important;
+  padding:0px !important;
 }

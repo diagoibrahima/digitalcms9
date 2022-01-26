@@ -355,10 +355,11 @@ form#node-course-form {
   display: none;
 }
 
+/*
 div#block-tailwindcss-content {
-  margin-top: 30px;
+ margin-top: 30px;
 }
-
+*/
 .js-form-item.form-item.js-form-type-textfield.form-item-title-0-value.js-form-item-title-0-value,
 .js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-course-0-target-id.js-form-item-field-course-0-target-id,
 .js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-module-0-target-id.js-form-item-field-module-0-target-id,
@@ -396,6 +397,7 @@ form#node-sub-module-form,
           box-shadow: 0px 1px 4px 1px #02020221;
   border-radius: 0.25rem;
   height: 380px;
+  margin: 30px auto;
 }
 
 form#node-course-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
@@ -595,6 +597,18 @@ article.node:before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /*
+form#user-login-form:after {
+  content: "";
+  background: #e4e7eb;
+  position: absolute;
+  height: 904px;
+  width: 100%;
+  z-index: 99999999999999999999;
+  bottom: 0;
+} 
+
+*/
 }
 
 .dialog-off-canvas-main-canvas form#user-login-form {
@@ -612,7 +626,18 @@ article.node:before {
       -ms-flex-pack: center;
           justify-content: center;
   background: #e5e7eb;
-  margin-top: 100px;
+  margin-top: 0px;
+  /*
+    &:before {
+      content: "";
+      background: #e5e7eb;
+      position: absolute;
+      height: 130px;
+      width: 100%;
+      top: -30px;
+    } 
+
+    */
 }
 
 .dialog-off-canvas-main-canvas form#user-login-form div#edit-actions {
@@ -629,38 +654,36 @@ article.node:before {
 .dialog-off-canvas-main-canvas form#user-login-form .svg-inline--fa.fa-fw {
   width: 1.25em;
   margin: 0px 15px;
-  color: #adb5bd;
+  color: #ffffff;
 }
 
 .dialog-off-canvas-main-canvas form#user-login-form label {
   display: none;
 }
 
-.dialog-off-canvas-main-canvas form#user-login-form:before {
-  content: "";
-  background: #e5e7eb;
-  position: absolute;
-  height: 130px;
-  width: 100%;
-  top: -30px;
+.dialog-off-canvas-main-canvas form#user-login-form input#edit-submit {
+  background: #1391c1 !important;
+  width: 30% !important;
+  margin-left: 0px;
+  border: solid 2px white !important;
+  border-radius: 20px !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.dialog-off-canvas-main-canvas form#user-login-form input#edit-submit {
-  background: #6174d1 !important;
-  width: 12% !important;
-  margin-left: 51px;
+.dialog-off-canvas-main-canvas form#user-login-form input#edit-submit:hover {
+  background: #1555ac !important;
+  border: none !important;
+  width: 32% !important;
+  line-height: 2.4;
 }
 
 .dialog-off-canvas-main-canvas form#user-login-form input {
   line-height: 2;
   border-radius: 0.25rem;
   width: 60%;
-}
-
-.dialog-off-canvas-main-canvas form#user-login-form input input {
-  line-height: 2;
-  border-radius: 0.25rem;
-  width: 60%;
+  font-weight: 200 !important;
+  color: white !important;
 }
 
 .dialog-off-canvas-main-canvas form#user-login-form input div#edit-name--description,
@@ -677,7 +700,7 @@ article.node:before {
 }
 
 .dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
-  min-height: 1200px;
+  min-height: 100vh;
 }
 
 .dialog-off-canvas-main-canvas .add-module {
@@ -759,16 +782,6 @@ article.node:before {
 
 .dialog-off-canvas-main-canvas .activitylogMessage {
   margin-top: 45px;
-}
-
-.dialog-off-canvas-main-canvas form#user-login-form:after {
-  content: "";
-  background: #e4e7eb;
-  position: absolute;
-  height: 904px;
-  width: 100%;
-  z-index: 99999999999999999999;
-  bottom: 0;
 }
 
 .dialog-off-canvas-main-canvas nav#block-logout ul {
@@ -1009,7 +1022,7 @@ article.node:before {
   border: solid 1px #a0aebe;
   border-radius: 5px;
   height: 35px;
-  font-weight: 200;
+  font-weight: 200 !important;
   width: 100%;
 }
 
@@ -1087,7 +1100,7 @@ article.node:before {
   width: 96%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: auto;
+  margin: 40px auto;
 }
 
 .dialog-off-canvas-main-canvas .crad-diagram {
@@ -1358,6 +1371,7 @@ input[data-drupal-selector="edit-field-contentmessage-0-value"] {
 
 form#node-language-form {
   height: 170px;
+  margin: 30px auto;
 }
 
 article[typeof="schema:Person"] {
@@ -1367,6 +1381,7 @@ article[typeof="schema:Person"] {
   margin: auto;
   padding: 38px;
   text-align: center;
+  margin: 30px auto;
 }
 
 article[typeof="schema:Person"] img {
@@ -1735,7 +1750,7 @@ div#block-views-block-completionnbtraduction-block-1 {
 }
 
 input#edit-pass {
-  width: 58% !important;
+  opacity: 1;
 }
 
 input#edit-pass .views-field.views-field-field-localisation- {
@@ -1809,5 +1824,78 @@ a.addnewlocalisation {
 
 .addnewlocalisationcacher {
   display: none;
+}
+
+form#user-login-form {
+  width: 45%;
+  background: #1491c1 !important;
+  padding: 36px;
+  height: 100vh;
+}
+
+h1.titre-cms-translation {
+  color: white;
+  font-size: 27px;
+  text-align: center;
+  font-weight: 800;
+  line-height: 2;
+  letter-spacing: 3px;
+  word-spacing: 10px;
+  margin: 30px;
+}
+
+div#edit-name--description {
+  color: white;
+  font-size: 15px;
+  opacity: 0;
+}
+
+div#edit-pass--description {
+  opacity: 0;
+  font-size: 10px;
+}
+
+form#user-login-form:before {
+  content: '';
+  background: url(https://www.unicef.org/wca/sites/unicef.org.wca/files/styles/hero_desktop/public/wca-programme-2017-education.jpg?itok=nvG0RG9p);
+  position: absolute;
+  height: 100%;
+  width: 55%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 0;
+  background-position: right;
+}
+
+input#edit-name, input#edit-pass {
+  background: #1391c1;
+  border: none !important;
+  border-bottom: solid 2px white !important;
+  border-radius: 0px !important;
+}
+
+input#edit-name:focus-visible, input#edit-pass:focus-visible {
+  outline: none !important;
+}
+
+input#edit-name::-webkit-input-placeholder, input#edit-pass::-webkit-input-placeholder {
+  color: white !important;
+}
+
+input#edit-name:-ms-input-placeholder, input#edit-pass:-ms-input-placeholder {
+  color: white !important;
+}
+
+input#edit-name::-ms-input-placeholder, input#edit-pass::-ms-input-placeholder {
+  color: white !important;
+}
+
+input#edit-name::placeholder, input#edit-pass::placeholder {
+  color: white !important;
+}
+
+.tw-container {
+  max-width: 100% !important;
+  padding: 0px !important;
 }
 /*# sourceMappingURL=style.css.map */
