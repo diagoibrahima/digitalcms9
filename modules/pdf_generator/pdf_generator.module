@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * The base module file for pdf_generator.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * @file
+ * Contains pdf_generator.module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function pdf_generator_theme() {
+  return [
+    'pdf_generator_print' => [
+      'variables' => [
+        'title' => NULL,
+        'content' => NULL,
+        'css' => NULL,
+      ],
+    ],
+    'pdf_generator_feed_icon' => [
+      'variables' => ['url' => NULL, 'title' => NULL],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_help().
+ */
+function pdf_generator_help($route_name, RouteMatchInterface $arg) {
+  switch ($route_name) {
+    case 'help.page.pdf_generator':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module intend to generate a simple way to generate PDF Files.') . '</p>';
+
+      // Add a link to the Drupal.org project.
+      $output .= '<p>';
+      $output .= t('Visit the <a href=":project_link">PDF Generator project pages</a> on Drupal.org for more information.', [
+        ':project_link' => 'https://www.drupal.org/project/pdf_generator',
+      ]);
+      $output .= '</p>';
+
+      return $output;
+  }
+}

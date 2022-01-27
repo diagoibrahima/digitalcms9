@@ -1,0 +1,11 @@
+name: Download all files
+type: module
+description: This module will provide field formatter and block plugin for downloading all files associated with an entity.
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: Files
+
+# Information added by Drupal.org packaging script on 2020-08-15
+version: '2.0.0'
+project: 'download_all_files'
+datestamp: 1597481978

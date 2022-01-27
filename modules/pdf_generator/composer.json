@@ -1,0 +1,22 @@
+{
+  "name": "drupal/pdf_generator",
+  "description": "Provides a service to generate pdfs and a views display mode.",
+  "type": "drupal-module",
+  "keywords": ["Drupal", "PDF"],
+  "homepage": "http://drupal.org/project/pdf_generator",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Juan Natera (jncruces)",
+      "homepage": "https://www.drupal.org/u/jncruces",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/pdf_generator",
+    "source": "http://cgit.drupalcode.org/pdf_generator"
+  },
+  "require": {
+    "dompdf/dompdf": "^0.8"
+  }
+}

@@ -502,11 +502,8 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
  
  
    jQuery(this).find('.blockmodule-titre-module span').html('Module '+moduleIndexee+':');
-  
- 
-   });
- 
 
- 
+   });
+
  });
 

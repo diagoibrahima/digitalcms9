@@ -1,0 +1,4 @@
+services:
+  pdf_generator.dompdf_generator:
+    class: '\Drupal\pdf_generator\DomPdfGenerator'
+    arguments: ['@renderer', '@request_stack', '@module_handler']
