@@ -795,7 +795,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
    include $app_root . '/' . $site_path . '/settings.local.php';
  }
-/*
+
 $databases['default']['default'] = array (
   'database' => 'dev_drupal_lms',
   'username' => 'dev_drupal_lms',
@@ -806,8 +806,8 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-*/
 
+/*
 $databases['default']['default'] = array (
   'database' => 'dev_drupal_lms',
   'username' => 'root',
@@ -817,5 +817,5 @@ $databases['default']['default'] = array (
   'port' => '',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
-); 
+);  */
 $settings['config_sync_directory'] = 'sites/default/files/config_gPm33SuPxx6pVuIRBfdbEvgcvYFn3ygvCUzn45JtXwy20IJ_MkMorSDwfOfCKYuoyHXf2hRJgw/sync';
