@@ -16,7 +16,7 @@ aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
   text-align: right !important;
   line-height: 3em;
   background: white;
-  border-bottom: solid 0.5px #e2e2e2;
+  border-bottom: solid 0.5px #ffffff;
 }
 
 .md\:tw-flex-1.tw-p-4.block-contenu {
@@ -25,9 +25,10 @@ aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
 }
 
 h1.js-quickedit-page-title {
-  line-height: 3em;
+  line-height: 2em;
   background: white;
-  box-shadow: 0px 2px 5px -3px;
+  color:#1391c1 !important;
+  box-shadow: 0px 2px 13px -3px #cfc8c8;
 }
 
 div#block-searchform {
@@ -64,7 +65,8 @@ div#edit-actions {
     color: white !important;
     background: linear-gradient(45deg, #0c6385, #46ccff);
     border: cornsilk !important;
-   margin-left: 83%;
+   margin-left: 89%;
+   text-align: center;
   }
 }
 
@@ -145,14 +147,18 @@ h1.js-quickedit-page-title {
 }
 
 a.tw-action-new.tw-btn.tw-btn-primary {
-  background: linear-gradient(45deg, #0c6385, #46ccff);
-  padding: 10px;
-  border-radius: 5px;
-  color: white;
-  position: absolute;
-  top: 60px !important;
-  right: 2em;
-  z-index: 9999999999;
+  background: linear-gradient(
+    45deg
+    , #0c6385, #46ccff);
+        padding: 5px;
+        border-radius: 5px;
+        color: white;
+        position: absolute;
+        top: 55px !important;
+        right: 2em;
+        z-index: 9999999999;
+        width: 11%;
+        text-align: center;
 
   &:hover {
     background: linear-gradient(45deg #46ccff, #0c6385);
@@ -254,7 +260,7 @@ display: none;
 }
 
 span.expandall-minimizeall-button.cursor-pointer {
-  color: rgba(59, 131, 246, 0.931);
+  color:#1391c1;
   line-height: 2rem;
   cursor: pointer;
   position: absolute;
@@ -308,6 +314,7 @@ div#block-views-block-module-liste-block-1 {
 }
 
 .blockmodule-titre-module {
+  cursor: pointer;
   color: gray;
   background: white;
   line-height: 5rem;
@@ -340,10 +347,11 @@ form#node-course-form {
 .js-form-item.form-item.js-form-type-vertical-tabs.form-item-.js-form-item-.form-no-label {
   display: none;
 }
-
+/*
 div#block-tailwindcss-content {
-  margin-top: 30px;
+ margin-top: 30px;
 }
+*/
 
 .js-form-item.form-item.js-form-type-textfield.form-item-title-0-value.js-form-item-title-0-value,
 .js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-course-0-target-id.js-form-item-field-course-0-target-id,
@@ -376,6 +384,7 @@ form#node-sub-module-form,
   box-shadow: 0px 1px 4px 1px #02020221;
   border-radius: 0.25rem;
   height: 380px;
+  margin: 30px auto;
 
   .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value {
     width: 95%;
@@ -413,7 +422,7 @@ form#node-sub-module-form {
 
 .tw-p-3 {
   padding: 0.75rem !important;
-  margin: 0 2rem 0rem 1rem;
+  margin: -1.5rem 2rem 0rem 1rem;
   text-align: center;
   box-shadow: 1px 1px 6px #2316161a;
 }
@@ -456,9 +465,9 @@ span.tw-text-green-500.align-right {
 .views-col.col-1.addcourse-blank .tw-item-card {
   color: #1391c1;
   border: 2px solid #1391c1;
-  border-style: dashed;
   position: relative;
   cursor: pointer !important;
+  border-style: dotted !important;
 
   &:hover {
     color: rgb(255, 255, 255);
@@ -530,8 +539,7 @@ article.node:before {
 
 .dialog-off-canvas-main-canvas {
   background: #e5e7eb;
-
-  position: relative;
+  position:relative;
   display: flex;
   align-items: center;
 
@@ -541,7 +549,7 @@ article.node:before {
     align-items: center;
     justify-content: center;
     background: #e5e7eb;
-    margin-top: 100px;
+    margin-top:0px;
 
     div#edit-actions {
       line-height: 2.5rem;
@@ -557,13 +565,13 @@ article.node:before {
     .svg-inline--fa.fa-fw {
       width: 1.25em;
       margin: 0px 15px;
-      color: #adb5bd;
+      color: #ffffff;
     }
 
     label {
       display: none;
     }
-
+/*
     &:before {
       content: "";
       background: #e5e7eb;
@@ -571,12 +579,26 @@ article.node:before {
       height: 130px;
       width: 100%;
       top: -30px;
-    }
+    } 
+
+    */
 
     input#edit-submit {
-      background: #6174d1 !important;
-      width: 12% !important;
-      margin-left: 51px;
+      background: #1391c1 !important;
+    width: 30% !important;
+    margin-left: 0px;
+    border: solid 2px white !important;
+    border-radius: 20px !important;
+    transition: 0.3s;
+
+    &:hover {
+      background: #1555ac !important;
+      border: none !important;
+      width: 32% !important;
+      line-height: 2.4;
+  }
+
+
     }
 
       input {
@@ -584,11 +606,11 @@ article.node:before {
         line-height: 2;
         border-radius: 0.25rem;
         width: 60%;
-    input {
-      line-height: 2;
-      border-radius: 0.25rem;
-      width: 60%;
-    }
+        font-weight:200 !important;
+        color: white !important;
+   
+
+
     div#edit-name--description,
     div#edit-pass--description {
       opacity: 0;
@@ -605,7 +627,7 @@ article.node:before {
 }
 
 .md\:tw-flex-1.tw-p-4.block-contenu {
-  min-height: 1200px;
+  min-height: 100vh;
 }
 
 
@@ -693,6 +715,7 @@ article.node:before {
   margin-top: 45px;
 }
 
+/*
 form#user-login-form:after {
   content: "";
   background: #e4e7eb;
@@ -701,7 +724,9 @@ form#user-login-form:after {
   width: 100%;
   z-index: 99999999999999999999;
   bottom: 0;
-}
+} 
+
+*/
 
 nav#block-logout ul {
   margin-left: 1.2rem;
@@ -727,6 +752,7 @@ div#block-views-block-add-module-button-block-1 {
 div#edit-field-course-wrapper {
   display: none;
 }
+
 
 .listee-des-module-sub-module {
   position: relative !important;
@@ -755,17 +781,17 @@ div#block-views-block-content-completion-block-1 {
 span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer {
   position: absolute;
   margin: auto;
-  top: -88px;
+  top: -95px;
   left: 40px;
   border: solid #1491c1 1px !important;
-  padding: 5px;
+  padding: 0px;
   color: #1491c1 !important;
   border: solid 2px;
   border-radius: 8px;
   line-height: 2.1;
   text-align: center;
-  width: 66%;
-  margin: auto 20px;
+  width: 50%;
+  margin: auto 83px;
   z-index: 10;
   line-height: 2.5;
 
@@ -849,7 +875,7 @@ div#block-views-block-messagetotranslate-block-1 {
   background: white;
   border-radius: 5px;
   position: absolute !important;
-  margin-top: 90px !important;
+  margin-top: 45px !important;
   margin: 30px;
   padding: 10px;
   box-shadow: 0px 1px 4px 1px #0a0a0a21;
@@ -934,7 +960,7 @@ input#edit-user-picture-0-upload {
   border: solid 1px #a0aebe;
   border-radius: 5px;
   height: 35px;
-  font-weight: 200;
+  font-weight: 200 !important;
   width: 100%;
 }
 
@@ -1011,9 +1037,9 @@ div#block-views-block-completionnbmessage-block-1 header {
 
 .grid-cols-1.card-dasboard {
   display: flex;
-  width: 96%;
+  width:98%;
   justify-content: space-around;
-  margin: auto;
+  margin:60px auto;
 }
 
 .crad-diagram {
@@ -1022,8 +1048,8 @@ div#block-views-block-completionnbmessage-block-1 header {
 }
 
 .report-card {
-  height: 100px;
-  width: 235px;
+  height: 130px;
+  width: 260px;
   background: white;
   border-radius: 10px;
   border: solid 1px #e2e8f0;
@@ -1279,6 +1305,7 @@ input[data-drupal-selector="edit-field-contentmessage-0-value"] {
 
 form#node-language-form {
   height: 170px;
+  margin: 30px auto;
 }
 
 article[typeof="schema:Person"] {
@@ -1288,6 +1315,7 @@ article[typeof="schema:Person"] {
   margin: auto;
   padding: 38px;
   text-align: center;
+  margin: 30px auto;
 
   img {
     max-width: 100%;
@@ -1341,10 +1369,10 @@ article[typeof="schema:Person"] {
     }
   }
 }
-
+/*
 input {
   padding: 0px 0px 0px 10px;
-}
+} */
 
 a.generatebutton {
   background: #13b5f3;
@@ -1446,7 +1474,7 @@ form#node-localization-form {
   width: 60%;
   margin-left: 35%;
   padding: 14px;
-  height: 790px;
+  height: 555px;
 
   div#edit-actions {
     line-height: 2.5rem;
@@ -1495,7 +1523,7 @@ a.moderationStateButton.reject {
 }
 
 form#node-messages-form {
-  height: 580px;
+  height: 470px;
   padding: 10px;
 
   div#edit-actions {
@@ -1643,8 +1671,8 @@ div#block-views-block-completionnbtraduction-block-1 {
 
 
 input#edit-pass {
-width: 58% !important;
 
+opacity: 1;
 .views-field.views-field-field-localisation- {
   display: none;
 }
@@ -1702,11 +1730,12 @@ font-size: large;
   }
 
 
-
-.btn-group{
+  .btn-group {
     width: 100px;
-    margin-top: -29%;
     margin-left: 36%;
+    position: absolute;
+    bottom: 32px;
+    line-height: 1.2;
 }
 
 
@@ -1720,5 +1749,83 @@ a.addnewlocalisation {
 }
 
 .addnewlocalisationcacher {
+  display: none;
+}
+
+
+form#user-login-form {
+  width: 45%;
+  background: #1491c1 !important;
+  padding: 36px;
+  height: 100vh;
+} 
+
+h1.titre-cms-translation {
+  color: white;
+  font-size: 27px;
+  text-align: center;
+  font-weight: 800;
+  line-height: 2;
+  letter-spacing: 3px;
+  word-spacing: 10px;
+  margin: 30px;
+}
+
+div#edit-name--description {
+  color: white;
+  font-size: 15px;
+  opacity: 0;
+}
+
+div#edit-pass--description {
+  opacity: 0;
+  font-size: 10px;
+}
+
+form#user-login-form:before {
+  content: '';
+  background: url(https://www.unicef.org/wca/sites/unicef.org.wca/files/styles/hero_desktop/public/wca-programme-2017-education.jpg?itok=nvG0RG9p);
+  position: absolute;
+  height: 100%;
+  width: 55%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 0;
+  background-position: right;
+}
+
+
+
+input#edit-name , input#edit-pass {
+  background: #1391c1;
+  border: none !important;
+  border-bottom: solid 2px white !important;
+  border-radius: 0px !important;
+
+  &:focus-visible{
+   outline: none !important;
+
+  }
+  &::placeholder{
+    color: rgb(255, 255, 255) !important;
+
+  }
+}
+
+
+.tw-container {
+  max-width: 100% !important;
+  padding: 0px 1.1% !important;
+
+}
+
+
+
+.tw-shadow.tw-text-right.tw-px-8 {
+  box-shadow: none !important;
+}
+
+
+div#edit-field-field-moduleinmessage-wrapper {
   display: none;
 }
