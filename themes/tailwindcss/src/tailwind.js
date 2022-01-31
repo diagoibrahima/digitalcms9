@@ -3,61 +3,56 @@ jQuery(document).ready(function() {
   jQuery('a.btn').hide();
  // jQuery('a.addnewlocalisation').hide();
   jQuery('.use-ajax').hide();
+  jQuery('#edit-field-localization-messagebody-wrapper').hide();
+  //jQuery('#cke_edit-field-localization-messagebody-0-value').hide();
   //jQuery("a.add-module ").unbind('click');
   //jQuerys(".add-module").attr("disabled",true);
  // jQuery('.add-module , .use-ajax').hide();
   jQuery('option[value="_none"]').remove();
   jQuery('.entity-moderation-form .form-item label').html('');
 
-/*
+
+  
+
+
   let str=jQuery( "#edit-field-localization-channel option:selected" ).text();
 
   jQuery('#edit-field-localization-channel').change(function() {
 
-    let str=jQuery( "#edit-field-localization-channel option:selected" ).text();
-    console.log(str);
+    let channel=jQuery( "#edit-field-localization-channel option:selected" ).text();
+ 
 
-    if(str=="Moodle"){
+    if(channel=="SMS"){
       
       jQuery('#edit-field-localization-messagebody-wrapper').hide();
       jQuery('#edit-field-localisation-message-wrapper').show();
      
-     }else if(str=="Whatsapp"){
-      jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
-      jQuery('#edit-field-localisation-message-0-value').hide();
-      jQuery('#edit-field-localization-messagebody-0-value').show();
-     
-     }else if(str=="SMS"){
-      
-      jQuery('#edit-field-localization-messagebody-0-value').remove();
-      jQuery('#edit-field-localization-messagebody-wrapper').remove();
-      jQuery('#edit-field-localisation-message-0-value').show();
+     }else if(channel=="Whatsapp"){
+      jQuery('#edit-field-localization-messagebody-wrapper').show();
+      jQuery('#edit-field-localisation-message-wrapper').hide();
 
-      jQuery('#edit-field-localisation-message-wrapper').show();
-      
-     
+     }else if(channel=="Moodle"){
+      jQuery('#edit-field-localization-messagebody-wrapper').show();
+      jQuery('#edit-field-localisation-message-wrapper').hide();
+
      }else if(str=="Telegram"){
-      jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
-      jQuery('#edit-field-localisation-message-0-value').hide();
-      jQuery('#edit-field-localization-messagebody-0-value').show();
-     
+      jQuery('#edit-field-localization-messagebody-wrapper').show();
+      jQuery('#edit-field-localisation-message-wrapper').hide();
+
      }else if(str=="Messenger"){
-      jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
-      jQuery('#edit-field-localisation-message-0-value').hide();
-      jQuery('#edit-field-localization-messagebody-0-value').show();
-     
+      jQuery('#edit-field-localization-messagebody-wrapper').show();
+      jQuery('#edit-field-localisation-message-wrapper').hide();
+
      }else if(str=="IOGT"){
-      jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
-      jQuery('#edit-field-localisation-message-0-value').hide();
-      jQuery('#edit-field-localization-messagebody-0-value').show();
-     
+      jQuery('#edit-field-localization-messagebody-wrapper').show();
+      jQuery('#edit-field-localisation-message-wrapper').hide();
+
      }else{
      
      console.log(str);
      }
 });
- console.log(str);
-*/
+ 
  
 /*
   let str = localStorage.getItem("channelVal");
@@ -487,8 +482,6 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
    jQuery('.field-content:eq('+moduleIndex+') .blockmodule-titre-module').addClass('blockmodule-titre-module-green');
    });
  */
- 
- 
  
  
  

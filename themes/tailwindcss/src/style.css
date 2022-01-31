@@ -1660,7 +1660,7 @@ div#edit-actions {
 }
 
 div#edit-field-localisation-message-wrapper {
-  display: none;
+  display: block;
 }
 
 div#edit-field-messageid-wrapper {
