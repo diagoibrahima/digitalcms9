@@ -3,6 +3,8 @@ jQuery(document).ready(function() {
   jQuery('a.btn').hide();
  // jQuery('a.addnewlocalisation').hide();
   jQuery('.use-ajax').hide();
+  jQuery('#edit-field-localization-messagebody-wrapper').hide();
+  //jQuery('#cke_edit-field-localization-messagebody-0-value').hide();
   //jQuery("a.add-module ").unbind('click');
   //jQuerys(".add-module").attr("disabled",true);
  // jQuery('.add-module , .use-ajax').hide();
@@ -439,8 +441,6 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
    jQuery('.field-content:eq('+moduleIndex+') .blockmodule-titre-module').addClass('blockmodule-titre-module-green');
    });
  */
- 
- 
  
  
  
