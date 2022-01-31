@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Contains download_all_files.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function download_all_files_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the download_all_files module.
+    case 'help.page.download_all_files':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Download All Files') . '</p>';
+    $output .= '' . t('This "Download all files" module provide field formatter for the field type "file" called "Table of files with download all link" . The format which will allow you to "Download all files" through single click. The files will be zipped as single file.') .'';
+      $output .= '<h3>' . t('Uses') . '</h3>';
+      $output .= '<dl>';
+      $output .= '<dt>' . t('Managing and displaying file fields') . '</dt>';
+      $output .= '<dd>' . t('On the Manage display page you can choose to display "Table of files with download all link", and if so,you will get <em>Download all files</em> link on node.') . '</dd>';
+    $output .= '</dl>';
+    return $output;
+  }
+}

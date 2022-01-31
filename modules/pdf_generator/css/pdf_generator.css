@@ -1,0 +1,9 @@
+.pdf-generator-feed {
+  display: inline;
+}
+.pdf-feed .feed-icon {
+  background: url(../images/pdf.png) no-repeat left center;
+  background-size: auto;
+  width: 36px;
+  background-size: cover;
+}
