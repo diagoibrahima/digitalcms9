@@ -109,7 +109,8 @@ jQuery(document).ready(function() {
  //console.log(totalmessage);
  
  var nblangue = jQuery('.nombredelangue').length;
- //console.log(nblangue);
+// console.log(nblangue);
+
 
  //Nombre de message restant a traduire
  var restotranslate=totalmessage-nombredemessagetraduit;
