@@ -15,6 +15,7 @@
 # Ignore configuration files that may contain sensitive information
 /sites/*/*settings*.php
 /sites/*/*services*.yml
+/sites/default/settings.php
 
 # Ignore paths that may contain user-generated content
 /sites/*/files
@@ -59,3 +60,4 @@
 /README.md
 
 /testfolder/test.html
+node_modules
