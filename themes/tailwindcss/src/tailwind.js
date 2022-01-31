@@ -162,10 +162,16 @@ console.log(restotranslate);
  jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messages').html(messagesimpe);
  let messagesimpetranslate=(jQuery('div#block-views-block-cardnbmessagetranslated-block-1 header').text());
  jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(messagesimpetranslate);
- jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html('25%');
+
  var nblangueused = jQuery('#block-views-block-cardnblangue-block-1 h3 a').length;
  jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(nblangueused);
 
+let totalenombremessagelocalized =parseInt((jQuery('div#block-views-block-cardnbmessagelocalized-block-1 header').text()));
+
+locationRate = parseInt( totalenombremessagelocalized *100 /(messagesimpe * nblangueused));
+jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(locationRate+'%');
+
+console.log(locationRate);
 
 
 

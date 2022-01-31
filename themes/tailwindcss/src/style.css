@@ -1114,8 +1114,8 @@ form#user-login-form:after {
 }
 
 .dialog-off-canvas-main-canvas .report-card {
-  height: 130px;
-  width: 260px;
+  height: 100px;
+  width: 250px;
   background: white;
   border-radius: 10px;
   border: solid 1px #e2e8f0;
@@ -1916,6 +1916,10 @@ div#edit-field-field-moduleinmessage-wrapper {
 }
 
 div#block-views-block-cardnblangue-block-1 {
+  display: none;
+}
+
+div#block-views-block-cardnbmessagelocalized-block-1 {
   display: none;
 }
 /*# sourceMappingURL=style.css.map */
