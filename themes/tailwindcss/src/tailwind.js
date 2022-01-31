@@ -8,48 +8,99 @@ jQuery(document).ready(function() {
  // jQuery('.add-module , .use-ajax').hide();
   jQuery('option[value="_none"]').remove();
   jQuery('.entity-moderation-form .form-item label').html('');
+
+/*
+  let str=jQuery( "#edit-field-localization-channel option:selected" ).text();
+
+  jQuery('#edit-field-localization-channel').change(function() {
+
+    let str=jQuery( "#edit-field-localization-channel option:selected" ).text();
+    console.log(str);
+
+    if(str=="Moodle"){
+      
+      jQuery('#edit-field-localization-messagebody-wrapper').hide();
+      jQuery('#edit-field-localisation-message-wrapper').show();
+     
+     }else if(str=="Whatsapp"){
+      jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
+      jQuery('#edit-field-localisation-message-0-value').hide();
+      jQuery('#edit-field-localization-messagebody-0-value').show();
+     
+     }else if(str=="SMS"){
+      
+      jQuery('#edit-field-localization-messagebody-0-value').remove();
+      jQuery('#edit-field-localization-messagebody-wrapper').remove();
+      jQuery('#edit-field-localisation-message-0-value').show();
+
+      jQuery('#edit-field-localisation-message-wrapper').show();
+      
+     
+     }else if(str=="Telegram"){
+      jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
+      jQuery('#edit-field-localisation-message-0-value').hide();
+      jQuery('#edit-field-localization-messagebody-0-value').show();
+     
+     }else if(str=="Messenger"){
+      jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
+      jQuery('#edit-field-localisation-message-0-value').hide();
+      jQuery('#edit-field-localization-messagebody-0-value').show();
+     
+     }else if(str=="IOGT"){
+      jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
+      jQuery('#edit-field-localisation-message-0-value').hide();
+      jQuery('#edit-field-localization-messagebody-0-value').show();
+     
+     }else{
+     
+     console.log(str);
+     }
+});
+ console.log(str);
+*/
  
 /*
-let str = localStorage.getItem("channelVal");
+  let str = localStorage.getItem("channelVal");
 
-if(str=="Moodle"){
- jQuery('#edit-field-localization-channel option[value="Moodle"]').prop('selected',true);
- jQuery('#edit-field-localization-messagebody-0-value').show();
- jQuery('#edit-field-localisation-message-0-value').show();
-
-}else if(str=="Whatsapp"){
- jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
- jQuery('#edit-field-localisation-message-0-value').hide();
- jQuery('#edit-field-localization-messagebody-0-value').show();
-
-}else if(str=="SMS"){
- jQuery('#edit-field-localization-channel option[value="SMS"]').prop('selected',true);
- jQuery('#edit-field-localization-messagebody-0-value').remove();
- jQuery('#edit-field-localization-messagebody-wrapper').remove();
- jQuery('#edit-field-localisation-message-0-value').show();
- 
-
-}else if(str=="Telegram"){
- jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
- jQuery('#edit-field-localisation-message-0-value').hide();
- jQuery('#edit-field-localization-messagebody-0-value').show();
-
-}else if(str=="Messenger"){
- jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
- jQuery('#edit-field-localisation-message-0-value').hide();
- jQuery('#edit-field-localization-messagebody-0-value').show();
-
-}else if(str=="IOGT"){
- jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
- jQuery('#edit-field-localisation-message-0-value').hide();
- jQuery('#edit-field-localization-messagebody-0-value').show();
-
-}else{
-
-console.log(str);
-}
+  if(str=="Moodle"){
+   jQuery('#edit-field-localization-channel option[value="Moodle"]').prop('selected',true);
+   jQuery('#edit-field-localization-messagebody-0-value').show();
+   jQuery('#edit-field-localisation-message-0-value').show();
+  
+  }else if(str=="Whatsapp"){
+   jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
+   jQuery('#edit-field-localisation-message-0-value').hide();
+   jQuery('#edit-field-localization-messagebody-0-value').show();
+  
+  }else if(str=="SMS"){
+   jQuery('#edit-field-localization-channel option[value="SMS"]').prop('selected',true);
+   jQuery('#edit-field-localization-messagebody-0-value').remove();
+   jQuery('#edit-field-localization-messagebody-wrapper').remove();
+   jQuery('#edit-field-localisation-message-0-value').show();
+   
+  
+  }else if(str=="Telegram"){
+   jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
+   jQuery('#edit-field-localisation-message-0-value').hide();
+   jQuery('#edit-field-localization-messagebody-0-value').show();
+  
+  }else if(str=="Messenger"){
+   jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
+   jQuery('#edit-field-localisation-message-0-value').hide();
+   jQuery('#edit-field-localization-messagebody-0-value').show();
+  
+  }else if(str=="IOGT"){
+   jQuery('#edit-field-localization-channel option[value="Whatsapp"]').prop('selected',true);
+   jQuery('#edit-field-localisation-message-0-value').hide();
+   jQuery('#edit-field-localization-messagebody-0-value').show();
+  
+  }else{
+  
+  console.log(str);
+  }
 
 */
+
  
  //content completion ----------------  
 
@@ -120,8 +171,8 @@ console.log(restotranslate);
  jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(modulesdecourse);
  
  //GENERATE CHANNEL
- /*
  
+ /*
    jQuery("a.generatebutton").click(function() {
  
  
@@ -140,13 +191,11 @@ console.log(restotranslate);
     jQuery('a.cancelbutton').hide();
  
  });
-
-
+ 
+});
+*/
 //Selection channel option
-
-
-
-
+/*
   jQuery('.sms').click(function() {
 
       try {localStorage.setItem("channelVal", "SMS");} catch(e){}
@@ -202,9 +251,12 @@ console.log(restotranslate);
       jQuery('.messanger').css('border-left', '6px solid #1491c1');
      
  });
- 
- });
-*/ //END GENERATE CHANNEL
+
+
+ //END GENERATE CHANNEL
+*/
+
+
 
 //disable draft status when adding localization
 jQuery('#edit-moderation-state-0-state').hide();  
@@ -283,10 +335,6 @@ jQuery('.channelgenerate ').append(description);
  var moderationstate = jQuery.trim(jQuery('.entity-moderation-form__item div#edit-current').text());
  
 jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</span>').insertBefore('form#content-moderation-entity-moderation-form');
-
-
-
- 
  
  if(moderationstate =="Draft"){
  jQuery('a.moderationStateButton.sforreview').remove();
@@ -504,6 +552,11 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
    jQuery(this).find('.blockmodule-titre-module span').html('Module '+moduleIndexee+':');
 
    });
+
+
+
+
+
 
  });
 

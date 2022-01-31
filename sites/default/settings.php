@@ -795,6 +795,8 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
    include $app_root . '/' . $site_path . '/settings.local.php';
  }
+
+ //BD en 
 /*
 $databases['default']['default'] = array (
   'database' => 'dev_drupal_lms',
@@ -808,6 +810,9 @@ $databases['default']['default'] = array (
 );
 */
 
+
+
+//BD en local 
 $databases['default']['default'] = array (
   'database' => 'dev_drupal_lms',
   'username' => 'root',
@@ -818,5 +823,21 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );  
+
+
+//BD Preprod
+/*
+ $databases['default']['default'] = array (
+  'database' => 'admin_test',
+  'username' => 'admin_test',
+  'password' => 'admin_test',
+  'prefix' => '',
+  'host' => 'drupal-dev-lms.wcar-t4d.info',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);  
+*/
+
 
 $settings['config_sync_directory'] = 'sites/default/files/config_gPm33SuPxx6pVuIRBfdbEvgcvYFn3ygvCUzn45JtXwy20IJ_MkMorSDwfOfCKYuoyHXf2hRJgw/sync';
