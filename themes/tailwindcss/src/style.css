@@ -420,7 +420,7 @@ form#node-sub-module-form textarea,
 .node-course__edit-form textarea,
 .node-form textarea {
   overflow: auto;
-  border: 1px #a0aebf solid;
+  border: 1px #98a8bd solid;
   border-radius: 0.25rem;
   width: 100%;
 }
@@ -1915,7 +1915,12 @@ div#edit-field-field-moduleinmessage-wrapper {
   display: none;
 }
 
+<<<<<<< HEAD
 div#block-views-block-cardnblangue-block-1 {
   display: none;
+=======
+body {
+  opacity: 3;
+>>>>>>> f32fe910ab7b286f05f72049bbb66ea8f56f05b6
 }
 /*# sourceMappingURL=style.css.map */
