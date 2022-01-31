@@ -799,7 +799,10 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 =======
 
  //BD en 
+<<<<<<< HEAD
 >>>>>>> 64c4d9193 (login destination)
+=======
+>>>>>>> ModuleDisplayFeature
 /*
 $databases['default']['default'] = array (
   'database' => 'dev_drupal_lms',
@@ -813,6 +816,12 @@ $databases['default']['default'] = array (
 );
 */
 
+<<<<<<< HEAD
+=======
+
+
+//BD en local 
+>>>>>>> ModuleDisplayFeature
 $databases['default']['default'] = array (
   'database' => 'dev_drupal_lms',
   'username' => 'root',
@@ -824,4 +833,23 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );  
 
+<<<<<<< HEAD
+=======
+
+//BD Preprod
+/*
+ $databases['default']['default'] = array (
+  'database' => 'admin_test',
+  'username' => 'admin_test',
+  'password' => 'admin_test',
+  'prefix' => '',
+  'host' => 'drupal-dev-lms.wcar-t4d.info',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);  
+*/
+
+
+>>>>>>> ModuleDisplayFeature
 $settings['config_sync_directory'] = 'sites/default/files/config_gPm33SuPxx6pVuIRBfdbEvgcvYFn3ygvCUzn45JtXwy20IJ_MkMorSDwfOfCKYuoyHXf2hRJgw/sync';
