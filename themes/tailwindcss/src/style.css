@@ -1914,4 +1914,8 @@ input#edit-name::placeholder, input#edit-pass::placeholder {
 div#edit-field-field-moduleinmessage-wrapper {
   display: none;
 }
+
+div#block-views-block-cardnblangue-block-1 {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */

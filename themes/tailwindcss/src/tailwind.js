@@ -153,7 +153,7 @@ console.log(restotranslate);
  
 
  //Dasboard 
- 
+
  let cours=(jQuery('div#block-views-block-cardnbcours-block-1 header').text());
 
  jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
@@ -162,96 +162,13 @@ console.log(restotranslate);
  let messagesimpetranslate=(jQuery('div#block-views-block-cardnbmessagetranslated-block-1 header').text());
  jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(messagesimpetranslate);
  jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html('25%');
- let modulesdecourse=(jQuery('div#block-views-block-cardnbmodule-block-1 header').text());
- jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(modulesdecourse);
+ var nblangueused = jQuery('#block-views-block-cardnblangue-block-1 h3 a').length;
+ jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(nblangueused);
+
+
+
+
  
- //GENERATE CHANNEL
- 
- /*
-   jQuery("a.generatebutton").click(function() {
- 
- 
-   jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fas fa-sms"></i>SMS</div> <br> <div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>MOODLE</div> <br>  <div class="channelgenerate whatsapp"><i class="fab fa-whatsapp"></i>WHATSAPP</div> <br>  <div class="channelgenerate telegrame"><i class="fab fa-telegram"></i>TELEGRAM</div> <br> <div class="channelgenerate messanger"><i class="fab fa-facebook-messenger"></i>MESSENGER</div> </div>').insertAfter('a.generatebutton');
-  
-   let messagetolacalise=(jQuery('article').html());
-   jQuery('.channelgenerate ').append(messagetolacalise);
-   jQuery('a.generatebutton').hide();
-   jQuery('<a class="cancelbutton"> Cancel </a>').insertBefore('a.generatebutton');
-   //jQuery('a.generatebutton').removeClass('generatebutton');
-
-   jQuery('.cancelbutton').click(function() {
-
-    jQuery('.channelgenerategeneral').remove();
-    jQuery('a.generatebutton').show();
-    jQuery('a.cancelbutton').hide();
- 
- });
- 
-});
-*/
-//Selection channel option
-/*
-  jQuery('.sms').click(function() {
-
-      try {localStorage.setItem("channelVal", "SMS");} catch(e){}
-      jQuery('.sms').css('border-left', '6px solid #1491c1');
-      jQuery('.moodle').css('border', 'none');
-      jQuery('.whatsapp').css('border', 'none');
-      jQuery('.telegrame').css('border', 'none');
-      jQuery('.messanger').css('border', 'none');
-    
- });
-
-  jQuery('.moodle').click(function() {
-      
-      try {localStorage.setItem("channelVal", "Moodle");} catch(e){}
-      jQuery('.sms').css('border', 'none');
-      jQuery('.moodle').css('border-left', '6px solid #1491c1');
-      jQuery('.whatsapp').css('border', 'none');
-      jQuery('.telegrame').css('border', 'none');
-      jQuery('.messanger').css('border', 'none');
-      jQuery('#edit-field-localization-channel option[value="Moodle"]').prop('selected',true);
-     
- });
-
-  jQuery('.whatsapp').click(function() {
-
-      try {localStorage.setItem("channelVal", "Whatsapp");} catch(e){}
-      jQuery('.sms').css('border', 'none');
-      jQuery('.moodle').css('border', 'none');
-      jQuery('.whatsapp').css('border-left', '6px solid #1491c1');
-      jQuery('.telegrame').css('border', 'none');
-      jQuery('.messanger').css('border', 'none');
-     
- });
-
-  jQuery('.telegrame').click(function() {
-
-      try {localStorage.setItem("channelVal", "Telegram");} catch(e){}
-      jQuery('.sms').css('border', 'none');
-      jQuery('.moodle').css('border', 'none');
-      jQuery('.whatsapp').css('border', 'none');
-      jQuery('.telegrame').css('border-left', '6px solid #1491c1');
-      jQuery('.messanger').css('border', 'none');
-     
- });
-
-  jQuery('.messanger').click(function() {
-
-      try {localStorage.setItem("channelVal", "Messenger");} catch(e){}
-      jQuery('.sms').css('border', 'none');
-      jQuery('.moodle').css('border', 'none');
-      jQuery('.whatsapp').css('border', 'none');
-      jQuery('.telegrame').css('border', 'none');
-      jQuery('.messanger').css('border-left', '6px solid #1491c1');
-     
- });
-
-
- //END GENERATE CHANNEL
-*/
-
-
 
 //disable draft status when adding localization
 jQuery('#edit-moderation-state-0-state').hide();  
