@@ -166,12 +166,12 @@ console.log(restotranslate);
  var nblangueused = jQuery('#block-views-block-cardnblangue-block-1 h3 a').length;
  jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(nblangueused);
 
-let totalenombremessagelocalized =parseInt((jQuery('div#block-views-block-cardnbmessagelocalized-block-1 header').text()));
+let totalenombremessagelocalized = jQuery('div#block-views-block-cardnbmessagelocalized-block-1 header').text();
 
-locationRate = parseInt( totalenombremessagelocalized *100 /(messagesimpe * nblangueused));
+locationRate = parseInt((totalenombremessagelocalized *100 )/(messagesimpe * nblangueused));
 jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(locationRate+'%');
 
-console.log(locationRate);
+console.log(totalenombremessagelocalized);
 
 
 
