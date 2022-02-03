@@ -1,0 +1,7 @@
+langcode: fr
+status: true
+dependencies: {  }
+name: Étiquettes
+vid: tags
+description: 'Utilisez les étiquettes pour regrouper les articles sur des sujets similaires dans des catégories.'
+weight: 0

@@ -1,0 +1,32 @@
+<?php
+    function course_schema(){
+        $schema['courses'] = [
+            'fields'=>[
+                'id'=>[
+                    'description'=>'course id',
+                    'type'=>'serial',
+                    'not null'=>TRUE
+                ],
+                'Libele'=>[
+                    'type'=>'varchar',
+                    'length'=>100,
+                    'not null'=>TRUE
+                ],
+                'Description'=>[
+                    'type'=>'text',
+                    'not null'=>TRUE
+                ],
+                'create_date'=>[
+                    'mysql_type'=>'timestamp',
+                    'not null'=>TRUE
+                ]
+            ],
+            'primary key'=>['id'],
+            'indexes'=>[
+                'id'=>['id'],
+                'Libele'=>['Libele']
+            ]
+        ];
+
+        return $schema;
+    }

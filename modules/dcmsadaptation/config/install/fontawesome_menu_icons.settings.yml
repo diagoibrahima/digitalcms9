@@ -1,0 +1,31 @@
+menu_link_icons:
+  'views_view:views_liste_des_cours_page_1':
+    icon: fa-book-open
+    prefix: fas
+    tag: i
+    appearance: before
+  'views_view:views_mes_cours_page_1':
+    icon: fa-book-open
+    prefix: fas
+    tag: i
+    appearance: before
+  'views_view:views_translationview_page_1':
+    icon: fa-language
+    prefix: fa
+    tag: i
+    appearance: before
+  'views_view:views_users_page_1':
+    icon: fa-user
+    prefix: fas
+    tag: i
+    appearance: before
+  'views_view:views_contries_page_1':
+    icon: fa-flag
+    prefix: fas
+    tag: i
+    appearance: before
+  'views_view:views_localization_page_1':
+    icon: fa-globe
+    prefix: fa
+    tag: i
+    appearance: before

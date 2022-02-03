@@ -1,0 +1,25 @@
+<?php
+use Drupal\Core\Routing\RouteMatchInterface;
+
+function hello_galaxy_theme() {
+
+    return array(
+        'panel_page' => array(
+            'template' => 'panel_page',
+            'variables' => array('text' => NULL)
+        ),
+        'panel_block' => array(
+            'template' => 'panel_block',
+            'variables' => array('message' => NULL, 
+                                  'offer' => NULL,)
+        ),
+    );
+
+function hello_galaxy_help($route_name, RouteMatchInterface $route_match){
+    switch ($route_name){
+        case 'help.page.hello_galaxy':
+            return t("Ce module sert à souhaiter la bienvenue aux visiteurs via une page accessible au chemin /hello-galaxy");
+    }
+}
+
+}

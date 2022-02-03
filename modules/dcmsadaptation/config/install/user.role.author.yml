@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - node.type.localization
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - field_ui
+    - filter
+    - node
+    - quickedit
+    - system
+    - views_bulk_edit
+    - workflows
+id: author
+label: Editor
+weight: 6
+is_admin: null

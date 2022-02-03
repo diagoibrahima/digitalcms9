@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3a2fadba-83e4-40e1-bbd0-63e106929827'
+  module:
+    - block_content
+    - system
+  theme:
+    - tailwindcss
+id: titledashboardpage
+theme: tailwindcss
+region: content
+weight: -21
+provider: null
+plugin: 'block_content:3a2fadba-83e4-40e1-bbd0-63e106929827'
+settings:
+  id: 'block_content:3a2fadba-83e4-40e1-bbd0-63e106929827'
+  label: TitleDashboardPage
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /dashboard

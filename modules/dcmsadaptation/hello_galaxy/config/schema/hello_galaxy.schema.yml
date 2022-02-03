@@ -1,0 +1,10 @@
+hello_galaxy.settings:
+  type: config_object
+  label: 'Hello Galaxy settings'
+  mapping:
+    hello_galaxy:
+      type: mapping
+      mapping:
+        page_text:
+          type: text
+          label: 'Contenu de la page Hello Galaxy'

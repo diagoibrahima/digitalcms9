@@ -1,0 +1,11 @@
+hello_galaxy.panel_page:
+  title: 'Content Completion'
+  description: 'Page souhaitant la bienvenue aux visiteurs'
+  menu_name: main
+  route_name: hello_galaxy.panel_page
+
+hello_galaxy.form:
+  title: 'Hello Galaxy settings'
+  description: 'Configure settings for the Hello Galaxy module.'
+  route_name: hello_galaxy.form
+  parent: 'system.admin_config_development'

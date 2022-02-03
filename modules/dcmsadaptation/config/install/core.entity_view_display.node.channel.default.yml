@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.channel.field_channelname
+    - node.type.channel
+  module:
+    - user
+id: node.channel.default
+targetEntityType: node
+bundle: channel
+mode: default
+content:
+  field_channelname:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

@@ -67,8 +67,8 @@ div#edit-actions {
     color: white !important;
     background: linear-gradient(45deg, #0c6385, #46ccff);
     border: cornsilk !important;
-   margin-left: 89%;
-   text-align: center;
+    margin-left: 89%;
+    text-align: center;
   }
 }
 
@@ -1809,7 +1809,7 @@ input#edit-name , input#edit-pass {
   border-radius: 0px !important;
 
   &:focus-visible{
-   outline: none !important;
+    outline: none !important;
 
   }
   &::placeholder{

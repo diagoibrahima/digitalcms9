@@ -1,0 +1,13 @@
+uuid: 844e419a-bb5b-4da8-b455-4d53b5873616
+name: 'C M A PLATFORM'
+mail: elibrahimadiago@gmail.com
+slogan: 'CONTENT MANAGEMENT AND ADAPTION PLATFORM'
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+langcode: fr
+default_langcode: en
+mail_notification: ''

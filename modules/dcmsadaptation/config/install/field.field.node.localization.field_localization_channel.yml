@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_localization_channel
+    - node.type.localization
+  module:
+    - options
+id: node.localization.field_localization_channel
+field_name: field_localization_channel
+entity_type: node
+bundle: localization
+label: Channel
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: SMS
+default_value_callback: ''
+settings: {  }
+field_type: list_string

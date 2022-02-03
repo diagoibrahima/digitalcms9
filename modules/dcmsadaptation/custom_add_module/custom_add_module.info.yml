@@ -1,0 +1,4 @@
+name: Custom add module
+description: Module for Article Content type Custom code
+core_version_requirement: ^8 || ^9
+type: module

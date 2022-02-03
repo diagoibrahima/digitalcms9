@@ -1,0 +1,13 @@
+<?php
+
+function cmst_dashboard_theme() {
+
+    return array(
+        'dashboard_page' => array(
+            'template' => 'dashboard_page',
+            'variables' => array('text' => NULL)
+        ),
+    );
+
+
+}
