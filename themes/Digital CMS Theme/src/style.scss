@@ -716,7 +716,7 @@ article.node:before {
 }
 
 .activitylogMessage {
-  margin-top: 45px;
+  margin-top:22px;
 }
 
 /*
@@ -1932,4 +1932,8 @@ p.titrepagemessage {
   line-height: 3rem;
   padding: 0px 10px !important;
   border-top: solid 1px #a5a5a552;
+}
+
+.align-left {
+  float: inherit;
 }
