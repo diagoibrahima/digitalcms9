@@ -1,0 +1,75 @@
+name: DCMSModule
+description: 'Module pour ajouter le schema,views, block et conf'
+type: module
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - admin_toolbar_tools
+  - auto_entitylabel
+  - automated_cron
+  - block
+  - block_content
+  - book
+  - ckeditor
+  - coffee
+  - color
+  - comment
+  - conditional_fields
+  - contact
+  - content_moderation
+  - ctools
+  - datatables
+  - dblog
+  - devel
+  - editor
+  - entity_print
+  - entity_redirect
+  - features
+  - field
+  - field_ui
+  - file
+  - filter
+  - fontawesome
+  - fontawesome_menu_icons
+  - google_map_field
+  - hello_galaxy
+  - help
+  - image
+  - language
+  - link
+  - locale
+  - media
+  - menu_link_content
+  - menu_ui
+  - message
+  - node
+  - options
+  - paragraphs
+  - path
+  - path_alias
+  - pathauto
+  - pdf_generator
+  - pdf_serialization
+  - quickedit
+  - rdf
+  - rest
+  - search
+  - serialization
+  - shortcut
+  - simpler_quickedit
+  - subpathauto
+  - system
+  - taxonomy
+  - text
+  - tour
+  - update
+  - user
+  - video_embed_field
+  - video_embed_wysiwyg
+  - views
+  - views_add_button
+  - views_bulk_edit
+  - views_bulk_operations
+  - views_data_export
+  - workflows
+  - xls_serialization
+version: '1'

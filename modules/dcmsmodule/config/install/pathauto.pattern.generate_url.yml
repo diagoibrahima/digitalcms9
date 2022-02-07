@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: generate_url
+label: 'generate url'
+type: 'canonical_entities:node'
+pattern: '/[node:field_field_moduleinmessage:entity:title]'
+selection_criteria:
+  1b1d0f39-899a-44c1-9f7c-7b5740e689d6:
+    id: node_type
+    bundles:
+      module: module
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 1b1d0f39-899a-44c1-9f7c-7b5740e689d6
+selection_logic: and
+weight: -5
+relationships: {  }

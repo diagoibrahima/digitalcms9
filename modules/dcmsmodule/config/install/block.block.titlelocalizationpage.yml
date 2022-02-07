@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:bef1194d-1d9d-480b-b177-0c632fdac936'
+  module:
+    - block_content
+    - node
+  theme:
+    - tailwindcss
+id: titlelocalizationpage
+theme: tailwindcss
+region: content
+weight: -19
+provider: null
+plugin: 'block_content:bef1194d-1d9d-480b-b177-0c632fdac936'
+settings:
+  id: 'block_content:bef1194d-1d9d-480b-b177-0c632fdac936'
+  label: TitleLocalizationPage
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      localization: localization

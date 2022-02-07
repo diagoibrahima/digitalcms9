@@ -1,0 +1,28 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - ctools
+    - hello_galaxy
+  theme:
+    - bartik
+id: panneauindicateur
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: panel_block
+settings:
+  id: panel_block
+  label: 'Panneau indicateur'
+  provider: hello_galaxy
+  label_display: visible
+  silicium_offer: ''
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      course: course
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

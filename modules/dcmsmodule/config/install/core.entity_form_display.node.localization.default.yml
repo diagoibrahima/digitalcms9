@@ -1,0 +1,125 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.localization.field_localisation_message
+    - field.field.node.localization.field_localization_channel
+    - field.field.node.localization.field_localization_langue
+    - field.field.node.localization.field_localization_messagebody
+    - field.field.node.localization.field_localization_tag
+    - field.field.node.localization.field_messageid
+    - node.type.localization
+    - workflows.workflow.editorial
+  module:
+    - conditional_fields
+    - content_moderation
+    - path
+    - text
+id: node.localization.default
+targetEntityType: node
+bundle: localization
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_localisation_message:
+    type: string_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      conditional_fields: {  }
+  field_localization_channel:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_localization_langue:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_localization_messagebody:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      conditional_fields: {  }
+    type: text_textarea
+    region: content
+  field_messageid:
+    weight: 10
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 13
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 11
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 12
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden:
+  field_localization_tag: true

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.course_
+    - node.type.localization
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - node
+    - quickedit
+    - system
+    - views_bulk_edit
+    - workflows
+id: reviewer
+label: Reviewer
+weight: 7
+is_admin: null

@@ -1,0 +1,8 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: zxx
+label: 'Non applicable'
+direction: ltr
+weight: 3
+locked: true

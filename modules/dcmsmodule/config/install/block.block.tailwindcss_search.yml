@@ -1,0 +1,20 @@
+langcode: fr
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - tailwindcss
+id: tailwindcss_search
+theme: tailwindcss
+region: sidebar_first
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Rechercher
+  label_display: visible
+  provider: search
+  page_id: node_search
+visibility: {  }

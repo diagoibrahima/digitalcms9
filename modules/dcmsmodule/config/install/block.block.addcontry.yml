@@ -1,0 +1,49 @@
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:574c171c-53ce-43ce-af2e-38622f4ac8cd'
+  module:
+    - block_content
+    - node
+    - system
+    - user
+  theme:
+    - bartik
+id: addcontry
+theme: bartik
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'block_content:574c171c-53ce-43ce-af2e-38622f4ac8cd'
+settings:
+  id: 'block_content:574c171c-53ce-43ce-af2e-38622f4ac8cd'
+  label: 'Add contry'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+      contry: contry
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: /contry
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

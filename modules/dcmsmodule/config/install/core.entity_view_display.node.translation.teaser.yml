@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.translation.body
+    - field.field.node.translation.field_bodymessage
+    - field.field.node.translation.field_channel
+    - field.field.node.translation.field_field_langage
+    - field.field.node.translation.field_image
+    - field.field.node.translation.field_langage
+    - field.field.node.translation.field_message
+    - field.field.node.translation.field_video
+    - field.field.node.translation.field_videoembeded
+    - field.field.node.translation.field_videotype
+    - node.type.translation
+  module:
+    - text
+    - user
+id: node.translation.teaser
+targetEntityType: node
+bundle: translation
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_bodymessage: true
+  field_channel: true
+  field_field_langage: true
+  field_image: true
+  field_langage: true
+  field_message: true
+  field_video: true
+  field_videoembeded: true
+  field_videotype: true
+  langcode: true

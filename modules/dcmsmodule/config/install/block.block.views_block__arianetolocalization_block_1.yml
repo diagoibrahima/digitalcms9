@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.arianetolocalization
+  module:
+    - node
+    - views
+  theme:
+    - tailwindcss
+id: views_block__arianetolocalization_block_1
+theme: tailwindcss
+region: content
+weight: -12
+provider: null
+plugin: 'views_block:arianetolocalization-block_1'
+settings:
+  id: 'views_block:arianetolocalization-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      localization: localization
