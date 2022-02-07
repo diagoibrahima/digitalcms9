@@ -5,7 +5,11 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
+<<<<<<< HEAD
         'reference' => 'd9466a22291ffcb1e0fffbd6a02ae2e908149bb5',
+=======
+        'reference' => 'bf6578623cd89de6910ae443fa71f225833b5527',
+>>>>>>> 23470ea6a (updat edite mode)
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -661,7 +665,11 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
+<<<<<<< HEAD
             'reference' => 'd9466a22291ffcb1e0fffbd6a02ae2e908149bb5',
+=======
+            'reference' => 'bf6578623cd89de6910ae443fa71f225833b5527',
+>>>>>>> 23470ea6a (updat edite mode)
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -775,6 +783,17 @@
             'reference' => '2.1.1',
             'dev_requirement' => false,
         ),
+        'drupal/popup_after_login' => array(
+            'pretty_version' => 'dev-9.1.x',
+            'version' => 'dev-9.1.x',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/popup_after_login',
+            'aliases' => array(
+                0 => '9.1.x-dev',
+            ),
+            'reference' => '8fd9d78bf8a8ad96711857ffc7f27fa8041a1c57',
+            'dev_requirement' => false,
+        ),
         'drupal/quickedit' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -846,6 +865,17 @@
             'replaced' => array(
                 0 => '9.3.3',
             ),
+        ),
+        'drupal/sweetalert2' => array(
+            'pretty_version' => 'dev-9.1.x',
+            'version' => 'dev-9.1.x',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/sweetalert2',
+            'aliases' => array(
+                0 => '9.1.x-dev',
+            ),
+            'reference' => '19db061b6af2fc18586b4bc2dc93348169f3ecbf',
+            'dev_requirement' => false,
         ),
         'drupal/syslog' => array(
             'dev_requirement' => false,

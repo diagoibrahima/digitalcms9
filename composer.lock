@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "a398c957e377be44f84040f528af1d05",
+=======
+    "content-hash": "7801a61911f518c99fb92af080c6f4a6",
+>>>>>>> 23470ea6a (updat edite mode)
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1240,6 +1244,89 @@
             "homepage": "https://www.drupal.org/project/pdf_serialization",
             "support": {
                 "source": "https://git.drupalcode.org/project/pdf_serialization"
+            }
+        },
+        {
+            "name": "drupal/popup_after_login",
+            "version": "dev-9.1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/popup_after_login.git",
+                "reference": "8fd9d78bf8a8ad96711857ffc7f27fa8041a1c57"
+            },
+            "require": {
+                "drupal/core": "8.x || ^9",
+                "drupal/sweetalert2": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-9.1.x": "9.1.x-dev"
+                },
+                "drupal": {
+                    "version": "9.1.x-dev",
+                    "datestamp": "1600157186",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "keshav.k",
+                    "homepage": "https://www.drupal.org/user/3254066"
+                }
+            ],
+            "description": "Provide configurable popup after successfully logged in user with two options.",
+            "homepage": "https://www.drupal.org/project/popup_after_login",
+            "support": {
+                "source": "https://git.drupalcode.org/project/popup_after_login"
+            }
+        },
+        {
+            "name": "drupal/sweetalert2",
+            "version": "dev-9.1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/sweetalert2.git",
+                "reference": "19db061b6af2fc18586b4bc2dc93348169f3ecbf"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-9.1.x": "9.1.x-dev"
+                },
+                "drupal": {
+                    "version": "9.1.x-dev",
+                    "datestamp": "1600156627",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "keshav.k",
+                    "homepage": "https://www.drupal.org/user/3254066"
+                }
+            ],
+            "description": "Convert your Javascript alerts into something modern!",
+            "homepage": "https://www.drupal.org/project/sweetalert2",
+            "support": {
+                "source": "https://git.drupalcode.org/project/sweetalert2"
             }
         },
         {
@@ -7789,7 +7876,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/popup_after_login": 20,
+        "drupal/sweetalert2": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
