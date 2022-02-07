@@ -1167,10 +1167,12 @@ span.message-channel {
 span.message-langage {
   background: #0094ff4d;
   color: #0094ff;
-  padding: 3px 6px;
-  margin: 3px;
-  border-radius: 10px;
+  padding: 3px 23px;
+  margin: 1px;
+  border-radius: 0px;
   font-size: 12px;
+  line-height: 3.5;
+  top: 48px;
 }
 
 span.message-etat {
@@ -1548,7 +1550,7 @@ td.tw-text-green-400.views-field.views-field-view-node {
 
 .pstStatusModeration {
   position: absolute;
-  left: 553px;
+  left:130px;
   top: 4px;
 }
 
