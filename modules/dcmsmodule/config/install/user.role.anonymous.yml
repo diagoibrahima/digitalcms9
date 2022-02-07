@@ -1,0 +1,17 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - filter.format.editeurmessage
+    - filter.format.restricted_html
+  module:
+    - comment
+    - contact
+    - filter
+    - media
+    - search
+    - system
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false

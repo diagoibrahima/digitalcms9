@@ -1,0 +1,62 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.messages.body
+    - field.field.node.messages.field_add_sub_module
+    - field.field.node.messages.field_contentmessage
+    - field.field.node.messages.field_field_moduleinmessage
+    - field.field.node.messages.field_field_submoduleinmessage
+    - node.type.messages
+  module:
+    - simpler_quickedit
+    - text
+    - user
+id: node.messages.default
+targetEntityType: node
+bundle: messages
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      simpler_quickedit:
+        click: '1'
+        edit: '1'
+        editHover: 0
+    weight: 1
+    region: content
+  field_contentmessage:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      simpler_quickedit:
+        click: '1'
+        edit: 0
+        editHover: 0
+    weight: 2
+    region: content
+  field_field_moduleinmessage:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_add_sub_module: true
+  field_field_submoduleinmessage: true
+  langcode: true

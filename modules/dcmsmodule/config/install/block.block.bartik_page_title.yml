@@ -1,0 +1,26 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - bartik
+id: bartik_page_title
+theme: bartik
+region: content
+weight: -9
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Titre de page'
+  provider: core
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      module: module
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

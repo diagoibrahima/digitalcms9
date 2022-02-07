@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.messages.body
+    - field.field.node.messages.field_add_sub_module
+    - field.field.node.messages.field_contentmessage
+    - field.field.node.messages.field_field_moduleinmessage
+    - field.field.node.messages.field_field_submoduleinmessage
+    - node.type.messages
+  module:
+    - text
+    - user
+id: node.messages.teaser
+targetEntityType: node
+bundle: messages
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_add_sub_module: true
+  field_contentmessage: true
+  field_field_moduleinmessage: true
+  field_field_submoduleinmessage: true
+  langcode: true

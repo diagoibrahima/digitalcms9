@@ -1,0 +1,17 @@
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - tailwindcss
+id: tailwindcss_local_actions
+theme: tailwindcss
+region: content
+weight: -9
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Actions d''administration principales'
+  label_display: '0'
+  provider: core
+visibility: {  }

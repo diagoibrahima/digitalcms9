@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.course_
+id: node.course_
+target_entity_type_id: node
+target_bundle: course_
+default_langcode: site_default
+language_alterable: false
