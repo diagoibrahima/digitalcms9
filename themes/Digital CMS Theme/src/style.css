@@ -68,14 +68,15 @@ div#edit-actions {
 }
 
 div#edit-actions #edit-submit {
-  border-radius: 5px !important;
   width: 100px !important;
   color: white !important;
-  background: #2b6cb0 !important;
+  background: #1391c1 !important;
   border: cornsilk !important;
-  margin-left: 88%;
+  margin-left: 89%;
   text-align: center;
-  line-height: 41px  !important;
+  line-height: 41px !important;
+  border-radius: 0px !important;
+  font-size: 12px;
 }
 
 div#datatable_wrapper {
@@ -159,15 +160,17 @@ h1.js-quickedit-page-title {
 }
 
 a.tw-action-new.tw-btn.tw-btn-primary {
-  background: linear-gradient(45deg, #0c6385, #46ccff);
+  background: #1391c1;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 0;
   color: white;
   position: absolute;
-  top: 55px !important;
+  top: 49px !important;
   right: 2em;
+  font-size: 12px;
   z-index: 9999999999;
   width: 11%;
+  line-height: 37px;
   text-align: center;
 }
 
@@ -718,7 +721,7 @@ form#user-login-form:after {
   color: #34383a8c !important;
   border: solid 2px;
   border-style: dashed;
-  border-radius: 8px;
+  border-radius: inherit;
   line-height: 3;
   text-align: center;
   width: 80%;
@@ -734,7 +737,7 @@ form#user-login-form:after {
   color: #1491c1 !important;
   border: solid 2px;
   border-style: dashed;
-  border-radius: 8px;
+  border-radius: inherit;
   line-height: 3;
   text-align: center;
   width: 80%;
@@ -747,7 +750,7 @@ form#user-login-form:after {
 }
 
 .dialog-off-canvas-main-canvas .add-module-enable:hover {
-  background: linear-gradient(45deg, #1491c1, #016288) !important;
+  background: #1491c1 !important;
   border-style: hidden;
   color: white !important;
   line-height: 3.4;
@@ -848,19 +851,19 @@ form#user-login-form:after {
 .dialog-off-canvas-main-canvas span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer {
   position: absolute;
   margin: auto;
-  top: -95px;
-  left: 40px;
+  top: -101px;
+  left: 34px;
   border: solid #1491c1 1px !important;
   padding: 0px;
-  color: #1491c1 !important;
+  color: #ffffff !important;
+  background: #1391c1;
   border: solid 2px;
-  border-radius: 8px;
-  line-height: 2.1;
+  border-radius: 0px !important;
+  line-height: 45px !important;
   text-align: center;
   width: 50%;
   margin: auto 83px;
   z-index: 10;
-  line-height: 2.5;
 }
 
 .dialog-off-canvas-main-canvas span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer.turneditone {
@@ -1594,12 +1597,14 @@ div#block-views-block-messagetotranslate-block-1 {
   position: relative;
 }
 
+/*
+
 a.moderationStateButton.submit.submitpositionleft,
 a.moderationStateButton.approve,
 a.moderationStateButton.reject,
 a.moderationStateButton.rsubmit {
   position: absolute;
-  top: -53px;
+  top: -41px;
   right: 34px;
   background: linear-gradient(45deg, #0c6385, #46ccff);
   padding: 5px;
@@ -1607,10 +1612,26 @@ a.moderationStateButton.rsubmit {
   color: white;
   cursor: pointer;
 }
+*/
+a.moderationStateButton.submit.submitpositionleft, a.moderationStateButton.approve, a.moderationStateButton.reject, a.moderationStateButton.rsubmit {
+  position: absolute;
+  top: -48px;
+  right: 34px;
+  background: #00800075;
+  padding: 5px;
+  /* border-radius: 5px; */
+  color: white;
+  cursor: pointer;
+  line-height: 38px;
+  padding: auto 22px !important;
+  font-size: 12px;
+  width: 90px;
+  text-align: center;
+}
 
 a.moderationStateButton.reject {
-  right: 120px;
-  background: gray;
+  right: 124px;
+  background: #e53e3ead;
 }
 
 form#node-messages-form {
@@ -1955,6 +1976,7 @@ svg.svg-inline--fa.fa-pencil-alt.fa-w-16.editeur-conten {
 
 .simpler_quickedit_click.simpler_quickedit.quickedit-field:hover svg.svg-inline--fa.fa-pencil-alt.fa-w-16.editeur-conten {
   opacity: 1 !important;
+  color: #1391c1 !important;
 }
 
 svg.svg-inline--fa.fa-pencil-alt.fa-w-16.editeur-conten {
