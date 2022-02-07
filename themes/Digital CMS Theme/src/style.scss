@@ -462,6 +462,8 @@ form#node-sub-module-edit-form {
 */
 span.tw-text-green-500.align-right {
   color: #1391c1 !important;
+  position: absolute;
+  right: 22px;
 }
 
 .views-col.col-1.addcourse-blank .tw-item-card {
@@ -774,6 +776,7 @@ div#edit-field-course-wrapper {
 span.section-buttom {
   position: absolute;
   bottom: -15px;
+  width: 100%;
 }
 
 div#block-views-block-content-completion-block-1 {
