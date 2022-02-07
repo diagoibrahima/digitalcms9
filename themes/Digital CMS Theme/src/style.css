@@ -145,7 +145,7 @@ h1.js-quickedit-page-title {
 .tw-item-card span.section-buttom .numberomodul {
   font-size: 0.8rem !important;
   color: gray;
-  margin-right: 5rem;
+  margin-right: 8.7rem;
 }
 
 .tw-item-card .section-button-course {
@@ -834,7 +834,7 @@ form#user-login-form:after {
 
 .dialog-off-canvas-main-canvas span.section-buttom {
   position: absolute;
-  bottom: -20px;
+  bottom: -15px;
 }
 
 .dialog-off-canvas-main-canvas div#block-views-block-content-completion-block-1 {
@@ -1986,5 +1986,19 @@ div#quickedit-entity-toolbar {
   background-color: #1391c1;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#1391c1), to(#1391c1));
   background-image: linear-gradient(to bottom, #1391c1, #1391c1);
+}
+
+nav#block-digitalcmsmenu ul li {
+  margin: 15px;
+}
+
+p.titrepagemessage {
+  background: white;
+  height: 3rem;
+  color: #1391c1;
+  font-size: 20px;
+  line-height: 3rem;
+  padding: 0px 10px !important;
+  border-top: solid 1px #a5a5a552;
 }
 /*# sourceMappingURL=style.css.map */

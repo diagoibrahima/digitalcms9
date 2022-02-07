@@ -135,7 +135,7 @@ h1.js-quickedit-page-title {
     .numberomodul {
       font-size: 0.8rem !important;
       color: gray;
-      margin-right: 5rem;
+      margin-right: 8.7rem;
     }
   }
 
@@ -773,7 +773,7 @@ div#edit-field-course-wrapper {
 
 span.section-buttom {
   position: absolute;
-  bottom: -20px;
+  bottom: -15px;
 }
 
 div#block-views-block-content-completion-block-1 {
@@ -1915,3 +1915,18 @@ div#quickedit-entity-toolbar {
 }
 
 
+
+nav#block-digitalcmsmenu ul li {
+  margin: 15px;
+}
+
+
+p.titrepagemessage {
+  background: white;
+  height: 3rem;
+  color: #1391c1;
+  font-size: 20px;
+  line-height: 3rem;
+  padding: 0px 10px !important;
+  border-top: solid 1px #a5a5a552;
+}
