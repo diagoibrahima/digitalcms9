@@ -65,10 +65,11 @@ div#edit-actions {
     border-radius: 5px !important;
     width: 100px !important;
     color: white !important;
-    background: linear-gradient(45deg, #0c6385, #46ccff);
+    background: #2b6cb0 !important;
     border: cornsilk !important;
-    margin-left: 89%;
+    margin-left: 88%;
     text-align: center;
+    line-height: 41px  !important;
   }
 }
 
@@ -1484,6 +1485,7 @@ form#node-localization-form {
   div#edit-actions {
     line-height: 2.5rem;
     margin: 10px 0px;
+    display: flex;
   }
 }
 
@@ -1744,7 +1746,7 @@ font-size: large;
     width: 100px;
     margin-left: 36%;
     position: absolute;
-    bottom: 32px;
+ 
     line-height: 1.2;
 }
 
@@ -1936,4 +1938,13 @@ p.titrepagemessage {
 
 .align-left {
   float: inherit;
+}
+
+
+button.btn.btn-edit.tw-bg-blue-700.tw-text-white.hover\:tw-bg-blue-700.hover\:tw-text-white.active.tw-font-bold.uppercase.tw-text-sm.tw-px-6.tw-py-3.tw-rounded-l.tw-outline-none.tw-focus\:outline-none.tw-mb-1.tw-ease-linear.tw-transition-all.tw-duration-150 {
+  background: #1391c1 !important;
+}
+
+button.btn.btn-preview.tw-bg-blue-500.tw-text-white.hover\:tw-bg-blue-700.hover\:tw-text-white.tw-font-bold.uppercase.tw-text-sm.tw-px-6.tw-py-3.tw-rounded-r.outline-none.tw-focus\:outline-none.tw-mb-1.tw-ease-linear.transition-all.duration-150 {
+  border-radius: 0px 0px 0px 0px !important;
 }
