@@ -277,6 +277,8 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
  jQuery('a.moderationStateButton.submit').remove();
  jQuery('a.moderationStateButton.approve').remove();
  jQuery('a.moderationStateButton.reject').remove();
+ jQuery('span.message-langage.pstStatusModeration').addClass('back-rejected')
+
  
  }
  
@@ -392,6 +394,7 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
   // jQuery('.add-module , .use-ajax ').toggle();
    jQuery('.use-ajax ').toggle();
    jQuery('.blockmodule-titre-module').toggleClass('blockmodule-titre-module-expland');
+  jQuery('.tw-switch-editing-button').toggleClass('colore-turne-edite')
  
  turneoff == "Turn editing on" ?  jQuery('.tw-switch-editing-button').text('Turn editing off') : jQuery('.tw-switch-editing-button').text('Turn editing on')
   });
