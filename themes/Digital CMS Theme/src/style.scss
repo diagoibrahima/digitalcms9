@@ -269,7 +269,7 @@ span.expandall-minimizeall-button.cursor-pointer {
   cursor: pointer;
   position: absolute;
   top: -48px;
-  left: 88%;
+  left:91%;
 }
 
 .tw-btn-action-new {
@@ -288,8 +288,8 @@ span.expandall-minimizeall-button.cursor-pointer {
 
   &:hover {
     color: #ffffff !important;
-    background: linear-gradient(45deg, #1491c1, #03aff3);
-    border-style: hidden;
+    background: #1491c1 ;
+    border-style:none !important
   }
 }
 
@@ -707,7 +707,7 @@ article.node:before {
   color: #1491c1;
   border: solid 2px;
   border-style: dashed;
-  border-radius: 8px;
+  border-radius:0px !important;
   line-height: 3;
   text-align: center;
   width: 80%;
@@ -790,10 +790,10 @@ span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2
   margin: auto;
   top: -101px;
   left: 34px;
-  border: solid #1491c1 1px !important;
+  border: solid #9cd2e7 1px !important;
   padding: 0px;
   color: #ffffff !important;
-  background: #1391c1;
+  background: #9cd2e7;
   border: solid 2px;
   border-radius: 0px !important;
   line-height: 45px !important;
@@ -1624,8 +1624,11 @@ div#datatable_filter > label {
 }
 
 a.btn {
-  color: #1391c1;
   padding: 5px;
+  color: white;
+  background: #1391c1;
+  font-size: 12px;
+  line-height: 40px;
 }
 
 input#edit-field-contry-add-more {
@@ -1970,4 +1973,13 @@ button.btn.btn-edit.tw-bg-blue-700.tw-text-white.hover\:tw-bg-blue-700.hover\:tw
 
 button.btn.btn-preview.tw-bg-blue-500.tw-text-white.hover\:tw-bg-blue-700.hover\:tw-text-white.tw-font-bold.uppercase.tw-text-sm.tw-px-6.tw-py-3.tw-rounded-r.outline-none.tw-focus\:outline-none.tw-mb-1.tw-ease-linear.transition-all.duration-150 {
   border-radius: 0px 0px 0px 0px !important;
+}
+
+.back-rejected{
+background: #ff000085 !important;
+color: white !important;
+}
+
+.colore-turne-edite{
+  background: #1491c1 !important;
 }
