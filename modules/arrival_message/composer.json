@@ -1,0 +1,22 @@
+{
+    "name": "drupal/arrival_message",
+    "description": "Allows site admin to configure the message to display after user login.",
+    "type": "drupal-module",
+    "keywords": [
+        "Drupal"
+    ],
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/arrival_message",
+    "authors": [
+        {
+            "name": "Shobhit Juyal",
+            "homepage": "https://www.drupal.org/u/shobhit_juyal",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/arrival_message",
+        "source": "https://git.drupalcode.org/project/arrival_message.git"
+    },
+    "require": {}
+}

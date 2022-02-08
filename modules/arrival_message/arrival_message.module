@@ -1,0 +1,70 @@
+<?php
+
+/**
+ * @file
+ * Arrival Message Module.
+ */
+
+use Drupal\user\UserInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Render\Markup;
+
+/**
+ * Implements hook_help()
+ */
+function arrival_message_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.arrival_message':
+      $output = '';
+      $output .= t('<h3>About</h3>');
+      $output .= t('<p><div><strong>The Arrival Message allows site admin to configure the message to display after user login.</strong></div></p>');
+
+      $output .= t('<h3>How to use</h3>');
+      $output .= t('Just install it as any other contributed module and it will reflect on homepage.');
+
+      return $output;
+
+    default;
+  }
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function arrival_message_user_login($account) {
+  // Check if arrival message is not empty.
+  $site_config = \Drupal::config('system.site');
+  $message = $site_config->get('arrival_message');
+  if (!empty($message)) {
+    $duration = $site_config->get('arrival_message_duration');
+    if ($duration && $duration != "all") {
+      // Check login duration.
+      switch ($duration) {
+        case "first_login":
+          if ($account->getLastAccessedTime()) {
+            return FALSE;
+          }
+          break;
+
+        default:
+          if ($duration) {
+            $duration_to_time = strtotime("-" . str_replace("_", "-", $duration));
+            if (!$duration_to_time  ||
+              $duration_to_time > $account->getLastAccessedTime()) {
+              return FALSE;
+            }
+          }
+        break;
+      }
+    }
+
+    if (\Drupal::service('module_handler')->moduleExists('token')) {
+      $token_service = \Drupal::token();
+      // Replace tokens.
+      $message = $token_service->replace($message, ['user' => $account]);
+    }
+    $rendered_message = Markup::create($message);
+    \Drupal::messenger()->addMessage(t('%msg', ['%msg' => $rendered_message]));
+  }
+
+}

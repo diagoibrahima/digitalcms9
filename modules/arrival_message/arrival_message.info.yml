@@ -1,0 +1,11 @@
+name: 'Arrival Message'
+type: 'module'
+description: 'Allows site admin to configure the message to display after user login.'
+package: 'Content Display'
+core: '8.x'
+core_version_requirement: ^8 || ^9
+
+# Information added by Drupal.org packaging script on 2020-08-09
+version: '1.0.1'
+project: 'arrival_message'
+datestamp: 1596996218

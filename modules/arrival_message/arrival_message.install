@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * This file is used to write Uninstall hook that used in the module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function arrival_message_uninstall() {
+  \Drupal::configFactory()->getEditable('system.site')
+    ->clear('arrival_message_duration')
+    ->clear('arrival_message')->save();
+}

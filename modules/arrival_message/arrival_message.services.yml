@@ -1,0 +1,5 @@
+services:
+  arrival_message.route_subscriber:
+    class: 'Drupal\arrival_message\Routing\ArrivalMessageRouteSubscriber'
+    tags:
+      - { name: event_subscriber }
