@@ -1958,11 +1958,13 @@ svg.svg-inline--fa.fa-pencil-alt.fa-w-16.editeur-conten {
 }
 
 div#quickedit-entity-toolbar {
-  top: 155px !important;
+  
   max-width: 824px !important;
   min-width: 824px !important;
   background: #ffffff;
+  margin: -60px -15px auto;
 }
+
 
 .simpler_quickedit_click.simpler_quickedit.quickedit-field.quickedit-candidate.quickedit-editable.quickedit-editing.quickedit-editor-is-popup {
   opacity: 0 !important;
