@@ -396,14 +396,38 @@ input#edit-preview {
   display: none;
 }
 
+form#comment-comment-delete-form {
+  height: 120px !important;
+  padding: 20px 0px 0px 30px !important;
+}
+
+textarea#edit-field-commentbody2-0-value {
+  border: solid;
+  border-radius: 5px;
+  width: 100%;
+}
+
+div#block-views-block-listcomments-block-1 {
+  margin: 17px;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  line-height: 3;
+  width: 83%;
+  -webkit-box-shadow: 1px 1px 6px #2316161a;
+          box-shadow: 1px 1px 6px #2316161a;
+  color: #575757;
+}
+
 form#node-course-form,
 form#node-module-form,
 form#node-sub-module-form,
 .node-course__edit-form,
-.node-form {
+.node-form, form#comment-comment-delete-form {
   margin-top: 40px;
   background: white;
-  width: 80%;
+  width: 95%;
   margin: auto;
   -webkit-box-shadow: 0px 1px 4px 1px #02020221;
           box-shadow: 0px 1px 4px 1px #02020221;
@@ -416,7 +440,7 @@ form#node-course-form .js-form-item.form-item.js-form-type-textarea.form-item-fi
 form#node-module-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
 form#node-sub-module-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
 .node-course__edit-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
-.node-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value {
+.node-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value, form#comment-comment-delete-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value {
   width: 95%;
   margin: auto;
 }
@@ -425,7 +449,7 @@ form#node-course-form textarea,
 form#node-module-form textarea,
 form#node-sub-module-form textarea,
 .node-course__edit-form textarea,
-.node-form textarea {
+.node-form textarea, form#comment-comment-delete-form textarea {
   overflow: auto;
   border: 1px #98a8bd solid;
   border-radius: 0.25rem;
@@ -466,7 +490,13 @@ form#node-sub-module-form input#edit-field-field-submoduleinmessage-0-target-id,
 .node-form input#edit-field-message-0-value,
 .node-form .js-form-item,
 .node-form input#edit-field-localization-tag-0-target-id,
-.node-form input#edit-field-field-submoduleinmessage-0-target-id {
+.node-form input#edit-field-field-submoduleinmessage-0-target-id, form#comment-comment-delete-form input#edit-title-0-value,
+form#comment-comment-delete-form input#edit-field-course-0-target-id,
+form#comment-comment-delete-form input#edit-field-module-0-target-id,
+form#comment-comment-delete-form input#edit-field-message-0-value,
+form#comment-comment-delete-form .js-form-item,
+form#comment-comment-delete-form input#edit-field-localization-tag-0-target-id,
+form#comment-comment-delete-form input#edit-field-field-submoduleinmessage-0-target-id {
   border-radius: 0.25rem;
   line-height: 2;
 }
@@ -778,6 +808,63 @@ form#user-login-form:after {
   font-size: 25px;
   font-weight: 100;
   margin: 5px auto;
+}
+
+.dialog-off-canvas-main-canvas .node-content section {
+  margin: 100px auto;
+}
+
+.dialog-off-canvas-main-canvas .node-content section h2:nth-child(1) {
+  position: relative;
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.dialog-off-canvas-main-canvas .node-content section h2:nth-child(1):before {
+  content: '';
+  background: #f3f4f6;
+  position: absolute;
+  height: 65px;
+  width: 105%;
+  left: -20px;
+  top: -80px;
+}
+
+.dialog-off-canvas-main-canvas .node-content section ul.links.inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px -10px;
+}
+
+.dialog-off-canvas-main-canvas .node-content section ul.links.inline li {
+  margin: auto 10px;
+  background: #1391c1;
+  color: white;
+  padding: 5px;
+  font-size: 12px;
+  width: 60px;
+  text-align: center;
+}
+
+.dialog-off-canvas-main-canvas a#edit-cancel {
+  background: #e53e3e;
+  font-size: 12px;
+  line-height: 20px !important;
+  padding: 15px 30px;
+  color: white;
+  margin: 0px -220px;
+}
+
+.dialog-off-canvas-main-canvas div#edit-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 96%;
+}
+
+.dialog-off-canvas-main-canvas li.comment-add {
+  display: none;
 }
 
 .dialog-off-canvas-main-canvas .add-translation {
@@ -2055,5 +2142,9 @@ button.btn.btn-preview.tw-bg-blue-500.tw-text-white.hover\:tw-bg-blue-700.hover\
 
 .colore-turne-edite {
   background: #1491c1 !important;
+}
+
+.hidenotefoundasbord {
+  display: none !important;
 }
 /*# sourceMappingURL=style.css.map */

@@ -48,7 +48,7 @@ jQuery(document).ready(function() {
 
      }else{
      
-     console.log(str);
+   //  console.log(str);
      }
 });
  
@@ -115,7 +115,7 @@ jQuery(document).ready(function() {
  var restotranslate=totalmessage-nombredemessagetraduit;
 
  if(isNaN(restotranslate)){restotranslate=0;}
-console.log(restotranslate);
+//console.log(restotranslate);
 
  var pourcentage = nombredemessagetraduit*100/(totalmessage*nblangue);
  
@@ -128,7 +128,7 @@ console.log(restotranslate);
  
  if(pourcentagemyInt >=100){
    jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html(100+'%');
-   console.log(pourcentagemyInt);
+ //  console.log(pourcentagemyInt);
   }else  
  
  jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html(pourcentagemyInt+'%');
@@ -170,7 +170,7 @@ let totalenombremessagelocalized = jQuery('div#block-views-block-cardnbmessagelo
 locationRate = parseInt((totalenombremessagelocalized *100 )/(messagesimpe * nblangueused));
 jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(locationRate+'%');
 
-console.log(totalenombremessagelocalized);
+//console.log(totalenombremessagelocalized);
 
 
 
@@ -396,8 +396,11 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
    jQuery('.blockmodule-titre-module').toggleClass('blockmodule-titre-module-expland');
   jQuery('.tw-switch-editing-button').toggleClass('colore-turne-edite')
  
- turneoff == "Turn editing on" ?  jQuery('.tw-switch-editing-button').text('Turn editing off') : jQuery('.tw-switch-editing-button').text('Turn editing on')
+ turneoff == "Turn editing on" ?  jQuery('.tw-switch-editing-button').text('Turn editing off') : jQuery('.tw-switch-editing-button').text('Turn editing on');
   });
+
+var notefounddasbord =(jQuery('div#block-tailwindcss-content').text());
+notefounddasbord == " The requested page could not be found. " ? jQuery('div#block-tailwindcss-content').text(''): jQuery('div#block-tailwindcss-content').removeClass('hidenotefoundasbord');
   
    // Expand switch for one single learning module  old
    /*

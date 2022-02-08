@@ -376,14 +376,37 @@ input#edit-preview {
   display: none;
 }
 
+form#comment-comment-delete-form {
+  height: 120px !important;
+  padding: 20px 0px 0px 30px !important;
+}
+
+textarea#edit-field-commentbody2-0-value {
+  border: solid;
+  border-radius: 5px;
+  width: 100%;
+}
+
+div#block-views-block-listcomments-block-1 {
+  margin: 17px;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  line-height: 3;
+  width: 83%;
+  box-shadow: 1px 1px 6px #2316161a;
+  color: #575757;
+}
+
 form#node-course-form,
 form#node-module-form,
 form#node-sub-module-form,
 .node-course__edit-form,
-.node-form {
+.node-form , form#comment-comment-delete-form {
   margin-top: 40px;
   background: white;
-  width: 80%;
+  width: 95%;
   margin: auto;
   box-shadow: 0px 1px 4px 1px #02020221;
   border-radius: 0.25rem;
@@ -701,6 +724,61 @@ article.node:before {
     font-weight: 100;
     margin: 5px auto;
   }
+  section{
+   
+    margin: 100px auto;
+    h2:nth-child(1) {
+      position: relative;
+      font-size: 25px;
+      font-weight: 100;
+
+      &:before {
+        content: '';
+        background: #f3f4f6;
+        position: absolute;
+        height: 65px;
+        width: 105%;
+        left: -20px;
+        top: -80px;
+    }
+  }
+  ul.links.inline {
+    display: flex;
+    margin: 5px -10px;
+
+
+     li {
+      margin: auto 10px;
+    background: #1391c1;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    width: 60px;
+    text-align: center;
+}
+}
+
+  }
+}
+
+
+a#edit-cancel {
+  background: #e53e3e;
+  font-size: 12px;
+  line-height:20px !important;
+  padding: 15px 30px;
+  color: white;
+  margin: 0px -220px;
+}
+
+div#edit-actions {
+  display: flex;
+  width: 96%;
+}
+
+
+li.comment-add {
+  display: none;
 }
 
 .add-translation {
@@ -1982,4 +2060,7 @@ color: white !important;
 
 .colore-turne-edite{
   background: #1491c1 !important;
+}
+.hidenotefoundasbord{
+  display: none !important;
 }
