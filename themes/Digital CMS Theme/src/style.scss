@@ -68,8 +68,8 @@ div#edit-actions {
     border: cornsilk !important;
     margin-left: 89%;
     text-align: center;
-    line-height: 41px !important;
-    border-radius: 0px !important;
+    line-height: 38.5px !important;
+    border-radius:5px !important;
     font-size: 12px;
   }
 }
@@ -586,6 +586,8 @@ article.node:before {
       margin: 10px 20px;
       width: 100%;
       text-align: center;
+      display: flex;
+      justify-content: center;
     }
 
     .js-form-item {
@@ -1065,10 +1067,10 @@ form#user-login-form:after {
   }
 
   div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(3):before {
-    left: 29px;
+    left:0px;
     content: "";
     position: absolute;
-    width: 27.2%;
+    width: 100%;
     height: 1px;
     z-index: 999999999999999;
     background: #718096;
@@ -1234,10 +1236,14 @@ span.message-langage {
   color: #0094ff;
   padding: 3px 23px;
   margin: 1px;
-  border-radius: 0px;
+  border-radius: 10px;
   font-size: 12px;
   line-height: 3.5;
   top: 48px;
+}
+
+article.contextual-region.node span.message-langage.pstStatusModeration {
+  border-radius: 0px !important;
 }
 
 span.message-etat {
@@ -1548,7 +1554,7 @@ form#node-localization-form {
 
   div#edit-actions {
     line-height: 2.5rem;
-    margin: 10px 0px;
+    margin: 15px 27px;
     display: flex;
   }
 }
@@ -1826,7 +1832,6 @@ input#edit-pass {
   width: 100px;
   margin-left: 36%;
   position: absolute;
-
   line-height: 1.2;
 }
 
@@ -1950,12 +1955,7 @@ svg.svg-inline--fa.fa-pencil-alt.fa-w-16.editeur-conten {
   opacity: 0;
 }
 
-.views-field.views-field-body {
-  white-space: nowrap;
-  overflow: auto;
-  text-overflow: ellipsis;
-  width: 99%;
-}
+
 
 div#quickedit-entity-toolbar {
   
@@ -2023,4 +2023,21 @@ button.btn.btn-preview.tw-bg-blue-500.tw-text-white.hover\:tw-bg-blue-700.hover\
 }
 .hidenotefoundasbord {
   display: none !important;
+}
+
+
+button.btn.btn-edit.tw-bg-blue-700.tw-text-white.hover\:tw-bg-blue-700.hover\:tw-text-white.active.tw-font-bold.uppercase.tw-text-sm.tw-px-6.tw-py-3.tw-rounded-l.tw-outline-none.tw-focus\:outline-none.tw-mb-1.tw-ease-linear.tw-transition-all.tw-duration-150 ,
+button.btn.btn-preview.tw-bg-blue-500.tw-text-white.hover\:tw-bg-blue-700.hover\:tw-text-white.tw-font-bold.uppercase.tw-text-sm.tw-px-6.tw-py-3.tw-rounded-r.outline-none.tw-focus\:outline-none.tw-mb-1.tw-ease-linear.transition-all.duration-150 {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+
+p.titrepagemessage:before {
+  content: '';
+  background: #f3f4f6;
+  position: absolute;
+  width: 73%;
+  height: 39px;
+  margin: 47px auto 0px -10px;
 }
