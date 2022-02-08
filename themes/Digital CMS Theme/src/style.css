@@ -401,7 +401,7 @@ form#comment-comment-delete-form {
   padding: 20px 0px 0px 30px !important;
 }
 
-textarea#edit-field-commentbody2-0-value {
+textarea#edit-field-commentbody2-0-value, input#edit-subject-0-value {
   border: solid;
   border-radius: 5px;
   width: 100%;
@@ -424,7 +424,8 @@ form#node-course-form,
 form#node-module-form,
 form#node-sub-module-form,
 .node-course__edit-form,
-.node-form, form#comment-comment-delete-form {
+.node-form,
+form#comment-comment-delete-form {
   margin-top: 40px;
   background: white;
   width: 95%;
@@ -440,7 +441,8 @@ form#node-course-form .js-form-item.form-item.js-form-type-textarea.form-item-fi
 form#node-module-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
 form#node-sub-module-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
 .node-course__edit-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
-.node-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value, form#comment-comment-delete-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value {
+.node-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
+form#comment-comment-delete-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value {
   width: 95%;
   margin: auto;
 }
@@ -449,7 +451,8 @@ form#node-course-form textarea,
 form#node-module-form textarea,
 form#node-sub-module-form textarea,
 .node-course__edit-form textarea,
-.node-form textarea, form#comment-comment-delete-form textarea {
+.node-form textarea,
+form#comment-comment-delete-form textarea {
   overflow: auto;
   border: 1px #98a8bd solid;
   border-radius: 0.25rem;
@@ -490,7 +493,8 @@ form#node-sub-module-form input#edit-field-field-submoduleinmessage-0-target-id,
 .node-form input#edit-field-message-0-value,
 .node-form .js-form-item,
 .node-form input#edit-field-localization-tag-0-target-id,
-.node-form input#edit-field-field-submoduleinmessage-0-target-id, form#comment-comment-delete-form input#edit-title-0-value,
+.node-form input#edit-field-field-submoduleinmessage-0-target-id,
+form#comment-comment-delete-form input#edit-title-0-value,
 form#comment-comment-delete-form input#edit-field-course-0-target-id,
 form#comment-comment-delete-form input#edit-field-module-0-target-id,
 form#comment-comment-delete-form input#edit-field-message-0-value,
@@ -811,7 +815,7 @@ form#user-login-form:after {
 }
 
 .dialog-off-canvas-main-canvas .node-content section {
-  margin: 100px auto;
+  margin: 100px auto 0px;
 }
 
 .dialog-off-canvas-main-canvas .node-content section h2:nth-child(1) {
@@ -821,7 +825,7 @@ form#user-login-form:after {
 }
 
 .dialog-off-canvas-main-canvas .node-content section h2:nth-child(1):before {
-  content: '';
+  content: "";
   background: #f3f4f6;
   position: absolute;
   height: 65px;
@@ -1236,7 +1240,10 @@ form#user-login-form:after {
   font-weight: 200;
 }
 
-.dialog-off-canvas-main-canvas .report-card span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours, .dialog-off-canvas-main-canvas .report-card span.rounded-full.text-white.badge.bg-red-400.text-xs.Module, .dialog-off-canvas-main-canvas .report-card span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated, .dialog-off-canvas-main-canvas .report-card span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messages {
+.dialog-off-canvas-main-canvas .report-card span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours,
+.dialog-off-canvas-main-canvas .report-card span.rounded-full.text-white.badge.bg-red-400.text-xs.Module,
+.dialog-off-canvas-main-canvas .report-card span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated,
+.dialog-off-canvas-main-canvas .report-card span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messages {
   position: absolute;
   top: 0px;
   font-size: 45px;
@@ -1245,7 +1252,11 @@ form#user-login-form:after {
   left: 54px;
 }
 
-.dialog-off-canvas-main-canvas .report-card svg.svg-inline--fa.fa-book.fa-w-14, .dialog-off-canvas-main-canvas .report-card svg.svg-inline--fa.fa-comment-dots.fa-w-16, .dialog-off-canvas-main-canvas .report-card svg.svg-inline--fa.fa-comment-dots.fa-w-16, .dialog-off-canvas-main-canvas .report-card svg.svg-inline--fa.fa-th-list.fa-w-16, .dialog-off-canvas-main-canvas .report-card .svg-inline--fa.fa-w-20 {
+.dialog-off-canvas-main-canvas .report-card svg.svg-inline--fa.fa-book.fa-w-14,
+.dialog-off-canvas-main-canvas .report-card svg.svg-inline--fa.fa-comment-dots.fa-w-16,
+.dialog-off-canvas-main-canvas .report-card svg.svg-inline--fa.fa-comment-dots.fa-w-16,
+.dialog-off-canvas-main-canvas .report-card svg.svg-inline--fa.fa-th-list.fa-w-16,
+.dialog-off-canvas-main-canvas .report-card .svg-inline--fa.fa-w-20 {
   position: absolute;
   left: 16px;
   top: 20px;
@@ -1594,7 +1605,7 @@ a.hidegeneratebutton {
 }
 
 .channelgenerate.whatsapp {
-  background: #25D366;
+  background: #25d366;
   width: 100%;
   padding: 22px;
   border-radius: 5px;
@@ -1605,7 +1616,7 @@ a.hidegeneratebutton {
 }
 
 .channelgenerate.telegrame {
-  background: #0088CC;
+  background: #0088cc;
   width: 100%;
   padding: 22px;
   border-radius: 5px;
@@ -1616,7 +1627,7 @@ a.hidegeneratebutton {
 }
 
 .channelgenerate.messanger {
-  background: #006AFF;
+  background: #006aff;
   width: 100%;
   padding: 22px;
   border-radius: 5px;
@@ -1701,7 +1712,10 @@ a.moderationStateButton.rsubmit {
   cursor: pointer;
 }
 */
-a.moderationStateButton.submit.submitpositionleft, a.moderationStateButton.approve, a.moderationStateButton.reject, a.moderationStateButton.rsubmit {
+a.moderationStateButton.submit.submitpositionleft,
+a.moderationStateButton.approve,
+a.moderationStateButton.reject,
+a.moderationStateButton.rsubmit {
   position: absolute;
   top: -48px;
   right: 34px;
@@ -1987,7 +2001,7 @@ div#edit-pass--description {
 }
 
 form#user-login-form:before {
-  content: '';
+  content: "";
   background: url(https://www.unicef.org/wca/sites/unicef.org.wca/files/styles/hero_desktop/public/wca-programme-2017-education.jpg?itok=nvG0RG9p);
   position: absolute;
   height: 100%;
@@ -1998,30 +2012,36 @@ form#user-login-form:before {
   background-position: right;
 }
 
-input#edit-name, input#edit-pass {
+input#edit-name,
+input#edit-pass {
   background: #1391c1;
   border: none !important;
   border-bottom: solid 2px white !important;
   border-radius: 0px !important;
 }
 
-input#edit-name:focus-visible, input#edit-pass:focus-visible {
+input#edit-name:focus-visible,
+input#edit-pass:focus-visible {
   outline: none !important;
 }
 
-input#edit-name::-webkit-input-placeholder, input#edit-pass::-webkit-input-placeholder {
+input#edit-name::-webkit-input-placeholder,
+input#edit-pass::-webkit-input-placeholder {
   color: white !important;
 }
 
-input#edit-name:-ms-input-placeholder, input#edit-pass:-ms-input-placeholder {
+input#edit-name:-ms-input-placeholder,
+input#edit-pass:-ms-input-placeholder {
   color: white !important;
 }
 
-input#edit-name::-ms-input-placeholder, input#edit-pass::-ms-input-placeholder {
+input#edit-name::-ms-input-placeholder,
+input#edit-pass::-ms-input-placeholder {
   color: white !important;
 }
 
-input#edit-name::placeholder, input#edit-pass::placeholder {
+input#edit-name::placeholder,
+input#edit-pass::placeholder {
   color: white !important;
 }
 
