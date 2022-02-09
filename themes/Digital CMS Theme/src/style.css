@@ -863,13 +863,25 @@ form#user-login-form:after {
   margin: 100px auto 0px;
 }
 
+.dialog-off-canvas-main-canvas .node-content section article {
+  display: none !important;
+}
+
+.dialog-off-canvas-main-canvas .node-content section div#edit-field-commentbody2-0-value--description {
+  display: none;
+}
+
 .dialog-off-canvas-main-canvas .node-content section h2:nth-child(1) {
+  display: none !important;
+}
+
+.dialog-off-canvas-main-canvas .node-content section h2 {
   position: relative;
   font-size: 25px;
   font-weight: 100;
 }
 
-.dialog-off-canvas-main-canvas .node-content section h2:nth-child(1):before {
+.dialog-off-canvas-main-canvas .node-content section h2:before {
   content: "";
   background: #f3f4f6;
   position: absolute;

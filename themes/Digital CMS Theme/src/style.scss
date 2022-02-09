@@ -736,10 +736,21 @@ article.node:before {
       margin: 5px auto;
     }
     section {
+     
 
+      article{
+        display: none !important;
+      }
+     
+      div#edit-field-commentbody2-0-value--description {
+        display: none;
+    }
      
       margin: 100px auto 0px;
-      h2:nth-child(1) {
+      h2:nth-child(1){
+        display: none !important;
+      }
+      h2 {
         position: relative;
         font-size: 25px;
         font-weight: 100;
