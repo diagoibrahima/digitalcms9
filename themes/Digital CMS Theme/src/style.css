@@ -1956,12 +1956,15 @@ input#edit-pass .channelgenerate {
   opacity: 1;
 }
 
-.blockmodule-description-submodule .message:hover {
-  background-color: #f1e9e9;
-  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+/*
+.blockmodule-description-submodule .message {
+  &:hover {
+    background-color: #f1e9e9;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
 }
 
+*/
 .btn-group {
   width: 100px;
   margin-left: 37%;
