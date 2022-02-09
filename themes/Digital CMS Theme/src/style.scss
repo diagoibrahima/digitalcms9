@@ -2140,3 +2140,13 @@ div#block-views-block-listcomments-block-1:before {
   width: 94%;
   left: 0;
 }
+
+td.views-field.views-field-user-picture img {
+  height: 50px !important;
+  width: 50px !important;
+  border-radius: 50px !important;
+}
+
+td.tw-text-green-400.views-field.views-field-edit-user.views-align-left {
+  color: #1391c1 !important;
+}
