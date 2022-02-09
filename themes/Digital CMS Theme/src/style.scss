@@ -364,7 +364,7 @@ div#block-tailwindcss-content {
   display: flex;
   flex-direction: column;
   width: 95%;
-  margin: auto;
+  margin:auto;
   padding: 15px 0px;
 }
 
@@ -661,7 +661,7 @@ article.node:before {
     color: #34383a8c !important;
     border: solid 2px;
     border-style: dashed;
-    border-radius: inherit;
+    border-radius:5px;
     line-height: 3;
     text-align: center;
     width: 80%;
@@ -676,7 +676,7 @@ article.node:before {
     color: #1491c1 !important;
     border: solid 2px;
     border-style: dashed;
-    border-radius: inherit;
+    border-radius:5px;
     line-height: 3;
     text-align: center;
     width: 80%;
@@ -764,7 +764,7 @@ article.node:before {
 
   div#edit-actions {
     display: flex;
-    width: 96%;
+    width: 97.5%;
   }
 
   li.comment-add {
@@ -775,7 +775,7 @@ article.node:before {
     color: #1491c1;
     border: solid 2px;
     border-style: dashed;
-    border-radius: 0px !important;
+    border-radius:5px !important;
     line-height: 3;
     text-align: center;
     width: 80%;
@@ -1554,7 +1554,7 @@ form#node-localization-form {
 
   div#edit-actions {
     line-height: 2.5rem;
-    margin: 15px 27px;
+    margin: 15px 15px;
     display: flex;
   }
 }
@@ -1830,7 +1830,7 @@ input#edit-pass {
 
 .btn-group {
   width: 100px;
-  margin-left: 36%;
+  margin-left: 37%;
   position: absolute;
   line-height: 1.2;
 }
@@ -2037,7 +2037,7 @@ p.titrepagemessage:before {
   content: '';
   background: #f3f4f6;
   position: absolute;
-  width: 73%;
-  height: 39px;
+  width: 100%;
+  height:41px;
   margin: 47px auto 0px -10px;
 }
