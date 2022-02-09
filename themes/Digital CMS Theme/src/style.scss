@@ -382,9 +382,21 @@ form#comment-comment-delete-form {
 }
 
 textarea#edit-field-commentbody2-0-value , input#edit-subject-0-value {
-  border: solid;
+  border: 1px #98a8bd solid ;
   border-radius: 5px;
   width: 100%;
+}
+
+form#comment-form div#edit-actions #edit-submit {
+  margin-left: 84%;
+}
+
+form#comment-form {
+  height: 570px !important;
+
+  summary {
+    display: none;
+  }
 }
 
 div#block-views-block-listcomments-block-1 {
@@ -404,7 +416,7 @@ form#node-module-form,
 form#node-sub-module-form,
 .node-course__edit-form,
 .node-form,
-form#comment-comment-delete-form {
+form#comment-comment-delete-form ,form#comment-form {
   margin-top: 40px;
   background: white;
   width: 95%;
@@ -414,7 +426,8 @@ form#comment-comment-delete-form {
   height: 380px;
   margin: 30px auto;
 
-  .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value {
+  .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value , .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value
+  , .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value {
     width: 95%;
     margin: auto;
   }
@@ -436,6 +449,11 @@ form#comment-comment-delete-form {
     border-radius: 0.25rem;
     line-height: 2;
   }
+}
+
+
+.js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value {
+  padding: 20px 0px;
 }
 form#node-module-form,
 form#node-sub-module-form {
@@ -2042,4 +2060,83 @@ p.titrepagemessage:before {
   width: 100%;
   height:41px;
   margin: 47px auto 0px -10px;
+}
+
+.image-profile-user img {
+  display: block;
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+  margin: 10px 0px 0px 0px;
+}
+
+p.commented-body {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0px;
+  text-align: initial;
+  color: #a0aec0;
+}
+
+.image-profile-user {
+  display: flex;
+
+  .name-profile-user {
+      color: #000000;
+      margin: auto 12px;
+      font-weight: 700;
+      text-transform: capitalize;
+  }
+}
+p.has-commented {
+  font-size: 12px;
+  text-align: initial;
+  color: #8ed1ec;
+}
+
+p.commented-date {
+  color: #8ed1ec;
+  font-size: 12px;
+  text-align: initial;
+}
+
+.commente-links {
+  display: flex;
+  margin: -15px 0px;
+  font-size: 12px;
+}
+
+.commente{
+  margin-right: 10px;
+  position: relative;
+
+  &:hover {
+    color: #1391c1;
+}
+
+  a:before {
+    content: '';
+    background: rgba(255, 0, 0, 0);
+    height: 54%;
+    width: 100%;
+    position: absolute;
+    top: 9px;
+}
+}
+
+.separateur-comment {
+  height: 10px;
+  background: #f3f4f6;
+  width: 113%;
+  margin: 15px -13px;
+}
+
+div#block-views-block-listcomments-block-1:before {
+  content: '';
+  background: #f3f4f6;
+  position: absolute;
+  bottom: 0;
+  height: 47px;
+  width: 94%;
+  left: 0;
 }
