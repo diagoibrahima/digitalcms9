@@ -412,12 +412,8 @@ textarea#edit-field-commentbody2-0-value, input#edit-subject-0-value {
   width: 100%;
 }
 
-form#comment-form div#edit-actions #edit-submit {
-  margin-left: 84%;
-}
-
 form#comment-form {
-  height: 570px !important;
+  height: 300px !important;
 }
 
 form#comment-form summary {
@@ -435,6 +431,10 @@ div#block-views-block-listcomments-block-1 {
   -webkit-box-shadow: 1px 1px 6px #2316161a;
           box-shadow: 1px 1px 6px #2316161a;
   color: #575757;
+  overflow-y: scroll;
+  height: 362px;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 form#node-course-form,
@@ -890,7 +890,7 @@ form#user-login-form:after {
   content: "";
   background: #f3f4f6;
   position: absolute;
-  height: 65px;
+  height: 60px;
   width: 105%;
   left: -20px;
   top: -80px;
@@ -2323,9 +2323,25 @@ div#block-views-block-listcomments-block-1:before {
   content: '';
   background: #f3f4f6;
   position: absolute;
-  bottom: 0;
-  height: 47px;
+  bottom: 0px;
+  height: 50px;
   width: 94%;
+  left: 0;
+  z-index: 1;
+}
+
+.add-height-block-comment {
+  height: 938px !important;
+}
+
+.add-height-block-comment:after {
+  content: '';
+  background: #e4e7eb;
+  height: 30px;
+  width: 100%;
+  position: absolute;
+  bottom: -14px;
+  z-index: 99;
   left: 0;
 }
 
@@ -2339,34 +2355,63 @@ td.tw-text-green-400.views-field.views-field-edit-user.views-align-left {
   color: #1391c1 !important;
 }
 
+/*
+
 .node-content .quickedit-field:nth-child(2) {
-  background: #0094ff4d;
+  background:#0094ff4d;;
   width: 100px;
   font-size: 12px;
   text-align: center;
   border-radius: 20px;
   line-height: 2;
-  color: #0094ff !important;
+  color:#0094ff !important;
   margin: 15px 0px;
+
+  a{
+    color: #0094ff !important;
+  }
 }
 
-.node-content .quickedit-field:nth-child(2) a {
-  color: #0094ff !important;
-}
 
 ul.links.inline + div {
-  background: #0000ff3b;
+  background:#0000ff3b;
   width: 100px !important;
   font-size: 12px !important;
   text-align: center;
   border-radius: 20px !important;
   line-height: 2 !important;
-  color: #0094ff !important;
+  color:#0094ff !important;
   position: absolute;
   margin: -39px 113px;
+
+  a{
+    color: #0094ff !important;
+  }
+} 
+
+*/
+.node-content form#comment-form div#edit-actions #edit-submit {
+  margin-left: 84%;
 }
 
-ul.links.inline + div a {
-  color: #0094ff !important;
+.node-content form#comment-form {
+  -webkit-box-shadow: 0px 0px 0px 0px #ffffff00 !important;
+          box-shadow: 0px 0px 0px 0px #ffffff00 !important;
+  height: 380px !important;
+  width: 100%;
+}
+
+section a + h2 {
+  display: none;
+}
+
+span.button-add-new-comment {
+  background: #1391c1;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  margin: 30px auto;
+  position: absolute;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

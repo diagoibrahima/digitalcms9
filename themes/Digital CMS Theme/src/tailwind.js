@@ -1,6 +1,9 @@
 jQuery(document).ready(function() {
   jQuery('.blockmodule-submodule').hide();
   jQuery('a.btn').hide();
+  jQuery('section').hide();
+jQuery('<span class="button-add-new-comment">Add a new comment</span>').insertBefore('section');
+
  // jQuery('a.addnewlocalisation').hide();
   jQuery('.use-ajax').hide();
   jQuery('#edit-field-localization-messagebody-wrapper').hide();
@@ -50,6 +53,13 @@ jQuery(document).ready(function() {
      
    //  console.log(str);
      }
+});
+
+//Show add comment form
+
+jQuery( "span.button-add-new-comment " ).click(function() {
+  jQuery('section').show();
+  jQuery('div#block-views-block-listcomments-block-1').addClass('add-height-block-comment')
 });
  
  
