@@ -433,8 +433,8 @@ div#block-views-block-listcomments-block-1 {
   color: #575757;
   overflow-y: scroll;
   height: 362px;
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 form#node-course-form,
@@ -2410,8 +2410,17 @@ span.button-add-new-comment {
   padding: 10px;
   border-radius: 5px;
   color: white;
-  margin: 30px auto;
+  margin: 30px 0px 0px -15px;
   position: absolute;
   cursor: pointer;
+}
+
+textarea#edit-field-commentbody2-0-value {
+  font-size: 12px;
+  overflow-y: hidden;
+  line-height: 2;
+  color: black;
+  padding: 10px;
+  height: inherit;
 }
 /*# sourceMappingURL=style.css.map */
