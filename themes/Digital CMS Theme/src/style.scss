@@ -2162,3 +2162,33 @@ td.tw-text-green-400.views-field.views-field-edit-user.views-align-left {
   color: #1391c1 !important;
 }
 
+.node-content .quickedit-field:nth-child(2) {
+  background:#0094ff4d;;
+  width: 100px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 20px;
+  line-height: 2;
+  color:#0094ff !important;
+  margin: 15px 0px;
+
+  a{
+    color: #0094ff !important;
+  }
+}
+
+ul.links.inline + div {
+  background:#0000ff3b;
+  width: 100px !important;
+  font-size: 12px !important;
+  text-align: center;
+  border-radius: 20px !important;
+  line-height: 2 !important;
+  color:#0094ff !important;
+  position: absolute;
+  margin: -39px 113px;
+
+  a{
+    color: #0094ff !important;
+  }
+}
