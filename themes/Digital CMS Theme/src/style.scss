@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body {
   background: #e5e7eb !important;
+ 
 }
+body ,p, h1,h2,h3,h4,h5,h6 ,span , div , input , a ,#edit-submit {
+  font-family: 'Roboto', sans-serif !important;
+
+}
+
 
 aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
   background-color: #1491c1 !important;
@@ -2162,6 +2170,7 @@ td.tw-text-green-400.views-field.views-field-edit-user.views-align-left {
   color: #1391c1 !important;
 }
 
+
 .node-content .quickedit-field:nth-child(2) {
   background:#0094ff4d;;
   width: 100px;
@@ -2176,6 +2185,7 @@ td.tw-text-green-400.views-field.views-field-edit-user.views-align-left {
     color: #0094ff !important;
   }
 }
+
 
 ul.links.inline + div {
   background:#0000ff3b;
