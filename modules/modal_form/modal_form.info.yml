@@ -1,0 +1,12 @@
+name: 'Modal Form'
+description: 'A toolset for quick start of using forms in modal windows, flavored by access checks.'
+package: Form
+type: module
+core: 8.x
+
+core_version_requirement: ^8 || ^9
+
+# Information added by Drupal.org packaging script on 2020-07-21
+version: '8.x-1.2'
+project: 'modal_form'
+datestamp: 1595346292
