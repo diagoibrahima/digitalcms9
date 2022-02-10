@@ -1,0 +1,5 @@
+modal_form:
+  js:
+    js/modal_form.js: {}
+  dependencies:
+    - core/drupal.ajax

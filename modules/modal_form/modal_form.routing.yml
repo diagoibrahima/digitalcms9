@@ -1,0 +1,7 @@
+modal_form.modal_form:
+  path: '/modal-form/{form_fqcn}'
+  defaults:
+    _controller: 'Drupal\modal_form\Controller\ModalFormController::getForm'
+  requirements:
+    _access: 'TRUE'
+    form_fqcn: .+
