@@ -869,10 +869,6 @@ form#user-login-form:after {
   margin: 100px auto 0px;
 }
 
-.dialog-off-canvas-main-canvas .node-content section article {
-  display: none !important;
-}
-
 .dialog-off-canvas-main-canvas .node-content section div#edit-field-commentbody2-0-value--description {
   display: none;
 }
