@@ -5,7 +5,7 @@ jQuery(document).ready(function() {
 jQuery('<span class="button-add-new-comment">Add a new comment</span>').insertBefore('section');
 
  // jQuery('a.addnewlocalisation').hide();
-  jQuery('.use-ajax').hide();
+//  jQuery('.use-ajax').hide();
   jQuery('#edit-field-localization-messagebody-wrapper').hide();
   //jQuery('#cke_edit-field-localization-messagebody-0-value').hide();
   //jQuery("a.add-module ").unbind('click');
@@ -402,7 +402,7 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
    var turneoff = (jQuery('.tw-switch-editing-button').text());
    var expand = (jQuery('.expandall-minimizeall-button').text());
   // jQuery('.add-module , .use-ajax ').toggle();
-   jQuery('.use-ajax ').toggle();
+   //jQuery('.use-ajax ').toggle();
    jQuery('.blockmodule-titre-module').toggleClass('blockmodule-titre-module-expland');
   jQuery('.tw-switch-editing-button').toggleClass('colore-turne-edite')
  
