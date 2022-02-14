@@ -414,6 +414,17 @@ textarea#edit-field-commentbody2-0-value, input#edit-subject-0-value {
 
 form#comment-form {
   height: 300px !important;
+  position: relative;
+}
+
+form#comment-form:before {
+  content: '';
+  background: #f3f4f6;
+  position: absolute;
+  height: 69px;
+  width: 106%;
+  top: -90px;
+  left: -25px;
 }
 
 form#comment-form summary {
@@ -2331,7 +2342,7 @@ div#block-views-block-listcomments-block-1:before {
 }
 
 .add-height-block-comment {
-  height: 708px !important;
+  height: 590px !important;
 }
 
 .add-height-block-comment:after {
@@ -2426,5 +2437,16 @@ textarea#edit-field-commentbody2-0-value {
   color: black;
   padding: 10px;
   height: 300px;
+}
+
+input#edit-submit--2 {
+  background: #1391c1 !important;
+  width: 13% !important;
+  margin-left: 0px;
+  border: solid 2px white !important;
+  border-radius: 5px !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
