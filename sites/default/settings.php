@@ -817,7 +817,7 @@ $databases['default']['default'] = array (
 //BD en local 
 
 $databases['default']['default'] = array (
-  'database' => 'dev_drupal_lms',
+  'database' => 'dev_drupal_lms_role_good',
   'username' => 'root',
   'password' => '',
   'prefix' => '',

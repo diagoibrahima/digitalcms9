@@ -2427,4 +2427,8 @@ textarea#edit-field-commentbody2-0-value {
   padding: 10px;
   height: 300px;
 }
+
+.tw-item-card p SPAN {
+  DISPLAY: none;
+}
 /*# sourceMappingURL=style.css.map */

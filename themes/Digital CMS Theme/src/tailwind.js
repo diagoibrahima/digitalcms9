@@ -2,6 +2,12 @@ jQuery(document).ready(function() {
   jQuery('.blockmodule-submodule').hide();
   jQuery('a.btn').hide();
   jQuery('section').hide();
+
+  //hide submodule and message content 
+  
+  jQuery('.node-content p span b').hide();
+
+  
 jQuery('<span class="button-add-new-comment">Add a new comment</span>').insertBefore('section');
 
 
@@ -34,6 +40,22 @@ jQuery("#data_uri").on("click", function () {
 */
 
 }); 
+
+
+
+//Count nb module V2
+
+jQuery(".views-col").each(function(){
+  var nbmodule = 0;
+  var nbmodule = jQuery(this).find('p span span span span').length;
+  console.log(nbmodule);
+  if(nbmodule<=0 || nbmodule==1) {
+  jQuery(this).find(".numberomodul").html(nbmodule + " Module");
+  }else jQuery(this).find(".numberomodul").html(nbmodule + " Modules");
+});
+
+
+
 
 
  // jQuery('a.addnewlocalisation').hide();
