@@ -5,7 +5,11 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
+<<<<<<< HEAD
         'reference' => 'cf6c82050b25543cb772eedc47c2de3f6377ecbd',
+=======
+        'reference' => '8f9c679cb032e64c56895524d581e0932bada014',
+>>>>>>> c067fd42699ecb00f88aa32f5add2de6febfbb0c
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -83,12 +87,12 @@
             'dev_requirement' => true,
         ),
         'consolidation/output-formatters' => array(
-            'pretty_version' => '4.2.1',
-            'version' => '4.2.1.0',
+            'pretty_version' => '4.2.2',
+            'version' => '4.2.2.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../consolidation/output-formatters',
             'aliases' => array(),
-            'reference' => '4413d7c732afb5d7bdac565c41aa9c8c49c48888',
+            'reference' => 'd57992bf81ead908ee21cd94b46ed65afa2e785b',
             'dev_requirement' => true,
         ),
         'consolidation/robo' => array(
@@ -101,12 +105,12 @@
             'dev_requirement' => true,
         ),
         'consolidation/self-update' => array(
-            'pretty_version' => '2.0.4',
-            'version' => '2.0.4.0',
+            'pretty_version' => '2.0.5',
+            'version' => '2.0.5.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../consolidation/self-update',
             'aliases' => array(),
-            'reference' => '48d3bfac6d37b10c8ddae6e366ea79db5594d918',
+            'reference' => '8a64bdd8daf5faa8e85f56534dd99caf928164b3',
             'dev_requirement' => true,
         ),
         'consolidation/site-alias' => array(
@@ -661,7 +665,11 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
+<<<<<<< HEAD
             'reference' => 'cf6c82050b25543cb772eedc47c2de3f6377ecbd',
+=======
+            'reference' => '8f9c679cb032e64c56895524d581e0932bada014',
+>>>>>>> c067fd42699ecb00f88aa32f5add2de6febfbb0c
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
