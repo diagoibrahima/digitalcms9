@@ -4,13 +4,51 @@ jQuery(document).ready(function() {
   jQuery('section').hide();
 jQuery('<span class="button-add-new-comment">Add a new comment</span>').insertBefore('section');
 
+
+//Download files and archive them in to a zipfile
+
+//The FileSaver API
+jQuery(".downloadzipfile").click(function(){
+  console.log("Salut jszip"); 
+  var zip = new JSZip();
+  zip.file("Hello.txt", "Hello World\n");
+  var img = zip.folder("images");
+  img.file("smile.gif", imgData, {base64: true});
+  zip.generateAsync({type:"blob"})
+  .then(function(content) {
+      // see FileSaver.js
+      saveAs(content, "example.zip");
+  });
+/*
+//The data URL
+var zip = new JSZip();
+zip.file("Hello.txt", "Hello world\n");
+
+jQuery("#data_uri").on("click", function () {
+    zip.generateAsync({type:"base64"}).then(function (base64) {
+        window.location = "data:application/zip;base64," + base64;
+    }, function (err) {
+        jQuery("#data_uri").text(err);
+    });
+});
+*/
+
+}); 
+
+
  // jQuery('a.addnewlocalisation').hide();
-  jQuery('.use-ajax').hide();
+  //jQuery('.use-ajax').hide();
   jQuery('#edit-field-localization-messagebody-wrapper').hide();
   //jQuery('#cke_edit-field-localization-messagebody-0-value').hide();
   //jQuery("a.add-module ").unbind('click');
   //jQuerys(".add-module").attr("disabled",true);
  // jQuery('.add-module , .use-ajax').hide();
+
+
+  // jQuery('.name-profile-user').append('<p><iframe height="200" id="replytocomments" src="http://localhost/digitalcms9/en/comment/reply/node/539/field_localization_comments/17" title="replycomment" width="300"></iframe></p>')
+
+
+
   jQuery('option[value="_none"]').remove();
   jQuery('.entity-moderation-form .form-item label').html('');
   jQuery('form#node-localization-form div#edit-actions').append('<div class="tw-flex tw-items-center tw-jtw-ustify-center tw-mb-4 btn-group"><button class="btn btn-edit tw-bg-blue-700 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white active tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-l tw-outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear tw-transition-all tw-duration-150" type="button">Edit</button><button class="btn btn-preview tw-bg-blue-500 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-r outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear transition-all duration-150" type="button">Preview</button></div>');
@@ -22,7 +60,6 @@ jQuery('<span class="button-add-new-comment">Add a new comment</span>').insertBe
   jQuery('#edit-field-localization-channel').change(function() {
 
     let channel=jQuery( "#edit-field-localization-channel option:selected" ).text();
- 
 
     if(channel=="SMS"){
       
@@ -402,7 +439,7 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
    var turneoff = (jQuery('.tw-switch-editing-button').text());
    var expand = (jQuery('.expandall-minimizeall-button').text());
   // jQuery('.add-module , .use-ajax ').toggle();
-   jQuery('.use-ajax ').toggle();
+  // jQuery('.use-ajax ').toggle();
    jQuery('.blockmodule-titre-module').toggleClass('blockmodule-titre-module-expland');
   jQuery('.tw-switch-editing-button').toggleClass('colore-turne-edite')
  
@@ -429,7 +466,7 @@ notefounddasbord == " The requested page could not be found. " ? jQuery('div#blo
  jQuery('<h1 class="titre-cms-translation"> CONTENT MANAGEMENT AND ADAPTATION PLATFORM </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name'); 
  jQuery('<i class="fa fa-fw fa-user"></i>').insertBefore('input#edit-name');
  jQuery('<i class="fa fa-fw fa-lock"></i>').insertBefore('input#edit-pass');
- jQuery('a.use-ajax').prepend('<i class="fas fa-plus-square"></i>');
+ //jQuery('a.use-ajax').prepend('<i class="fas fa-plus-square"></i>');
  jQuery('.views-view-grid.horizontal.cols-4.clearfix .views-row').last().append('<div class="views-col col-1 addcourse-blank" style="width: 25%;"><div class="views-field views-field-nothing"><span class="field-content"><div class=" tw-item-card "><a href="node/add/course_" class="addcoursebutton" tabindex="-1">Add Content</a></div></div> ');
  jQuery('#edit-name').attr('placeholder','  Username');
  jQuery('#edit-pass').attr('placeholder','  Password');

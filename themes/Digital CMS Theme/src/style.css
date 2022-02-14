@@ -702,6 +702,14 @@ form#user-login-form:after {
 } 
 
 */
+  /*
+  a.use-ajax {
+    padding-left: 78.9% !important;
+    color: rgba(59, 131, 246, 0.931);
+    position: relative;
+    font-weight: 200;
+  }
+*/
 }
 
 .dialog-off-canvas-main-canvas form#user-login-form {
@@ -1029,13 +1037,6 @@ form#user-login-form:after {
   background: linear-gradient(45deg, #1491c1, #089cd6);
   color: #ffffff !important;
   border: none !important;
-}
-
-.dialog-off-canvas-main-canvas a.use-ajax {
-  padding-left: 78.9% !important;
-  color: rgba(59, 131, 246, 0.931);
-  position: relative;
-  font-weight: 200;
 }
 
 .dialog-off-canvas-main-canvas svg.svg-inline--fa.fa-plus-square.fa-w-14 {
