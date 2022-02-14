@@ -1819,9 +1819,10 @@ td.tw-text-green-400.views-field.views-field-view-node {
 }
 
 .pstStatusModeration {
-  position: absolute;
-  left: 130px;
-  top: 4px;
+  position: absolute !important;
+  left: 130px !important;
+  top: -125px !important;
+  border-radius: 0px !important;
 }
 
 .show-message img {
@@ -2199,7 +2200,7 @@ p.titrepagemessage {
   color: #1391c1;
   font-size: 20px;
   line-height: 3rem;
-  padding: 0px 10px !important;
+  padding: 0px 32px !important;
   border-top: solid 1px #a5a5a552;
 }
 
@@ -2240,7 +2241,7 @@ p.titrepagemessage:before {
   position: absolute;
   width: 100%;
   height: 41px;
-  margin: 47px auto 0px -10px;
+  margin: 47px auto 0px -32px;
 }
 
 .image-profile-user img {
