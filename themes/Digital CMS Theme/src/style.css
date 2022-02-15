@@ -2429,6 +2429,30 @@ textarea#edit-field-commentbody2-0-value {
 }
 
 .tw-item-card p SPAN {
-  DISPLAY: none;
+  display: none;
+}
+
+p span span span span {
+  background: #e2e8f0;
+  color: #a0aec0 !important;
+  padding: 30px;
+  font-size: 25px;
+  width: 100% !important;
+  cursor: pointer;
+  margin: -15px;
+}
+
+p span span span span:before {
+  background: #f3f4f6;
+  position: absolute;
+  height: 2px;
+  width: 74%;
+  content: '';
+  margin: 57px -50px;
+}
+
+.messa-explandall {
+  background: white;
+  color: black !important;
 }
 /*# sourceMappingURL=style.css.map */

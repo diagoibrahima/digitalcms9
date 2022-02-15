@@ -5,11 +5,11 @@ jQuery(document).ready(function() {
 
   //hide submodule and message content 
   
-  jQuery('.node-content p span b').hide();
+jQuery('.node-content p span b').hide();
 
   
 jQuery('<span class="button-add-new-comment">Add a new comment</span>').insertBefore('section');
-
+jQuery('.node-content p:nth-child(1)').insertBefore('.node-content p:nth-child(1)')
 
 //Download files and archive them in to a zipfile
 
@@ -55,6 +55,29 @@ jQuery(".views-col").each(function(){
 });
 
 
+
+
+jQuery('p span span span span').click(function(){
+jQuery('.node-content p span b').toggle();
+jQuery(this).toggleClass('messa-explandall') 
+});
+
+
+/*
+
+
+jQuery('p span span span span').click(function(){
+    
+   jQuery(this).toggleClass('active');
+   jQuery(this+'b').addClass('sub-message');
+
+   var elements = document.getElementsByClassName('sub-message');
+   console.log(elements);
+   jQuery('.node-content').find('.node-content p span b').toggleClass('arrow-animate');
+   jQuery('.node-content').find('.node-content p span b').slideToggle(280);
+});
+
+*/
 
 
 
