@@ -1,0 +1,25 @@
+n1ed:
+  version: 1.x
+  css:
+    theme:
+      css/admin.css: {}
+  js:
+    js/admin.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+
+n1ed.loading:
+  version: 1.x
+  js:
+    js/loading.js: {}
+
+drupal.n1ed.filefield:
+  js:
+    js/n1ed.filefield.js: {}
+  css:
+   component:
+    css/n1ed.filefield.css: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings

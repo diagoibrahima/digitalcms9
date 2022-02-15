@@ -1,0 +1,152 @@
+<?php
+
+/**
+ * @file
+ * Main code for N1ED module.
+ */
+
+use Drupal\Core\Asset\AttachedAssetsInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
+use Drupal\Core\Url;
+
+/**
+ * Attaches a new plugin to CKEditor Drupal 8 module.
+ */
+define('selfHostedPath', "/lib/n1ed/");
+
+function n1ed_plugin() {
+  return [
+    'n1ed' => [
+      'name' => 'N1ED',
+      'desc' => t('N1ED. See <a href=":addon_page_url">@addon_page_title</a> for more details.',
+        [
+          ':addon_page_url' => 'https://n1ed.com',
+          '@addon_page_title' => t('addon page'),
+        ]),
+      'path' => base_path() . 'libraries/N1ED',
+    ],
+  ];
+}
+
+/**
+ * Changing CKEditor configuration - adding CKEditor skin "n1theme".
+ */
+function n1ed_editor_js_settings_alter(array &$settings) {
+  foreach (array_keys($settings['editor']['formats']) as $text_format_id) {
+    if ($settings['editor']['formats'][$text_format_id]['editor'] === 'ckeditor') {
+
+      $settings['editor']['formats'][$text_format_id]['editorSettings']['skin'] = 'n1theme,' . \Drupal::request()->getBaseUrl() . '/' . drupal_get_path('module', 'n1ed') . "/js/skin/n1theme/";
+
+      if($settings['editor']['formats'][$text_format_id]['editorSettings']['enableN1EDEcoSystem'] == 'false'){
+
+        if(!$settings['N1EDFreeFormat']){
+          $settings['N1EDFreeFormat'] = $text_format_id;
+        }
+      }
+    }
+  }
+  // drupal_add_js(['N1EDFreeFormat' => 'basic_html'],'settings')
+  // dump(user_func_exist());
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ *
+ * Alters widget forms that have Flmngr enabled.
+ */
+function n1ed_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
+    $widgets = ['image_image','file_generic'];
+    if (in_array($context['widget']->getPluginId(), $widgets) && \Drupal::config('n1ed.settings')->get('useFlmngrOnFileFields')) {
+      $class = 'Drupal\n1ed\N1edFileField';
+      $element['#process'][] = [$class, 'processWidget'];
+  }
+}
+
+/**
+ * Adds "N1ED" badges to affected text formats in the list.
+ */
+function n1ed_form_filter_admin_overview_alter(&$form, FormStateInterface $form_state) {
+  // Then splice in the name of each text editor for each text format.
+  $editors = \Drupal::service('plugin.manager.editor')->getDefinitions();
+  foreach (Element::children($form['formats']) as $format_id) {
+    $editor = editor_load($format_id);
+    $editor_name = ($editor && isset($editors[$editor->getEditor()])) ? $editors[$editor->getEditor()]['label'] : '—';
+
+    $htmlN1ED = "";
+    if ($editor != NULL) {
+      $settings = $editor->getSettings();
+      $isN1EDEnabled = isset($settings["plugins"]["N1EDEco"]["enableN1EDEcoSystem"]) && $settings["plugins"]["N1EDEco"]["enableN1EDEcoSystem"] == 'true';
+      if ($isN1EDEnabled) {
+        $htmlN1ED = "<div style='display: inline-block;margin-left:10px;background: #3dcad7; background: linear-gradient(180deg, rgba(85,219,199,1) 0%, rgba(35,182,232,1) 100%);border-radius: 2px;padding:1px 5px;color:white;font-weight: bold' title='N1ED is enabled'>N1ED</div>";
+      }
+    }
+
+    $editor_column['editor'] = [
+      '#type' => 'inline_template',
+      '#template' => $editor_name . $htmlN1ED,
+    ];
+
+    $form['formats'][$format_id]["0"] = $editor_column;
+  }
+}
+
+// function n1ed_form_comment_form_alter(&$form, &$form_state, $form_id) {
+//   dump($form, $form_state, $form_id);
+//   // die();
+// }
+
+/**
+ * Implements hook_help().
+ */
+function n1ed_help($path, $arg) {
+  switch ($path) {
+    case "help.page.n1ed":
+      return "
+
+                <h3>" . t("About N1ED") . "</h3>
+
+                <p>" . t('<a href=":website">N1ED add-on for CKEditor</a> adds a lot of features to your editor. N1ED is a multi-add-on meaning it will connect different plugins from N1ED Ecosystem which you specify in the preferences.', [":website" => "https://n1ed.com"]) . "</p>
+
+
+                <h3>" . t('Installation') . "</h3>
+
+                <p>" . t('The installation process is typical for Drupal 8 - just install N1ED module, all dependencies will be linked automatically. Also this module will attach to those Text Formats</a> which have CKEditor and are fine to be used by article editors. For example it will attach to "Full format" and will not to "Plain text" or "Basic HTML"') . "</p>
+
+
+                <h3>" . t('Configuration') . "</h3>
+
+                <p>" . t('Acting as standard CKEditor Drupal 8 submodule N1ED will be enabled in those Text Formats which have CKEditor and where N1ED is not disabled. Go to the <a href=":formats">Text Formats page</a> and you can see the badge "N1ED" near formats N1ED is marked enabled in. Go into text format to configure N1ED there by clicking "Configure" button.', [":formats" => Url::fromRoute('filter.admin_overview')->toString()]) . "</p>
+
+                <p>" . t('When you are on some text format page, first you need to set you N1ED API key once. N1ED configuration widget will lead you through this simple process and attach existing N1ED account or register a new one for free. Your default API key is demo key, and it is also workable but does not have access to some online services, so we recommend you to change it first of all.') . "</p>
+
+                <p>" . t('Why do you need to link an account? It is easy: because your API key is a reference to your configuration. N1ED will be auto updated using CDN, also cloud of N1ED provides some services like getting screenshots of custom blocks you define, storing configurations and sharing them between your different websites if required, fast switching configurations, and more services in future versions.') . "</p>
+
+                <p>" . t('Then you can enable or disable N1ED for each text format independently. It is recommended to use N1ED in text formats available for administrator/articles editor users and disable for restricted formats which used in comments form or somewhere like it.') . "</p>
+
+
+                <h3>" . t('Editing an articles') . "</h3>
+
+                <p>" . t('You will go to the article page as before and edit your content with CKEditor powered with N1ED, Bootstrap Editor, File Manager, Image Editor and other currently available and available in future plugins for CKEditor which are published inside <a href=":plugins">N1ED Ecosystem</a>.', [":plugins" => "https://n1ed.com/plugins"]) . "</p>
+
+
+
+                <h3>" . t('Troubleshooting') . "</h3>
+
+                <p>" . t('If you do not see these features on your CKEditor, please be sure you chose appripriate Text Format (which has N1ED attached). In some cases your default text format can be "Basic HTML" which may require to switch fo "Full HMTL" in the Drupal combobox right under CKEditor area.') . "</p>
+
+                <p>" . t('In case of any problems please check <a href=":docs">documentation</a> or <a href=":support">ask support via e-mail</a>.', [":docs" => "https://n1ed.com/docs", ":support" => "mailto:support@n1ed.zendesk.com"]) . "</p>
+
+            ";
+  }
+
+}
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function n1ed_library_info_alter(&$libraries, $extension) {
+  if ($extension === 'ckeditor' && isset($libraries['drupal.ckeditor'])) {
+    $libraries['drupal.ckeditor']['dependencies'][] = 'n1ed/n1ed.loading';
+  }
+}

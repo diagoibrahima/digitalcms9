@@ -1,0 +1,14 @@
+name: N1ED
+type: module
+description: Visual editor with Bootstrap support. https://n1ed.com
+package: CKEditor
+dependencies:
+  - drupal:ckeditor
+
+core: '8.x'
+core_version_requirement: ^8 || ^9
+
+# Information added by Drupal.org packaging script on 2021-09-26
+version: '8.x-2.39'
+project: 'n1ed'
+datestamp: 1632658373

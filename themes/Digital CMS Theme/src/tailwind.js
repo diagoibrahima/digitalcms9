@@ -60,7 +60,7 @@ jQuery(".views-col").each(function(){
 
  // jQuery('a.addnewlocalisation').hide();
 //  jQuery('.use-ajax').hide();
-  jQuery('#edit-field-localization-messagebody-wrapper').hide();
+ // jQuery('#edit-field-localization-messagebody-wrapper').hide();
   //jQuery('#cke_edit-field-localization-messagebody-0-value').hide();
   //jQuery("a.add-module ").unbind('click');
   //jQuerys(".add-module").attr("disabled",true);
@@ -76,7 +76,7 @@ jQuery(".views-col").each(function(){
   jQuery('form#node-localization-form div#edit-actions').append('<div class="tw-flex tw-items-center tw-jtw-ustify-center tw-mb-4 btn-group"><button class="btn btn-edit tw-bg-blue-700 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white active tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-l tw-outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear tw-transition-all tw-duration-150" type="button">Edit</button><button class="btn btn-preview tw-bg-blue-500 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-r outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear transition-all duration-150" type="button">Preview</button></div>');
 
   jQuery('.simpler_quickedit_click.simpler_quickedit.quickedit-field').append("<i class='fas fa-pencil-alt editeur-conten'></i>");
-
+/*
   let str=jQuery( "#edit-field-localization-channel option:selected" ).text();
 
   jQuery('#edit-field-localization-channel').change(function() {
@@ -113,7 +113,7 @@ jQuery(".views-col").each(function(){
    //  console.log(str);
      }
 });
-
+*/
 //Show add comment form
 
 jQuery( "span.button-add-new-comment " ).click(function() {
