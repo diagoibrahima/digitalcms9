@@ -2268,5 +2268,27 @@ textarea#edit-field-commentbody2-0-value {
 // Version 2 du CMS
 
 .tw-item-card p SPAN {
-  DISPLAY: none;
+  display: none;
 }
+
+p span span span span {
+
+  padding: 30px;
+  font-size: 25px;
+  width: 100% !important;
+  cursor: pointer;
+  margin: -15px;
+
+ &:before {
+  background: #f3f4f6;
+  position: absolute;
+  height: 2px;
+  width: 74%;
+  content: '';
+  margin: 57px -50px;
+   
+}
+}
+
+
+
