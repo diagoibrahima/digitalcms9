@@ -59,7 +59,6 @@ jQuery(".views-col").each(function(){
 
 jQuery('p span span span span').click(function(){
 jQuery('.node-content p span b').toggle();
-jQuery(this).toggleClass('messa-explandall') 
 });
 
 
