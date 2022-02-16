@@ -1011,7 +1011,7 @@ form#user-login-form:after {
   position: absolute;
   margin: auto;
   top: -101px;
-  left: 4px;
+  left: 17%;
   border: solid #9cd2e7 1px !important;
   padding: 0px;
   color: #ffffff !important;
@@ -1021,7 +1021,6 @@ form#user-login-form:after {
   line-height: 45px !important;
   text-align: center;
   width: 55%;
-  margin: auto 83px;
   z-index: 10;
 }
 
@@ -1721,10 +1720,12 @@ a.cancelbutton {
 }
 
 form#node-localization-form {
-  width: 60%;
-  margin-left: 35%;
+  width: 47%;
+  right: 2%;
   padding: 14px;
+  position: absolute;
   height: 555px;
+  margin: 48px 0px;
 }
 
 form#node-localization-form div#edit-actions {
@@ -2433,24 +2434,52 @@ textarea#edit-field-commentbody2-0-value {
 }
 
 p span span span span {
-  padding: 30px;
   font-size: 25px;
   width: 100% !important;
   cursor: pointer;
-  margin: -15px;
+  background: #f7fafc;
+  padding: 29px;
 }
 
-p span span span span:before {
+p span span span span:hover {
+  background: #edf2f7;
+}
+
+span.expandalle-minimizeall-button.cursor-pointer {
+  position: absolute;
+  right: 0;
+  width: 34%;
+  color: #1391c1;
+  top: 108px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+div#block-views-block-contenttotranslate-block-1 {
+  width: 47%;
+  background: white;
+  margin: 46px 2%;
+  padding: 15px;
+  -webkit-box-shadow: 0px 1px 4px 1px #02020221;
+          box-shadow: 0px 1px 4px 1px #02020221;
+  border-radius: 0.25rem;
+}
+
+div#block-views-block-contenttotranslate-block-1 p span span span span:before {
+  opacity: 0 !important;
+}
+
+article .node-content div:nth-child(2) {
+  margin: 10px 0px 50px 0px;
+}
+
+article .node-content div:nth-child(2):before {
+  content: '';
   background: #f3f4f6;
   position: absolute;
-  height: 2px;
-  width: 74%;
-  content: '';
-  margin: 57px -50px;
-}
-
-.messa-explandall {
-  background: white;
-  color: black !important;
+  height: 20px;
+  width: 106%;
+  top: -27px;
+  left: -19px;
 }
 /*# sourceMappingURL=style.css.map */

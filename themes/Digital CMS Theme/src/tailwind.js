@@ -7,7 +7,7 @@ jQuery(document).ready(function() {
   
 jQuery('.node-content p span b').hide();
 
-  
+
 jQuery('<span class="button-add-new-comment">Add a new comment</span>').insertBefore('section');
 jQuery('.node-content p:nth-child(1)').insertBefore('.node-content p:nth-child(1)')
 
@@ -337,6 +337,16 @@ jQuery('.channelgenerate ').append(description);
 
 });
 
+ // Preview button befor adding content
+
+jQuery(".btn-groupOnAddContent > .btn-preview").click(function(){
+  var description2 = CKEDITOR.instances['edit-body-0-value'].getData();
+console.log(description2);
+jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fas fa-sms"></i>SMS</div> </div>').insertAfter('#edit-body-wrapper');
+
+});
+
+
 
 
 
@@ -456,13 +466,10 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
      });
  
        // Expand All 
-     jQuery('.expandall-minimizeall-button').click(function() {
-     jQuery('.blockmodule-submodule').toggle('fast');
-     //jQuery('h3').toggleClass( 'colore-black' ); 
-     jQuery('.blockmodule-titre-module').toggleClass('blockmodule-titre-module-green');
-     jQuery('.fa-chevron-down').toggleClass( 'ch-rotation' );
-     var expand = (jQuery('.expandall-minimizeall-button').text());
-     expand == "Expand all" ?  jQuery('.expandall-minimizeall-button').text('Minimize')  : jQuery('.expandall-minimizeall-button').text('Expand all')
+     jQuery('span.expandalle-minimizeall-button.cursor-pointer').click(function() {
+     jQuery('.node-content p span b').toggle();
+     var expand = (jQuery('span.expandalle-minimizeall-button.cursor-pointer').text());
+     expand == "Expand all" ?  jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Minimize')  : jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Expand all')
      
       
     //  else jQuery('.use-ajax').toggle()
