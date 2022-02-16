@@ -25,6 +25,7 @@
         "drupal/pdf_serialization": "^2.1",
         "drupal/popup_after_login": "9.1.x-dev@dev",
         "drupal/sweetalert2": "9.1.x-dev@dev",
+        "drupal/tmgmt": "^1.12",
         "phpoffice/phpspreadsheet": "^1.20"
     },
     "conflict": {
