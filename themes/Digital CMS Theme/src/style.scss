@@ -71,7 +71,7 @@ div#edit-actions {
   #edit-submit {
     width: 100px !important;
     color: white !important;
-    background: #1391c1 !important;
+    background: #1391c1;
     border: cornsilk !important;
     margin-left: 89%;
     text-align: center;
@@ -2053,9 +2053,7 @@ button.btn.btn-edit.tw-bg-blue-700.tw-text-white.hover\:tw-bg-blue-700.hover\:tw
   background: #1391c1 !important;
 }
 
-button.btn.btn-preview.tw-bg-blue-500.tw-text-white.hover\:tw-bg-blue-700.hover\:tw-text-white.tw-font-bold.uppercase.tw-text-sm.tw-px-6.tw-py-3.tw-rounded-r.outline-none.tw-focus\:outline-none.tw-mb-1.tw-ease-linear.transition-all.duration-150 {
-  border-radius: 0px 0px 0px 0px !important;
-}
+
 
 .back-rejected {
   background: #ff000085 !important;
@@ -2074,6 +2072,7 @@ button.btn.btn-edit.tw-bg-blue-700.tw-text-white.hover\:tw-bg-blue-700.hover\:tw
 button.btn.btn-preview.tw-bg-blue-500.tw-text-white.hover\:tw-bg-blue-700.hover\:tw-text-white.tw-font-bold.uppercase.tw-text-sm.tw-px-6.tw-py-3.tw-rounded-r.outline-none.tw-focus\:outline-none.tw-mb-1.tw-ease-linear.transition-all.duration-150 {
   font-size: 12px !important;
   font-weight: 400 !important;
+  line-height: 12px !important;
 }
 
 
@@ -2330,4 +2329,71 @@ article .node-content div:nth-child(2) {
 }
 }
 
+.node-content-form input#edit-submit:disabled {
+  background: #1391c15e !important;
+}
 
+
+.node-content-form div#edit-actions {
+  display: flex;
+  flex-direction: row-reverse !important;
+  width:98.5%;;
+  justify-content: space-between  !important;
+  align-items: center !important;
+
+  #edit-submit  {
+    margin-left:0px !important;
+    padding: 0.75rem;
+    line-height: 12px !important;
+}
+.tw-flex.tw-items-center.tw-jtw-ustify-center.tw-mb-4.btn-groupOnAddContent {
+  margin: 20px -20px;
+}
+
+
+}
+
+.node-content-form  {
+
+
+
+
+div#edit-body-0-format {
+  display: none !important;
+}
+
+input#edit-submit:disabled {
+  background: #1391c15e !important;
+}
+
+
+div#edit-actions {
+  display: flex;
+  flex-direction: row-reverse !important;
+  width:98.5%;;
+  justify-content: space-between  !important;
+  align-items: center !important;
+
+  #edit-submit  {
+    margin-left:0px !important;
+    padding: 0.75rem;
+    line-height: 12px !important;
+}
+.tw-flex.tw-items-center.tw-jtw-ustify-center.tw-mb-4.btn-groupOnAddContent {
+  margin: 20px -20px;
+}
+
+
+}
+
+div#edit-field-descriptioncontent-wrapper , .js-form-item.form-item.js-form-type-textarea.form-item-body-0-value.js-form-item-body-0-value {
+  width: 95%;
+  margin: auto;
+}
+div#edit-body-wrapper {
+  background: white;
+  padding: 0px 0px 95px 0px;
+  border-radius: 5px;
+}
+
+}

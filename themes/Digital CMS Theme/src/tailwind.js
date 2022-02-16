@@ -6,7 +6,9 @@ jQuery(document).ready(function() {
   //hide submodule and message content 
   
 jQuery('.node-content p span b').hide();
+jQuery('.node-content-form input#edit-submit').prop('disabled', true);
 
+jQuery('<div class="tw-flex tw-items-center tw-jtw-ustify-center tw-mb-4 btn-groupOnAddContent"><button class="btn btn-edit tw-bg-blue-700 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white active tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-l tw-outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear tw-transition-all tw-duration-150" type="button">Edit</button><button class="btn btn-preview tw-bg-blue-500 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white  tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-r outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear transition-all duration-150" type="button">Preview</button></div>').insertAfter('.node-content-form input#edit-submit');
 
 jQuery('<span class="button-add-new-comment">Add a new comment</span>').insertBefore('section');
 jQuery('.node-content p:nth-child(1)').insertBefore('.node-content p:nth-child(1)')
@@ -339,10 +341,67 @@ jQuery('.channelgenerate ').append(description);
 
  // Preview button befor adding content
 
+//Fonction calcul nombre doccurance du titre h1
+ function countOccurences(string, word) {
+   return string.split(word).length-1;
+}
+
+
+jQuery(".node-content-form").ready(function() {
+CKEDITOR.instances['edit-body-0-value'].on('change',function(e){
+  jQuery('.node-content-form input#edit-submit').prop('disabled', true);
+  console.log("ckeditor on change");
+});
+});
+
+
+
+
+
+
+
 jQuery(".btn-groupOnAddContent > .btn-preview").click(function(){
-  var description2 = CKEDITOR.instances['edit-body-0-value'].getData();
-console.log(description2);
-jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fas fa-sms"></i>SMS</div> </div>').insertAfter('#edit-body-wrapper');
+  
+    // remove alerte message befor all
+    jQuery('.channelgenerategeneral').remove();
+
+    //Get data from ckeditor
+    var description2 = CKEDITOR.instances['edit-body-0-value'].getData();
+    
+    //get first 3 chars
+    var res = description2.substring(0, 3);
+    console.log(res);
+
+    //Count the number of title and display alerte if none
+  var countNbTitre=countOccurences(description2,"<h1");
+
+  if(res == "<h1" || res == "<h2" || res == "<h3" || res == "<h4" || res == "<h5" || res == "<h6" ){
+    // activation du button submit
+    jQuery('.node-content-form input#edit-submit').prop('disabled', false);
+  }else {
+    // Desactivation du button submit
+    jQuery('.node-content-form input#edit-submit').prop('disabled', true);
+    jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fa fa-book"></i>😬 Oups ! <br> Please review the formatting of the content.  <br> H1 for Modules  <br> H2 or H3 for Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
+
+
+
+
+
+    //jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fa fa-book"></i>😬 Oups ! <br> Please review the formatting of the content.  <br> H1 for Modules  <br> H2 or H3 for Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
+  }
+
+
+  //get the type of the data 
+  //var typecontent = jQuery.type(description2);
+
+  // research balise for content validation 
+
+ // var findh = description2.match("h1");
+
+ 
+
+
+jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fa fa-book"></i>Content preview</div> </div>').insertBefore('#edit-title-wrapper');
 
 });
 
