@@ -339,14 +339,38 @@ jQuery('.channelgenerate ').append(description);
 
 });
 
- // Preview button befor adding content
+ //-------------- Preview button befor adding content
 
-//Fonction calcul nombre doccurance du titre h1
- function countOccurences(string, word) {
-   return string.split(word).length-1;
-}
+//FUNCTIONS  AND Var
+            //Fonction calcul nombre doccurance du titre h1
+            function countOccurences(string, word) {
+              return string.split(word).length-1;
+            }
 
+            // Function that verify if balise existe in liste 
 
+            function checkTitleValue(value,arr){
+              var status = 'Not exist';
+
+              for(var i=0; i<arr.length; i++){
+                var name = arr[i];
+                if(name == value){
+                  status = 'Exist';
+                  arr .splice(i,1);
+                  break;
+                }
+              }
+              return status;
+            }
+            //  some variables
+            var position = 1;
+
+// IMPL
+
+//console.log('status : ' + checkTitleValue('<h1', title_arr));
+//console.log('tableau : ' +  title_arr.toString());
+
+// When we are on the page that contain ckeditor we start the listener to get changes 
 jQuery(".node-content-form").ready(function() {
 CKEDITOR.instances['edit-body-0-value'].on('change',function(e){
   jQuery('.node-content-form input#edit-submit').prop('disabled', true);
@@ -354,30 +378,168 @@ CKEDITOR.instances['edit-body-0-value'].on('change',function(e){
 });
 });
 
-
-
-
-
-
-
+// When we click on preview button
 jQuery(".btn-groupOnAddContent > .btn-preview").click(function(){
+
+
+
+  var title_arr = ['<h1','<h2','<h3','<h4','<h5','<h6'];
   
-    // remove alerte message befor all
-    jQuery('.channelgenerategeneral').remove();
+// remove alerte message befor all
+jQuery('.channelgenerategeneral').remove();
 
-    //Get data from ckeditor
-    var description2 = CKEDITOR.instances['edit-body-0-value'].getData();
+//Get data from ckeditor textarea
+var description2 = CKEDITOR.instances['edit-body-0-value'].document.getBody().getHtml();
+
+console.log("Data" +description2);
+var html = jQuery.parseHTML( description2 );
+jQuery.each(html, function(key,valueObj){
+if(key == 0){
+  var toptitleLevel1 = valueObj.nodeName;
+  alert(toptitleLevel1);
+}
+jQuery.each(html, function(key,valueObj){
+
+  if(valueObj.nodeName == toptitleLevel1 ){
+    valueObj.className = "titremodule";
+    //console.log("Nouveau module");
+  }
+
+  var elementContent = valueObj.nodeName + valueObj.innerText;
+  //console.log(elementContent);
+  //console.log(key + "/" + valueObj.nodeName );
+  console.log(html);
+});
+});
+
+
+
+
+/*
+//get first 3 chars from first line
+var TitletagTopLevel = description2.substring(0, 3);
+console.log("Tag title Level 1" + TitletagTopLevel);
+
+console.log("---------");
+
+//After getting tag from first line, verify if 
+if(checkTitleValue(TitletagTopLevel, title_arr)=='Exist'){
+
+var tagTopLevelEnd = ["</"+ TitletagTopLevel.slice(position)+">"];
+
+console.log("new value to search" + tagTopLevelEnd);
+
+  //on enleve la premiere ligne qui se termie par un h1 puis mnous enleveons les epaces du reste d string
+  var res2 = jQuery.trim(description2.substr(description2.indexOf(tagTopLevelEnd) + 5));
+  console.log(res2);
+
+  //----------End first test 
+
+  // ---------Start second test 
+
+console.log("---------Start second test ");
+
+  //get first 3 chars from Second line
+var TitletagTopLevel2 = res2.substring(0, 3);
+console.log("Tag title level 2" + TitletagTopLevel2);
+console.log("---------");
+if(checkTitleValue(TitletagTopLevel2, title_arr)=='Exist'){
+
+  var tagTopLevel2End = ["</"+ TitletagTopLevel2.slice(position)+">"];
+  
+  console.log("new tag to search" + tagTopLevel2End);
+  
+    //on enleve la premiere ligne qui se termie par un h1 puis mnous enleveons les epaces du reste d string
+    var res3 = jQuery.trim(res2.substr(res2.indexOf(tagTopLevel2End) + 5));
+    console.log(res3);
+
+
+  //----------End second test 
+
+  // ---------Start third test 
+
+  console.log("---------Start third test ");
+
+  //get first 3 chars from third line
+var TitletagTopLevel3 = res3.substring(0, 3);
+console.log("Tag title level 3" + TitletagTopLevel3);
+console.log("---------");
+if(checkTitleValue(TitletagTopLevel3, title_arr)=='Exist'){
+
+  var tagTopLevel3End = ["</"+ TitletagTopLevel3.slice(position)+">"];
+  
+  console.log("new tag to search" + tagTopLevel3End);
+
+  //on enleve la deuxieme ligne qui se termie par un p puis mnous enleveons les epaces du reste d string
+  var res4 = jQuery.trim(res3.substr(res3.indexOf(tagTopLevel3End) + 5));
+  console.log(res4);
+
+}else{
+  console.log("This tag is already used");
+  // Desactivation du button submit
+  jQuery('.node-content-form input#edit-submit').prop('disabled', true);
+  jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fa fa-book"></i>😬 Oups ! <br> Please review the formatting of the content.  <br> H1 for Modules  <br> H2 or H3 for Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
+
+
+}
+
+}else{
+  console.log("This tag is already used");
+  // Desactivation du button submit
+  jQuery('.node-content-form input#edit-submit').prop('disabled', true);
+  jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fa fa-book"></i>😬 Oups ! <br> Please review the formatting of the content.  <br> H1 for Modules  <br> H2 or H3 for Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
+
+
+}
+// activation du button submit
+jQuery('.node-content-form input#edit-submit').prop('disabled', false);
+
+
+}else if(checkTitleValue(TitletagTopLevel, title_arr)=='Not exist'){
+
+  console.log("This tag is already used");
+  // Desactivation du button submit
+  jQuery('.node-content-form input#edit-submit').prop('disabled', true);
+  jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fa fa-book"></i>😬 Oups ! <br> Please review the formatting of the content.  <br> H1 for Modules  <br> H2 or H3 for Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
+
+
+}
+//Count the number of title and display alerte if none
+//var countNbTitre=countOccurences(description2,"<h1");
+
+
+*/
+
+
+
+/*
+// verify if the first balise is a title H1 H2 H3 H4 H5 or H6
+
+  if(TitletagTopLevel == "<h1" || TitletagTopLevel == "<h2" || TitletagTopLevel == "<h3" || TitletagTopLevel == "<h4" || TitletagTopLevel == "<h5" || TitletagTopLevel == "<h6" ){
+    //on enleve la premiere lige qui se termie par un h1 puis mnous enleveon sles epaces du reste d string
+    var res2 = jQuery.trim(description2.substr(description2.indexOf("</h1>") + 5));
+    console.log(res2);
+
+    //get first 3 chars de la deuxieme ligne 
+    var res3 = res2.substring(0, 3);
+    console.log(res3);
+
+    console.log("---------");
+
+    //on enleve la deuxieme ligne qui se termie par un h2 puis mnous enleveons les epaces du reste d string
+    var res4 = jQuery.trim(res2.substr(res2.indexOf("</h2>") + 5));
+    console.log(res4);
+
+    //get first 3 chars de la troisieme ligne
+    var res5 = res4.substring(0, 3);
+    console.log(res5);
     
-    //get first 3 chars
-    var res = description2.substring(0, 3);
-    console.log(res);
+    console.log("---------");
 
-    //Count the number of title and display alerte if none
-  var countNbTitre=countOccurences(description2,"<h1");
-
-  if(res == "<h1" || res == "<h2" || res == "<h3" || res == "<h4" || res == "<h5" || res == "<h6" ){
     // activation du button submit
     jQuery('.node-content-form input#edit-submit').prop('disabled', false);
+
+    // 
   }else {
     // Desactivation du button submit
     jQuery('.node-content-form input#edit-submit').prop('disabled', true);
@@ -388,8 +550,8 @@ jQuery(".btn-groupOnAddContent > .btn-preview").click(function(){
 
 
     //jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fa fa-book"></i>😬 Oups ! <br> Please review the formatting of the content.  <br> H1 for Modules  <br> H2 or H3 for Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
-  }
-
+}
+*/
 
   //get the type of the data 
   //var typecontent = jQuery.type(description2);
@@ -398,14 +560,12 @@ jQuery(".btn-groupOnAddContent > .btn-preview").click(function(){
 
  // var findh = description2.match("h1");
 
- 
+
 
 
 jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fa fa-book"></i>Content preview</div> </div>').insertBefore('#edit-title-wrapper');
 
 });
-
-
 
 
 
