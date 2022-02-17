@@ -364,7 +364,6 @@ CKEDITOR.instances['edit-body-0-value'].on('change',function(e){
 
     //jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fa fa-book"></i>😬 Oups ! <br> Please review the formatting of the content.  <br> H1 for Modules  <br> H2 or H3 for Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
   }
-
   console.log("ckeditor on change");
 });
 });
