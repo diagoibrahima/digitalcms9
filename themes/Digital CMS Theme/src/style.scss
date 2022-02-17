@@ -2355,7 +2355,10 @@ article .node-content div:nth-child(2) {
 
 .node-content-form  {
 
+  .cke_reset{
 
+    max-height: 400px !important;
+  }
 
 
 div#edit-body-0-format {
@@ -2370,17 +2373,20 @@ input#edit-submit:disabled {
 div#edit-actions {
   display: flex;
   flex-direction: row-reverse !important;
-  width:98.5%;;
+  width:96.5%;
   justify-content: space-between  !important;
   align-items: center !important;
+  margin: -77px 21px;
+  position: relative;
 
   #edit-submit  {
     margin-left:0px !important;
-    padding: 0.75rem;
-    line-height: 12px !important;
+    padding:0.75rem;
+    line-height:12px !important;
+    margin-right:6px !important;
 }
 .tw-flex.tw-items-center.tw-jtw-ustify-center.tw-mb-4.btn-groupOnAddContent {
-  margin: 20px -20px;
+  margin: 20px 19px;
 }
 
 
@@ -2392,8 +2398,48 @@ div#edit-field-descriptioncontent-wrapper , .js-form-item.form-item.js-form-type
 }
 div#edit-body-wrapper {
   background: white;
-  padding: 0px 0px 95px 0px;
+  padding: 0px 0px 133px 0px;
   border-radius: 5px;
+
 }
 
+}
+.pop-pup-oups:before {
+  content: '';
+  background: #000000d1;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 9;
+}
+
+div#Oups-message-addcontent {
+  position: absolute;
+  width: 30%;
+  background: #ff000082;
+  z-index: 999999999999999999999999999999999999999999 !important;
+  top: 50vh;
+  bottom: 50vh;
+  left: 50vh;
+  right: 50vh;
+  height: 180px;
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+  border: solid 1px #c53030;
+}
+
+svg.svg-inline--fa.fa-times.fa-w-11 {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+
+.messageduformat-texteformat {
+  position: absolute;
+  top: -30px;
+  color: red;
 }

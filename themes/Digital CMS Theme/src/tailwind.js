@@ -346,10 +346,25 @@ jQuery('.channelgenerate ').append(description);
    return string.split(word).length-1;
 }
 
-
+// detecte change in CKeditor
 jQuery(".node-content-form").ready(function() {
 CKEDITOR.instances['edit-body-0-value'].on('change',function(e){
+
+  jQuery('.messageduformat-texteformat').remove();
   jQuery('.node-content-form input#edit-submit').prop('disabled', true);
+  var description2 = CKEDITOR.instances['edit-body-0-value'].getData();
+  var res = description2.substring(0, 3);
+  if(res == "<h1" || res == "<h2" || res == "<h3" || res == "<h4" || res == "<h5" || res == "<h6" ){
+    // activation du button submit
+    jQuery('.node-content-form input#edit-submit').prop('disabled', false);
+  }else {
+    // Desactivation du button submit
+    jQuery('.node-content-form input#edit-submit').prop('disabled', true);
+    jQuery( '<div class="messageduformat-texteformat">😬 Oups !  Please review the format of the content.  Heading for Modules  and  Submodules  Normal For messages  </div>').insertBefore('.node-content-form div#edit-actions #edit-submit');
+
+    //jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fa fa-book"></i>😬 Oups ! <br> Please review the formatting of the content.  <br> H1 for Modules  <br> H2 or H3 for Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
+  }
+
   console.log("ckeditor on change");
 });
 });
@@ -363,7 +378,7 @@ CKEDITOR.instances['edit-body-0-value'].on('change',function(e){
 jQuery(".btn-groupOnAddContent > .btn-preview").click(function(){
   
     // remove alerte message befor all
-    jQuery('.channelgenerategeneral').remove();
+    jQuery('.Oups-message-addconten , .channelgenerategeneral').remove();
 
     //Get data from ckeditor
     var description2 = CKEDITOR.instances['edit-body-0-value'].getData();
@@ -381,11 +396,8 @@ jQuery(".btn-groupOnAddContent > .btn-preview").click(function(){
   }else {
     // Desactivation du button submit
     jQuery('.node-content-form input#edit-submit').prop('disabled', true);
-    jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fa fa-book"></i>😬 Oups ! <br> Please review the formatting of the content.  <br> H1 for Modules  <br> H2 or H3 for Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
-
-
-
-
+    jQuery( '<div class="Oups-message-addconten"> <div class="Oups-message-1 addcontenmessage" id="Oups-message-addcontent"><i class="fa fa-close"></i>😬 Oups ! <br> Please review the formatting of the content.  <br> H1 for Modules  <br> H2 or H3 for Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
+    jQuery('body').addClass('pop-pup-oups');
 
     //jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fa fa-book"></i>😬 Oups ! <br> Please review the formatting of the content.  <br> H1 for Modules  <br> H2 or H3 for Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
   }
