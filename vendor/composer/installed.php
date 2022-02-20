@@ -5,11 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-<<<<<<< HEAD
-        'reference' => 'cf6c82050b25543cb772eedc47c2de3f6377ecbd',
-=======
-        'reference' => '8f9c679cb032e64c56895524d581e0932bada014',
->>>>>>> c067fd42699ecb00f88aa32f5add2de6febfbb0c
+        'reference' => '48aacaaa31a1b2315bd3958fb0926c2718fc0008',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -665,11 +661,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-<<<<<<< HEAD
-            'reference' => 'cf6c82050b25543cb772eedc47c2de3f6377ecbd',
-=======
-            'reference' => '8f9c679cb032e64c56895524d581e0932bada014',
->>>>>>> c067fd42699ecb00f88aa32f5add2de6febfbb0c
+            'reference' => '48aacaaa31a1b2315bd3958fb0926c2718fc0008',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -906,6 +898,15 @@
             'replaced' => array(
                 0 => '9.3.5',
             ),
+        ),
+        'drupal/tmgmt' => array(
+            'pretty_version' => '1.12.0',
+            'version' => '1.12.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/tmgmt',
+            'aliases' => array(),
+            'reference' => '8.x-1.12',
+            'dev_requirement' => false,
         ),
         'drupal/toolbar' => array(
             'dev_requirement' => false,

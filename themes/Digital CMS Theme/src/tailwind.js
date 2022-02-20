@@ -17,7 +17,7 @@ jQuery('.node-content p:nth-child(1)').insertBefore('.node-content p:nth-child(1
 
 //The FileSaver API
 jQuery(".downloadzipfile").click(function(){
-  console.log("Salut jszip"); 
+  console.log("Salut Jszip"); 
   var zip = new JSZip();
   zip.file("Hello.txt", "Hello World\n");
   var img = zip.folder("images");
@@ -42,7 +42,6 @@ jQuery("#data_uri").on("click", function () {
 */
 
 }); 
-
 
 
 //Count nb module V2
@@ -267,7 +266,7 @@ jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslate
 
 
 
- 
+
 
 //disable draft status when adding localization
 jQuery('#edit-moderation-state-0-state').hide();  
@@ -277,7 +276,7 @@ jQuery('label[for="edit-moderation-state-0-state"]').hide();
 
 // When click on edit button
 
- jQuery(".btn-group > .btn-edit").click(function(){
+jQuery(".btn-group > .btn-edit").click(function(){
 
    jQuery(this).removeClass("tw-bg-blue-500");
    jQuery(this).addClass("tw-bg-blue-700");
@@ -373,7 +372,21 @@ jQuery('.channelgenerate ').append(description);
 // When we are on the page that contain ckeditor we start the listener to get changes 
 jQuery(".node-content-form").ready(function() {
 CKEDITOR.instances['edit-body-0-value'].on('change',function(e){
+
+  jQuery('.messageduformat-texteformat').remove();
   jQuery('.node-content-form input#edit-submit').prop('disabled', true);
+  var description2 = CKEDITOR.instances['edit-body-0-value'].getData();
+  var res = description2.substring(0, 3);
+  if(res == "<h1" || res == "<h2" || res == "<h3" || res == "<h4" || res == "<h5" || res == "<h6" ){
+    // activation du button submit
+    jQuery('.node-content-form input#edit-submit').prop('disabled', false);
+  }else {
+    // Desactivation du button submit
+    jQuery('.node-content-form input#edit-submit').prop('disabled', true);
+    jQuery( '<div class="messageduformat-texteformat">😬 Oups !  Please review the format of the content.  Heading for Modules  and  Submodules  Normal For messages  </div>').insertBefore('.node-content-form div#edit-actions #edit-submit');
+
+    //jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fa fa-book"></i>😬 Oups ! <br> Please review the formatting of the content.  <br> H1 for Modules  <br> H2 or H3 for Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
+  }
   console.log("ckeditor on change");
 });
 });
@@ -388,29 +401,30 @@ jQuery(".btn-groupOnAddContent > .btn-preview").click(function(){
 // remove alerte message befor all
 jQuery('.channelgenerategeneral').remove();
 
+// New implementation with the object
+
+
 //Get data from ckeditor textarea
 var description2 = CKEDITOR.instances['edit-body-0-value'].document.getBody().getHtml();
 
-console.log("Data" +description2);
-var html = jQuery.parseHTML( description2 );
+//console.log("Data" +description2);
+var html = jQuery.parseHTML(description2);
+
+console.log(html);
+
 jQuery.each(html, function(key,valueObj){
+
 if(key == 0){
-  var toptitleLevel1 = valueObj.nodeName;
-  alert(toptitleLevel1);
+  var toptitleLevel1 = valueObj;
+  var tagtoptitleLevel1 = valueObj.nodeName;
 }
-jQuery.each(html, function(key,valueObj){
-
-  if(valueObj.nodeName == toptitleLevel1 ){
-    valueObj.className = "titremodule";
-    //console.log("Nouveau module");
-  }
-
-  var elementContent = valueObj.nodeName + valueObj.innerText;
-  //console.log(elementContent);
-  //console.log(key + "/" + valueObj.nodeName );
-  console.log(html);
+if(key == 1){
+  var toptitleLevel2 = valueObj;
+  var tagtoptitleLevel = valueObj.nodeName;
+}
 });
-});
+
+
 
 
 
@@ -543,11 +557,8 @@ jQuery('.node-content-form input#edit-submit').prop('disabled', false);
   }else {
     // Desactivation du button submit
     jQuery('.node-content-form input#edit-submit').prop('disabled', true);
-    jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fa fa-book"></i>😬 Oups ! <br> Please review the formatting of the content.  <br> H1 for Modules  <br> H2 or H3 for Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
-
-
-
-
+    jQuery( '<div class="Oups-message-addconten"> <div class="Oups-message-1 addcontenmessage" id="Oups-message-addcontent"><i class="fa fa-close"></i>😬 Oups ! <br> Please review the formatting of the content.  <br> H1 for Modules  <br> H2 or H3 for Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
+    jQuery('body').addClass('pop-pup-oups');
 
     //jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fa fa-book"></i>😬 Oups ! <br> Please review the formatting of the content.  <br> H1 for Modules  <br> H2 or H3 for Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
 }
@@ -618,30 +629,30 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
 
 // +Submit content for review
 
- jQuery('a.moderationStateButton.submit').click(function() {
+jQuery('a.moderationStateButton.submit').click(function() {
      //alert('submit content for reveiw');
       jQuery('option[value="ready_for_review"]').prop('selected',true);
       jQuery( "#edit-submit" ).click();
 
 
- });
+});
 
 // +re submit 
- jQuery('a.moderationStateButton.rsubmit').click(function() {
+jQuery('a.moderationStateButton.rsubmit').click(function() {
      //alert('submit content for reveiw');
       jQuery('option[value="ready_for_review"]').prop('selected',true);
       jQuery( "#edit-submit" ).click();
 
 
- });
+});
 
 // +Approve content 
- jQuery('a.moderationStateButton.approve').click(function() {
+jQuery('a.moderationStateButton.approve').click(function() {
 
       jQuery('option[value="published"]').prop('selected',true);
       jQuery( "#edit-submit" ).click();
- 
- });
+
+});
 
 // +Reject content 
  jQuery('a.moderationStateButton.reject').click(function() {
