@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '48aacaaa31a1b2315bd3958fb0926c2718fc0008',
+        'reference' => '4da533baa322333c8e0c08ae21b16f531bf376c5',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -505,6 +505,15 @@
                 0 => '9.3.5',
             ),
         ),
+        'drupal/country' => array(
+            'pretty_version' => '1.0.0',
+            'version' => '1.0.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/country',
+            'aliases' => array(),
+            'reference' => '8.x-1.0',
+            'dev_requirement' => false,
+        ),
         'drupal/csv_serialization' => array(
             'pretty_version' => '2.0.0',
             'version' => '2.0.0.0',
@@ -589,6 +598,15 @@
                 0 => '9.3.5',
             ),
         ),
+        'drupal/flags' => array(
+            'pretty_version' => '1.0.0-beta3',
+            'version' => '1.0.0.0-beta3',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/flags',
+            'aliases' => array(),
+            'reference' => '8.x-1.0-beta3',
+            'dev_requirement' => false,
+        ),
         'drupal/forum' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -643,6 +661,15 @@
                 0 => '9.3.5',
             ),
         ),
+        'drupal/languagefield' => array(
+            'pretty_version' => '1.7.0',
+            'version' => '1.7.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/languagefield',
+            'aliases' => array(),
+            'reference' => '8.x-1.7',
+            'dev_requirement' => false,
+        ),
         'drupal/layout_builder' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -661,7 +688,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '48aacaaa31a1b2315bd3958fb0926c2718fc0008',
+            'reference' => '4da533baa322333c8e0c08ae21b16f531bf376c5',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(

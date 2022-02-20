@@ -370,6 +370,7 @@ jQuery('.channelgenerate ').append(description);
 //console.log('tableau : ' +  title_arr.toString());
 
 // When we are on the page that contain ckeditor we start the listener to get changes 
+
 jQuery(".node-content-form").ready(function() {
 CKEDITOR.instances['edit-body-0-value'].on('change',function(e){
 
@@ -394,15 +395,12 @@ CKEDITOR.instances['edit-body-0-value'].on('change',function(e){
 // When we click on preview button
 jQuery(".btn-groupOnAddContent > .btn-preview").click(function(){
 
-
-
   var title_arr = ['<h1','<h2','<h3','<h4','<h5','<h6'];
   
 // remove alerte message befor all
 jQuery('.channelgenerategeneral').remove();
 
 // New implementation with the object
-
 
 //Get data from ckeditor textarea
 var description2 = CKEDITOR.instances['edit-body-0-value'].document.getBody().getHtml();
@@ -423,10 +421,6 @@ if(key == 1){
   var tagtoptitleLevel = valueObj.nodeName;
 }
 });
-
-
-
-
 
 
 /*
@@ -758,7 +752,6 @@ notefounddasbord == " The requested page could not be found. " ? jQuery('div#blo
  jQuery('option[value="_none"]').remove();
  
  jQuery('<h1> Add Custom Image</h1>').insertBefore('#edit-field-image-0-upload');
- 
  
  
  

@@ -2480,8 +2480,9 @@ article .node-content div:nth-child(2):before {
   left: -19px;
 }
 
-.node-content-form input#edit-submit:disabled {
+.node-content-form input#edit-submit:disabled, .btn-preview-addcontent:disabled {
   background: #1391c15e !important;
+  cursor: not-allowed;
 }
 
 .node-content-form div#edit-actions {
@@ -2511,6 +2512,11 @@ article .node-content div:nth-child(2):before {
   margin: 20px -20px;
 }
 
+.node-content-form {
+  width: 45%;
+  margin: 1%;
+}
+
 .node-content-form .cke_reset {
   max-height: 400px !important;
 }
@@ -2538,7 +2544,7 @@ article .node-content div:nth-child(2):before {
   -webkit-box-align: center !important;
       -ms-flex-align: center !important;
           align-items: center !important;
-  margin: -77px 21px;
+  margin: -48px 12px;
   position: relative;
 }
 
@@ -2560,7 +2566,7 @@ article .node-content div:nth-child(2):before {
 
 .node-content-form div#edit-body-wrapper {
   background: white;
-  padding: 0px 0px 133px 0px;
+  padding: 0px 0px 60px 0px;
   border-radius: 5px;
 }
 
@@ -2575,7 +2581,7 @@ article .node-content div:nth-child(2):before {
 
 div#Oups-message-addcontent {
   position: absolute;
-  width: 30%;
+  width: 350px;
   background: #ff000082;
   z-index: 999999999999999999999999999999999999999999 !important;
   top: 50vh;
@@ -2588,6 +2594,17 @@ div#Oups-message-addcontent {
   font-size: 18px;
   color: white;
   border: solid 1px #c53030;
+  padding: 10px;
+  height: 135px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 svg.svg-inline--fa.fa-times.fa-w-11 {
@@ -2599,7 +2616,98 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
 
 .messageduformat-texteformat {
   position: absolute;
-  top: -30px;
+  top: -70px;
   color: red;
+  background: #ff00005e;
+  padding: 5px;
+  margin: 30px 4px;
+  border-radius: 5px;
+}
+
+.contentent-preview-good-format {
+  padding: 80px 10px 10px;
+  background: white;
+  border-radius: 5px;
+  position: absolute;
+  width: 50%;
+  right: 1%;
+  /* to remplace by ==>  .contentent-title */
+  /* to remplace by ==>  .contentent-supmodule */
+  /* to remplace by ==>  .contentent-message */
+}
+
+.contentent-preview-good-format h1 {
+  font-size: 20px;
+  background: #1391c142;
+  color: #1391c1;
+  font-weight: normal;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.contentent-preview-good-format h2 {
+  font-size: 15px;
+  color: #1391c1;
+  font-weight: 400;
+  padding: 10px;
+  margin: 20px;
+  border-bottom: solid 1px #cde4ef;
+  border-left: solid 1px #cde4ef;
+  border-radius: 1px 0px 0px 5px;
+}
+
+.contentent-preview-good-format p {
+  color: #1391c17a;
+  font-size: 12px;
+  margin: 20px 0px;
+}
+
+.livepreview-content {
+  width: 50%;
+  background: #1391c1;
+  position: absolute;
+  right: 1%;
+  z-index: 99;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value {
+  color: blue;
+}
+
+.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label {
+  cursor: pointer;
+}
+
+.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value:hover {
+  color: rgba(0, 0, 255, 0.438);
+}
+
+.desactive-cursoraddcursort {
+  cursor: auto;
+  color: #000000 !important;
+}
+
+span.blocuers-name-flag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+span.blocuers-name-flag svg.svg-inline--fa.fa-user-circle.fa-w-16.fa-fw.user-avatar {
+  margin: 10px;
+}
+
+span.blocuers-name-flag span.flag-instead {
+  margin: 10px;
 }
 /*# sourceMappingURL=style.css.map */
