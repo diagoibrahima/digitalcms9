@@ -1,4 +1,6 @@
 jQuery(document).ready(function() {
+  jQuery('textarea#edit-field-descriptioncontent-0-value').hide()
+  jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').html('Add Description')
   jQuery('.blockmodule-submodule').hide();
   jQuery('a.btn').hide();
   jQuery('section').hide();
@@ -8,10 +10,14 @@ jQuery(document).ready(function() {
 jQuery('.node-content p span b').hide();
 jQuery('.node-content-form input#edit-submit').prop('disabled', true);
 
-jQuery('<div class="tw-flex tw-items-center tw-jtw-ustify-center tw-mb-4 btn-groupOnAddContent"><button class="btn btn-edit tw-bg-blue-700 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white active tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-l tw-outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear tw-transition-all tw-duration-150" type="button">Edit</button><button class="btn btn-preview tw-bg-blue-500 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white  tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-r outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear transition-all duration-150" type="button">Preview</button></div>').insertAfter('.node-content-form input#edit-submit');
+//jQuery('<div class="tw-flex tw-items-center tw-jtw-ustify-center tw-mb-4 btn-groupOnAddContent"><button class="btn btn-edit tw-bg-blue-700 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white active tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-l tw-outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear tw-transition-all tw-duration-150" type="button">Edit</button><button class="btn btn-preview  btn-preview-addcontent tw-bg-blue-500 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white  tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-r outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear transition-all duration-150" type="button">Preview</button></div>').insertAfter('.node-content-form input#edit-submit');
 
 jQuery('<span class="button-add-new-comment">Add a new comment</span>').insertBefore('section');
 jQuery('.node-content p:nth-child(1)').insertBefore('.node-content p:nth-child(1)')
+
+
+
+
 
 //Download files and archive them in to a zipfile
 
@@ -60,9 +66,26 @@ jQuery(".views-col").each(function(){
 
 
 jQuery('p span span span span').click(function(){
-jQuery('.node-content p span b').toggle();
+jQuery('.node-content p span b').toggle(1000);
 });
+ 
+//Hide and show add description
 
+jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').click(function(){
+
+  jQuery('textarea#edit-field-descriptioncontent-0-value').toggle(1000);
+
+  var add_description = (jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').text());
+  if( add_description == "Add Description" ){
+    jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').text('Description');
+    jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').addClass('desactive-cursoraddcursort');
+  }else{
+
+jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').text('Add Description');
+jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').removeClass('desactive-cursoraddcursort');
+
+  }
+});
 
 /*
 
@@ -339,21 +362,31 @@ jQuery('.channelgenerate ').append(description);
 
 });
 
- // Preview button befor adding content
+
+
+
 
 //Fonction calcul nombre doccurance du titre h1
  function countOccurences(string, word) {
    return string.split(word).length-1;
-}
+  }
+
+
 
 // detecte change in CKeditor
 jQuery(".node-content-form").ready(function() {
 CKEDITOR.instances['edit-body-0-value'].on('change',function(e){
-
-  jQuery('.messageduformat-texteformat').remove();
+  
+  jQuery('.btn-preview-addcontent').prop('disabled', false);
+  jQuery('.messageduformat-texteformat , .contentent-preview-good-format , .livepreview-content ').remove();
   jQuery('.node-content-form input#edit-submit').prop('disabled', true);
   var description2 = CKEDITOR.instances['edit-body-0-value'].getData();
+  jQuery( '<div class="contentent-preview-good-format">' + description2 + '</div>').insertBefore('form#node-content-form div#edit-title-wrapper');
+  jQuery('<div class="livepreview-content"> Live preview  Content </div>').insertBefore('.contentent-preview-good-format');
+  //find all elemtent in the Ckeditor
+// console.log(description2);
   var res = description2.substring(0, 3);
+   
   if(res == "<h1" || res == "<h2" || res == "<h3" || res == "<h4" || res == "<h5" || res == "<h6" ){
     // activation du button submit
     jQuery('.node-content-form input#edit-submit').prop('disabled', false);
@@ -364,7 +397,7 @@ CKEDITOR.instances['edit-body-0-value'].on('change',function(e){
 
     //jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fa fa-book"></i>😬 Oups ! <br> Please review the formatting of the content.  <br> H1 for Modules  <br> H2 or H3 for Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
   }
-  console.log("ckeditor on change");
+ //console.log("ckeditor on change");
 });
 });
 
@@ -374,33 +407,54 @@ CKEDITOR.instances['edit-body-0-value'].on('change',function(e){
 
 
 
-jQuery(".btn-groupOnAddContent > .btn-preview").click(function(){
+
+
+
+jQuery(".btn-groupOnAddContent > .btn-preview-addcontent ").click(function(){
   
     // remove alerte message befor all
-    jQuery('.Oups-message-addconten , .channelgenerategeneral').remove();
+  //  jQuery('.Oups-message-addconten , .channelgenerategeneral').remove();
 
     //Get data from ckeditor
     var description2 = CKEDITOR.instances['edit-body-0-value'].getData();
     
     //get first 3 chars
     var res = description2.substring(0, 3);
-    console.log(res);
-
-    //Count the number of title and display alerte if none
-  var countNbTitre=countOccurences(description2,"<h1");
+    console.log(description2);
 
   if(res == "<h1" || res == "<h2" || res == "<h3" || res == "<h4" || res == "<h5" || res == "<h6" ){
     // activation du button submit
     jQuery('.node-content-form input#edit-submit').prop('disabled', false);
+
+    jQuery( '<div class="contentent-preview-good-format">' + description2 + '</div>').insertBefore('form#node-content-form div#edit-title-wrapper');
+    jQuery('.btn-preview-addcontent').prop('disabled', true);
+  }
+  // if the Ckeditor is empty
+  else if (description2 ===""){
+  
+    jQuery( '<div class="Oups-message-addconten"> <div class="Oups-message-1 addcontenmessage" id="Oups-message-addcontent"><i class="fa fa-close"></i>😬 Oups ! Please add content for preview </div> </div>').insertBefore('#edit-title-wrapper');
+    jQuery('body').addClass('pop-pup-oups');
   }else {
     // Desactivation du button submit
     jQuery('.node-content-form input#edit-submit').prop('disabled', true);
-    jQuery( '<div class="Oups-message-addconten"> <div class="Oups-message-1 addcontenmessage" id="Oups-message-addcontent"><i class="fa fa-close"></i>😬 Oups ! <br> Please review the formatting of the content.  <br> H1 for Modules  <br> H2 or H3 for Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
+    jQuery( '<div class="Oups-message-addconten"> <div class="Oups-message-1 addcontenmessage" id="Oups-message-addcontent"><i class="fa fa-close"></i>😬 Oups ! <br> Please review the format of the content.  <br> Heading for Modules and  Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
     jQuery('body').addClass('pop-pup-oups');
 
     //jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fa fa-book"></i>😬 Oups ! <br> Please review the formatting of the content.  <br> H1 for Modules  <br> H2 or H3 for Submodules <br> Normal For messages</div> </div>').insertBefore('#edit-title-wrapper');
   }
 
+  //Hide the pop pup
+
+
+
+jQuery('.fa-times , div#Oups-message-addcontent , .pop-pup-oups:before ').click(function(){
+  jQuery('body').removeClass('pop-pup-oups');
+  jQuery('.Oups-message-addconten , .channelgenerategeneral').remove();
+
+  jQuery('.div#Oups-message-addcontent').hide();
+
+
+});
 
   //get the type of the data 
   //var typecontent = jQuery.type(description2);
@@ -409,12 +463,9 @@ jQuery(".btn-groupOnAddContent > .btn-preview").click(function(){
 
  // var findh = description2.match("h1");
 
- 
-
-
-jQuery( '<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fa fa-book"></i>Content preview</div> </div>').insertBefore('#edit-title-wrapper');
-
 });
+
+
 
 
 
@@ -531,13 +582,13 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
  
      var moduleIndex = jQuery(this).index();
   
-     jQuery('.blockmodule-submodule:eq('+moduleIndex+')').toggle('fast');
+     jQuery('.blockmodule-submodule:eq('+moduleIndex+')').toggle(1000);
     
      });
  
        // Expand All 
      jQuery('span.expandalle-minimizeall-button.cursor-pointer').click(function() {
-     jQuery('.node-content p span b').toggle();
+     jQuery('.node-content p span b').toggle(1000);
      var expand = (jQuery('span.expandalle-minimizeall-button.cursor-pointer').text());
      expand == "Expand all" ?  jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Minimize')  : jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Expand all')
      
@@ -554,7 +605,7 @@ jQuery('<span class="message-langage pstStatusModeration">'+moderationstate+'</s
    jQuery('.tw-switch-editing-button').toggleClass( 'turneditone' );
    jQuery('a.addnewlocalisation').toggleClass('afficher-add-new-localistion');
    jQuery('a.detaillebody').toggleClass('addnewlocalisationcacher');
-   jQuery('a.btn').toggle();
+   jQuery('a.btn').toggle(1000);
    jQuery('.add-module').toggleClass('add-module-enable');
  
    var turneoff = (jQuery('.tw-switch-editing-button').text());
@@ -643,10 +694,6 @@ notefounddasbord == " The requested page could not be found. " ? jQuery('div#blo
 
    });
 
-
-
-
-
-
  });
+
 

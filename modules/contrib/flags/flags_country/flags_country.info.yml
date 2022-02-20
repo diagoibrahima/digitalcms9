@@ -1,0 +1,13 @@
+name: Flags Country
+type: module
+description: Provides flag icons in widgets and formatters for country fields.
+core_version_requirement: ^8 || ^9
+package: Flags
+dependencies:
+  - flags:flags
+  - country:country
+
+# Information added by Drupal.org packaging script on 2021-10-24
+version: '8.x-1.0-beta3'
+project: 'flags'
+datestamp: 1635095431

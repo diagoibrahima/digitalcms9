@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e17894da805ecb69c712b2aacc49d429",
+    "content-hash": "7ed4b606ae192275a59b575fb2ca6b22",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1072,6 +1072,53 @@
             "time": "2021-11-15T02:22:54+00:00"
         },
         {
+            "name": "drupal/country",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/country.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/country-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "a18d1f2ccb7e90c9821fd403c71c72ae58937bdb"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1642668524",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Deji Akala",
+                    "homepage": "https://github.com/dakala",
+                    "email": "dejiakala@gmail.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "A simple country field for Drupal 8",
+            "homepage": "http://drupal.org/project/country",
+            "support": {
+                "source": "http://cgit.drupalcode.org/country",
+                "issues": "http://drupal.org/project/issues/country"
+            }
+        },
+        {
             "name": "drupal/csv_serialization",
             "version": "2.0.0",
             "source": {
@@ -1190,6 +1237,116 @@
             ],
             "support": {
                 "source": "https://git.drupalcode.org/project/entity_print"
+            }
+        },
+        {
+            "name": "drupal/flags",
+            "version": "1.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/flags.git",
+                "reference": "8.x-1.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/flags-8.x-1.0-beta3.zip",
+                "reference": "8.x-1.0-beta3",
+                "shasum": "a376fa5f639205c719fbf4cde68603a08132bf1b"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "require-dev": {
+                "drupal/country": "*",
+                "drupal/languagefield": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta3",
+                    "datestamp": "1635095430",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "matsbla",
+                    "homepage": "https://www.drupal.org/user/2325394"
+                },
+                {
+                    "name": "vlad.dancer",
+                    "homepage": "https://www.drupal.org/user/903844"
+                }
+            ],
+            "description": "Provides flags for countries and languages along with simple API.",
+            "homepage": "https://www.drupal.org/project/flags",
+            "support": {
+                "source": "https://git.drupalcode.org/project/flags"
+            }
+        },
+        {
+            "name": "drupal/languagefield",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/languagefield.git",
+                "reference": "8.x-1.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/languagefield-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "1251ab559e54f7e4cdb31e8ae6cafcfc54fd2ed0"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.7",
+                    "datestamp": "1630941393",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Alan D.",
+                    "homepage": "https://www.drupal.org/user/198838",
+                    "role": "Founder"
+                },
+                {
+                    "name": "John Voskuilen",
+                    "homepage": "https://www.drupal.org/user/591042",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Deji Akala",
+                    "email": "dejiakala@gmail.com",
+                    "homepage": "https://github.com/dakala",
+                    "role": "Contributor"
+                }
+            ],
+            "description": "Creates a language field with widgets and formatters.",
+            "homepage": "http://drupal.org/project/languagefield",
+            "support": {
+                "source": "http://cgit.drupalcode.org/languagefield",
+                "issues": "http://drupal.org/project/languagefield",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
             }
         },
         {
@@ -7957,6 +8114,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/flags": 10,
         "drupal/popup_after_login": 20,
         "drupal/sweetalert2": 20
     },
