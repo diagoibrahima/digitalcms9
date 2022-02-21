@@ -2669,13 +2669,13 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
   margin: 20px 0px;
 }
 
-article .node-content {
+article .node-content, .bodyContentToTranslate {
   /* to remplace by ==>  .contentent-title */
   /* to remplace by ==>  .contentent-supmodule */
   /* to remplace by ==>  .contentent-message */
 }
 
-article .node-content h1, article .node-content .node-content h1 {
+article .node-content h1, article .node-content .node-content h1, .bodyContentToTranslate h1, .bodyContentToTranslate .node-content h1 {
   font-size: 20px;
   background: #1391c142;
   color: #1391c1;
@@ -2684,7 +2684,7 @@ article .node-content h1, article .node-content .node-content h1 {
   border-radius: 1px;
 }
 
-article .node-content h2, article .node-content .node-content h2 {
+article .node-content h2, article .node-content .node-content h2, .bodyContentToTranslate h2, .bodyContentToTranslate .node-content h2 {
   font-size: 15px;
   color: #1391c1;
   font-weight: 400;
@@ -2694,7 +2694,7 @@ article .node-content h2, article .node-content .node-content h2 {
   border-left: solid 1px #cde4ef;
 }
 
-article .node-content p, article .node-content .node-content p {
+article .node-content p, article .node-content .node-content p, .bodyContentToTranslate p, .bodyContentToTranslate .node-content p {
   color: #000000;
   font-size: 16px;
   margin: 20px 0px;

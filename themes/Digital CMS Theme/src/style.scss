@@ -2513,7 +2513,7 @@ p , .node-content p {
 
 }
 
-article .node-content {
+article .node-content, .bodyContentToTranslate {
 
 /* to remplace by ==>  .contentent-title */
   h1  , .node-content h1{
@@ -2631,3 +2631,4 @@ textarea#edit-field-descriptioncontent-0-value {
   background: #f3f4f6;
   margin: 22px -14px;
 }
+
