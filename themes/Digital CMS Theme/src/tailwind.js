@@ -55,7 +55,7 @@ jQuery(document).ready(function () {
 
 
     jQuery('p span span span span').click(function () {
-    jQuery('.node-content p span b').toggle(1000);
+    jQuery('.node-content p span b').toggle();
   });
 
   //Hide and show add description
