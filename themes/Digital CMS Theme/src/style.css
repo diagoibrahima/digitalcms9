@@ -2426,7 +2426,15 @@ textarea#edit-field-commentbody2-0-value {
   height: 300px;
 }
 
-.tw-item-card p SPAN {
+.tw-item-card h1:nth-child(1) {
+  display: block !important;
+}
+
+.tw-item-card h1 + p {
+  display: block !important;
+}
+
+.tw-item-card p, .tw-item-card h1, .tw-item-card h2, .tw-item-card h3, .tw-item-card h4, .tw-item-card h5, .tw-item-card h6 {
   display: none;
 }
 
@@ -2518,7 +2526,7 @@ article .node-content div:nth-child(2):before {
 }
 
 .node-content-form .cke_reset {
-  max-height: 400px !important;
+  max-height: 580px !important;
 }
 
 .node-content-form div#edit-body-0-format {
@@ -2616,36 +2624,36 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
 
 .messageduformat-texteformat {
   position: absolute;
-  top: -70px;
+  top: -30px;
   color: red;
+  font-size: 12px;
   background: #ff00005e;
   padding: 5px;
-  margin: 30px 4px;
+  margin: 30px 1px;
   border-radius: 5px;
+  left: 0;
+  line-height: 26px;
 }
 
 .contentent-preview-good-format {
-  padding: 80px 10px 10px;
+  padding: 10px;
   background: white;
   border-radius: 5px;
-  position: absolute;
-  width: 50%;
-  right: 1%;
   /* to remplace by ==>  .contentent-title */
   /* to remplace by ==>  .contentent-supmodule */
   /* to remplace by ==>  .contentent-message */
 }
 
-.contentent-preview-good-format h1 {
+.contentent-preview-good-format h1, .contentent-preview-good-format .node-content h1 {
   font-size: 20px;
   background: #1391c142;
   color: #1391c1;
   font-weight: normal;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 1px;
 }
 
-.contentent-preview-good-format h2 {
+.contentent-preview-good-format h2, .contentent-preview-good-format .node-content h2 {
   font-size: 15px;
   color: #1391c1;
   font-weight: 400;
@@ -2653,21 +2661,54 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
   margin: 20px;
   border-bottom: solid 1px #cde4ef;
   border-left: solid 1px #cde4ef;
-  border-radius: 1px 0px 0px 5px;
 }
 
-.contentent-preview-good-format p {
-  color: #1391c17a;
-  font-size: 12px;
+.contentent-preview-good-format p, .contentent-preview-good-format .node-content p {
+  color: #000000;
+  font-size: 16px;
   margin: 20px 0px;
 }
 
-.livepreview-content {
+article .node-content {
+  /* to remplace by ==>  .contentent-title */
+  /* to remplace by ==>  .contentent-supmodule */
+  /* to remplace by ==>  .contentent-message */
+}
+
+article .node-content h1, article .node-content .node-content h1 {
+  font-size: 20px;
+  background: #1391c142;
+  color: #1391c1;
+  font-weight: normal;
+  padding: 10px;
+  border-radius: 1px;
+}
+
+article .node-content h2, article .node-content .node-content h2 {
+  font-size: 15px;
+  color: #1391c1;
+  font-weight: 400;
+  padding: 10px;
+  margin: 20px;
+  border-bottom: solid 1px #cde4ef;
+  border-left: solid 1px #cde4ef;
+}
+
+article .node-content p, article .node-content .node-content p {
+  color: #000000;
+  font-size: 16px;
+  margin: 20px 0px;
+}
+
+.live-preveiw-section {
   width: 50%;
-  background: #1391c1;
   position: absolute;
   right: 1%;
   z-index: 99;
+}
+
+.live-preveiw-section .livepreview-content {
+  background: #1391c1;
   text-align: center;
   font-size: 20px;
   color: white;
@@ -2709,5 +2750,36 @@ span.blocuers-name-flag svg.svg-inline--fa.fa-user-circle.fa-w-16.fa-fw.user-ava
 
 span.blocuers-name-flag span.flag-instead {
   margin: 10px;
+}
+
+textarea#edit-field-descriptioncontent-0-value {
+  color: black;
+  padding: 10px;
+}
+
+.tilteconteValue {
+  font-size: 20px;
+  color: #1391c1;
+  padding: 10px;
+  background: white;
+}
+
+.DescriptioncontentValue {
+  padding: 10px;
+  background: white;
+}
+
+.description-preview {
+  color: gray;
+  font-size: 25px;
+  font-weight: 100;
+  margin: 5px auto;
+}
+
+.separateur-whenwehavedescrip {
+  height: 10px;
+  width: 103%;
+  background: #f3f4f6;
+  margin: 22px -14px;
 }
 /*# sourceMappingURL=style.css.map */

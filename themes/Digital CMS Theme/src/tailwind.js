@@ -2,13 +2,17 @@ jQuery(document).ready(function() {
   jQuery('.blockmodule-submodule').hide();
   jQuery('a.btn').hide();
   jQuery('section').hide();
-
+ 
+  jQuery('<div class="live-preveiw-section "> <div class="livepreview-content"> Live preview  Content </div> <div class="tilteconteValue" ></div> <div class="DescriptioncontentValue"></div> <div class="contentent-preview-good-format">  </div> </div>').insertBefore('form#node-content-form');
+//  jQuery('<div class="tilteconteValue" ></div>').insertAfter('.livepreview-content');
+//  jQuery('<div class="DescriptioncontentValue"></div>').insertAfter('.tilteconteValue')
+  
   //hide submodule and message content 
   
 jQuery('.node-content p span b').hide();
 jQuery('.node-content-form input#edit-submit').prop('disabled', true);
 
-jQuery('<div class="tw-flex tw-items-center tw-jtw-ustify-center tw-mb-4 btn-groupOnAddContent"><button class="btn btn-edit tw-bg-blue-700 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white active tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-l tw-outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear tw-transition-all tw-duration-150" type="button">Edit</button><button class="btn btn-preview tw-bg-blue-500 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white  tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-r outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear transition-all duration-150" type="button">Preview</button></div>').insertAfter('.node-content-form input#edit-submit');
+jQuery('<div class="tw-flex tw-items-center tw-jtw-ustify-center tw-mb-4 btn-groupOnAddContent"><button class="btn btn-edit tw-bg-blue-700 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white active tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-l tw-outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear tw-transition-all tw-duration-150" type="button">Edit</button><button class="btn btn-preview  btn-preview-addcontent tw-bg-blue-500 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white  tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-r outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear transition-all duration-150" type="button">Preview</button></div>').insertAfter('.node-content-form input#edit-submit');
 
 jQuery('<span class="button-add-new-comment">Add a new comment</span>').insertBefore('section');
 jQuery('.node-content p:nth-child(1)').insertBefore('.node-content p:nth-child(1)')
@@ -62,6 +66,21 @@ jQuery('p span span span span').click(function(){
 jQuery('.node-content p span b').toggle();
 });
 
+jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').click(function(){
+
+  jQuery('textarea#edit-field-descriptioncontent-0-value').toggle(1000);
+  
+  var add_description = (jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').text());
+  if( add_description == "Add Description" ){
+    jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').text('Description');
+    jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').addClass('desactive-cursoraddcursort');
+  }else{
+
+jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').text('Add Description');
+jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').removeClass('desactive-cursoraddcursort');
+
+  }
+});
 
 /*
 
@@ -365,17 +384,54 @@ jQuery('.channelgenerate ').append(description);
 
 // IMPL
 
-//console.log('status : ' + checkTitleValue('<h1', title_arr));
-//console.log('tableau : ' +  title_arr.toString());
+//on change input title  
+
+
+jQuery("input#edit-title-0-value").on('change',function(e){
+
+ // jQuery('.tilteconteValue').remove();
+  tilteconteValue = jQuery(this).val();
+
+  jQuery('.tilteconteValue').html(tilteconteValue);
+// 
+});
+
+
+jQuery(" textarea#edit-field-descriptioncontent-0-value ").on('change',function(e){
+ // jQuery('.DescriptioncontentValue').remove();
+
+  DescriptioncontentValue = jQuery(this).val();
+ jQuery('.DescriptioncontentValue').html('<div class="description-preview">Description</div> <br>'+ DescriptioncontentValue + '<div class="separateur-whenwehavedescrip"></div>');
+
+
+
+});
+
+/*
+jQuery(".node-content-form").ready(function() {
+ jQuery('input#edit-title-0-value').on('change',function(e){
+    console.log('change in the input')
+    var title_content = jQuery("input#edit-title-0-value").val();
+    console.log(title_content);
+  });
+  });
+
+  */
+
 
 // When we are on the page that contain ckeditor we start the listener to get changes 
 
 jQuery(".node-content-form").ready(function() {
 CKEDITOR.instances['edit-body-0-value'].on('change',function(e){
-
+  
+  jQuery('.btn-preview-addcontent').prop('disabled', false);
   jQuery('.messageduformat-texteformat').remove();
   jQuery('.node-content-form input#edit-submit').prop('disabled', true);
   var description2 = CKEDITOR.instances['edit-body-0-value'].getData();
+  jQuery(".contentent-preview-good-format").html(description2);
+ 
+  //find all elemtent in the Ckeditor
+// console.log(description2);
   var res = description2.substring(0, 3);
   if(res == "<h1" || res == "<h2" || res == "<h3" || res == "<h4" || res == "<h5" || res == "<h6" ){
     // activation du button submit

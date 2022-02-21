@@ -2268,8 +2268,20 @@ textarea#edit-field-commentbody2-0-value {
 
 // Version 2 du CMS
 
-.tw-item-card p SPAN {
-  display: none;
+.tw-item-card{
+
+  h1:nth-child(1){
+    display: block !important;
+  }
+
+  h1+p{
+    display: block !important;
+  }
+
+  p, h1 ,h2 ,h3 ,h4 , h5 , h6 {
+    display: none;
+  }
+
 }
 
 p span span span span {
@@ -2361,7 +2373,7 @@ article .node-content div:nth-child(2) {
 
   .cke_reset{
 
-    max-height: 400px !important;
+    max-height:580px !important;
   }
 
 
@@ -2451,36 +2463,36 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
 
 .messageduformat-texteformat {
   position: absolute;
-  top: -70px;
-  color: red;
-  background: #ff00005e;
-  padding: 5px;
-  margin: 30px 4px;
-  border-radius: 5px;
+    top: -30px;
+    color: red;
+    font-size: 12px;
+    background: #ff00005e;
+    padding: 5px;
+    margin: 30px 1px;
+    border-radius: 5px;
+    left: 0;
+    line-height: 26px;
 }
 
 
-.contentent-preview-good-format{
+.contentent-preview-good-format {
 
-  padding: 80px 10px 10px;
+  padding:10px ;
   background: white;
   border-radius: 5px;
-  position: absolute;
-  width: 50%;
-  right: 1%;
 
 
 /* to remplace by ==>  .contentent-title */
-  h1 {
+  h1  , .node-content h1{
     font-size: 20px;
     background: #1391c142;
     color: #1391c1;
     font-weight: normal;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 1px;
   }
 /* to remplace by ==>  .contentent-supmodule */
-h2 {
+h2 , .node-content h2 {
   font-size: 15px;
   color: #1391c1;
   font-weight: 400;
@@ -2488,12 +2500,12 @@ h2 {
   margin: 20px;
   border-bottom: solid 1px #cde4ef;
   border-left: solid 1px #cde4ef;
-  border-radius: 1px 0px 0px 5px;
+
 }
 /* to remplace by ==>  .contentent-message */
-p {
-  color: #1391c17a;
-  font-size: 12px;
+p , .node-content p {
+  color: #000000;
+  font-size: 16px;
   margin: 20px 0px;
 }
 
@@ -2501,16 +2513,56 @@ p {
 
 }
 
-.livepreview-content {
+article .node-content {
+
+/* to remplace by ==>  .contentent-title */
+  h1  , .node-content h1{
+    font-size: 20px;
+    background: #1391c142;
+    color: #1391c1;
+    font-weight: normal;
+    padding: 10px;
+    border-radius: 1px;
+  }
+/* to remplace by ==>  .contentent-supmodule */
+h2 , .node-content h2 {
+  font-size: 15px;
+  color: #1391c1;
+  font-weight: 400;
+  padding: 10px;
+  margin: 20px;
+  border-bottom: solid 1px #cde4ef;
+  border-left: solid 1px #cde4ef;
+
+}
+/* to remplace by ==>  .contentent-message */
+p , .node-content p {
+  color: #000000;
+  font-size: 16px;
+  margin: 20px 0px;
+}
+
+
+
+}
+
+.live-preveiw-section {
   width: 50%;
-  background: #1391c1;
+  
   position: absolute;
   right: 1%;
   z-index: 99;
-  text-align: center;
-  font-size: 20px;
-  color: white;
-  border-radius: 5px 5px 0px 0px;
+ 
+
+  .livepreview-content{
+
+    background: #1391c1;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px 5px 0px 0px;
+  }
+
 }
 
 
@@ -2545,4 +2597,37 @@ span.blocuers-name-flag {
 span.flag-instead {
   margin: 10px;
 }
+}
+
+textarea#edit-field-descriptioncontent-0-value {
+  color: black;
+  padding: 10px;
+}
+
+.tilteconteValue {
+  font-size:20px;
+  color: #1391c1;
+  padding: 10px;
+  background: white;
+}
+
+.DescriptioncontentValue{
+  padding: 10px;
+  background: white;
+
+}
+
+.description-preview{
+  color: gray;
+  font-size: 25px;
+  font-weight: 100;
+  margin: 5px auto;
+}
+
+
+.separateur-whenwehavedescrip {
+  height: 10px;
+  width: 103%;
+  background: #f3f4f6;
+  margin: 22px -14px;
 }
