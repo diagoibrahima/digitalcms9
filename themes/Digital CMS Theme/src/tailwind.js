@@ -445,11 +445,14 @@ CKEDITOR.instances['edit-body-0-value'].on('change',function(e){
   }
   console.log("ckeditor on change");
 });
+
+
 });
 
 // When we click on preview button
 jQuery(".btn-preview").click(function(){
 alert("helloAPI");
+
 //appel api 
 const res = await fetch("http://0.0.0.0:5000/translate", {
 	method: "POST",
