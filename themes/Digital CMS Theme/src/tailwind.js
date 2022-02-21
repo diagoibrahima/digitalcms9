@@ -448,9 +448,8 @@ CKEDITOR.instances['edit-body-0-value'].on('change',function(e){
 });
 
 // When we click on preview button
-jQuery(".btn-groupOnAddContent > .btn-preview").click(function(){
-
-
+jQuery(".btn-preview").click(function(){
+alert("helloAPI");
 //appel api 
 const res = await fetch("http://0.0.0.0:5000/translate", {
 	method: "POST",
