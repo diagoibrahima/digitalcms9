@@ -143,8 +143,7 @@ jQuery( "span.button-add-new-comment " ).click(function() {
   jQuery('section').show();
   jQuery('div#block-views-block-listcomments-block-1').addClass('add-height-block-comment')
 });
- 
- 
+
 /*
   let str = localStorage.getItem("channelVal");
 
@@ -191,22 +190,22 @@ jQuery( "span.button-add-new-comment " ).click(function() {
  //content completion ----------------  
 
  //nombre de message traduit
- var nombredemessagetraduit = parseInt((jQuery('div#block-views-block-completionnbtraduction-block-1 header').text()));
+var nombredemessagetraduit = parseInt((jQuery('div#block-views-block-completionnbtraduction-block-1 header').text()));
 
 // console.log(nombredemessagetraduit);
 
  //total message
- var totalmessage = parseInt((jQuery('div#block-views-block-completionnbmessage-block-1 header').text()));
+var totalmessage = parseInt((jQuery('div#block-views-block-completionnbmessage-block-1 header').text()));
  //console.log(totalmessage);
- 
- var nblangue = jQuery('.nombredelangue').length;
+
+var nblangue = jQuery('.nombredelangue').length;
 // console.log(nblangue);
 
 
  //Nombre de message restant a traduire
- var restotranslate=totalmessage-nombredemessagetraduit;
+var restotranslate=totalmessage-nombredemessagetraduit;
 
- if(isNaN(restotranslate)){restotranslate=0;}
+if(isNaN(restotranslate)){restotranslate=0;}
 //console.log(restotranslate);
 
  var pourcentage = nombredemessagetraduit*100/(totalmessage*nblangue);
@@ -394,6 +393,25 @@ CKEDITOR.instances['edit-body-0-value'].on('change',function(e){
 
 // When we click on preview button
 jQuery(".btn-groupOnAddContent > .btn-preview").click(function(){
+
+
+//appel api 
+const res = await fetch("http://0.0.0.0:5000/translate", {
+	method: "POST",
+	body: JSON.stringify({
+		q: description2,
+		source: "fr",
+		target: "en",
+		format: "text"
+	}),
+	headers: { "Content-Type": "application/json" }
+});
+
+console.log(await res.json());
+
+});
+
+
 
   var title_arr = ['<h1','<h2','<h3','<h4','<h5','<h6'];
   
@@ -798,8 +816,4 @@ notefounddasbord == " The requested page could not be found. " ? jQuery('div#blo
 
 
 
-
-
-
- });
 
