@@ -8,7 +8,6 @@ jQuery(document).ready(function () {
   //hide submodule and message content 
   jQuery('.node-content p span b').hide();
   jQuery('.node-content-form input#edit-submit').prop('disabled', true);
-  jQuery('<div class="tw-flex tw-items-center tw-jtw-ustify-center tw-mb-4 btn-groupOnAddContent"><button class="btn btn-edit tw-bg-blue-700 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white active tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-l tw-outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear tw-transition-all tw-duration-150" type="button">Edit</button><button class="btn btn-preview  btn-preview-addcontent tw-bg-blue-500 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white  tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-r outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear transition-all duration-150" type="button">Preview</button></div>').insertAfter('.node-content-form input#edit-submit');
   jQuery('<span class="button-add-new-comment">Add a new comment</span>').insertBefore('section');
   jQuery('.node-content p:nth-child(1)').insertBefore('.node-content p:nth-child(1)')
 
