@@ -2,11 +2,10 @@ jQuery(document).ready(function () {
   jQuery('textarea#edit-field-descriptioncontent-0-value').hide()
   jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').html('Add Description')
   jQuery('.blockmodule-submodule').hide();
+  jQuery('article .node-content p, article .node-content h2').hide();
   jQuery('a.btn').hide();
   jQuery('section').hide();
   jQuery('<div class="live-preveiw-section "> <div class="livepreview-content"> Live preview  Content </div> <div class="tilteconteValue" ></div> <div class="DescriptioncontentValue"></div> <div class="contentent-preview-good-format">  </div> </div>').insertBefore('form#node-content-form');
-  //hide submodule and message content 
-  jQuery('.node-content p span b').hide();
   jQuery('.node-content-form input#edit-submit').prop('disabled', true);
   jQuery('<span class="button-add-new-comment">Add a new comment</span>').insertBefore('section');
   jQuery('.node-content p:nth-child(1)').insertBefore('.node-content p:nth-child(1)');
@@ -18,67 +17,72 @@ jQuery(document).ready(function () {
   var textToTranslate = jQuery(".bodyContentToTranslate").html();
   console.log(textToTranslate);
 
-// Start function
-const starttranslate = async function(a, b,c) {
+  // Start function
+  const starttranslate = async function (a, b, c) {
 
-  const res = await fetch("http://0.0.0.0:5000/translate", {
-    method: "POST",
-     body: JSON.stringify({
-       q: a,
-       source: b,
-       target: c,
-       format: "html"
-     }),
-     headers: { "Content-Type": "application/json" }
-   });
-
-
-   var obj = await res.json();
-
-   var resultgood  = (obj.translatedText);
-
-   CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData(resultgood);
-   console.log(resultgood);
-}
+    const res = await fetch("https://f0bc-41-214-20-30.ngrok.io/translate", {
+      method: "POST",
+      body: JSON.stringify({
+        q: a,
+        source: b,
+        target: c,
+        format: "html"
+      }),
+      headers: { "Content-Type": "application/json" }
+    });
 
 
+    var obj = await res.json();
 
-starttranslate(textToTranslate, "auto", "en");
+    var resultgood = (obj.translatedText);
+
+    CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData(resultgood);
+    console.log(resultgood);
+  }
 
 
 
-document.getElementById('edit-field-localization-langue').addEventListener('change', function() {
+  
+
+
+
+  starttranslate(textToTranslate, "auto", "en");
+
+
+
+  document.getElementById('edit-field-localization-langue').addEventListener('change', function () {
     var e = document.getElementById("edit-field-localization-langue");
     var text = e.options[e.selectedIndex].text;
-    if(text=="Espagnol"){
+    if (text == "Espagnol") {
       starttranslate(textToTranslate, "auto", "es");
-    }else if(text=="Arabic"){
+    } else if (text == "Arabic") {
       starttranslate(textToTranslate, "auto", "ar");
-    }else if(text=="Anglais"){
+    } else if (text == "Anglais") {
       starttranslate(textToTranslate, "auto", "en");
-    }else if(text=="Chinois"){
+    } else if (text == "Chinois") {
       starttranslate(textToTranslate, "auto", "zh");
     }
 
     console.log('You selected: ', text);
-});
+  });
 
+    
 
-   //appel api 
- /*
- const res = await fetch("http://0.0.0.0:5000/translate", {
-  method: "POST",
-   body: JSON.stringify({
-     q: "Bonjour",
-     source: "fr",
-     target: "en",
-     format: "text"
-   }),
-   headers: { "Content-Type": "application/json" }
- });
- 
- console.log(await res.json());
-*/
+  //appel api 
+  /*
+  const res = await fetch("http://0.0.0.0:5000/translate", {
+   method: "POST",
+    body: JSON.stringify({
+      q: "Bonjour",
+      source: "fr",
+      target: "en",
+      format: "text"
+    }),
+    headers: { "Content-Type": "application/json" }
+  });
+  
+  console.log(await res.json());
+ */
 
   //Download files and archive them in to a zipfile
 
@@ -126,9 +130,6 @@ document.getElementById('edit-field-localization-langue').addEventListener('chan
 
 
 
-    jQuery('p span span span span').click(function () {
-    jQuery('.node-content p span b').toggle();
-  });
 
   //Hide and show add description
 
@@ -150,9 +151,9 @@ document.getElementById('edit-field-localization-langue').addEventListener('chan
 
   jQuery('option[value="_none"]').remove();
   jQuery('.entity-moderation-form .form-item label').html('');
-  jQuery('form#node-localization-form div#edit-actions').append('<div class="tw-flex tw-items-center tw-jtw-ustify-center tw-mb-4 btn-group"><button class="btn btn-edit tw-bg-blue-700 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white active tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-l tw-outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear tw-transition-all tw-duration-150" type="button">Edit</button><button class="btn btn-preview tw-bg-blue-500 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-r outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear transition-all duration-150" type="button">Preview</button></div>');
+ // jQuery('form#node-localization-form div#edit-actions').append('<div class="tw-flex tw-items-center tw-jtw-ustify-center tw-mb-4 btn-group"><button class="btn btn-edit tw-bg-blue-700 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white active tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-l tw-outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear tw-transition-all tw-duration-150" type="button">Edit</button><button class="btn btn-preview tw-bg-blue-500 tw-text-white hover:tw-bg-blue-700 hover:tw-text-white tw-font-bold uppercase tw-text-sm tw-px-6 tw-py-3 tw-rounded-r outline-none tw-focus:outline-none tw-mb-1 tw-ease-linear transition-all duration-150" type="button">Preview</button></div>');
   jQuery('.simpler_quickedit_click.simpler_quickedit.quickedit-field').append("<i class='fas fa-pencil-alt editeur-conten'></i>");
-  
+
   //Show add comment form
 
   jQuery("span.button-add-new-comment ").click(function () {
@@ -314,11 +315,11 @@ document.getElementById('edit-field-localization-langue').addEventListener('chan
 
 
 
-/* Fonction calcul nombre doccurance du titre h1 
-  function countOccurences(string, word) {
-    return string.split(word).length - 1;
-  }
-  */
+  /* Fonction calcul nombre doccurance du titre h1 
+    function countOccurences(string, word) {
+      return string.split(word).length - 1;
+    }
+    */
 
   //on change input title   & description
   jQuery("input#edit-title-0-value").on('change', function (e) {
@@ -353,7 +354,8 @@ document.getElementById('edit-field-localization-langue').addEventListener('chan
       } else {
         // Desactivation du button submit
         jQuery('.node-content-form input#edit-submit').prop('disabled', true);
-        jQuery('<div class="messageduformat-texteformat">😬 Oups !  Please review the format of the content.  Heading for Modules  and  Submodules  Normal For messages  </div>').insertBefore('.node-content-form div#edit-actions #edit-submit'); }
+        jQuery('<div class="messageduformat-texteformat">😬 Oups !  Please review the format of the content.  Heading for Modules  and  Submodules  Normal For messages  </div>').insertBefore('.node-content-form div#edit-actions #edit-submit');
+      }
     });
   });
 
@@ -451,7 +453,7 @@ document.getElementById('edit-field-localization-langue').addEventListener('chan
 
   // Expand All 
   jQuery('span.expandalle-minimizeall-button.cursor-pointer').click(function () {
-    jQuery('.node-content p span b').toggle(1000);
+    jQuery('article .node-content p, article .node-content h2').toggle(1000);
     var expand = (jQuery('span.expandalle-minimizeall-button.cursor-pointer').text());
     expand == "Expand all" ? jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Minimize') : jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Expand all')
   });
@@ -543,7 +545,7 @@ document.getElementById('edit-field-localization-langue').addEventListener('chan
   //
 
 
- // API AUTOMATIC TRANSLATION 
+  // API AUTOMATIC TRANSLATION 
 
 
 
