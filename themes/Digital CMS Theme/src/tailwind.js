@@ -41,10 +41,27 @@ const starttranslate = async function(a, b,c) {
    console.log(resultgood);
 }
 
-starttranslate(textToTranslate, "fr", "en");
+
+
+starttranslate(textToTranslate, "auto", "en");
 
 
 
+document.getElementById('edit-field-localization-langue').addEventListener('change', function() {
+    var e = document.getElementById("edit-field-localization-langue");
+    var text = e.options[e.selectedIndex].text;
+    if(text=="Espagnol"){
+      starttranslate(textToTranslate, "auto", "es");
+    }else if(text=="Arabic"){
+      starttranslate(textToTranslate, "auto", "ar");
+    }else if(text=="Anglais"){
+      starttranslate(textToTranslate, "auto", "en");
+    }else if(text=="Chinois"){
+      starttranslate(textToTranslate, "auto", "zh");
+    }
+
+    console.log('You selected: ', text);
+});
 
 
    //appel api 
@@ -534,3 +551,4 @@ starttranslate(textToTranslate, "fr", "en");
 
 
 });
+
