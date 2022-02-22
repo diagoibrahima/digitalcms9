@@ -3,8 +3,20 @@ body {
   background: #e5e7eb !important;
 }
 
-body, p, h1, h2, h3, h4, h5, h6, span, div, input, a, #edit-submit {
-  font-family: 'Roboto', sans-serif !important;
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+div,
+input,
+a,
+#edit-submit {
+  font-family: "Roboto", sans-serif !important;
 }
 
 aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
@@ -406,7 +418,8 @@ form#comment-comment-delete-form {
   padding: 20px 0px 0px 30px !important;
 }
 
-textarea#edit-field-commentbody2-0-value, input#edit-subject-0-value {
+textarea#edit-field-commentbody2-0-value,
+input#edit-subject-0-value {
   border: 1px #98a8bd solid;
   border-radius: 5px;
   width: 100%;
@@ -442,7 +455,8 @@ form#node-module-form,
 form#node-sub-module-form,
 .node-course__edit-form,
 .node-form,
-form#comment-comment-delete-form, form#comment-form {
+form#comment-comment-delete-form,
+form#comment-form {
   margin-top: 40px;
   background: white;
   width: 95%;
@@ -454,29 +468,27 @@ form#comment-comment-delete-form, form#comment-form {
   margin: 30px auto;
 }
 
-form#node-course-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value, form#node-course-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value
-, form#node-course-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value,
+form#node-course-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
+form#node-course-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value,
+form#node-course-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value,
 form#node-module-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
-form#node-module-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value
-,
+form#node-module-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value,
 form#node-module-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value,
 form#node-sub-module-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
-form#node-sub-module-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value
-,
+form#node-sub-module-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value,
 form#node-sub-module-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value,
 .node-course__edit-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
-.node-course__edit-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value
-,
+.node-course__edit-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value,
 .node-course__edit-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value,
 .node-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
-.node-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value
-,
+.node-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value,
 .node-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value,
 form#comment-comment-delete-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
-form#comment-comment-delete-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value
-,
-form#comment-comment-delete-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value, form#comment-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value, form#comment-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value
-, form#comment-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value {
+form#comment-comment-delete-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value,
+form#comment-comment-delete-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value,
+form#comment-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
+form#comment-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value,
+form#comment-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value {
   width: 95%;
   margin: auto;
 }
@@ -486,7 +498,8 @@ form#node-module-form textarea,
 form#node-sub-module-form textarea,
 .node-course__edit-form textarea,
 .node-form textarea,
-form#comment-comment-delete-form textarea, form#comment-form textarea {
+form#comment-comment-delete-form textarea,
+form#comment-form textarea {
   overflow: auto;
   border: 1px #98a8bd solid;
   border-radius: 0.25rem;
@@ -535,7 +548,8 @@ form#comment-comment-delete-form input#edit-field-module-0-target-id,
 form#comment-comment-delete-form input#edit-field-message-0-value,
 form#comment-comment-delete-form .js-form-item,
 form#comment-comment-delete-form input#edit-field-localization-tag-0-target-id,
-form#comment-comment-delete-form input#edit-field-field-submoduleinmessage-0-target-id, form#comment-form input#edit-title-0-value,
+form#comment-comment-delete-form input#edit-field-field-submoduleinmessage-0-target-id,
+form#comment-form input#edit-title-0-value,
 form#comment-form input#edit-field-course-0-target-id,
 form#comment-form input#edit-field-module-0-target-id,
 form#comment-form input#edit-field-message-0-value,
@@ -2235,7 +2249,7 @@ button.btn.btn-preview.tw-bg-blue-500.tw-text-white.hover\:tw-bg-blue-700.hover\
 }
 
 p.titrepagemessage:before {
-  content: '';
+  content: "";
   background: #f3f4f6;
   position: absolute;
   width: 100%;
@@ -2302,7 +2316,7 @@ p.commented-date {
 }
 
 .commente a:before {
-  content: '';
+  content: "";
   background: rgba(255, 0, 0, 0);
   height: 54%;
   width: 100%;
@@ -2318,7 +2332,7 @@ p.commented-date {
 }
 
 div#block-views-block-listcomments-block-1:before {
-  content: '';
+  content: "";
   background: #f3f4f6;
   position: absolute;
   bottom: 0px;
@@ -2333,7 +2347,7 @@ div#block-views-block-listcomments-block-1:before {
 }
 
 .add-height-block-comment:after {
-  content: '';
+  content: "";
   background: #e4e7eb;
   height: 30px;
   width: 100%;
@@ -2434,8 +2448,18 @@ textarea#edit-field-commentbody2-0-value {
   display: block !important;
 }
 
-.tw-item-card p, .tw-item-card h1, .tw-item-card h2, .tw-item-card h3, .tw-item-card h4, .tw-item-card h5, .tw-item-card h6 {
+.tw-item-card p,
+.tw-item-card h1,
+.tw-item-card h2,
+.tw-item-card h3,
+.tw-item-card h4,
+.tw-item-card h5,
+.tw-item-card h6 {
   display: none;
+}
+
+.tw-item-card p + h1 + p {
+  display: none !important;
 }
 
 p span span span span {
@@ -2479,7 +2503,7 @@ article .node-content div:nth-child(2) {
 }
 
 article .node-content div:nth-child(2):before {
-  content: '';
+  content: "";
   background: #f3f4f6;
   position: absolute;
   height: 20px;
@@ -2488,7 +2512,8 @@ article .node-content div:nth-child(2):before {
   left: -19px;
 }
 
-.node-content-form input#edit-submit:disabled, .btn-preview-addcontent:disabled {
+.node-content-form input#edit-submit:disabled,
+.btn-preview-addcontent:disabled {
   background: #1391c15e !important;
   cursor: not-allowed;
 }
@@ -2502,9 +2527,9 @@ article .node-content div:nth-child(2):before {
       -ms-flex-direction: row-reverse !important;
           flex-direction: row-reverse !important;
   width: 98.5%;
-  -webkit-box-pack: justify  !important;
-      -ms-flex-pack: justify  !important;
-          justify-content: space-between  !important;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
   -webkit-box-align: center !important;
       -ms-flex-align: center !important;
           align-items: center !important;
@@ -2552,9 +2577,9 @@ article .node-content div:nth-child(2):before {
       -ms-flex-direction: row-reverse !important;
           flex-direction: row-reverse !important;
   width: 96.5%;
-  -webkit-box-pack: justify  !important;
-      -ms-flex-pack: justify  !important;
-          justify-content: space-between  !important;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
   -webkit-box-align: center !important;
       -ms-flex-align: center !important;
           align-items: center !important;
@@ -2573,7 +2598,8 @@ article .node-content div:nth-child(2):before {
   margin: 20px 19px;
 }
 
-.node-content-form div#edit-field-descriptioncontent-wrapper, .node-content-form .js-form-item.form-item.js-form-type-textarea.form-item-body-0-value.js-form-item-body-0-value {
+.node-content-form div#edit-field-descriptioncontent-wrapper,
+.node-content-form .js-form-item.form-item.js-form-type-textarea.form-item-body-0-value.js-form-item-body-0-value {
   width: 95%;
   margin: auto;
 }
@@ -2585,7 +2611,7 @@ article .node-content div:nth-child(2):before {
 }
 
 .pop-pup-oups:before {
-  content: '';
+  content: "";
   background: #000000d1;
   position: absolute;
   height: 100vh;
@@ -2650,7 +2676,8 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
   /* to remplace by ==>  .contentent-message */
 }
 
-.contentent-preview-good-format h1, .contentent-preview-good-format .node-content h1 {
+.contentent-preview-good-format h1,
+.contentent-preview-good-format .node-content h1 {
   font-size: 20px;
   background: #1391c142;
   color: #1391c1;
@@ -2659,7 +2686,8 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
   border-radius: 1px;
 }
 
-.contentent-preview-good-format h2, .contentent-preview-good-format .node-content h2 {
+.contentent-preview-good-format h2,
+.contentent-preview-good-format .node-content h2 {
   font-size: 15px;
   color: #1391c1;
   font-weight: 400;
@@ -2669,19 +2697,24 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
   border-left: solid 1px #cde4ef;
 }
 
-.contentent-preview-good-format p, .contentent-preview-good-format .node-content p {
+.contentent-preview-good-format p,
+.contentent-preview-good-format .node-content p {
   color: #000000;
   font-size: 16px;
   margin: 20px 0px;
 }
 
-article .node-content, .bodyContentToTranslate {
+article .node-content,
+.bodyContentToTranslate {
   /* to remplace by ==>  .contentent-title */
   /* to remplace by ==>  .contentent-supmodule */
   /* to remplace by ==>  .contentent-message */
 }
 
-article .node-content h1, article .node-content .node-content h1, .bodyContentToTranslate h1, .bodyContentToTranslate .node-content h1 {
+article .node-content h1,
+article .node-content .node-content h1,
+.bodyContentToTranslate h1,
+.bodyContentToTranslate .node-content h1 {
   font-size: 20px;
   background: #1391c142;
   color: #1391c1;
@@ -2691,7 +2724,10 @@ article .node-content h1, article .node-content .node-content h1, .bodyContentTo
   margin: 2px 0px;
 }
 
-article .node-content h2, article .node-content .node-content h2, .bodyContentToTranslate h2, .bodyContentToTranslate .node-content h2 {
+article .node-content h2,
+article .node-content .node-content h2,
+.bodyContentToTranslate h2,
+.bodyContentToTranslate .node-content h2 {
   font-size: 15px;
   color: #1391c1;
   font-weight: 400;
@@ -2701,7 +2737,10 @@ article .node-content h2, article .node-content .node-content h2, .bodyContentTo
   border-left: solid 1px #cde4ef;
 }
 
-article .node-content p, article .node-content .node-content p, .bodyContentToTranslate p, .bodyContentToTranslate .node-content p {
+article .node-content p,
+article .node-content .node-content p,
+.bodyContentToTranslate p,
+.bodyContentToTranslate .node-content p {
   color: #000000;
   font-size: 16px;
   margin: 20px 0px;
@@ -2787,5 +2826,153 @@ textarea#edit-field-descriptioncontent-0-value {
   width: 103%;
   background: #f3f4f6;
   margin: 22px -14px;
+}
+
+/**
+ * ==============================================
+ * Dot Pulse
+ * ==============================================
+ */
+.dot-pulse {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  -webkit-box-shadow: 9999px 0 0 -5px #9880ff;
+          box-shadow: 9999px 0 0 -5px #9880ff;
+  -webkit-animation: dotPulse 1.5s infinite linear;
+          animation: dotPulse 1.5s infinite linear;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.dot-pulse::before,
+.dot-pulse::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+}
+
+.dot-pulse::before {
+  -webkit-box-shadow: 9984px 0 0 -5px #9880ff;
+          box-shadow: 9984px 0 0 -5px #9880ff;
+  -webkit-animation: dotPulseBefore 1.5s infinite linear;
+          animation: dotPulseBefore 1.5s infinite linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.dot-pulse::after {
+  -webkit-box-shadow: 10014px 0 0 -5px #9880ff;
+          box-shadow: 10014px 0 0 -5px #9880ff;
+  -webkit-animation: dotPulseAfter 1.5s infinite linear;
+          animation: dotPulseAfter 1.5s infinite linear;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes dotPulseBefore {
+  0% {
+    -webkit-box-shadow: 9984px 0 0 -5px #9880ff;
+            box-shadow: 9984px 0 0 -5px #9880ff;
+  }
+  30% {
+    -webkit-box-shadow: 9984px 0 0 2px #9880ff;
+            box-shadow: 9984px 0 0 2px #9880ff;
+  }
+  60%,
+  100% {
+    -webkit-box-shadow: 9984px 0 0 -5px #9880ff;
+            box-shadow: 9984px 0 0 -5px #9880ff;
+  }
+}
+
+@keyframes dotPulseBefore {
+  0% {
+    -webkit-box-shadow: 9984px 0 0 -5px #9880ff;
+            box-shadow: 9984px 0 0 -5px #9880ff;
+  }
+  30% {
+    -webkit-box-shadow: 9984px 0 0 2px #9880ff;
+            box-shadow: 9984px 0 0 2px #9880ff;
+  }
+  60%,
+  100% {
+    -webkit-box-shadow: 9984px 0 0 -5px #9880ff;
+            box-shadow: 9984px 0 0 -5px #9880ff;
+  }
+}
+
+@-webkit-keyframes dotPulse {
+  0% {
+    -webkit-box-shadow: 9999px 0 0 -5px #9880ff;
+            box-shadow: 9999px 0 0 -5px #9880ff;
+  }
+  30% {
+    -webkit-box-shadow: 9999px 0 0 2px #9880ff;
+            box-shadow: 9999px 0 0 2px #9880ff;
+  }
+  60%,
+  100% {
+    -webkit-box-shadow: 9999px 0 0 -5px #9880ff;
+            box-shadow: 9999px 0 0 -5px #9880ff;
+  }
+}
+
+@keyframes dotPulse {
+  0% {
+    -webkit-box-shadow: 9999px 0 0 -5px #9880ff;
+            box-shadow: 9999px 0 0 -5px #9880ff;
+  }
+  30% {
+    -webkit-box-shadow: 9999px 0 0 2px #9880ff;
+            box-shadow: 9999px 0 0 2px #9880ff;
+  }
+  60%,
+  100% {
+    -webkit-box-shadow: 9999px 0 0 -5px #9880ff;
+            box-shadow: 9999px 0 0 -5px #9880ff;
+  }
+}
+
+@-webkit-keyframes dotPulseAfter {
+  0% {
+    -webkit-box-shadow: 10014px 0 0 -5px #9880ff;
+            box-shadow: 10014px 0 0 -5px #9880ff;
+  }
+  30% {
+    -webkit-box-shadow: 10014px 0 0 2px #9880ff;
+            box-shadow: 10014px 0 0 2px #9880ff;
+  }
+  60%,
+  100% {
+    -webkit-box-shadow: 10014px 0 0 -5px #9880ff;
+            box-shadow: 10014px 0 0 -5px #9880ff;
+  }
+}
+
+@keyframes dotPulseAfter {
+  0% {
+    -webkit-box-shadow: 10014px 0 0 -5px #9880ff;
+            box-shadow: 10014px 0 0 -5px #9880ff;
+  }
+  30% {
+    -webkit-box-shadow: 10014px 0 0 2px #9880ff;
+            box-shadow: 10014px 0 0 2px #9880ff;
+  }
+  60%,
+  100% {
+    -webkit-box-shadow: 10014px 0 0 -5px #9880ff;
+            box-shadow: 10014px 0 0 -5px #9880ff;
+  }
 }
 /*# sourceMappingURL=style.css.map */

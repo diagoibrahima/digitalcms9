@@ -1,7 +1,6 @@
 jQuery("#block-views-block-contenttotranslate-block-1").ready(function(){
 
-
-
+const urlapi ="https://f0bc-41-214-20-30.ngrok.io/translate";
 
 var textToTranslate = jQuery(".bodyContentToTranslate").html();
   console.log(textToTranslate);
@@ -13,7 +12,7 @@ var textToTranslate = jQuery(".bodyContentToTranslate").html();
 // Start function
 const starttranslate = async function(a, b,c) {
 
-  const res = await fetch("http://0.0.0.0:5000/translate", {
+  const res = await fetch(urlapi, {
     method: "POST",
      body: JSON.stringify({
        q: a,
@@ -34,7 +33,7 @@ const starttranslate = async function(a, b,c) {
 
 const trabslatetitle = async function(at,bt,ct) {
 
-  const res = await fetch("http://0.0.0.0:5000/translate", {
+  const res = await fetch(urlapi, {
     method: "POST",
      body: JSON.stringify({
        q: at,
@@ -56,7 +55,7 @@ const trabslatetitle = async function(at,bt,ct) {
 
 const translatedesc = async function(ad,bd,cd) {
 
-  const res = await fetch("http://0.0.0.0:5000/translate", {
+  const res = await fetch(urlapi, {
     method: "POST",
      body: JSON.stringify({
        q: ad,
@@ -131,7 +130,7 @@ jQuery(document).ready(function () {
   jQuery('section').hide();
   jQuery('<div class="live-preveiw-section "> <div class="livepreview-content"> Live preview  Content </div> <div class="tilteconteValue" ></div> <div class="DescriptioncontentValue"></div> <div class="contentent-preview-good-format">  </div> </div>').insertBefore('form#node-content-form');
   //hide submodule and message content 
-  jQuery('.node-content p span b').hide();
+  jQuery('article .node-content p , article .node-content h2').hide();
   jQuery('.node-content-form input#edit-submit').prop('disabled', true);
   jQuery('<span class="button-add-new-comment">Add a new comment</span>').insertBefore('section');
   jQuery('.node-content p:nth-child(1)').insertBefore('.node-content p:nth-child(1)');
@@ -517,7 +516,8 @@ jQuery(document).ready(function () {
 
   // Expand All 
   jQuery('span.expandalle-minimizeall-button.cursor-pointer').click(function () {
-    jQuery('.node-content p span b').toggle(1000);
+
+    jQuery('article .node-content p, article .node-content h2').toggle(1000);
     var expand = (jQuery('span.expandalle-minimizeall-button.cursor-pointer').text());
     expand == "Expand all" ? jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Minimize') : jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Expand all')
   });
