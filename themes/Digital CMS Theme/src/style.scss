@@ -2367,10 +2367,15 @@ article .node-content div:nth-child(2) {
 }
 
 .node-content-form  {
-
+/*
   width:45%;
   margin: 1%;
-
+*/
+    width: 45%;
+    margin: 1%;
+    position: absolute;
+    top: 50px;
+    
   .cke_reset{
 
     max-height:580px !important;
@@ -2523,6 +2528,7 @@ article .node-content, .bodyContentToTranslate {
     font-weight: normal;
     padding: 10px;
     border-radius: 1px;
+    margin:2px 0px;
   }
 /* to remplace by ==>  .contentent-supmodule */
 h2 , .node-content h2 {
@@ -2548,9 +2554,9 @@ p , .node-content p {
 
 .live-preveiw-section {
   width: 50%;
-  
-  position: absolute;
-  right: 1%;
+// position: absolute;
+// right: 1%;
+  margin:1% 48%;
   z-index: 99;
  
 
@@ -2564,6 +2570,7 @@ p , .node-content p {
   }
 
 }
+
 
 
 

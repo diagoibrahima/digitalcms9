@@ -2521,8 +2521,14 @@ article .node-content div:nth-child(2):before {
 }
 
 .node-content-form {
+  /*
+  width:45%;
+  margin: 1%;
+*/
   width: 45%;
   margin: 1%;
+  position: absolute;
+  top: 50px;
 }
 
 .node-content-form .cke_reset {
@@ -2682,6 +2688,7 @@ article .node-content h1, article .node-content .node-content h1, .bodyContentTo
   font-weight: normal;
   padding: 10px;
   border-radius: 1px;
+  margin: 2px 0px;
 }
 
 article .node-content h2, article .node-content .node-content h2, .bodyContentToTranslate h2, .bodyContentToTranslate .node-content h2 {
@@ -2702,8 +2709,7 @@ article .node-content p, article .node-content .node-content p, .bodyContentToTr
 
 .live-preveiw-section {
   width: 50%;
-  position: absolute;
-  right: 1%;
+  margin: 1% 48%;
   z-index: 99;
 }
 
