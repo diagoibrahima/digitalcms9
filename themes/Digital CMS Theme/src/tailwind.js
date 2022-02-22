@@ -1,3 +1,128 @@
+jQuery("#block-views-block-contenttotranslate-block-1").ready(function(){
+
+
+
+
+var textToTranslate = jQuery(".bodyContentToTranslate").html();
+  console.log(textToTranslate);
+  var titletotranslate = jQuery(".initial-title a").text();
+  var descriptiontotranslate = jQuery(".section-initial-content p").text();
+
+  //console.log("description a traduire " + descriptiontotranslate);
+
+// Start function
+const starttranslate = async function(a, b,c) {
+
+  const res = await fetch("http://0.0.0.0:5000/translate", {
+    method: "POST",
+     body: JSON.stringify({
+       q: a,
+       source: b,
+       target: c,
+       format: "html"
+     }),
+     headers: { "Content-Type": "application/json" }
+   });
+   
+   var obj = await res.json();
+
+   var resultgood  = (obj.translatedText);
+
+   CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData(resultgood);
+  // console.log(resultgood);
+}
+
+const trabslatetitle = async function(at,bt,ct) {
+
+  const res = await fetch("http://0.0.0.0:5000/translate", {
+    method: "POST",
+     body: JSON.stringify({
+       q: at,
+       source: bt,
+       target: ct,
+       format: "html"
+     }),
+     headers: { "Content-Type": "application/json" }
+   });
+   
+   var objt = await res.json();
+
+   var titlegood  = (objt.translatedText);
+  
+   
+   jQuery("#edit-field-titre-content-0-value").val(titlegood);
+   //console.log(titlegood);
+}
+
+const translatedesc = async function(ad,bd,cd) {
+
+  const res = await fetch("http://0.0.0.0:5000/translate", {
+    method: "POST",
+     body: JSON.stringify({
+       q: ad,
+       source: bd,
+       target: cd,
+       format: "html"
+     }),
+     headers: { "Content-Type": "application/json" }
+   });
+   
+   var objd = await res.json();
+
+   var descgood  = (objd.translatedText);
+  
+   
+   jQuery("#edit-field-descriptino-content-0-value").val(descgood);
+   //console.log(descgood);
+}
+
+
+// Default translation 
+jQuery("#edit-field-titre-content-0-value, #edit-field-descriptino-content-0-value").val("Translating.........");
+CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData("Translatin........");
+starttranslate(textToTranslate, "auto", "fr");
+trabslatetitle(titletotranslate, "auto", "fr");
+translatedesc(descriptiontotranslate, "auto", "fr");
+
+
+// Translation when we click on selected lanague 
+document.getElementById('edit-field-localization-langue').addEventListener('change', function() {
+    var e = document.getElementById("edit-field-localization-langue");
+    var text = e.options[e.selectedIndex].text;
+    jQuery("#edit-field-titre-content-0-value, #edit-field-descriptino-content-0-value").val("Translating.........");
+    CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData("Translatin........");
+    if(text=="Espagnol"){
+
+      starttranslate(textToTranslate, "auto", "es");
+      trabslatetitle(titletotranslate, "auto", "es");
+      translatedesc(descriptiontotranslate, "auto", "es");
+    }else if(text=="Arabic"){
+      starttranslate(textToTranslate, "auto", "ar");
+      trabslatetitle(titletotranslate, "auto", "ar");
+translatedesc(descriptiontotranslate, "auto", "ar");
+    }else if(text=="Anglais"){
+      starttranslate(textToTranslate, "auto", "en");
+      trabslatetitle(titletotranslate, "auto", "en");
+translatedesc(descriptiontotranslate, "auto", "en");
+    }else if(text=="Chinois"){
+      starttranslate(textToTranslate, "auto", "zh");
+      trabslatetitle(titletotranslate, "auto", "zh");
+translatedesc(descriptiontotranslate, "auto", "zh");
+    }
+
+    console.log('You selected: ', text);
+});
+
+
+
+
+
+});
+
+
+
+
+
 jQuery(document).ready(function () {
   jQuery('textarea#edit-field-descriptioncontent-0-value').hide()
   jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').html('Add Description')
@@ -15,70 +140,11 @@ jQuery(document).ready(function () {
 
 
 
-  var textToTranslate = jQuery(".bodyContentToTranslate").html();
-  console.log(textToTranslate);
-
-// Start function
-const starttranslate = async function(a, b,c) {
-
-  const res = await fetch("http://0.0.0.0:5000/translate", {
-    method: "POST",
-     body: JSON.stringify({
-       q: a,
-       source: b,
-       target: c,
-       format: "html"
-     }),
-     headers: { "Content-Type": "application/json" }
-   });
-
-
-   var obj = await res.json();
-
-   var resultgood  = (obj.translatedText);
-
-   CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData(resultgood);
-   console.log(resultgood);
-}
+  
 
 
 
-starttranslate(textToTranslate, "auto", "en");
 
-
-
-document.getElementById('edit-field-localization-langue').addEventListener('change', function() {
-    var e = document.getElementById("edit-field-localization-langue");
-    var text = e.options[e.selectedIndex].text;
-    if(text=="Espagnol"){
-      starttranslate(textToTranslate, "auto", "es");
-    }else if(text=="Arabic"){
-      starttranslate(textToTranslate, "auto", "ar");
-    }else if(text=="Anglais"){
-      starttranslate(textToTranslate, "auto", "en");
-    }else if(text=="Chinois"){
-      starttranslate(textToTranslate, "auto", "zh");
-    }
-
-    console.log('You selected: ', text);
-});
-
-
-   //appel api 
- /*
- const res = await fetch("http://0.0.0.0:5000/translate", {
-  method: "POST",
-   body: JSON.stringify({
-     q: "Bonjour",
-     source: "fr",
-     target: "en",
-     format: "text"
-   }),
-   headers: { "Content-Type": "application/json" }
- });
- 
- console.log(await res.json());
-*/
 
   //Download files and archive them in to a zipfile
 
