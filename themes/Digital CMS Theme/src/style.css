@@ -3002,6 +3002,17 @@ form#node-localization-form {
   margin: 48px 0px;
 }
 
+form#node-localization-form:before {
+  content: "";
+  background: #f3f4f6;
+  position: absolute;
+  height: 1445px;
+  width: 10px;
+  right: -10px;
+  z-index: 9;
+  top: -37px;
+}
+
 form#node-localization-form .js-form-item.form-item.js-form-type-textarea.form-item-field-localization-messagebody-0-value.js-form-item-field-localization-messagebody-0-value {
   z-index: 2;
   position: relative;
@@ -3028,14 +3039,15 @@ form#node-localization-form div#edit-actions {
 }
 
 form#node-localization-form div#edit-actions:after {
-  content: '';
+  content: "";
   position: absolute;
   background: white;
   height: 530px;
-  width: 105.2%;
-  margin: 0px -14px;
+  width: 105%;
+  left: -14px;
   bottom: 0px;
   z-index: 1;
+  border-radius: 5px;
 }
 
 form#node-localization-form div#edit-actions input#edit-submit {
@@ -3049,8 +3061,24 @@ form#node-localization-form .btn-group {
   z-index: 999;
 }
 
-form#node-localization-form div#edit-field-descriptino-content-wrapper, form#node-localization-form .js-form-item.form-item.js-form-type-textfield.form-item-field-titre-content-0-value.js-form-item-field-titre-content-0-value {
+form#node-localization-form div#edit-field-descriptino-content-wrapper,
+form#node-localization-form .js-form-item.form-item.js-form-type-textfield.form-item-field-titre-content-0-value.js-form-item-field-titre-content-0-value {
   position: relative;
   z-index: 2;
+}
+
+form#node-localization-form button.btn.btn-preview.tw-bg-blue-500.tw-text-white.hover\:tw-bg-blue-700.hover\:tw-text-white.tw-font-bold.uppercase.tw-text-sm.tw-px-6.tw-py-3.tw-rounded-r.outline-none.tw-focus\:outline-none.tw-mb-1.tw-ease-linear.transition-all.duration-150 {
+  background: #f6ad55 !important;
+}
+
+span#cke_12, a#cke_24, span.cke_button_icon.cke_button__numberedlist_icon, span.cke_button_icon.cke_button__blockquote_icon, span.cke_button_icon.cke_button__video_embed_icon, span.cke_button_icon.cke_button__table_icon, a#cke_34, span#cke_10, a#cke_37, a#cke_38 {
+  display: none !important;
+}
+
+.cke_top {
+  border-bottom: 1px solid #c2e3ef;
+  background: #c2e3ef;
+  padding: 6px 8px 2px;
+  white-space: normal;
 }
 /*# sourceMappingURL=style.css.map */
