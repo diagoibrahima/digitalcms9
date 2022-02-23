@@ -1,7 +1,6 @@
+// translation using API
+
 jQuery("#block-views-block-contenttotranslate-block-1").ready(function(){
-
-
-
 
 var textToTranslate = jQuery(".bodyContentToTranslate").html();
   console.log(textToTranslate);
@@ -99,27 +98,21 @@ document.getElementById('edit-field-localization-langue').addEventListener('chan
     }else if(text=="Arabic"){
       starttranslate(textToTranslate, "auto", "ar");
       trabslatetitle(titletotranslate, "auto", "ar");
-translatedesc(descriptiontotranslate, "auto", "ar");
+      translatedesc(descriptiontotranslate, "auto", "ar");
     }else if(text=="Anglais"){
       starttranslate(textToTranslate, "auto", "en");
       trabslatetitle(titletotranslate, "auto", "en");
-translatedesc(descriptiontotranslate, "auto", "en");
+      translatedesc(descriptiontotranslate, "auto", "en");
     }else if(text=="Chinois"){
       starttranslate(textToTranslate, "auto", "zh");
       trabslatetitle(titletotranslate, "auto", "zh");
-translatedesc(descriptiontotranslate, "auto", "zh");
+      translatedesc(descriptiontotranslate, "auto", "zh");
     }
 
     console.log('You selected: ', text);
 });
 
-
-
-
-
 });
-
-
 
 
 
@@ -135,14 +128,6 @@ jQuery(document).ready(function () {
   jQuery('.node-content-form input#edit-submit').prop('disabled', true);
   jQuery('<span class="button-add-new-comment">Add a new comment</span>').insertBefore('section');
   jQuery('.node-content p:nth-child(1)').insertBefore('.node-content p:nth-child(1)');
-
-
-
-
-
-  
-
-
 
 
 
@@ -280,8 +265,6 @@ jQuery(document).ready(function () {
   }
 
 
-
-
   //Dasboard 
 
   let cours = (jQuery('div#block-views-block-cardnbcours-block-1 header').text());
@@ -301,9 +284,6 @@ jQuery(document).ready(function () {
   jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(locationRate + '%');
 
   //console.log(totalenombremessagelocalized);
-
-
-
 
 
   //disable draft status when adding localization
@@ -341,6 +321,60 @@ jQuery(document).ready(function () {
     // recuperer le contenu de ckeditor
     var description = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].getData();
 
+    //var htmldata = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].document.getBody().getHtml();
+    //var htmldata2 = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].element.getHtml();
+
+
+  var resultdata  = description.match(/<h(.)>.*?<\/h\1>|<p>.*?<\/p\>/g);
+
+  //console.log(resultdata);
+
+  var items = [];
+
+  resultdata.forEach(function(element) {
+
+          if(element.match(/<h1>.*?<\/h1>/g)){ 
+            console.log(element);
+            items.push([element,'','']);
+            
+          }else if(element.match(/<h2>.*?<\/h2>/g)){ 
+            console.log(element);
+            items.push(['',element,'']);
+          }else if(element.match(/<p>.*?<\/p>/g)){ 
+            items.push(['','',element]);
+            //console.log(element.match(/.{1,160}/g));
+
+            //var sms = element.match(/.{1,160}/g);
+          //  for(i = 0; i < sms.length; i++)
+          //    {
+          //      console.log("message : " + i + sms[i]);
+          //    } 
+            
+          }
+
+  });
+  console.table(items);
+//split a string into segments of n characters?
+//var str = 'abcdefghijkl';
+//console.log(str.match(/.{1,3}/g));
+
+
+/* 
+for(i = 0; i < resultdata.length; i++)
+{    
+  if(resultdata[i].match(/<h1>.*?<\/h1>/g)){
+    console.log(resultdata[i]);
+    if(resultdata[i].match(/p>.*?<\/p>/g)){ 
+
+    }
+  }
+}
+  */
+
+
+  
+
+
     jQuery(this).removeClass("tw-bg-blue-500");
     jQuery(this).addClass("tw-bg-blue-700");
     jQuery(".btn-group > .btn-edit").removeClass("tw-bg-blue-700");
@@ -375,8 +409,6 @@ jQuery(document).ready(function () {
     jQuery('.channelgenerate ').append(description);
 
   });
-
-
 
 
 
@@ -602,14 +634,6 @@ jQuery(document).ready(function () {
     jQuery(this).find('.blockmodule-titre-module span').html('Module ' + moduleIndexee + ':');
 
   });
-
-
-
-
-  //
-
-
- // API AUTOMATIC TRANSLATION 
 
 
 
