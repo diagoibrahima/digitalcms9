@@ -296,6 +296,10 @@ jQuery(document).ready(function () {
 
   jQuery(".btn-group > .btn-edit").click(function () {
 
+    jQuery('#edit-field-titre-content-wrapper').show();
+    jQuery('#edit-field-descriptino-content-wrapper').show();
+    
+
     jQuery(this).removeClass("tw-bg-blue-500");
     jQuery(this).addClass("tw-bg-blue-700");
     jQuery(".btn-group > .btn-preview").removeClass("tw-bg-blue-700");
@@ -334,26 +338,35 @@ jQuery(document).ready(function () {
   resultdata.forEach(function(element) {
 
           if(element.match(/<h1>.*?<\/h1>/g)){ 
-            console.log(element);
-            items.push([element,'','']);
+           // console.log(element);
+            items.push([element,,]);
             
           }else if(element.match(/<h2>.*?<\/h2>/g)){ 
-            console.log(element);
-            items.push(['',element,'']);
+           // console.log(element);
+            items.push([,element,]);
           }else if(element.match(/<p>.*?<\/p>/g)){ 
-            items.push(['','',element]);
+            var sms = element.match(/.{1,160}/g)
+            items.push([,,element.match(/.{1,160}/g)]);
             //console.log(element.match(/.{1,160}/g));
 
             //var sms = element.match(/.{1,160}/g);
-          //  for(i = 0; i < sms.length; i++)
-          //    {
-          //      console.log("message : " + i + sms[i]);
-          //    } 
+            //for(i = 0; i < sms.length; i++)
+            // {
+            //  console.log("message : " + i + sms[i]);
+            // } 
             
           }
 
   });
-  console.table(items);
+  //console.table(items);
+
+  // for loop
+for (var i = 0; i < items.length; i++) {
+  for (var j = 0; j < items[i].length; j++) {
+    console.log(items[i][j]);
+  }
+}
+ //console.log("message : " + i + sms[i]);
 //split a string into segments of n characters?
 //var str = 'abcdefghijkl';
 //console.log(str.match(/.{1,3}/g));
@@ -382,6 +395,10 @@ for(i = 0; i < resultdata.length; i++)
 
     jQuery('label[for="edit-field-localization-messagebody-0-value"]').hide();
     jQuery('#cke_edit-field-localization-messagebody-0-value').hide();
+
+    jQuery('#edit-field-titre-content-wrapper').hide();
+    jQuery('#edit-field-descriptino-content-wrapper').hide();
+
     //jQuery('#edit-field-localization-channel').prop('disabled', true);
     //jQuery('#edit-field-localization-channel').hide();
     //jQuery('#edit-field-localization-langue').hide();
@@ -406,7 +423,7 @@ for(i = 0; i < resultdata.length; i++)
       jQuery('<div class="channelgenerategeneral"><div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>IOGT</div></div>').insertAfter('#edit-field-localization-channel');
     }
 
-    jQuery('.channelgenerate ').append(description);
+    jQuery('.channelgenerate ').append(items);
 
   });
 
