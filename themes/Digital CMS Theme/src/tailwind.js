@@ -1,6 +1,6 @@
-// translation using API
-
 jQuery("#block-views-block-contenttotranslate-block-1").ready(function(){
+
+const urlapi ="http://0.0.0.0:5000/translate";
 
 var textToTranslate = jQuery(".bodyContentToTranslate").html();
   console.log(textToTranslate);
@@ -12,7 +12,7 @@ var textToTranslate = jQuery(".bodyContentToTranslate").html();
 // Start function
 const starttranslate = async function(a, b,c) {
 
-  const res = await fetch("http://0.0.0.0:5000/translate", {
+  const res = await fetch(urlapi, {
     method: "POST",
      body: JSON.stringify({
        q: a,
@@ -33,7 +33,7 @@ const starttranslate = async function(a, b,c) {
 
 const trabslatetitle = async function(at,bt,ct) {
 
-  const res = await fetch("http://0.0.0.0:5000/translate", {
+  const res = await fetch(urlapi, {
     method: "POST",
      body: JSON.stringify({
        q: at,
@@ -55,7 +55,7 @@ const trabslatetitle = async function(at,bt,ct) {
 
 const translatedesc = async function(ad,bd,cd) {
 
-  const res = await fetch("http://0.0.0.0:5000/translate", {
+  const res = await fetch(urlapi, {
     method: "POST",
      body: JSON.stringify({
        q: ad,
@@ -77,8 +77,8 @@ const translatedesc = async function(ad,bd,cd) {
 
 
 // Default translation 
-jQuery("#edit-field-titre-content-0-value, #edit-field-descriptino-content-0-value").val("Translating.........");
-CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData("Translatin........");
+jQuery("#edit-field-titre-content-0-value, #edit-field-descriptino-content-0-value").val("wait for automatic translation...");
+CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData("wait for automatic translation...");
 starttranslate(textToTranslate, "auto", "fr");
 trabslatetitle(titletotranslate, "auto", "fr");
 translatedesc(descriptiontotranslate, "auto", "fr");
@@ -88,8 +88,8 @@ translatedesc(descriptiontotranslate, "auto", "fr");
 document.getElementById('edit-field-localization-langue').addEventListener('change', function() {
     var e = document.getElementById("edit-field-localization-langue");
     var text = e.options[e.selectedIndex].text;
-    jQuery("#edit-field-titre-content-0-value, #edit-field-descriptino-content-0-value").val("Translating.........");
-    CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData("Translatin........");
+    jQuery("#edit-field-titre-content-0-value, #edit-field-descriptino-content-0-value").val("wait for automatic translation...");
+    CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData("wait for automatic translation...");
     if(text=="Espagnol"){
 
       starttranslate(textToTranslate, "auto", "es");
@@ -124,7 +124,7 @@ jQuery(document).ready(function () {
   jQuery('section').hide();
   jQuery('<div class="live-preveiw-section "> <div class="livepreview-content"> Live preview  Content </div> <div class="tilteconteValue" ></div> <div class="DescriptioncontentValue"></div> <div class="contentent-preview-good-format">  </div> </div>').insertBefore('form#node-content-form');
   //hide submodule and message content 
-  jQuery('.node-content p span b').hide();
+  jQuery('article .node-content p , article .node-content h2, article .node-content h1+* ').hide();
   jQuery('.node-content-form input#edit-submit').prop('disabled', true);
   jQuery('<span class="button-add-new-comment">Add a new comment</span>').insertBefore('section');
   jQuery('.node-content p:nth-child(1)').insertBefore('.node-content p:nth-child(1)');
@@ -548,8 +548,9 @@ for(i = 0; i < resultdata.length; i++)
   });
 
   // Expand All 
-  jQuery('span.expandalle-minimizeall-button.cursor-pointer').click(function () {
-    jQuery('.node-content p span b').toggle(1000);
+  jQuery('span.expandalle-minimizeall-button.cursor-pointer , article .node-content h1').click(function () {
+
+    jQuery('article .node-content p, article .node-content h2,article .node-content h1+* ').toggle(1000);
     var expand = (jQuery('span.expandalle-minimizeall-button.cursor-pointer').text());
     expand == "Expand all" ? jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Minimize') : jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Expand all')
   });
