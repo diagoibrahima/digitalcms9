@@ -1,6 +1,6 @@
 jQuery("#block-views-block-contenttotranslate-block-1").ready(function(){
 
-const urlapi ="https://f0bc-41-214-20-30.ngrok.io/translate";
+const urlapi ="http://2416-154-65-35-42.ngrok.io/translate";
 
 var textToTranslate = jQuery(".bodyContentToTranslate").html();
   console.log(textToTranslate);
@@ -77,8 +77,8 @@ const translatedesc = async function(ad,bd,cd) {
 
 
 // Default translation 
-jQuery("#edit-field-titre-content-0-value, #edit-field-descriptino-content-0-value").val("Translating.........");
-CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData("Translatin........");
+jQuery("#edit-field-titre-content-0-value, #edit-field-descriptino-content-0-value").val("wait for automatic translation...");
+CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData("wait for automatic translation...");
 starttranslate(textToTranslate, "auto", "fr");
 trabslatetitle(titletotranslate, "auto", "fr");
 translatedesc(descriptiontotranslate, "auto", "fr");
@@ -88,8 +88,8 @@ translatedesc(descriptiontotranslate, "auto", "fr");
 document.getElementById('edit-field-localization-langue').addEventListener('change', function() {
     var e = document.getElementById("edit-field-localization-langue");
     var text = e.options[e.selectedIndex].text;
-    jQuery("#edit-field-titre-content-0-value, #edit-field-descriptino-content-0-value").val("Translating.........");
-    CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData("Translatin........");
+    jQuery("#edit-field-titre-content-0-value, #edit-field-descriptino-content-0-value").val("wait for automatic translation...");
+    CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData("wait for automatic translation...");
     if(text=="Espagnol"){
 
       starttranslate(textToTranslate, "auto", "es");
