@@ -1446,12 +1446,25 @@ div#block-views-block-listtranslation-block-1 {
 
 .show-message {
   background: white;
-  margin: 10px;
+  margin: 10px 0px;
   border-radius: 5px;
-  min-height: 135px;
+  min-height: 235px;
   padding: 10px;
+  width: 400px;
   -webkit-box-shadow: 1px 1px 6px #2316161a;
           box-shadow: 1px 1px 6px #2316161a;
+  position: relative;
+}
+
+.show-message .section-of-localisation {
+  position: absolute;
+  bottom: 0;
+}
+
+.show-message .countryflag-localisa-section {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
 }
 
 form#node-translation-edit-form div#edit-field-message-wrapper:before {
@@ -2204,6 +2217,12 @@ p.titrepagemessage {
   border-top: solid 1px #a5a5a552;
 }
 
+div#block-views-block-list-localization-block-1 h2 {
+  color: #1391c1;
+  font-size: 20px;
+  line-height: 3rem;
+}
+
 .align-left {
   float: inherit;
 }
@@ -2646,7 +2665,7 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
   font-size: 12px;
   background: #ff00005e;
   padding: 5px;
-  margin: 30px 1px;
+  margin: 30px 5px;
   border-radius: 5px;
   left: 0;
   line-height: 26px;
@@ -3077,8 +3096,45 @@ span#cke_12, a#cke_24, span.cke_button_icon.cke_button__numberedlist_icon, span.
 
 .cke_top {
   border-bottom: 1px solid #c2e3ef;
-  background: #c2e3ef;
+  background: #c2e3ef !important;
   padding: 6px 8px 2px;
   white-space: normal;
+}
+
+.views-view-grid.horizontal {
+  width: 74% !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.section-of-localisation-globale:before {
+  content: '';
+  background: #a5b8df73;
+  height: 1px;
+  width: 100%;
+  bottom: 55px;
+  margin: -10px;
+  position: absolute;
+}
+
+.print__wrapper.print__wrapper--pdf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.print__wrapper.print__wrapper--pdf a {
+  margin: 10px;
 }
 /*# sourceMappingURL=style.css.map */
