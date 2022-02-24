@@ -2394,7 +2394,7 @@ article .node-content div:nth-child(2) {
   }
 }
 
-.node-content-form {
+.node-content-form ,form#node-content-edit-form {
   /*
   width:45%;
   margin: 1%;
@@ -2578,6 +2578,7 @@ article .node-content,
     font-size: 20px;
     color: white;
     border-radius: 5px 5px 0px 0px;
+    width: 100%;
   }
 }
 

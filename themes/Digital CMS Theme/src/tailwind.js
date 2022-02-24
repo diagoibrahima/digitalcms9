@@ -123,13 +123,27 @@ jQuery(document).ready(function () {
   jQuery('.blockmodule-submodule').hide();
   jQuery('a.btn').hide();
   jQuery('section').hide();
-  jQuery('<div class="live-preveiw-section "> <div class="livepreview-content">Course preview  </div> <div class="tilteconteValue" ></div> <div class="DescriptioncontentValue"></div> <div class="contentent-preview-good-format">  </div> </div>').insertBefore('form#node-content-form');
+  jQuery('<div class="live-preveiw-section "> <div class="livepreview-content"> Course preview  </div> <div class="tilteconteValue" ></div> <div class="DescriptioncontentValue"></div> <div class="contentent-preview-good-format">  </div> </div>').insertBefore('form#node-content-form , form#node-content-edit-form');
   //hide submodule and message content 
   jQuery('article .node-content p , article .node-content h2, article .node-content h1+* ').hide();
   jQuery('.node-content-form input#edit-submit').prop('disabled', true);
   jQuery('<span class="button-add-new-comment">Add a new comment</span>').insertBefore('section');
   jQuery('.node-content p:nth-child(1)').insertBefore('.node-content p:nth-child(1)');
 
+
+    //on change input title   & description
+    jQuery("input#edit-title-0-value").ready( function () {
+
+      // jQuery('.tilteconteValue').remove();
+      tilteconteValue = jQuery(this).val();
+      jQuery('.tilteconteValue').html(tilteconteValue);
+      // 
+    });
+    jQuery(" textarea#edit-field-descriptioncontent-0-value ").ready( function () {
+      // jQuery('.DescriptioncontentValue').remove();
+      DescriptioncontentValue = jQuery(this).val();
+      jQuery('.DescriptioncontentValue').html('<div class="description-preview">Description</div> <br>' + DescriptioncontentValue + '<div class="separateur-whenwehavedescrip"></div>');
+    });
 
 
   //Download files and archive them in to a zipfile
@@ -449,6 +463,9 @@ for(i = 0; i < resultdata.length; i++)
     return string.split(word).length - 1;
   }
   */
+
+
+  
 
   //on change input title   & description
   jQuery("input#edit-title-0-value").on('change', function (e) {

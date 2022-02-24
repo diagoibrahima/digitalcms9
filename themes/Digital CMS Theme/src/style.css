@@ -2573,7 +2573,7 @@ article .node-content div:nth-child(2):before {
   margin: 20px -20px;
 }
 
-.node-content-form {
+.node-content-form, form#node-content-edit-form {
   /*
   width:45%;
   margin: 1%;
@@ -2584,15 +2584,15 @@ article .node-content div:nth-child(2):before {
   top: 50px;
 }
 
-.node-content-form div#edit-body-0-format {
+.node-content-form div#edit-body-0-format, form#node-content-edit-form div#edit-body-0-format {
   display: none !important;
 }
 
-.node-content-form input#edit-submit:disabled {
+.node-content-form input#edit-submit:disabled, form#node-content-edit-form input#edit-submit:disabled {
   background: #1391c15e !important;
 }
 
-.node-content-form div#edit-actions {
+.node-content-form div#edit-actions, form#node-content-edit-form div#edit-actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2611,24 +2611,25 @@ article .node-content div:nth-child(2):before {
   position: relative;
 }
 
-.node-content-form div#edit-actions #edit-submit {
+.node-content-form div#edit-actions #edit-submit, form#node-content-edit-form div#edit-actions #edit-submit {
   margin-left: 0px !important;
   padding: 0.75rem;
   line-height: 12px !important;
   margin-right: 6px !important;
 }
 
-.node-content-form div#edit-actions .tw-flex.tw-items-center.tw-jtw-ustify-center.tw-mb-4.btn-groupOnAddContent {
+.node-content-form div#edit-actions .tw-flex.tw-items-center.tw-jtw-ustify-center.tw-mb-4.btn-groupOnAddContent, form#node-content-edit-form div#edit-actions .tw-flex.tw-items-center.tw-jtw-ustify-center.tw-mb-4.btn-groupOnAddContent {
   margin: 20px 19px;
 }
 
 .node-content-form div#edit-field-descriptioncontent-wrapper,
-.node-content-form .js-form-item.form-item.js-form-type-textarea.form-item-body-0-value.js-form-item-body-0-value {
+.node-content-form .js-form-item.form-item.js-form-type-textarea.form-item-body-0-value.js-form-item-body-0-value, form#node-content-edit-form div#edit-field-descriptioncontent-wrapper,
+form#node-content-edit-form .js-form-item.form-item.js-form-type-textarea.form-item-body-0-value.js-form-item-body-0-value {
   width: 95%;
   margin: auto;
 }
 
-.node-content-form div#edit-body-wrapper {
+.node-content-form div#edit-body-wrapper, form#node-content-edit-form div#edit-body-wrapper {
   background: white;
   padding: 0px 0px 60px 0px;
   border-radius: 5px;
@@ -2782,6 +2783,7 @@ article .node-content .node-content p,
   font-size: 20px;
   color: white;
   border-radius: 5px 5px 0px 0px;
+  width: 100%;
 }
 
 .js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value {
