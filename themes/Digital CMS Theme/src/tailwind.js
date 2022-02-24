@@ -349,6 +349,7 @@ var count = 0;
             //var sms1 = element.replace('<p>','');
             //var sms2 = sms1.replace('</p>','');
             //var xxx = jQuery('<p class="messagetosend">'+sms2.match(/.{1,160}/g)+'</p>');
+            // compter le nombre de message per cours
             count = count + element.match(/.{1,160}/g).length;
             items.push([,,element.match(/.{1,160}/g)]);
             //console.log(element.match(/.{1,160}/g));
@@ -361,7 +362,6 @@ var count = 0;
           }
 
   });
- console.log("Nombre de SMS" + count);
   //console.table(items);
 
   // for loop
@@ -408,7 +408,6 @@ for(i = 0; i < resultdata.length; i++)
     jQuery('#edit-field-localization-langue, #edit-field-localization-channel').hide();
     jQuery('label[for="edit-field-localization-langue"], label[for="edit-field-localization-channel"]').hide();
 
-
     jQuery(".btn-group > .btn-edit").prop('disabled', false);
     jQuery(".btn-group > .btn-preview").prop('disabled', true);
     if (jQuery('#edit-field-localization-channel').find(":selected").text() == "SMS") {
@@ -424,21 +423,23 @@ for(i = 0; i < resultdata.length; i++)
     } else if (jQuery('#edit-field-localization-channel').find(":selected").text() == "IOGT") {
       jQuery('<div class="channelgenerategeneral"><div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>IOGT</div></div>').insertAfter('#edit-field-localization-channel');
     }
-jQuery(' <div class="nbmessage"> Translation will be sent on '+count+' messages </div> ').insertBefore('#sms');
-    //jQuery('.channelgenerate ').append(items);
-   
+      jQuery(' <div class="nbmessage"> Translation will be sent on '+count+' messages </div> ').insertBefore('#sms');
+      //jQuery('.channelgenerate ').append(items);
 
     for (var i = 0; i < items.length; i++) {
       for (var j = 0; j < items[i].length; j++) {
         jQuery('.channelgenerate ').append(items[i][j]);
-        //console.log(items[i][j]);
+        for (var k = 0; k < items[i].length; k++) { 
+          //jQuery('.channelgenerate ').append(items[k][i]);
+        }
+        //console.log(items[i][j]); 
       }
     }
 
     //jQuery('.channelgenerate ').append(items);
 
-    //console.log(items);
-    console.table(items);
+    //console.log(items[2][1]);
+    //console.table(items);
   });
 
 
