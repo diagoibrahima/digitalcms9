@@ -694,6 +694,7 @@ article.node:before {
   background: linear-gradient(45deg, #e53e3e, #e53e3e) !important;
   border: cornsilk !important;
   padding: 10px;
+  display: none !important;
 }
 
 .dialog-off-canvas-main-canvas {
@@ -3044,7 +3045,7 @@ form#node-localization-form:before {
   content: "";
   background: #f3f4f6;
   position: absolute;
-  height: 1445px;
+  height: 1030px;
   width: 10px;
   right: -10px;
   z-index: 9;

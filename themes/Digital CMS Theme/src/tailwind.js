@@ -77,8 +77,8 @@ const translatedesc = async function(ad,bd,cd) {
 
 
 // Default translation 
-jQuery("#edit-field-titre-content-0-value, #edit-field-descriptino-content-0-value").val("wait for automatic translation...");
-CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData("wait for automatic translation...");
+jQuery("#edit-field-titre-content-0-value, #edit-field-descriptino-content-0-value").val("Translating...");
+CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData("Translating...");
 starttranslate(textToTranslate, "auto", "fr");
 trabslatetitle(titletotranslate, "auto", "fr");
 translatedesc(descriptiontotranslate, "auto", "fr");
@@ -88,8 +88,8 @@ translatedesc(descriptiontotranslate, "auto", "fr");
 document.getElementById('edit-field-localization-langue').addEventListener('change', function() {
     var e = document.getElementById("edit-field-localization-langue");
     var text = e.options[e.selectedIndex].text;
-    jQuery("#edit-field-titre-content-0-value, #edit-field-descriptino-content-0-value").val("wait for automatic translation...");
-    CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData("wait for automatic translation...");
+    jQuery("#edit-field-titre-content-0-value, #edit-field-descriptino-content-0-value").val("Translating...");
+    CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData("Translating...");
     if(text=="Espagnol"){
 
       starttranslate(textToTranslate, "auto", "es");
@@ -123,7 +123,7 @@ jQuery(document).ready(function () {
   jQuery('.blockmodule-submodule').hide();
   jQuery('a.btn').hide();
   jQuery('section').hide();
-  jQuery('<div class="live-preveiw-section "> <div class="livepreview-content"> Live preview  Content </div> <div class="tilteconteValue" ></div> <div class="DescriptioncontentValue"></div> <div class="contentent-preview-good-format">  </div> </div>').insertBefore('form#node-content-form');
+  jQuery('<div class="live-preveiw-section "> <div class="livepreview-content">Course preview  </div> <div class="tilteconteValue" ></div> <div class="DescriptioncontentValue"></div> <div class="contentent-preview-good-format">  </div> </div>').insertBefore('form#node-content-form');
   //hide submodule and message content 
   jQuery('article .node-content p , article .node-content h2, article .node-content h1+* ').hide();
   jQuery('.node-content-form input#edit-submit').prop('disabled', true);
@@ -613,7 +613,7 @@ for(i = 0; i < resultdata.length; i++)
   jQuery('<i class="fa fa-fw fa-user"></i>').insertBefore('input#edit-name');
   jQuery('<i class="fa fa-fw fa-lock"></i>').insertBefore('input#edit-pass');
   //jQuery('a.use-ajax').prepend('<i class="fas fa-plus-square"></i>');
-  jQuery('.views-view-grid.horizontal.cols-4.clearfix .views-row').last().append('<div class="views-col col-1 addcourse-blank" style="width: 25%;"><div class="views-field views-field-nothing"><span class="field-content"><div class=" tw-item-card "><a href="node/add/course_" class="addcoursebutton" tabindex="-1">Add Content</a></div></div> ');
+  jQuery('.views-view-grid.horizontal.cols-4.clearfix .views-row').last().append('<div class="views-col col-1 addcourse-blank" style="width: 25%;"><div class="views-field views-field-nothing"><span class="field-content"><div class=" tw-item-card "><a href="node/add/course_" class="addcoursebutton" tabindex="-1">New course</a></div></div> ');
   jQuery('#edit-name').attr('placeholder', '  Username');
   jQuery('#edit-pass').attr('placeholder', '  Password');
   jQuery('.dataTables_wrapper .dataTables_filter input').attr('placeholder', ' Search');
