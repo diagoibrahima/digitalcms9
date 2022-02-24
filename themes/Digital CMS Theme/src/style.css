@@ -3138,11 +3138,11 @@ span#cke_12 .section-of-localisation-globale:before, a#cke_24 .section-of-locali
 }
 
 .nbmessage {
-  color: white;
-  background-color: #1391c1;
+  color: #1391c1;
   border-radius: 5px;
-  padding: 5px;
   font-size: smaller;
+  z-index: 999999999999;
+  position: relative;
 }
 
 .print__wrapper.print__wrapper--pdf {
@@ -3214,5 +3214,13 @@ section article {
   position: relative;
   background: #34a2d5;
   color: white;
+}
+
+form#node-localization-form #cke_19, form#node-localization-form #cke_22, form#node-localization-form #cke_29, form#node-localization-form #cke_35 {
+  display: none;
+}
+
+.showmenuckeditorOnSms {
+  display: block !important;
 }
 /*# sourceMappingURL=style.css.map */
