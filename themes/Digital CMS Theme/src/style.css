@@ -3120,11 +3120,7 @@ span#cke_12 .cke_top, a#cke_24 .cke_top, span.cke_button_icon.cke_button__number
   white-space: normal;
 }
 
-<<<<<<< HEAD
-span#cke_12 .views-view-grid.horizontal, a#cke_24 .views-view-grid.horizontal, span.cke_button_icon.cke_button__numberedlist_icon .views-view-grid.horizontal, span.cke_button_icon.cke_button__blockquote_icon .views-view-grid.horizontal, span.cke_button_icon.cke_button__video_embed_icon .views-view-grid.horizontal, span.cke_button_icon.cke_button__table_icon .views-view-grid.horizontal, a#cke_34 .views-view-grid.horizontal, span#cke_10 .views-view-grid.horizontal, a#cke_37 .views-view-grid.horizontal, a#cke_38 .views-view-grid.horizontal {
-=======
 div#block-views-block-list-localization-block-1 .views-view-grid.horizontal {
->>>>>>> 963fc6ca (change the desgine for localisation liste)
   width: 74% !important;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
