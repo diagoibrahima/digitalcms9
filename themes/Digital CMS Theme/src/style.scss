@@ -603,6 +603,7 @@ article.node:before {
   background: linear-gradient(45deg, #e53e3e, #e53e3e) !important;
   border: cornsilk !important;
   padding: 10px;
+  display: none !important;
 }
 
 .dialog-off-canvas-main-canvas {
@@ -2393,7 +2394,7 @@ article .node-content div:nth-child(2) {
   }
 }
 
-.node-content-form {
+.node-content-form ,form#node-content-edit-form {
   /*
   width:45%;
   margin: 1%;
@@ -2488,12 +2489,12 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
   top: -30px;
   color: red;
   font-size: 12px;
-  background: #ff00005e;
   padding: 5px;
   margin: 30px 5px;
   border-radius: 5px;
   left: 0;
   line-height: 26px;
+  text-align: center !important;
 }
 
 .contentent-preview-good-format {
@@ -2505,10 +2506,8 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
   h1,
   .node-content h1 {
     font-size: 20px;
-    background: #1391c142;
     color: #1391c1;
     font-weight: normal;
-    padding: 10px;
     border-radius: 1px;
   }
   /* to remplace by ==>  .contentent-supmodule */
@@ -2517,16 +2516,13 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
     font-size: 15px;
     color: #1391c1;
     font-weight: 400;
-    padding: 10px;
-    margin: 20px;
-    border-bottom: solid 1px #cde4ef;
-    border-left: solid 1px #cde4ef;
+  
   }
   /* to remplace by ==>  .contentent-message */
   p,
   .node-content p {
     color: #000000;
-    font-size: 16px;
+    font-size: 14px;
     margin: 20px 0px;
   }
 }
@@ -2537,10 +2533,8 @@ article .node-content,
   h1,
   .node-content h1 {
     font-size: 20px;
-    background: #1391c142;
     color: #1391c1;
     font-weight: normal;
-    padding: 10px;
     border-radius: 1px;
     margin: 7px 0px;
   }
@@ -2550,16 +2544,15 @@ article .node-content,
     font-size: 15px;
     color: #1391c1;
     font-weight: 400;
-    padding: 10px;
-    margin: 20px;
+    margin: 20px 0px;
     border-bottom: solid 1px #cde4ef;
     border-left: solid 1px #cde4ef;
   }
   /* to remplace by ==>  .contentent-message */
   p,
-  .node-content p {
+  .node-content p , .node-content ul li {
     color: #000000;
-    font-size: 16px;
+    font-size: 14px;
     margin: 20px 0px;
   }
 }
@@ -2577,6 +2570,7 @@ article .node-content,
     font-size: 20px;
     color: white;
     border-radius: 5px 5px 0px 0px;
+    width: 100%;
   }
 }
 
@@ -2763,7 +2757,7 @@ form#node-localization-form {
     content: "";
     background: #f3f4f6;
     position: absolute;
-    height: 1445px;
+    height: 1030px;
     width: 10px;
     right: -10px;
     z-index: 9;
@@ -2834,11 +2828,7 @@ span#cke_12, a#cke_24 ,span.cke_button_icon.cke_button__numberedlist_icon , span
 }
 
 
-div#block-views-block-list-localization-block-1 .views-view-grid.horizontal{
 
-  width: 74% !important ;
-  display: flex !important;
-}
 
 
 .section-of-localisation-globale:before {
@@ -2919,7 +2909,6 @@ h3 {
 }
 
 }
-
 .ui-dialog .ui-dialog-titlebar {
   padding: 0.4em 1em;
   position: relative;
@@ -2931,4 +2920,9 @@ form#node-localization-form #cke_19,form#node-localization-form #cke_22,form#nod
 }
 .showmenuckeditorOnSms{
   display: block !important;
+}
+div#block-views-block-list-localization-block-1 .horizontal{
+
+  width: 74% !important ;
+  display: flex !important;
 }
