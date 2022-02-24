@@ -3208,4 +3208,11 @@ section article {
   border: solid;
   border-radius: 5px;
 }
+
+.ui-dialog .ui-dialog-titlebar {
+  padding: 0.4em 1em;
+  position: relative;
+  background: #34a2d5;
+  color: white;
+}
 /*# sourceMappingURL=style.css.map */
