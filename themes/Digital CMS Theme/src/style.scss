@@ -2274,7 +2274,7 @@ span.button-add-new-comment {
   padding: 10px;
   border-radius: 5px;
   color: white;
-  margin: 30px 0px 0px -15px;
+  margin: 30px 0px 0px 0px;
   position: absolute;
   cursor: pointer;
 }
@@ -2870,4 +2870,52 @@ div#block-views-block-list-localization-block-1 .views-view-grid.horizontal{
   a{
     margin: 10px;
   }
+}
+
+section article {
+  display: none;
+}
+
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons {
+  width: 50vw !important;
+
+  ul.links.inline{
+    display: none !important;
+  }
+
+  textarea {
+    border: solid;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+}
+
+article[typeof="schema:Person"]{
+  display: none !important;
+}
+
+footer {
+  display: none !important;
+}
+h3 {
+  display: none !important;
+}
+
+}
+
+.ui-dialog-buttonset.form-actions {
+
+  button:nth-child(2) {
+    display: none;
+}
+
+ button {
+  margin: 0.5em 0.4em 0.5em 0;
+  cursor: pointer;
+  color: white;
+  background: #5099bb;
+  border: solid;
+  border-radius: 5px;
+}
+
 }
