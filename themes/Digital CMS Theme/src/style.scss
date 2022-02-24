@@ -827,10 +827,12 @@ article.node:before {
     border-radius: 5px !important;
     line-height: 3;
     text-align: center;
-    width: 80%;
-    margin-left: 5%;
+    width: 17vw;
+    right:2% ;
+   // margin-left: 5%;
     z-index: 10;
     margin: 20px 22px;
+    position: relative;
     white-space: nowrap !important;
   }
 
@@ -909,7 +911,7 @@ form#user-login-form:after {
     position: absolute;
     margin: auto;
     top: -101px;
-    left: 17%;
+   right: 10%;
     border: solid #9cd2e7 1px !important;
     padding: 0px;
     color: #ffffff !important;
@@ -1319,11 +1321,11 @@ div#block-views-block-listtranslation-block-1 {
 
 .show-message {
   background: white;
-  margin: 10px 0px;
+  margin:1% 0%;
   border-radius: 5px;
   min-height: 235px;
   padding: 10px;
-  width: 400px;
+  width:28vw;
   box-shadow: 1px 1px 6px #2316161a;
   position: relative;
 
@@ -2272,7 +2274,7 @@ span.button-add-new-comment {
   padding: 10px;
   border-radius: 5px;
   color: white;
-  margin: 30px 0px 0px -15px;
+  margin: 30px 0px 0px 0px;
   position: absolute;
   cursor: pointer;
 }
@@ -2401,9 +2403,7 @@ article .node-content div:nth-child(2) {
   position: absolute;
   top: 50px;
 
-  .cke_reset {
-    //  max-height: 580px !important;
-  }
+
 
   div#edit-body-0-format {
     display: none !important;
@@ -2834,7 +2834,7 @@ span#cke_12, a#cke_24 ,span.cke_button_icon.cke_button__numberedlist_icon , span
 }
 
 
-.views-view-grid.horizontal{
+div#block-views-block-list-localization-block-1 .views-view-grid.horizontal{
 
   width: 74% !important ;
   display: flex !important;
@@ -2851,6 +2851,17 @@ span#cke_12, a#cke_24 ,span.cke_button_icon.cke_button__numberedlist_icon , span
   position: absolute;
 }
 
+
+}
+
+.nbmessage {
+  color: white;
+  background-color: #1391c1;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: smaller;
+}
+
 .print__wrapper.print__wrapper--pdf {
   display: flex;
   flex-direction: row-reverse;
@@ -2859,12 +2870,59 @@ span#cke_12, a#cke_24 ,span.cke_button_icon.cke_button__numberedlist_icon , span
   a{
     margin: 10px;
   }
-}}
+}
 
-.nbmessage {
+section article {
+  display: none;
+}
+
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons {
+  width: 50vw !important;
+
+  ul.links.inline{
+    display: none !important;
+  }
+
+  textarea {
+    border: solid;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+}
+
+article[typeof="schema:Person"]{
+  display: none !important;
+}
+
+footer {
+  display: none !important;
+}
+h3 {
+  display: none !important;
+}
+
+}
+
+.ui-dialog-buttonset.form-actions {
+
+  button:nth-child(2) {
+    display: none;
+}
+
+ button {
+  margin: 0.5em 0.4em 0.5em 0;
+  cursor: pointer;
   color: white;
-  background-color: #1391c1;
+  background: #5099bb;
+  border: solid;
   border-radius: 5px;
-  padding: 5px;
-  font-size: smaller;
+}
+
+}
+
+.ui-dialog .ui-dialog-titlebar {
+  padding: 0.4em 1em;
+  position: relative;
+  background: #34a2d5;
+  color: white;
 }
