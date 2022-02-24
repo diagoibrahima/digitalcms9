@@ -322,7 +322,7 @@ jQuery(document).ready(function () {
 
   // When click on preview button
   jQuery(".btn-group > .btn-preview").click(function () {
-
+var count = 0;
     // recuperer le contenu de ckeditor
     var description = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].getData();
 
@@ -346,7 +346,10 @@ jQuery(document).ready(function () {
            // console.log(element);
             items.push([,element,]);
           }else if(element.match(/<p>.*?<\/p>/g)){ 
-            var sms = element.match(/.{1,160}/g)
+            //var sms1 = element.replace('<p>','');
+            //var sms2 = sms1.replace('</p>','');
+            //var xxx = jQuery('<p class="messagetosend">'+sms2.match(/.{1,160}/g)+'</p>');
+            count = count + element.match(/.{1,160}/g).length;
             items.push([,,element.match(/.{1,160}/g)]);
             //console.log(element.match(/.{1,160}/g));
 
@@ -355,18 +358,20 @@ jQuery(document).ready(function () {
             // {
             //  console.log("message : " + i + sms[i]);
             // } 
-            
           }
 
   });
+ console.log("Nombre de SMS" + count);
   //console.table(items);
 
   // for loop
+  /* 
 for (var i = 0; i < items.length; i++) {
   for (var j = 0; j < items[i].length; j++) {
-    console.log(items[i][j]);
+   console.log(items[i]);     
   }
 }
+*/
  //console.log("message : " + i + sms[i]);
 //split a string into segments of n characters?
 //var str = 'abcdefghijkl';
@@ -384,10 +389,6 @@ for(i = 0; i < resultdata.length; i++)
   }
 }
   */
-
-
-  
-
 
     jQuery(this).removeClass("tw-bg-blue-500");
     jQuery(this).addClass("tw-bg-blue-700");
@@ -423,9 +424,21 @@ for(i = 0; i < resultdata.length; i++)
     } else if (jQuery('#edit-field-localization-channel').find(":selected").text() == "IOGT") {
       jQuery('<div class="channelgenerategeneral"><div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>IOGT</div></div>').insertAfter('#edit-field-localization-channel');
     }
+jQuery(' <div class="nbmessage"> Translation will be sent on '+count+' messages </div> ').insertBefore('#sms');
+    //jQuery('.channelgenerate ').append(items);
+   
 
-    jQuery('.channelgenerate ').append(items);
+    for (var i = 0; i < items.length; i++) {
+      for (var j = 0; j < items[i].length; j++) {
+        jQuery('.channelgenerate ').append(items[i][j]);
+        //console.log(items[i][j]);
+      }
+    }
 
+    //jQuery('.channelgenerate ').append(items);
+
+    //console.log(items);
+    console.table(items);
   });
 
 
