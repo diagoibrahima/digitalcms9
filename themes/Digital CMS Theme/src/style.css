@@ -3120,7 +3120,7 @@ span#cke_12 .cke_top, a#cke_24 .cke_top, span.cke_button_icon.cke_button__number
   white-space: normal;
 }
 
-div#block-views-block-list-localization-block-1 .views-view-grid.horizontal {
+span#cke_12 div#block-views-block-list-localization-block-1 .views-view-grid.horizontal, a#cke_24 div#block-views-block-list-localization-block-1 .views-view-grid.horizontal, span.cke_button_icon.cke_button__numberedlist_icon div#block-views-block-list-localization-block-1 .views-view-grid.horizontal, span.cke_button_icon.cke_button__blockquote_icon div#block-views-block-list-localization-block-1 .views-view-grid.horizontal, span.cke_button_icon.cke_button__video_embed_icon div#block-views-block-list-localization-block-1 .views-view-grid.horizontal, span.cke_button_icon.cke_button__table_icon div#block-views-block-list-localization-block-1 .views-view-grid.horizontal, a#cke_34 div#block-views-block-list-localization-block-1 .views-view-grid.horizontal, span#cke_10 div#block-views-block-list-localization-block-1 .views-view-grid.horizontal, a#cke_37 div#block-views-block-list-localization-block-1 .views-view-grid.horizontal, a#cke_38 div#block-views-block-list-localization-block-1 .views-view-grid.horizontal {
   width: 74% !important;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -3137,7 +3137,15 @@ span#cke_12 .section-of-localisation-globale:before, a#cke_24 .section-of-locali
   position: absolute;
 }
 
-span#cke_12 .print__wrapper.print__wrapper--pdf, a#cke_24 .print__wrapper.print__wrapper--pdf, span.cke_button_icon.cke_button__numberedlist_icon .print__wrapper.print__wrapper--pdf, span.cke_button_icon.cke_button__blockquote_icon .print__wrapper.print__wrapper--pdf, span.cke_button_icon.cke_button__video_embed_icon .print__wrapper.print__wrapper--pdf, span.cke_button_icon.cke_button__table_icon .print__wrapper.print__wrapper--pdf, a#cke_34 .print__wrapper.print__wrapper--pdf, span#cke_10 .print__wrapper.print__wrapper--pdf, a#cke_37 .print__wrapper.print__wrapper--pdf, a#cke_38 .print__wrapper.print__wrapper--pdf {
+.nbmessage {
+  color: white;
+  background-color: #1391c1;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: smaller;
+}
+
+.print__wrapper.print__wrapper--pdf {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3153,15 +3161,7 @@ span#cke_12 .print__wrapper.print__wrapper--pdf, a#cke_24 .print__wrapper.print_
           align-items: center;
 }
 
-span#cke_12 .print__wrapper.print__wrapper--pdf a, a#cke_24 .print__wrapper.print__wrapper--pdf a, span.cke_button_icon.cke_button__numberedlist_icon .print__wrapper.print__wrapper--pdf a, span.cke_button_icon.cke_button__blockquote_icon .print__wrapper.print__wrapper--pdf a, span.cke_button_icon.cke_button__video_embed_icon .print__wrapper.print__wrapper--pdf a, span.cke_button_icon.cke_button__table_icon .print__wrapper.print__wrapper--pdf a, a#cke_34 .print__wrapper.print__wrapper--pdf a, span#cke_10 .print__wrapper.print__wrapper--pdf a, a#cke_37 .print__wrapper.print__wrapper--pdf a, a#cke_38 .print__wrapper.print__wrapper--pdf a {
+.print__wrapper.print__wrapper--pdf a {
   margin: 10px;
-}
-
-.nbmessage {
-  color: white;
-  background-color: #1391c1;
-  border-radius: 5px;
-  padding: 5px;
-  font-size: smaller;
 }
 /*# sourceMappingURL=style.css.map */

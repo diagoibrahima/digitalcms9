@@ -1,6 +1,6 @@
 jQuery("#block-views-block-contenttotranslate-block-1").ready(function(){
 
-const urlapi ="http://0.0.0.0:5000/translate";
+const urlapi ="http://2416-154-65-35-42.ngrok.io/translate";
 
 var textToTranslate = jQuery(".bodyContentToTranslate").html();
   console.log(textToTranslate);

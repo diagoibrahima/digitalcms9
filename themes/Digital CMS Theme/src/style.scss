@@ -2851,6 +2851,17 @@ div#block-views-block-list-localization-block-1 .views-view-grid.horizontal{
   position: absolute;
 }
 
+
+}
+
+.nbmessage {
+  color: white;
+  background-color: #1391c1;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: smaller;
+}
+
 .print__wrapper.print__wrapper--pdf {
   display: flex;
   flex-direction: row-reverse;
@@ -2859,12 +2870,4 @@ div#block-views-block-list-localization-block-1 .views-view-grid.horizontal{
   a{
     margin: 10px;
   }
-}}
-
-.nbmessage {
-  color: white;
-  background-color: #1391c1;
-  border-radius: 5px;
-  padding: 5px;
-  font-size: smaller;
 }
