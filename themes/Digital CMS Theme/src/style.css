@@ -885,9 +885,9 @@ form#user-login-form:after {
 }
 
 .dialog-off-canvas-main-canvas .node-content div div:nth-child(1) {
+  padding-top: 20px;
   color: gray;
-  font-size: 25px;
-  font-weight: 100;
+  font-size: 14px;
   margin: 5px auto;
 }
 
@@ -2528,6 +2528,10 @@ div#block-views-block-contenttotranslate-block-1 p span span span span:before {
 
 article .node-content div:nth-child(2) {
   margin: 10px 0px 50px 0px;
+  font-weight: normal;
+  font-size: 15px;
+  position: relative;
+  padding-bottom: 30px;
 }
 
 article .node-content div:nth-child(2):before {
@@ -2536,7 +2540,7 @@ article .node-content div:nth-child(2):before {
   position: absolute;
   height: 20px;
   width: 106%;
-  top: -27px;
+  top: -69px;
   left: -19px;
 }
 
@@ -2719,7 +2723,8 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
 .contentent-preview-good-format p,
 .contentent-preview-good-format .node-content p {
   color: #000000;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: normal;
   margin: 20px 0px;
 }
 
@@ -2739,7 +2744,7 @@ article .node-content .node-content h1,
   background: #1391c136;
   font-weight: normal;
   border-radius: 1px;
-  margin: 2px -15px;
+  margin: 2px 0px;
   padding: 10px 10px;
   position: relative;
 }
@@ -2752,8 +2757,7 @@ article .node-content .node-content h2,
   color: #1391c1;
   font-weight: 400;
   margin: 20px 0px;
-  border-bottom: solid 1px #cde4ef;
-  border-left: solid 1px #cde4ef;
+  padding: 0px 10px;
 }
 
 article .node-content p,
@@ -2762,8 +2766,10 @@ article .node-content .node-content p, article .node-content .node-content ul li
 .bodyContentToTranslate .node-content p,
 .bodyContentToTranslate .node-content ul li {
   color: #000000;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: normal;
   margin: 20px 0px;
+  padding: 0px 10px;
 }
 
 .live-preveiw-section {
@@ -3224,5 +3230,15 @@ div#block-views-block-list-localization-block-1 .horizontal {
 .tranfromnation-chevreon {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.section-of-localisation-globale:before {
+  content: '';
+  background: #c0dfff;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  margin: -10px;
+  bottom: 60px;
 }
 /*# sourceMappingURL=style.css.map */
