@@ -1,6 +1,6 @@
 jQuery("form#node-content-edit-form").ready( function(){
   var  valeuredit =jQuery("input#edit-title-0-value").val();
-  console.log(valeuredit)
+  //console.log(valeuredit)
   jQuery('.tilteconteValue').html(valeuredit);
 
   });
@@ -12,41 +12,66 @@ jQuery("#block-views-block-contenttotranslate-block-1").ready(function(){
       //hide ckeditor menu on sms channel
       jQuery('form#node-localization-form #cke_19,form#node-localization-form #cke_22,form#node-localization-form #cke_29,form#node-localization-form #cke_35').addClass('hidemenuckeditorOnSms');
 
+// api url
+const api_url = 
+      "http://localhost/digitalcms9/serverconf";
+  
+let urlapi1;
+// Defining async function
+
+async function getapi(url) {
+    
+    // Storing response
+    const response = await fetch(url);
+    
+    // Storing data in form of JSON
+    var data = await response.json();
+
+    var server = data;
+
+    for(i=0; i<server.length; i++) {
+      if(server[i].state == 1) { 
+       // console.log(server[i].ipadress);
+        urlapi1 = "http://"+server[i].ipadress+":"+server[i].port+"/translate";
+        console.log(urlapi1);
+        
+      }
+    }
+
+   // console.log(server);
+    
+}
+// Calling that async function
+getapi(api_url);
 
 
-
+/*
 //get server configuration
 var urlapiinterne = "http://localhost/digitalcms9/serverconf";
+
 const getconf = async function(a) {
 
   const response = await fetch(a, {method: "GET",headers:{ "Content-Type": "application/json"} });
 
   var data = await response.json();
-  //var json = json.parse(data);
 
-  const obj = JSON.parse(data);
-
-  console.log(obj.count);
-// expected output: 42
-
-  console.log(obj.result);
-// expected output: true
+  console.log(data);
 
 
-  //console.log(data);
 
- // console.log(data["servername"]);
- //console.log(serverobj.servername);
 }
 
-getconf(urlapiinterne);
+*/
 
+console.log(urlapi1);
+
+//const urlapi = "http://"+server[i].ipadress+":"+server[i].port+"/translate";
 
 
 const urlapi ="http://0.0.0.0:5000/translate";
 
 var textToTranslate = jQuery(".bodyContentToTranslate").html();
-  console.log(textToTranslate);
+
   var titletotranslate = jQuery(".initial-title a").text();
   var descriptiontotranslate = jQuery(".section-initial-content p").text();
 
