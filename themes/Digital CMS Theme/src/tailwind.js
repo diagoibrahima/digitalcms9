@@ -128,6 +128,7 @@ jQuery(document).ready(function () {
   jQuery('.blockmodule-submodule').hide();
   jQuery('a.btn').hide();
   jQuery('section').hide();
+  jQuery('article .node-content h1').append('<svg class="svg-inline--fa fa-chevron-down fa-w-14 expand-minimize-button text-light text-xl font-thin text-gray-400" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>')
   jQuery('<div class="live-preveiw-section "> <div class="livepreview-content"> Course preview  </div> <div class="tilteconteValue" ></div> <div class="DescriptioncontentValue"></div> <div class="contentent-preview-good-format">  </div> </div>').insertBefore('form#node-content-form , form#node-content-edit-form');
   //hide submodule and message content 
   jQuery('article .node-content p , article .node-content h2, article .node-content h1+* ').hide();
@@ -637,6 +638,8 @@ for(i = 0; i < resultdata.length; i++)
   jQuery('span.expandalle-minimizeall-button.cursor-pointer , article .node-content h1').click(function () {
 
     jQuery('article .node-content p, article .node-content h2,article .node-content h1+* ').toggle(1000);
+    jQuery('.svg-inline--fa.fa-w-14').toggleClass('tranfromnation-chevreon');
+
     var expand = (jQuery('span.expandalle-minimizeall-button.cursor-pointer').text());
     expand == "Expand all" ? jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Minimize') : jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Expand all')
   });

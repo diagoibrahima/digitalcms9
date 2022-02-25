@@ -271,7 +271,7 @@ display: none;
 .expand-minimize-button {
   position: absolute;
   right: 1%;
-  margin: 25px 20px;
+  margin: 0px;
   cursor: pointer;
   z-index: 99999999999999999999999 !important;
 }
@@ -2736,9 +2736,12 @@ article .node-content .node-content h1,
 .bodyContentToTranslate .node-content h1 {
   font-size: 20px;
   color: #1391c1;
+  background: #1391c136;
   font-weight: normal;
   border-radius: 1px;
-  margin: 7px 0px;
+  margin: 2px -15px;
+  padding: 10px 10px;
+  position: relative;
 }
 
 article .node-content h2,
@@ -3216,5 +3219,10 @@ div#block-views-block-list-localization-block-1 .horizontal {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+}
+
+.tranfromnation-chevreon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 /*# sourceMappingURL=style.css.map */
