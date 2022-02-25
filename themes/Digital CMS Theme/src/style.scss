@@ -262,9 +262,10 @@ display: none;
 .expand-minimize-button {
   position: absolute;
   right: 1%;
-  margin: 25px 20px;
+  margin:0px;
   cursor: pointer;
   z-index: 99999999999999999999999 !important;
+ 
 }
 
 .blockmodule-titre-module > a {
@@ -2534,9 +2535,13 @@ article .node-content,
   .node-content h1 {
     font-size: 20px;
     color: #1391c1;
+    background: #1391c136;
     font-weight: normal;
     border-radius: 1px;
-    margin: 7px 0px;
+    margin:2px -15px;
+    padding: 10px 10px;
+    position: relative;
+    
   }
   /* to remplace by ==>  .contentent-supmodule */
   h2,
@@ -2924,4 +2929,8 @@ div#block-views-block-list-localization-block-1 .horizontal{
 
   width: 74% !important ;
   display: flex !important;
+}
+
+.tranfromnation-chevreon{
+  transform: rotate(180deg);
 }
