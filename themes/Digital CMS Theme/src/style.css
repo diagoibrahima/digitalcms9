@@ -2776,6 +2776,8 @@ article .node-content .node-content p, article .node-content .node-content ul li
   width: 50%;
   margin: 1% 48%;
   z-index: 99;
+  position: relative;
+  z-index: 99999999999999999999999;
 }
 
 .live-preveiw-section .livepreview-content {

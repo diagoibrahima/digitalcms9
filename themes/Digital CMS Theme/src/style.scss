@@ -2570,10 +2570,10 @@ article .node-content,
 
 .live-preveiw-section {
   width: 50%;
-  // position: absolute;
-  // right: 1%;
   margin: 1% 48%;
   z-index: 99;
+  position: relative;
+  z-index: 99999999999999999999999;
 
   .livepreview-content {
     background: #1391c1;
