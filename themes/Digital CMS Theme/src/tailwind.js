@@ -5,10 +5,13 @@ jQuery("form#node-content-edit-form").ready( function(){
 
   });
 
+
+// Appell API to get the url of the translation Server
+
   let url = "http://localhost/digitalcms9/serverconf";
   fetch(url).then((response)=>
     response.json().then((data)=>{
-      console.log(data);
+      //console.log(data);
       for(let conf of data){
         if(conf.state==1){
           var urlserver ="http://"+conf.ipadress +":"+conf.port+"/translate";
@@ -18,6 +21,93 @@ jQuery("form#node-content-edit-form").ready( function(){
       }
     })
   );
+
+
+
+  // Appel Url to get list of translation by split it in pieces of message
+  var items2 = [];
+  let url2 = "http://localhost/digitalcms9/en/rest/localizationList/602";
+  fetch(url2).then((response)=>
+    response.json().then((data)=>{
+      //console.log(data);
+      for(let translation of data){
+
+        var resultdata2  = translation.Translation.match(/<h(.)>.*?<\/h\1>|<p>.*?<\/p\>/g);
+        //console.log(resultdata2);
+
+        resultdata2.forEach(function(element) {
+          //console.log(element);
+          if(element.match(/<h1>.*?<\/h1>/g)){ 
+            var module = element.match(/<h1>.*?<\/h1>/g)[0];
+            console.log(module);
+            if(element.match(/<h2>.*?<\/h2>/g)){ 
+              var submodule = element.match(/<h2>.*?<\/h2>/g)[0];
+              if(element.match(/<p>.*?<\/p>/g)){ 
+
+                var message = element.match(/.{1,160}/g);
+                items2.push([translation.Cours,translation.language,translation.language,translation.Channel,module,submodule,message]);
+              }
+            } else{
+              if(element.match(/<p>.*?<\/p>/g)){ 
+                
+                console.log(module);
+                var message = element.match(/.{1,160}/g);
+                items2.push([translation.Cours,translation.language,translation.language,translation.Channel,module,'',message]);
+              }
+            }
+            
+          }
+  });
+//console.table(items2);
+      }
+    })
+  );
+/*
+var resultdata2  = description.match(/<h(.)>.*?<\/h\1>|<p>.*?<\/p\>/g);
+
+  var items2 = [];
+
+  resultdata2.forEach(function(element) {
+
+          if(element.match(/<h1>.*?<\/h1>/g)){ 
+           // console.log(element);
+            items.push([element,,]);
+            
+          }else if(element.match(/<h2>.*?<\/h2>/g)){ 
+           // console.log(element);
+            items.push([,element,]);
+          }else if(element.match(/<p>.*?<\/p>/g)){ 
+            //var sms1 = element.replace('<p>','');
+            //var sms2 = sms1.replace('</p>','');
+            //var xxx = jQuery('<p class="messagetosend">'+sms2.match(/.{1,160}/g)+'</p>');
+            // compter le nombre de message per cours
+            count = count + element.match(/.{1,160}/g).length;
+            items.push([,,element.match(/.{1,160}/g)]);
+            //console.log(element.match(/.{1,160}/g));
+
+            //var sms = element.match(/.{1,160}/g);
+            //for(i = 0; i < sms.length; i++)
+            // {
+            //  console.log("message : " + i + sms[i]);
+            // } 
+          }
+
+  });
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
 jQuery("#block-views-block-contenttotranslate-block-1").ready(function(){
