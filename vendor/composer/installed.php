@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '5e9a08f8cb132164c7d447552d9a19d9bcab773a',
+        'reference' => 'ce92d365af8e4ac1d1aeb3130043ac5d8d25e5d0',
         'name' => 'drupal/legacy-project',
         'dev' => true,
     ),
@@ -688,7 +688,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '5e9a08f8cb132164c7d447552d9a19d9bcab773a',
+            'reference' => 'ce92d365af8e4ac1d1aeb3130043ac5d8d25e5d0',
             'dev_requirement' => false,
         ),
         'drupal/link' => array(
@@ -836,6 +836,15 @@
             'replaced' => array(
                 0 => '9.3.6',
             ),
+        ),
+        'drupal/restui' => array(
+            'pretty_version' => '1.20.0',
+            'version' => '1.20.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/restui',
+            'aliases' => array(),
+            'reference' => '8.x-1.20',
+            'dev_requirement' => false,
         ),
         'drupal/search' => array(
             'dev_requirement' => false,
