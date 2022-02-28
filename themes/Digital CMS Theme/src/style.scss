@@ -2975,7 +2975,7 @@ input#edit-title-0-value {
 }
 form#node-server-form{
   width:30%;
-  margin: 30px 2%;
+  margin: 7% 2%;
   height: 330px;
 
 
@@ -3041,3 +3041,23 @@ form#node-server-edit-form{
 
 }
 
+form#node-language-form {
+  width: 47%;
+  margin: 7.5% 3%;
+
+
+  div#edit-actions #edit-submit {
+    margin-left: 78%;
+  }
+}
+
+div#block-views-block-listelanguage-block-1 {
+  width: 50%;
+  position: absolute !important;
+  right: 0;
+  top: 100px;
+}
+
+nav#block-digitalcmsmenu ul li:nth-child(4){
+  cursor: pointer;
+}
