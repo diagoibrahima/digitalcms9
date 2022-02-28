@@ -2974,10 +2974,11 @@ input#edit-title-0-value {
   padding: 0px 5px;
 }
 form#node-server-form{
+  width:30%;
+  margin: 30px 2%;
 
 
-
-.js-form-item.form-item.js-form-type-textfield.form-item-field-ip-adress-0-value.js-form-item-field-ip-adress-0-value , .js-form-item.form-item.js-form-type-textfield.form-item-field-port-0-value.js-form-item-field-port-0-value {
+.js-form-item.form-item.js-form-type-textfield.form-item-field-ip-adress-0-value.js-form-item-field-ip-adress-0-value , .js-form-item.form-item.js-form-type-textfield.form-item-field-port-0-value.js-form-item-field-port-0-value  {
   display: flex;
   flex-direction: column;
   width: 95%;
@@ -2997,3 +2998,38 @@ input {
 }
 
 }
+
+
+div#block-views-block-listserver-block-1 {
+  width:68%;
+  position: absolute !important;
+  right: 0;
+  top:47px;
+}
+
+
+form#node-server-edit-form{
+
+  input {
+    border-radius: 5px;
+    padding: 0px 5px;
+  }
+
+  .js-form-item.form-item.js-form-type-textfield.form-item-field-ip-adress-0-value.js-form-item-field-ip-adress-0-value , .js-form-item.form-item.js-form-type-textfield.form-item-field-port-0-value.js-form-item-field-port-0-value{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: auto;
+    }
+    
+    
+    .js-form-item.form-item.js-form-type-checkbox.form-item-field-etat-value.js-form-item-field-etat-value
+    { display: flex;
+    flex-direction: column-reverse;
+    margin: auto;
+    width: 95%;
+    }
+
+
+}
+
