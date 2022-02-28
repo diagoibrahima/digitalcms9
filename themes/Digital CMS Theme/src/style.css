@@ -3318,6 +3318,10 @@ form#node-server-form {
   margin: 30px 2%;
 }
 
+form#node-server-form div#edit-actions #edit-submit {
+  margin-left: 65%;
+}
+
 form#node-server-form .js-form-item.form-item.js-form-type-textfield.form-item-field-ip-adress-0-value.js-form-item-field-ip-adress-0-value, form#node-server-form .js-form-item.form-item.js-form-type-textfield.form-item-field-port-0-value.js-form-item-field-port-0-value {
   display: -webkit-box;
   display: -ms-flexbox;
