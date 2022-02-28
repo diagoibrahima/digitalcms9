@@ -11,7 +11,7 @@ jQuery("form#node-content-edit-form").ready( function(){
   let url = "http://localhost/digitalcms9/serverconf";
   fetch(url).then((response)=>
     response.json().then((data)=>{
-      //console.log(data);
+      console.log(data);
       for(let conf of data){
         if(conf.state==1){
           var urlserver ="http://"+conf.ipadress +":"+conf.port+"/translate";
@@ -26,39 +26,14 @@ jQuery("form#node-content-edit-form").ready( function(){
 
   // Appel Url to get list of translation by split it in pieces of message
   var items2 = [];
-  let url2 = "http://localhost/digitalcms9/en/rest/localizationList/602";
+  let url2 = "http://localhost/digitalcms9/en/rest/localizationList/605";
   fetch(url2).then((response)=>
     response.json().then((data)=>{
       //console.log(data);
+
       for(let translation of data){
-
-        var resultdata2  = translation.Translation.match(/<h(.)>.*?<\/h\1>|<p>.*?<\/p\>/g);
-        //console.log(resultdata2);
-
-        resultdata2.forEach(function(element) {
-          //console.log(element);
-          if(element.match(/<h1>.*?<\/h1>/g)){ 
-            var module = element.match(/<h1>.*?<\/h1>/g)[0];
-            console.log(module);
-            if(element.match(/<h2>.*?<\/h2>/g)){ 
-              var submodule = element.match(/<h2>.*?<\/h2>/g)[0];
-              if(element.match(/<p>.*?<\/p>/g)){ 
-
-                var message = element.match(/.{1,160}/g);
-                items2.push([translation.Cours,translation.language,translation.language,translation.Channel,module,submodule,message]);
-              }
-            } else{
-              if(element.match(/<p>.*?<\/p>/g)){ 
-                
-                console.log(module);
-                var message = element.match(/.{1,160}/g);
-                items2.push([translation.Cours,translation.language,translation.language,translation.Channel,module,'',message]);
-              }
-            }
-            
-          }
-  });
-//console.table(items2);
+        items2.push([element,,])
+        console.log(translation.Cours);
       }
     })
   );
@@ -67,7 +42,7 @@ var resultdata2  = description.match(/<h(.)>.*?<\/h\1>|<p>.*?<\/p\>/g);
 
   var items2 = [];
 
-  resultdata2.forEach(function(element) {
+  resultdata.forEach(function(element) {
 
           if(element.match(/<h1>.*?<\/h1>/g)){ 
            // console.log(element);
@@ -286,8 +261,6 @@ document.getElementById('edit-field-localization-langue').addEventListener('chan
 
 jQuery(document).ready(function () {
 
-
-  jQuery('nav#block-digitalcmsmenu ul li:nth-child(4) ul').hide();
   jQuery('.print__wrapper.print__wrapper--pdf').append('<svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg>');
   jQuery('textarea#edit-field-descriptioncontent-0-value').hide()
   jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').html('Add Description')
@@ -310,11 +283,6 @@ jQuery(document).ready(function () {
 
   //on change input title   & description
    
-
-  jQuery('nav#block-digitalcmsmenu ul li:nth-child(4)').click(function(){
-    jQuery('nav#block-digitalcmsmenu ul li:nth-child(4) ul').toggle();
-  }
-  );
 
    
     jQuery(" textarea#edit-field-descriptioncontent-0-value ").ready( function () {
