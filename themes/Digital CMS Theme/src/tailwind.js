@@ -9,17 +9,30 @@ jQuery("form#node-content-edit-form").ready( function(){
 
 jQuery("#block-views-block-contenttotranslate-block-1").ready(function(){
 
-      //hide ckeditor menu on sms channel
-      jQuery('form#node-localization-form #cke_19,form#node-localization-form #cke_22,form#node-localization-form #cke_29,form#node-localization-form #cke_35').addClass('hidemenuckeditorOnSms');
+let url = "http://localhost/digitalcms9/serverconf";
+fetch(url).then((response)=>
+  response.json().then((data)=>{
+    console.log(data);
+    for(let conf of data){
+      if(conf.state==1){
+        var urlserver ="http://"+conf.ipadress +":"+conf.port+"/translate";
+        document.querySelector("#servertt").innerHTML = urlserver;
+      }
+    }
+  })
+);
 
+      //hide ckeditor menu on sms channel
+    jQuery('form#node-localization-form #cke_19,form#node-localization-form #cke_22,form#node-localization-form #cke_29,form#node-localization-form #cke_35').addClass('hidemenuckeditorOnSms');
+/*
 // api url
-const api_url = 
-      "http://localhost/digitalcms9/serverconf";
-  
-let urlapi1;
+const api_url = "http://localhost/digitalcms9/serverconf";
+
+
+var urlapi1;
 // Defining async function
 
-async function getapi(url) {
+const zzzz = (async function getapi(url){
     
     // Storing response
     const response = await fetch(url);
@@ -33,45 +46,38 @@ async function getapi(url) {
       if(server[i].state == 1) { 
        // console.log(server[i].ipadress);
         urlapi1 = "http://"+server[i].ipadress+":"+server[i].port+"/translate";
-        console.log(urlapi1);
+        //console.log(urlapi1);
         
       }
     }
-
+return urlapi1;
    // console.log(server);
     
-}
+})();
+
+const aby = (async () => {
+  const data = await fetch(api_url);
+  return data
+})()
 // Calling that async function
-getapi(api_url);
+var bestUrl = getapi(api_url);
 
+console.log(aby);
 
-/*
-//get server configuration
-var urlapiinterne = "http://localhost/digitalcms9/serverconf";
-
-const getconf = async function(a) {
-
-  const response = await fetch(a, {method: "GET",headers:{ "Content-Type": "application/json"} });
-
-  var data = await response.json();
-
-  console.log(data);
-
-
-
-}
 
 */
 
-console.log(urlapi1);
+
 
 //const urlapi = "http://"+server[i].ipadress+":"+server[i].port+"/translate";
 
 
-const urlapi ="http://0.0.0.0:5000/translate";
+//const urlapi ="http://0.0.0.0:5000/translate"; 
 
-var textToTranslate = jQuery(".bodyContentToTranslate").html();
+let urlapi = jQuery("#div#servertt").text();
+console.log(urlapi);
 
+  var textToTranslate = jQuery(".bodyContentToTranslate").html();
   var titletotranslate = jQuery(".initial-title a").text();
   var descriptiontotranslate = jQuery(".section-initial-content p").text();
 
@@ -144,6 +150,7 @@ const translatedesc = async function(ad,bd,cd) {
 }
 
 
+
 // Default translation 
 jQuery("#edit-field-titre-content-0-value, #edit-field-descriptino-content-0-value").val("Translating...");
 CKEDITOR.instances['edit-field-localization-messagebody-0-value'].setData("Translating...");
@@ -183,7 +190,6 @@ document.getElementById('edit-field-localization-langue').addEventListener('chan
 });
 
 
-
 jQuery(document).ready(function () {
   jQuery('.print__wrapper.print__wrapper--pdf').append('<svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg>');
   jQuery('textarea#edit-field-descriptioncontent-0-value').hide()
@@ -201,21 +207,12 @@ jQuery(document).ready(function () {
 
 
 
-
-
-
-
     //on change input title   & description
-   
-
-   
     jQuery(" textarea#edit-field-descriptioncontent-0-value ").ready( function () {
       // jQuery('.DescriptioncontentValue').remove();
       DescriptioncontentValue = jQuery(this).val();
       jQuery('.DescriptioncontentValue').html('<div class="description-preview">Description</div> <br>' + DescriptioncontentValue + '<div class="separateur-whenwehavedescrip"></div>');
     });
-
-
 
 
 
