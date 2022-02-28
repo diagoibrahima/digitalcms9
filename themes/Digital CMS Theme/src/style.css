@@ -3312,4 +3312,33 @@ svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.tex
 input#edit-title-0-value {
   padding: 0px 5px;
 }
+
+form#node-server-form .js-form-item.form-item.js-form-type-textfield.form-item-field-ip-adress-0-value.js-form-item-field-ip-adress-0-value, form#node-server-form .js-form-item.form-item.js-form-type-textfield.form-item-field-port-0-value.js-form-item-field-port-0-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 95%;
+  margin: auto;
+}
+
+form#node-server-form .js-form-item.form-item.js-form-type-checkbox.form-item-field-etat-value.js-form-item-field-etat-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin: auto;
+  width: 95%;
+}
+
+form#node-server-form input {
+  border-radius: 5px;
+  padding: 0px 5px;
+}
 /*# sourceMappingURL=style.css.map */

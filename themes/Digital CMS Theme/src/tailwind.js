@@ -34,7 +34,7 @@ async function getapi(url) {
        // console.log(server[i].ipadress);
         urlapi1 = "http://"+server[i].ipadress+":"+server[i].port+"/translate";
       //  console.log(urlapi1);
-        jQuery('<div class="url-de-api"><span> <a>' + urlapi1 + '</a></span></div>').insertBefore('div#block-tailwindcss-content');
+      //  jQuery('<div class="url-de-api"><span> <a>' + urlapi1 + '</a></span></div>').insertBefore('div#block-tailwindcss-content');
         
       }
     }
@@ -69,9 +69,7 @@ const getconf = async function(a) {
 //const urlapi = "http://"+server[i].ipadress+":"+server[i].port+"/translate";
 
 
-var testeurlof = jQuery(".url-de-api span a").text();
 
-console.log(testeurlof);
 
 const urlapi ="http://0.0.0.0:5000/translate";
 
