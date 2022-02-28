@@ -57,35 +57,35 @@
         },
         {
             "name": "chi-teck/drupal-code-generator",
-            "version": "2.4.1",
-            "version_normalized": "2.4.1.0",
+            "version": "2.5.1",
+            "version_normalized": "2.5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Chi-teck/drupal-code-generator.git",
-                "reference": "e7261a46a839a3433e4bbe24eeeb21ed8805a7d3"
+                "reference": "cd3912e25e20bb12b6dce8d522793f3abd71ab8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/e7261a46a839a3433e4bbe24eeeb21ed8805a7d3",
-                "reference": "e7261a46a839a3433e4bbe24eeeb21ed8805a7d3",
+                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/cd3912e25e20bb12b6dce8d522793f3abd71ab8c",
+                "reference": "cd3912e25e20bb12b6dce8d522793f3abd71ab8c",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "php": ">=7.4",
-                "psr/log": "^1.1",
+                "psr/log": "^1.1 || ^2.0",
                 "symfony/console": "^4.4.15 || ^5.1",
-                "symfony/filesystem": "^4.4 || ^5.1",
+                "symfony/filesystem": "^4.4 || ^5.1 || ^6",
                 "symfony/polyfill-php80": "^1.23",
                 "symfony/string": "^5.1 || ^6",
-                "twig/twig": "^2.12 || ^3.1"
+                "twig/twig": "^2.14.11 || ^3.1"
             },
             "conflict": {
                 "squizlabs/php_codesniffer": "<3.6"
             },
             "require-dev": {
-                "chi-teck/drupal-coder-extension": "^1.0",
-                "drupal/coder": "^8.3.13",
+                "chi-teck/drupal-coder-extension": "^1.2",
+                "drupal/coder": "^8.3.14",
                 "friendsoftwig/twigcs": "^5.0",
                 "phpspec/prophecy-phpunit": "^2.0",
                 "phpunit/phpunit": "^9.4",
@@ -93,7 +93,7 @@
                 "symfony/var-dumper": "^5.2",
                 "symfony/yaml": "^5.2"
             },
-            "time": "2022-01-18T18:48:57+00:00",
+            "time": "2022-02-24T10:39:38+00:00",
             "bin": [
                 "bin/dcg"
             ],
@@ -116,7 +116,7 @@
             "description": "Drupal code generator",
             "support": {
                 "issues": "https://github.com/Chi-teck/drupal-code-generator/issues",
-                "source": "https://github.com/Chi-teck/drupal-code-generator/tree/2.4.1"
+                "source": "https://github.com/Chi-teck/drupal-code-generator/tree/2.5.1"
             },
             "install-path": "../chi-teck/drupal-code-generator"
         },
@@ -360,17 +360,17 @@
         },
         {
             "name": "consolidation/annotated-command",
-            "version": "4.5.1",
-            "version_normalized": "4.5.1.0",
+            "version": "4.5.2",
+            "version_normalized": "4.5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "701a7abe8505abe89520837be798e15a3953a367"
+                "reference": "24c1529436b4f4beec3d19aab71fd127817f47ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/701a7abe8505abe89520837be798e15a3953a367",
-                "reference": "701a7abe8505abe89520837be798e15a3953a367",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/24c1529436b4f4beec3d19aab71fd127817f47ef",
+                "reference": "24c1529436b4f4beec3d19aab71fd127817f47ef",
                 "shasum": ""
             },
             "require": {
@@ -387,7 +387,7 @@
                 "squizlabs/php_codesniffer": "^3",
                 "yoast/phpunit-polyfills": "^0.2.0"
             },
-            "time": "2021-12-30T04:00:37+00:00",
+            "time": "2022-02-20T16:36:18+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -413,7 +413,7 @@
             "description": "Initialize Symfony Console commands from annotated command class methods.",
             "support": {
                 "issues": "https://github.com/consolidation/annotated-command/issues",
-                "source": "https://github.com/consolidation/annotated-command/tree/4.5.1"
+                "source": "https://github.com/consolidation/annotated-command/tree/4.5.2"
             },
             "install-path": "../consolidation/annotated-command"
         },
@@ -580,22 +580,22 @@
         },
         {
             "name": "consolidation/log",
-            "version": "2.1.0",
-            "version_normalized": "2.1.0.0",
+            "version": "2.1.1",
+            "version_normalized": "2.1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/log.git",
-                "reference": "9efdd57031bf2fda033f6a256cd8b7902a4e6b92"
+                "reference": "3ad08dc57e8aff9400111bad36beb0ed387fe6a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/log/zipball/9efdd57031bf2fda033f6a256cd8b7902a4e6b92",
-                "reference": "9efdd57031bf2fda033f6a256cd8b7902a4e6b92",
+                "url": "https://api.github.com/repos/consolidation/log/zipball/3ad08dc57e8aff9400111bad36beb0ed387fe6a9",
+                "reference": "3ad08dc57e8aff9400111bad36beb0ed387fe6a9",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1.3",
-                "psr/log": "^1.0",
+                "psr/log": "^1 || ^2",
                 "symfony/console": "^4 || ^5 || ^6"
             },
             "require-dev": {
@@ -603,7 +603,7 @@
                 "squizlabs/php_codesniffer": "^3",
                 "yoast/phpunit-polyfills": "^0.2.0"
             },
-            "time": "2022-01-30T03:49:07+00:00",
+            "time": "2022-02-24T04:27:32+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -629,7 +629,7 @@
             "description": "Improved Psr-3 / Psr\\Log logger based on Symfony Console components.",
             "support": {
                 "issues": "https://github.com/consolidation/log/issues",
-                "source": "https://github.com/consolidation/log/tree/2.1.0"
+                "source": "https://github.com/consolidation/log/tree/2.1.1"
             },
             "install-path": "../consolidation/log"
         },
@@ -697,17 +697,17 @@
         },
         {
             "name": "consolidation/robo",
-            "version": "3.0.7",
-            "version_normalized": "3.0.7.0",
+            "version": "3.0.10",
+            "version_normalized": "3.0.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/robo.git",
-                "reference": "57012db2a93c904ed0a7b9d8676c0325c0366bc8"
+                "reference": "206bbe23b34081a36bfefc4de2abbc1abcd29ef4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/robo/zipball/57012db2a93c904ed0a7b9d8676c0325c0366bc8",
-                "reference": "57012db2a93c904ed0a7b9d8676c0325c0366bc8",
+                "url": "https://api.github.com/repos/consolidation/robo/zipball/206bbe23b34081a36bfefc4de2abbc1abcd29ef4",
+                "reference": "206bbe23b34081a36bfefc4de2abbc1abcd29ef4",
                 "shasum": ""
             },
             "require": {
@@ -716,13 +716,13 @@
                 "consolidation/log": "^1.1.1 || ^2.0.2",
                 "consolidation/output-formatters": "^4.1.2",
                 "consolidation/self-update": "^2.0",
-                "league/container": "^3.3.1",
+                "league/container": "^3.3.1 || ^4.0",
                 "php": ">=7.1.3",
                 "symfony/console": "^4.4.19 || ^5 || ^6",
                 "symfony/event-dispatcher": "^4.4.19 || ^5 || ^6",
                 "symfony/filesystem": "^4.4.9 || ^5 || ^6",
                 "symfony/finder": "^4.4.9 || ^5 || ^6",
-                "symfony/process": "^4.4.9 || ^5",
+                "symfony/process": "^4.4.9 || ^5 || ^6",
                 "symfony/yaml": "^4.4 || ^5 || ^6"
             },
             "conflict": {
@@ -742,7 +742,7 @@
                 "pear/archive_tar": "Allows tar archives to be created and extracted in taskPack and taskExtract, respectively.",
                 "totten/lurkerlite": "For monitoring filesystem changes in taskWatch"
             },
-            "time": "2021-12-31T01:01:31+00:00",
+            "time": "2022-02-21T17:19:14+00:00",
             "bin": [
                 "robo"
             ],
@@ -793,7 +793,7 @@
             "description": "Modern task runner",
             "support": {
                 "issues": "https://github.com/consolidation/robo/issues",
-                "source": "https://github.com/consolidation/robo/tree/3.0.7"
+                "source": "https://github.com/consolidation/robo/tree/3.0.10"
             },
             "install-path": "../consolidation/robo"
         },
@@ -857,23 +857,23 @@
         },
         {
             "name": "consolidation/site-alias",
-            "version": "3.1.3",
-            "version_normalized": "3.1.3.0",
+            "version": "3.1.5",
+            "version_normalized": "3.1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/site-alias.git",
-                "reference": "e2784362e98f315c996fb2b9ed80a9118a0ba8b7"
+                "reference": "ef2eb7d37e59b3d837b4556d4d8070cb345b378c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/site-alias/zipball/e2784362e98f315c996fb2b9ed80a9118a0ba8b7",
-                "reference": "e2784362e98f315c996fb2b9ed80a9118a0ba8b7",
+                "url": "https://api.github.com/repos/consolidation/site-alias/zipball/ef2eb7d37e59b3d837b4556d4d8070cb345b378c",
+                "reference": "ef2eb7d37e59b3d837b4556d4d8070cb345b378c",
                 "shasum": ""
             },
             "require": {
-                "consolidation/config": "^1.2.1|^2",
+                "consolidation/config": "^1.2.1 || ^2",
                 "php": ">=5.5.0",
-                "symfony/finder": "~2.3|^3|^4.4|^5"
+                "symfony/finder": "~2.3 || ^3 || ^4.4 || ^5 || ^6"
             },
             "require-dev": {
                 "php-coveralls/php-coveralls": "^2.4.2",
@@ -882,7 +882,7 @@
                 "symfony/var-dumper": "^4",
                 "yoast/phpunit-polyfills": "^0.2.0"
             },
-            "time": "2022-01-03T19:00:28+00:00",
+            "time": "2022-02-23T23:59:18+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -912,23 +912,23 @@
             "description": "Manage alias records for local and remote sites.",
             "support": {
                 "issues": "https://github.com/consolidation/site-alias/issues",
-                "source": "https://github.com/consolidation/site-alias/tree/3.1.3"
+                "source": "https://github.com/consolidation/site-alias/tree/3.1.5"
             },
             "install-path": "../consolidation/site-alias"
         },
         {
             "name": "consolidation/site-process",
-            "version": "4.1.3",
-            "version_normalized": "4.1.3.0",
+            "version": "4.2.0",
+            "version_normalized": "4.2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/site-process.git",
-                "reference": "ca41dc82b280bccdf1b231d5599c7d506fba5c04"
+                "reference": "9ef08d471573d6a56405b06ef6830dd70c883072"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/site-process/zipball/ca41dc82b280bccdf1b231d5599c7d506fba5c04",
-                "reference": "ca41dc82b280bccdf1b231d5599c7d506fba5c04",
+                "url": "https://api.github.com/repos/consolidation/site-process/zipball/9ef08d471573d6a56405b06ef6830dd70c883072",
+                "reference": "9ef08d471573d6a56405b06ef6830dd70c883072",
                 "shasum": ""
             },
             "require": {
@@ -943,7 +943,7 @@
                 "squizlabs/php_codesniffer": "^3",
                 "yoast/phpunit-polyfills": "^0.2.0"
             },
-            "time": "2022-01-18T23:04:54+00:00",
+            "time": "2022-02-19T04:09:55+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -973,7 +973,7 @@
             "description": "A thin wrapper around the Symfony Process Component that allows applications to use the Site Alias library to specify the target for a remote call.",
             "support": {
                 "issues": "https://github.com/consolidation/site-process/issues",
-                "source": "https://github.com/consolidation/site-process/tree/4.1.3"
+                "source": "https://github.com/consolidation/site-process/tree/4.2.0"
             },
             "install-path": "../consolidation/site-process"
         },
@@ -1359,17 +1359,17 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.3.5",
-            "version_normalized": "9.3.5.0",
+            "version": "9.3.6",
+            "version_normalized": "9.3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "089417f9f1d557f9323c190c8de139eba613e465"
+                "reference": "2c0c89a0f49fab56f8322721888cdfa28fe98c3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/089417f9f1d557f9323c190c8de139eba613e465",
-                "reference": "089417f9f1d557f9323c190c8de139eba613e465",
+                "url": "https://api.github.com/repos/drupal/core/zipball/2c0c89a0f49fab56f8322721888cdfa28fe98c3a",
+                "reference": "2c0c89a0f49fab56f8322721888cdfa28fe98c3a",
                 "shasum": ""
             },
             "require": {
@@ -1536,7 +1536,7 @@
                 "drupal/workflows": "self.version",
                 "drupal/workspaces": "self.version"
             },
-            "time": "2022-02-04T20:00:20+00:00",
+            "time": "2022-02-15T20:26:28+00:00",
             "type": "drupal-core",
             "extra": {
                 "drupal-scaffold": {
@@ -1613,14 +1613,14 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.3.5"
+                "source": "https://github.com/drupal/core/tree/9.3.6"
             },
             "install-path": "../../core"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.3.5",
-            "version_normalized": "9.3.5.0",
+            "version": "9.3.6",
+            "version_normalized": "9.3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -1666,14 +1666,14 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.3.5"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.3.6"
             },
             "install-path": "../drupal/core-composer-scaffold"
         },
         {
             "name": "drupal/core-project-message",
-            "version": "9.3.5",
-            "version_normalized": "9.3.5.0",
+            "version": "9.3.6",
+            "version_normalized": "9.3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -1716,17 +1716,17 @@
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.3.5",
-            "version_normalized": "9.3.5.0",
+            "version": "9.3.6",
+            "version_normalized": "9.3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "2ff50e75ad0387f7a14131b0a151b73760c43c63"
+                "reference": "1b24d3f87b55510f85d8495a63e141e601e32a88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/2ff50e75ad0387f7a14131b0a151b73760c43c63",
-                "reference": "2ff50e75ad0387f7a14131b0a151b73760c43c63",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/1b24d3f87b55510f85d8495a63e141e601e32a88",
+                "reference": "1b24d3f87b55510f85d8495a63e141e601e32a88",
                 "shasum": ""
             },
             "require": {
@@ -1735,7 +1735,7 @@
                 "doctrine/annotations": "1.13.2",
                 "doctrine/lexer": "1.2.1",
                 "doctrine/reflection": "1.2.2",
-                "drupal/core": "9.3.5",
+                "drupal/core": "9.3.6",
                 "egulias/email-validator": "3.1.2",
                 "guzzlehttp/guzzle": "6.5.5",
                 "guzzlehttp/promises": "1.5.1",
@@ -1790,7 +1790,7 @@
             "conflict": {
                 "webflo/drupal-core-strict": "*"
             },
-            "time": "2022-02-04T20:00:20+00:00",
+            "time": "2022-02-15T20:26:28+00:00",
             "type": "metapackage",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1798,14 +1798,14 @@
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/9.3.5"
+                "source": "https://github.com/drupal/core-recommended/tree/9.3.6"
             },
             "install-path": null
         },
         {
             "name": "drupal/core-vendor-hardening",
-            "version": "9.3.5",
-            "version_normalized": "9.3.5.0",
+            "version": "9.3.6",
+            "version_normalized": "9.3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-vendor-hardening.git",
@@ -1842,7 +1842,7 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-vendor-hardening/tree/9.3.5"
+                "source": "https://github.com/drupal/core-vendor-hardening/tree/9.3.6"
             },
             "install-path": "../drupal/core-vendor-hardening"
         },
@@ -2661,34 +2661,34 @@
         },
         {
             "name": "enlightn/security-checker",
-            "version": "v1.9.0",
-            "version_normalized": "1.9.0.0",
+            "version": "v1.10.0",
+            "version_normalized": "1.10.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/enlightn/security-checker.git",
-                "reference": "dc5bce653fa4d9c792e9dcffa728c0642847c1e1"
+                "reference": "196bacc76e7a72a63d0e1220926dbb190272db97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enlightn/security-checker/zipball/dc5bce653fa4d9c792e9dcffa728c0642847c1e1",
-                "reference": "dc5bce653fa4d9c792e9dcffa728c0642847c1e1",
+                "url": "https://api.github.com/repos/enlightn/security-checker/zipball/196bacc76e7a72a63d0e1220926dbb190272db97",
+                "reference": "196bacc76e7a72a63d0e1220926dbb190272db97",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "guzzlehttp/guzzle": "^6.3|^7.0",
                 "php": ">=5.6",
-                "symfony/console": "^3.4|^4|^5",
-                "symfony/finder": "^3|^4|^5",
-                "symfony/process": "^3.4|^4|^5",
-                "symfony/yaml": "^3.4|^4|^5"
+                "symfony/console": "^3.4|^4|^5|^6",
+                "symfony/finder": "^3|^4|^5|^6",
+                "symfony/process": "^3.4|^4|^5|^6",
+                "symfony/yaml": "^3.4|^4|^5|^6"
             },
             "require-dev": {
                 "ext-zip": "*",
-                "friendsofphp/php-cs-fixer": "^2.18",
+                "friendsofphp/php-cs-fixer": "^2.18|^3.0",
                 "phpunit/phpunit": "^5.5|^6|^7|^8|^9"
             },
-            "time": "2021-05-06T09:03:35+00:00",
+            "time": "2022-02-21T22:40:16+00:00",
             "bin": [
                 "security-checker"
             ],
@@ -2724,7 +2724,7 @@
             ],
             "support": {
                 "issues": "https://github.com/enlightn/security-checker/issues",
-                "source": "https://github.com/enlightn/security-checker/tree/v1.9.0"
+                "source": "https://github.com/enlightn/security-checker/tree/v1.10.0"
             },
             "install-path": "../enlightn/security-checker"
         },
@@ -4505,17 +4505,17 @@
         },
         {
             "name": "phpoffice/phpspreadsheet",
-            "version": "1.21.0",
-            "version_normalized": "1.21.0.0",
+            "version": "1.22.0",
+            "version_normalized": "1.22.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPOffice/PhpSpreadsheet.git",
-                "reference": "1a359d2ccbb89c05f5dffb32711a95f4afc67964"
+                "reference": "3a9e29b4f386a08a151a33578e80ef1747037a48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/1a359d2ccbb89c05f5dffb32711a95f4afc67964",
-                "reference": "1a359d2ccbb89c05f5dffb32711a95f4afc67964",
+                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/3a9e29b4f386a08a151a33578e80ef1747037a48",
+                "reference": "3a9e29b4f386a08a151a33578e80ef1747037a48",
                 "shasum": ""
             },
             "require": {
@@ -4546,7 +4546,7 @@
                 "dompdf/dompdf": "^1.0",
                 "friendsofphp/php-cs-fixer": "^3.2",
                 "jpgraph/jpgraph": "^4.0",
-                "mpdf/mpdf": "^8.0",
+                "mpdf/mpdf": "8.0.17",
                 "phpcompatibility/php-compatibility": "^9.3",
                 "phpstan/phpstan": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.0",
@@ -4560,7 +4560,7 @@
                 "mpdf/mpdf": "Option for rendering PDF with PDF Writer",
                 "tecnickcom/tcpdf": "Option for rendering PDF with PDF Writer (doesn't yet support PHP8)"
             },
-            "time": "2022-01-06T11:10:08+00:00",
+            "time": "2022-02-18T12:57:07+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -4606,7 +4606,7 @@
             ],
             "support": {
                 "issues": "https://github.com/PHPOffice/PhpSpreadsheet/issues",
-                "source": "https://github.com/PHPOffice/PhpSpreadsheet/tree/1.21.0"
+                "source": "https://github.com/PHPOffice/PhpSpreadsheet/tree/1.22.0"
             },
             "install-path": "../phpoffice/phpspreadsheet"
         },
@@ -5926,26 +5926,25 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v5.4.3",
-            "version_normalized": "5.4.3.0",
+            "version": "v6.0.3",
+            "version_normalized": "6.0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "0f0c4bf1840420f4aef3f32044a9dbb24682731b"
+                "reference": "6ae49c4fda17322171a2b8dc5f70bc6edbc498e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/0f0c4bf1840420f4aef3f32044a9dbb24682731b",
-                "reference": "0f0c4bf1840420f4aef3f32044a9dbb24682731b",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/6ae49c4fda17322171a2b8dc5f70bc6edbc498e1",
+                "reference": "6ae49c4fda17322171a2b8dc5f70bc6edbc498e1",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.5",
+                "php": ">=8.0.2",
                 "symfony/polyfill-ctype": "~1.8",
-                "symfony/polyfill-mbstring": "~1.8",
-                "symfony/polyfill-php80": "^1.16"
+                "symfony/polyfill-mbstring": "~1.8"
             },
-            "time": "2022-01-02T09:53:40+00:00",
+            "time": "2022-01-02T09:55:41+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -5973,7 +5972,7 @@
             "description": "Provides basic utilities for the filesystem",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/filesystem/tree/v5.4.3"
+                "source": "https://github.com/symfony/filesystem/tree/v6.0.3"
             },
             "funding": [
                 {
@@ -5993,25 +5992,23 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v5.4.3",
-            "version_normalized": "5.4.3.0",
+            "version": "v6.0.3",
+            "version_normalized": "6.0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "231313534dded84c7ecaa79d14bc5da4ccb69b7d"
+                "reference": "8661b74dbabc23223f38c9b99d3f8ade71170430"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/231313534dded84c7ecaa79d14bc5da4ccb69b7d",
-                "reference": "231313534dded84c7ecaa79d14bc5da4ccb69b7d",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/8661b74dbabc23223f38c9b99d3f8ade71170430",
+                "reference": "8661b74dbabc23223f38c9b99d3f8ade71170430",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.5",
-                "symfony/deprecation-contracts": "^2.1|^3",
-                "symfony/polyfill-php80": "^1.16"
+                "php": ">=8.0.2"
             },
-            "time": "2022-01-26T16:34:36+00:00",
+            "time": "2022-01-26T17:23:29+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -6039,7 +6036,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v5.4.3"
+                "source": "https://github.com/symfony/finder/tree/v6.0.3"
             },
             "funding": [
                 {
