@@ -175,7 +175,7 @@ a.tw-action-new.tw-btn.tw-btn-primary {
   border-radius: 0;
   color: white;
   position: absolute;
-  top:38px !important;
+  top:50px !important;
   right: 2%;
   font-size: 12px;
   z-index: 9999999999;
@@ -913,7 +913,7 @@ form#user-login-form:after {
   span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer {
     position: absolute;
     margin: auto;
-    top: -112px;
+    top: -100px;
     right: 8%;
     border: solid #9cd2e7 1px !important;
     padding: 0px;
@@ -3061,7 +3061,7 @@ div#block-views-block-listelanguage-block-1 {
   top: 100px;
 }
 
-nav#block-digitalcmsmenu ul li:nth-child(4){
+nav#block-digitalcmsmenu ul li:nth-child(3){
   cursor: pointer;
 }
  
@@ -3092,7 +3092,7 @@ nav#block-digitalcmsmenu ul li:nth-child(4){
 
   .show-message {
     background: white;
-    margin: 0% -3% !important;
+    margin:2% -3% !important;
     width: 29.5vw !important;
 
 }
@@ -3113,6 +3113,15 @@ article.node {
 .dialog-off-canvas-main-canvas .add-translation {
   width: 19vw !important;
 }
+
+.pstStatusModeration {
+  position: absolute !important;
+  left: 131px !important;
+  top: -132px !important;
+  border-radius: 0px !important;
+  padding: 2px 23px !important;
+}
+
 
 }
 
