@@ -30,12 +30,18 @@ aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
 }
 
 .tw-shadow.tw-text-right.tw-px-8 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: right !important;
   line-height: 3em;
   background: white;
   border-bottom: solid 0.5px #ffffff;
   -webkit-box-shadow: 0 2px 4px -3px #cfc8c8;
           box-shadow: 0 2px 4px -3px #cfc8c8;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .md\:tw-flex-1.tw-p-4.block-contenu {
@@ -182,7 +188,7 @@ a.tw-action-new.tw-btn.tw-btn-primary {
   border-radius: 0;
   color: white;
   position: absolute;
-  top: 49px !important;
+  top: 38px !important;
   right: 2%;
   font-size: 12px;
   z-index: 9999999999;
@@ -1033,8 +1039,8 @@ form#user-login-form:after {
 .dialog-off-canvas-main-canvas span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer {
   position: absolute;
   margin: auto;
-  top: -101px;
-  right: 10%;
+  top: -112px;
+  right: 8%;
   border: solid #9cd2e7 1px !important;
   padding: 0px;
   color: #ffffff !important;
@@ -2147,8 +2153,7 @@ input#edit-pass::placeholder {
 }
 
 .tw-container {
-  max-width: 100% !important;
-  padding: 0px 1.1% !important;
+  max-width: 100vw !important;
 }
 
 div#edit-field-field-moduleinmessage-wrapper {
@@ -2307,6 +2312,7 @@ p.commented-body {
   margin: auto 12px;
   font-weight: 700;
   text-transform: capitalize;
+  font-size: 14px;
 }
 
 p.has-commented {
@@ -2586,7 +2592,7 @@ form#node-content-edit-form {
   width: 45%;
   margin: 5% 1%;
   position: absolute;
-  top: 50px;
+  top: -30px;
 }
 
 .node-content-form div#edit-body-0-format,
@@ -3238,7 +3244,7 @@ section article {
   margin: 0.5em 0.4em 0.5em 0;
   cursor: pointer;
   color: white;
-  background: #5099bb;
+  background: #1491c1;
   border: solid;
   border-radius: 5px;
 }
@@ -3315,7 +3321,7 @@ input#edit-title-0-value {
 
 form#node-server-form {
   width: 30%;
-  margin: 7% 2%;
+  margin: 5.5% 2%;
   height: 330px;
 }
 
@@ -3390,7 +3396,7 @@ form#node-server-edit-form .js-form-item.form-item.js-form-type-checkbox.form-it
 
 form#node-language-form {
   width: 47%;
-  margin: 7.5% 3%;
+  margin: 6% 3%;
 }
 
 form#node-language-form div#edit-actions #edit-submit {
@@ -3406,5 +3412,57 @@ div#block-views-block-listelanguage-block-1 {
 
 nav#block-digitalcmsmenu ul li:nth-child(4) {
   cursor: pointer;
+}
+
+.new-logoutbutton {
+  padding: 0px 10px;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 1920px) {
+  .report-card {
+    height: 15vh !important;
+    width: 18vw !important;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .report-card {
+    height: 15vh !important;
+    width: 18vw !important;
+  }
+  .show-message {
+    background: white;
+    margin: 0% -3% !important;
+    width: 29.5vw !important;
+  }
+  article.node {
+    margin: 2rem;
+    background: white !important;
+    -webkit-box-shadow: 1px 1px 6px #2316161a !important;
+    box-shadow: 1px 1px 6px #2316161a !important;
+    border-radius: 5px !important;
+    padding: 15px !important;
+    width: 70% !important;
+    position: relative !important;
+    top: 8px !important;
+  }
+  .dialog-off-canvas-main-canvas .add-translation {
+    width: 19vw !important;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .dialog-off-canvas-main-canvas .report-card {
+    height: 100px !important;
+    width: 250px !important;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .dialog-off-canvas-main-canvas .report-card {
+    height: 100px !important;
+    width: 220px !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

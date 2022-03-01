@@ -141,6 +141,7 @@ jQuery("form#node-content-edit-form").ready( function(){
     var idnode = pathname[pathname.length-1];
     //alert(idnode);
   let url2 = "http://localhost/digitalcms9/en/rest/localizationList/"+idnode;
+
   fetch(url2).then((response)=>
     response.json().then((data)=>{
       //console.log(data);
