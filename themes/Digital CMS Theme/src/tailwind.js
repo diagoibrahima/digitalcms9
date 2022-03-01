@@ -22,53 +22,23 @@ jQuery("form#node-content-edit-form").ready( function(){
     })
   );
 
-
-
+  
   // Appel Url to get list of translation by split it in pieces of message
   var items2 = [];
   let url2 = "http://localhost/digitalcms9/en/rest/localizationList/605";
   fetch(url2).then((response)=>
     response.json().then((data)=>{
       //console.log(data);
-
       for(let translation of data){
-        items2.push([element,,])
-        console.log(translation.Cours);
+        
+        items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(/<h2>.*?<\/h2>/g)]);
       }
+      console.log(items2);
     })
   );
-/*
-var resultdata2  = description.match(/<h(.)>.*?<\/h\1>|<p>.*?<\/p\>/g);
 
-  var items2 = [];
 
-  resultdata.forEach(function(element) {
 
-          if(element.match(/<h1>.*?<\/h1>/g)){ 
-           // console.log(element);
-            items.push([element,,]);
-            
-          }else if(element.match(/<h2>.*?<\/h2>/g)){ 
-           // console.log(element);
-            items.push([,element,]);
-          }else if(element.match(/<p>.*?<\/p>/g)){ 
-            //var sms1 = element.replace('<p>','');
-            //var sms2 = sms1.replace('</p>','');
-            //var xxx = jQuery('<p class="messagetosend">'+sms2.match(/.{1,160}/g)+'</p>');
-            // compter le nombre de message per cours
-            count = count + element.match(/.{1,160}/g).length;
-            items.push([,,element.match(/.{1,160}/g)]);
-            //console.log(element.match(/.{1,160}/g));
-
-            //var sms = element.match(/.{1,160}/g);
-            //for(i = 0; i < sms.length; i++)
-            // {
-            //  console.log("message : " + i + sms[i]);
-            // } 
-          }
-
-  });
-*/
 
 
 
