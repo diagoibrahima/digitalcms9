@@ -433,6 +433,8 @@ input#edit-subject-0-value {
 
 form#comment-form {
   height: 300px !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 form#comment-form summary {
@@ -440,20 +442,18 @@ form#comment-form summary {
 }
 
 div#block-views-block-listcomments-block-1 {
-  margin: 17px;
+  margin: 190px 20px 0px 20px;
   background: white;
   border-radius: 5px;
   padding: 10px;
   text-align: center;
   line-height: 3;
-  width: 83%;
-  -webkit-box-shadow: 1px 1px 6px #2316161a;
-          box-shadow: 1px 1px 6px #2316161a;
+  width: 80%;
   color: #575757;
-  overflow-y: scroll;
-  height: 362px;
   -webkit-transition: 1s;
   transition: 1s;
+  height: 330px;
+  overflow-y: auto;
 }
 
 form#node-course-form,
@@ -510,7 +510,7 @@ form#comment-form textarea {
   border: 1px #98a8bd solid;
   border-radius: 0.25rem;
   width: 100%;
-  height: 110px;
+  height: 100px;
   padding: 5px;
 }
 
@@ -957,10 +957,6 @@ form#user-login-form:after {
   display: -ms-flexbox;
   display: flex;
   width: 97.5%;
-}
-
-.dialog-off-canvas-main-canvas li.comment-add {
-  display: none;
 }
 
 .dialog-off-canvas-main-canvas .add-translation {
@@ -2356,19 +2352,8 @@ p.commented-date {
 .separateur-comment {
   height: 10px;
   background: #f3f4f6;
-  width: 113%;
-  margin: 15px -13px;
-}
-
-div#block-views-block-listcomments-block-1:before {
-  content: "";
-  background: #f3f4f6;
-  position: absolute;
-  bottom: 0px;
-  height: 50px;
-  width: 94%;
-  left: 0;
-  z-index: 1;
+  width: 108%;
+  margin: 15px -9px;
 }
 
 .add-height-block-comment {
@@ -2436,10 +2421,11 @@ ul.links.inline + div {
 }
 
 .node-content form#comment-form {
-  -webkit-box-shadow: 0px 0px 0px 0px #ffffff00 !important;
-          box-shadow: 0px 0px 0px 0px #ffffff00 !important;
-  height: 150px !important;
-  width: 100%;
+  height: 183px !important;
+  width: 20%;
+  position: absolute;
+  top: 115px;
+  right: 3.8%;
 }
 
 .node-content form#comment-form label {
@@ -2533,21 +2519,9 @@ div#block-views-block-contenttotranslate-block-1 p span span span span:before {
 }
 
 article .node-content div:nth-child(2) {
-  margin: 10px 0px 50px 0px;
   font-weight: normal;
   font-size: 15px;
   position: relative;
-  padding-bottom: 30px;
-}
-
-article .node-content div:nth-child(2):before {
-  content: "";
-  background: #f3f4f6;
-  position: absolute;
-  height: 20px;
-  width: 106%;
-  top: -69px;
-  left: -19px;
 }
 
 .node-content-form input#edit-submit:disabled,
@@ -3025,13 +2999,14 @@ article .node-content h1 {
 }
 
 input#edit-submit--2 {
-  background: #1391c1 !important;
-  width: 30% !important;
-  margin-left: 0px;
-  border: solid 2px white !important;
-  border-radius: 20px !important;
+  background: #52627273 !important;
+  width: 98% !important;
+  margin-left: -12px;
+  margin-top: -10px;
+  border-radius: 5px !important;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  color: white;
 }
 
 .section-of-localisation-globale {
