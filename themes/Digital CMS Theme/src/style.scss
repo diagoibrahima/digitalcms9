@@ -2904,6 +2904,7 @@ form#node-localization-form #cke_35 {
 div#block-views-block-list-localization-block-1 .horizontal {
   width: 74% !important ;
   display: flex !important;
+  flex-wrap: wrap !important;
 }
 
 .tranfromnation-chevreon {
@@ -3096,6 +3097,19 @@ div#block-views-block-languagesmstranslation-block-1 {
   border-radius: 5px;
   padding: 20px;
 }
+
+.show-message{
+  h5 {
+    font-size: 20px;
+    color: #1491c1;
+  }
+
+  a {
+    font-size: 15px;
+}
+
+}
+
 
 
 //media query 

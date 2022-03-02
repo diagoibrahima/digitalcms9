@@ -3238,6 +3238,8 @@ div#block-views-block-list-localization-block-1 .horizontal {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+  -ms-flex-wrap: wrap !important;
+      flex-wrap: wrap !important;
 }
 
 .tranfromnation-chevreon {
@@ -3435,6 +3437,15 @@ div#block-views-block-languagesmstranslation-block-1 {
   border-style: dashed;
   border-radius: 5px;
   padding: 20px;
+}
+
+.show-message h5 {
+  font-size: 20px;
+  color: #1491c1;
+}
+
+.show-message a {
+  font-size: 15px;
 }
 
 @media screen and (min-width: 1920px) {
