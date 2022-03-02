@@ -3514,6 +3514,10 @@ h1.initial-title {
 }
 
 @media screen and (max-width: 1280px) {
+  #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-langue, #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
+    background: #2c88ff6b;
+    width: 11% !important;
+  }
   .dialog-off-canvas-main-canvas .report-card {
     height: 100px !important;
     width: 220px !important;
