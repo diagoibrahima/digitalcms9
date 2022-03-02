@@ -3528,5 +3528,8 @@ div#block-views-block-languagesmstranslation-block-1 {
     z-index: 1 !important;
     border-radius: 5px !important;
   }
+  .dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
+    min-height: 118vh !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
