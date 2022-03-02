@@ -3468,6 +3468,9 @@ h1.initial-title {
 }
 
 @media screen and (max-width: 1920px) {
+  .dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
+    min-height: 120vh;
+  }
   .report-card {
     height: 15vh !important;
     width: 18vw !important;
