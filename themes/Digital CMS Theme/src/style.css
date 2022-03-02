@@ -3426,6 +3426,17 @@ div#block-views-block-languagesmstranslation-block-1 {
   background: #9ac5954f !important;
 }
 
+.no-resultlocalisation {
+  width: 74%;
+  text-align: center;
+  background: #ff000000;
+  border: solid 2px #a5b9d0;
+  color: #a5b9d0;
+  border-style: dashed;
+  border-radius: 5px;
+  padding: 20px;
+}
+
 @media screen and (min-width: 1920px) {
   .report-card {
     height: 15vh !important;
