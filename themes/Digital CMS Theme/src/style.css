@@ -3037,17 +3037,6 @@ form#node-localization-form {
   margin: 48px 0px;
 }
 
-form#node-localization-form:before {
-  content: "";
-  background: #f3f4f6;
-  position: absolute;
-  height: 1030px;
-  width: 10px;
-  right: -10px;
-  z-index: 9;
-  top: -37px;
-}
-
 form#node-localization-form .js-form-item.form-item.js-form-type-textarea.form-item-field-localization-messagebody-0-value.js-form-item-field-localization-messagebody-0-value {
   z-index: 2;
   position: relative;
@@ -3522,6 +3511,22 @@ div#block-views-block-languagesmstranslation-block-1 {
     margin: auto !important;
     margin-top: 0px  !important;
     margin-bottom: 90px  !important;
+  }
+  div#block-views-block-contenttotranslate-block-1 {
+    width: 47%  !important;
+    margin: 46px 2% 140px  !important;
+    padding: 15px  !important;
+  }
+  form#node-localization-form div#edit-actions:after {
+    content: "";
+    position: absolute !important;
+    background: white !important;
+    height: 530px !important;
+    width: 106.5% !important;
+    left: -14px !important;
+    bottom: 0px !important;
+    z-index: 1 !important;
+    border-radius: 5px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
