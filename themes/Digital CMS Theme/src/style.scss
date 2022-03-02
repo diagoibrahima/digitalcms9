@@ -3227,7 +3227,9 @@ div#block-views-block-listcomments-block-1 {
 @media screen and (max-width: 1280px)
 {
 
-
+  .node-content-form, form#node-content-edit-form {
+    top: 20px !important;
+}
 
 
 
