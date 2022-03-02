@@ -3468,6 +3468,13 @@ h1.initial-title {
 }
 
 @media screen and (max-width: 1920px) {
+  .node-content form#comment-form {
+    height: 183px !important;
+    width: 29% !important;
+    position: absolute !important;
+    top: -250px !important;
+    right: -34.5% !important;
+  }
   .dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
     min-height: 120vh;
   }
