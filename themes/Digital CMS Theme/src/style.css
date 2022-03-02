@@ -3498,6 +3498,9 @@ h1.initial-title {
     border-radius: 0px !important;
     padding: 2px 23px !important;
   }
+  #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
+    left: 11% !important;
+  }
 }
 
 @media screen and (max-width: 1440px) {
