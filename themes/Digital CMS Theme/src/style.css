@@ -3501,6 +3501,9 @@ h1.initial-title {
   #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
     left: 11% !important;
   }
+  .separateur-comment {
+    width: 106% !important;
+  }
 }
 
 @media screen and (max-width: 1440px) {
@@ -3514,9 +3517,6 @@ h1.initial-title {
 }
 
 @media screen and (max-width: 1280px) {
-  .separateur-comment {
-    width: 106% !important;
-  }
   #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-langue, #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
     background: #2c88ff6b;
     width: 11% !important;
