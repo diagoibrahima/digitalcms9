@@ -3418,7 +3418,6 @@ div#block-views-block-languagesmstranslation-block-1 {
   margin: 13px 0px;
   color: #2c88ff;
   padding: 2px 9px;
-  width: auto !important;
 }
 
 #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
@@ -3448,6 +3447,11 @@ div#block-views-block-languagesmstranslation-block-1 {
 
 .show-message a {
   font-size: 15px;
+}
+
+h1.initial-title {
+  font-size: 20px;
+  color: #1491c1;
 }
 
 @media screen and (min-width: 1920px) {
@@ -3554,6 +3558,14 @@ div#block-views-block-languagesmstranslation-block-1 {
   }
   .dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
     min-height: 118vh !important;
+  }
+  form#node-server-form div#edit-actions #edit-submit {
+    margin-left: 59%;
+  }
+  .dialog-off-canvas-main-canvas .activitylogMessage {
+    margin-top: 12px !important;
+    width: 80% !important;
+    margin: 12px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
