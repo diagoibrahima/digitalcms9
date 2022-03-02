@@ -3139,6 +3139,8 @@ h1.initial-title {
  
 
 }
+// for extend screen
+
 @media screen and (max-width: 1920px)
 {
   .report-card {
@@ -3187,7 +3189,7 @@ article.node {
 
 
 }
-
+//for mac pac
 
 @media screen and (max-width: 1440px)
 {
@@ -3202,9 +3204,19 @@ div#block-views-block-listcomments-block-1 {
 }
 
 }
+// for unicef pc
 
 @media screen and (max-width: 1280px)
 {
+
+
+  #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-langue, #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
+    background: #2c88ff6b;
+    width: 11% !important;
+   
+}
+
+
   .dialog-off-canvas-main-canvas .report-card {
     height: 100px !important;
     width: 220px !important;
