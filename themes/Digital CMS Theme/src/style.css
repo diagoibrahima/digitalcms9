@@ -3492,5 +3492,10 @@ div#block-views-block-languagesmstranslation-block-1 {
     height: 100px !important;
     width: 220px !important;
   }
+  .new-logoutbutton {
+    padding: 0px 10px;
+    font-size: 14px;
+    margin-right: -2% !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
