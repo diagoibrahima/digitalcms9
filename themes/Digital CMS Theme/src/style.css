@@ -3504,6 +3504,12 @@ h1.initial-title {
   .separateur-comment {
     width: 106% !important;
   }
+  .node-content-form, form#node-content-edit-form {
+    top: 0px !important;
+  }
+  .live-preveiw-section {
+    margin: 2% 48% !important;
+  }
 }
 
 @media screen and (max-width: 1440px) {
@@ -3588,6 +3594,9 @@ h1.initial-title {
   }
   form#node-language-form div#edit-actions #edit-submit {
     margin-left: 74% !important;
+  }
+  .separateur-comment {
+    width: 111% !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
