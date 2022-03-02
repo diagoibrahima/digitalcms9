@@ -153,6 +153,7 @@ jQuery("form#node-content-edit-form").ready( function(){
         }
         window.localStorage.setItem('filename', translation.Cours+"_translation");
       }
+      console.log(items2);
       var filename2 = window.localStorage.getItem('filename');
       const xls = new XlsExport(items2, "monexcel");
       xls.exportToXLS(filename2);
