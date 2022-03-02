@@ -3497,5 +3497,13 @@ div#block-views-block-languagesmstranslation-block-1 {
     font-size: 14px;
     margin-right: -2% !important;
   }
+  .tw-p-3 {
+    padding: 0.75rem !important;
+    text-align: center !important;
+    width: 92% !important;
+    margin: -20px 0px !important;
+    -webkit-box-shadow: 1px 1px 6px #2316161a !important;
+    box-shadow: 1px 1px 6px #2316161a !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
