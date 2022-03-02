@@ -772,15 +772,17 @@ for(i = 0; i < resultdata.length; i++)
   
     if(channel=="SMS"){
       jQuery('#cke_19,#cke_22,#cke_29,#cke_35').removeClass('showmenuckeditorOnSms');
-     }else if(channel=="Whatsapp"){
+
+     }else if(channel=="Whatsapp")
+     {
       jQuery('#cke_19,#cke_22,#cke_29,#cke_35').addClass('showmenuckeditorOnSms');
      }else if(channel=="Moodle"){
+      jQuery('#cke_19,#cke_22,#cke_29,#cke_35').addClass('shrowmenuckeditorOnSms');
+     }else if(channel=="Telegram"){
       jQuery('#cke_19,#cke_22,#cke_29,#cke_35').addClass('showmenuckeditorOnSms');
-     }else if(str=="Telegram"){
+     }else if(channel=="Messenger"){
       jQuery('#cke_19,#cke_22,#cke_29,#cke_35').addClass('showmenuckeditorOnSms');
-     }else if(str=="Messenger"){
-      jQuery('#cke_19,#cke_22,#cke_29,#cke_35').addClass('showmenuckeditorOnSms');
-     }else if(str=="IOGT"){
+     }else if(channel=="IOGT"){
       jQuery('#cke_19,#cke_22,#cke_29,#cke_35').addClass('showmenuckeditorOnSms');
      }else{
    //  console.log(str);
