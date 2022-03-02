@@ -3518,6 +3518,9 @@ h1.initial-title {
     background: #2c88ff6b;
     width: 11% !important;
   }
+  #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
+    left: 14% !important;
+  }
   .dialog-off-canvas-main-canvas .report-card {
     height: 100px !important;
     width: 220px !important;
