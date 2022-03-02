@@ -3508,7 +3508,7 @@ h1.initial-title {
     width: 106% !important;
   }
   .node-content-form, form#node-content-edit-form {
-    top: 0px !important;
+    top: 50px !important;
   }
   .live-preveiw-section {
     margin: 2% 48% !important;
