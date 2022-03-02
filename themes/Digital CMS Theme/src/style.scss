@@ -809,6 +809,7 @@ article.node:before {
     padding: 15px 30px;
     color: white;
     margin: 0px -220px;
+    border-radius:5px !important;
   }
 
   div#edit-actions {
@@ -835,7 +836,8 @@ article.node:before {
   }
 
   .activitylogMessage {
-    margin-top: 22px;
+    margin-top:12px;
+    width:80%;
   }
 
   /*
@@ -1403,6 +1405,7 @@ form#content-moderation-entity-moderation-form {
 
 p.tw-font-semibold {
   color: #575757;
+  padding: 12px;
 }
 
 .report-card:nth-child(1) {
@@ -3091,6 +3094,9 @@ div#block-views-block-languagesmstranslation-block-1 {
 }
 
 }
+
+
+
 
 
 //media query 

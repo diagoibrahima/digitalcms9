@@ -947,6 +947,7 @@ form#user-login-form:after {
   padding: 15px 30px;
   color: white;
   margin: 0px -220px;
+  border-radius: 5px !important;
 }
 
 .dialog-off-canvas-main-canvas div#edit-actions {
@@ -972,7 +973,8 @@ form#user-login-form:after {
 }
 
 .dialog-off-canvas-main-canvas .activitylogMessage {
-  margin-top: 22px;
+  margin-top: 12px;
+  width: 80%;
 }
 
 .dialog-off-canvas-main-canvas nav#block-logout ul {
@@ -1534,6 +1536,7 @@ form#content-moderation-entity-moderation-form .entity-moderation-form input[typ
 
 p.tw-font-semibold {
   color: #575757;
+  padding: 12px;
 }
 
 .report-card:nth-child(1) {
