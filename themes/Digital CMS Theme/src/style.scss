@@ -809,6 +809,7 @@ article.node:before {
     padding: 15px 30px;
     color: white;
     margin: 0px -220px;
+    border-radius:5px !important;
   }
 
   div#edit-actions {
@@ -835,7 +836,8 @@ article.node:before {
   }
 
   .activitylogMessage {
-    margin-top: 22px;
+    margin-top:12px;
+    width:80%;
   }
 
   /*
@@ -1403,6 +1405,7 @@ form#content-moderation-entity-moderation-form {
 
 p.tw-font-semibold {
   color: #575757;
+  padding: 12px;
 }
 
 .report-card:nth-child(1) {
@@ -2738,16 +2741,7 @@ form#node-localization-form {
   height: 51%;
   margin: 48px 0px;
 
-  &:before {
-    content: "";
-    background: #f3f4f6;
-    position: absolute;
-    height: 1030px;
-    width: 10px;
-    right: -10px;
-    z-index: 9;
-    top: -37px;
-  }
+  
 
   .js-form-item.form-item.js-form-type-textarea.form-item-field-localization-messagebody-0-value.js-form-item-field-localization-messagebody-0-value {
     z-index: 2;
@@ -2910,6 +2904,7 @@ form#node-localization-form #cke_35 {
 div#block-views-block-list-localization-block-1 .horizontal {
   width: 74% !important ;
   display: flex !important;
+  flex-wrap: wrap !important;
 }
 
 .tranfromnation-chevreon {
@@ -3080,6 +3075,7 @@ div#block-views-block-languagesmstranslation-block-1 {
   margin: 13px 0px;
   color: #2c88ff;
   padding: 2px 9px;
+  width: auto !important;
 }
 
 .views-field.views-field-field-localization-channel {
@@ -3088,9 +3084,34 @@ div#block-views-block-languagesmstranslation-block-1 {
   left: 94px;
   color: #9ac595 !important;
   background: #9ac5954f !important;
+  width: auto;
 }
 
 }
+
+.no-resultlocalisation {
+  width: 74%;
+  text-align: center;
+  background: #ff000000;
+  border: solid 2px #a5b9d0;
+  color: #a5b9d0;
+  border-style: dashed;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.show-message{
+  h5 {
+    font-size: 20px;
+    color: #1491c1;
+  }
+
+  a {
+    font-size: 15px;
+}
+
+}
+
 
 
 //media query 
@@ -3168,6 +3189,68 @@ div#block-views-block-listcomments-block-1 {
   .dialog-off-canvas-main-canvas .report-card {
     height: 100px !important;
     width: 220px !important;
+}
+
+.new-logoutbutton {
+  padding: 0px 10px;
+  font-size: 14px;
+  margin-right: -2% !important;
+}
+
+
+.tw-p-3 {
+  padding: 0.75rem !important;
+  text-align: center !important;
+  width: 92% !important;
+  margin: -20px 0px !important;
+  -webkit-box-shadow: 1px 1px 6px #2316161a !important;
+  box-shadow: 1px 1px 6px #2316161a !important;
+}
+
+.show-message {
+  background: white;
+  margin: 2% 2% !important;
+  width: 26vw !important;
+}
+
+
+.dialog-off-canvas-main-canvas .add-translation {
+
+  width: 18vw !important;
+  right: 2% !important;
+  margin: 43px 5px !important;
+  position: relative  !important;
+  white-space: nowrap !important;
+}
+
+
+div#block-views-block-list-localization-block-1 {
+  width: 95%  !important;
+  margin: auto !important;
+  margin-top: 0px  !important;
+  margin-bottom: 90px  !important;
+}
+
+
+div#block-views-block-contenttotranslate-block-1 {
+  width: 47%  !important;
+  margin: 46px 2% 190px  !important;
+  padding: 15px  !important;
+}
+
+form#node-localization-form div#edit-actions:after {
+  content: "";
+  position: absolute !important;
+  background: white !important;
+  height: 530px !important;
+  width: 106.5% !important;
+  left: -14px !important;
+  bottom: 0px !important;
+  z-index: 1 !important;
+  border-radius: 5px !important;
+}
+.dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
+  min-height: 118vh !important;
 }
 
 }
