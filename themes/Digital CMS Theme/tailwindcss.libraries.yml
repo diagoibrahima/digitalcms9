@@ -6,7 +6,6 @@ global-styling:
       src/style.css: {}
   js:
     src/tailwind.js: {}
-    src/xls-export.js: {}
     https://cdn.datatables.net/t/bs/jszip-2.5.0: { type: external, minified: true }
 
   dependencies:

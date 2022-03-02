@@ -910,10 +910,7 @@ form#user-login-form:after {
 }
 
 .dialog-off-canvas-main-canvas .node-content section h2 {
-  position: relative;
-  font-size: 25px;
-  font-weight: 100;
-  margin: 0px 0px 0px 22px;
+  display: none !important;
 }
 
 .dialog-off-canvas-main-canvas .node-content section h2:before {
@@ -2417,7 +2414,9 @@ ul.links.inline + div {
 
 */
 .node-content form#comment-form div#edit-actions #edit-submit {
-  margin-left: 84%;
+  width: 99% !important;
+  margin: -10px -16px  !important;
+  background: #52627273 !important;
 }
 
 .node-content form#comment-form {
@@ -3394,6 +3393,47 @@ nav#block-digitalcmsmenu ul li:nth-child(3) {
   font-size: 14px;
 }
 
+div#block-views-block-languagesmstranslation-block-1 {
+  width: 70%;
+  margin: -15px 2rem;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 6px #2316161a !important;
+          box-shadow: 1px 1px 6px #2316161a !important;
+}
+
+#block-views-block-languagesmstranslation-block-1 {
+  position: relative !important;
+}
+
+#block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-titre-content {
+  font-size: 20px;
+  color: #1391c1;
+}
+
+#block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-descriptino-content {
+  font-size: 15px;
+}
+
+#block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-langue, #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
+  background: #2c88ff6b;
+  width: 9%;
+  text-align: center;
+  border-radius: 12px;
+  margin: 13px 0px;
+  color: #2c88ff;
+  padding: 2px 9px;
+}
+
+#block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
+  position: absolute;
+  bottom: 10px;
+  left: 94px;
+  color: #9ac595 !important;
+  background: #9ac5954f !important;
+}
+
 @media screen and (min-width: 1920px) {
   .report-card {
     height: 15vh !important;
@@ -3438,6 +3478,9 @@ nav#block-digitalcmsmenu ul li:nth-child(3) {
   .dialog-off-canvas-main-canvas .report-card {
     height: 100px !important;
     width: 250px !important;
+  }
+  div#block-views-block-listcomments-block-1 {
+    margin: 190px 20px 0px 14px !important;
   }
 }
 
