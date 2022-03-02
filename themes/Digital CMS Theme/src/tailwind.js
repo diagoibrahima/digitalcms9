@@ -128,7 +128,6 @@ jQuery("form#node-content-edit-form").ready( function(){
     for(i=0; i<p.length; i++){
       var sms = sms+" "+p[i];
     }
-
     return sms.replace(regex, "").match(/.{1,160}/g);
   }
   
