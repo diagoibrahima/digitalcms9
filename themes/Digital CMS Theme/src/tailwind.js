@@ -95,6 +95,9 @@ class XlsExport {
   }
 }
 
+var hostname = window.location.hostname;
+var protocol = window.location.protocol;
+
 //export default XlsExport; // comment this line to babelize
 
 jQuery("form#node-content-edit-form").ready( function(){
@@ -105,9 +108,12 @@ jQuery("form#node-content-edit-form").ready( function(){
   });
 
 
+
+
 // Appell API to get the url of the translation Server
 
-  let url = "http://localhost/digitalcms9/serverconf";
+  let url = protocol+"//"+hostname+"/digitalcms9/serverconf";
+  console.log(url);
   fetch(url).then((response)=>
     response.json().then((data)=>{
       console.log(data);
@@ -128,7 +134,6 @@ jQuery("form#node-content-edit-form").ready( function(){
     for(i=0; i<p.length; i++){
       var sms = sms+" "+p[i];
     }
-
     return sms.replace(regex, "").match(/.{1,160}/g);
   }
   
@@ -139,8 +144,13 @@ jQuery("form#node-content-edit-form").ready( function(){
     var items2 = [];
     var pathname = window.location.pathname.split("/");
     var idnode = pathname[pathname.length-1];
+    //var hostname = window.location.hostname;
+    //var protocol = window.location.protocol;
+    
+    
     //alert(idnode);
-  let url2 = "http://localhost/digitalcms9/en/rest/localizationList/"+idnode;
+  let url2 = protocol+"//"+hostname+"/digitalcms9/en/rest/localizationList/"+idnode;  
+  console.log(url2);
 
   fetch(url2).then((response)=>
     response.json().then((data)=>{
@@ -149,7 +159,7 @@ jQuery("form#node-content-edit-form").ready( function(){
         var regex = /(<([^>]+)>)/ig
         var smssplit = getSMS(translation.Translation);
         for(i=0; i<smssplit.length; i++){
-          items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(/<h1>.*?<\/h1>/g)[0].replace(regex, ""),translation.Translation.match(/<h2>.*?<\/h2>/g)[0].replace(regex, ""),smssplit[i]]);
+          items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(/<h1>.*?<\/h1>/g)[0].replace(regex, ""),,smssplit[i]]);
         }
         window.localStorage.setItem('filename', translation.Cours+"_translation");
       }
@@ -358,6 +368,8 @@ document.getElementById('edit-field-localization-langue').addEventListener('chan
 
 
 jQuery(document).ready(function () {
+
+jQuery('form').attr('autocomplete', 'off');
 
   jQuery('form#comment-form textarea ').attr('placeholder', 'Type a comment...✍️');
   jQuery('li.comment-add').remove();

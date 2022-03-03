@@ -3656,4 +3656,12 @@ h1.initial-title {
     width: 111% !important;
   }
 }
+
+h6.country-of-userlog {
+  display: none;
+}
+
+.js-form-item.form-item.js-form-type-select.form-item-field-usercontent.js-form-item-field-usercontent {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */
