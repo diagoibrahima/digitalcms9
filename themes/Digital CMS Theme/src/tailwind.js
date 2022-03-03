@@ -107,6 +107,10 @@ jQuery("form#node-content-edit-form").ready( function(){
 
   });
 
+jQuery('#buttonstatusserver').click(function () {
+    console.log("bonjour button");
+    jQuery("#block-views-block-listserver-block-1 views-field views-field-field-etat").val("On");
+});
 
 
 
@@ -368,9 +372,15 @@ document.getElementById('edit-field-localization-langue').addEventListener('chan
 
 
 jQuery(document).ready(function () {
+<<<<<<< HEAD
   var payspardefaut = jQuery("h6.country-of-userlog").text();
   jQuery('select option:contains('+payspardefaut+')').prop('selected',true); 
   jQuery('form').attr('autocomplete', 'off');
+=======
+
+  jQuery('form').attr('autocomplete', 'off');
+
+>>>>>>> 71867fc6feb2dea7eb79e31f81cf04e6b4636e03
   jQuery('form#comment-form textarea ').attr('placeholder', 'Type a comment...✍️');
   jQuery('li.comment-add').remove();
   jQuery('nav#block-digitalcmsmenu ul li:nth-child(3) ul').hide();
@@ -395,14 +405,13 @@ jQuery(document).ready(function () {
  //console.log(divContentedite);
 
   //on change input title   & description
-   
+
 
   jQuery('nav#block-digitalcmsmenu ul li:nth-child(3)').click(function(){
     jQuery('nav#block-digitalcmsmenu ul li:nth-child(3) ul').toggle(1000);
   }
   );
 
-   
     jQuery(" textarea#edit-field-descriptioncontent-0-value ").ready( function () {
       // jQuery('.DescriptioncontentValue').remove();
       DescriptioncontentValue = jQuery(this).val();
