@@ -108,6 +108,8 @@ jQuery("form#node-content-edit-form").ready( function(){
   });
 
 
+
+
 // Appell API to get the url of the translation Server
 
   let url = protocol+"//"+hostname+"/digitalcms9/serverconf";
@@ -366,6 +368,8 @@ document.getElementById('edit-field-localization-langue').addEventListener('chan
 
 
 jQuery(document).ready(function () {
+
+jQuery('form').attr('autocomplete', 'off');
 
   jQuery('form#comment-form textarea ').attr('placeholder', 'Type a comment...✍️');
   jQuery('li.comment-add').remove();
