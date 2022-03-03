@@ -123,7 +123,8 @@ jQuery('#buttonstatusserver').click(function () {
       console.log(data);
       for(let conf of data){
         if(conf.state==1){
-          var urlserver ="http://"+conf.ipadress +":"+conf.port+"/translate";
+          var urlserver = conf.ipadress +":"+conf.port+"/translate";
+          console.log(urlserver);
           //document.querySelector("#servertt").innerHTML = urlserver;
           window.localStorage.setItem('serverul', urlserver);
         }
