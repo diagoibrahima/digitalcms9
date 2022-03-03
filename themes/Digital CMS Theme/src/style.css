@@ -3486,7 +3486,7 @@ h1.initial-title {
   }
   .node-content form#comment-form {
     height: 183px !important;
-    width: 33% !important;
+    width: 33.5% !important;
     position: absolute !important;
     top: -250px !important;
     right: -37% !important;
@@ -3549,6 +3549,27 @@ h1.initial-title {
 }
 
 @media screen and (max-width: 1280px) {
+  .dialog-off-canvas-main-canvas .activitylogMessage {
+    margin-top: 12px !important;
+    width: 89% !important;
+    margin: 12px 6px !important;
+  }
+  div#block-views-block-listcomments-block-1 {
+    margin: 190px 0px 0px 6px !important;
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    line-height: 3;
+    width: 90% !important;
+  }
+  .node-content form#comment-form {
+    height: 183px !important;
+    width: 32% !important;
+    position: absolute !important;
+    top: -292px !important;
+    right: -35% !important;
+  }
   .pstStatusModeration {
     position: absolute !important;
     left: 131px !important;
