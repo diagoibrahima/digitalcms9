@@ -3613,7 +3613,7 @@ h6.country-of-userlog {
   .dialog-off-canvas-main-canvas .report-card {
     height: 100px !important;
     width: 205px !important;
-    margin: 30px auto 60px;
+    margin: 30px auto 60px !important;
   }
   .new-logoutbutton {
     padding: 0px 10px !important;
