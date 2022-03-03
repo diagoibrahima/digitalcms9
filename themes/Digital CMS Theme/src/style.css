@@ -3560,6 +3560,9 @@ h6.country-of-userlog {
 }
 
 @media screen and (max-width: 1280px) {
+  .tw-item-card span.section-buttom .numberomodul {
+    margin-right: 6.7rem !important;
+  }
   a.moderationStateButton.approve {
     right: 16px !important;
   }
