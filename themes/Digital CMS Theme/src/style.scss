@@ -3242,11 +3242,15 @@ article.node {
 
 
 
-.node-content-form, form#node-content-edit-form {
+.node-content-form {
+
+  top: 5px !important;
+}
+
+ form#node-content-edit-form {
 
   top: 50px !important;
 }
-
 
 .live-preveiw-section {
   margin: 2% 48% !important;

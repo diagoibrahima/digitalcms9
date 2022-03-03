@@ -3538,7 +3538,10 @@ h6.country-of-userlog {
   .separateur-comment {
     width: 105% !important;
   }
-  .node-content-form, form#node-content-edit-form {
+  .node-content-form {
+    top: 5px !important;
+  }
+  form#node-content-edit-form {
     top: 50px !important;
   }
   .live-preveiw-section {
