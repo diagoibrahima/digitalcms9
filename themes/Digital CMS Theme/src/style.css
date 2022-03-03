@@ -3510,10 +3510,10 @@ form#views-exposed-form-list-of-content-page-1 {
           align-items: center;
 }
 
-form#views-exposed-form-list-of-content-page-1 .dialog-off-canvas-main-canvas div#edit-actions {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+form#views-exposed-form-list-of-content-page-1 .dialog-off-canvas-main-canvas {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   width: 58.5% !important;
 }
 

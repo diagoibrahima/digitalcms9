@@ -3175,8 +3175,8 @@ form#views-exposed-form-list-of-content-page-1 {
   position: relative;
   align-items: center;
 
-.dialog-off-canvas-main-canvas div#edit-actions {
-    display: flex;
+.dialog-off-canvas-main-canvas{
+    display: flex !important;
     width: 58.5% !important;
 }
 
