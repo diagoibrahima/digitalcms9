@@ -3,7 +3,7 @@
 /module/contrib/
 /profiles/contrib/
 /themes/contrib/
-
+/composer.lock
 # /sites/*
 #/sites/default/
 #/sites
