@@ -371,6 +371,16 @@ document.getElementById('edit-field-localization-langue').addEventListener('chan
 
 });
 
+/*
+
+jQuery('form#views-exposed-form-list-of-content-page-1').( function(){
+
+  jQuery('input#edit-submit-list-of-content').click();
+  jQuery('form#views-exposed-form-list-of-content-page-1').remove();
+})  
+
+*/
+
 
 jQuery(document).ready(function () {
   var payspardefaut = jQuery("h6.country-of-userlog").text();
