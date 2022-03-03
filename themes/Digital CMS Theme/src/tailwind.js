@@ -933,7 +933,7 @@ for(i = 0; i < resultdata.length; i++)
   jQuery('<i class="fa fa-fw fa-user"></i>').insertBefore('input#edit-name');
   jQuery('<i class="fa fa-fw fa-lock"></i>').insertBefore('input#edit-pass');
   //jQuery('a.use-ajax').prepend('<i class="fas fa-plus-square"></i>');
-  jQuery('.views-view-grid.horizontal.cols-4.clearfix .views-row').last().append('<div class="views-col col-1 addcourse-blank" style="width: 25%;"><div class="views-field views-field-nothing"><span class="field-content"><div class=" tw-item-card "><a href="node/add/course_" class="addcoursebutton" tabindex="-1">New course</a></div></div> ');
+  jQuery('.views-view-grid.horizontal.cols-4.clearfix .views-row').last().append('<div class="views-col col-1 addcourse-blank" style="width: 25%;"><div class="views-field views-field-nothing"><span class="field-content"><div class=" tw-item-card "><a href="node/add/content" class="addcoursebutton" tabindex="-1">New course</a></div></div> ');
   jQuery('#edit-name').attr('placeholder', '  Username');
   jQuery('#edit-pass').attr('placeholder', '  Password');
  
