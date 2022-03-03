@@ -369,12 +369,26 @@ document.getElementById('edit-field-localization-langue').addEventListener('chan
     console.log('You selected: ', text);
 });
 
+
+
+//jQuery('select#edit-field-localization-langue option:contains("French")').prop('selected',true); 
+
 });
+
+/*
+
+jQuery('form#views-exposed-form-list-of-content-page-1').( function(){
+
+  jQuery('input#edit-submit-list-of-content').click();
+  jQuery('form#views-exposed-form-list-of-content-page-1').remove();
+})  
+
+*/
 
 
 jQuery(document).ready(function () {
   var payspardefaut = jQuery("h6.country-of-userlog").text();
-  jQuery('select option:contains('+payspardefaut+')').prop('selected',true); 
+  jQuery('select#edit-field-pays-teste-value option:contains('+payspardefaut+')').prop('selected',true); 
   jQuery('form').attr('autocomplete', 'off');
   jQuery('form#comment-form textarea ').attr('placeholder', 'Type a comment...✍️');
   jQuery('li.comment-add').remove();
