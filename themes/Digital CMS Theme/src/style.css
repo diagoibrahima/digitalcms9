@@ -3492,6 +3492,37 @@ h6.country-of-userlog {
 
 form#views-exposed-form-list-of-content-page-1 {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem;
+}
+
+input#edit-submit-list-of-content {
+  width: 10%;
+  border-radius: 5px;
+  line-height: 2;
+  color: white;
+  background: #1391c1;
+  border: none;
+}
+
+form#views-exposed-form-list-of-content-page-1 {
+  position: relative;
+}
+
+form#views-exposed-form-list-of-content-page-1 .dialog-off-canvas-main-canvas div#edit-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 65.5%;
+}
+
+form#views-exposed-form-list-of-content-page-1 select#edit-field-pays-teste-value {
+  border: solid 1px #1491c1;
+  padding: 5px;
+  border-radius: 5px;
+  color: #1491c1;
 }
 
 @media screen and (min-width: 1920px) {
