@@ -3259,24 +3259,11 @@ article.node {
 
 
 }
-//for mac pac
 
-@media screen and (max-width: 1440px)
-{
-  .dialog-off-canvas-main-canvas .report-card {
-    height: 100px !important;
-    width: 250px !important;
-  
-}
 
-div#block-views-block-listcomments-block-1 {
-  margin: 190px 20px 0px 14px !important;
-}
-
-}
 // for unicef pc
 
-@media screen and (max-width: 1280px)
+@media screen and (max-width: 1440px  )
 {
 
   a.moderationStateButton.approve{
