@@ -3490,14 +3490,6 @@ h6.country-of-userlog {
   margin: auto;
 }
 
-form#views-exposed-form-list-of-content-page-1 {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 2rem;
-}
-
 input#edit-submit-list-of-content {
   width: 10%;
   border-radius: 5px;
@@ -3508,14 +3500,21 @@ input#edit-submit-list-of-content {
 }
 
 form#views-exposed-form-list-of-content-page-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem;
   position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 form#views-exposed-form-list-of-content-page-1 .dialog-off-canvas-main-canvas div#edit-actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 65.5%;
+  width: 60%;
 }
 
 form#views-exposed-form-list-of-content-page-1 select#edit-field-pays-teste-value {

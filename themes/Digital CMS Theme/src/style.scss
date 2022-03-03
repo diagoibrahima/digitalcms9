@@ -3157,11 +3157,6 @@ h6.country-of-userlog {
 }
 
 
-form#views-exposed-form-list-of-content-page-1 {
-  position: relative;
-  display: flex;
-  margin: 2rem;
-}
 
 
 input#edit-submit-list-of-content {
@@ -3175,13 +3170,17 @@ input#edit-submit-list-of-content {
 
 
 form#views-exposed-form-list-of-content-page-1 {
-
+  display: flex;
+  margin: 2rem;
   position: relative;
+  align-items: center;
 
 
-  .dialog-off-canvas-main-canvas div#edit-actions {
-    display: flex;
-    width: 65.5%;
+ 
+
+.dialog-off-canvas-main-canvas div#edit-actions {
+  display: flex;
+  width: 60%;
 }
 
 select#edit-field-pays-teste-value {
@@ -3190,6 +3189,7 @@ select#edit-field-pays-teste-value {
   border-radius: 5px;
   color: #1491c1;
 }
+
 }
 
 //media query 
