@@ -107,6 +107,10 @@ jQuery("form#node-content-edit-form").ready( function(){
 
   });
 
+jQuery('#buttonstatusserver').click(function () {
+    console.log("bonjour button");
+    jQuery("#block-views-block-listserver-block-1 views-field views-field-field-etat").val("On");
+});
 
 
 
@@ -369,7 +373,7 @@ document.getElementById('edit-field-localization-langue').addEventListener('chan
 
 jQuery(document).ready(function () {
 
-jQuery('form').attr('autocomplete', 'off');
+  jQuery('form').attr('autocomplete', 'off');
 
   jQuery('form#comment-form textarea ').attr('placeholder', 'Type a comment...✍️');
   jQuery('li.comment-add').remove();
@@ -395,14 +399,13 @@ jQuery('form').attr('autocomplete', 'off');
  //console.log(divContentedite);
 
   //on change input title   & description
-   
+
 
   jQuery('nav#block-digitalcmsmenu ul li:nth-child(3)').click(function(){
     jQuery('nav#block-digitalcmsmenu ul li:nth-child(3) ul').toggle(1000);
   }
   );
 
-   
     jQuery(" textarea#edit-field-descriptioncontent-0-value ").ready( function () {
       // jQuery('.DescriptioncontentValue').remove();
       DescriptioncontentValue = jQuery(this).val();
