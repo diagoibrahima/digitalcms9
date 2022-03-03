@@ -3178,16 +3178,16 @@ form#views-exposed-form-list-of-content-page-1 {
 
  
 
-.dialog-off-canvas-main-canvas div#edit-actions {
-  display: flex;
-  width: 60%;
+  .dialog-off-canvas-main-canvas div#edit-actions {
+    display: flex;
+    width: 58.5% !important;
 }
 
 select#edit-field-pays-teste-value {
   border: solid 1px #1491c1;
   padding: 5px;
   border-radius: 5px;
-  color: #1491c1;
+  color: #1491c1 !important;
 }
 
 }
