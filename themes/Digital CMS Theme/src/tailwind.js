@@ -372,15 +372,9 @@ document.getElementById('edit-field-localization-langue').addEventListener('chan
 
 
 jQuery(document).ready(function () {
-<<<<<<< HEAD
   var payspardefaut = jQuery("h6.country-of-userlog").text();
   jQuery('select option:contains('+payspardefaut+')').prop('selected',true); 
   jQuery('form').attr('autocomplete', 'off');
-=======
-
-  jQuery('form').attr('autocomplete', 'off');
-
->>>>>>> 71867fc6feb2dea7eb79e31f81cf04e6b4636e03
   jQuery('form#comment-form textarea ').attr('placeholder', 'Type a comment...✍️');
   jQuery('li.comment-add').remove();
   jQuery('nav#block-digitalcmsmenu ul li:nth-child(3) ul').hide();
