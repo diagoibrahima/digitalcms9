@@ -3547,6 +3547,9 @@ h6.country-of-userlog {
   .live-preveiw-section {
     margin: 2% 48% !important;
   }
+  .dialog-off-canvas-main-canvas .grid-cols-1.card-dasboard {
+    margin: 30px auto 60px !important;
+  }
 }
 
 @media screen and (max-width: 1440px) {
