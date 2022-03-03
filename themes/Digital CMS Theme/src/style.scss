@@ -3207,6 +3207,27 @@ select#edit-field-pays-teste-value {
 {
 
 
+  form#views-exposed-form-list-of-content-page-1 {
+    display: flex;
+    margin: 2rem;
+    position: relative;
+    align-items: center;
+  
+  .dialog-off-canvas-main-canvas{
+      display: flex !important;
+      width: 58.5% !important;
+  }
+  
+  select#edit-field-pays-teste-value {
+    border: solid 1px #1491c1;
+    padding: 5px;
+    border-radius: 5px;
+    color: #1491c1 !important;
+  }
+  
+  }
+
+
   .dialog-off-canvas-main-canvas .activitylogMessage {
     margin-top: 12px !important;
     width: 92% !important;
