@@ -3462,6 +3462,14 @@ h1.initial-title {
   margin: 5px auto;
 }
 
+h6.country-of-userlog {
+  display: none;
+}
+
+.js-form-item.form-item.js-form-type-select.form-item-field-usercontent.js-form-item-field-usercontent {
+  display: none;
+}
+
 @media screen and (min-width: 1920px) {
   .report-card {
     height: 15vh !important;
@@ -3486,7 +3494,7 @@ h1.initial-title {
   }
   .node-content form#comment-form {
     height: 183px !important;
-    width: 33% !important;
+    width: 33.5% !important;
     position: absolute !important;
     top: -250px !important;
     right: -37% !important;
@@ -3500,8 +3508,8 @@ h1.initial-title {
   }
   .show-message {
     background: white;
-    margin: 2% -3% !important;
-    width: 29.5vw !important;
+    margin: 2% -1% !important;
+    width: 28.5vw !important;
   }
   article.node {
     margin: 2rem;
@@ -3530,11 +3538,23 @@ h1.initial-title {
   .separateur-comment {
     width: 105% !important;
   }
-  .node-content-form, form#node-content-edit-form {
+  .node-content-form {
+    top: 5px !important;
+  }
+  form#node-content-edit-form {
     top: 50px !important;
   }
   .live-preveiw-section {
     margin: 2% 48% !important;
+  }
+  .dialog-off-canvas-main-canvas .grid-cols-1.card-dasboard {
+    margin: 30px auto 60px !important;
+  }
+  div#block-views-block-list-localization-block-1 .horizontal {
+    width: 76% !important;
+  }
+  div#block-views-block-list-localization-block-1 {
+    margin-top: 0px !important;
   }
 }
 
@@ -3549,6 +3569,45 @@ h1.initial-title {
 }
 
 @media screen and (max-width: 1280px) {
+  div#block-views-block-list-localization-block-1 h2 {
+    margin: 2px 10px !important;
+  }
+  .dialog-off-canvas-main-canvas span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer {
+    width: 66% !important;
+  }
+  .dialog-off-canvas-main-canvas .grid-cols-1.card-dasboard {
+    width: 95% !important;
+  }
+  .tw-item-card span.section-buttom .numberomodul {
+    margin-right: 6.7rem !important;
+  }
+  a.moderationStateButton.approve {
+    right: 16px !important;
+  }
+  a.moderationStateButton.reject {
+    right: 106px !important;
+  }
+  .dialog-off-canvas-main-canvas .activitylogMessage {
+    margin-top: 12px !important;
+    width: 89% !important;
+    margin: 12px 6px !important;
+  }
+  div#block-views-block-listcomments-block-1 {
+    margin: 190px 0px 0px 6px !important;
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    line-height: 3;
+    width: 90% !important;
+  }
+  .node-content form#comment-form {
+    height: 183px !important;
+    width: 32% !important;
+    position: absolute !important;
+    top: -292px !important;
+    right: -35% !important;
+  }
   .pstStatusModeration {
     position: absolute !important;
     left: 131px !important;
@@ -3568,7 +3627,10 @@ h1.initial-title {
   }
   .dialog-off-canvas-main-canvas .report-card {
     height: 100px !important;
-    width: 220px !important;
+    width: 205px !important;
+  }
+  .dialog-off-canvas-main-canvas .grid-cols-1.card-dasboard {
+    margin: 30px auto 60px !important;
   }
   .new-logoutbutton {
     padding: 0px 10px !important;
@@ -3585,14 +3647,14 @@ h1.initial-title {
   }
   .show-message {
     background: white;
-    margin: 2% 2% !important;
+    margin: 2% 3% !important;
     width: 26vw !important;
   }
   .dialog-off-canvas-main-canvas .add-translation {
-    width: 18vw !important;
-    right: 2% !important;
-    margin: 43px 5px !important;
-    position: relative  !important;
+    width: 17.5vw !important;
+    right: 0% !important;
+    margin: 44px 0px !important;
+    position: relative !important;
     white-space: nowrap !important;
   }
   div#block-views-block-list-localization-block-1 {
@@ -3623,24 +3685,16 @@ h1.initial-title {
   form#node-server-form div#edit-actions #edit-submit {
     margin-left: 59% !important;
   }
-  .dialog-off-canvas-main-canvas .activitylogMessage {
-    margin-top: 12px !important;
-    width: 80% !important;
-    margin: 12px !important;
-  }
   form#node-language-form div#edit-actions #edit-submit {
     margin-left: 74% !important;
   }
   .separateur-comment {
     width: 111% !important;
   }
-}
-
-h6.country-of-userlog {
-  display: none;
-}
-
-.js-form-item.form-item.js-form-type-select.form-item-field-usercontent.js-form-item-field-usercontent {
-  display: none;
+  aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
+    background-color: #1491c1 !important;
+    width: 200px !important;
+    padding: 0px !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
