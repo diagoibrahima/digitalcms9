@@ -3658,11 +3658,6 @@ h6.country-of-userlog {
   form#node-server-form div#edit-actions #edit-submit {
     margin-left: 59% !important;
   }
-  .dialog-off-canvas-main-canvas .activitylogMessage {
-    margin-top: 12px !important;
-    width: 80% !important;
-    margin: 12px !important;
-  }
   form#node-language-form div#edit-actions #edit-submit {
     margin-left: 74% !important;
   }
