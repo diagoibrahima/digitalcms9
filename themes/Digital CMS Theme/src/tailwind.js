@@ -116,7 +116,7 @@ jQuery('#buttonstatusserver').click(function () {
 
 // Appell API to get the url of the translation Server
 
-  let url = protocol+"//"+hostname+"/digitalcms9/serverconf";
+  let url = protocol+"//"+hostname+"/serverconf";
   console.log(url);
   fetch(url).then((response)=>
     response.json().then((data)=>{
@@ -154,7 +154,7 @@ jQuery('#buttonstatusserver').click(function () {
     
     
     //alert(idnode);
-  let url2 = protocol+"//"+hostname+"/digitalcms9/en/rest/localizationList/"+idnode;  
+  let url2 = protocol+"//"+hostname+"/en/rest/localizationList/"+idnode;  
   console.log(url2);
 
   fetch(url2).then((response)=>
