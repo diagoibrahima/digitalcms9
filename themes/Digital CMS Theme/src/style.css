@@ -3470,6 +3470,64 @@ h6.country-of-userlog {
   display: none;
 }
 
+.flag-before {
+  opacity: 0;
+}
+
+.js-form-item.form-item.js-form-type-item.form-item-.js-form-item-.form-no-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 15px;
+  background: #1491c166;
+  color: white;
+  border-radius: 5px;
+  padding: 12px;
+  width: 50%;
+  margin: auto;
+}
+
+input#edit-submit-list-of-content {
+  width: 30%;
+  border-radius: 5px;
+  line-height: 2;
+  color: white;
+  background: #1391c1;
+  border: none;
+}
+
+form#views-exposed-form-list-of-content-page-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form#views-exposed-form-list-of-content-page-1 .dialog-off-canvas-main-canvas {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  width: 58.5% !important;
+}
+
+form#views-exposed-form-list-of-content-page-1 select#edit-field-pays-teste-value {
+  border: solid 1px #1491c1;
+  padding: 5px;
+  border-radius: 5px;
+  color: #1491c1 !important;
+}
+
+form#views-exposed-form-list-of-content-page-1 #edit-actions {
+  width: 30% !important;
+}
+
 @media screen and (min-width: 1920px) {
   .report-card {
     height: 15vh !important;
@@ -3478,6 +3536,28 @@ h6.country-of-userlog {
 }
 
 @media screen and (max-width: 1920px) {
+  form#views-exposed-form-list-of-content-page-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 2rem;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  form#views-exposed-form-list-of-content-page-1 .dialog-off-canvas-main-canvas {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    width: 58.5% !important;
+  }
+  form#views-exposed-form-list-of-content-page-1 select#edit-field-pays-teste-value {
+    border: solid 1px #1491c1;
+    padding: 5px;
+    border-radius: 5px;
+    color: #1491c1 !important;
+  }
   .dialog-off-canvas-main-canvas .activitylogMessage {
     margin-top: 12px !important;
     width: 92% !important;
@@ -3500,7 +3580,7 @@ h6.country-of-userlog {
     right: -37% !important;
   }
   .dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
-    min-height: 120vh;
+    min-height: 100vh;
   }
   .report-card {
     height: 15vh !important;

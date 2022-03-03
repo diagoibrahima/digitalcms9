@@ -3139,11 +3139,60 @@ h6.country-of-userlog {
 }
 
 
+.flag-before {
+  opacity: 0;
+}
+
+
+.js-form-item.form-item.js-form-type-item.form-item-.js-form-item-.form-no-label {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  background: #1491c166;
+  color: white;
+  border-radius: 5px;
+  padding: 12px;
+  width: 50%;
+  margin: auto;
+}
 
 
 
 
+input#edit-submit-list-of-content {
+  width: 30%;
+  border-radius: 5px;
+  line-height: 2;
+  color: white;
+  background: #1391c1;
+  border: none;
+}
 
+
+form#views-exposed-form-list-of-content-page-1 {
+  display: flex;
+  margin: 2rem;
+  position: relative;
+  align-items: center;
+
+.dialog-off-canvas-main-canvas{
+    display: flex !important;
+    width: 58.5% !important;
+}
+
+select#edit-field-pays-teste-value {
+  border: solid 1px #1491c1;
+  padding: 5px;
+  border-radius: 5px;
+  color: #1491c1 !important;
+}
+
+}
+
+
+form#views-exposed-form-list-of-content-page-1 #edit-actions {
+  width: 30% !important;
+}
 
 //media query 
 
@@ -3161,6 +3210,27 @@ h6.country-of-userlog {
 
 @media screen and (max-width: 1920px)
 {
+
+
+  form#views-exposed-form-list-of-content-page-1 {
+    display: flex;
+    margin: 2rem;
+    position: relative;
+    align-items: center;
+  
+  .dialog-off-canvas-main-canvas{
+      display: flex !important;
+      width: 58.5% !important;
+  }
+  
+  select#edit-field-pays-teste-value {
+    border: solid 1px #1491c1;
+    padding: 5px;
+    border-radius: 5px;
+    color: #1491c1 !important;
+  }
+  
+  }
 
 
   .dialog-off-canvas-main-canvas .activitylogMessage {
@@ -3189,7 +3259,7 @@ h6.country-of-userlog {
     right: -37% !important;
 }
   .dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
-    min-height: 120vh;
+    min-height: 100vh;
 }
   .report-card {
     height: 15vh !important;
@@ -3446,6 +3516,7 @@ form#node-localization-form div#edit-actions:after {
   z-index: 1 !important;
   border-radius: 5px !important;
 }
+
 .dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
   min-height: 118vh !important;
 }
@@ -3475,7 +3546,4 @@ aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
 
 
 }
-
-
-
 
