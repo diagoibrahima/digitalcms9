@@ -3160,7 +3160,7 @@ h6.country-of-userlog {
 
 
 input#edit-submit-list-of-content {
-  width: 10%;
+  width: 30%;
   border-radius: 5px;
   line-height: 2;
   color: white;
@@ -3187,6 +3187,11 @@ select#edit-field-pays-teste-value {
   color: #1491c1 !important;
 }
 
+}
+
+
+form#views-exposed-form-list-of-content-page-1 #edit-actions {
+  width: 30% !important;
 }
 
 //media query 
