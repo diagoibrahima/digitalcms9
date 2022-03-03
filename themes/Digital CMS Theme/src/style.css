@@ -3553,6 +3553,9 @@ h6.country-of-userlog {
   div#block-views-block-list-localization-block-1 .horizontal {
     width: 76% !important;
   }
+  div#block-views-block-list-localization-block-1 {
+    margin-top: 0px !important;
+  }
 }
 
 @media screen and (max-width: 1440px) {
@@ -3566,6 +3569,9 @@ h6.country-of-userlog {
 }
 
 @media screen and (max-width: 1280px) {
+  .dialog-off-canvas-main-canvas span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer {
+    width: 66% !important;
+  }
   .dialog-off-canvas-main-canvas .grid-cols-1.card-dasboard {
     width: 95% !important;
   }
@@ -3638,7 +3644,7 @@ h6.country-of-userlog {
   }
   .show-message {
     background: white;
-    margin: 2% -2% !important;
+    margin: 2% 3% !important;
     width: 26vw !important;
   }
   .dialog-off-canvas-main-canvas .add-translation {

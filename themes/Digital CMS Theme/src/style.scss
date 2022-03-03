@@ -3266,6 +3266,12 @@ div#block-views-block-list-localization-block-1 .horizontal {
 }
 
 
+div#block-views-block-list-localization-block-1 {
+ 
+  margin-top: 0px !important;
+}
+
+
 }
 //for mac pac
 
@@ -3284,10 +3290,13 @@ div#block-views-block-listcomments-block-1 {
 }
 // for unicef pc
 
-@media screen and (max-width: 1280px  )
+@media screen and (max-width: 1280px )
 {
 
+  .dialog-off-canvas-main-canvas span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer{
 
+    width: 66% !important; 
+  }
 
   .dialog-off-canvas-main-canvas .grid-cols-1.card-dasboard {
 
@@ -3392,7 +3401,7 @@ div#block-views-block-listcomments-block-1 {
 
 .show-message {
   background: white;
-  margin: 2% -2% !important;
+  margin: 2% 3% !important;
   width: 26vw !important;
 }
 
