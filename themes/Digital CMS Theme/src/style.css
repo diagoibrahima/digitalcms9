@@ -795,6 +795,7 @@ form#user-login-form:after {
   background: #1391c1 !important;
   width: 30% !important;
   margin-left: 0px;
+  font-size: 12px;
   border: solid 2px white !important;
   border-radius: 20px !important;
   -webkit-transition: 0.3s;
@@ -3005,6 +3006,7 @@ input#edit-submit--2 {
   width: 98% !important;
   margin-left: -12px;
   margin-top: -10px;
+  font-size: 12px;
   border-radius: 5px !important;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -3418,7 +3420,6 @@ div#block-views-block-languagesmstranslation-block-1 {
   margin: 13px 0px;
   color: #2c88ff;
   padding: 2px 9px;
-  width: auto !important;
 }
 
 #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
@@ -3450,6 +3451,17 @@ div#block-views-block-languagesmstranslation-block-1 {
   font-size: 15px;
 }
 
+h1.initial-title {
+  font-size: 20px;
+  color: #1491c1;
+}
+
+.section-initial-content span {
+  color: gray;
+  font-size: 14px;
+  margin: 5px auto;
+}
+
 @media screen and (min-width: 1920px) {
   .report-card {
     height: 15vh !important;
@@ -3458,6 +3470,30 @@ div#block-views-block-languagesmstranslation-block-1 {
 }
 
 @media screen and (max-width: 1920px) {
+  .dialog-off-canvas-main-canvas .activitylogMessage {
+    margin-top: 12px !important;
+    width: 92% !important;
+    margin-left: -1% !important;
+  }
+  div#block-views-block-listcomments-block-1 {
+    margin: 190px 50px 0px -4px !important;
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    line-height: 3;
+    width: 93% !important;
+  }
+  .node-content form#comment-form {
+    height: 183px !important;
+    width: 33% !important;
+    position: absolute !important;
+    top: -250px !important;
+    right: -37% !important;
+  }
+  .dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
+    min-height: 120vh;
+  }
   .report-card {
     height: 15vh !important;
     width: 18vw !important;
@@ -3484,9 +3520,21 @@ div#block-views-block-languagesmstranslation-block-1 {
   .pstStatusModeration {
     position: absolute !important;
     left: 131px !important;
-    top: -132px !important;
+    top: -316px !important;
     border-radius: 0px !important;
     padding: 2px 23px !important;
+  }
+  #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
+    left: 11% !important;
+  }
+  .separateur-comment {
+    width: 105% !important;
+  }
+  .node-content-form, form#node-content-edit-form {
+    top: 50px !important;
+  }
+  .live-preveiw-section {
+    margin: 2% 48% !important;
   }
 }
 
@@ -3501,12 +3549,29 @@ div#block-views-block-languagesmstranslation-block-1 {
 }
 
 @media screen and (max-width: 1280px) {
+  .pstStatusModeration {
+    position: absolute !important;
+    left: 131px !important;
+    top: -361px !important;
+    border-radius: 0px !important;
+    padding: 2px 23px !important;
+  }
+  .node-content-form, form#node-content-edit-form {
+    top: 20px !important;
+  }
+  #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-langue, #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
+    background: #2c88ff6b;
+    width: 11% !important;
+  }
+  #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
+    left: 14% !important;
+  }
   .dialog-off-canvas-main-canvas .report-card {
     height: 100px !important;
     width: 220px !important;
   }
   .new-logoutbutton {
-    padding: 0px 10px;
+    padding: 0px 10px !important;
     font-size: 14px;
     margin-right: -2% !important;
   }
@@ -3554,6 +3619,20 @@ div#block-views-block-languagesmstranslation-block-1 {
   }
   .dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
     min-height: 118vh !important;
+  }
+  form#node-server-form div#edit-actions #edit-submit {
+    margin-left: 59% !important;
+  }
+  .dialog-off-canvas-main-canvas .activitylogMessage {
+    margin-top: 12px !important;
+    width: 80% !important;
+    margin: 12px !important;
+  }
+  form#node-language-form div#edit-actions #edit-submit {
+    margin-left: 74% !important;
+  }
+  .separateur-comment {
+    width: 111% !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

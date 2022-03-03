@@ -161,6 +161,7 @@ jQuery("form#node-content-edit-form").ready( function(){
         }
         window.localStorage.setItem('filename', translation.Cours+"_translation");
       }
+      console.log(items2);
       var filename2 = window.localStorage.getItem('filename');
       const xls = new XlsExport(items2, "monexcel");
       xls.exportToXLS(filename2);
@@ -780,15 +781,17 @@ for(i = 0; i < resultdata.length; i++)
   
     if(channel=="SMS"){
       jQuery('#cke_19,#cke_22,#cke_29,#cke_35').removeClass('showmenuckeditorOnSms');
-     }else if(channel=="Whatsapp"){
+
+     }else if(channel=="Whatsapp")
+     {
       jQuery('#cke_19,#cke_22,#cke_29,#cke_35').addClass('showmenuckeditorOnSms');
      }else if(channel=="Moodle"){
+      jQuery('#cke_19,#cke_22,#cke_29,#cke_35').addClass('shrowmenuckeditorOnSms');
+     }else if(channel=="Telegram"){
       jQuery('#cke_19,#cke_22,#cke_29,#cke_35').addClass('showmenuckeditorOnSms');
-     }else if(str=="Telegram"){
+     }else if(channel=="Messenger"){
       jQuery('#cke_19,#cke_22,#cke_29,#cke_35').addClass('showmenuckeditorOnSms');
-     }else if(str=="Messenger"){
-      jQuery('#cke_19,#cke_22,#cke_29,#cke_35').addClass('showmenuckeditorOnSms');
-     }else if(str=="IOGT"){
+     }else if(channel=="IOGT"){
       jQuery('#cke_19,#cke_22,#cke_29,#cke_35').addClass('showmenuckeditorOnSms');
      }else{
    //  console.log(str);
