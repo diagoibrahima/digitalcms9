@@ -466,7 +466,18 @@ jQuery(document).ready(function () {
       DescriptioncontentValue = jQuery(this).val();
       jQuery('.DescriptioncontentValue').html('<div class="description-preview">Description</div> <br>' + DescriptioncontentValue + '<div class="separateur-whenwehavedescrip"></div>');
     });
+/*
 
+    jQuery("div#block-views-block-list-localization-block-1 .show-message ").each(function () {
+
+   var etatmoderation = jQuery(this).find(' span.message-etat').text();
+
+
+console.log(etatmoderation)
+
+    });
+
+    */
 
 
   //Download files and archive them in to a zipfile
