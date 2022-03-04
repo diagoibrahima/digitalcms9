@@ -3847,4 +3847,8 @@ svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.tex
 a#excellink {
   cursor: pointer !important;
 }
+
+.module-title * {
+  display: block !important;
+}
 /*# sourceMappingURL=style.css.map */
