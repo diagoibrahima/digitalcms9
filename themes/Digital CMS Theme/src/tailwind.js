@@ -784,9 +784,10 @@ for(i = 0; i < resultdata.length; i++)
       regex = /<h[1-6].*>.*<\/h[1-6]>/g
       header_tags_populated = body.match(regex);
       header_tags = [];
-      console.log(header_tags_populated)
-      if(header_tags_populated ='null'){
-        alert('le texte n a pas de module')
+      console.log(header_tags_populated);
+      if(header_tags_populated === null){
+        console.log('0 Module')
+
       }
       
       for(i=0; i < header_tags_populated.length; i++){
