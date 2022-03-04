@@ -787,10 +787,10 @@ for(i = 0; i < resultdata.length; i++)
       console.log(header_tags_populated);
       if(header_tags_populated === null){
         jQuery('.node-content-form input#edit-submit').prop('disabled', true);
-        jQuery('<div class="messageduformat-texteformat">😬 Oups !  Please review the format of the content.We did not detect any Module. . Heading for Modules  and  Submodules  Normal For messages  </div>').insertBefore('.node-content-form div#edit-actions #edit-submit'); 
+        jQuery('<div class="messageduformat-texteformat">😬 Oups !  Please review the format of the content.We did not detect any Module.</div>').insertBefore('.node-content-form div#edit-actions #edit-submit'); 
 
       }else{
-      
+        jQuery('.node-content-form input#edit-submit').prop('disabled', false);
       for(i=0; i < header_tags_populated.length; i++){
       header_tags.push(jQuery(header_tags_populated[i]).get(0).tagName)
 
@@ -802,9 +802,9 @@ for(i = 0; i < resultdata.length; i++)
       submoduletags = header_tags[1];
      jQuery(moduletags.toLowerCase()).addClass('module-title');
      jQuery(submoduletags.toLowerCase()).addClass('supmoduletitle');
-     jQuery('.node-content-form input#edit-submit').prop('disabled', false);
+     
       }
-      
+
     });
     
   });
