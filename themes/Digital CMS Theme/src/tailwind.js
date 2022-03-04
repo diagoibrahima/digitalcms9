@@ -766,23 +766,39 @@ for(i = 0; i < resultdata.length; i++)
       header_tags = [];
       console.log(header_tags_populated);
       if(header_tags_populated === null){
-        console.log('0 Module')
+        jQuery('.node-content-form input#edit-submit').prop('disabled', true);
+        jQuery('<div class="messageduformat-texteformat">😬 Oups !  Please review the format of the content.We did not detect any Module. . Heading for Modules  and  Submodules  Normal For messages  </div>').insertBefore('.node-content-form div#edit-actions #edit-submit'); 
 
-      }
+      }else{
       
       for(i=0; i < header_tags_populated.length; i++){
       header_tags.push(jQuery(header_tags_populated[i]).get(0).tagName)
 
-      //var res = description2.substring(0, 3);
+      }
+      header_tags = [...new Set(header_tags)]
+      console.log(header_tags);
+      header_tags.sort();
+      moduletags = header_tags[0];
+      submoduletags = header_tags[1];
+     jQuery(moduletags.toLowerCase()).addClass('module-title');
+     jQuery(submoduletags.toLowerCase()).addClass('supmoduletitle');
+     jQuery('.node-content-form input#edit-submit').prop('disabled', false);
+      }
+
+      //find all elemtent in the Ckeditor
+      // console.log(description2);
+      /*
+      var res = body.substring(0, 3);
       if (res == "<h1" || res == "<h2" || res == "<h3" || res == "<h4" || res == "<h5" || res == "<h6") {
         // activation du button submit
         jQuery('.node-content-form input#edit-submit').prop('disabled', false);
       } else {
         // Desactivation du button submit
         jQuery('.node-content-form input#edit-submit').prop('disabled', true);
-        jQuery('<div class="messageduformat-texteformat">😬 Oups !  Please review the format of the content.  Heading for Modules  and  Submodules  Normal For messages  </div>').insertBefore('.node-content-form div#edit-actions #edit-submit'); 
-      }
+        jQuery('<div class="messageduformat-texteformat">😬 Oups !  Please review the format of the content.  Heading for Modules  and  Submodules  Normal For messages  </div>').insertBefore('.node-content-form div#edit-actions #edit-submit'); }
+        */
     });
+    
   });
 
   jQuery('#edit-field-localization-channel').change(function() {
