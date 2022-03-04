@@ -115,7 +115,7 @@ jQuery('#buttonstatusserver').click(function () {
 
 
 // Appell API to get the url of the translation Server
-
+b
   let url = protocol+"//"+hostname+"/serverconf";
   console.log(url);
   fetch(url).then((response)=>
@@ -156,7 +156,6 @@ jQuery('#buttonstatusserver').click(function () {
     //alert(idnode);
   let url2 = protocol+"//"+hostname+"/en/rest/localizationList/"+idnode;  
   console.log(url2);
-
   fetch(url2).then((response)=>
     response.json().then((data)=>{
       //console.log(data);
@@ -178,25 +177,7 @@ jQuery('#buttonstatusserver').click(function () {
   );
   
   });
-
-  //href="/digitalcms9/en/rest/localizationList/{{ nid }}"
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+//href="/digitalcms9/en/rest/localizationList/{{ nid }}"
 
 jQuery("#block-views-block-contenttotranslate-block-1").ready(function(){
   
@@ -776,19 +757,51 @@ for(i = 0; i < resultdata.length; i++)
     CKEDITOR.instances['edit-body-0-value'].on('change', function (e) {
       jQuery('.messageduformat-texteformat').remove();
       jQuery('.node-content-form input#edit-submit').prop('disabled', true);
-      var description2 = CKEDITOR.instances['edit-body-0-value'].getData();
+      var body = CKEDITOR.instances['edit-body-0-value'].getData();
       jQuery(".contentent-preview-good-format").html(description2);
 
       //find all elemtent in the Ckeditor
       // console.log(description2);
-      var res = description2.substring(0, 3);
+      //var body = $('body').html();
+ 
+    
+      sections = [];
+   
+      regex = /<h[1-6].*>.*<\/h[1-6]>/g
+      header_tags_populated = body.match(regex)
+      header_tags = []
+      
+      for(i=0; i < header_tags_populated.length; i++){
+          header_tags.push($(header_tags_populated[i]).get(0).tagName)
+      }
+      console.log(header_tags);
+      header_tags = [...new Set(header_tags)]
+      header_tags.sort();
+      console.log(header_tags);
+   
+      moduletags = header_tags[0];
+      submoduletags = header_tags[1];
+   
+      console.log("module tags are: ")
+      console.log(moduletags);
+      console.log(submoduletags);
+   
+      jQuery(moduletags.toLowerCase()).addClass('jesuislebigboss')
+      jQuery(submoduletags.toLowerCase()).addClass('jesuislepetitboss')
+
+
+
+
+      
+      //var res = description2.substring(0, 3);
       if (res == "<h1" || res == "<h2" || res == "<h3" || res == "<h4" || res == "<h5" || res == "<h6") {
         // activation du button submit
         jQuery('.node-content-form input#edit-submit').prop('disabled', false);
       } else {
         // Desactivation du button submit
         jQuery('.node-content-form input#edit-submit').prop('disabled', true);
-        jQuery('<div class="messageduformat-texteformat">😬 Oups !  Please review the format of the content.  Heading for Modules  and  Submodules  Normal For messages  </div>').insertBefore('.node-content-form div#edit-actions #edit-submit'); }
+        jQuery('<div class="messageduformat-texteformat">😬 Oups !  Please review the format of the content.  Heading for Modules  and  Submodules  Normal For messages  </div>').insertBefore('.node-content-form div#edit-actions #edit-submit'); 
+      }
     });
   });
 
