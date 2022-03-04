@@ -760,39 +760,6 @@ for(i = 0; i < resultdata.length; i++)
       var body = CKEDITOR.instances['edit-body-0-value'].getData();
       jQuery(".contentent-preview-good-format").html(description2);
 
-      //find all elemtent in the Ckeditor
-      // console.log(description2);
-      //var body = $('body').html();
- 
-    
-      sections = [];
-   
-      regex = /<h[1-6].*>.*<\/h[1-6]>/g
-      header_tags_populated = body.match(regex)
-      header_tags = []
-      
-      for(i=0; i < header_tags_populated.length; i++){
-          header_tags.push($(header_tags_populated[i]).get(0).tagName)
-      }
-      console.log(header_tags);
-      header_tags = [...new Set(header_tags)]
-      header_tags.sort();
-      console.log(header_tags);
-   
-      moduletags = header_tags[0];
-      submoduletags = header_tags[1];
-   
-      console.log("module tags are: ")
-      console.log(moduletags);
-      console.log(submoduletags);
-   
-      jQuery(moduletags.toLowerCase()).addClass('jesuislebigboss')
-      jQuery(submoduletags.toLowerCase()).addClass('jesuislepetitboss')
-
-
-
-
-      
       //var res = description2.substring(0, 3);
       if (res == "<h1" || res == "<h2" || res == "<h3" || res == "<h4" || res == "<h5" || res == "<h6") {
         // activation du button submit
@@ -805,11 +772,6 @@ for(i = 0; i < resultdata.length; i++)
     });
   });
 
-
-
-
- 
- 
   jQuery('#edit-field-localization-channel').change(function() {
   
     let channel=jQuery( "#edit-field-localization-channel option:selected" ).text();

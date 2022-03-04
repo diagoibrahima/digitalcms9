@@ -436,7 +436,7 @@ form#node-sub-module-form,
 .node-course__edit-form,
 .node-form,
 form#comment-comment-delete-form,
-form#comment-form {
+form#comment-form ,form#user-form {
   margin-top: 40px;
   background: white;
   width: 95%;
@@ -474,6 +474,33 @@ form#comment-form {
   }
 }
 
+
+form#user-form{
+
+
+  height: inherit !important;
+  padding: 10px;
+
+  h1.titre-cms-translation , div#edit-name--description {
+    display: none;
+}
+
+input#edit-name {
+  background: none;
+}
+
+
+div#edit-actions #edit-submit {
+
+  margin-left: 91% !important;
+ 
+}
+ div#edit-actions {
+
+  width: 98% !important;
+}
+
+}
 .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value {
   padding: 20px 0px;
 }
@@ -1085,13 +1112,15 @@ form#user-login-form:after {
   input#edit-field-contry-0-target-id,
   input#edit-path-0-alias,
   input#edit-user-picture-0-upload,
-  input#edit-field-titre-content-0-value {
+  input#edit-field-titre-content-0-value , select#edit-field-pays-teste-0-value{
     border: solid 1px #a0aebe;
     border-radius: 5px;
     height: 35px;
     width: 100%;
     padding: 5px;
   }
+
+
 
   div#block-views-block-messagetotranslate-block-1 .views-field:nth-child(1) {
     color: #a0aec0;
@@ -2486,17 +2515,17 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
   background: white;
   border-radius: 5px;
 
-  /* to remplace by ==>  .contentent-title */
+  /* to remplace by ==>  .module-title */
   h1,
-  .node-content h1 {
+  .node-content h1 , .module-title {
     font-size: 20px;
     color: #1391c1;
     font-weight: normal;
     border-radius: 1px;
   }
-  /* to remplace by ==>  .contentent-supmodule */
+  /* to remplace by ==>  .-supmoduletitle */
   h2,
-  .node-content h2 {
+  .node-content h2 , .supmoduletitle {
     font-size: 15px;
     color: #1391c1;
     font-weight: 400;
@@ -3148,8 +3177,6 @@ h6.country-of-userlog {
   display: flex;
   justify-content: center;
   font-size: 15px;
-  background: #1491c166;
-  color: white;
   border-radius: 5px;
   padding: 12px;
   width: 50%;
@@ -3193,6 +3220,30 @@ select#edit-field-pays-teste-value {
 form#views-exposed-form-list-of-content-page-1 #edit-actions {
   width: 30% !important;
 }
+
+
+
+.js-form-item.form-item.js-form-type-textfield.form-item-field-full-name-0-value.js-form-item-field-full-name-0-value ,  .js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-language-0-target-id.js-form-item-field-language-0-target-id , .js-form-item.form-item.js-form-type-select.form-item-field-pays-teste-0-value.js-form-item-field-pays-teste-0-value {
+  display: flex;
+  flex-direction: column;
+
+  input#edit-field-full-name-0-value , input#edit-field-language-0-target-id {
+    padding: 0px  5px;
+    border-radius: 5px;
+}
+
+}
+
+
+input#edit-user-picture-0-remove-button {
+  background: #1391c1;
+  border: none;
+  padding: 0px 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
+}
+
 
 //media query 
 

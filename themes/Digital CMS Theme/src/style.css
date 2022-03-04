@@ -462,7 +462,7 @@ form#node-sub-module-form,
 .node-course__edit-form,
 .node-form,
 form#comment-comment-delete-form,
-form#comment-form {
+form#comment-form, form#user-form {
   margin-top: 40px;
   background: white;
   width: 95%;
@@ -494,7 +494,9 @@ form#comment-comment-delete-form .js-form-item.form-item.js-form-type-textfield.
 form#comment-comment-delete-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value,
 form#comment-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
 form#comment-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value,
-form#comment-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value {
+form#comment-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value, form#user-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
+form#user-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value,
+form#user-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value {
   width: 95%;
   margin: auto;
 }
@@ -505,7 +507,7 @@ form#node-sub-module-form textarea,
 .node-course__edit-form textarea,
 .node-form textarea,
 form#comment-comment-delete-form textarea,
-form#comment-form textarea {
+form#comment-form textarea, form#user-form textarea {
   overflow: auto;
   border: 1px #98a8bd solid;
   border-radius: 0.25rem;
@@ -562,9 +564,36 @@ form#comment-form input#edit-field-module-0-target-id,
 form#comment-form input#edit-field-message-0-value,
 form#comment-form .js-form-item,
 form#comment-form input#edit-field-localization-tag-0-target-id,
-form#comment-form input#edit-field-field-submoduleinmessage-0-target-id {
+form#comment-form input#edit-field-field-submoduleinmessage-0-target-id, form#user-form input#edit-title-0-value,
+form#user-form input#edit-field-course-0-target-id,
+form#user-form input#edit-field-module-0-target-id,
+form#user-form input#edit-field-message-0-value,
+form#user-form .js-form-item,
+form#user-form input#edit-field-localization-tag-0-target-id,
+form#user-form input#edit-field-field-submoduleinmessage-0-target-id {
   border-radius: 0.25rem;
   line-height: 2;
+}
+
+form#user-form {
+  height: inherit !important;
+  padding: 10px;
+}
+
+form#user-form h1.titre-cms-translation, form#user-form div#edit-name--description {
+  display: none;
+}
+
+form#user-form input#edit-name {
+  background: none;
+}
+
+form#user-form div#edit-actions #edit-submit {
+  margin-left: 91% !important;
+}
+
+form#user-form div#edit-actions {
+  width: 98% !important;
 }
 
 .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value {
@@ -1210,7 +1239,7 @@ form#user-login-form:after {
 .dialog-off-canvas-main-canvas input#edit-field-contry-0-target-id,
 .dialog-off-canvas-main-canvas input#edit-path-0-alias,
 .dialog-off-canvas-main-canvas input#edit-user-picture-0-upload,
-.dialog-off-canvas-main-canvas input#edit-field-titre-content-0-value {
+.dialog-off-canvas-main-canvas input#edit-field-titre-content-0-value, .dialog-off-canvas-main-canvas select#edit-field-pays-teste-0-value {
   border: solid 1px #a0aebe;
   border-radius: 5px;
   height: 35px;
@@ -2691,13 +2720,13 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
   padding: 10px;
   background: white;
   border-radius: 5px;
-  /* to remplace by ==>  .contentent-title */
-  /* to remplace by ==>  .contentent-supmodule */
+  /* to remplace by ==>  .module-title */
+  /* to remplace by ==>  .-supmoduletitle */
   /* to remplace by ==>  .contentent-message */
 }
 
 .contentent-preview-good-format h1,
-.contentent-preview-good-format .node-content h1 {
+.contentent-preview-good-format .node-content h1, .contentent-preview-good-format .module-title {
   font-size: 20px;
   color: #1391c1;
   font-weight: normal;
@@ -2705,7 +2734,7 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
 }
 
 .contentent-preview-good-format h2,
-.contentent-preview-good-format .node-content h2 {
+.contentent-preview-good-format .node-content h2, .contentent-preview-good-format .supmoduletitle {
   font-size: 15px;
   color: #1391c1;
   font-weight: 400;
@@ -3482,8 +3511,6 @@ h6.country-of-userlog {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 15px;
-  background: #1491c166;
-  color: white;
   border-radius: 5px;
   padding: 12px;
   width: 50%;
@@ -3526,6 +3553,30 @@ form#views-exposed-form-list-of-content-page-1 select#edit-field-pays-teste-valu
 
 form#views-exposed-form-list-of-content-page-1 #edit-actions {
   width: 30% !important;
+}
+
+.js-form-item.form-item.js-form-type-textfield.form-item-field-full-name-0-value.js-form-item-field-full-name-0-value, .js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-language-0-target-id.js-form-item-field-language-0-target-id, .js-form-item.form-item.js-form-type-select.form-item-field-pays-teste-0-value.js-form-item-field-pays-teste-0-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.js-form-item.form-item.js-form-type-textfield.form-item-field-full-name-0-value.js-form-item-field-full-name-0-value input#edit-field-full-name-0-value, .js-form-item.form-item.js-form-type-textfield.form-item-field-full-name-0-value.js-form-item-field-full-name-0-value input#edit-field-language-0-target-id, .js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-language-0-target-id.js-form-item-field-language-0-target-id input#edit-field-full-name-0-value, .js-form-item.form-item.js-form-type-entity-autocomplete.form-item-field-language-0-target-id.js-form-item-field-language-0-target-id input#edit-field-language-0-target-id, .js-form-item.form-item.js-form-type-select.form-item-field-pays-teste-0-value.js-form-item-field-pays-teste-0-value input#edit-field-full-name-0-value, .js-form-item.form-item.js-form-type-select.form-item-field-pays-teste-0-value.js-form-item-field-pays-teste-0-value input#edit-field-language-0-target-id {
+  padding: 0px  5px;
+  border-radius: 5px;
+}
+
+input#edit-user-picture-0-remove-button {
+  background: #1391c1;
+  border: none;
+  padding: 0px 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
 }
 
 @media screen and (min-width: 1920px) {
