@@ -2720,13 +2720,13 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
   padding: 10px;
   background: white;
   border-radius: 5px;
-  /* to remplace by ==>  .contentent-title */
-  /* to remplace by ==>  .contentent-supmodule */
+  /* to remplace by ==>  .module-title */
+  /* to remplace by ==>  .-supmoduletitle */
   /* to remplace by ==>  .contentent-message */
 }
 
 .contentent-preview-good-format h1,
-.contentent-preview-good-format .node-content h1 {
+.contentent-preview-good-format .node-content h1, .contentent-preview-good-format .module-title {
   font-size: 20px;
   color: #1391c1;
   font-weight: normal;
@@ -2734,7 +2734,7 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
 }
 
 .contentent-preview-good-format h2,
-.contentent-preview-good-format .node-content h2 {
+.contentent-preview-good-format .node-content h2, .contentent-preview-good-format .supmoduletitle {
   font-size: 15px;
   color: #1391c1;
   font-weight: 400;

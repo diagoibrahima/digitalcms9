@@ -776,12 +776,34 @@ for(i = 0; i < resultdata.length; i++)
     CKEDITOR.instances['edit-body-0-value'].on('change', function (e) {
       jQuery('.messageduformat-texteformat').remove();
       jQuery('.node-content-form input#edit-submit').prop('disabled', true);
-      var description2 = CKEDITOR.instances['edit-body-0-value'].getData();
-      jQuery(".contentent-preview-good-format").html(description2);
+    
+      var body = CKEDITOR.instances['edit-body-0-value'].getData();
+    //  CKEDITOR.instances.Editor.document.getBody().getHtml();
+     
+      jQuery(".contentent-preview-good-format").html(body);
+      regex = /<h[1-6].*>.*<\/h[1-6]>/g
+      header_tags_populated = body.match(regex);
+      header_tags = [];
+      console.log(header_tags_populated)
+      if(header_tags_populated ='null'){
+        alert('le texte n a pas de module')
+      }
+      
+      for(i=0; i < header_tags_populated.length; i++){
+      header_tags.push(jQuery(header_tags_populated[i]).get(0).tagName)
+
+      }
+      header_tags = [...new Set(header_tags)]
+      console.log(header_tags);
+      header_tags.sort();
+      moduletags = header_tags[0];
+      submoduletags = header_tags[1];
+     jQuery(moduletags.toLowerCase()).addClass('module-title');
+     jQuery(submoduletags.toLowerCase()).addClass('supmoduletitle');
 
       //find all elemtent in the Ckeditor
       // console.log(description2);
-      var res = description2.substring(0, 3);
+      var res = body.substring(0, 3);
       if (res == "<h1" || res == "<h2" || res == "<h3" || res == "<h4" || res == "<h5" || res == "<h6") {
         // activation du button submit
         jQuery('.node-content-form input#edit-submit').prop('disabled', false);

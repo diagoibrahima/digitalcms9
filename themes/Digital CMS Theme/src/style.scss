@@ -2515,17 +2515,17 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
   background: white;
   border-radius: 5px;
 
-  /* to remplace by ==>  .contentent-title */
+  /* to remplace by ==>  .module-title */
   h1,
-  .node-content h1 {
+  .node-content h1 , .module-title {
     font-size: 20px;
     color: #1391c1;
     font-weight: normal;
     border-radius: 1px;
   }
-  /* to remplace by ==>  .contentent-supmodule */
+  /* to remplace by ==>  .-supmoduletitle */
   h2,
-  .node-content h2 {
+  .node-content h2 , .supmoduletitle {
     font-size: 15px;
     color: #1391c1;
     font-weight: 400;
