@@ -920,7 +920,7 @@ form#user-login-form:after {
   color: rgba(107, 114, 128, var(--tw-text-opacity));
 }
 
-.dialog-off-canvas-main-canvas .node-content div div:nth-child(1) {
+.dialog-off-canvas-main-canvas .node-content div div:nth-child(1), .dialog-off-canvas-main-canvas .node-content .description-edite {
   padding-top: 20px;
   color: gray;
   font-size: 14px;
@@ -2725,16 +2725,14 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
   /* to remplace by ==>  .contentent-message */
 }
 
-.contentent-preview-good-format h1,
-.contentent-preview-good-format .node-content h1, .contentent-preview-good-format .module-title {
+.contentent-preview-good-format .module-title {
   font-size: 20px;
   color: #1391c1;
   font-weight: normal;
   border-radius: 1px;
 }
 
-.contentent-preview-good-format h2,
-.contentent-preview-good-format .node-content h2, .contentent-preview-good-format .supmoduletitle {
+.contentent-preview-good-format .supmoduletitle {
   font-size: 15px;
   color: #1391c1;
   font-weight: 400;
@@ -2749,35 +2747,34 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
 }
 
 article .node-content,
-.bodyContentToTranslate {
+.bodyContentToTranslate, .moduletotranslate {
   /* to remplace by ==>  .contentent-title */
   /* to remplace by ==>  .contentent-supmodule */
   /* to remplace by ==>  .contentent-message */
 }
 
-article .node-content h1,
-article .node-content .node-content h1,
-.bodyContentToTranslate h1,
-.bodyContentToTranslate .node-content h1 {
-  font-size: 20px;
-  color: #1391c1;
-  background: #1391c136;
-  font-weight: normal;
-  border-radius: 1px;
-  margin: 2px 0px;
-  padding: 10px 10px;
-  position: relative;
+article .node-content .module-title,
+.bodyContentToTranslate .module-title, .moduletotranslate .module-title {
+  font-size: 20px !important;
+  color: #1391c1 !important;
+  background: #1391c136 !important;
+  font-weight: normal !important;
+  border-radius: 1px !important;
+  margin: 2px 0px !important;
+  padding: 10px 10px !important;
+  position: relative !important;
+  cursor: pointer !important;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-article .node-content h2,
-article .node-content .node-content h2,
-.bodyContentToTranslate h2,
-.bodyContentToTranslate .node-content h2 {
-  font-size: 15px;
-  color: #1391c1;
-  font-weight: 400;
-  margin: 20px 0px;
-  padding: 0px 10px;
+article .node-content .supmoduletitle,
+.bodyContentToTranslate .supmoduletitle, .moduletotranslate .supmoduletitle {
+  font-size: 15px !important;
+  color: #1391c1 !important;
+  font-weight: 400 !important;
+  margin: 20px 0px !important;
+  padding: 0px 10px !important;
 }
 
 article .node-content p,
@@ -2785,7 +2782,9 @@ article .node-content .node-content p,
 article .node-content .node-content ul li,
 .bodyContentToTranslate p,
 .bodyContentToTranslate .node-content p,
-.bodyContentToTranslate .node-content ul li {
+.bodyContentToTranslate .node-content ul li, .moduletotranslate p,
+.moduletotranslate .node-content p,
+.moduletotranslate .node-content ul li {
   color: #000000;
   font-size: 15px;
   font-weight: normal;
@@ -3827,5 +3826,21 @@ input#edit-user-picture-0-remove-button {
     width: 200px !important;
     padding: 0px !important;
   }
+}
+
+.node-content div:nth-child(3) * {
+  display: none;
+}
+
+.module-title, svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 {
+  display: block !important;
+}
+
+.view-auther-conten {
+  display: block !important;
+}
+
+svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 {
+  top: 13px;
 }
 /*# sourceMappingURL=style.css.map */

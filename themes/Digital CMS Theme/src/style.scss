@@ -781,7 +781,7 @@ article.node:before {
       line-height: 1.75rem;
       font-weight: 300;
     }
-    div div:nth-child(1) {
+    div div:nth-child(1) , .description-edite {
       padding-top: 20px;
       color: gray;
       font-size: 14px;
@@ -2516,16 +2516,14 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
   border-radius: 5px;
 
   /* to remplace by ==>  .module-title */
-  h1,
-  .node-content h1 , .module-title {
+  .module-title {
     font-size: 20px;
     color: #1391c1;
     font-weight: normal;
     border-radius: 1px;
   }
   /* to remplace by ==>  .-supmoduletitle */
-  h2,
-  .node-content h2 , .supmoduletitle {
+   .supmoduletitle {
     font-size: 15px;
     color: #1391c1;
     font-weight: 400;
@@ -2540,28 +2538,30 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
   }
 }
 
+
+
 article .node-content,
-.bodyContentToTranslate {
+.bodyContentToTranslate ,.moduletotranslate {
   /* to remplace by ==>  .contentent-title */
-  h1,
-  .node-content h1 {
-    font-size: 20px;
-    color: #1391c1;
-    background: #1391c136;
-    font-weight: normal;
-    border-radius: 1px;
-    margin: 2px 0px;
-    padding: 10px 10px;
-    position: relative;
+   .module-title {
+    font-size: 20px !important;
+    color: #1391c1 !important;
+    background: #1391c136 !important;
+    font-weight: normal !important;
+    border-radius: 1px !important;
+    margin: 2px 0px !important;
+    padding: 10px 10px !important;
+    position: relative !important;
+    cursor: pointer !important;
+    transition: 1s;
   }
   /* to remplace by ==>  .contentent-supmodule */
-  h2,
-  .node-content h2 {
-    font-size: 15px;
-    color: #1391c1;
-    font-weight: 400;
-    margin: 20px 0px;
-    padding: 0px 10px;
+  .supmoduletitle{
+    font-size: 15px !important;
+    color: #1391c1 !important;
+    font-weight: 400 !important;
+    margin: 20px 0px !important;
+    padding: 0px 10px !important;
   }
   /* to remplace by ==>  .contentent-message */
   p,
@@ -3598,3 +3598,20 @@ aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
 
 }
 
+.node-content div:nth-child(3) *{
+  display: none;
+  
+}
+.module-title , svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 {
+  display: block !important;
+}
+
+.view-auther-conten{
+
+  display: block !important;
+
+}
+
+svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 {
+  top: 13px;
+}
