@@ -3857,7 +3857,7 @@ article .node-content .module-title *, b, strong, .bodyContentToTranslate {
   display: block !important;
 }
 
-p.course-content span {
+p.course-content span, span {
   background: none !important;
 }
 /*# sourceMappingURL=style.css.map */
