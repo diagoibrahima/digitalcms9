@@ -792,25 +792,13 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  * Keep this code block at the end of this file to take full effect.
  */
 #
-<<<<<<< HEAD
- if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-   include $app_root . '/' . $site_path . '/settings.local.php';
- }
-<<<<<<< HEAD
-=======
-=======
 
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
 
->>>>>>> CmstNewVersion2
 
  //BD en 
-<<<<<<< HEAD
->>>>>>> 64c4d9193 (login destination)
-=======
->>>>>>> ModuleDisplayFeature
 /*
 $databases['default']['default'] = array (
   'database' => 'dev_drupal_lms',
@@ -824,17 +812,11 @@ $databases['default']['default'] = array (
 );
 */
 
-<<<<<<< HEAD
-=======
 
 
 
 //BD en local 
-<<<<<<< HEAD
->>>>>>> ModuleDisplayFeature
-=======
 
->>>>>>> CmstNewVersion2
 $databases['default']['default'] = array (
   'database' => 'dev_drupal_lms_role_good',
   'username' => 'root',
@@ -846,8 +828,6 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );  
 
-<<<<<<< HEAD
-=======
 
 //BD Preprod
 /*
@@ -864,5 +844,4 @@ $databases['default']['default'] = array (
 */
 
 
->>>>>>> ModuleDisplayFeature
 $settings['config_sync_directory'] = 'sites/default/files/config_gPm33SuPxx6pVuIRBfdbEvgcvYFn3ygvCUzn45JtXwy20IJ_MkMorSDwfOfCKYuoyHXf2hRJgw/sync';
