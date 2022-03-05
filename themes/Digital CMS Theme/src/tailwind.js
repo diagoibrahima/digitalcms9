@@ -176,7 +176,61 @@ jQuery('#buttonstatusserver').click(function () {
   );
   
   });
-//href="/digitalcms9/en/rest/localizationList/{{ nid }}"
+
+  //href="/digitalcms9/en/rest/localizationList/{{ nid }}"
+  
+
+
+
+
+/*
+
+
+jQuery('article').ready(function(){
+
+  //meme format au niveau des courses et transtation
+
+  var incourseformat =jQuery('article .node-content').html();
+  console.log(incourseformat);
+
+  regex = /<h[1-6].*>.*<\/h[1-6]>/g
+  header_tags_populated = incourseformat.match(regex);
+  header_tags = [];
+  console.log(header_tags_populated);
+  for(i=0; i < header_tags_populated.length; i++){
+    header_tags.push(jQuery(header_tags_populated[i]).get(0).tagName)
+
+    }
+    header_tags = [...new Set(header_tags)]
+    console.log(header_tags);
+    header_tags.sort();
+    moduletags = header_tags[0];
+jQuery(moduletags.toLowerCase()).addClass('module-title');
+   
+    submoduletags = header_tags[1];
+    if( submoduletags ===null ){
+
+      console.log('pas de submodule');
+     
+    } else{
+      jQuery(submoduletags).addClass('supmoduletitle');
+    }
+
+   // jQuery('article .node-content .module-title').append('<svg class="svg-inline--fa fa-chevron-down fa-w-14 expand-minimize-button text-light text-xl font-thin text-gray-400" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>');
+
+     
+
+});
+
+*/
+
+
+
+
+
+
+
+  
 
 jQuery("#block-views-block-contenttotranslate-block-1").ready(function(){
   
@@ -240,7 +294,7 @@ var urlapi = window.localStorage.getItem('serverul');
 
   var textToTranslate = jQuery(".bodyContentToTranslate").html();
   var titletotranslate = jQuery(".initial-title a").text();
-  var descriptiontotranslate = jQuery(".section-initial-content p").text();
+  var descriptiontotranslate = jQuery(".description-preview + *").text();
 
   //console.log("description a traduire " + descriptiontotranslate);
 
@@ -304,6 +358,7 @@ const translatedesc = async function(ad,bd,cd) {
    var objd = await res.json();
 
    var descgood  = (objd.translatedText);
+   console.log(descgood);
   
    
    jQuery("#edit-field-descriptino-content-0-value").val(descgood);
@@ -346,7 +401,7 @@ document.getElementById('edit-field-localization-langue').addEventListener('chan
       translatedesc(descriptiontotranslate, "auto", "zh");
     }
 
-    console.log('You selected: ', text);
+  //  console.log('You selected: ', text);
 });
 
 
@@ -367,12 +422,12 @@ jQuery('form#views-exposed-form-list-of-content-page-1').( function(){
 
 
 jQuery(document).ready(function () {
-  
-  //var payspardefaut = jQuery("h6.country-of-userlog").text();
-  //jQuery('select#edit-field-pays-teste-value option:contains('+payspardefaut+')').prop('selected',true); 
 
-  jQuery('#edit-field-descriptioncontent-wrapper label').val('Update description');
+   jQuery('article .node-content .module-title').append('<svg class="svg-inline--fa fa-chevron-down fa-w-14 expand-minimize-button text-light text-xl font-thin text-gray-400" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>');
 
+ // var payspardefaut = jQuery("h6.country-of-userlog").text();
+ // jQuery('select#edit-field-pays-teste-value option:contains('+payspardefaut+')').prop('selected',true); 
+ jQuery('.course-content').hide();
   jQuery('form').attr('autocomplete', 'off');
   jQuery('form#comment-form textarea ').attr('placeholder', 'Type a comment...✍️');
   jQuery('li.comment-add').remove();
@@ -383,17 +438,17 @@ jQuery(document).ready(function () {
   jQuery('.blockmodule-submodule').hide();
   jQuery('a.btn').hide();
  // jQuery('section').hide();
-  jQuery('article .node-content h1').append('<svg class="svg-inline--fa fa-chevron-down fa-w-14 expand-minimize-button text-light text-xl font-thin text-gray-400" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>')
+ // jQuery('.module-title').append('<svg class="svg-inline--fa fa-chevron-down fa-w-14 expand-minimize-button text-light text-xl font-thin text-gray-400" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>');
   jQuery('<div class="live-preveiw-section "> <div class="livepreview-content"> Course preview  </div> <div class="tilteconteValue" ></div> <div class="DescriptioncontentValue"></div> <div class="contentent-preview-good-format">  </div> </div>').insertBefore('form#node-content-form , form#node-content-edit-form');
   //hide submodule and message content 
-  jQuery('article .node-content p , article .node-content h2, article .node-content h1+* ').hide();
+ // jQuery('article .node-content p , article .node-content h1+* , .supmoduletitle ').hide();
   jQuery('.node-content-form input#edit-submit').prop('disabled', true);
  // jQuery('<span class="button-add-new-comment">Add a new comment</span>').insertBefore('section');
   jQuery('.node-content p:nth-child(1)').insertBefore('.node-content p:nth-child(1)');
-  jQuery('#block-views-block-editcourse-block-1-2').hide();
-  jQuery('div#block-views-block-editcourse-block-1').hide();
-  var divContentedite = jQuery('#block-views-block-editcourse-block-1-2 span').html();
-  jQuery('article .node-content h1').append(divContentedite);
+  //jQuery('#block-views-block-editcourse-block-1-2').hide();
+ // jQuery('div#block-views-block-editcourse-block-1').hide();
+ // var divContentedite = jQuery('#block-views-block-editcourse-block-1-2 span').html();
+ // jQuery('article .node-content h1').append(divContentedite);
   jQuery('svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 + a').html('<i class="fa fa-pencil"></i>')
  //console.log(divContentedite);
 
@@ -411,6 +466,30 @@ jQuery(document).ready(function () {
       jQuery('.DescriptioncontentValue').html('<div class="description-preview">Description</div> <br>' + DescriptioncontentValue + '<div class="separateur-whenwehavedescrip"></div>');
     });
 
+
+    jQuery("div#block-views-block-list-localization-block-1 .show-message  span.message-etat").each(function () {
+
+       if(jQuery(this).text()=='Submit for review' || jQuery(this).text()=='Submit for review'){
+
+         jQuery(this).addClass('statesubmiteforreviw').text('Pending');
+       }
+       else if(jQuery(this).text()=='Rejected') {
+
+        jQuery(this).addClass('stateRejected');
+       }
+       else if(jQuery(this).text()=='Draft'){
+
+        jQuery(this).addClass('stateDraft');
+
+       }else{
+        jQuery(this).addClass('stateApproved');
+
+       }
+
+  
+    });
+
+ 
 
 
   //Download files and archive them in to a zipfile
@@ -448,13 +527,54 @@ jQuery(document).ready(function () {
   //Count nb module V2
 
   jQuery(".views-col").each(function () {
+
     var nbmodule = 0;
-    var nbmodule = jQuery(this).find('.tw-item-card h1').length - 1;
+    
+    var nbmodule = jQuery(this).find('.module-title').length;
+    
+    //console.log(nbmodule);
+    
+    if (nbmodule <= 0 || nbmodule == 1) {
+    
+    jQuery(this).find(".numberomodul").html(nbmodule + " Module");
+    
+    } else jQuery(this).find(".numberomodul").html(nbmodule + " Modules");
+    
+    });
+
+/*
+  jQuery(".views-col .tw-item-card").each(function () {
+  //  var oldh1= jQuery(this).find(".tw-item-card ").html().replace('a' , "span").replace('/a' , "/span");
+    
+    
+    var numberofmodule =jQuery(this).html();
+      console.log(numberofmodule);
+   regex = /<h[1-6].*>.*<\/h[1-6]>/g
+    header_tags_populated = numberofmodule.match(regex);
+
+    header_tags = [];
+    for(i=0; i < header_tags_populated.length; i++){
+      header_tags.push(jQuery(header_tags_populated[i]).get(0).tagName)
+      }
+      header_tags = [...new Set(header_tags)]
+      header_tags.sort();
+      moduletags = header_tags[0];
+
+    jQuery(moduletags.toLowerCase()).addClass('nombredemodulecourse');
+    var nbmodule = 0;
+    var nbmodule = jQuery(this).find('.nombredemodulecourse').length;
+
     //console.log(nbmodule);
     if (nbmodule <= 0 || nbmodule == 1) {
       jQuery(this).find(".numberomodul").html(nbmodule + " Module");
     } else jQuery(this).find(".numberomodul").html(nbmodule + " Modules");
+
   });
+
+  */
+
+
+
 
     jQuery('p span span span span').click(function () {
     jQuery('.node-content p span b').toggle();
@@ -764,24 +884,25 @@ for(i = 0; i < resultdata.length; i++)
 
 
   // detecte change in CKeditor
-  jQuery(".node-content-form").ready(function () {
+  jQuery(".node-content-form , .node-content-edit-form").ready(function () {
     CKEDITOR.instances['edit-body-0-value'].on('change', function (e) {
+      
       jQuery('.messageduformat-texteformat').remove();
       jQuery('.node-content-form input#edit-submit').prop('disabled', true);
       var body = CKEDITOR.instances['edit-body-0-value'].getData();
+      jQuery(".contentent-preview-good-format").html(body);
     //  CKEDITOR.instances.Editor.document.getBody().getHtml();
      
-      jQuery(".contentent-preview-good-format").html(body);
       regex = /<h[1-6].*>.*<\/h[1-6]>/g
       header_tags_populated = body.match(regex);
       header_tags = [];
-      console.log(header_tags_populated);
+    //  console.log(header_tags_populated);
       if(header_tags_populated === null){
         jQuery('.node-content-form input#edit-submit').prop('disabled', true);
-        jQuery('<div class="messageduformat-texteformat">😬 Oups !  Please review the format of the content.We did not detect any Module. . Heading for Modules  and  Submodules  Normal For messages  </div>').insertBefore('.node-content-form div#edit-actions #edit-submit'); 
+        jQuery('<div class="messageduformat-texteformat">😬 Oups !  Please review the format of the content.We did not detect any Module.</div>').insertBefore('.node-content-form div#edit-actions #edit-submit'); 
 
       }else{
-      
+        jQuery('.node-content-form input#edit-submit').prop('disabled', false);
       for(i=0; i < header_tags_populated.length; i++){
       header_tags.push(jQuery(header_tags_populated[i]).get(0).tagName)
 
@@ -790,28 +911,57 @@ for(i = 0; i < resultdata.length; i++)
       console.log(header_tags);
       header_tags.sort();
       moduletags = header_tags[0];
+      jQuery(moduletags.toLowerCase()).addClass('module-title');
+     
       submoduletags = header_tags[1];
-     jQuery(moduletags.toLowerCase()).addClass('module-title');
-     jQuery(submoduletags.toLowerCase()).addClass('supmoduletitle');
-     jQuery('.node-content-form input#edit-submit').prop('disabled', false);
+     
+      if( submoduletags ===null ){
+
+        console.log('pas de submodule');
+       
+      } else{
+        jQuery(submoduletags).addClass('supmoduletitle');
+      }
+    //  jQuery(submoduletags.toLowerCase()).addClass('supmoduletitle');
       }
 
-      //find all elemtent in the Ckeditor
-      // console.log(description2);
-      /*
-      var res = body.substring(0, 3);
-      if (res == "<h1" || res == "<h2" || res == "<h3" || res == "<h4" || res == "<h5" || res == "<h6") {
-        // activation du button submit
-        jQuery('.node-content-form input#edit-submit').prop('disabled', false);
-      } else {
-        // Desactivation du button submit
-        jQuery('.node-content-form input#edit-submit').prop('disabled', true);
-        jQuery('<div class="messageduformat-texteformat">😬 Oups !  Please review the format of the content.  Heading for Modules  and  Submodules  Normal For messages  </div>').insertBefore('.node-content-form div#edit-actions #edit-submit'); }
-        */
     });
+
+
+    //changement contenu Ckeditor
+      jQuery('form#node-content-form input#edit-submit , .node-content-edit-form input#edit-submit').click(function(){
+
+        
+
+        jQuery('.contentent-preview-good-format').find('*').addClass('course-content');
+        var ckedi = jQuery('.contentent-preview-good-format').html();
+        CKEDITOR.instances['edit-body-0-value'].setData(ckedi);
+        
+
+     
+
+      });
+
+    
+  
+   //teste
+   var valeurtilt = jQuery('input#edit-title-0-value').val();
+   console.log(valeurtilt)
+   jQuery('.tilteconteValue').html(valeurtilt)
+
+  var valdesciption =jQuery('textarea#edit-field-descriptioncontent-0-value').val();
+   jQuery('.DescriptioncontentValue').html('<div class="description-edite ">Description </div>'+ valdesciption)
+
+  // var body2 = CKEDITOR.instances['edit-body-0-value'].getData();
+ jQuery('.contentent-preview-good-format').html(CKEDITOR.instances['edit-body-0-value'].getData());
+// alert(body);
+
     
   });
-
+  
+  
+ 
+ 
   jQuery('#edit-field-localization-channel').change(function() {
   
     let channel=jQuery( "#edit-field-localization-channel option:selected" ).text();
@@ -928,9 +1078,11 @@ for(i = 0; i < resultdata.length; i++)
   });
 
   // Expand All 
-  jQuery('span.expandalle-minimizeall-button.cursor-pointer , article .node-content h1').click(function () {
+  jQuery('span.expandalle-minimizeall-button.cursor-pointer ,.module-title').click(function () {
 
-    jQuery('article .node-content p, article .node-content h2,article .node-content h1+* ').toggle(500);
+   // jQuery('article .node-content p, article .node-content h2,article .node-content h1+* ').toggle(500);
+   jQuery('.course-content').toggle();
+
     jQuery('.svg-inline--fa.fa-w-14').toggleClass('tranfromnation-chevreon');
 
     var expand = (jQuery('span.expandalle-minimizeall-button.cursor-pointer').text());
