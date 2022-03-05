@@ -108,7 +108,7 @@ jQuery("form#node-content-edit-form").ready( function(){
   });
 
 jQuery('#buttonstatusserver').click(function () {
-    console.log("bonjour button");
+   
     jQuery("#block-views-block-listserver-block-1 views-field views-field-field-etat").val("On");
 });
 
@@ -117,14 +117,14 @@ jQuery('#buttonstatusserver').click(function () {
 // Appell API to get the url of the translation Server
 
   let url = protocol+"//"+hostname+"/serverconf";
-  console.log(url);
+//  console.log(url);
   fetch(url).then((response)=>
     response.json().then((data)=>{
-      console.log(data);
+    //  console.log(data);
       for(let conf of data){
         if(conf.state==1){
           var urlserver = conf.ipadress +":"+conf.port+"/translate";
-          console.log(urlserver);
+       //   console.log(urlserver);
           //document.querySelector("#servertt").innerHTML = urlserver;
           window.localStorage.setItem('serverul', urlserver);
         }
@@ -155,7 +155,7 @@ jQuery('#buttonstatusserver').click(function () {
     
     //alert(idnode);
   let url2 = protocol+"//"+hostname+"/en/rest/localizationList/"+idnode;  
-  console.log(url2);
+ // console.log(url2);
 
   fetch(url2).then((response)=>
     response.json().then((data)=>{
@@ -168,7 +168,7 @@ jQuery('#buttonstatusserver').click(function () {
         }
         window.localStorage.setItem('filename', translation.Cours+"_translation");
       }
-      console.log(items2);
+    //  console.log(items2);
       var filename2 = window.localStorage.getItem('filename');
       const xls = new XlsExport(items2, "monexcel");
       xls.exportToXLS(filename2);
@@ -360,7 +360,7 @@ const translatedesc = async function(ad,bd,cd) {
    var objd = await res.json();
 
    var descgood  = (objd.translatedText);
-   console.log(descgood);
+  // console.log(descgood);
   
    
    jQuery("#edit-field-descriptino-content-0-value").val(descgood);
@@ -498,7 +498,7 @@ jQuery(document).ready(function () {
 
   //The FileSaver API
   jQuery(".downloadzipfile").click(function () {
-    console.log("Salut jszip");
+  //  console.log("Salut jszip");
     var zip = new JSZip();
     zip.file("Hello.txt", "Hello World\n");
     var img = zip.folder("images");
@@ -899,7 +899,7 @@ for(i = 0; i < resultdata.length; i++)
 
       }
       header_tags = [...new Set(header_tags)]
-      console.log(header_tags);
+     // console.log(header_tags);
       header_tags.sort();
       moduletags = header_tags[0];
       jQuery(moduletags.toLowerCase()).addClass('module-title');
@@ -908,7 +908,7 @@ for(i = 0; i < resultdata.length; i++)
      
       if( submoduletags ===null ){
 
-        console.log('pas de submodule');
+     //   console.log('pas de submodule');
        
       } else{
         jQuery(submoduletags).addClass('supmoduletitle');
@@ -937,7 +937,7 @@ for(i = 0; i < resultdata.length; i++)
   
    //teste
    var valeurtilt = jQuery('input#edit-title-0-value').val();
-   console.log(valeurtilt)
+  // console.log(valeurtilt)
    jQuery('.tilteconteValue').html(valeurtilt)
 
   var valdesciption =jQuery('textarea#edit-field-descriptioncontent-0-value').val();
