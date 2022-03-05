@@ -296,7 +296,9 @@ var urlapi = window.localStorage.getItem('serverul');
 
   var textToTranslate = jQuery(".bodyContentToTranslate").html();
   var titletotranslate = jQuery(".initial-title a").text();
-  var descriptiontotranslate = jQuery(".section-initial-content p").text();
+  var descriptiontotranslate = jQuery(".description-preview + *").text();
+  console.log('============')
+  console.log(descriptiontotranslate)
 
   //console.log("description a traduire " + descriptiontotranslate);
 
@@ -360,6 +362,7 @@ const translatedesc = async function(ad,bd,cd) {
    var objd = await res.json();
 
    var descgood  = (objd.translatedText);
+   console.log(descgood);
   
    
    jQuery("#edit-field-descriptino-content-0-value").val(descgood);

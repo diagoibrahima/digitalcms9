@@ -2766,6 +2766,7 @@ article .node-content .module-title,
   cursor: pointer !important;
   -webkit-transition: 1s;
   transition: 1s;
+  display: block !important;
 }
 
 article .node-content .supmoduletitle,
@@ -3832,7 +3833,7 @@ input#edit-user-picture-0-remove-button {
   display: none;
 }
 
-.module-title, svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 {
+article .node-content .module-title, svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 {
   display: block !important;
 }
 
@@ -3848,7 +3849,15 @@ a#excellink {
   cursor: pointer !important;
 }
 
-.module-title * {
+article .node-content .module-title *, b, strong, .bodyContentToTranslate {
   display: block !important;
+}
+
+.bodyContentToTranslate .course-content {
+  display: block !important;
+}
+
+p.course-content span {
+  background: none !important;
 }
 /*# sourceMappingURL=style.css.map */

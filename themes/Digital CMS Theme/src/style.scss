@@ -2556,6 +2556,7 @@ article .node-content,
     position: relative !important;
     cursor: pointer !important;
     transition: 1s;
+    display: block !important;
   }
   /* to remplace by ==>  .contentent-supmodule */
   .supmoduletitle{
@@ -3604,7 +3605,7 @@ aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
   display: none;
   
 }
-.module-title , svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 {
+article .node-content .module-title , svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 {
   display: block !important;
 }
 
@@ -3623,6 +3624,16 @@ a#excellink {
   cursor: pointer !important;
 }
 
-.module-title * {
+article .node-content .module-title * , b,strong , .bodyContentToTranslate{
   display: block !important;
 }
+.bodyContentToTranslate{
+  .course-content{
+    display: block !important;
+  }
+}
+p.course-content span {
+ 
+  background: none !important;
+}
+
