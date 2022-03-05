@@ -1,0 +1,27 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - system
+  theme:
+    - tailwindcss
+id: filsdariane
+theme: tailwindcss
+region: content
+weight: -11
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Fils d''ariane'
+  label_display: '0'
+  provider: system
+visibility:
+  node_type:
+    id: node_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      course: course

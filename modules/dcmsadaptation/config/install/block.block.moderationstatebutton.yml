@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a76d9c51-ed99-4e28-bffd-d6774339478f'
+  module:
+    - block_content
+    - node
+  theme:
+    - tailwindcss
+id: moderationstatebutton
+theme: tailwindcss
+region: content
+weight: -17
+provider: null
+plugin: 'block_content:a76d9c51-ed99-4e28-bffd-d6774339478f'
+settings:
+  id: 'block_content:a76d9c51-ed99-4e28-bffd-d6774339478f'
+  label: 'Moderation State Button'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      localization: localization

@@ -20,9 +20,16 @@
         "drupal/core-project-message": "^9.2.1",
         "drupal/core-recommended": "^9.2.1",
         "drupal/core-vendor-hardening": "^9.2.1",
+        "drupal/country": "^1.0",
         "drupal/csv_serialization": "^2.0",
         "drupal/entity_print": "2.x",
+        "drupal/flags": "^1.0@beta",
+        "drupal/languagefield": "^1.7",
         "drupal/pdf_serialization": "^2.1",
+        "drupal/popup_after_login": "9.1.x-dev@dev",
+        "drupal/restui": "^1.20",
+        "drupal/sweetalert2": "9.1.x-dev@dev",
+        "drupal/tmgmt": "^1.12",
         "phpoffice/phpspreadsheet": "^1.20"
     },
     "conflict": {
@@ -87,5 +94,8 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "drush/drush": "^11.0"
     }
 }

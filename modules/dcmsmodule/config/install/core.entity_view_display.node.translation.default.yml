@@ -1,0 +1,104 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.translation.body
+    - field.field.node.translation.field_bodymessage
+    - field.field.node.translation.field_channel
+    - field.field.node.translation.field_field_langage
+    - field.field.node.translation.field_image
+    - field.field.node.translation.field_langage
+    - field.field.node.translation.field_message
+    - field.field.node.translation.field_video
+    - field.field.node.translation.field_videoembeded
+    - field.field.node.translation.field_videotype
+    - image.style.large
+    - node.type.translation
+  module:
+    - image
+    - link
+    - options
+    - user
+    - video_embed_field
+id: node.translation.default
+targetEntityType: node
+bundle: translation
+mode: default
+content:
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_bodymessage:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_channel:
+    weight: 3
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_field_langage:
+    weight: 8
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: large
+      image_link: content
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_langage:
+    weight: 4
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_video:
+    weight: 6
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_videoembeded:
+    weight: 7
+    label: above
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: true
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_message: true
+  field_videotype: true
+  langcode: true

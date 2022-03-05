@@ -1,0 +1,7 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: medium
+label: 'Date moyenne par défaut'
+locked: false
+pattern: 'D d/m/Y - H:i'

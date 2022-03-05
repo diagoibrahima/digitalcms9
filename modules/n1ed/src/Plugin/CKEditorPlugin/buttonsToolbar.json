@@ -1,0 +1,120 @@
+[
+  [
+    {
+      "name": "EditWidget",
+      "title": "Edit widget"
+    },
+    {
+      "name": "DeleteWidget",
+      "hint": "Delete selected widget"
+    },
+    {
+      "type": "separator"
+    },
+    {
+      "name": "Flmngr",
+      "title": "Browse"
+    },
+    {
+      "name": "ImgPen",
+      "title": "Edit image"
+    },
+    {
+      "type": "separator"
+    },
+    {
+      "name": "CustomTemplates",
+      "title": "Custom templates"
+    },
+    {
+      "type": "separator"
+    },
+    {
+      "name": "Translator",
+      "hint": "Translate selected text"
+    },
+    {
+      "name": "TranslatorReverse",
+      "hint": "Reverse translation direction"
+    },
+    {
+      "name": "TranslatorConf",
+      "hint": "Configure translation"
+    },
+    {
+      "name": "Info",
+      "hint": "N1ED info"
+    }
+  ],
+  [
+    {
+      "name": "Image",
+      "hint": "Insert an image"
+    },
+    {
+      "name": "ImagePreview2",
+      "hint": "Insert image preview"
+    },
+    {
+      "name": "ImageGallery2",
+      "hint": "Insert a gallery"
+    },
+    {
+      "name": "FontAwesome",
+      "hint": "Insert Font Awesome icon"
+    },
+    {
+      "name": "YouTube",
+      "hint": "Insert YouTube video"
+    },
+    {
+      "name": "Table",
+      "hint": "Insert a table"
+    },
+    {
+      "name": "Link",
+      "hint": "Create a link"
+    },
+    {
+      "name": "Anchor",
+      "hint": "Create an anchor"
+    },
+    {
+      "name": "Button",
+      "hint": "Insert a button"
+    },
+    {
+      "name": "Tabs",
+      "hint": "Insert tabs"
+    },
+    {
+      "name": "Accordion",
+      "hint": "Insert and accordion"
+    },
+    {
+      "name": "Alert",
+      "hint": "Insert an alert"
+    },
+    {
+      "name": "Badge",
+      "hint": "Insert a badge"
+    },
+    {
+      "name": "Header",
+      "hint": "Insert a header"
+    },
+    {
+      "name": "IFrame",
+      "hint": "Insert embedded page"
+    },
+    {
+      "name": "HTML",
+      "hint": "Insert HTML snippet"
+    },
+    {
+      "name": "Placeholder",
+      "hint": "Insert Placeholder widget",
+      "isVisible": false
+    }
+  ]
+]

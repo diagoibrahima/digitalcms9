@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.editeurmessage
+  module:
+    - ckeditor
+format: editeurmessage
+editor: ckeditor
+settings:
+  toolbar:
+    rows: {  }
+  plugins:
+    language:
+      language_list: un
+    stylescombo:
+      styles: ''
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

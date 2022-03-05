@@ -1,0 +1,15 @@
+hello_galaxy.panel_page:
+  path: '/hello-galaxy'
+  defaults:
+    _controller: '\Drupal\hello_galaxy\Controller\PanelController::displayPanelPage'
+    _title: 'Hello Galaxy'
+  requirements:
+    _permission: 'access content'
+
+hello_galaxy.form:
+  path: '/admin/config/development/hello-galaxy'
+  defaults:
+    _form: 'Drupal\hello_galaxy\Form\HelloGalaxyForm'
+    _title: 'Hello Galaxy settings'
+  requirements:
+    _permission: 'administer site configuration'

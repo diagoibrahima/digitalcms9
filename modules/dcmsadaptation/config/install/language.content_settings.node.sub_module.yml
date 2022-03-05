@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sub_module
+id: node.sub_module
+target_entity_type_id: node
+target_bundle: sub_module
+default_langcode: site_default
+language_alterable: false

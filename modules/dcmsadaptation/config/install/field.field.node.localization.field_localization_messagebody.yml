@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_localization_messagebody
+    - node.type.localization
+  module:
+    - text
+id: node.localization.field_localization_messagebody
+field_name: field_localization_messagebody
+entity_type: node
+bundle: localization
+label: Message
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

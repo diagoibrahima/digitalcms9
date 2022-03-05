@@ -1,0 +1,38 @@
+definitions:
+  contact__site_page:
+    enabled: true
+    menu_name: footer
+    parent: ''
+    weight: 0
+    expanded: false
+  hello_galaxy__panel_page:
+    enabled: false
+    menu_name: main
+    parent: ''
+    expanded: false
+    weight: 0
+  node__add_page:
+    weight: -50
+    menu_name: tools
+    parent: ''
+    enabled: false
+    expanded: false
+  filter__tips_all:
+    weight: -49
+    menu_name: tools
+    parent: ''
+    expanded: false
+    enabled: false
+  book__render:
+    weight: -47
+    menu_name: tools
+    parent: ''
+    enabled: false
+    expanded: false
+  search__view:
+    weight: -43
+    menu_name: tools
+    parent: ''
+    expanded: false
+    enabled: false
+langcode: fr

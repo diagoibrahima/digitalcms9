@@ -1,0 +1,18 @@
+<?php
+    function course_theme(){
+        return array(
+            'course'=>array(
+                'variables'=>array(
+                    'items'=>[],
+                    'title'=>''
+                )
+            ),
+            'courseList'=>array(
+                'variables'=>array(
+                    'items2'=>[],
+                    'title'=>''
+                )
+            )
+
+        );
+    }

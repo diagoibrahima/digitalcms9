@@ -1,0 +1,7 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: html_month
+label: 'Mois HTML'
+locked: true
+pattern: Y-m

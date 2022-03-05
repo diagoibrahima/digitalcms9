@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.button_add_course
+  module:
+    - system
+    - views
+  theme:
+    - tailwindcss
+id: views_block__button_add_course_block_1
+theme: tailwindcss
+region: content
+weight: -24
+provider: null
+plugin: 'views_block:button_add_course-block_1'
+settings:
+  id: 'views_block:button_add_course-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /liste-of-course

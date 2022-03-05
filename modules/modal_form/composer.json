@@ -1,0 +1,26 @@
+{
+    "name": "drupal/modal_form",
+    "description": "A toolset for quick start of using forms in modal windows, flavored by access checks.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/modal_form",
+    "keywords": [
+        "module",
+        "modal",
+        "form",
+        "api",
+        "modal-form",
+        "ajax"
+    ],
+    "authors": [
+        {
+            "name": "Sergii Bondarenko",
+            "homepage": "https://drupal.org/u/BR0kEN",
+            "email": "sb@firstvector.org"
+        }
+    ],
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/modal_form",
+        "source": "https://git.drupalcode.org/project/modal_form"
+    }
+}

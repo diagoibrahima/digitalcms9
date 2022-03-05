@@ -1,0 +1,5 @@
+cmst_dashboard.panel_page:
+  title: 'Dashboard'
+  description: 'Page dashboard'
+  menu_name: Outils
+  route_name: cmst_dashboard.panel_page

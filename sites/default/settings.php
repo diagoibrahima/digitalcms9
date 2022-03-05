@@ -792,11 +792,19 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  * Keep this code block at the end of this file to take full effect.
  */
 #
+<<<<<<< HEAD
  if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
    include $app_root . '/' . $site_path . '/settings.local.php';
  }
 <<<<<<< HEAD
 =======
+=======
+
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
+
+>>>>>>> CmstNewVersion2
 
  //BD en 
 <<<<<<< HEAD
@@ -820,10 +828,15 @@ $databases['default']['default'] = array (
 =======
 
 
+
 //BD en local 
+<<<<<<< HEAD
 >>>>>>> ModuleDisplayFeature
+=======
+
+>>>>>>> CmstNewVersion2
 $databases['default']['default'] = array (
-  'database' => 'dev_drupal_lms',
+  'database' => 'dev_drupal_lms_role_good',
   'username' => 'root',
   'password' => '',
   'prefix' => '',

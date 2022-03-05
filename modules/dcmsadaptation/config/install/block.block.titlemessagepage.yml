@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:66e58843-6300-4692-8633-46eacd7bedfa'
+  module:
+    - block_content
+    - node
+  theme:
+    - tailwindcss
+id: titlemessagepage
+theme: tailwindcss
+region: content
+weight: -20
+provider: null
+plugin: 'block_content:66e58843-6300-4692-8633-46eacd7bedfa'
+settings:
+  id: 'block_content:66e58843-6300-4692-8633-46eacd7bedfa'
+  label: TitleMessagePage
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      messages: messages

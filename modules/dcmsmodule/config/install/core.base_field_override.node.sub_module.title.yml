@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sub_module
+id: node.sub_module.title
+field_name: title
+entity_type: node
+bundle: sub_module
+label: TitleSubmodule
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

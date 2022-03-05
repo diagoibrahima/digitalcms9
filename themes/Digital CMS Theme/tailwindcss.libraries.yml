@@ -1,0 +1,15 @@
+global-styling:
+  css:
+    base:
+      dist/tailwind.css: {}
+      src/tailwind.css: {}
+      src/style.css: {}
+  js:
+    src/tailwind.js: {}
+    https://cdn.datatables.net/t/bs/jszip-2.5.0: { type: external, minified: true }
+
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupalSettings
+    - core/drupal.dialog.ajax

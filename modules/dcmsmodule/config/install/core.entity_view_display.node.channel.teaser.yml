@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.channel.field_channelname
+    - node.type.channel
+  module:
+    - user
+id: node.channel.teaser
+targetEntityType: node
+bundle: channel
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_channelname: true
+  langcode: true

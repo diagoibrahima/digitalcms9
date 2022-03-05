@@ -1,0 +1,30 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - tailwindcss
+id: tailwindcss_branding
+theme: tailwindcss
+region: sidebar_first
+weight: -10
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Marque du site'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

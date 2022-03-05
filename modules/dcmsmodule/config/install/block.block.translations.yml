@@ -1,0 +1,32 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.add
+  module:
+    - ctools
+    - system
+  theme:
+    - bartik
+id: translations
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:add'
+settings:
+  id: 'system_menu_block:add'
+  label: Translations
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      submodule: submodule
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,7 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: add
+label: Translations
+description: 'card translation pour les information de la translation du sunmodule'
+locked: false

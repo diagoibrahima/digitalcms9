@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_redirect
+    - menu_ui
+third_party_settings:
+  entity_redirect:
+    redirect:
+      add:
+        active: true
+        destination: add_form
+        url: ''
+        external: ''
+        personalizable: true
+      edit:
+        active: false
+        destination: default
+        url: ''
+        external: ''
+        personalizable: true
+      delete:
+        active: false
+        destination: default
+        url: ''
+        external: ''
+        personalizable: true
+      anonymous:
+        active: false
+        destination: default
+        url: ''
+        external: ''
+  menu_ui:
+    available_menus:
+      - tools
+    parent: 'tools:'
+name: Language
+type: language
+description: 'Add new language'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

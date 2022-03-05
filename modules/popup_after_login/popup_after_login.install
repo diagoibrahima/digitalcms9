@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * This file is used to write install Uninstall hooks that used in the module.
+ */
+
+/**
+ * Hook_uninstall().
+ */
+function popup_after_login_uninstall() {
+  $current_user = \Drupal::currentUser();
+  $username = $current_user->getAccountName();
+  \Drupal::configFactory()->getEditable('popup_after_login_config.settings')->delete();
+  if ($_SESSION['always_' . $username]) {
+    unset($_SESSION['always_' . $username]);
+  }
+  elseif ($_SESSION['first_' . $username]) {
+    unset($_SESSION['first_' . $username]);
+  }
+}

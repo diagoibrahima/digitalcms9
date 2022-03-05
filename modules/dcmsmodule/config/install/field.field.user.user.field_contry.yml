@@ -1,0 +1,29 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_contry
+    - node.type.contry
+  module:
+    - user
+id: user.user.field_contry
+field_name: field_contry
+entity_type: user
+bundle: user
+label: 'country '
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      contry: contry
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

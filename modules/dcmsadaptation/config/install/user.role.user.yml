@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.editeurmessage
+  module:
+    - filter
+    - quickedit
+    - workflows
+id: user
+label: User
+weight: 5
+is_admin: null

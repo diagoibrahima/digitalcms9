@@ -1,0 +1,21 @@
+flags.country_flag_mapping.*:
+  type: config_entity
+  label: 'Flag Mapping'
+  mapping:
+    source:
+      type: string
+      label: 'Country code'
+    flag:
+      type: string
+      label: 'Target territory flag'
+
+flags.language_flag_mapping.*:
+  type: config_entity
+  label: 'Flag Mapping'
+  mapping:
+    source:
+      type: string
+      label: 'Language code'
+    flag:
+      type: string
+      label: 'Target territory flag'

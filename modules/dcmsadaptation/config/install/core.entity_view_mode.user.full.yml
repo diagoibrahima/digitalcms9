@@ -1,0 +1,9 @@
+langcode: fr
+status: false
+dependencies:
+  module:
+    - user
+id: user.full
+label: 'Compte utilisateur'
+targetEntityType: user
+cache: true

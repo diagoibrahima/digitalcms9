@@ -1,0 +1,28 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - tailwindcss
+id: tailwindcss_page_title
+theme: tailwindcss
+region: content
+weight: -18
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Titre de page'
+  label_display: '0'
+  provider: core
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      user: user

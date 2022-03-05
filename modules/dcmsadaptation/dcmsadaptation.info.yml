@@ -1,0 +1,71 @@
+name: DCMSADAPTATION
+description: 'Module to add scheme,view,block and configuration '
+type: module
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - admin_toolbar_tools
+  - auto_entitylabel
+  - automated_cron
+  - block
+  - block_content
+  - book
+  - ckeditor
+  - color
+  - comment
+  - conditional_fields
+  - contact
+  - content_moderation
+  - datatables
+  - dblog
+  - editor
+  - entity_print
+  - entity_redirect
+  - features
+  - field
+  - field_ui
+  - file
+  - filter
+  - fontawesome
+  - fontawesome_menu_icons
+  - hello_galaxy
+  - help
+  - image
+  - language
+  - link
+  - locale
+  - media
+  - menu_link_content
+  - menu_ui
+  - message
+  - node
+  - options
+  - paragraphs
+  - path
+  - path_alias
+  - pathauto
+  - pdf_generator
+  - pdf_serialization
+  - quickedit
+  - rdf
+  - rest
+  - search
+  - serialization
+  - shortcut
+  - simpler_quickedit
+  - subpathauto
+  - system
+  - taxonomy
+  - text
+  - tour
+  - update
+  - user
+  - video_embed_field
+  - video_embed_wysiwyg
+  - views
+  - views_add_button
+  - views_bulk_edit
+  - views_bulk_operations
+  - views_data_export
+  - workflows
+  - xls_serialization
+version: '1'

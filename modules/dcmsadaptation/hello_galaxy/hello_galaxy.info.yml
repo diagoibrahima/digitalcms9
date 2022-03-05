@@ -1,0 +1,7 @@
+name: Content Completion
+description: Fournit un panneau indicateur saluant et donnant des informations aux visiteurs.
+
+type: module
+core_version_requirement: ^8 || ^9
+
+configure: hello_galaxy.form

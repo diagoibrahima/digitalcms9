@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: generate_url_cours
+label: 'generate url cours'
+type: 'canonical_entities:node'
+pattern: '/cours/[node:field_course:entity:title]'
+selection_criteria:
+  ed2f5cc1-db83-435b-bde8-952dde05938b:
+    id: node_type
+    bundles:
+      course_: course_
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ed2f5cc1-db83-435b-bde8-952dde05938b
+selection_logic: and
+weight: -5
+relationships: {  }

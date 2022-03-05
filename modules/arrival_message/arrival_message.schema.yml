@@ -1,0 +1,5 @@
+system.site:
+  mapping:
+    arrival_message:
+      type: string
+      label: 'Arrival Message'

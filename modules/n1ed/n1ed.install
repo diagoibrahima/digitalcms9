@@ -1,0 +1,215 @@
+<?php
+
+/**
+ * @file
+ * Installation hooks for N1ED module.
+ */
+
+/**
+ * Updates text formats: attaches N1ED (or not).
+ */
+function n1ed_update_text_formats($isInstall) {
+  $textFormats = filter_formats();
+  $n1edFormats = [];
+
+  foreach ($textFormats as $textFormatName => $textFormat) {
+
+    $editor = editor_load($textFormatName);
+    if ($editor === NULL) {
+      continue;
+    } // no editor attached (i. e. in "Plain Text" format)
+    $editorName = $editor->get('editor');
+    if ($editorName !== "ckeditor") {
+      continue;
+    }
+
+    $filters = $textFormat->get('filters');
+    $filtersNames = array_keys($filters);
+    $isAlaFullFormat =
+      (
+        !in_array("filter_html", $filtersNames)
+        ||
+        $filters["filter_html"]["status"] != 1
+      )
+      &&
+      (
+        !in_array("filter_html_escape", $filtersNames)
+        ||
+        $filters["filter_html_escape"]["status"] != 1
+      );
+
+    if (($textFormatName === "full" || $textFormatName === "full_html") && !$isAlaFullFormat) {
+      if (in_array("filter_html", $filtersNames)) {
+        $filters["filter_html"]["status"] = FALSE;
+      }
+
+      if (in_array("filter_html_escape", $filtersNames)) {
+        $filters["filter_html_escape"]["status"] = FALSE;
+      }
+
+      $textFormat->set("filters", $filters);
+      $textFormat->save();
+
+      $isAlaFullFormat = TRUE;
+    }
+
+    if ($isAlaFullFormat) {
+      $n1edFormats[] = $textFormatName;
+    }
+
+    // Enable or disable N1ED for this format only:
+    // - If we are installing module
+    // - If we are updating module AND (disabling N1ED from format OR text
+    //   format is "full[_html]")
+    if (
+      $isInstall ||
+      (
+        !$isInstall &&
+        (
+          !$isAlaFullFormat
+          ||
+          ($textFormatName === "full" || $textFormatName === "full_html")
+        )
+      )
+    ) {
+      $settings = $editor->getSettings();
+      if (!isset($settings["plugins"])) {
+        $settings["plugins"] = [];
+      }
+      if (!isset($settings["plugins"]["N1EDEco"])) {
+        $settings["plugins"]["N1EDEco"] = [];
+      }
+      $settings["plugins"]["N1EDEco"]["enableN1EDEcoSystem"] = $isAlaFullFormat ? 'true' : 'false';
+      $editor->setSettings($settings);
+      $editor->save();
+    }
+
+  }
+
+  // Bubble N1ED text format up to allow use them in the first order
+  // on the edit article page.
+  $formats = [];
+  foreach ($textFormats as $textFormatName => $textFormat) {
+    if (in_array($textFormatName, $n1edFormats)) {
+      $formats[] = $textFormat;
+    }
+  }
+  $lastN1EDFormatIndex = count($formats) - 1;
+  foreach ($textFormats as $textFormatName => $textFormat) {
+    if (!in_array($textFormatName, $n1edFormats)) {
+      $formats[] = $textFormat;
+    }
+  }
+
+  do {
+    $reorder = FALSE;
+    for ($i = 1; $i < count($formats); $i++) {
+      $format = $formats[$i];
+      $weight = $format->get("weight");
+      $formatPrev = $formats[$i - 1];
+      $weightPrev = $formatPrev->get("weight");
+      if ($weight < $weightPrev) {
+        $format->set("weight", $weightPrev);
+        $formatPrev->set("weight", $weight);
+        $format->save();
+        $formatPrev->save();
+        $reorder = TRUE;
+      }
+    }
+  } while ($reorder);
+
+  if (
+    (count($formats) > $lastN1EDFormatIndex + 1) &&
+    ($lastN1EDFormatIndex > -1) &&
+    (
+      $formats[$lastN1EDFormatIndex]->get("weight") ==
+      $formats[$lastN1EDFormatIndex + 1]->get("weight"))
+  ) {
+    for ($i = $lastN1EDFormatIndex + 1; $i < count($formats); $i++) {
+      $formats[$i]->set("weight", $formats[$i]->get("weight") + 1);
+      $formats[$i]->save();
+    }
+  }
+}
+
+/**
+ * Create directories for file storage.
+ */
+function n1ed_create_or_move_flmngr_dirs() {
+  $fileSystem = \Drupal::service("file_system");
+
+  $dirFiles = $fileSystem->realpath('public://flmngr');
+  mkdir($dirFiles, 0777, TRUE);
+
+  $dirTmp = $fileSystem->realpath('public://flmngr-tmp');
+  mkdir($dirTmp, 0777, TRUE);
+
+  $dirCache = $fileSystem->realpath('public://flmngr-cache');
+  mkdir($dirCache, 0777, TRUE);
+}
+
+/**
+ * Called when installed: attaches N1ED to appropriate formats.
+ */
+function n1ed_install() {
+  n1ed_create_or_move_flmngr_dirs();
+  $config = \Drupal::service('config.factory')->getEditable('n1ed.settings');
+  $config->set('useFlmngrOnFileFields', true);
+  $config->set('selfHosted', false);
+  $config->save(true);
+  n1ed_update_text_formats(TRUE);
+}
+
+/**
+ * Failsafe attaching N1ED on update from old version.
+ *
+ * Attach to formats respecting previous user choise.
+ */
+function n1ed_update_8215() {
+  n1ed_update_text_formats(FALSE);
+}
+
+/**
+ * Moves temporary and cache directories to more appropriate place.
+ */
+function n1ed_update_8221() {
+  n1ed_create_or_move_flmngr_dirs();
+}
+
+/**
+ * Clears all caches to support new routes.
+ */
+function n1ed_update_8223() {
+  drupal_flush_all_caches();
+}
+
+/**
+ * Clears all caches to support new routes.
+ */
+function n1ed_update_8226() {
+  drupal_flush_all_caches();
+}
+
+/**
+ * Clears all caches to load new CKEditor plugin showing loading progress.
+ */
+function n1ed_update_8231() {
+  drupal_flush_all_caches();
+}
+
+/**
+ * Attaches Flmngr file manager to file fields
+ */
+function n1ed_update_8235() {
+  $config = \Drupal::service('config.factory')->getEditable('n1ed.settings');
+  $config->set('useFlmngrOnFileFields', true);
+  $config->save(true);
+  drupal_flush_all_caches();
+}
+
+function n1ed_update_8237() {
+  $config = \Drupal::service('config.factory')->getEditable('n1ed.settings');
+  $config->set('selfHosted', false);
+  $config->save(true);
+  drupal_flush_all_caches();
+}

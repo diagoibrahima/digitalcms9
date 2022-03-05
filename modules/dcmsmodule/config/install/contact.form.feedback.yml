@@ -1,0 +1,11 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: feedback
+label: 'Retours utilisateurs sur le site web'
+recipients:
+  - elibrahimadiago@gmail.com
+reply: ''
+weight: 0
+message: 'Votre message a été envoyé.'
+redirect: ''

@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:40c23a3c-bbae-493b-8e31-052ef883d6c9'
+  module:
+    - block_content
+    - system
+  theme:
+    - tailwindcss
+id: titlecontentdpage
+theme: tailwindcss
+region: content
+weight: -22
+provider: null
+plugin: 'block_content:40c23a3c-bbae-493b-8e31-052ef883d6c9'
+settings:
+  id: 'block_content:40c23a3c-bbae-493b-8e31-052ef883d6c9'
+  label: TitleContentdPage
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /liste-of-course

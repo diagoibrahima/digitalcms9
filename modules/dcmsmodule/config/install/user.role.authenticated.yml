@@ -1,0 +1,17 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.editeurmessage
+  module:
+    - comment
+    - contact
+    - filter
+    - media
+    - search
+    - shortcut
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false

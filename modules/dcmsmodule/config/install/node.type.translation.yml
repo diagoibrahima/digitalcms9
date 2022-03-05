@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_redirect
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  entity_redirect:
+    redirect:
+      add:
+        active: true
+        destination: url
+        url: /list-of-translation
+        external: ''
+        personalizable: true
+      edit:
+        active: false
+        destination: default
+        url: ''
+        external: ''
+        personalizable: true
+      delete:
+        active: false
+        destination: default
+        url: ''
+        external: ''
+        personalizable: true
+      anonymous:
+        active: false
+        destination: default
+        url: ''
+        external: ''
+name: Translation
+type: translation
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

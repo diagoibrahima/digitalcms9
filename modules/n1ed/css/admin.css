@@ -1,0 +1,55 @@
+.n1ed-toolbar-auto {
+  position: relative;
+}
+
+.n1ed-toolbar-auto__hover {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 100%;
+  height: 100%;
+  height: calc(100% + 1px);
+  cursor: pointer;
+}
+
+.n1ed-toolbar-auto__hover > span {
+  display: none;
+}
+
+.n1ed-toolbar-auto__hover:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.n1ed-toolbar-auto__hover:hover > span {
+  display: block;
+  color: white;
+}
+
+.n1ed-ckeditor-row {
+  padding: 2px 0 3px;
+  border-radius: 3px;
+}
+
+.n1ed-toolbar-auto .ckeditor-toolbar-group {
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+/* Fix: Bootstrap defines this class so it causes drag icon in Paragraphs module form not fully visible */
+.handle {
+  box-sizing: content-box !important;
+}
+
+/* Fix: incorrect CKEditor width inside Paragraphs module form*/
+.cke {
+  width: inherit !important;
+}
+
+/* Fix: incorrect margin below CKEditor in Paragraphs module form */
+.paragraphs-subform .form-type-textarea {
+  margin-bottom: 0 !important;
+}

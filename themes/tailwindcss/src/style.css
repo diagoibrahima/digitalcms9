@@ -1117,13 +1117,8 @@ form#user-login-form:after {
 }
 
 .dialog-off-canvas-main-canvas .report-card {
-<<<<<<< HEAD
-  height: 130px;
-  width: 260px;
-=======
   height: 100px;
   width: 222px;
->>>>>>> ebd8e5dc (Dashboard changement des titre de page)
   background: white;
   border-radius: 10px;
   border: solid 1px #e2e8f0;

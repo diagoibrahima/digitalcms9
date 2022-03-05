@@ -1,0 +1,66 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.localization
+    - node.type.translation
+  module:
+    - content_moderation
+id: editorial
+label: Editorial
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -3
+    needs_work:
+      published: false
+      default_revision: false
+      label: Rejected
+      weight: -1
+    published:
+      published: true
+      default_revision: true
+      label: Approved
+      weight: 1
+    ready_for_review:
+      published: false
+      default_revision: false
+      label: 'Submit for review'
+      weight: -2
+  transitions:
+    needs_work:
+      label: Rejected
+      from:
+        - needs_work
+        - ready_for_review
+      to: needs_work
+      weight: 2
+    publish:
+      label: Approved
+      from:
+        - published
+        - ready_for_review
+      to: published
+      weight: 4
+    ready_for_review:
+      label: Pending
+      from:
+        - draft
+        - needs_work
+      to: ready_for_review
+      weight: 1
+    state1:
+      label: 'Create new draft'
+      from:
+        - draft
+      to: draft
+      weight: 0
+  entity_types:
+    node:
+      - localization
+      - translation
+  default_moderation_state: draft

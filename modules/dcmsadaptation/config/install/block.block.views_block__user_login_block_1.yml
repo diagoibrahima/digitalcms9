@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.user_login
+  module:
+    - user
+    - views
+  theme:
+    - tailwindcss
+id: views_block__user_login_block_1
+theme: tailwindcss
+region: content
+weight: -25
+provider: null
+plugin: 'views_block:user_login-block_1'
+settings:
+  id: 'views_block:user_login-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      user: user
