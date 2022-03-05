@@ -214,6 +214,7 @@ console.log(restotranslate);
      
  });
 
+<<<<<<< HEAD
   jQuery('.whatsapp').click(function() {
 
       try {localStorage.setItem("channelVal", "Whatsapp");} catch(e){}
@@ -226,6 +227,14 @@ console.log(restotranslate);
  });
 
   jQuery('.telegrame').click(function() {
+=======
+let totalenombremessagelocalized = jQuery('div#block-views-block-cardnbmessagelocalized-block-1 header').text();
+
+locationRate = parseInt((totalenombremessagelocalized *100 )/(messagesimpe * nblangueused));
+jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(locationRate+'%');
+
+console.log(totalenombremessagelocalized);
+>>>>>>> ebd8e5dc (Dashboard changement des titre de page)
 
       try {localStorage.setItem("channelVal", "Telegram");} catch(e){}
       jQuery('.sms').css('border', 'none');

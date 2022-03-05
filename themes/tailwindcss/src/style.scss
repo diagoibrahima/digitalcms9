@@ -17,6 +17,7 @@ aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
   line-height: 3em;
   background: white;
   border-bottom: solid 0.5px #ffffff;
+  box-shadow: 0 2px 4px -3px #cfc8c8;
 }
 
 .md\:tw-flex-1.tw-p-4.block-contenu {
@@ -25,6 +26,7 @@ aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
 }
 
 h1.js-quickedit-page-title {
+  display: none;
   line-height: 2em;
   background: white;
   color:#1391c1 !important;
@@ -1048,8 +1050,13 @@ div#block-views-block-completionnbmessage-block-1 header {
 }
 
 .report-card {
+<<<<<<< HEAD
   height: 130px;
   width: 260px;
+=======
+  height: 100px;
+  width: 222px;
+>>>>>>> ebd8e5dc (Dashboard changement des titre de page)
   background: white;
   border-radius: 10px;
   border: solid 1px #e2e8f0;
@@ -1341,16 +1348,16 @@ article[typeof="schema:Person"] {
 
 .site-name.tw-text-2xl.tw-text-white.tw-font-semibold.titre-website {
   font-size: 1rem !important;
-  background: #ffffff;
+  background: #a5dff5d1;
   border-radius: 0px;
   padding: 12px;
-  color: #1391c1 !important;
+  color: #fff !important;
   text-align: center;
   width: 100%;
  
 
   &:hover {
-    background: #a5dff5d1 !important;
+    background: #2584aad1 !important;
     color: white !important;
   }
 
@@ -1826,13 +1833,38 @@ input#edit-name , input#edit-pass {
 
 
 .tw-shadow.tw-text-right.tw-px-8 {
-  box-shadow: none !important;
+  //box-shadow: none !important;
 }
 
 
 div#edit-field-field-moduleinmessage-wrapper {
   display: none;
 }
+<<<<<<< HEAD
 body{
   opacity: 3;
 }
+=======
+
+div#block-views-block-cardnblangue-block-1 {
+  display: none;
+}
+
+
+div#block-views-block-cardnbmessagelocalized-block-1 {
+  display: none;
+}
+
+.titrepagemessage {
+  line-height: 2em;
+  background: white;
+  color: #1391c1 !important;
+  /* size: 15px; */
+
+  font-size: 1.5rem !important;
+  padding-left: 2rem !important;
+
+  box-shadow: 0 2px 4px -3px #cfc8c8;
+}
+
+>>>>>>> ebd8e5dc (Dashboard changement des titre de page)
