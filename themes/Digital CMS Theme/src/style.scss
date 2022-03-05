@@ -1320,7 +1320,7 @@ span.message-channel {
   font-size: 12px;
 }
 
-span.message-langage {
+span.message-langage  {
   background: #0094ff4d;
   color: #0094ff;
   padding: 3px 23px;
@@ -3632,8 +3632,23 @@ article .node-content .module-title * , b,strong , .bodyContentToTranslate{
     display: block !important;
   }
 }
-p.course-content span , span{
+p.course-content span {
  
   background: none !important;
 }
 
+
+.stateDraft {
+  background: #80808078 !important;
+  color: gray !important;
+}
+
+.stateRejected {
+  background: #ff00006b !important;
+  color: red !important;
+}
+
+.statesubmiteforreviw {
+  background: #ffa50070 !important;
+  color: orange !important;
+}

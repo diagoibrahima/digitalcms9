@@ -297,8 +297,6 @@ var urlapi = window.localStorage.getItem('serverul');
   var textToTranslate = jQuery(".bodyContentToTranslate").html();
   var titletotranslate = jQuery(".initial-title a").text();
   var descriptiontotranslate = jQuery(".description-preview + *").text();
-  console.log('============')
-  console.log(descriptiontotranslate)
 
   //console.log("description a traduire " + descriptiontotranslate);
 
@@ -469,18 +467,31 @@ jQuery(document).ready(function () {
       DescriptioncontentValue = jQuery(this).val();
       jQuery('.DescriptioncontentValue').html('<div class="description-preview">Description</div> <br>' + DescriptioncontentValue + '<div class="separateur-whenwehavedescrip"></div>');
     });
-/*
-
-    jQuery("div#block-views-block-list-localization-block-1 .show-message ").each(function () {
-
-   var etatmoderation = jQuery(this).find(' span.message-etat').text();
 
 
-console.log(etatmoderation)
+    jQuery("div#block-views-block-list-localization-block-1 .show-message  span.message-etat").each(function () {
 
+       if(jQuery(this).text()=='Submit for review' || jQuery(this).text()=='Submit for review'){
+
+         jQuery(this).addClass('statesubmiteforreviw').text('Pending');
+       }
+       else if(jQuery(this).text()=='Rejected') {
+
+        jQuery(this).addClass('stateRejected');
+       }
+       else if(jQuery(this).text()=='Draft'){
+
+        jQuery(this).addClass('stateDraft');
+
+       }else{
+        jQuery(this).addClass('stateApproved');
+
+       }
+
+  
     });
 
-    */
+ 
 
 
   //Download files and archive them in to a zipfile
