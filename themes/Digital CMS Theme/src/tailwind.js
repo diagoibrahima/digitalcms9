@@ -1103,7 +1103,8 @@ for(i = 0; i < resultdata.length; i++)
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
       
-    var chevronbi = this.childNodes
+    var chevronbi = this.lastChild
+    //console.log(chevronbi)
   //jQuery(chevronbi).toggleClass('tranfromnation-chevreon');
   // this.childNodes.classList.toggle("tranfromnation-chevreon")
 
