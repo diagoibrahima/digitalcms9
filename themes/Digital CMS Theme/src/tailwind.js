@@ -1190,7 +1190,11 @@ for(i = 0; i < resultdata.length; i++)
     jQuery('svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 + a').toggleClass('show-edite-mode');
 
 
+<<<<<<< HEAD
    // turneoff == "Turn editing on" ? jQuery('.tw-switch-editing-button').text('Turn editing off') : jQuery('.tw-switch-editing-button').text('Turn editing on');
+=======
+    //turneoff == "Turn editing on" ? jQuery('.tw-switch-editing-button').text('Turn editing off') : jQuery('.tw-switch-editing-button').text('Turn editing on');
+>>>>>>> 446d4266 (display message on preview localisation)
   });
 
   var notefounddasbord = (jQuery('div#block-tailwindcss-content').text());
