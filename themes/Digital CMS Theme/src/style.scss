@@ -3624,7 +3624,7 @@ a#excellink {
   cursor: pointer !important;
 }
 
-article .node-content .module-title * , b,strong , .bodyContentToTranslate{
+article .node-content .module-title *  , .bodyContentToTranslate{
   display: block !important;
 }
 .bodyContentToTranslate{
@@ -3651,4 +3651,13 @@ p.course-content span {
 .statesubmiteforreviw {
   background: #ffa60083 !important;
   color: rgb(255, 166, 0) !important;
+}
+
+td.tw-text-green-400.views-field.views-field-edit-user.views-align-center a {
+  color: #1391c1 !important;
+}
+
+
+.course-content * {
+  display: block !important;
 }
