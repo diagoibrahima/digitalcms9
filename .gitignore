@@ -57,7 +57,5 @@
 /web.config
 
 /.vscode/
-/README.md
 
 /testfolder/test.html
-node_modules
