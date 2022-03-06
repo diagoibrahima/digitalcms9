@@ -115,7 +115,7 @@ jQuery('#buttonstatusserver').click(function () {
 
 
 // Appell API to get the url of the translation Server
-
+b
   let url = protocol+"//"+hostname+"/serverconf";
 //  console.log(url);
   fetch(url).then((response)=>
