@@ -115,7 +115,6 @@ jQuery('#buttonstatusserver').click(function () {
 
 
 // Appell API to get the url of the translation Server
-b
   let url = protocol+"//"+hostname+"/serverconf";
 //  console.log(url);
   fetch(url).then((response)=>
@@ -431,6 +430,12 @@ jQuery(document).ready(function () {
  // var payspardefaut = jQuery("h6.country-of-userlog").text();
  // jQuery('select#edit-field-pays-teste-value option:contains('+payspardefaut+')').prop('selected',true); 
   jQuery('.course-content').hide();
+  
+  //var payspardefaut = jQuery("h6.country-of-userlog").text();
+  //jQuery('select#edit-field-pays-teste-value option:contains('+payspardefaut+')').prop('selected',true); 
+
+  jQuery('#edit-field-descriptioncontent-wrapper label').val('Update description');
+
   jQuery('form').attr('autocomplete', 'off');
   jQuery('form#comment-form textarea ').attr('placeholder', 'Type a comment...✍️');
   jQuery('li.comment-add').remove();
@@ -737,10 +742,15 @@ jQuery(document).ready(function () {
 
   });
 
+
+//function 
+
   // When click on preview button
   jQuery(".btn-group > .btn-preview").click(function () {
     jQuery('.nbmessage').remove();
-var count = 0;
+    var count = 0;
+    var regex1 = /(<([^>]+)>)/ig
+    var regex2 = /<h1>.*?<\/h1>|<h2>.*?<\/h2>/g
     // recuperer le contenu de ckeditor
     var description = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].getData();
 
@@ -748,9 +758,14 @@ var count = 0;
     //var htmldata2 = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].element.getHtml();
 
 
-  var resultdata  = description.match(/<h(.)>.*?<\/h\1>|<p>.*?<\/p\>/g);
+ resultdata  = description.match(/<h(.)>.*?<\/h\1>|<p>.*?<\/p\>/g);
+var textebrute  = description.replace(regex1, "");
 
-  //console.log(resultdata);
+
+messagestrip = textebrute.match(/.{1,160}/g);
+
+console.log("---------------------");
+console.log(textebrute);
 
   var items = [];
 
@@ -780,6 +795,7 @@ var count = 0;
           }
 
   });
+
   //console.table(items);
 
   // for loop
