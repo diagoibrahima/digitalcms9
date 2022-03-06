@@ -441,9 +441,9 @@ form#comment-form ,form#user-form {
   background: white;
   width: 95%;
   margin: auto;
-  box-shadow: 0px 1px 4px 1px #02020221;
+ // box-shadow: 0px 1px 4px 1px #02020221;
   border-radius: 0.25rem;
-  height: 380px;
+ // height: 380px;
   margin: 30px auto;
 
   .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
@@ -517,7 +517,7 @@ form#node-sub-module-form {
 
 .tw-p-3 {
   padding: 0.75rem !important;
-  margin: -1.5rem 2rem 0rem 1rem;
+  margin: 1.3rem 2rem 0rem 1rem !important;
   text-align: center;
   box-shadow: 1px 1px 6px #2316161a;
 }
@@ -2369,9 +2369,10 @@ span.expandalle-minimizeall-button.cursor-pointer {
 div#block-views-block-contenttotranslate-block-1 {
   width: 47%;
   background: white;
-  margin: 46px 2%;
+  margin:30px 2%;
   padding: 15px;
-  box-shadow: 0px 1px 4px 1px #02020221;
+  margin-bottom: 1000px;
+//  box-shadow: 0px 1px 4px 1px #02020221;
   border-radius: 0.25rem;
   // height: 555px;
   //  overflow-y: auto;
@@ -3255,7 +3256,12 @@ div#block-views-block-dasbord-view-block-1:before {
   width: 100%;
   top: -36px;
 }
-//media query 
+.server {
+  position: absolute;
+}
+
+
+//media query  HP externe
 
 @media screen and (min-width: 1920px)
 {
@@ -3267,10 +3273,19 @@ div#block-views-block-dasbord-view-block-1:before {
  
 
 }
-// for extend screen
+// for extend screen HP externe
 
 @media screen and (max-width: 1920px)
 {
+  
+
+  .contentent-preview-good-format {
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    height:105vh ;
+    overflow-y: auto !important;
+}
 
 
   form#views-exposed-form-list-of-content-page-1 {
@@ -3295,13 +3310,13 @@ div#block-views-block-dasbord-view-block-1:before {
 
 
   .dialog-off-canvas-main-canvas .activitylogMessage {
-    margin-top: 12px !important;
-    width: 92% !important;
-    margin-left: -1% !important;
+    margin-top: 15px !important;
+    width: 92.5% !important;
+    margin-left: -2% !important;
 }
 
   div#block-views-block-listcomments-block-1 {
-    margin: 190px 50px 0px -4px !important;
+    margin:240px 50px 0px -10px !important;
     background: white;
     border-radius: 5px;
     padding: 10px;
@@ -3316,7 +3331,7 @@ div#block-views-block-dasbord-view-block-1:before {
     height: 183px !important;
     width: 33.5% !important;
     position: absolute !important;
-    top: -250px !important;
+    top: -219px !important;
     right: -37% !important;
 }
   .dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
@@ -3331,12 +3346,12 @@ div#block-views-block-dasbord-view-block-1:before {
   .show-message {
     background: white;
     margin:2% -1% !important;
-    width: 28.5vw !important;
+    width: 29vw !important;
 
 }
 
 article.node {
-  margin: 2rem;
+  margin:0px 2rem;
   background: white !important;
   -webkit-box-shadow: 1px 1px 6px #2316161a !important;
   box-shadow: 1px 1px 6px #2316161a !important;
@@ -3344,7 +3359,7 @@ article.node {
   padding: 15px !important;
   width: 70% !important;
   position: relative !important;
-  top: 8px !important;
+  top: 10px !important;
 }
 
 
@@ -3352,12 +3367,22 @@ article.node {
   width: 19vw !important;
 }
 
+div#block-views-block-languagesmstranslation-block-1 {
+
+  margin: 30px 2rem !important;
+ 
+}
+
 .pstStatusModeration {
   position: absolute !important;
   left: 131px !important;
-  top: -316px !important;
+  top: -311px !important;
   border-radius: 0px !important;
   padding: 2px 23px !important;
+}
+
+a.moderationStateButton.submit.submitpositionleft, a.moderationStateButton.approve, a.moderationStateButton.reject, a.moderationStateButton.rsubmit{
+  top: -48px;
 }
 
 
@@ -3380,7 +3405,7 @@ article.node {
 
  form#node-content-edit-form {
 
-  top: 50px !important;
+  top: 90px !important;
 }
 
 .live-preveiw-section {
@@ -3399,12 +3424,12 @@ div#block-views-block-list-localization-block-1 .horizontal {
 
 div#block-views-block-list-localization-block-1 {
  
-  margin-top: 0px !important;
+  margin-top: 20px !important;
 }
 
 
 }
-//for mac pac
+//for mac pac 
 
 @media screen and (max-width: 1440px)
 {
@@ -3419,7 +3444,7 @@ div#block-views-block-listcomments-block-1 {
 }
 
 }
-// for unicef pc
+// for unicef pc UNICEF
 
 @media screen and (max-width: 1280px )
 {
@@ -3481,12 +3506,12 @@ div#block-views-block-listcomments-block-1 {
     right: -35% !important;
 }
 
-  .pstStatusModeration {
-    position: absolute !important;
-    left: 131px !important;
-    top: -361px !important;
-    border-radius: 0px !important;
-    padding: 2px 23px !important;
+.pstStatusModeration {
+  position: absolute !important;
+  left: 131px !important;
+  top: -358px !important;
+  border-radius: 0px !important;
+  padding: 2px 23px !important;
 }
 
 
@@ -3564,6 +3589,7 @@ div#block-views-block-contenttotranslate-block-1 {
   width: 47%  !important;
   margin: 46px 2% 190px  !important;
   padding: 15px  !important;
+  margin-bottom: 500px !important;
 }
 
 form#node-localization-form div#edit-actions:after {

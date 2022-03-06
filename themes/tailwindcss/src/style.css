@@ -1913,8 +1913,12 @@ div#edit-field-field-moduleinmessage-wrapper {
   display: none;
 }
 
-body {
-  opacity: 3;
+div#block-views-block-cardnblangue-block-1 {
+  display: none;
+}
+
+div#block-views-block-cardnbmessagelocalized-block-1 {
+  display: none;
 }
 
 .titrepagemessage {
