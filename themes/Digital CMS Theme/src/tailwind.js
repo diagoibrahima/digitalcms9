@@ -424,12 +424,13 @@ jQuery('form#views-exposed-form-list-of-content-page-1').( function(){
 
 
 jQuery(document).ready(function () {
+  jQuery('.module-title').removeClass('course-content')
 
    jQuery('article .node-content .module-title').append('<svg class="svg-inline--fa fa-chevron-down fa-w-14 expand-minimize-button text-light text-xl font-thin text-gray-400" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>');
 
  // var payspardefaut = jQuery("h6.country-of-userlog").text();
  // jQuery('select#edit-field-pays-teste-value option:contains('+payspardefaut+')').prop('selected',true); 
- jQuery('.course-content').hide();
+  jQuery('.course-content').hide();
   jQuery('form').attr('autocomplete', 'off');
   jQuery('form#comment-form textarea ').attr('placeholder', 'Type a comment...✍️');
   jQuery('li.comment-add').remove();
@@ -439,6 +440,8 @@ jQuery(document).ready(function () {
   jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').html('Add Description')
   jQuery('.blockmodule-submodule').hide();
   jQuery('a.btn').hide();
+  jQuery('form#node-content-edit-form .js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').html('Update Description');
+
  // jQuery('section').hide();
  // jQuery('.module-title').append('<svg class="svg-inline--fa fa-chevron-down fa-w-14 expand-minimize-button text-light text-xl font-thin text-gray-400" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>');
   jQuery('<div class="live-preveiw-section "> <div class="livepreview-content"> Course preview  </div> <div class="tilteconteValue" ></div> <div class="DescriptioncontentValue"></div> <div class="contentent-preview-good-format">  </div> </div>').insertBefore('form#node-content-form , form#node-content-edit-form');
@@ -590,14 +593,24 @@ jQuery(document).ready(function () {
 
     var add_description = (jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').text());
     if (add_description == "Add Description") {
+
       jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').text('Description');
       jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').addClass('desactive-cursoraddcursort');
-    } else {
+    } 
+    else if(add_description == "Update Description"){
+      jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').text('Update Description');
+      jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').removeClass('desactive-cursoraddcursort');
+     
+
+    }
+    else{
 
       jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').text('Add Description');
       jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').removeClass('desactive-cursoraddcursort');
 
     }
+
+
   });
 
   jQuery('option[value="_none"]').remove();
@@ -1068,16 +1081,79 @@ for(i = 0; i < resultdata.length; i++)
 
   });
 
+  var acc = document.getElementsByClassName("module-title");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      
+    var chevronbi = this.childNodes
+  //jQuery(chevronbi).toggleClass('tranfromnation-chevreon');
+  // this.childNodes.classList.toggle("tranfromnation-chevreon")
+
+       panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+  jQuery(chevronbi).removeClass('tranfromnation-chevreon');
+         
+         // jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
+        } else {
+          panel.style.display = "block";
+  jQuery(chevronbi).addClass('tranfromnation-chevreon');
+
+        //  jQuery('.svg-inline--fa.fa-w-14').addClass('tranfromnation-chevreon');
+
+        }
+       do {
+        
+        panel = panel.nextElementSibling;
+
+     //   console.log(panel)
+        if (panel.style.display === "block") {
+  jQuery(chevronbi).removeClass('tranfromnation-chevreon');
+        
+          panel.style.display = "none";
+       //  jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
+        } else {
+          panel.style.display = "block";
+  jQuery(chevronbi).addClass('tranfromnation-chevreon');
+
+        //  jQuery('.svg-inline--fa.fa-w-14').addClass('tranfromnation-chevreon');
+
+        }
+    }while(panel.className!='module-title')
+      
+    });
+  }
+
+
+
+
+
+
+
+
   // Expand All 
-  jQuery('span.expandalle-minimizeall-button.cursor-pointer ,.module-title').click(function () {
+  jQuery('span.expandalle-minimizeall-button.cursor-pointer').click(function () {
 
    // jQuery('article .node-content p, article .node-content h2,article .node-content h1+* ').toggle(500);
-   jQuery('.course-content').toggle();
+  // jQuery('.course-content').toggle();
 
-    jQuery('.svg-inline--fa.fa-w-14').toggleClass('tranfromnation-chevreon');
+    
 
     var expand = (jQuery('span.expandalle-minimizeall-button.cursor-pointer').text());
-    expand == "Expand all" ? jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Minimize') : jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Expand all')
+    if(expand == "Expand all"){
+      jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Minimize')
+      jQuery('.svg-inline--fa.fa-w-14').addClass('tranfromnation-chevreon');
+      jQuery('.course-content').show();
+    }else{
+      jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Expand all')
+    
+      jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
+      jQuery('.course-content').hide();
+
+    }
+  //  expand == "Expand all" ? jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Minimize') : jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Expand all')
   });
 
 
@@ -1098,7 +1174,7 @@ for(i = 0; i < resultdata.length; i++)
     jQuery('svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 + a').toggleClass('show-edite-mode');
 
 
-    turneoff == "Turn editing on" ? jQuery('.tw-switch-editing-button').text('Turn editing off') : jQuery('.tw-switch-editing-button').text('Turn editing on');
+   // turneoff == "Turn editing on" ? jQuery('.tw-switch-editing-button').text('Turn editing off') : jQuery('.tw-switch-editing-button').text('Turn editing on');
   });
 
   var notefounddasbord = (jQuery('div#block-tailwindcss-content').text());
