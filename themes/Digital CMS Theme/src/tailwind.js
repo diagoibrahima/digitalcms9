@@ -115,6 +115,7 @@ jQuery('#buttonstatusserver').click(function () {
 
 
 // Appell API to get the url of the translation Server
+
   let url = protocol+"//"+hostname+"/serverconf";
 //  console.log(url);
   fetch(url).then((response)=>
@@ -736,15 +737,10 @@ jQuery(document).ready(function () {
 
   });
 
-
-//function 
-
   // When click on preview button
   jQuery(".btn-group > .btn-preview").click(function () {
     jQuery('.nbmessage').remove();
-    var count = 0;
-    var regex1 = /(<([^>]+)>)/ig
-    var regex2 = /<h1>.*?<\/h1>|<h2>.*?<\/h2>/g
+var count = 0;
     // recuperer le contenu de ckeditor
     var description = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].getData();
 
@@ -752,14 +748,9 @@ jQuery(document).ready(function () {
     //var htmldata2 = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].element.getHtml();
 
 
- resultdata  = description.match(/<h(.)>.*?<\/h\1>|<p>.*?<\/p\>/g);
-var textebrute  = description.replace(regex1, "");
+  var resultdata  = description.match(/<h(.)>.*?<\/h\1>|<p>.*?<\/p\>/g);
 
-
-messagestrip = textebrute.match(/.{1,160}/g);
-
-console.log("---------------------");
-console.log(textebrute);
+  //console.log(resultdata);
 
   var items = [];
 
@@ -789,7 +780,6 @@ console.log(textebrute);
           }
 
   });
-
   //console.table(items);
 
   // for loop
@@ -1097,7 +1087,8 @@ for(i = 0; i < resultdata.length; i++)
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
       
-    var chevronbi = this.childNodes
+    var chevronbi = this.lastChild
+    console.log(chevronbi)
   //jQuery(chevronbi).toggleClass('tranfromnation-chevreon');
   // this.childNodes.classList.toggle("tranfromnation-chevreon")
 
@@ -1184,11 +1175,7 @@ for(i = 0; i < resultdata.length; i++)
     jQuery('svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 + a').toggleClass('show-edite-mode');
 
 
-<<<<<<< HEAD
-    //turneoff == "Turn editing on" ? jQuery('.tw-switch-editing-button').text('Turn editing off') : jQuery('.tw-switch-editing-button').text('Turn editing on');
-=======
    // turneoff == "Turn editing on" ? jQuery('.tw-switch-editing-button').text('Turn editing off') : jQuery('.tw-switch-editing-button').text('Turn editing on');
->>>>>>> 74ca5e2f4070109afb2d697fbc05a18038cc44a4
   });
 
   var notefounddasbord = (jQuery('div#block-tailwindcss-content').text());
