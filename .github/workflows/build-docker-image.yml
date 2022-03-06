@@ -23,6 +23,15 @@ jobs:
       uses: docker/metadata-action@v3
       with:
         images: uncfwcarot4d/digitalcms-webapp
+        labels: |
+          org.opencontainers.image.title=Polyglot CMS
+          org.opencontainers.image.description=Content Management System to easily translate digital education courses in humanitarian and community health context
+          org.opencontainers.image.vendor=UNICEF WCARO / T4D
+        tags: |
+          type=ref,event=branch
+          type=ref,event=pr
+          type=semver,pattern={{version}}
+          type=semver,pattern={{major}}.{{minor}}
 
     - 
       name: Login to DockerHub
@@ -38,7 +47,5 @@ jobs:
       with:
         context: .
         push: ${{ github.event_name != 'pull_request' }} # if event is push (alternative to : `push: true`)
-        tags: 
-          ${{ steps.metadata.outputs.tags }}
-          latest
+        tags: ${{ steps.metadata.outputs.tags }}
         labels: ${{ steps.metadata.outputs.labels }}
