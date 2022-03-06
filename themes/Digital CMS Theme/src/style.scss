@@ -3247,7 +3247,14 @@ input#edit-user-picture-0-remove-button {
   font-size: 12px;
 }
 
-
+div#block-views-block-dasbord-view-block-1:before {
+  content: '';
+  background: #f3f4f6;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  top: -36px;
+}
 //media query 
 
 @media screen and (min-width: 1920px)
