@@ -3815,7 +3815,7 @@ input#edit-user-picture-0-remove-button {
     border-radius: 5px !important;
   }
   .dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
-    min-height: 118vh !important;
+    min-height: 100vh !important;
   }
   form#node-server-form div#edit-actions #edit-submit {
     margin-left: 59% !important;
