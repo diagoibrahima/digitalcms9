@@ -3698,6 +3698,12 @@ input#edit-user-picture-0-remove-button {
 }
 
 @media screen and (max-width: 1280px) {
+  article.node {
+    margin: 6px 2rem !important;
+  }
+  span.expandalle-minimizeall-button.cursor-pointer {
+    top: 115px !important;
+  }
   div#block-views-block-list-localization-block-1 h2 {
     margin: 2px 10px !important;
   }
@@ -3770,7 +3776,7 @@ input#edit-user-picture-0-remove-button {
     padding: 0.75rem !important;
     text-align: center !important;
     width: 92% !important;
-    margin: -20px 0px !important;
+    margin: 15px 0px !important;
     -webkit-box-shadow: 1px 1px 6px #2316161a !important;
     box-shadow: 1px 1px 6px #2316161a !important;
   }
@@ -3780,7 +3786,7 @@ input#edit-user-picture-0-remove-button {
     width: 26vw !important;
   }
   .dialog-off-canvas-main-canvas .add-translation {
-    width: 17.5vw !important;
+    width: 19vw !important;
     right: 0% !important;
     margin: 44px 0px !important;
     position: relative !important;
