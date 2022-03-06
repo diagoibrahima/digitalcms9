@@ -38,5 +38,5 @@ jobs:
       with:
         context: .
         push: ${{ github.event_name != 'pull_request' }} # if event is push (alternative to : `push: true`)
-        tags: ${{ steps.metadata.outputs.tags }}
+        tags: [${{ steps.metadata.outputs.tags }}, latest]
         labels: ${{ steps.metadata.outputs.labels }}
