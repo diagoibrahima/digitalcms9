@@ -115,7 +115,6 @@ jQuery('#buttonstatusserver').click(function () {
 
 
 // Appell API to get the url of the translation Server
-
   let url = protocol+"//"+hostname+"/serverconf";
 //  console.log(url);
   fetch(url).then((response)=>
@@ -743,10 +742,15 @@ jQuery(document).ready(function () {
 
   });
 
+
+//function 
+
   // When click on preview button
   jQuery(".btn-group > .btn-preview").click(function () {
     jQuery('.nbmessage').remove();
-var count = 0;
+    var count = 0;
+    var regex1 = /(<([^>]+)>)/ig
+    var regex2 = /<h1>.*?<\/h1>|<h2>.*?<\/h2>/g
     // recuperer le contenu de ckeditor
     var description = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].getData();
 
@@ -754,9 +758,14 @@ var count = 0;
     //var htmldata2 = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].element.getHtml();
 
 
-  var resultdata  = description.match(/<h(.)>.*?<\/h\1>|<p>.*?<\/p\>/g);
+ resultdata  = description.match(/<h(.)>.*?<\/h\1>|<p>.*?<\/p\>/g);
+var textebrute  = description.replace(regex1, "");
 
-  //console.log(resultdata);
+
+messagestrip = textebrute.match(/.{1,160}/g);
+
+console.log("---------------------");
+console.log(textebrute);
 
   var items = [];
 
@@ -786,6 +795,7 @@ var count = 0;
           }
 
   });
+
   //console.table(items);
 
   // for loop
@@ -1093,8 +1103,7 @@ for(i = 0; i < resultdata.length; i++)
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
       
-    var chevronbi = this.lastChild
-    //console.log(chevronbi)
+    var chevronbi = this.childNodes
   //jQuery(chevronbi).toggleClass('tranfromnation-chevreon');
   // this.childNodes.classList.toggle("tranfromnation-chevreon")
 
@@ -1181,15 +1190,7 @@ for(i = 0; i < resultdata.length; i++)
     jQuery('svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 + a').toggleClass('show-edite-mode');
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
    // turneoff == "Turn editing on" ? jQuery('.tw-switch-editing-button').text('Turn editing off') : jQuery('.tw-switch-editing-button').text('Turn editing on');
-=======
-    //turneoff == "Turn editing on" ? jQuery('.tw-switch-editing-button').text('Turn editing off') : jQuery('.tw-switch-editing-button').text('Turn editing on');
->>>>>>> 446d4266 (display message on preview localisation)
-=======
-   // turneoff == "Turn editing on" ? jQuery('.tw-switch-editing-button').text('Turn editing off') : jQuery('.tw-switch-editing-button').text('Turn editing on');
->>>>>>> 064ae111 (update chevrons)
   });
 
   var notefounddasbord = (jQuery('div#block-tailwindcss-content').text());
