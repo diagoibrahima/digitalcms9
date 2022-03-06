@@ -3847,7 +3847,7 @@ a#excellink {
   cursor: pointer !important;
 }
 
-article .node-content .module-title *, b, strong, .bodyContentToTranslate {
+article .node-content .module-title *, .bodyContentToTranslate {
   display: block !important;
 }
 
@@ -3866,11 +3866,19 @@ p.course-content span {
 
 .stateRejected {
   background: #ff00006b !important;
-  color: red !important;
+  color: rgba(255, 0, 0, 0.966) !important;
 }
 
 .statesubmiteforreviw {
-  background: #ffa50070 !important;
-  color: orange !important;
+  background: #ffa60083 !important;
+  color: #ffa600 !important;
+}
+
+td.tw-text-green-400.views-field.views-field-edit-user.views-align-center a {
+  color: #1391c1 !important;
+}
+
+.course-content * {
+  display: block !important;
 }
 /*# sourceMappingURL=style.css.map */

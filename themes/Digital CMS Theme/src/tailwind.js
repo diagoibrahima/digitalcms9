@@ -108,7 +108,7 @@ jQuery("form#node-content-edit-form").ready( function(){
   });
 
 jQuery('#buttonstatusserver').click(function () {
-    console.log("bonjour button");
+   
     jQuery("#block-views-block-listserver-block-1 views-field views-field-field-etat").val("On");
 });
 
@@ -116,14 +116,14 @@ jQuery('#buttonstatusserver').click(function () {
 
 // Appell API to get the url of the translation Server
   let url = protocol+"//"+hostname+"/serverconf";
-  console.log(url);
+//  console.log(url);
   fetch(url).then((response)=>
     response.json().then((data)=>{
-      console.log(data);
+    //  console.log(data);
       for(let conf of data){
         if(conf.state==1){
           var urlserver = conf.ipadress +":"+conf.port+"/translate";
-          console.log(urlserver);
+       //   console.log(urlserver);
           //document.querySelector("#servertt").innerHTML = urlserver;
           window.localStorage.setItem('serverul', urlserver);
         }
@@ -154,7 +154,8 @@ jQuery('#buttonstatusserver').click(function () {
     
     //alert(idnode);
   let url2 = protocol+"//"+hostname+"/en/rest/localizationList/"+idnode;  
-  console.log(url2);
+ // console.log(url2);
+
   fetch(url2).then((response)=>
     response.json().then((data)=>{
       //console.log(data);
@@ -166,7 +167,7 @@ jQuery('#buttonstatusserver').click(function () {
         }
         window.localStorage.setItem('filename', translation.Cours+"_translation");
       }
-      console.log(items2);
+    //  console.log(items2);
       var filename2 = window.localStorage.getItem('filename');
       const xls = new XlsExport(items2, "monexcel");
       xls.exportToXLS(filename2);
@@ -358,7 +359,7 @@ const translatedesc = async function(ad,bd,cd) {
    var objd = await res.json();
 
    var descgood  = (objd.translatedText);
-   console.log(descgood);
+  // console.log(descgood);
   
    
    jQuery("#edit-field-descriptino-content-0-value").val(descgood);
@@ -422,12 +423,13 @@ jQuery('form#views-exposed-form-list-of-content-page-1').( function(){
 
 
 jQuery(document).ready(function () {
+  jQuery('.module-title').removeClass('course-content')
 
    jQuery('article .node-content .module-title').append('<svg class="svg-inline--fa fa-chevron-down fa-w-14 expand-minimize-button text-light text-xl font-thin text-gray-400" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>');
 
  // var payspardefaut = jQuery("h6.country-of-userlog").text();
  // jQuery('select#edit-field-pays-teste-value option:contains('+payspardefaut+')').prop('selected',true); 
- jQuery('.course-content').hide();
+  jQuery('.course-content').hide();
   jQuery('form').attr('autocomplete', 'off');
   jQuery('form#comment-form textarea ').attr('placeholder', 'Type a comment...✍️');
   jQuery('li.comment-add').remove();
@@ -437,6 +439,8 @@ jQuery(document).ready(function () {
   jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').html('Add Description')
   jQuery('.blockmodule-submodule').hide();
   jQuery('a.btn').hide();
+  jQuery('form#node-content-edit-form .js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').html('Update Description');
+
  // jQuery('section').hide();
  // jQuery('.module-title').append('<svg class="svg-inline--fa fa-chevron-down fa-w-14 expand-minimize-button text-light text-xl font-thin text-gray-400" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>');
   jQuery('<div class="live-preveiw-section "> <div class="livepreview-content"> Course preview  </div> <div class="tilteconteValue" ></div> <div class="DescriptioncontentValue"></div> <div class="contentent-preview-good-format">  </div> </div>').insertBefore('form#node-content-form , form#node-content-edit-form');
@@ -496,7 +500,7 @@ jQuery(document).ready(function () {
 
   //The FileSaver API
   jQuery(".downloadzipfile").click(function () {
-    console.log("Salut jszip");
+  //  console.log("Salut jszip");
     var zip = new JSZip();
     zip.file("Hello.txt", "Hello World\n");
     var img = zip.folder("images");
@@ -588,14 +592,24 @@ jQuery(document).ready(function () {
 
     var add_description = (jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').text());
     if (add_description == "Add Description") {
+
       jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').text('Description');
       jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').addClass('desactive-cursoraddcursort');
-    } else {
+    } 
+    else if(add_description == "Update Description"){
+      jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').text('Update Description');
+      jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').removeClass('desactive-cursoraddcursort');
+     
+
+    }
+    else{
 
       jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').text('Add Description');
       jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').removeClass('desactive-cursoraddcursort');
 
     }
+
+
   });
 
   jQuery('option[value="_none"]').remove();
@@ -908,7 +922,7 @@ for(i = 0; i < resultdata.length; i++)
 
       }
       header_tags = [...new Set(header_tags)]
-      console.log(header_tags);
+     // console.log(header_tags);
       header_tags.sort();
       moduletags = header_tags[0];
       jQuery(moduletags.toLowerCase()).addClass('module-title');
@@ -917,7 +931,7 @@ for(i = 0; i < resultdata.length; i++)
      
       if( submoduletags ===null ){
 
-        console.log('pas de submodule');
+     //   console.log('pas de submodule');
        
       } else{
         jQuery(submoduletags).addClass('supmoduletitle');
@@ -946,7 +960,7 @@ for(i = 0; i < resultdata.length; i++)
   
    //teste
    var valeurtilt = jQuery('input#edit-title-0-value').val();
-   console.log(valeurtilt)
+  // console.log(valeurtilt)
    jQuery('.tilteconteValue').html(valeurtilt)
 
   var valdesciption =jQuery('textarea#edit-field-descriptioncontent-0-value').val();
@@ -1077,16 +1091,79 @@ for(i = 0; i < resultdata.length; i++)
 
   });
 
+  var acc = document.getElementsByClassName("module-title");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      
+    var chevronbi = this.childNodes
+  //jQuery(chevronbi).toggleClass('tranfromnation-chevreon');
+  // this.childNodes.classList.toggle("tranfromnation-chevreon")
+
+       panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+  jQuery(chevronbi).removeClass('tranfromnation-chevreon');
+         
+         // jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
+        } else {
+          panel.style.display = "block";
+  jQuery(chevronbi).addClass('tranfromnation-chevreon');
+
+        //  jQuery('.svg-inline--fa.fa-w-14').addClass('tranfromnation-chevreon');
+
+        }
+       do {
+        
+        panel = panel.nextElementSibling;
+
+     //   console.log(panel)
+        if (panel.style.display === "block") {
+  jQuery(chevronbi).removeClass('tranfromnation-chevreon');
+        
+          panel.style.display = "none";
+       //  jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
+        } else {
+          panel.style.display = "block";
+  jQuery(chevronbi).addClass('tranfromnation-chevreon');
+
+        //  jQuery('.svg-inline--fa.fa-w-14').addClass('tranfromnation-chevreon');
+
+        }
+    }while(panel.className!='module-title')
+      
+    });
+  }
+
+
+
+
+
+
+
+
   // Expand All 
-  jQuery('span.expandalle-minimizeall-button.cursor-pointer ,.module-title').click(function () {
+  jQuery('span.expandalle-minimizeall-button.cursor-pointer').click(function () {
 
    // jQuery('article .node-content p, article .node-content h2,article .node-content h1+* ').toggle(500);
-   jQuery('.course-content').toggle();
+  // jQuery('.course-content').toggle();
 
-    jQuery('.svg-inline--fa.fa-w-14').toggleClass('tranfromnation-chevreon');
+    
 
     var expand = (jQuery('span.expandalle-minimizeall-button.cursor-pointer').text());
-    expand == "Expand all" ? jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Minimize') : jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Expand all')
+    if(expand == "Expand all"){
+      jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Minimize')
+      jQuery('.svg-inline--fa.fa-w-14').addClass('tranfromnation-chevreon');
+      jQuery('.course-content').show();
+    }else{
+      jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Expand all')
+    
+      jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
+      jQuery('.course-content').hide();
+
+    }
+  //  expand == "Expand all" ? jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Minimize') : jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Expand all')
   });
 
 
@@ -1107,7 +1184,11 @@ for(i = 0; i < resultdata.length; i++)
     jQuery('svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 + a').toggleClass('show-edite-mode');
 
 
+<<<<<<< HEAD
     //turneoff == "Turn editing on" ? jQuery('.tw-switch-editing-button').text('Turn editing off') : jQuery('.tw-switch-editing-button').text('Turn editing on');
+=======
+   // turneoff == "Turn editing on" ? jQuery('.tw-switch-editing-button').text('Turn editing off') : jQuery('.tw-switch-editing-button').text('Turn editing on');
+>>>>>>> 74ca5e2f4070109afb2d697fbc05a18038cc44a4
   });
 
   var notefounddasbord = (jQuery('div#block-tailwindcss-content').text());
