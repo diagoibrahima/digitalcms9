@@ -441,9 +441,9 @@ form#comment-form ,form#user-form {
   background: white;
   width: 95%;
   margin: auto;
-  box-shadow: 0px 1px 4px 1px #02020221;
+ // box-shadow: 0px 1px 4px 1px #02020221;
   border-radius: 0.25rem;
-  height: 380px;
+ // height: 380px;
   margin: 30px auto;
 
   .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
@@ -517,7 +517,7 @@ form#node-sub-module-form {
 
 .tw-p-3 {
   padding: 0.75rem !important;
-  margin: -1.5rem 2rem 0rem 1rem;
+  margin: 1.3rem 2rem 0rem 1rem !important;
   text-align: center;
   box-shadow: 1px 1px 6px #2316161a;
 }
@@ -982,6 +982,7 @@ form#user-login-form:after {
 
     div#edit-body-0-format--fHBn1xaNehc {
       display: none;
+      z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
     }
 
     span#cke_1_bottom {
@@ -2369,9 +2370,10 @@ span.expandalle-minimizeall-button.cursor-pointer {
 div#block-views-block-contenttotranslate-block-1 {
   width: 47%;
   background: white;
-  margin: 46px 2%;
+  margin:30px 2%;
   padding: 15px;
-  box-shadow: 0px 1px 4px 1px #02020221;
+  margin-bottom: 1000px;
+//  box-shadow: 0px 1px 4px 1px #02020221;
   border-radius: 0.25rem;
   // height: 555px;
   //  overflow-y: auto;
@@ -2773,7 +2775,7 @@ form#node-localization-form {
   padding: 14px;
   position: absolute;
   height: 51%;
-  margin: 48px 0px;
+  margin:10px 0px;
 
   
 
@@ -2882,6 +2884,7 @@ section article {
 
 .ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons {
   width: 50vw !important;
+  z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
 
   ul.links.inline {
     display: none !important;
@@ -3255,358 +3258,11 @@ div#block-views-block-dasbord-view-block-1:before {
   width: 100%;
   top: -36px;
 }
-//media query 
-
-@media screen and (min-width: 1920px)
-{
-  .report-card {
-    height: 15vh !important;
-    width: 18vw !important;
-    
-  }
- 
-
-}
-// for extend screen
-
-@media screen and (max-width: 1920px)
-{
-
-
-  form#views-exposed-form-list-of-content-page-1 {
-    display: flex;
-    margin: 2rem;
-    position: relative;
-    align-items: center;
-  
-  .dialog-off-canvas-main-canvas{
-      display: flex !important;
-      width: 58.5% !important;
-  }
-  
-  select#edit-field-pays-teste-value {
-    border: solid 1px #1491c1;
-    padding: 5px;
-    border-radius: 5px;
-    color: #1491c1 !important;
-  }
-  
-  }
-
-
-  .dialog-off-canvas-main-canvas .activitylogMessage {
-    margin-top: 12px !important;
-    width: 92% !important;
-    margin-left: -1% !important;
-}
-
-  div#block-views-block-listcomments-block-1 {
-    margin: 190px 50px 0px -4px !important;
-    background: white;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-    line-height: 3;
-    width: 93% !important;
+.server {
+  position: absolute;
 }
 
 
-
-  .node-content form#comment-form {
-    height: 183px !important;
-    width: 33.5% !important;
-    position: absolute !important;
-    top: -250px !important;
-    right: -37% !important;
-}
-  .dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
-    min-height: 100vh;
-}
-  .report-card {
-    height: 15vh !important;
-    width: 18vw !important;
-    
-  }
-
-  .show-message {
-    background: white;
-    margin:2% -1% !important;
-    width: 28.5vw !important;
-
-}
-
-article.node {
-  margin: 2rem;
-  background: white !important;
-  -webkit-box-shadow: 1px 1px 6px #2316161a !important;
-  box-shadow: 1px 1px 6px #2316161a !important;
-  border-radius: 5px !important;
-  padding: 15px !important;
-  width: 70% !important;
-  position: relative !important;
-  top: 8px !important;
-}
-
-
-.dialog-off-canvas-main-canvas .add-translation {
-  width: 19vw !important;
-}
-
-.pstStatusModeration {
-  position: absolute !important;
-  left: 131px !important;
-  top: -316px !important;
-  border-radius: 0px !important;
-  padding: 2px 23px !important;
-}
-
-
-#block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
-  left: 11% !important;
-  
-}
-.separateur-comment {
-   
-  width: 105% !important;
-
-}
-
-
-
-.node-content-form {
-
-  top: 5px !important;
-}
-
- form#node-content-edit-form {
-
-  top: 50px !important;
-}
-
-.live-preveiw-section {
-  margin: 2% 48% !important;
- 
-}
-
-.dialog-off-canvas-main-canvas .grid-cols-1.card-dasboard{
-  margin: 30px auto 60px !important;
-}
-
-div#block-views-block-list-localization-block-1 .horizontal {
-  width: 76% !important;
-}
-
-
-div#block-views-block-list-localization-block-1 {
- 
-  margin-top: 0px !important;
-}
-
-
-}
-//for mac pac
-
-@media screen and (max-width: 1440px)
-{
-  .dialog-off-canvas-main-canvas .report-card {
-    height: 100px !important;
-    width: 250px !important;
-  
-}
-
-div#block-views-block-listcomments-block-1 {
-  margin: 190px 20px 0px 14px !important;
-}
-
-}
-// for unicef pc
-
-@media screen and (max-width: 1280px )
-{
-
-
-  div#block-views-block-list-localization-block-1 h2 {
-
-    margin: 2px 10px !important;
-}
-
-  .dialog-off-canvas-main-canvas span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer{
-
-    width: 66% !important; 
-  }
-
-  .dialog-off-canvas-main-canvas .grid-cols-1.card-dasboard {
-
-    width: 95% !important;
-  }
-
-  .tw-item-card span.section-buttom .numberomodul {
-    margin-right: 6.7rem !important;
-}
-
-
-  a.moderationStateButton.approve{
-
-    right:16px !important;
-
-
-  }
-
-  a.moderationStateButton.reject {
-    right: 106px !important;
-   
-}
-
-  .dialog-off-canvas-main-canvas .activitylogMessage {
-    margin-top: 12px !important;
-    width: 89% !important;
-    margin: 12px 6px!important;
-}
-
-  div#block-views-block-listcomments-block-1 {
-    margin: 190px 0px 0px 6px !important;
-    background: white;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-    line-height: 3;
-    width: 90% !important;
-}
-
-  .node-content form#comment-form {
-    height: 183px !important;
-    width: 32% !important;
-    position: absolute !important;
-    top: -292px !important;
-    right: -35% !important;
-}
-
-  .pstStatusModeration {
-    position: absolute !important;
-    left: 131px !important;
-    top: -361px !important;
-    border-radius: 0px !important;
-    padding: 2px 23px !important;
-}
-
-
-  .node-content-form, form#node-content-edit-form {
-    top: 20px !important;
-}
-
-
-
-  #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-langue, #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
-    background: #2c88ff6b;
-    width: 11% !important;
-   
-}
-
-
-#block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
-  left: 14% !important;
-  
-}
-
-
-  .dialog-off-canvas-main-canvas .report-card {
-    height: 100px !important;
-    width: 205px !important;
-   
-
-}
-
-.dialog-off-canvas-main-canvas .grid-cols-1.card-dasboard{
-  margin: 30px auto 60px !important;
-}
-
-.new-logoutbutton {
-  padding: 0px 10px !important;
-  font-size: 14px;
-  margin-right: -2% !important;
-}
-
-
-.tw-p-3 {
-  padding: 0.75rem !important;
-  text-align: center !important;
-  width: 92% !important;
-  margin: 15px 0px !important;
-  -webkit-box-shadow: 1px 1px 6px #2316161a !important;
-  box-shadow: 1px 1px 6px #2316161a !important;
-}
-
-.show-message {
-  background: white;
-  margin: 2% 3% !important;
-  width: 26vw !important;
-}
-
-
-.dialog-off-canvas-main-canvas .add-translation {
-  width: 17.5vw !important;
-  right: 0% !important;
-  margin: 44px 0px !important;
-  position: relative !important;
-  white-space: nowrap !important;
-}
-
-
-div#block-views-block-list-localization-block-1 {
-  width: 95%  !important;
-  margin: auto !important;
-  margin-top: 0px  !important;
-  margin-bottom: 90px  !important;
-}
-
-
-div#block-views-block-contenttotranslate-block-1 {
-  width: 47%  !important;
-  margin: 46px 2% 190px  !important;
-  padding: 15px  !important;
-}
-
-form#node-localization-form div#edit-actions:after {
-  content: "";
-  position: absolute !important;
-  background: white !important;
-  height: 530px !important;
-  width: 106.5% !important;
-  left: -14px !important;
-  bottom: 0px !important;
-  z-index: 1 !important;
-  border-radius: 5px !important;
-}
-
-.dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
-  min-height: 100vh !important;
-}
-
-
-form#node-server-form div#edit-actions #edit-submit {
-  margin-left: 59% !important ;
-}
-
-
-
-form#node-language-form div#edit-actions #edit-submit {
-  margin-left: 74% !important ;
-}
-
-
-.separateur-comment {
-  width: 111% !important;
-}
-
-
-aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
-  background-color: #1491c1 !important;
-  width: 200px !important;
-  padding: 0px !important;
-}
-
-
-}
 
 .node-content div:nth-child(3) *{
   display: none;
@@ -3657,7 +3313,7 @@ p.course-content span {
 
 .statesubmiteforreviw {
   background: #ffa60083 !important;
-  color: rgb(255, 166, 0) !important;
+  color: rgba(255, 166, 0, 0.979) !important;
 }
 
 td.tw-text-green-400.views-field.views-field-edit-user.views-align-center a {
@@ -3669,4 +3325,459 @@ td.tw-text-green-400.views-field.views-field-edit-user.views-align-center a {
   display: block !important;
 }
 
+div#block-views-block-edittranslation-block-1 {
+  margin-bottom: 160px;
+}
+
+.js-form-item.form-item.js-form-type-select.form-item-field-localization-langue.js-form-item-field-localization-langue  , .js-form-item.form-item.js-form-type-select.form-item-field-localization-channel.js-form-item-field-localization-channel ,div#edit-field-titre-content-wrapper , .js-form-item.form-item.js-form-type-textarea.form-item-field-descriptino-content-0-value.js-form-item-field-descriptino-content-0-value , .js-form-item.form-item.js-form-type-textarea.form-item-field-localization-messagebody-0-value.js-form-item-field-localization-messagebody-0-value {
+  width: 95% !important;
+  margin: auto !important;
+}
+
+form#node-localization-edit-form  {
+ 
+ 
+  div#edit-field-contentid-wrapper , div#edit-moderation-state-wrapper {
+     display: none;
+  }
+   
+   
+  .dialog-off-canvas-main-canvas div#edit-actions {
+  
+    display: flex;
+    width: 97.5%;
+    padding: 16px 17px !important;
+ }
+ 
+   
+  }
+  
+
+
+//media query  HP externe
+
+@media screen and (min-width: 1920px)
+{
+  .report-card {
+    height: 15vh !important;
+    width: 18vw !important;
+    
+  }
+ 
+
+}
+// for extend screen HP externe
+
+@media screen and (max-width: 1920px)
+{
+  
+
+  .contentent-preview-good-format {
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    height:120vh ;
+    overflow-y: auto !important;
+}
+
+
+  form#views-exposed-form-list-of-content-page-1 {
+    display: flex;
+    margin: 2rem;
+    position: relative;
+    align-items: center;
+  
+  .dialog-off-canvas-main-canvas{
+      display: flex !important;
+      width: 58.5% !important;
+  }
+  
+  select#edit-field-pays-teste-value {
+    border: solid 1px #1491c1;
+    padding: 5px;
+    border-radius: 5px;
+    color: #1491c1 !important;
+  }
+  
+  }
+
+
+  .dialog-off-canvas-main-canvas .activitylogMessage {
+    margin-top: 15px !important;
+    width: 92.5% !important;
+    margin-left: -2% !important;
+}
+
+  div#block-views-block-listcomments-block-1 {
+    margin:240px 50px 0px -10px !important;
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    line-height: 3;
+    width: 93% !important;
+}
+
+
+
+  .node-content form#comment-form {
+    height: 183px !important;
+    width: 33.5% !important;
+    position: absolute !important;
+    top: -219px !important;
+    right: -37% !important;
+}
+  .dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
+    min-height: 100vh;
+}
+  .report-card {
+    height: 15vh !important;
+    width: 18vw !important;
+    
+  }
+
+  .show-message {
+    background: white;
+    margin:2% -1% !important;
+    width: 29vw !important;
+
+}
+
+article.node {
+  margin:0px 2rem;
+  background: white !important;
+  -webkit-box-shadow: 1px 1px 6px #2316161a !important;
+  box-shadow: 1px 1px 6px #2316161a !important;
+  border-radius: 5px !important;
+  padding: 15px !important;
+  width: 70% !important;
+  position: relative !important;
+  top: 10px !important;
+}
+
+
+.dialog-off-canvas-main-canvas .add-translation {
+  width: 19vw !important;
+}
+
+div#block-views-block-languagesmstranslation-block-1 {
+
+  margin: 30px 2rem !important;
+ 
+}
+
+.pstStatusModeration {
+  position: absolute !important;
+  left: 131px !important;
+  top: -311px !important;
+  border-radius: 0px !important;
+  padding: 2px 23px !important;
+}
+
+a.moderationStateButton.submit.submitpositionleft, a.moderationStateButton.approve, a.moderationStateButton.reject, a.moderationStateButton.rsubmit{
+  top: -48px;
+}
+
+
+#block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
+  left: 11% !important;
+  
+}
+.separateur-comment {
+   
+  width: 105% !important;
+
+}
+
+
+
+.node-content-form {
+
+  top: 5px !important;
+}
+
+ form#node-content-edit-form {
+
+  top: 90px !important;
+}
+
+.live-preveiw-section {
+  margin: 2% 48% !important;
+ 
+}
+
+.dialog-off-canvas-main-canvas .grid-cols-1.card-dasboard{
+  margin: 30px auto 60px !important;
+}
+
+div#block-views-block-list-localization-block-1 .horizontal {
+  width: 76% !important;
+}
+
+
+div#block-views-block-list-localization-block-1 {
+ 
+  margin-top: 20px !important;
+}
+
+div#block-views-block-edittranslation-block-1 a {
+  background: #1491c1 !important; 
+  position: absolute !important;
+  top: 49px !important;
+  right:27% !important;
+  color: white !important;
+  padding: 15px !important;
+  font-size: 12px !important;
+}
+
+
+
+}
+//for mac pac 
+
+@media screen and (max-width: 1440px)
+{
+  .dialog-off-canvas-main-canvas .report-card {
+    height: 100px !important;
+    width: 250px !important;
+  
+}
+
+div#block-views-block-listcomments-block-1 {
+  margin: 190px 20px 0px 14px !important;
+}
+
+}
+// for unicef pc UNICEF
+
+@media screen and (max-width: 1280px )
+{
+
+  div#block-views-block-edittranslation-block-1 a {
+    background: #1491c1 !important; 
+    position: absolute !important;
+    top: 49px !important;
+    right:27% !important;
+    color: white !important;
+    padding: 15px !important;
+    font-size: 12px !important;
+ }
+ 
+
+  .contentent-preview-good-format {
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    height: 121vh;
+    overflow-y: auto !important;
+ }
+
+
+ .no-resultlocalisation {
+
+  width: 74.5% !important;
+  margin-bottom: 350px !important;
+}
+
+ 
+
+  div#block-views-block-list-localization-block-1 h2 {
+
+    margin: 20px 10px !important;
+}
+
+  .dialog-off-canvas-main-canvas span.tw-switch-editing-button.tw-rounded.border.tw-border-green-500.tw-px-5.py-2.tw-text-green-700.tw-text-sm.tw-cursor-pointer{
+
+    width: 66% !important; 
+  }
+
+  .dialog-off-canvas-main-canvas .grid-cols-1.card-dasboard {
+
+    width: 100% !important;
+  }
+
+  .tw-item-card span.section-buttom .numberomodul {
+    margin-right: 6.7rem !important;
+}
+
+
+  a.moderationStateButton.approve{
+
+    right:16px !important;
+
+
+  }
+
+  a.moderationStateButton.reject {
+    right: 106px !important;
+   
+}
+
+  .dialog-off-canvas-main-canvas .activitylogMessage {
+
+    width:91% !important;
+    margin:17px 2px!important;
+}
+
+  div#block-views-block-listcomments-block-1 {
+    margin: 218px 0px 0px 2px !important;
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    line-height: 3;
+    width: 90% !important;
+}
+
+.node-content form#comment-form {
+  height: 183px !important;
+  width: 32% !important;
+  position: absolute !important;
+  top: -242px !important;
+  right: -35% !important;
+}
+
+
+.pstStatusModeration {
+  position: absolute !important;
+  left: 131px !important;
+  top: -358px !important;
+  border-radius: 0px !important;
+  padding: 2px 23px !important;
+}
+
+
+  .node-content-form, form#node-content-edit-form {
+    top: 20px !important;
+}
+
+ form#node-content-edit-form {
+  top:107px !important;
+}
+
+
+
+  #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-langue, #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
+    background: #2c88ff6b;
+    width: 11% !important;
+   
+}
+
+
+#block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
+  left: 14% !important;
+  
+}
+
+
+  .dialog-off-canvas-main-canvas .report-card {
+    height: 100px !important;
+    width: 205px !important;
+   
+
+}
+
+.dialog-off-canvas-main-canvas .grid-cols-1.card-dasboard{
+  margin: 30px auto 60px !important;
+}
+
+.new-logoutbutton {
+  padding: 0px 10px !important;
+  font-size: 14px;
+  margin-right: -2% !important;
+}
+
+
+.tw-p-3 {
+  padding: 0.75rem !important;
+  text-align: center !important;
+  width: 92% !important;
+  margin: 15px 0px !important;
+  -webkit-box-shadow: 1px 1px 6px #2316161a !important;
+  box-shadow: 1px 1px 6px #2316161a !important;
+}
+
+div#block-views-block-list-localization-block-1 .horizontal {
+  width: 78% !important;
+}
+
+
+.show-message {
+  background: white;
+  margin: 0% 0% 10% 0% !important;
+  width: 28vw !important;
+}
+
+
+.dialog-off-canvas-main-canvas .add-translation {
+  width: 19vw !important;
+  right: 0% !important;
+  margin: 44px 0px !important;
+  position: relative !important;
+  white-space: nowrap !important;
+}
+
+
+div#block-views-block-list-localization-block-1 {
+  width: 95%  !important;
+  margin: auto !important;
+  margin-top: 0px  !important;
+  margin-bottom: 90px  !important;
+}
+
+div#block-views-block-contenttotranslate-block-1 {
+  width: 47% !important;
+  margin: 28px 2% 190px !important;
+  padding: 15px !important;
+  margin-bottom: 500px !important;
+  height: 121vh !important;
+  overflow-y: auto !important;
+}
+
+
+form#node-localization-form div#edit-actions:after {
+  content: "";
+  position: absolute !important;
+  background: white !important;
+  height: 530px !important;
+  width: 106.5% !important;
+  left: -14px !important;
+  bottom: 0px !important;
+  z-index: 1 !important;
+  border-radius: 5px !important;
+}
+
+.dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
+  min-height: 100vh !important;
+}
+
+
+form#node-server-form div#edit-actions #edit-submit {
+  margin-left: 59% !important ;
+}
+
+
+
+form#node-language-form div#edit-actions #edit-submit {
+  margin-left: 74% !important ;
+}
+
+
+.separateur-comment {
+  width: 109% !important;
+}
+.image-profile-user .name-profile-user {
+ 
+  font-size: 12px !important;
+}
+
+
+aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
+  background-color: #1491c1 !important;
+  width: 200px !important;
+  padding: 0px !important;
+}
+
+
+}
 
