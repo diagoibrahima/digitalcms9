@@ -18,10 +18,11 @@ RUN mv ${PHP_INI_DIR}/php.ini-production ${PHP_INI_DIR}/php.ini \
 
 WORKDIR /var/www
 
-ARG DIGITALCMS_APP_VERSION=CmstNewVersion2
-ENV DIGITALCMS_APP_VERSION=${DIGITALCMS_APP_VERSION}
+#ARG DIGITALCMS_APP_VERSION=CmstNewVersion2
+#ENV DIGITALCMS_APP_VERSION=${DIGITALCMS_APP_VERSION}
 
-RUN git clone --depth 1 --branch "$DIGITALCMS_APP_VERSION" https://github.com/diagoibrahima/digitalcms9.git \
+#RUN git clone --depth 1 --branch "$DIGITALCMS_APP_VERSION" https://github.com/diagoibrahima/digitalcms9.git \
+RUN git clone --depth 1 --branch main https://github.com/diagoibrahima/digitalcms9.git \
     && curl -sS https://getcomposer.org/installer -o composer-setup.php \
     && php composer-setup.php --install-dir=/usr/local/bin --filename=composer \
     && cd digitalcms9 \

@@ -5,6 +5,8 @@ on:
     branches: [ main, CmstNewVersion2 ]
   pull_request:
     branches: [ main, CmstNewVersion2 ]
+  tags:
+    - 'v*'
 
 jobs:
 
