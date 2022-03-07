@@ -1327,9 +1327,5 @@ function detectTopLevel(content){
   });
 
 
-
-
-
-
 });
 
