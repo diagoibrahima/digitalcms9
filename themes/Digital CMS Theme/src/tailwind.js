@@ -134,13 +134,36 @@ jQuery('#buttonstatusserver').click(function () {
   function getSMS(element) {
     var regex = /(<([^>]+)>)/ig
     sms ="";
-    var p = element.match(/<p>.*?<\/p>/g);
+    //var p = element.match(/<p>.*?<\/p>/g);
+    var p = element.match(/<.*?(.).*?>*?<\/.*?\1>/g);
+    
     for(i=0; i<p.length; i++){
       var sms = sms+" "+p[i];
     }
     return sms.replace(regex, "").match(/.{1,160}/g);
   }
   
+
+// Function detect tops levels
+function detectTopLevel(content){
+  regex = /<h[1-6].*>.*<\/h[1-6]>/g
+  header_tags = [];
+  header_tags_populated = content.match(regex);
+  
+  for(i=0; i < header_tags_populated.length; i++){
+    header_tags.push(jQuery(header_tags_populated[i]).get(0).tagName);
+  }
+  header_tags = [...new Set(header_tags)];
+  header_tags.sort(); 
+  moduletags = header_tags[0];
+  submoduletags = header_tags[1]; 
+
+  return [moduletags,submoduletags];
+}
+// Function detect tops levels_________________________ end
+
+
+
   // Appel Url to get list of translation by split it in pieces of message
   
 
@@ -153,7 +176,7 @@ jQuery('#buttonstatusserver').click(function () {
     
     
     //alert(idnode);
-  let url2 = protocol+"//"+hostname+"/en/rest/localizationList/"+idnode;  
+  let url2 = protocol+"//"+hostname+"/digitalcms9/en/rest/localizationList/"+idnode;  
   console.log(url2);
 
   fetch(url2).then((response)=>
@@ -161,9 +184,29 @@ jQuery('#buttonstatusserver').click(function () {
       //console.log(data);
       for(let translation of data){
         var regex = /(<([^>]+)>)/ig
+
+        //Detecton le toplevel
+        tabtoplevelexcel = detectTopLevel(translation.Translation);
+
+        excelmodule = tabtoplevelexcel[0].toLowerCase();
+        excelsubmodule = tabtoplevelexcel[1].toLowerCase();
+
+        console.log("---------------------------");
+        console.log("Top 1 "+excelmodule);
+        console.log("Top 2"+excelsubmodule);
+        console.log("---------------------------");
+
+        excelregexa = new RegExp(`<${excelmodule}.*?>.*?<\/${excelmodule}>`, "g")
+        excelregexb = new RegExp(`<${excelsubmodule}.*?>.*?<\/${excelsubmodule}>`, "g")
+        
         var smssplit = getSMS(translation.Translation);
         for(i=0; i<smssplit.length; i++){
-          items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(/<h1>.*?<\/h1>/g)[0].replace(regex, ""),,smssplit[i]]);
+          if(excelsubmodule == null){
+            items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[0].replace(regex, ""),,smssplit[i]]);
+          }else {
+            items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[0].replace(regex, ""),translation.Translation.match(excelregexb)[0].replace(regex, ""),smssplit[i]]);
+          }
+          
         }
         window.localStorage.setItem('filename', translation.Cours+"_translation");
       }
