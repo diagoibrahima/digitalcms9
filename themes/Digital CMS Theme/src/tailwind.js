@@ -1208,7 +1208,12 @@ function detectTopLevel(content){
 
 
 
-
+  jQuery('p').each(function() {
+    var $this = jQuery(this);
+    if($this.html().replace(/\s|&nbsp;/g, '').length == 0) {
+        $this.remove();
+    }
+});
 
 
 

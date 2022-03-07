@@ -3187,13 +3187,6 @@ a#cke_38 .section-of-localisation-globale:before {
   font-size: medium;
 }
 
-.circlenb {
-  background-color: red;
-  color: white;
-  border-radius: 20px;
-  padding: 5px;
-}
-
 .etattranslation {
   background-color: gray;
   color: white;
@@ -3694,6 +3687,10 @@ span.message-langage.pstStatusModeration {
   opacity: 0;
 }
 
+form#node-localization-edit-form {
+  padding: 10px 0px;
+}
+
 @media screen and (min-width: 1920px) {
   .report-card {
     height: 15vh !important;
@@ -3732,7 +3729,7 @@ span.message-langage.pstStatusModeration {
     color: #1491c1 !important;
   }
   .dialog-off-canvas-main-canvas .activitylogMessage {
-    margin-top: 15px !important;
+    margin-top: 30px !important;
     width: 92.5% !important;
     margin-left: -2% !important;
   }
@@ -3876,8 +3873,8 @@ span.message-langage.pstStatusModeration {
     right: 106px !important;
   }
   .dialog-off-canvas-main-canvas .activitylogMessage {
-    width: 91% !important;
-    margin: 17px 2px !important;
+    width: 90% !important;
+    margin: 20px 0px !important;
   }
   div#block-views-block-listcomments-block-1 {
     margin: 218px 0px 0px 2px !important;
