@@ -115,6 +115,7 @@ jQuery('#buttonstatusserver').click(function () {
 
 
 // Appell API to get the url of the translation Server
+
   let url = protocol+"//"+hostname+"/serverconf";
 //  console.log(url);
   fetch(url).then((response)=>
@@ -815,7 +816,6 @@ function detectTopLevel(content){
             items.push([,,element.match(/.{1,160}/g)]);
           }
   });
-
   //console.table(items);
 
     jQuery(this).removeClass("tw-bg-blue-500");
@@ -1094,7 +1094,8 @@ function detectTopLevel(content){
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
       
-    var chevronbi = this.childNodes
+    var chevronbi = this.lastChild
+    //console.log(chevronbi)
   //jQuery(chevronbi).toggleClass('tranfromnation-chevreon');
   // this.childNodes.classList.toggle("tranfromnation-chevreon")
 
