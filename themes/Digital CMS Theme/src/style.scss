@@ -2876,13 +2876,7 @@ a#cke_38 {
   position: relative;
   font-size: medium;
 }
-.circlenb{
-  background-color: red;
-  color: white;
-  border-radius: 20px;
-  padding: 5px;
-  
-}
+
 
 .etattranslation{
   background-color: gray;
@@ -3382,7 +3376,10 @@ form#node-localization-edit-form  {
   span.message-langage.pstStatusModeration {
     opacity: 0;
 }
-  
+
+form#node-localization-edit-form {
+  padding: 10px 0px;
+}
 
 
 //media query  HP externe
@@ -3434,7 +3431,7 @@ form#node-localization-edit-form  {
 
 
   .dialog-off-canvas-main-canvas .activitylogMessage {
-    margin-top: 15px !important;
+    margin-top:30px !important;
     width: 92.5% !important;
     margin-left: -2% !important;
 }
