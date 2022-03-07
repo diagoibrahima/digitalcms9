@@ -1000,13 +1000,13 @@ function detectTopLevel(content){
 
         
 
-        jQuery('.contentent-preview-good-format').find('*').addClass('course-content');
-        var ckedi = jQuery('.contentent-preview-good-format').html();
+     jQuery('.contentent-preview-good-format').find('*').addClass('course-content');
+     var ckedi = jQuery('.contentent-preview-good-format').html();
+     var ck2 =   jQuery(".module-title span:nth-last-of-type(1)").remove()
+     console.log('===================Debut ck 2===================')
+     console.log(ck2)
+
         CKEDITOR.instances['edit-body-0-value'].setData(ckedi);
-        
-
-     
-
       });
 
     
@@ -1149,6 +1149,8 @@ function detectTopLevel(content){
     acc[i].addEventListener("click", function() {
       
     var chevronbi = this.lastChild
+
+   // jQuery('module-title p').remove();
     //console.log(chevronbi)
   //jQuery(chevronbi).toggleClass('tranfromnation-chevreon');
   // this.childNodes.classList.toggle("tranfromnation-chevreon")
