@@ -3690,6 +3690,10 @@ form#node-localization-edit-form .dialog-off-canvas-main-canvas div#edit-actions
   padding: 16px 17px !important;
 }
 
+span.message-langage.pstStatusModeration {
+  opacity: 0;
+}
+
 @media screen and (min-width: 1920px) {
   .report-card {
     height: 15vh !important;
