@@ -154,7 +154,7 @@ jQuery('#buttonstatusserver').click(function () {
     
     //alert(idnode);
   let url2 = protocol+"//"+hostname+"/en/rest/localizationList/"+idnode;  
- // console.log(url2);
+  console.log(url2);
 
   fetch(url2).then((response)=>
     response.json().then((data)=>{
@@ -235,10 +235,6 @@ jQuery(moduletags.toLowerCase()).addClass('module-title');
 
 jQuery("#block-views-block-contenttotranslate-block-1").ready(function(){
   
-
-
-
-
       //hide ckeditor menu on sms channel
     jQuery('form#node-localization-form #cke_19,form#node-localization-form #cke_22,form#node-localization-form #cke_29,form#node-localization-form #cke_35').addClass('hidemenuckeditorOnSms');
 /*
@@ -508,7 +504,7 @@ jQuery(document).ready(function () {
     zip.generateAsync({ type: "blob" })
       .then(function (content) {
         // see FileSaver.js
-        saveAs(content, "example.zip");
+        saveAs(content, "course.zip");
       });
     /*
     //The data URL
@@ -737,86 +733,90 @@ jQuery(document).ready(function () {
   });
 
 
-//function 
 
-  // When click on preview button
+// When click on preview button
   jQuery(".btn-group > .btn-preview").click(function () {
     jQuery('.nbmessage').remove();
     var count = 0;
+    var size = 160;
+    var tabsms = [];
     var regex1 = /(<([^>]+)>)/ig
     var regex2 = /<h1>.*?<\/h1>|<h2>.*?<\/h2>/g
+
+
+// function ChunkSubStr pour diviser un contenu en plusieur enseble de size caractere
+    function chunkSubstr(str, size) {
+      const numChunks = Math.ceil(str.length / size)
+      const chunks = new Array(numChunks)
+    
+      for (let i = 0, o = 0; i < numChunks; ++i, o += size) {
+        chunks[i] = str.substr(o, size)
+      }
+    
+      return chunks
+    }
+// function ChunkSubStr__________________end
+
+// Function detect tops levels
+function detectTopLevel(content){
+  regex = /<h[1-6].*>.*<\/h[1-6]>/g
+  header_tags = [];
+  header_tags_populated = content.match(regex);
+  
+  for(i=0; i < header_tags_populated.length; i++){
+    header_tags.push(jQuery(header_tags_populated[i]).get(0).tagName);
+  }
+  header_tags = [...new Set(header_tags)];
+  header_tags.sort(); 
+  moduletags = header_tags[0];
+  submoduletags = header_tags[1]; 
+
+  return [moduletags,submoduletags];
+}
+// Function detect tops levels_________________________ end
+
     // recuperer le contenu de ckeditor
     var description = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].getData();
 
-    //var htmldata = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].document.getBody().getHtml();
-    //var htmldata2 = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].element.getHtml();
+    // recuperation du contenu du ckeditor
+    var htmldata = CKEDITOR.instances['edit-field-localization-messagebody-0-value'].document.getBody().getHtml();
+
+    //recuperation de toutes les balise avec leur contenu dans une table
+    resultdata  = description.match(/<.*?(.).*?>*?<\/.*?\1>/g);
 
 
- resultdata  = description.match(/<h(.)>.*?<\/h\1>|<p>.*?<\/p\>/g);
-var textebrute  = description.replace(regex1, "");
+
+//Detectons Top Level du contenu
+    var tabtoplevel = detectTopLevel(description);
+    tagmodule = tabtoplevel[0].toLowerCase();
+    tagsubmodule = tabtoplevel[1].toLowerCase();
+
+    console.log("top level 1 "+tagmodule);
+    console.log("top level 2 "+tagsubmodule);
 
 
-messagestrip = textebrute.match(/.{1,160}/g);
+    //messagestrip = textebrute.match(/.{1,160}/g);
 
-console.log("---------------------");
-console.log(textebrute);
+    var items = [];
 
-  var items = [];
+  // regex avec des variable correspondant a nos oplevel
+  regexa = new RegExp(`<${tagmodule}.*?>.*?<\/${tagmodule}>`, "g")
+  regexb = new RegExp(`<${tagsubmodule}.*?>.*?<\/${tagsubmodule}>`, "g")
 
+  // ici on parcours tout les element de resultdata
   resultdata.forEach(function(element) {
-
-          if(element.match(/<h1>.*?<\/h1>/g)){ 
-           // console.log(element);
+          if(element.match(regexa)){ 
             items.push([element,,]);
-            
-          }else if(element.match(/<h2>.*?<\/h2>/g)){ 
-           // console.log(element);
+          }else if(element.match(regexb)){ 
             items.push([,element,]);
-          }else if(element.match(/<p>.*?<\/p>/g)){ 
-            //var sms1 = element.replace('<p>','');
-            //var sms2 = sms1.replace('</p>','');
-            //var xxx = jQuery('<p class="messagetosend">'+sms2.match(/.{1,160}/g)+'</p>');
+          }else { 
             // compter le nombre de message per cours
             count = count + element.match(/.{1,160}/g).length;
             items.push([,,element.match(/.{1,160}/g)]);
-            //console.log(element.match(/.{1,160}/g));
-
-            //var sms = element.match(/.{1,160}/g);
-            //for(i = 0; i < sms.length; i++)
-            // {
-            //  console.log("message : " + i + sms[i]);
-            // } 
           }
-
   });
 
   //console.table(items);
-
-  // for loop
-  /* 
-for (var i = 0; i < items.length; i++) {
-  for (var j = 0; j < items[i].length; j++) {
-   console.log(items[i]);     
-  }
-}
-*/
- //console.log("message : " + i + sms[i]);
-//split a string into segments of n characters?
-//var str = 'abcdefghijkl';
-//console.log(str.match(/.{1,3}/g));
-
-
-/* 
-for(i = 0; i < resultdata.length; i++)
-{    
-  if(resultdata[i].match(/<h1>.*?<\/h1>/g)){
-    console.log(resultdata[i]);
-    if(resultdata[i].match(/p>.*?<\/p>/g)){ 
-
-    }
-  }
-}
-  */
 
     jQuery(this).removeClass("tw-bg-blue-500");
     jQuery(this).addClass("tw-bg-blue-700");
@@ -851,7 +851,7 @@ for(i = 0; i < resultdata.length; i++)
     } else if (jQuery('#edit-field-localization-channel').find(":selected").text() == "IOGT") {
       jQuery('<div class="channelgenerategeneral"><div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>IOGT</div></div>').insertAfter('#edit-field-localization-channel');
     }
-      jQuery(' <div class="nbmessage"> Translation will be divide into '+count+' messages </div> ').insertBefore('.channelgenerategeneral');
+      jQuery(' <div class="nbmessage"> Translation will be divided into <span class="circlenb">'+count+'</span> messages </div> ').insertBefore('.channelgenerategeneral');
       //jQuery('.channelgenerate ').append(items);
 
     for (var i = 0; i < items.length; i++) {
@@ -941,7 +941,6 @@ for(i = 0; i < resultdata.length; i++)
 
     });
 
-
     //changement contenu Ckeditor
       jQuery('form#node-content-form input#edit-submit , .node-content-edit-form input#edit-submit').click(function(){
 
@@ -974,8 +973,6 @@ for(i = 0; i < resultdata.length; i++)
   });
   
   
- 
- 
   jQuery('#edit-field-localization-channel').change(function() {
   
     let channel=jQuery( "#edit-field-localization-channel option:selected" ).text();
@@ -1184,11 +1181,7 @@ for(i = 0; i < resultdata.length; i++)
     jQuery('svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 + a').toggleClass('show-edite-mode');
 
 
-<<<<<<< HEAD
-    //turneoff == "Turn editing on" ? jQuery('.tw-switch-editing-button').text('Turn editing off') : jQuery('.tw-switch-editing-button').text('Turn editing on');
-=======
    // turneoff == "Turn editing on" ? jQuery('.tw-switch-editing-button').text('Turn editing off') : jQuery('.tw-switch-editing-button').text('Turn editing on');
->>>>>>> 74ca5e2f4070109afb2d697fbc05a18038cc44a4
   });
 
   var notefounddasbord = (jQuery('div#block-tailwindcss-content').text());
