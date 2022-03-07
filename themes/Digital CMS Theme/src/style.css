@@ -3175,7 +3175,16 @@ a#cke_38 .section-of-localisation-globale:before {
   font-size: smaller;
   z-index: 999999999999;
   position: relative;
-  font-size: large;
+  font-size: medium;
+}
+
+.nbcarac {
+  color: #1391c1;
+  border-radius: 5px;
+  font-size: smaller;
+  z-index: 999999999999;
+  position: relative;
+  font-size: medium;
 }
 
 .circlenb {
