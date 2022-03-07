@@ -978,7 +978,7 @@ function detectTopLevel(content){
   });
   
   
-  jQuery('#edit-field-localization-channel').change(function() {
+    jQuery('#edit-field-localization-channel').change(function() {
   
     let channel=jQuery( "#edit-field-localization-channel option:selected" ).text();
   
