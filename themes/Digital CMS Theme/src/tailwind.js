@@ -176,7 +176,7 @@ function detectTopLevel(content){
     
     
     //alert(idnode);
-  let url2 = protocol+"//"+hostname+"/digitalcms9/en/rest/localizationList/"+idnode;  
+  let url2 = protocol+"//"+hostname+"/rest/localizationList/"+idnode;  
   console.log(url2);
 
   fetch(url2).then((response)=>
@@ -206,7 +206,6 @@ function detectTopLevel(content){
           }else {
             items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[0].replace(regex, ""),translation.Translation.match(excelregexb)[0].replace(regex, ""),smssplit[i]]);
           }
-          
         }
         window.localStorage.setItem('filename', translation.Cours+"_translation");
       }
@@ -1309,10 +1308,6 @@ function detectTopLevel(content){
     jQuery(this).find('.blockmodule-titre-module span').html('Module ' + moduleIndexee + ':');
 
   });
-
-
-
-
 
 
 });
