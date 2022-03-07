@@ -3194,6 +3194,15 @@ a#cke_38 .section-of-localisation-globale:before {
   padding: 5px;
 }
 
+.etattranslation {
+  background-color: gray;
+  color: white;
+  border-radius: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: small;
+}
+
 .print__wrapper.print__wrapper--pdf {
   display: -webkit-box;
   display: -ms-flexbox;
