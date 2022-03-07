@@ -420,6 +420,7 @@ jQuery('form#views-exposed-form-list-of-content-page-1').( function(){
 
 
 jQuery(document).ready(function () {
+
   jQuery('.module-title').removeClass('course-content')
 
    jQuery('article .node-content .module-title').append('<svg class="svg-inline--fa fa-chevron-down fa-w-14 expand-minimize-button text-light text-xl font-thin text-gray-400" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>');
@@ -738,11 +739,14 @@ jQuery(document).ready(function () {
 // When click on preview button
   jQuery(".btn-group > .btn-preview").click(function () {
     jQuery('.nbmessage').remove();
+    jQuery('.nbcarac').remove();
     var count = 0;
     var size = 160;
     var tabsms = [];
     var regex1 = /(<([^>]+)>)/ig
     var regex2 = /<h1>.*?<\/h1>|<h2>.*?<\/h2>/g
+    nbcaracterecontent = 0;
+    
 
 
 // function ChunkSubStr pour diviser un contenu en plusieur enseble de size caractere
@@ -785,7 +789,8 @@ function detectTopLevel(content){
     //recuperation de toutes les balise avec leur contenu dans une table
     resultdata  = description.match(/<.*?(.).*?>*?<\/.*?\1>/g);
 
-
+    //Nombre de caracterer du content traduit
+    nbcaracterecontent =  description.replace(regex1,"").trim().replace(/(^[ \t]*\n)/gm, "").length;
 
 //Detectons Top Level du contenu
     var tabtoplevel = detectTopLevel(description);
@@ -840,10 +845,13 @@ function detectTopLevel(content){
     jQuery(".btn-group > .btn-preview").prop('disabled', true);
     if (jQuery('#edit-field-localization-channel').find(":selected").text() == "SMS") {
       jQuery('<div class="channelgenerategeneral"> <div class="channelgenerate sms" id="sms"><i class="fas fa-sms"></i>SMS</div> </div>').insertAfter('#edit-field-localization-channel');
+      jQuery(' <div class="nbmessage"> Translation will be divided into <span class="circlenb">'+count+'</span> messages </div> ').insertBefore('.channelgenerategeneral');
     } else if (jQuery('#edit-field-localization-channel').find(":selected").text() == "Whatsapp") {
       jQuery('<div class="channelgenerategeneral"><div class="channelgenerate whatsapp"><i class="fab fa-whatsapp"></i>WHATSAPP</div> </div>').insertAfter('#edit-field-localization-channel');
+      jQuery(' <div class="nbmessage"> A whatsapp message can contain <span class="circlenb">'+65.536+'</span> characters </div> ').insertBefore('.channelgenerategeneral');
     } else if (jQuery('#edit-field-localization-channel').find(":selected").text() == "Telegram") {
       jQuery('<div class="channelgenerategeneral"><div class="channelgenerate telegrame"><i class="fab fa-telegram"></i>TELEGRAM</div> </div>').insertAfter('#edit-field-localization-channel');
+      jQuery(' <div class="nbmessage"> A telegram message can contain <span class="circlenb">'+4.096+'</span> characters </div> ').insertBefore('.channelgenerategeneral');
     } else if (jQuery('#edit-field-localization-channel').find(":selected").text() == "Messenger") {
       jQuery('<div class="channelgenerategeneral"><div class="channelgenerate messanger"><i class="fab fa-facebook-messenger"></i>MESSENGER</div> </div>').insertAfter('#edit-field-localization-channel');
     } else if (jQuery('#edit-field-localization-channel').find(":selected").text() == "Moodle") {
@@ -851,7 +859,11 @@ function detectTopLevel(content){
     } else if (jQuery('#edit-field-localization-channel').find(":selected").text() == "IOGT") {
       jQuery('<div class="channelgenerategeneral"><div class="channelgenerate moodle"><i class="fas fa-graduation-cap"></i>IOGT</div></div>').insertAfter('#edit-field-localization-channel');
     }
-      jQuery(' <div class="nbmessage"> Translation will be divided into <span class="circlenb">'+count+'</span> messages </div> ').insertBefore('.channelgenerategeneral');
+
+    
+    //jQuery(".cke_path_empty").html(nbcaracterecontent);
+    jQuery('<div class="nbcarac"> <span class="circlenb2">'+nbcaracterecontent+'</span> Characters </div>').insertAfter('#cke_edit-field-localization-messagebody-0-value');
+    
       //jQuery('.channelgenerate ').append(items);
 
     for (var i = 0; i < items.length; i++) {
