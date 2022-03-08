@@ -519,7 +519,7 @@ jQuery(document).ready(function () {
 
     jQuery("div#block-views-block-list-localization-block-1 .show-message  span.message-etat").each(function () {
 
-       if(jQuery(this).text()=='Submit for review' || jQuery(this).text()=='Submit for review'){
+       if(jQuery(this).text()=='Pending' || jQuery(this).text()=='Pending'){
 
          jQuery(this).addClass('statesubmiteforreviw').text('Pending');
        }
@@ -1081,7 +1081,7 @@ function detectTopLevel(content){
 
   }
 
-  if (moderationstate == 'Submit for review') {
+  if (moderationstate == 'Pending') {
     jQuery('a.moderationStateButton.submit').remove();
     jQuery('a.moderationStateButton.sforreview').remove();
     jQuery('a.moderationStateButton.rsubmit').remove();
