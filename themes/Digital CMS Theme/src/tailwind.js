@@ -176,7 +176,12 @@ function detectTopLevel(content){
     
     
     //alert(idnode);
-  let url2 = protocol+"//"+hostname+"/digitalcms9/en/rest/localizationList/"+idnode;  
+    console.log("je suis host" + hostname);
+    if(hostname==="localhost"){ 
+      var url2 = protocol+"//"+hostname+"/digitalcms9/rest/localizationList/"+idnode;
+    }else{
+    var url2 = protocol+"//"+hostname+"/rest/localizationList/"+idnode;  
+  }
   console.log(url2);
 
   fetch(url2).then((response)=>
