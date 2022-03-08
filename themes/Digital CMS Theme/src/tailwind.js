@@ -212,6 +212,7 @@ function detectTopLevel(content){
           }else {
             items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[0].replace(regex, ""),translation.Translation.match(excelregexb)[0].replace(regex, ""),smssplit[i]]);
           }
+          
         }
         window.localStorage.setItem('filename', translation.Cours+"_translation");
       }
@@ -518,7 +519,7 @@ jQuery(document).ready(function () {
 
     jQuery("div#block-views-block-list-localization-block-1 .show-message  span.message-etat").each(function () {
 
-       if(jQuery(this).text()=='Submit for review' || jQuery(this).text()=='Submit for review'){
+       if(jQuery(this).text()=='Pending' || jQuery(this).text()=='Pending'){
 
          jQuery(this).addClass('statesubmiteforreviw').text('Pending');
        }
@@ -1005,14 +1006,23 @@ function detectTopLevel(content){
 
         
 
-        jQuery('.contentent-preview-good-format').find('*').addClass('course-content');
-        var ckedi = jQuery('.contentent-preview-good-format').html();
+     jQuery('.contentent-preview-good-format').find('*').addClass('course-content');
+     var ckedi = jQuery('.contentent-preview-good-format').html();
+     var ck2 =   jQuery(".module-title span:nth-last-of-type(1)").remove()
+     console.log('===================Debut ck 2===================')
+     console.log(ck2)
+
         CKEDITOR.instances['edit-body-0-value'].setData(ckedi);
-        
-
-     
-
       });
+
+     //remove all p 
+
+      jQuery('p').each(function() {
+        var $this = jQuery(this);
+        if($this.html().replace(/\s|&nbsp;/g, '').length == 0) {
+            $this.remove();
+        }
+    });
 
     
   
@@ -1070,7 +1080,7 @@ function detectTopLevel(content){
 
   }
 
-  if (moderationstate == 'Submit for review') {
+  if (moderationstate == 'Pending') {
     jQuery('a.moderationStateButton.submit').remove();
     jQuery('a.moderationStateButton.sforreview').remove();
     jQuery('a.moderationStateButton.rsubmit').remove();
@@ -1154,6 +1164,8 @@ function detectTopLevel(content){
     acc[i].addEventListener("click", function() {
       
     var chevronbi = this.lastChild
+
+   // jQuery('module-title p').remove();
     //console.log(chevronbi)
   //jQuery(chevronbi).toggleClass('tranfromnation-chevreon');
   // this.childNodes.classList.toggle("tranfromnation-chevreon")
@@ -1195,7 +1207,12 @@ function detectTopLevel(content){
 
 
 
-
+  jQuery('p').each(function() {
+    var $this = jQuery(this);
+    if($this.html().replace(/\s|&nbsp;/g, '').length == 0) {
+        $this.remove();
+    }
+});
 
 
 
@@ -1307,6 +1324,10 @@ function detectTopLevel(content){
     jQuery(this).find('.blockmodule-titre-module span').html('Module ' + moduleIndexee + ':');
 
   });
+
+
+
+
 
 
 });
