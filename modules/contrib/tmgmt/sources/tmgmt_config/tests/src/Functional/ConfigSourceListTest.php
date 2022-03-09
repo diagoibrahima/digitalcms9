@@ -24,7 +24,7 @@ class ConfigSourceListTest extends TMGMTTestBase {
 
   protected $nodes = array();
 
-  function setUp() {
+  function setUp(): void {
     parent::setUp();
     $this->loginAsAdmin();
 
@@ -81,7 +81,7 @@ class ConfigSourceListTest extends TMGMTTestBase {
     // This is still one job, unlike when selecting more languages.
     $this->assertText(t('One job needs to be checked out.'));
     $this->assertText(t('Article content type and 1 more (English to ?, Unprocessed)'));
-    $this->assertText(t('1 item conflict with pending item and will be dropped on submission.'));
+    $this->assertText('1 item conflicts with pending item and will be dropped on submission. Conflicting item: Article content type.');
 
     // Submit.
     $this->drupalPostForm(NULL, array(), t('Submit to provider'));
@@ -133,7 +133,7 @@ class ConfigSourceListTest extends TMGMTTestBase {
     // Verify that we are on the translate tab.
     $this->assertText(t('One job needs to be checked out.'));
     $this->assertText(t('Archive view and 3 more (English to ?, Unprocessed)'));
-    $this->assertText(t('1 item conflict with pending item and will be dropped on submission.'));
+    $this->assertText('1 item conflicts with pending item and will be dropped on submission. Conflicting item: Archive view.');
 
     // Submit.
     $this->drupalPostForm(NULL, array(), t('Submit to provider'));

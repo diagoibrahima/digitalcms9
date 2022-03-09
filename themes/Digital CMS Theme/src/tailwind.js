@@ -115,7 +115,12 @@ jQuery('#buttonstatusserver').click(function () {
 
 
 // Appell API to get the url of the translation Server
-  let url = protocol+"//"+hostname+"/serverconf";
+if(hostname==="localhost"){
+  var url = protocol+"//"+hostname+"/digitalcms9/serverconf";
+}else{
+  var url = protocol+"//"+hostname+"/serverconf";
+}
+  
 //  console.log(url);
   fetch(url).then((response)=>
     response.json().then((data)=>{
@@ -1023,8 +1028,8 @@ function detectTopLevel(content){
      jQuery('.contentent-preview-good-format').find('*').addClass('course-content');
      var ckedi = jQuery('.contentent-preview-good-format').html();
      var ck2 =   jQuery(".module-title span:nth-last-of-type(1)").remove()
-     console.log('===================Debut ck 2===================')
-     console.log(ck2)
+  //   console.log('===================Debut ck 2===================')
+    // console.log(ck2)
 
         CKEDITOR.instances['edit-body-0-value'].setData(ckedi);
       });
@@ -1186,11 +1191,13 @@ function detectTopLevel(content){
 
        panel = this.nextElementSibling;
         if (panel.style.display === "block") {
+          
           panel.style.display = "none";
   jQuery(chevronbi).removeClass('tranfromnation-chevreon');
          
          // jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
         } else {
+          
           panel.style.display = "block";
   jQuery(chevronbi).addClass('tranfromnation-chevreon');
 
@@ -1204,10 +1211,11 @@ function detectTopLevel(content){
      //   console.log(panel)
         if (panel.style.display === "block") {
   jQuery(chevronbi).removeClass('tranfromnation-chevreon');
-        
+  
           panel.style.display = "none";
        //  jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
         } else {
+          
           panel.style.display = "block";
   jQuery(chevronbi).addClass('tranfromnation-chevreon');
 
@@ -1279,7 +1287,9 @@ function detectTopLevel(content){
   notefounddasbord == " The requested page could not be found. " ? jQuery('div#block-tailwindcss-content').text('') : jQuery('div#block-tailwindcss-content').removeClass('hidenotefoundasbord');
 
   // jQuery('.a.use-ajax').hide();
-  jQuery('<h1 class="titre-cms-translation"> CONTENT MANAGEMENT AND ADAPTATION PLATFORM </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name');
+ // jQuery('<h1 class="titre-cms-translation"> CONTENT MANAGEMENT AND ADAPTATION PLATFORM </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name');
+
+  jQuery('<h1 class="titre-cms-translation"> Digital content management and translation system </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name');
   jQuery('<i class="fa fa-fw fa-user"></i>').insertBefore('input#edit-name');
   jQuery('<i class="fa fa-fw fa-lock"></i>').insertBefore('input#edit-pass');
   //jQuery('a.use-ajax').prepend('<i class="fas fa-plus-square"></i>');
@@ -1300,7 +1310,7 @@ function detectTopLevel(content){
   formcomment = jQuery('.node-content section').html();
   jQuery(formcomment).insertBefore('div#block-views-block-listcomments-block-1');
 
-
+  console.log(formcomment)
 
   //bar chart
 

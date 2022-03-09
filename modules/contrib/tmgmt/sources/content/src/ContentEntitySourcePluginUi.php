@@ -425,6 +425,7 @@ class ContentEntitySourcePluginUi extends SourcePluginUiBase {
     $query = \Drupal::database()->select($entity_type->getBaseTable(), 'e');
     $query->addTag('tmgmt_entity_get_translatable_entities');
     $query->addField('e', $id_key);
+    $query->distinct();
 
     $langcode_table_alias = 'e';
     // @todo: Discuss if search should work on latest, default or all revisions.
@@ -473,7 +474,7 @@ class ContentEntitySourcePluginUi extends SourcePluginUiBase {
       foreach ($search_tokens as $search_token) {
         $search_token = trim($search_token);
         if (strlen($search_token) > 2) {
-          $or->condition($label_key, '%' . \Drupal::database()->escapeLike($search_token) . '%', 'LIKE');
+          $or->condition('data_table.' . $label_key, '%' . \Drupal::database()->escapeLike($search_token) . '%', 'LIKE');
         }
       }
 
@@ -624,8 +625,14 @@ class ContentEntitySourcePluginUi extends SourcePluginUiBase {
 
     $published_title = $this->t('Published');
     $published_field = $entity->getEntityType()->getKey('published');
-    if ($entity instanceof FieldableEntityInterface && $entity->hasField($published_field) && !$entity->get($published_field)->getFieldDefinition()->isTranslatable()) {
-      $published_title = $this->t('Published (all languages)');
+    if ($entity instanceof FieldableEntityInterface && $entity->hasField($published_field)) {
+      $published_field_definition = $entity->get($published_field)->getFieldDefinition();
+      $published_title = $published_field_definition->getConfig($entity->bundle())->getLabel();
+      if (!$published_field_definition->isTranslatable()) {
+        $published_title = $this->t('@published_title (all languages)', [
+          '@published_title' => $published_title,
+        ]);
+      }
     }
 
     $element['published'] = [
@@ -673,6 +680,10 @@ class ContentEntitySourcePluginUi extends SourcePluginUiBase {
       if ($default->id() === $transition_to_state->id()) {
         $default_value = $default->id();
       }
+    }
+    // Get the state of the new config, if not set fallback to the current one.
+    if ($default_moderation_state = \Drupal::config('tmgmt_content.settings')->get('default_moderation_states.' . $workflow->id())) {
+      $default_value = $default_moderation_state;
     }
 
     // See \Drupal\content_moderation\Plugin\Field\FieldWidget\ModerationStateWidget::formElement()

@@ -44,7 +44,7 @@ abstract class LocalTranslatorTestBase extends TMGMTTestBase {
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
     $this->loginAsAdmin();
     $this->addLanguage('de');

@@ -765,7 +765,7 @@ class Job extends ContentEntityBase implements EntityOwnerInterface, JobInterfac
       $this->state = Job::STATE_CONTINUOUS;
     }
     // Activate job item if the previous job state was not active.
-    if ($this->isActive() && !$this->original->isActive()) {
+    if ($this->isActive() && (!isset($this->original) || !$this->original->isActive())) {
       foreach ($this->getItems() as $item) {
         // The job was submitted, activate any inactive job item.
         if ($item->isInactive()) {
@@ -1028,11 +1028,18 @@ class Job extends ContentEntityBase implements EntityOwnerInterface, JobInterfac
    * {@inheritdoc}
    */
   public function getConflictingItemIds() {
-    $conflicting_item_ids = array();
+    return array_keys($this->getConflictingItems());
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getConflictingItems() {
+    $conflicting_items = [];
     foreach ($this->getItems() as $item) {
-      // Count existing job items that are have the same languages, same source,
+      // Get existing job items that are have the same languages, same source,
       // are active or in review and are not the job item that we are checking.
-      $existing_items_count = \Drupal::entityQuery('tmgmt_job_item')
+      $existing_items = \Drupal::entityQuery('tmgmt_job_item')
         ->condition('state', [JobItemInterface::STATE_ACTIVE, JobItemInterface::STATE_REVIEW], 'IN')
         ->condition('plugin', $item->getPlugin())
         ->condition('item_type', $item->getItemType())
@@ -1040,15 +1047,16 @@ class Job extends ContentEntityBase implements EntityOwnerInterface, JobInterfac
         ->condition('tjiid', $item->id(), '<>')
         ->condition('tjid.entity.source_language', $this->getSourceLangcode())
         ->condition('tjid.entity.target_language', $this->getTargetLangcode())
-        ->count()
         ->execute();
 
-      // If there are any, this is a conflicting job item.
-      if ($existing_items_count) {
-        $conflicting_item_ids[] = $item->id();
+      // If there are any, this is a conflicting job item, so get the existing
+      // items that are causing the conflict.
+      if ($existing_items) {
+        $conflicting_items[$item->id()] = $existing_items;
       }
     }
-    return $conflicting_item_ids;
+
+    return $conflicting_items;
   }
 
 }

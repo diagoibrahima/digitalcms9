@@ -24,7 +24,7 @@ class ConfigSourceUnitTest extends TMGMTKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
 
     // Add the languages.

@@ -14,7 +14,7 @@ class PluginsTest extends TMGMTKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  function setUp() {
+  function setUp(): void {
     parent::setUp();
     \Drupal::service('router.builder')->rebuild();
   }

@@ -174,7 +174,7 @@ function tmgmt_job_item_load_latest($plugin, $item_type, $item_id, $source_langu
     // Only query for jobs that are currently active.
     ->condition('tj.state', [Job::STATE_UNPROCESSED, Job::STATE_ACTIVE, Job::STATE_CONTINUOUS], 'IN')
     // And only query for job items that are not yet finished.
-    ->condition('tji.state', JobItem::STATE_ACCEPTED, '<>')
+    ->condition('tji.state', [JobItem::STATE_ACCEPTED, JobItem::STATE_ABORTED], 'NOT IN')
     ->condition('tji.plugin', $plugin)
     ->condition('tji.item_type', $item_type)
     ->condition('tji.item_id', $item_id)

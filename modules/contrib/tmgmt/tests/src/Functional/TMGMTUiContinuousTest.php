@@ -20,7 +20,7 @@ class TMGMTUiContinuousTest extends TMGMTTestBase {
   /**
    * {@inheritdoc}
    */
-  function setUp() {
+  function setUp(): void {
     parent::setUp();
 
     // Login as admin to be able to set environment variables.

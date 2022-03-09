@@ -26,7 +26,7 @@ class ContentTmgmtEntitySourceListTest extends TMGMTTestBase {
 
   protected $nodes = array();
 
-  function setUp() {
+  function setUp(): void {
     parent::setUp();
     $this->loginAsAdmin();
 
@@ -155,7 +155,7 @@ class ContentTmgmtEntitySourceListTest extends TMGMTTestBase {
     $states = JobItem::getStates();
     $label = t('Active job item: @state', array('@state' => $states[reset($items)->getState()]));
 
-    $this->assertEqual((string)$langstatus_de[0]->getAttribute('title'), $label);
+    $this->assertEquals($label, (string)$langstatus_de[0]->getAttribute('title'));
 
     // Test status: Current
     foreach ($job->getItems() as $job_item) {
@@ -165,7 +165,24 @@ class ContentTmgmtEntitySourceListTest extends TMGMTTestBase {
     $this->drupalGet('admin/tmgmt/sources/content/node');
     $langstatus_de = $this->xpath('//table[@id="edit-items"]/tbody/tr[1]/td[@class="langstatus-de"]/a/img');
 
-    $this->assertEqual($langstatus_de[0]->getAttribute('title'), t('Translation up to date'));
+    $this->assertEquals(t('Translation up to date'), $langstatus_de[0]->getAttribute('title'));
+
+    // Test status: Inactive job.
+    $job = $this->createJob('en', 'de');
+    $job->translator = $this->default_translator->id();
+    $job->settings = array();
+    $job->save();
+
+    $job->addItem('content', 'node', $this->nodes['article']['en'][0]->id());
+
+    $this->drupalGet('admin/tmgmt/sources/content/node');
+    $langstatus_de = $this->xpath('//table[@id="edit-items"]/tbody/tr[1]/td[@class="langstatus-de"]/a/img');
+
+    $items = $job->getItems();
+    $states = JobItem::getStates();
+    $label = t('Active job item: @state', array('@state' => $states[reset($items)->getState()]));
+
+    $this->assertEquals($label, (string)$langstatus_de[1]->getAttribute('title'));
   }
 
   function testTranslationSubmissions() {
@@ -311,6 +328,26 @@ class ContentTmgmtEntitySourceListTest extends TMGMTTestBase {
     $this->drupalPostForm('admin/tmgmt/sources/content/node', $edit, t('Cancel'));
     $this->assertSession()->pageTextContains($this->nodes['article']['en'][0]->label());
     $this->assertSession()->pageTextContains($page_node_translatable->label());
+
+    // Ensure that the pager limit works as expected if there are translations
+    // and revisions.
+    $this->config('tmgmt.settings')
+      ->set('source_list_limit', 8)
+      ->save();
+    $translation = $this->nodes['article']['de'][0]->addTranslation('en', $this->nodes['article']['de'][0]->toArray());
+    $translation->setNewRevision(TRUE);
+    $translation->save();
+
+    $this->drupalGet('admin/tmgmt/sources/content/node');
+    $this->assertSession()->linkNotExists('Next');
+
+    $this->config('tmgmt.settings')
+      ->set('source_list_limit', 4)
+      ->save();
+    $this->drupalGet('admin/tmgmt/sources/content/node');
+    $this->assertSession()->linkExists('Next');
+    $this->assertSession()->linkExists('Go to page 2');
+    $this->assertSession()->linkNotExists('Go to page 3');
   }
 
   function testEntitySourceListSearch() {
@@ -361,9 +398,19 @@ class ContentTmgmtEntitySourceListTest extends TMGMTTestBase {
     $this->drupalPostForm('/admin/tmgmt/sources/content/node', ['search[title]' => 'wrong_value'], 'Search');
     $this->assertSession()->pageTextContains(t('Content overview'));
     $this->assertSession()->pageTextNotContains($this->nodes['article']['en'][0]->label());
-    $edit = array('any_key' => 'any_value');
-    $this->drupalGet('/admin/tmgmt/sources/content/node', $edit);
-    $this->assertResponse(200);
+    $options = ['query' => ['any_key' => 'any_value']];
+    $this->drupalGet('/admin/tmgmt/sources/content/node', $options);
+    $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains($this->nodes['article']['en'][0]->label());
+
+    // Test combined title and language filter.
+    $this->drupalGet('/admin/tmgmt/sources/content/node');
+    $edit = [
+      'search[target_language]' => 'de',
+      'search[title]' => $this->nodes['article']['en'][0]->label(),
+    ];
+    $this->submitForm($edit, 'Search');
+    $this->assertSession()->statusCodeEquals(200);
+    $this->assertSession()->linkExists($this->nodes['article']['en'][0]->label());
   }
 }

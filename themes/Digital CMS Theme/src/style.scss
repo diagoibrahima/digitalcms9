@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
+//@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 body {
   background: #e5e7eb !important;
 }
@@ -15,8 +15,10 @@ span,
 div,
 input,
 a,
-#edit-submit {
-  font-family: "Roboto", sans-serif !important;
+#edit-submit , * {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: normal !important;
+ // font-family: "Roboto", sans-serif !important;
 }
 
 aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
@@ -442,9 +444,8 @@ form#user-form , form#comment-form {
   background: white;
   width: 95%;
   margin: auto;
- // box-shadow: 0px 1px 4px 1px #02020221;
+  font-size: 14px !important;
   border-radius: 0.25rem;
- // height: 380px;
   margin: 30px auto;
 
   .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
@@ -2032,7 +2033,7 @@ h1.titre-cms-translation {
 
 div#edit-name--description {
   color: white;
-  font-size: 15px;
+  font-size: 14px;
   opacity: 0;
 }
 
@@ -2043,14 +2044,25 @@ div#edit-pass--description {
 
 form#user-login-form:before {
   content: "";
-  background: url(https://www.unicef.org/wca/sites/unicef.org.wca/files/styles/hero_desktop/public/wca-programme-2017-education.jpg?itok=nvG0RG9p);
+// background: url(https://www.unicef.org/wca/sites/unicef.org.wca/files/styles/hero_desktop/public/wca-programme-2017-education.jpg?itok=nvG0RG9p);
+//background-image:url('/sites/default/files/inline-images/04_WWW_UN057347_Bluewash_WEB_0.jpeg');
+background: url(https://www.unicef.org/sites/default/files/styles/hero_desktop/public/Cell.jpg?itok=4s2viZ9h);
   position: absolute;
   height: 100%;
   width: 55%;
   background-repeat: no-repeat;
   background-size: cover;
   right: 0;
-  background-position: right;
+  background-position:center;
+}
+
+form#user-login-form:after {
+  content: '';
+  background: #1391c170;
+  position: absolute;
+  height: 100%;
+  width: 55%;
+  right: 0;
 }
 
 input#edit-name,
@@ -2448,7 +2460,7 @@ div#block-views-block-contenttotranslate-block-1 {
 
 article .node-content div:nth-child(2) {
   font-weight: normal;
-  font-size: 15px;
+  font-size: 14px;
   position: relative;
 }
 
@@ -2591,7 +2603,7 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
   }
   /* to remplace by ==>  .-supmoduletitle */
    .supmoduletitle {
-    font-size: 15px;
+    font-size: 14px;
     color: #1391c1;
     font-weight: 400;
   }
@@ -2599,7 +2611,7 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
   p,
   .node-content p {
     color: #000000;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: normal;
     margin: 20px 0px;
   }
@@ -2625,7 +2637,7 @@ article .node-content,
   }
   /* to remplace by ==>  .contentent-supmodule */
   .supmoduletitle{
-    font-size: 15px !important;
+    font-size: 14px !important;
     color: #1391c1 !important;
     font-weight: 400 !important;
     margin: 20px 0px !important;
@@ -2636,7 +2648,7 @@ article .node-content,
   .node-content p,
   .node-content ul li {
     color: #000000;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: normal;
     margin: 20px 0px;
     padding: 0px 10px;
@@ -3183,7 +3195,7 @@ div#block-views-block-languagesmstranslation-block-1 {
 }
 
 .views-field.views-field-field-descriptino-content {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .views-field.views-field-field-localization-langue , .views-field.views-field-field-localization-channel {
@@ -3226,7 +3238,7 @@ div#block-views-block-languagesmstranslation-block-1 {
   }
 
   a {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 }
@@ -3264,7 +3276,7 @@ h6.country-of-userlog {
 .js-form-item.form-item.js-form-type-item.form-item-.js-form-item-.form-no-label {
   display: flex;
   justify-content: center;
-  font-size: 15px;
+  font-size: 14px;
   border-radius: 5px;
   padding: 12px;
   width: 50%;
@@ -3894,3 +3906,19 @@ aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
 
 }
 
+
+
+div#block-views-block-dasbord-view-block-1:before {
+  content: '';
+  background: #f3f4f6;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  top: -36px;
+}
+
+
+h1.tw-leading-6.tw-font-medium.tw-text-black {
+  color: #2795c3 !important;
+  font-weight: 500 !important;
+}

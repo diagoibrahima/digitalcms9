@@ -32,7 +32,7 @@ class ContentTmgmtEntitySourceUiTest extends TMGMTTestBase {
   /**
    * {@inheritdoc}
    */
-  function setUp() {
+  function setUp(): void {
     parent::setUp();
 
     $this->addLanguage('de');
@@ -188,9 +188,9 @@ class ContentTmgmtEntitySourceUiTest extends TMGMTTestBase {
     $xpath_not_translated = $this->xpath('//*[@id="edit-items"]/tbody/tr[2]/td[5]/*[1]');
     $xpath_outdated = $this->xpath('//*[@id="edit-items"]/tbody/tr[2]/td[6]/*[1]');
     $this->assertTrue(strpos($xpath_source[0]->getAttribute('href'), '/node/1') !== FALSE);
-    $this->assertContains('node/1', $xpath_source[0]->getAttribute('href'));
+    $this->assertStringContainsString('node/1', $xpath_source[0]->getAttribute('href'));
     $this->assertNotEquals('a', $xpath_not_translated[0]->getTagName());
-    $this->assertContains('/de/node/1', $xpath_outdated[0]->getAttribute('href'));
+    $this->assertStringContainsString('/de/node/1', $xpath_outdated[0]->getAttribute('href'));
 
     // Test that a job can not be accepted if the entity does not exist.
     $deleted_node = $this->createTranslatableNode('page', 'en');

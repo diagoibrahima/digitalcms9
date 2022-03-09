@@ -19,7 +19,7 @@ class TranslatorUITest extends TMGMTTestBase {
   /**
    * {@inheritdoc}
    */
-  function setUp() {
+  function setUp(): void {
     parent::setUp();
 
     // Login as administrator to add/edit and view translators.

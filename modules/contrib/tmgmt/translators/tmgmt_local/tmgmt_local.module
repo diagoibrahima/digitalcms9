@@ -73,12 +73,10 @@ function tmgmt_local_theme() {
     'tmgmt_local_translation_form_element' => array(
       'render element' => 'element',
       'file' => 'tmgmt_local.theme.inc',
-      'function' => 'tmgmt_local_translation_form_element',
     ),
     'tmgmt_local_translation_form_element_status' => array(
       'render element' => 'status',
       'file' => 'tmgmt_local.theme.inc',
-      'function' => 'theme_tmgmt_local_translation_form_element_status',
     ),
     'tmgmt_local_progress_bar' => array(
       'variables' => array(

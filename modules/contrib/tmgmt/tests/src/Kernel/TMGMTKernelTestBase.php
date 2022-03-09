@@ -29,7 +29,7 @@ abstract class TMGMTKernelTestBase extends KernelTestBase {
   /**
    * {@inheritdoc}
    */
-  function setUp() {
+  function setUp(): void {
     parent::setUp();
 
     $this->installEntitySchema('user');

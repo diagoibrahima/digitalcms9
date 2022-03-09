@@ -29,17 +29,20 @@ class ContentEntitySourceUnitTest extends ContentEntityTestBase {
    *
    * @var array
    */
-  public static $modules = ['node', 'file', 'image', 'entity_reference'];
+  public static $modules = ['node', 'file', 'image'];
 
   protected $image_label;
 
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
 
-    $filter = FilterFormat::create(['format' => 'unallowed_format']);
+    $filter = FilterFormat::create([
+      'format' => 'unallowed_format',
+      'name' => 'Unallowed Format',
+    ]);
     $filter->save();
 
     $this->config('tmgmt.settings')
@@ -353,7 +356,7 @@ class ContentEntitySourceUnitTest extends ContentEntityTestBase {
     $this->assertEqual($data['title']['#label'], 'Title');
     $this->assertFalse(isset($data['title'][0]['#label']));
     $this->assertFalse(isset($data['title'][0]['value']['#label']));
-    $this->assertEqual($data['title'][0]['value']['#text'], $node->title->value);
+    $this->assertEqual($data['title'][0]['value']['#text'], $node->getTitle());
     $this->assertEqual($data['title'][0]['value']['#translate'], TRUE);
 
     // Test the body field.
@@ -463,14 +466,14 @@ class ContentEntitySourceUnitTest extends ContentEntityTestBase {
 
     $node = $node->addTranslation('en');
 
-    $node->title->appendItem(array('value' => $this->randomMachineName()));
+    $node->get('title')->appendItem(array('value' => $this->randomMachineName()));
     $value = array(
       'value' => $this->randomMachineName(),
       'summary' => $this->randomMachineName(),
       'format' => 'text_plain'
     );
-    $node->body->appendItem($value);
-    $node->body->appendItem($value);
+    $node->get('body')->appendItem($value);
+    $node->get('body')->appendItem($value);
     $node->save();
 
     $job = tmgmt_job_create('en', 'de');

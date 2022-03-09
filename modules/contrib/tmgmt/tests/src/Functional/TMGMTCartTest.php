@@ -16,7 +16,7 @@ class TMGMTCartTest extends TMGMTTestBase {
   /**
    * {@inheritdoc}
    */
-  function setUp() {
+  function setUp(): void {
     parent::setUp();
 
     // Login as admin to be able to set environment variables.
@@ -109,7 +109,7 @@ class TMGMTCartTest extends TMGMTTestBase {
     $this->drupalPostForm('admin/tmgmt/cart', array(
       'target_language[]' => array('es'),
     ), t('Request translation'));
-    $this->assertText(t('1 item conflict with pending item and will be dropped on submission.'));
+    $this->assertText('1 item conflicts with pending item and will be dropped on submission. Conflicting item: ' . $node_cs->getTitle() . '.');
     $this->drupalPostForm(NULL, array(), t('Submit to provider'));
     $this->assertText(t('All job items are conflicting, the job can not be submitted.'));
   }

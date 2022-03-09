@@ -26,7 +26,6 @@ class ContentEntitySourceUntranslatableTargetsUnitTest extends ContentEntityTest
    */
   public static $modules = [
     'node',
-    'entity_reference',
     'tmgmt_composite_test',
     'entity_test',
   ];
@@ -34,7 +33,7 @@ class ContentEntitySourceUntranslatableTargetsUnitTest extends ContentEntityTest
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
 
     $this->installEntitySchema('entity_test_composite');

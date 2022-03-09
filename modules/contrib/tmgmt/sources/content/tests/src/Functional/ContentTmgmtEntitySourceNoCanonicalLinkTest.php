@@ -29,7 +29,7 @@ class ContentTmgmtEntitySourceNoCanonicalLinkTest extends TMGMTTestBase {
   /**
    * {@inheritdoc}
    */
-  function setUp() {
+  function setUp(): void {
     parent::setUp();
 
     $this->loginAsAdmin(array(
