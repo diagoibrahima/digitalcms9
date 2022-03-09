@@ -275,7 +275,7 @@ class JobItem extends ContentEntityBase implements JobItemInterface {
    */
   public function label($langcode = NULL) {
     $label = $this->getSourceLabel() ?: parent::label();
-    if (strlen($label) > Job::LABEL_MAX_LENGTH) {
+    if ($label && strlen($label) > Job::LABEL_MAX_LENGTH) {
       $label = Unicode::truncate($label, Job::LABEL_MAX_LENGTH, TRUE);
     }
     return $label;
@@ -305,10 +305,11 @@ class JobItem extends ContentEntityBase implements JobItemInterface {
    * {@inheritdoc}
    */
   public function getSourceLabel() {
+    $label = FALSE;
     if ($plugin = $this->getSourcePlugin()) {
-      return (string) $plugin->getLabel($this);
+      $label = $plugin->getLabel($this);
     }
-    return FALSE;
+    return is_bool($label) ? $label : (string) $label;
   }
 
   /**
@@ -883,7 +884,7 @@ class JobItem extends ContentEntityBase implements JobItemInterface {
    * {@inheritdoc}
    */
   public function abortTranslation() {
-    if (!$this->isActive() || !$this->getTranslatorPlugin()) {
+    if (!$this->isAbortable() || !$this->getTranslatorPlugin()) {
       throw new TMGMTException('Cannot abort job item.');
     }
     $this->setState(JobItemInterface::STATE_ABORTED);
@@ -1174,6 +1175,7 @@ class JobItem extends ContentEntityBase implements JobItemInterface {
       static::STATE_INACTIVE => [
         'label' => t('Inactive'),
         'type' => 'state',
+        'icon' => drupal_get_path('module', 'tmgmt') . '/icons/rejected.svg',
         'weight' => 20,
       ],
     ];

@@ -22,7 +22,7 @@ class TMGMTUiTest extends TMGMTTestBase {
   /**
    * {@inheritdoc}
    */
-  function setUp() {
+  function setUp(): void {
     parent::setUp();
 
     $filtered_html_format = FilterFormat::create(array(
@@ -335,8 +335,8 @@ class TMGMTUiTest extends TMGMTTestBase {
     $this->drupalPostForm(NULL, array(), t('Submit to provider'));
     $this->assertText(t('@translator is not available. Make sure it is properly configured.', array('@translator' => 'Test provider')));
 
-    // Login as administrator to delete a job.
-    $this->loginAsAdmin();
+    // Login as translator with permission to delete inactive job.
+    $this->loginAsTranslator(['delete translation jobs']);
     $this->drupalGet('admin/tmgmt/jobs', array('query' => array(
       'state' => 'All',
     )));
@@ -357,6 +357,16 @@ class TMGMTUiTest extends TMGMTTestBase {
     $this->drupalPostForm(NULL, array(), t('Confirm'));
     $this->assertText('Aborted');
     $this->assertNoLink('Abort');
+
+    // Create active job.
+    $job_active = $this->createJob();
+    $job_active->save();
+    $job_active->setState(Job::STATE_ACTIVE);
+
+    // Even if 'delete translation jobs' permission is granted active job
+    // cannot be deleted.
+    $this->drupalGet($job_active->toUrl('delete-form'));
+    $this->assertSession()->statusCodeEquals(403);
   }
 
   /**

@@ -22,7 +22,7 @@ class TMGMTDemoTest extends TMGMTTestBase {
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
     $basic_html_format = FilterFormat::load('basic_html');
     $restricted_html_format = FilterFormat::create(array(

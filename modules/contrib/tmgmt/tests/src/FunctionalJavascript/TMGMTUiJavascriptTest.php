@@ -58,7 +58,7 @@ class TMGMTUiJavascriptTest extends WebDriverTestBase {
   /**
    * {@inheritdoc}
    */
-  function setUp() {
+  function setUp(): void {
     parent::setUp();
 
     $this->addLanguage('de');

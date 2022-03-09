@@ -40,7 +40,7 @@ abstract class TMGMTTestBase extends BrowserTestBase {
   /**
    * Overrides DrupalWebTestCase::setUp()
    */
-  function setUp() {
+  function setUp(): void {
     parent::setUp();
     $this->default_translator = Translator::load('test_translator');
     $this->drupalPlaceBlock('local_tasks_block');

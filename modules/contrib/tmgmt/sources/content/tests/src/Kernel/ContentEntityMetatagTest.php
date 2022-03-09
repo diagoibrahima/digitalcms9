@@ -23,7 +23,7 @@ class ContentEntityMetatagTest extends ContentEntityTestBase {
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
 
     $field_storage = FieldStorageConfig::create(array(

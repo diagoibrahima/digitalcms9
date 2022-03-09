@@ -39,7 +39,13 @@
     "prefer-stable": true,
     "config": {
         "sort-packages": true,
-        "platform-check": false
+        "platform-check": false,
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "drupal/core-vendor-hardening": true
+        }
     },
     "extra": {
         "drupal-scaffold": {

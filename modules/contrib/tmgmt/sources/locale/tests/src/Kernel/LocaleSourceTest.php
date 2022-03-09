@@ -23,7 +23,7 @@ class LocaleSourceTest extends TMGMTKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  function setUp() {
+  function setUp(): void {
     parent::setUp();
     $this->langcode = 'de';
     $this->context = 'default';

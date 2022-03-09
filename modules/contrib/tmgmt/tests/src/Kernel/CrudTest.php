@@ -20,7 +20,7 @@ class CrudTest extends TMGMTKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
     \Drupal::service('router.builder')->rebuild();
     $this->installEntitySchema('tmgmt_remote');

@@ -312,7 +312,7 @@ class LocalTranslatorTest extends LocalTranslatorTestBase {
     $this->drupalGet('manage-translate/assigned');
     $this->clickLink('View');
     $edit = array(
-      'tuid' => 0,
+      'tuid' => '',
     );
     $this->drupalPostForm(NULL, $edit, t('Save task'));
 

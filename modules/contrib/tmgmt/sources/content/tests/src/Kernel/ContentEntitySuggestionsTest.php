@@ -21,12 +21,12 @@ class ContentEntitySuggestionsTest extends TMGMTKernelTestBase {
    *
    * @var array
    */
-  public static $modules = array('menu_link_content', 'link', 'tmgmt_content', 'tmgmt_test', 'content_translation', 'node', 'filter', 'entity_reference');
+  public static $modules = array('menu_link_content', 'link', 'tmgmt_content', 'tmgmt_test', 'content_translation', 'node', 'filter');
 
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
     $this->installEntitySchema('menu_link_content');
     $this->installEntitySchema('node');

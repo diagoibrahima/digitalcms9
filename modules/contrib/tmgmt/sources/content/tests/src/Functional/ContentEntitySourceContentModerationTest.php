@@ -3,12 +3,10 @@
 namespace Drupal\Tests\tmgmt_content\Functional;
 
 use Drupal\field\Entity\FieldConfig;
-use Drupal\language\Entity\ConfigurableLanguage;
 use Drupal\node\Entity\Node;
 use Drupal\Tests\field\Traits\EntityReferenceTestTrait;
 use Drupal\Tests\tmgmt\Functional\TmgmtEntityTestTrait;
 use Drupal\Tests\tmgmt\Functional\TMGMTTestBase;
-use Drupal\tmgmt\Entity\Translator;
 use Drupal\tmgmt_composite_test\Entity\EntityTestComposite;
 use Drupal\workflows\Entity\Workflow;
 
@@ -31,7 +29,6 @@ class ContentEntitySourceContentModerationTest extends TMGMTTestBase {
     'tmgmt_content',
     'content_moderation',
     'field',
-    'entity_reference',
     'tmgmt_composite_test',
   ];
 
@@ -45,7 +42,7 @@ class ContentEntitySourceContentModerationTest extends TMGMTTestBase {
   /**
    * {@inheritdoc}
    */
-  function setUp() {
+  function setUp(): void {
     parent::setUp();
 
     $this->addLanguage('de');
@@ -458,6 +455,9 @@ class ContentEntitySourceContentModerationTest extends TMGMTTestBase {
     $this->drupalPostForm(NULL, $edit, 'Save as completed');
     $this->assertText("The translation for $draft_title has been accepted as de(de-ch): $draft_title.");
 
+    // Update the default moderation state.
+    \Drupal::configFactory()->getEditable('tmgmt_content.settings')->set('default_moderation_states', [$this->workflow->id() => 'published'])->save();
+
     // Provide translation in Spanish as well.
     $edit = [
       'items[' . $node->id() . ']' => $node->id(),
@@ -467,10 +467,9 @@ class ContentEntitySourceContentModerationTest extends TMGMTTestBase {
     $this->drupalPostForm(NULL, [], 'Submit to provider');
     $this->assertText("The translation of $draft_title to Spanish is finished and can now be reviewed.");
     $this->clickLink('reviewed');
-    $edit = [
-      'moderation_state[new_state]' => 'published',
-    ];
-    $this->drupalPostForm(NULL, $edit, 'Save as completed');
+    // Assert that the default moderation state is being set.
+    $this->assertOptionSelected('edit-moderation-state-new-state', 'published');
+    $this->drupalPostForm(NULL, [], 'Save as completed');
     $this->assertText("The translation for $draft_title has been accepted as es: $draft_title.");
 
     // The latest revision contains all the translations.

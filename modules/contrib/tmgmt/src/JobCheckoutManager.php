@@ -232,7 +232,7 @@ class JobCheckoutManager {
    * @param int|null $template_job_id
    *   (optional) A template job to use for the translator and settings.
    */
-  static public function batchSubmit($job_id, $template_job_id = NULL, &$context) {
+  static public function batchSubmit($job_id, $template_job_id = NULL) {
     \Drupal::service('tmgmt.job_checkout_manager')->doBatchSubmit($job_id, $template_job_id);
   }
 

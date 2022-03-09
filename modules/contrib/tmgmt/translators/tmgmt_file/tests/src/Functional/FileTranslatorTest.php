@@ -27,7 +27,7 @@ class FileTranslatorTest extends TMGMTTestBase {
   /**
    * {@inheritdoc}
    */
-  function setUp() {
+  function setUp(): void {
     parent::setUp();
     $this->loginAsAdmin();
     $this->addLanguage('de');

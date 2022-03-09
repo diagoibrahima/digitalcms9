@@ -24,7 +24,7 @@ class LocaleSourceUiTest extends TMGMTTestBase {
   /**
    * {@inheritdoc}
    */
-  function setUp() {
+  function setUp(): void {
     parent::setUp();
     $this->langcode = 'de';
     $this->context = 'default';

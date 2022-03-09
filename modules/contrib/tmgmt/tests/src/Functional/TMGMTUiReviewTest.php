@@ -23,7 +23,7 @@ class TMGMTUiReviewTest extends TMGMTTestBase {
   /**
    * {@inheritdoc}
    */
-  function setUp() {
+  function setUp(): void {
     parent::setUp();
 
     $this->addLanguage('de');

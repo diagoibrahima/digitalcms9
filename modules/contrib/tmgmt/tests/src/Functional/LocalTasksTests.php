@@ -21,7 +21,7 @@ class LocalTasksTests extends TMGMTTestBase {
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
     // Login as administrator to view Cart,Jobs and Sources.
     $this->loginAsAdmin(array('access administration pages'));
