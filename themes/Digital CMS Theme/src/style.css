@@ -467,6 +467,7 @@ form#user-form, form#comment-form {
   background: white;
   width: 95%;
   margin: auto;
+  font-size: 14px !important;
   border-radius: 0.25rem;
   margin: 30px auto;
 }
@@ -2183,7 +2184,7 @@ h1.titre-cms-translation {
 
 div#edit-name--description {
   color: white;
-  font-size: 15px;
+  font-size: 14px;
   opacity: 0;
 }
 
@@ -2616,7 +2617,7 @@ div#block-views-block-contenttotranslate-block-1 p span span span span:before {
 
 article .node-content div:nth-child(2) {
   font-weight: normal;
-  font-size: 15px;
+  font-size: 14px;
   position: relative;
 }
 
@@ -2797,7 +2798,7 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
 }
 
 .contentent-preview-good-format .supmoduletitle {
-  font-size: 15px;
+  font-size: 14px;
   color: #1391c1;
   font-weight: 400;
 }
@@ -2805,7 +2806,7 @@ svg.svg-inline--fa.fa-times.fa-w-11 {
 .contentent-preview-good-format p,
 .contentent-preview-good-format .node-content p {
   color: #000000;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: normal;
   margin: 20px 0px;
 }
@@ -2835,7 +2836,7 @@ article .node-content .module-title,
 
 article .node-content .supmoduletitle,
 .bodyContentToTranslate .supmoduletitle, .moduletotranslate .supmoduletitle {
-  font-size: 15px !important;
+  font-size: 14px !important;
   color: #1391c1 !important;
   font-weight: 400 !important;
   margin: 20px 0px !important;
@@ -2851,7 +2852,7 @@ article .node-content .node-content ul li,
 .moduletotranslate .node-content p,
 .moduletotranslate .node-content ul li {
   color: #000000;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: normal;
   margin: 20px 0px;
   padding: 0px 10px;
@@ -3522,7 +3523,7 @@ div#block-views-block-languagesmstranslation-block-1 {
 }
 
 #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-descriptino-content {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-langue, #block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-localization-channel {
@@ -3561,7 +3562,7 @@ div#block-views-block-languagesmstranslation-block-1 {
 }
 
 .show-message a {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 h1.initial-title {
@@ -3594,7 +3595,7 @@ h6.country-of-userlog {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 15px;
+  font-size: 14px;
   border-radius: 5px;
   padding: 12px;
   width: 50%;
@@ -4075,5 +4076,18 @@ article, article + h2 {
     width: 200px !important;
     padding: 0px !important;
   }
+}
+
+p {
+  font-size: 14px !important;
+}
+
+div#block-views-block-dasbord-view-block-1:before {
+  content: '';
+  background: #f3f4f6;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  top: -36px;
 }
 /*# sourceMappingURL=style.css.map */
