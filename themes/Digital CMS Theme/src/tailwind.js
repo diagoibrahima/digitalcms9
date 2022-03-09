@@ -1280,7 +1280,9 @@ function detectTopLevel(content){
   notefounddasbord == " The requested page could not be found. " ? jQuery('div#block-tailwindcss-content').text('') : jQuery('div#block-tailwindcss-content').removeClass('hidenotefoundasbord');
 
   // jQuery('.a.use-ajax').hide();
-  jQuery('<h1 class="titre-cms-translation"> CONTENT MANAGEMENT AND ADAPTATION PLATFORM </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name');
+ // jQuery('<h1 class="titre-cms-translation"> CONTENT MANAGEMENT AND ADAPTATION PLATFORM </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name');
+
+  jQuery('<h1 class="titre-cms-translation"> Digital content management and translation system </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name');
   jQuery('<i class="fa fa-fw fa-user"></i>').insertBefore('input#edit-name');
   jQuery('<i class="fa fa-fw fa-lock"></i>').insertBefore('input#edit-pass');
   //jQuery('a.use-ajax').prepend('<i class="fas fa-plus-square"></i>');
