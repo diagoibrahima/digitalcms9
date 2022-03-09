@@ -1291,6 +1291,10 @@ function detectTopLevel(content){
 
 
 
+  formcomment = jQuery('.node-content section').html();
+  jQuery(formcomment).insertBefore('div#block-views-block-listcomments-block-1');
+
+
 
   //bar chart
 
