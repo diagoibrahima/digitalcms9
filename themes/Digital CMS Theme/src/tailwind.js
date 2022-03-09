@@ -115,8 +115,12 @@ jQuery('#buttonstatusserver').click(function () {
 
 
 // Appell API to get the url of the translation Server
-
-  let url = protocol+"//"+hostname+"/serverconf";
+if(hostname==="localhost"){
+  var url = protocol+"//"+hostname+"/digitalcms9/serverconf";
+}else{
+  var url = protocol+"//"+hostname+"/serverconf";
+}
+  
 //  console.log(url);
   fetch(url).then((response)=>
     response.json().then((data)=>{
