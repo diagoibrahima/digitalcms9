@@ -843,7 +843,15 @@ function detectTopLevel(content){
 //Detectons Top Level du contenu
     var tabtoplevel = detectTopLevel(description);
     tagmodule = tabtoplevel[0].toLowerCase();
-    tagsubmodule = tabtoplevel[1].toLowerCase();
+
+    console.log(tabtoplevel[1]);
+
+    if(tabtoplevel[1] ===undefined){
+      
+    }else{
+    var tagsubmodule = tabtoplevel[1].toLowerCase();
+  }
+    
 
     console.log("top level 1 "+tagmodule);
     console.log("top level 2 "+tagsubmodule);
