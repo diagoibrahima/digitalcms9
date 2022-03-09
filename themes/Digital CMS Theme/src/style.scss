@@ -200,6 +200,7 @@ article.node {
   padding: 15px;
   width: 70%;
   position: relative !important;
+  display: block !important;
 
   footer {
     display: none;
@@ -408,8 +409,8 @@ input#edit-subject-0-value {
 }
 
 form#comment-form {
-  height: 300px !important;
-  box-shadow: none !important;
+  height: 200px !important;
+ 
 
   summary {
     display: none;
@@ -417,16 +418,16 @@ form#comment-form {
 }
 
 div#block-views-block-listcomments-block-1 {
-  margin:190px 20px 0px 20px;
+  margin:20px 20px 0px 20px;
   background: white;
   border-radius: 5px;
   padding: 10px;
   text-align: center;
   line-height: 3;
-  width: 80%;
+  width:100%;
   color: #575757;
   transition: 1s;
-  height: 330px;
+  max-height: 330px;
   overflow-y: auto;
 }
 
@@ -436,7 +437,7 @@ form#node-sub-module-form,
 .node-course__edit-form,
 .node-form,
 form#comment-comment-delete-form,
-form#comment-form ,form#user-form {
+form#user-form , form#comment-form {
   margin-top: 40px;
   background: white;
   width: 95%;
@@ -472,6 +473,67 @@ form#comment-form ,form#user-form {
     border-radius: 0.25rem;
     line-height: 2;
   }
+}
+
+
+form#comment-form {
+
+  width: 100% !important;
+  position: relative;
+  margin: -0px -20px;
+
+   label{
+     display: none;
+   }
+
+   &:before {
+    content: '';
+    background: #f3f4f6;
+    position: absolute;
+    height: 43px;
+    width: 100%;
+    margin: -44px 0px;
+}
+
+
+
+   textarea#edit-field-commentbody2-0-value {
+    margin: 20px 0px 0px !important;
+}
+
+form#comment-form textarea#edit-field-commentbody2-0-value {
+  margin: 20px 0px -5px !important;
+}
+div#edit-field-commentbody2-0-value--description {
+  display: none;
+}
+
+  div#edit-actions #edit-submit {
+    width:98% !important;
+    color: white !important;
+    background: #b5bbc2;
+    border: cornsilk !important;
+    margin-left: inherit;
+    text-align: center;
+    line-height: 38.5px !important;
+    border-radius: 5px !important;
+    font-size: 12px;
+    margin: auto 10px !important;
+}
+
+.dialog-off-canvas-main-canvas div#edit-actions {
+  display: flex !important;
+  width: 100% !important;
+}
+
+div#edit-actions {
+  width: 100% !important;
+  line-height: 2.5rem !important;
+  margin: 10px 0px !important;
+}
+
+
+
 }
 
 
@@ -789,7 +851,7 @@ article.node:before {
     }
     section {
       article {
-        //  display: none !important;
+          display: none !important;
       }
 
       div#edit-field-commentbody2-0-value--description {
@@ -842,7 +904,7 @@ article.node:before {
 
   div#edit-actions {
     display: flex;
-    width: 97.5%;
+   // width: 97.5%;
   }
 
  
@@ -1499,6 +1561,7 @@ article[typeof="schema:Person"] {
   padding: 38px;
   text-align: center;
   margin: 30px auto;
+  display: block !important;
 
   img {
     max-width: 100%;
@@ -2274,7 +2337,7 @@ ul.links.inline + div {
 */
 
 .node-content form#comment-form div#edit-actions #edit-submit {
-  width: 99% !important;
+  width: 100% !important;
   margin: -10px -16px  !important;
   background: #52627273 !important;
 }
@@ -2282,8 +2345,8 @@ ul.links.inline + div {
 .node-content form#comment-form {
 
   height: 183px !important;
-  width: 20%;
-  position: absolute;
+  width:100%;
+ // position: absolute;
   top: 115px;
   right: 3.8%;
   label {
@@ -3020,7 +3083,6 @@ div#edit-actions #edit-submit {
 }
 
 
-
 .js-form-item.form-item.js-form-type-textfield.form-item-field-ip-adress-0-value.js-form-item-field-ip-adress-0-value , .js-form-item.form-item.js-form-type-textfield.form-item-field-port-0-value.js-form-item-field-port-0-value  {
   display: flex;
   flex-direction: column;
@@ -3365,12 +3427,12 @@ form#node-localization-edit-form  {
   .dialog-off-canvas-main-canvas div#edit-actions {
   
     display: flex;
-    width: 97.5%;
+ //   width: 97.5%;
     padding: 16px 17px !important;
  }
  
    
-  }
+}
 
 
   span.message-langage.pstStatusModeration {
@@ -3382,21 +3444,23 @@ form#node-localization-edit-form {
 }
 
 
+
+.dialog-off-canvas-main-canvas .node-content section {
+  margin: 100px auto 0px;
+  display: none;
+}
+
+
+article , article+h2 {
+  display: none;
+}
+
 //media query  HP externe
 
-@media screen and (min-width: 1920px)
-{
-  .report-card {
-    height: 15vh !important;
-    width: 18vw !important;
-    
-  }
- 
 
-}
 // for extend screen HP externe
 
-@media screen and (max-width: 1920px)
+@media screen and (min-width:1900px) and (max-width:7680px) 
 {
   
 
@@ -3431,30 +3495,24 @@ form#node-localization-edit-form {
 
 
   .dialog-off-canvas-main-canvas .activitylogMessage {
-    margin-top:30px !important;
-    width: 92.5% !important;
-    margin-left: -2% !important;
+    width:100% !important;
+    margin: 18px -20px !important;
+   
 }
 
   div#block-views-block-listcomments-block-1 {
-    margin:240px 50px 0px -10px !important;
+    margin:20px 50px 0px -20px !important;
     background: white;
     border-radius: 5px;
     padding: 10px;
     text-align: center;
     line-height: 3;
-    width: 93% !important;
+    width:100% !important;
 }
 
 
 
-  .node-content form#comment-form {
-    height: 183px !important;
-    width: 33.5% !important;
-    position: absolute !important;
-    top: -219px !important;
-    right: -37% !important;
-}
+
   .dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
     min-height: 100vh;
 }
@@ -3481,6 +3539,7 @@ article.node {
   width: 70% !important;
   position: relative !important;
   top: 10px !important;
+  display:block !important;
 }
 
 
@@ -3552,34 +3611,67 @@ div#block-views-block-edittranslation-block-1 a {
   background: #1491c1 !important; 
   position: absolute !important;
   top: 49px !important;
-  right:27% !important;
+  right:28% !important;
   color: white !important;
   padding: 15px !important;
   font-size: 12px !important;
 }
 
+input#edit-submit--2 {
+  background: #52627273 !important;
+  width: 95% !important;
+  margin-left: 10px !important;
+  margin-top: -10px;
+  font-size: 12px;
+  border-radius: 5px !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: white;
+}
 
+div#block-views-block-printpdftranslation-block-1 {
+  position: absolute;
+  right: -60px;
+  top: 60px;
+}
 
 }
 //for mac pac 
 
 @media screen and (max-width: 1440px)
 {
-  .dialog-off-canvas-main-canvas .report-card {
-    height: 100px !important;
-    width: 250px !important;
   
-}
-
-div#block-views-block-listcomments-block-1 {
-  margin: 190px 20px 0px 14px !important;
-}
 
 }
 // for unicef pc UNICEF
 
 @media screen and (max-width: 1280px )
 {
+
+
+  div#block-views-block-printpdftranslation-block-1 {
+    position: relative;
+    top: -45px;
+    left: 655px;
+}
+  input#edit-submit--2 {
+    background: #52627273 !important;
+    width: 95% !important;
+    margin-left: 6px;
+    margin-top: -10px;
+    font-size: 12px;
+    border-radius: 5px !important;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    color: white;
+ }
+ 
+
+  form#comment-form {
+    width: 100% !important;
+    position: relative;
+    margin: -3px -10px !important;
+}
 
   div#block-views-block-edittranslation-block-1 a {
     background: #1491c1 !important; 
@@ -3642,27 +3734,21 @@ div#block-views-block-listcomments-block-1 {
 }
 
 .dialog-off-canvas-main-canvas .activitylogMessage {
-  width: 90% !important;
-  margin: 20px 0px !important;
+  width: 100% !important;
+  margin: 20px -10px !important;
 }
 
   div#block-views-block-listcomments-block-1 {
-    margin: 218px 0px 0px 2px !important;
+    margin: 20px 0px 0px -10px !important;
     background: white;
     border-radius: 5px;
     padding: 10px;
     text-align: center;
     line-height: 3;
-    width: 90% !important;
+    width: 100% !important;
 }
 
-.node-content form#comment-form {
-  height: 183px !important;
-  width: 32% !important;
-  position: absolute !important;
-  top: -242px !important;
-  right: -35% !important;
-}
+
 
 
 .pstStatusModeration {

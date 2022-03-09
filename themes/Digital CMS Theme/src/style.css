@@ -214,6 +214,7 @@ article.node {
   padding: 15px;
   width: 70%;
   position: relative !important;
+  display: block !important;
 }
 
 article.node footer {
@@ -432,9 +433,7 @@ input#edit-subject-0-value {
 }
 
 form#comment-form {
-  height: 300px !important;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  height: 200px !important;
 }
 
 form#comment-form summary {
@@ -442,17 +441,17 @@ form#comment-form summary {
 }
 
 div#block-views-block-listcomments-block-1 {
-  margin: 190px 20px 0px 20px;
+  margin: 20px 20px 0px 20px;
   background: white;
   border-radius: 5px;
   padding: 10px;
   text-align: center;
   line-height: 3;
-  width: 80%;
+  width: 100%;
   color: #575757;
   -webkit-transition: 1s;
   transition: 1s;
-  height: 330px;
+  max-height: 330px;
   overflow-y: auto;
 }
 
@@ -462,7 +461,7 @@ form#node-sub-module-form,
 .node-course__edit-form,
 .node-form,
 form#comment-comment-delete-form,
-form#comment-form, form#user-form {
+form#user-form, form#comment-form {
   margin-top: 40px;
   background: white;
   width: 95%;
@@ -489,11 +488,11 @@ form#node-sub-module-form .js-form-item.form-item.js-form-type-textarea.form-ite
 form#comment-comment-delete-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
 form#comment-comment-delete-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value,
 form#comment-comment-delete-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value,
-form#comment-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
-form#comment-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value,
-form#comment-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value, form#user-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
+form#user-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
 form#user-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value,
-form#user-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value {
+form#user-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value, form#comment-form .js-form-item.form-item.js-form-type-textarea.form-item-field-description-0-value.js-form-item-field-description-0-value,
+form#comment-form .js-form-item.form-item.js-form-type-textfield.form-item-subject-0-value.js-form-item-subject-0-value,
+form#comment-form .js-form-item.form-item.js-form-type-textarea.form-item-field-commentbody2-0-value.js-form-item-field-commentbody2-0-value {
   width: 95%;
   margin: auto;
 }
@@ -504,7 +503,7 @@ form#node-sub-module-form textarea,
 .node-course__edit-form textarea,
 .node-form textarea,
 form#comment-comment-delete-form textarea,
-form#comment-form textarea, form#user-form textarea {
+form#user-form textarea, form#comment-form textarea {
   overflow: auto;
   border: 1px #98a8bd solid;
   border-radius: 0.25rem;
@@ -555,21 +554,78 @@ form#comment-comment-delete-form input#edit-field-message-0-value,
 form#comment-comment-delete-form .js-form-item,
 form#comment-comment-delete-form input#edit-field-localization-tag-0-target-id,
 form#comment-comment-delete-form input#edit-field-field-submoduleinmessage-0-target-id,
-form#comment-form input#edit-title-0-value,
-form#comment-form input#edit-field-course-0-target-id,
-form#comment-form input#edit-field-module-0-target-id,
-form#comment-form input#edit-field-message-0-value,
-form#comment-form .js-form-item,
-form#comment-form input#edit-field-localization-tag-0-target-id,
-form#comment-form input#edit-field-field-submoduleinmessage-0-target-id, form#user-form input#edit-title-0-value,
+form#user-form input#edit-title-0-value,
 form#user-form input#edit-field-course-0-target-id,
 form#user-form input#edit-field-module-0-target-id,
 form#user-form input#edit-field-message-0-value,
 form#user-form .js-form-item,
 form#user-form input#edit-field-localization-tag-0-target-id,
-form#user-form input#edit-field-field-submoduleinmessage-0-target-id {
+form#user-form input#edit-field-field-submoduleinmessage-0-target-id, form#comment-form input#edit-title-0-value,
+form#comment-form input#edit-field-course-0-target-id,
+form#comment-form input#edit-field-module-0-target-id,
+form#comment-form input#edit-field-message-0-value,
+form#comment-form .js-form-item,
+form#comment-form input#edit-field-localization-tag-0-target-id,
+form#comment-form input#edit-field-field-submoduleinmessage-0-target-id {
   border-radius: 0.25rem;
   line-height: 2;
+}
+
+form#comment-form {
+  width: 100% !important;
+  position: relative;
+  margin: -0px -20px;
+}
+
+form#comment-form label {
+  display: none;
+}
+
+form#comment-form:before {
+  content: '';
+  background: #f3f4f6;
+  position: absolute;
+  height: 43px;
+  width: 100%;
+  margin: -44px 0px;
+}
+
+form#comment-form textarea#edit-field-commentbody2-0-value {
+  margin: 20px 0px 0px !important;
+}
+
+form#comment-form form#comment-form textarea#edit-field-commentbody2-0-value {
+  margin: 20px 0px -5px !important;
+}
+
+form#comment-form div#edit-field-commentbody2-0-value--description {
+  display: none;
+}
+
+form#comment-form div#edit-actions #edit-submit {
+  width: 98% !important;
+  color: white !important;
+  background: #b5bbc2;
+  border: cornsilk !important;
+  margin-left: inherit;
+  text-align: center;
+  line-height: 38.5px !important;
+  border-radius: 5px !important;
+  font-size: 12px;
+  margin: auto 10px !important;
+}
+
+form#comment-form .dialog-off-canvas-main-canvas div#edit-actions {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  width: 100% !important;
+}
+
+form#comment-form div#edit-actions {
+  width: 100% !important;
+  line-height: 2.5rem !important;
+  margin: 10px 0px !important;
 }
 
 form#user-form {
@@ -928,6 +984,10 @@ form#user-login-form:after {
   margin: 100px auto 0px;
 }
 
+.dialog-off-canvas-main-canvas .node-content section article {
+  display: none !important;
+}
+
 .dialog-off-canvas-main-canvas .node-content section div#edit-field-commentbody2-0-value--description {
   display: none;
 }
@@ -981,7 +1041,6 @@ form#user-login-form:after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 97.5%;
 }
 
 .dialog-off-canvas-main-canvas .add-translation {
@@ -1629,6 +1688,7 @@ article[typeof="schema:Person"] {
   padding: 38px;
   text-align: center;
   margin: 30px auto;
+  display: block !important;
 }
 
 article[typeof="schema:Person"] img {
@@ -2443,15 +2503,14 @@ ul.links.inline + div {
 
 */
 .node-content form#comment-form div#edit-actions #edit-submit {
-  width: 99% !important;
+  width: 100% !important;
   margin: -10px -16px  !important;
   background: #52627273 !important;
 }
 
 .node-content form#comment-form {
   height: 183px !important;
-  width: 20%;
-  position: absolute;
+  width: 100%;
   top: 115px;
   right: 3.8%;
 }
@@ -3679,7 +3738,6 @@ form#node-localization-edit-form .dialog-off-canvas-main-canvas div#edit-actions
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 97.5%;
   padding: 16px 17px !important;
 }
 
@@ -3691,14 +3749,16 @@ form#node-localization-edit-form {
   padding: 10px 0px;
 }
 
-@media screen and (min-width: 1920px) {
-  .report-card {
-    height: 15vh !important;
-    width: 18vw !important;
-  }
+.dialog-off-canvas-main-canvas .node-content section {
+  margin: 100px auto 0px;
+  display: none;
 }
 
-@media screen and (max-width: 1920px) {
+article, article + h2 {
+  display: none;
+}
+
+@media screen and (min-width: 1900px) and (max-width: 7680px) {
   .contentent-preview-good-format {
     padding: 10px;
     background: white;
@@ -3729,25 +3789,17 @@ form#node-localization-edit-form {
     color: #1491c1 !important;
   }
   .dialog-off-canvas-main-canvas .activitylogMessage {
-    margin-top: 30px !important;
-    width: 92.5% !important;
-    margin-left: -2% !important;
+    width: 100% !important;
+    margin: 18px -20px !important;
   }
   div#block-views-block-listcomments-block-1 {
-    margin: 240px 50px 0px -10px !important;
+    margin: 20px 50px 0px -20px !important;
     background: white;
     border-radius: 5px;
     padding: 10px;
     text-align: center;
     line-height: 3;
-    width: 93% !important;
-  }
-  .node-content form#comment-form {
-    height: 183px !important;
-    width: 33.5% !important;
-    position: absolute !important;
-    top: -219px !important;
-    right: -37% !important;
+    width: 100% !important;
   }
   .dialog-off-canvas-main-canvas .md\:tw-flex-1.tw-p-4.block-contenu {
     min-height: 100vh;
@@ -3771,6 +3823,7 @@ form#node-localization-edit-form {
     width: 70% !important;
     position: relative !important;
     top: 10px !important;
+    display: block !important;
   }
   .dialog-off-canvas-main-canvas .add-translation {
     width: 19vw !important;
@@ -3816,24 +3869,51 @@ form#node-localization-edit-form {
     background: #1491c1 !important;
     position: absolute !important;
     top: 49px !important;
-    right: 27% !important;
+    right: 28% !important;
     color: white !important;
     padding: 15px !important;
     font-size: 12px !important;
   }
-}
-
-@media screen and (max-width: 1440px) {
-  .dialog-off-canvas-main-canvas .report-card {
-    height: 100px !important;
-    width: 250px !important;
+  input#edit-submit--2 {
+    background: #52627273 !important;
+    width: 95% !important;
+    margin-left: 10px !important;
+    margin-top: -10px;
+    font-size: 12px;
+    border-radius: 5px !important;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    color: white;
   }
-  div#block-views-block-listcomments-block-1 {
-    margin: 190px 20px 0px 14px !important;
+  div#block-views-block-printpdftranslation-block-1 {
+    position: absolute;
+    right: -60px;
+    top: 60px;
   }
 }
 
 @media screen and (max-width: 1280px) {
+  div#block-views-block-printpdftranslation-block-1 {
+    position: relative;
+    top: -45px;
+    left: 655px;
+  }
+  input#edit-submit--2 {
+    background: #52627273 !important;
+    width: 95% !important;
+    margin-left: 6px;
+    margin-top: -10px;
+    font-size: 12px;
+    border-radius: 5px !important;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    color: white;
+  }
+  form#comment-form {
+    width: 100% !important;
+    position: relative;
+    margin: -3px -10px !important;
+  }
   div#block-views-block-edittranslation-block-1 a {
     background: #1491c1 !important;
     position: absolute !important;
@@ -3873,24 +3953,17 @@ form#node-localization-edit-form {
     right: 106px !important;
   }
   .dialog-off-canvas-main-canvas .activitylogMessage {
-    width: 90% !important;
-    margin: 20px 0px !important;
+    width: 100% !important;
+    margin: 20px -10px !important;
   }
   div#block-views-block-listcomments-block-1 {
-    margin: 218px 0px 0px 2px !important;
+    margin: 20px 0px 0px -10px !important;
     background: white;
     border-radius: 5px;
     padding: 10px;
     text-align: center;
     line-height: 3;
-    width: 90% !important;
-  }
-  .node-content form#comment-form {
-    height: 183px !important;
-    width: 32% !important;
-    position: absolute !important;
-    top: -242px !important;
-    right: -35% !important;
+    width: 100% !important;
   }
   .pstStatusModeration {
     position: absolute !important;
