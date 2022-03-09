@@ -16,8 +16,7 @@ div,
 input,
 a,
 #edit-submit {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: normal;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
@@ -1591,7 +1590,7 @@ form#content-moderation-entity-moderation-form .entity-moderation-form {
   border: 0px dashed #bbb;
   background: #036572;
   border-radius: 6px;
-  color: white;
+  color: rgba(255, 255, 255, 0.945);
   position: absolute;
   opacity: 0;
 }
@@ -2194,14 +2193,23 @@ div#edit-pass--description {
 
 form#user-login-form:before {
   content: "";
-  background: url(https://www.unicef.org/wca/sites/unicef.org.wca/files/styles/hero_desktop/public/wca-programme-2017-education.jpg?itok=nvG0RG9p);
+  background: url(https://www.unicef.org/sites/default/files/styles/hero_desktop/public/Cell.jpg?itok=4s2viZ9h);
   position: absolute;
   height: 100%;
   width: 55%;
   background-repeat: no-repeat;
   background-size: cover;
   right: 0;
-  background-position: right;
+  background-position: center;
+}
+
+form#user-login-form:after {
+  content: '';
+  background: #1391c170;
+  position: absolute;
+  height: 100%;
+  width: 55%;
+  right: 0;
 }
 
 input#edit-name,
@@ -3896,15 +3904,8 @@ article, article + h2 {
 @media screen and (max-width: 1280px) {
   div#block-views-block-printpdftranslation-block-1 {
     position: relative;
-    top: -100px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    width: 96%;
+    top: -45px;
+    left: 655px;
   }
   input#edit-submit--2 {
     background: #52627273 !important;
