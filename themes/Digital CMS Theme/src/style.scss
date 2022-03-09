@@ -19,6 +19,8 @@ a,
   font-family: "Roboto", sans-serif !important;
 }
 
+
+
 aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
   background-color: #1491c1 !important;
   width: 260px !important;
@@ -3651,9 +3653,14 @@ div#block-views-block-printpdftranslation-block-1 {
 
   div#block-views-block-printpdftranslation-block-1 {
     position: relative;
-    top: -45px;
-    left: 655px;
+    top: -100px;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 96%;
 }
+
+
+
   input#edit-submit--2 {
     background: #52627273 !important;
     width: 95% !important;

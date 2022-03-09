@@ -3895,8 +3895,15 @@ article, article + h2 {
 @media screen and (max-width: 1280px) {
   div#block-views-block-printpdftranslation-block-1 {
     position: relative;
-    top: -45px;
-    left: 655px;
+    top: -100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    width: 96%;
   }
   input#edit-submit--2 {
     background: #52627273 !important;

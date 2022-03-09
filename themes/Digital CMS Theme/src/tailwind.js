@@ -1017,8 +1017,8 @@ function detectTopLevel(content){
      jQuery('.contentent-preview-good-format').find('*').addClass('course-content');
      var ckedi = jQuery('.contentent-preview-good-format').html();
      var ck2 =   jQuery(".module-title span:nth-last-of-type(1)").remove()
-     console.log('===================Debut ck 2===================')
-     console.log(ck2)
+  //   console.log('===================Debut ck 2===================')
+    // console.log(ck2)
 
         CKEDITOR.instances['edit-body-0-value'].setData(ckedi);
       });
@@ -1180,11 +1180,13 @@ function detectTopLevel(content){
 
        panel = this.nextElementSibling;
         if (panel.style.display === "block") {
+          
           panel.style.display = "none";
   jQuery(chevronbi).removeClass('tranfromnation-chevreon');
          
          // jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
         } else {
+          
           panel.style.display = "block";
   jQuery(chevronbi).addClass('tranfromnation-chevreon');
 
@@ -1198,10 +1200,11 @@ function detectTopLevel(content){
      //   console.log(panel)
         if (panel.style.display === "block") {
   jQuery(chevronbi).removeClass('tranfromnation-chevreon');
-        
+  
           panel.style.display = "none";
        //  jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
         } else {
+          
           panel.style.display = "block";
   jQuery(chevronbi).addClass('tranfromnation-chevreon');
 
