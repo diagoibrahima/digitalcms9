@@ -1306,15 +1306,14 @@ function detectTopLevel(content){
  
 
   //bar chart
-
-  jQuery("div#block-views-block-cardnbcours-block-1").ready(function(){
+jQuery("div#block-views-block-cardnbcours-block-1").ready(function(){
 
 
     const labelsBarChart = [
-      'Content',
-      'Localizations',
+      'Courses',
       'Messages',
-      'Messages translated'
+      'Languages localization',
+      'Localization Rate'
     ];
     const dataBarChart = {
       labels: labelsBarChart,
@@ -1337,7 +1336,10 @@ function detectTopLevel(content){
     var chartBar = new Chart(
       document.getElementById('chartBar'),
       configBarChart
+      
     );
+   
+
   
 
     
