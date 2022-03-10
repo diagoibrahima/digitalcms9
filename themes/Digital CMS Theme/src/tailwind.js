@@ -1307,62 +1307,7 @@ function detectTopLevel(content){
 
  
 
-  //bar chart
-jQuery("div#block-views-block-cardnbcours-block-1").ready(function(){
 
-
-
-  let cours = (jQuery('div#block-views-block-cardnbcours-block-1 header').text());
-
-  jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
-  let messagesimpe = (jQuery('div#block-views-block-cardnbmessage-block-1 header').text());
-  jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messages').html(messagesimpe);
-  let messagesimpetranslate = (jQuery('div#block-views-block-cardnbmessagetranslated-block-1 header').text());
-  jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(messagesimpetranslate);
-
-  var nblangueused = jQuery('#block-views-block-cardnblangue-block-1 h3 a').length;
-  jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(nblangueused);
-
-  let totalenombremessagelocalized = jQuery('div#block-views-block-cardnbmessagelocalized-block-1 header').text();
-
-  locationRate = parseInt((totalenombremessagelocalized * 100) / (messagesimpe * nblangueused));
-  jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(locationRate + '%');
-
-    const labelsBarChart = [
-      'Courses',
-      'Messages',
-      'Languages localization',
-      'Localization Rate'
-    ];
-    const dataBarChart = {
-      labels: labelsBarChart,
-      datasets: [{
-        label: 'Dataset Content management and adaption platform',
-        backgroundColor: '#36B1B4',
-        borderColor: '#36B1B4',
-        data: [ cours, messagesimpe, nblangueused, locationRate ],
-       // data: [10, 39, 50, 60]
-      }]
-    };
-  
-    const configBarChart = {
-      type: 'bar',
-      data: dataBarChart,
-      options: {}
-    };
-  
-  
-    var chartBar = new Chart(
-      document.getElementById('chartBar'),
-      configBarChart
-      
-    );
-   
-
-  
-
-    
-  });
 
 
 
@@ -1381,4 +1326,63 @@ jQuery("div#block-views-block-cardnbcours-block-1").ready(function(){
 
 
 });
+
+
+
+  //bar chart
+  jQuery("div#block-views-block-cardnbcours-block-1").ready(function(){
+
+
+
+    let cours = (jQuery('div#block-views-block-cardnbcours-block-1 header').text());
+  
+    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
+    let messagesimpe = (jQuery('div#block-views-block-cardnbmessage-block-1 header').text());
+    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messages').html(messagesimpe);
+    let messagesimpetranslate = (jQuery('div#block-views-block-cardnbmessagetranslated-block-1 header').text());
+    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(messagesimpetranslate);
+  
+    var nblangueused = jQuery('#block-views-block-cardnblangue-block-1 h3 a').length;
+    jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(nblangueused);
+  
+    let totalenombremessagelocalized = jQuery('div#block-views-block-cardnbmessagelocalized-block-1 header').text();
+  
+    locationRate = parseInt((totalenombremessagelocalized * 100) / (messagesimpe * nblangueused));
+    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(locationRate + '%');
+  
+      const labelsBarChart = [
+        'Courses',
+        'Messages',
+        'Languages localization',
+        'Localization Rate'
+      ];
+      const dataBarChart = {
+        labels: labelsBarChart,
+        datasets: [{
+          label: 'Dataset Content management and adaption platform',
+          backgroundColor: '#36B1B4',
+          borderColor: '#36B1B4',
+          data: [ cours, messagesimpe, nblangueused, locationRate ],
+         // data: [10, 39, 50, 60]
+        }]
+      };
+    
+      const configBarChart = {
+        type: 'bar',
+        data: dataBarChart,
+        options: {}
+      };
+    
+    
+      var chartBar = new Chart(
+        document.getElementById('chartBar'),
+        configBarChart
+        
+      );
+     
+  
+    
+  
+      
+    });
 
