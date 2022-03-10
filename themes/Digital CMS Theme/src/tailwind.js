@@ -1321,8 +1321,8 @@ jQuery("div#block-views-block-cardnbcours-block-1").ready(function(){
         label: 'Dataset Content management and adaption platform',
         backgroundColor: '#36B1B4',
         borderColor: '#36B1B4',
-        //data: [ cours, modulesdecourse, messagesimpetranslate, modulesdecourse ],
-        data: [10, 39, 50, 60]
+        data: [ cours, modulesdecourse, messagesimpetranslate, modulesdecourse ],
+       // data: [10, 39, 50, 60]
       }]
     };
   
