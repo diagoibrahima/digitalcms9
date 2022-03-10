@@ -479,7 +479,7 @@ jQuery(document).ready(function () {
 
  // var payspardefaut = jQuery("h6.country-of-userlog").text();
  // jQuery('select#edit-field-pays-teste-value option:contains('+payspardefaut+')').prop('selected',true); 
-  jQuery('.course-content').hide();
+  jQuery('.course-content , .video-embed-field-responsive-video').hide();
   jQuery('form').attr('autocomplete', 'off');
   jQuery('form#comment-form textarea ').attr('placeholder', 'Type a comment...✍️');
   jQuery('li.comment-add').remove();
@@ -1347,7 +1347,7 @@ function detectTopLevel(content){
   
     let totaleoftranlationcours = jQuery('div#block-views-block-cardnbmessagelocalized-block-1 header').text();
   
-    
+
     locationRate = parseInt((totaleoftranlationcours * 100) / (cours * nblangueused));
     jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(locationRate + '%');
   
