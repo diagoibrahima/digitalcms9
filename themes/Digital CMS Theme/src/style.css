@@ -3775,6 +3775,10 @@ div#block-views-block-dasbord-view-block-1:before {
   top: -36px;
 }
 
+div#block-views-block-list-localization-block-1 footer {
+  display: none;
+}
+
 @media screen and (min-width: 1900px) and (max-width: 7680px) {
   .contentent-preview-good-format {
     padding: 10px;
