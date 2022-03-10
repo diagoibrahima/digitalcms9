@@ -1303,39 +1303,47 @@ function detectTopLevel(content){
   formcomment = jQuery('.node-content section').html();
   jQuery(formcomment).insertBefore('div#block-views-block-listcomments-block-1');
 
-  console.log(formcomment)
+ 
 
   //bar chart
 
-
-  const labelsBarChart = [
-    'Content',
-    'Localizations',
-    'Messages',
-    'Messages translated'
-  ];
-  const dataBarChart = {
-    labels: labelsBarChart,
-    datasets: [{
-      label: 'Dataset Content management and adaption platform',
-      backgroundColor: '#36B1B4',
-      borderColor: '#36B1B4',
-      //data: [ cours, modulesdecourse, messagesimpetranslate, modulesdecourse ],
-      data: [10, 39, 50, 60]
-    }]
-  };
-
-  const configBarChart = {
-    type: 'bar',
-    data: dataBarChart,
-    options: {}
-  };
+  jQuery("div#block-views-block-cardnbcours-block-1").ready(function(){
 
 
-  var chartBar = new Chart(
-    document.getElementById('chartBar'),
-    configBarChart
-  );
+    const labelsBarChart = [
+      'Content',
+      'Localizations',
+      'Messages',
+      'Messages translated'
+    ];
+    const dataBarChart = {
+      labels: labelsBarChart,
+      datasets: [{
+        label: 'Dataset Content management and adaption platform',
+        backgroundColor: '#36B1B4',
+        borderColor: '#36B1B4',
+        //data: [ cours, modulesdecourse, messagesimpetranslate, modulesdecourse ],
+        data: [10, 39, 50, 60]
+      }]
+    };
+  
+    const configBarChart = {
+      type: 'bar',
+      data: dataBarChart,
+      options: {}
+    };
+  
+  
+    var chartBar = new Chart(
+      document.getElementById('chartBar'),
+      configBarChart
+    );
+  
+
+    
+  });
+
+
 
   jQuery('.module-section').each(function () {
 
