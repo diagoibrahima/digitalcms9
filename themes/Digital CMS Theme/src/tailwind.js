@@ -227,7 +227,7 @@ function detectTopLevel(content){
       window.localStorage.removeItem(filename);
 
     })
-  );
+  );                                              
   
   });
 
@@ -730,8 +730,8 @@ jQuery(document).ready(function () {
   }
 
 
-  //Dasboard 
-
+  //Dasboard old 
+/*
   let cours = (jQuery('div#block-views-block-cardnbcours-block-1 header').text());
 
   jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
@@ -747,6 +747,8 @@ jQuery(document).ready(function () {
 
   locationRate = parseInt((totalenombremessagelocalized * 100) / (messagesimpe * nblangueused));
   jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(locationRate + '%');
+
+*/
 
   //console.log(totalenombremessagelocalized);
 
