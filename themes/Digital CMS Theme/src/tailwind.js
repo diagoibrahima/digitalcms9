@@ -1347,6 +1347,7 @@ function detectTopLevel(content){
   
     let totaleoftranlationcours = jQuery('div#block-views-block-cardnbmessagelocalized-block-1 header').text();
   
+    
     locationRate = parseInt((totaleoftranlationcours * 100) / (cours * nblangueused));
     jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(locationRate + '%');
   
