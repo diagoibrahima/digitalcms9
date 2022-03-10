@@ -3467,6 +3467,16 @@ article , article+h2 {
   display: none;
 }
 
+
+div#block-views-block-dasbord-view-block-1:before {
+  content: '';
+  background: #f3f4f6;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  top: -36px;
+}
+
 //media query  HP externe
 
 
@@ -3921,4 +3931,13 @@ div#block-views-block-dasbord-view-block-1:before {
 h1.tw-leading-6.tw-font-medium.tw-text-black {
   color: #2795c3 !important;
   font-weight: 500 !important;
+}
+
+div#block-views-block-dasbord-view-block-1:before {
+  content: '';
+  background: #f3f4f6;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  top: -36px;
 }
