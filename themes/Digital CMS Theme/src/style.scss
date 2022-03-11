@@ -586,6 +586,7 @@ form#node-sub-module-form {
 }
 
 .tw-grid.tw-grid-cols-4.tw-gap-1.tw-place-items-stretch > p {
+ // width: 30% !important;
   color: #5656568f;
 
   &:hover {
@@ -3658,7 +3659,7 @@ input#edit-submit--2 {
 
 div#block-views-block-printpdftranslation-block-1 {
   position: absolute;
-  right: -60px;
+  right:320px;
   top: 60px;
 }
 
@@ -3675,11 +3676,23 @@ div#block-views-block-printpdftranslation-block-1 {
 @media screen and (max-width: 1280px )
 {
 
-
   div#block-views-block-printpdftranslation-block-1 {
-    position: relative;
-    top: -45px;
+    position: absolute;
+    top: 111px;
     left: 655px;
+}
+
+
+
+
+div#block-views-block-languagesmstranslation-block-1 {
+  width: 70%;
+  margin: 30px 2rem !important;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 6px #2316161a !important;
+  box-shadow: 1px 1px 6px #2316161a !important;
 }
   input#edit-submit--2 {
     background: #52627273 !important;
@@ -3904,7 +3917,7 @@ form#node-language-form div#edit-actions #edit-submit {
 
 
 .separateur-comment {
-  width: 109% !important;
+  width: 107% !important;
 }
 .image-profile-user .name-profile-user {
  
