@@ -211,7 +211,6 @@ function detectTopLevel(content){
 
         //Detecton le toplevel
         tabtoplevelexcel = detectTopLevel(translation.Translation);
-
         excelmodule = tabtoplevelexcel[0].toLowerCase();
         excelsubmodule = tabtoplevelexcel[1].toLowerCase();
 
