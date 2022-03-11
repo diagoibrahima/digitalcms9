@@ -1344,7 +1344,7 @@ jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tra
 
 
     let cours = (jQuery('div#block-views-block-cardnbcours-block-1 header').text());
-  
+  console.log(cours)
     jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
     let messagesimpe = (jQuery('div#block-views-block-cardnbmessage-block-1 header').text());
     jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messages').html(messagesimpe);
@@ -1353,9 +1353,9 @@ jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tra
   
     var nblangueused = jQuery('#block-views-block-cardnblangue-block-1 h3 a').length;
     jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(nblangueused);
-  
+    console.log(nblangueused)
     let totaleoftranlationcours = jQuery('div#block-views-block-cardnbmessagelocalized-block-1 header').text();
-  
+    console.log(totaleoftranlationcours)
 
     locationRate = parseInt((totaleoftranlationcours * 100) / (cours * nblangueused));
     jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(locationRate + '%');
