@@ -675,6 +675,7 @@ form#node-sub-module-form {
 }
 
 .tw-grid.tw-grid-cols-4.tw-gap-1.tw-place-items-stretch > p {
+  width: 30% !important;
   color: #5656568f;
 }
 
@@ -4076,7 +4077,7 @@ div#block-views-block-list-localization-block-1 footer {
     margin-left: 74% !important;
   }
   .separateur-comment {
-    width: 109% !important;
+    width: 108% !important;
   }
   .image-profile-user .name-profile-user {
     font-size: 12px !important;
