@@ -1181,8 +1181,7 @@ function detectTopLevel(content){
   var i;
   
   for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      
+    acc[i].addEventListener("click", function() {  
     var chevronbi = this.lastChild
 
    // jQuery('module-title p').remove();
@@ -1193,14 +1192,14 @@ function detectTopLevel(content){
        panel = this.nextElementSibling;
         if (panel.style.display === "block") {
           
-          panel.style.display = "none";
-  jQuery(chevronbi).removeClass('tranfromnation-chevreon');
+panel.style.display = "none";
+jQuery(chevronbi).removeClass('tranfromnation-chevreon');
          
          // jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
         } else {
           
-          panel.style.display = "block";
-  jQuery(chevronbi).addClass('tranfromnation-chevreon');
+panel.style.display = "block";
+jQuery(chevronbi).addClass('tranfromnation-chevreon');
 
         //  jQuery('.svg-inline--fa.fa-w-14').addClass('tranfromnation-chevreon');
 
