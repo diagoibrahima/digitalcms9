@@ -1173,7 +1173,7 @@ function detectTopLevel(content){
 
   });
 
-  // Expand switch for one single learning module  new
+  /* Expand switch for one single learning module  new
   jQuery('.blockmodule-titre-module').click(function () {
     //console.log(this);
 
@@ -1183,8 +1183,7 @@ function detectTopLevel(content){
 
   });
 
-
-
+  */
 
   var acc = document.getElementsByClassName("module-title");
   var i;
