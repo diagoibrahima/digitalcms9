@@ -1174,6 +1174,9 @@ function detectTopLevel(content){
 
   });
 
+
+
+
   var acc = document.getElementsByClassName("module-title");
   var i;
   
