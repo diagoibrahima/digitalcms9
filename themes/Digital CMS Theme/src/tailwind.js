@@ -199,23 +199,20 @@ function detectTopLevel(content){
         tabtoplevelexcel = detectTopLevel(translation.Translation);
         excelmodule = tabtoplevelexcel[0].toLowerCase();
         excelsubmodule = tabtoplevelexcel[1].toLowerCase();
-
         console.log("---------------------------");
         console.log("Top 1 "+excelmodule);
         console.log("Top 2"+excelsubmodule);
         console.log("---------------------------");
-
         excelregexa = new RegExp(`<${excelmodule}.*?>.*?<\/${excelmodule}>`, "g")
         excelregexb = new RegExp(`<${excelsubmodule}.*?>.*?<\/${excelsubmodule}>`, "g")
-        
+
         var smssplit = getSMS(translation.Translation);
         for(i=0; i<smssplit.length; i++){
           if(excelsubmodule == null){
             items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[0].replace(regex, ""),,smssplit[i]]);
-          }else {
+          }else{
             items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[0].replace(regex, ""),translation.Translation.match(excelregexb)[0].replace(regex, ""),smssplit[i]]);
           }
-          
         }
         window.localStorage.setItem('filename', translation.Cours+"_translation");
       }
