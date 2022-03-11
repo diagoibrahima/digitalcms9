@@ -15,7 +15,7 @@ span,
 div,
 input,
 a,
-#edit-submit {
+#edit-submit , * {
   font-family: 'Open Sans', sans-serif !important;
   font-weight: normal !important;
  // font-family: "Roboto", sans-serif !important;
@@ -2629,7 +2629,7 @@ article .node-content,
     font-weight: normal !important;
     border-radius: 1px !important;
     margin: 2px 0px !important;
-    padding: 10px 10px !important;
+    padding: 10px 36px 10px 0px !important;
     position: relative !important;
     cursor: pointer !important;
     transition: 1s;
@@ -2909,7 +2909,6 @@ span#cke_12,
 a#cke_24,
 span.cke_button_icon.cke_button__numberedlist_icon,
 span.cke_button_icon.cke_button__blockquote_icon,
-span.cke_button_icon.cke_button__video_embed_icon,
 span.cke_button_icon.cke_button__table_icon,
 a#cke_34,
 span#cke_10,
@@ -3467,6 +3466,22 @@ article , article+h2 {
   display: none;
 }
 
+
+div#block-views-block-dasbord-view-block-1:before {
+  content: '';
+  background: #f3f4f6;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  top: -36px;
+}
+
+
+
+div#block-views-block-list-localization-block-1 footer {
+  display: none;
+}
+
 //media query  HP externe
 
 
@@ -3907,8 +3922,20 @@ aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
 }
 
 
-p{
-  font-size: 14px !important;
+
+div#block-views-block-dasbord-view-block-1:before {
+  content: '';
+  background: #f3f4f6;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  top: -36px;
+}
+
+
+h1.tw-leading-6.tw-font-medium.tw-text-black {
+  color: #2795c3 !important;
+  font-weight: 500 !important;
 }
 
 div#block-views-block-dasbord-view-block-1:before {
