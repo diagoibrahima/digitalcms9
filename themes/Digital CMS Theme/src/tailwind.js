@@ -1194,12 +1194,14 @@ function detectTopLevel(content){
           
 panel.style.display = "none";
 jQuery(chevronbi).removeClass('tranfromnation-chevreon');
+
          
          // jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
         } else {
           
 panel.style.display = "block";
 jQuery(chevronbi).addClass('tranfromnation-chevreon');
+jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tranfromnation-chevreon");
 
         //  jQuery('.svg-inline--fa.fa-w-14').addClass('tranfromnation-chevreon');
 
@@ -1218,6 +1220,8 @@ jQuery(chevronbi).addClass('tranfromnation-chevreon');
           
           panel.style.display = "block";
   jQuery(chevronbi).addClass('tranfromnation-chevreon');
+jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tranfromnation-chevreon");
+
 
         //  jQuery('.svg-inline--fa.fa-w-14').addClass('tranfromnation-chevreon');
 
