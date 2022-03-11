@@ -205,13 +205,13 @@ function detectTopLevel(content){
         console.log("---------------------------");
         excelregexa = new RegExp(`<${excelmodule}.*?>.*?<\/${excelmodule}>`, "g")
         excelregexb = new RegExp(`<${excelsubmodule}.*?>.*?<\/${excelsubmodule}>`, "g")
-
+        
         var smssplit = getSMS(translation.Translation);
         for(i=0; i<smssplit.length; i++){
           if(excelsubmodule == null){
             items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[0].replace(regex, ""),,smssplit[i]]);
-          }else{
-            items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[0].replace(regex, ""),translation.Translation.match(excelregexb)[0].replace(regex, ""),smssplit[i]]);
+          }else {
+            items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[0].replace(regex, ""),translation.Translation.match(excelregexb)[1].replace(regex, ""),smssplit[i]]);
           }
         }
         window.localStorage.setItem('filename', translation.Cours+"_translation");
@@ -223,7 +223,7 @@ function detectTopLevel(content){
       window.localStorage.removeItem(filename);
 
     })
-  );                                              
+  );
   
   });
 
@@ -475,7 +475,7 @@ jQuery(document).ready(function () {
 
  // var payspardefaut = jQuery("h6.country-of-userlog").text();
  // jQuery('select#edit-field-pays-teste-value option:contains('+payspardefaut+')').prop('selected',true); 
-  jQuery('.course-content , .video-embed-field-responsive-video').hide();
+  jQuery('.course-content').hide();
   jQuery('form').attr('autocomplete', 'off');
   jQuery('form#comment-form textarea ').attr('placeholder', 'Type a comment...✍️');
   jQuery('li.comment-add').remove();
@@ -675,30 +675,27 @@ jQuery(document).ready(function () {
   //content completion ----------------  
 
   //nombre de message traduit
- // var nombredemessagetraduit = parseInt((jQuery('div#block-views-block-completionnbtraduction-block-1 header').text()));
+  var nombredemessagetraduit = parseInt((jQuery('div#block-views-block-completionnbtraduction-block-1 header').text()));
 
   // console.log(nombredemessagetraduit);
 
-  
-  //Total language dans la platform cta nombre de traduction a avoir
+  //total message
+  var totalmessage = parseInt((jQuery('div#block-views-block-completionnbmessage-block-1 header').text()));
+  //console.log(totalmessage);
 
-  var totalangues = parseInt((jQuery('div#block-views-block-completionnblangue-block-1 header').text()));
-  console.log(totalangues);
-//nombre elemet deja traduit
-  var totaltranduit =parseInt((jQuery("div#block-views-block-list-localization-block-1 footer").text()));
-//pourcentagfe de la traduction
-  contencompletionpourcentage =totaltranduit *100 /totalangues
-  console.log(contencompletionpourcentage);
+  var nblangue = jQuery('.nombredelangue').length;
+  // console.log(nblangue);
+
+
   //Nombre de message restant a traduire
-  var restotranslate = totalangues - totaltranduit;
-  console.log(restotranslate);
+  var restotranslate = totalmessage - nombredemessagetraduit;
 
   if (isNaN(restotranslate)) { restotranslate = 0; }
   //console.log(restotranslate);
 
- // var pourcentage = nombredemessagetraduit * 100 / (totalmessage * nblangue);
+  var pourcentage = nombredemessagetraduit * 100 / (totalmessage * nblangue);
 
-  var pourcentagemyInt = parseInt(contencompletionpourcentage);
+  var pourcentagemyInt = parseInt(pourcentage);
 
   //console.log(pourcentagemyInt);
 
@@ -729,8 +726,8 @@ jQuery(document).ready(function () {
   }
 
 
-  //Dasboard old 
-/*
+  //Dasboard 
+
   let cours = (jQuery('div#block-views-block-cardnbcours-block-1 header').text());
 
   jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
@@ -746,8 +743,6 @@ jQuery(document).ready(function () {
 
   locationRate = parseInt((totalenombremessagelocalized * 100) / (messagesimpe * nblangueused));
   jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(locationRate + '%');
-
-*/
 
   //console.log(totalenombremessagelocalized);
 
@@ -1174,7 +1169,8 @@ function detectTopLevel(content){
   var i;
   
   for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {  
+    acc[i].addEventListener("click", function() {
+      
     var chevronbi = this.lastChild
 
    // jQuery('module-title p').remove();
@@ -1185,14 +1181,14 @@ function detectTopLevel(content){
        panel = this.nextElementSibling;
         if (panel.style.display === "block") {
           
-panel.style.display = "none";
-jQuery(chevronbi).removeClass('tranfromnation-chevreon');
+          panel.style.display = "none";
+  jQuery(chevronbi).removeClass('tranfromnation-chevreon');
          
          // jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
         } else {
           
-panel.style.display = "block";
-jQuery(chevronbi).addClass('tranfromnation-chevreon');
+          panel.style.display = "block";
+  jQuery(chevronbi).addClass('tranfromnation-chevreon');
 
         //  jQuery('.svg-inline--fa.fa-w-14').addClass('tranfromnation-chevreon');
 
@@ -1303,11 +1299,39 @@ jQuery(chevronbi).addClass('tranfromnation-chevreon');
   formcomment = jQuery('.node-content section').html();
   jQuery(formcomment).insertBefore('div#block-views-block-listcomments-block-1');
 
- 
+  console.log(formcomment)
+
+  //bar chart
 
 
+  const labelsBarChart = [
+    'Content',
+    'Localizations',
+    'Messages',
+    'Messages translated'
+  ];
+  const dataBarChart = {
+    labels: labelsBarChart,
+    datasets: [{
+      label: 'Dataset Content management and adaption platform',
+      backgroundColor: '#36B1B4',
+      borderColor: '#36B1B4',
+      //data: [ cours, modulesdecourse, messagesimpetranslate, modulesdecourse ],
+      data: [10, 39, 50, 60]
+    }]
+  };
+
+  const configBarChart = {
+    type: 'bar',
+    data: dataBarChart,
+    options: {}
+  };
 
 
+  var chartBar = new Chart(
+    document.getElementById('chartBar'),
+    configBarChart
+  );
 
   jQuery('.module-section').each(function () {
 
@@ -1324,64 +1348,4 @@ jQuery(chevronbi).addClass('tranfromnation-chevreon');
 
 
 });
-
-
-
-  //bar chart
-  jQuery("div#block-views-block-cardnbcours-block-1").ready(function(){
-
-
-
-    let cours = (jQuery('div#block-views-block-cardnbcours-block-1 header').text());
-  
-    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
-    let messagesimpe = (jQuery('div#block-views-block-cardnbmessage-block-1 header').text());
-    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messages').html(messagesimpe);
-    let messagesimpetranslate = (jQuery('div#block-views-block-cardnbmessagetranslated-block-1 header').text());
-    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(messagesimpetranslate);
-  
-    var nblangueused = jQuery('#block-views-block-cardnblangue-block-1 h3 a').length;
-    jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(nblangueused);
-  
-    let totaleoftranlationcours = jQuery('div#block-views-block-cardnbmessagelocalized-block-1 header').text();
-  
-
-    locationRate = parseInt((totaleoftranlationcours * 100) / (cours * nblangueused));
-    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(locationRate + '%');
-  
-      const labelsBarChart = [
-        'Courses',
-        'Messages',
-        'Languages localization',
-        'Localization Rate'
-      ];
-      const dataBarChart = {
-        labels: labelsBarChart,
-        datasets: [{
-          label: 'Dataset Content management and adaption platform',
-          backgroundColor: '#36B1B4',
-          borderColor: '#36B1B4',
-          data: [ cours, messagesimpe, nblangueused, locationRate ],
-         // data: [10, 39, 50, 60]
-        }]
-      };
-    
-      const configBarChart = {
-        type: 'bar',
-        data: dataBarChart,
-        options: {}
-      };
-    
-    
-      var chartBar = new Chart(
-        document.getElementById('chartBar'),
-        configBarChart
-        
-      );
-     
-  
-    
-  
-      
-    });
 
