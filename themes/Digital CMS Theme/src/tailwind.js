@@ -98,6 +98,20 @@ class XlsExport {
 var hostname = window.location.hostname;
 var protocol = window.location.protocol;
 
+
+
+
+jQuery(document).ready(function(){
+
+  jQuery(".button-delete-section").click(function(){
+  
+    jQuery(".contextual.simpler_quickedit-do button.trigger.focusable ").click();
+    console.log("click delete")
+    alert("i am ready ")
+  
+  });
+});
+
 //export default XlsExport; // comment this line to babelize
 
 jQuery("form#node-content-edit-form").ready( function(){
@@ -477,16 +491,10 @@ jQuery(document).ready(function () {
   
 
 
-  jQuery(".button-delete-section").click(function(){
-  
-    jQuery(".contextual.simpler_quickedit-do button.trigger.focusable ").click();
-    console.log("click delete")
-    alert("i am ready ")
-  
-  });
+ 
 
 
-  
+
   jQuery("article .node-content p").append('<i class="fa fa-trash-o button-delete-section" aria-hidden="true"></i>')
   jQuery('.module-title').removeClass('course-content')
 
