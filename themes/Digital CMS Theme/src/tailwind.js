@@ -1335,7 +1335,7 @@ jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tra
 
 jQuery(".button-delete-section").click(function(){
 
-  
+  jQuery(".contextual.simpler_quickedit-do button.trigger.focusable ").click();
 
 });
 
