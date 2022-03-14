@@ -484,6 +484,9 @@ jQuery(document).ready(function () {
     alert("i am ready ")
   
   });
+
+
+  
   jQuery("article .node-content p").append('<i class="fa fa-trash-o button-delete-section" aria-hidden="true"></i>')
   jQuery('.module-title').removeClass('course-content')
 
