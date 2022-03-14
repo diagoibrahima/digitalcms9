@@ -1333,8 +1333,8 @@ jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tra
   });
 
 
-jQuery("svg.svg-inline--fa.fa-trash-alt.fa-w-14.button-delete-section.tranfromnation-chevreon").click(function(){
-
+jQuery(".button-delete-section").click(function(){
+ 
   jQuery(".contextual.simpler_quickedit-do button.trigger.focusable ").click();
   console.log("click delete")
 
