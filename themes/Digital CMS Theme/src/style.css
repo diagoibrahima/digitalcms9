@@ -4122,6 +4122,7 @@ div#block-views-block-dasbord-view-block-1:before {
 
 p.course-content {
   background: #f3f4f680;
+  position: relative;
 }
 
 p.course-content svg.svg-inline--fa.fa-trash-alt.fa-w-14.tranfromnation-chevreon {
