@@ -4142,4 +4142,12 @@ svg.svg-inline--fa.fa-trash-alt.fa-w-14:hover {
     padding: 0px !important;
   }
 }
+
+div#block-views-block-moreinfosuser-block-1 {
+  width: 50%;
+  background: white;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+}
 /*# sourceMappingURL=style.css.map */
