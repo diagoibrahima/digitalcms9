@@ -3964,20 +3964,20 @@ div#block-views-block-dasbord-view-block-1:before {
 p.course-content {
   background: #f3f4f680;
   position: relative;
-
-
-  svg.svg-inline--fa.fa-trash-alt.fa-w-14.tranfromnation-chevreon {
-    position: absolute;
-    right: 5px;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    color: #1491c1;
-    top: 5px;
-    cursor: pointer;
-
-    &:hover{
-    color: red !important;
-    }
-}
 }
 
+
+
+svg.svg-inline--fa.fa-trash-alt.fa-w-14.tranfromnation-chevreon {
+  position: absolute;
+  right: 5px;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: #1491c1;
+  top: 5px;
+  cursor: pointer;
+
+  &:hover{
+  color: red !important;
+  }
+}
