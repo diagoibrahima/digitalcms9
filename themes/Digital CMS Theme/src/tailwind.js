@@ -474,6 +474,9 @@ jQuery('form#views-exposed-form-list-of-content-page-1').( function(){
 jQuery(document).ready(function () {
 
 
+  
+
+
   jQuery(".button-delete-section").click(function(){
   
     jQuery(".contextual.simpler_quickedit-do button.trigger.focusable ").click();
