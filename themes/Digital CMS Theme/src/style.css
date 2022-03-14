@@ -4138,4 +4138,8 @@ svg.svg-inline--fa.fa-trash-alt.fa-w-14 {
 svg.svg-inline--fa.fa-trash-alt.fa-w-14:hover {
   color: red !important;
 }
+
+.section-help article.node {
+  margin: 50px auto;
+}
 /*# sourceMappingURL=style.css.map */
