@@ -2826,7 +2826,7 @@ article .node-content .module-title,
   font-weight: normal !important;
   border-radius: 1px !important;
   margin: 2px 0px !important;
-  padding: 10px 36px 10px 0px !important;
+  padding: 10px 36px 10px 10px !important;
   position: relative !important;
   cursor: pointer !important;
   -webkit-transition: 1s;
@@ -4126,9 +4126,15 @@ p.course-content {
 
 p.course-content svg.svg-inline--fa.fa-trash-alt.fa-w-14.tranfromnation-chevreon {
   position: absolute;
-  right: 0;
+  right: 5px;
   -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  transform: rotate(0deg);
   color: #1491c1;
+  top: 5px;
+  cursor: pointer;
+}
+
+p.course-content svg.svg-inline--fa.fa-trash-alt.fa-w-14.tranfromnation-chevreon:hover {
+  color: red !important;
 }
 /*# sourceMappingURL=style.css.map */

@@ -2630,7 +2630,7 @@ article .node-content,
     font-weight: normal !important;
     border-radius: 1px !important;
     margin: 2px 0px !important;
-    padding: 10px 36px 10px 0px !important;
+    padding: 10px 36px 10px 10px !important;
     position: relative !important;
     cursor: pointer !important;
     transition: 1s;
@@ -3965,12 +3965,18 @@ p.course-content {
   background: #f3f4f680;
 
 
-
   svg.svg-inline--fa.fa-trash-alt.fa-w-14.tranfromnation-chevreon {
     position: absolute;
-    right: 0;
+    right: 5px;
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     color: #1491c1;
+    top: 5px;
+    cursor: pointer;
+
+    &:hover{
+    color: red !important;
+    }
 }
 }
 
