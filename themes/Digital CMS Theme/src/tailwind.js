@@ -478,6 +478,7 @@ jQuery(document).ready(function () {
   
     jQuery(".contextual.simpler_quickedit-do button.trigger.focusable ").click();
     console.log("click delete")
+    alert("i am ready ")
   
   });
   jQuery("article .node-content p").append('<i class="fa fa-trash-o button-delete-section" aria-hidden="true"></i>')
