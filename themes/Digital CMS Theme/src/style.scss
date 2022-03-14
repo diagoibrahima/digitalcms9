@@ -3970,12 +3970,12 @@ p.course-content {
 
 svg.svg-inline--fa.fa-trash-alt.fa-w-14.tranfromnation-chevreon {
   position: absolute;
-  right: 5px;
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
-  color: #1491c1;
-  top: 5px;
-  cursor: pointer;
+  right: 5px  !important;
+  -webkit-transform: rotate(0deg) !important;
+  transform: rotate(0deg)  !important;
+  color: #1491c1  !important;
+  top: 5px  !important;
+  cursor: pointer  !important;
 
   &:hover{
   color: red !important;
