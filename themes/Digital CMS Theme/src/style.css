@@ -4125,7 +4125,7 @@ p.course-content {
   position: relative;
 }
 
-svg.svg-inline--fa.fa-trash-alt.fa-w-14.tranfromnation-chevreon {
+svg.svg-inline--fa.fa-trash-alt.fa-w-14 {
   position: absolute;
   right: 5px  !important;
   -webkit-transform: rotate(0deg) !important;
@@ -4135,7 +4135,7 @@ svg.svg-inline--fa.fa-trash-alt.fa-w-14.tranfromnation-chevreon {
   cursor: pointer  !important;
 }
 
-svg.svg-inline--fa.fa-trash-alt.fa-w-14.tranfromnation-chevreon:hover {
+svg.svg-inline--fa.fa-trash-alt.fa-w-14:hover {
   color: red !important;
 }
 /*# sourceMappingURL=style.css.map */
