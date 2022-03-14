@@ -1255,12 +1255,12 @@ jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tra
     if(expand == "Expand all"){
       jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Minimize')
       jQuery('.svg-inline--fa.fa-w-14').addClass('tranfromnation-chevreon');
-      jQuery('.course-content').show();
+      jQuery('.course-content').show(600);
     }else{
       jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Expand all')
     
       jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
-      jQuery('.course-content').hide();
+      jQuery('.course-content').hide(600);
 
     }
   //  expand == "Expand all" ? jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Minimize') : jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Expand all')
