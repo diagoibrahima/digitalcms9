@@ -3483,10 +3483,66 @@ div#block-views-block-list-localization-block-1 footer {
   display: none;
 }
 
-//media query  HP externe
 
 
-// for extend screen HP externe
+
+div#block-views-block-dasbord-view-block-1:before {
+  content: '';
+  background: #f3f4f6;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  top: -36px;
+}
+
+
+h1.tw-leading-6.tw-font-medium.tw-text-black {
+  color: #2795c3 !important;
+  font-weight: 500 !important;
+}
+
+div#block-views-block-dasbord-view-block-1:before {
+  content: '';
+  background: #f3f4f6;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  top: -36px;
+}
+
+
+p.course-content {
+  background: #f3f4f680;
+  position: relative;
+}
+
+
+
+svg.svg-inline--fa.fa-trash-alt.fa-w-14 {
+  position: absolute;
+  right: 5px  !important;
+  -webkit-transform: rotate(0deg) !important;
+  transform: rotate(0deg)  !important;
+  color: #1491c1  !important;
+  top: 5px  !important;
+  cursor: pointer  !important;
+
+  &:hover{
+  color: red !important;
+  }
+}
+
+
+
+.section-help article.node {
+  margin: 50px auto;
+}
+
+
+//media query  HP externe and 8 K
+
+
+
 
 @media screen and (min-width:1900px) and (max-width:7680px) 
 {
@@ -3664,16 +3720,10 @@ div#block-views-block-printpdftranslation-block-1 {
 }
 
 }
-//for mac pac 
+// for extend screen Unicef PC
 
-@media screen and (max-width: 1440px)
-{
-  
+@media screen and (min-width: 1280px ) and (max-width:1899px) 
 
-}
-// for unicef pc UNICEF
-
-@media screen and (max-width: 1280px )
 {
 
   div#block-views-block-printpdftranslation-block-1 {
@@ -3935,55 +3985,3 @@ aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
 }
 
 
-
-div#block-views-block-dasbord-view-block-1:before {
-  content: '';
-  background: #f3f4f6;
-  position: absolute;
-  height: 100px;
-  width: 100%;
-  top: -36px;
-}
-
-
-h1.tw-leading-6.tw-font-medium.tw-text-black {
-  color: #2795c3 !important;
-  font-weight: 500 !important;
-}
-
-div#block-views-block-dasbord-view-block-1:before {
-  content: '';
-  background: #f3f4f6;
-  position: absolute;
-  height: 100px;
-  width: 100%;
-  top: -36px;
-}
-
-
-p.course-content {
-  background: #f3f4f680;
-  position: relative;
-}
-
-
-
-svg.svg-inline--fa.fa-trash-alt.fa-w-14 {
-  position: absolute;
-  right: 5px  !important;
-  -webkit-transform: rotate(0deg) !important;
-  transform: rotate(0deg)  !important;
-  color: #1491c1  !important;
-  top: 5px  !important;
-  cursor: pointer  !important;
-
-  &:hover{
-  color: red !important;
-  }
-}
-
-
-
-.section-help article.node {
-  margin: 50px auto;
-}
