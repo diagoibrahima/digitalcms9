@@ -4119,4 +4119,16 @@ div#block-views-block-dasbord-view-block-1:before {
   width: 100%;
   top: -36px;
 }
+
+p.course-content {
+  background: #f3f4f680;
+}
+
+p.course-content svg.svg-inline--fa.fa-trash-alt.fa-w-14.tranfromnation-chevreon {
+  position: absolute;
+  right: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  color: #1491c1;
+}
 /*# sourceMappingURL=style.css.map */
