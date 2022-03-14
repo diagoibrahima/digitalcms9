@@ -197,32 +197,48 @@ function detectTopLevel(content){
 
         //Detecton le toplevel
         tabtoplevelexcel = detectTopLevel(translation.Translation);
+        console.log("Result detect toplevel");
+        console.log(tabtoplevelexcel);
+
+        if(tabtoplevelexcel[1] !== undefined ){
+          excelsubmodule = tabtoplevelexcel[1].toLowerCase();
+          excelregexb = new RegExp(`<${excelsubmodule}.*?>.*?<\/${excelsubmodule}>`, "g");
+        }else excelsubmodule = null;
         excelmodule = tabtoplevelexcel[0].toLowerCase();
-        excelsubmodule = tabtoplevelexcel[1].toLowerCase();
+        excelregexa = new RegExp(`<${excelmodule}.*?>.*?<\/${excelmodule}>`, "g");
+        /*
         console.log("---------------------------");
         console.log("Top 1 "+excelmodule);
         console.log("Top 2"+excelsubmodule);
         console.log("---------------------------");
-        excelregexa = new RegExp(`<${excelmodule}.*?>.*?<\/${excelmodule}>`, "g")
-        excelregexb = new RegExp(`<${excelsubmodule}.*?>.*?<\/${excelsubmodule}>`, "g")
-        
+        console.log(excelregexb);
+        */
         var smssplit = getSMS(translation.Translation);
-        for(i=0; i<smssplit.length; i++){
-          if(excelsubmodule == null){
-            items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[0].replace(regex, ""),,smssplit[i]]);
-          }else {
-            items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[0].replace(regex, ""),translation.Translation.match(excelregexb)[1].replace(regex, ""),smssplit[i]]);
+        console.log("Translation Content");
+        console.log(translation.Translation);
+        for(k=0; k<translation.Translation.match(excelregexa).length; k++){
+          for(i=0; i<smssplit.length; i++){
+            if(excelsubmodule === null){
+              console.log("cas pas de submodule");
+              console.log(translation.Translation.match(excelregexa));
+              items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[k].replace(regex, ""),,smssplit[i]]);
+            }else {
+              console.log("cas submodule");
+              items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[0].replace(regex, ""),translation.Translation.match(excelregexb)[0].replace(regex, ""),smssplit[i]]);
+            }
           }
-        }
+      }
+
         window.localStorage.setItem('filename', translation.Cours+"_translation");
       }
     //  console.log(items2);
       var filename2 = window.localStorage.getItem('filename');
       const xls = new XlsExport(items2, "monexcel");
       xls.exportToXLS(filename2);
-      window.localStorage.removeItem(filename);
+      window.localStorage.removeItem('filename');
 
-    })
+    }).catch(console.log("No translation"))
+    
   );
   
   });
