@@ -53,6 +53,10 @@
                 "cors",
                 "stack"
             ],
+            "support": {
+                "issues": "https://github.com/asm89/stack-cors/issues",
+                "source": "https://github.com/asm89/stack-cors/tree/1.3.0"
+            },
             "install-path": "../asm89/stack-cors"
         },
         {
@@ -1582,7 +1586,7 @@
             "support": {
                 "source": "https://github.com/drupal/core/tree/9.3.7"
             },
-            "install-path": "../../core"
+            "install-path": "../drupal/core"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -1861,7 +1865,7 @@
                 "source": "http://cgit.drupalcode.org/country",
                 "issues": "http://drupal.org/project/issues/country"
             },
-            "install-path": "../../modules/contrib/country"
+            "install-path": "../drupal/country"
         },
         {
             "name": "drupal/csv_serialization",
@@ -1914,7 +1918,7 @@
                 "source": "http://cgit.drupalcode.org/csv_serialization",
                 "issues": "https://www.drupal.org/project/issues/csv_serialization"
             },
-            "install-path": "../../modules/contrib/csv_serialization"
+            "install-path": "../drupal/csv_serialization"
         },
         {
             "name": "drupal/entity_print",
@@ -1988,7 +1992,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/entity_print"
             },
-            "install-path": "../../modules/contrib/entity_print"
+            "install-path": "../drupal/entity_print"
         },
         {
             "name": "drupal/flags",
@@ -2043,7 +2047,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/flags"
             },
-            "install-path": "../../modules/contrib/flags"
+            "install-path": "../drupal/flags"
         },
         {
             "name": "drupal/languagefield",
@@ -2104,7 +2108,7 @@
                 "issues": "http://drupal.org/project/languagefield",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             },
-            "install-path": "../../modules/contrib/languagefield"
+            "install-path": "../drupal/languagefield"
         },
         {
             "name": "drupal/pdf_serialization",
@@ -2157,7 +2161,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/pdf_serialization"
             },
-            "install-path": "../../modules/contrib/pdf_serialization"
+            "install-path": "../drupal/pdf_serialization"
         },
         {
             "name": "drupal/popup_after_login",
@@ -2202,7 +2206,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/popup_after_login"
             },
-            "install-path": "../../modules/contrib/popup_after_login"
+            "install-path": "../drupal/popup_after_login"
         },
         {
             "name": "drupal/restui",
@@ -2261,7 +2265,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/restui"
             },
-            "install-path": "../../modules/contrib/restui"
+            "install-path": "../drupal/restui"
         },
         {
             "name": "drupal/sweetalert2",
@@ -2305,7 +2309,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/sweetalert2"
             },
-            "install-path": "../../modules/contrib/sweetalert2"
+            "install-path": "../drupal/sweetalert2"
         },
         {
             "name": "drupal/tmgmt",
@@ -2391,7 +2395,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/tmgmt"
             },
-            "install-path": "../../modules/contrib/tmgmt"
+            "install-path": "../drupal/tmgmt"
         },
         {
             "name": "drupal/views_data_export",
@@ -2463,7 +2467,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/views_data_export"
             },
-            "install-path": "../../modules/contrib/views_data_export"
+            "install-path": "../drupal/views_data_export"
         },
         {
             "name": "drush/drush",
@@ -2902,12 +2906,12 @@
             },
             "installation-source": "dist",
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2967,12 +2971,12 @@
             },
             "installation-source": "dist",
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Promise\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -4323,6 +4327,10 @@
                 }
             ],
             "description": "More info available on: http://pear.php.net/package/Console_Getopt",
+            "support": {
+                "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Console_Getopt",
+                "source": "https://github.com/pear/Console_Getopt"
+            },
             "install-path": "../pear/console_getopt"
         },
         {
@@ -4908,6 +4916,9 @@
                 "request",
                 "response"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/http-message/tree/master"
+            },
             "install-path": "../psr/http-message"
         },
         {
@@ -5139,6 +5150,10 @@
                 }
             ],
             "description": "A polyfill for getallheaders.",
+            "support": {
+                "issues": "https://github.com/ralouphie/getallheaders/issues",
+                "source": "https://github.com/ralouphie/getallheaders/tree/develop"
+            },
             "install-path": "../ralouphie/getallheaders"
         },
         {
@@ -6467,12 +6482,12 @@
             },
             "installation-source": "dist",
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -6549,12 +6564,12 @@
             },
             "installation-source": "dist",
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Iconv\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Iconv\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -6718,12 +6733,12 @@
             },
             "installation-source": "dist",
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -6806,12 +6821,12 @@
             },
             "installation-source": "dist",
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -6893,12 +6908,12 @@
             },
             "installation-source": "dist",
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -7134,12 +7149,12 @@
             },
             "installation-source": "dist",
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php80\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php80\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
