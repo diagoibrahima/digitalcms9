@@ -2180,6 +2180,11 @@ div#block-views-block-list-localization-block-1 h2 {
   font-size: 20px;
   line-height: 3rem;
 }
+div#block-views-block-list-localizationv2-block-1 h2 {
+  color: #1391c1;
+  font-size: 20px;
+  line-height: 3rem;
+}
 
 .align-left {
   float: inherit;
@@ -2630,7 +2635,7 @@ article .node-content,
     font-weight: normal !important;
     border-radius: 1px !important;
     margin: 2px 0px !important;
-    padding: 10px 36px 10px 0px !important;
+    padding: 10px 36px 10px 10px !important;
     position: relative !important;
     cursor: pointer !important;
     transition: 1s;
@@ -3958,4 +3963,30 @@ div#block-views-block-dasbord-view-block-1:before {
   height: 100px;
   width: 100%;
   top: -36px;
+}
+
+
+p.course-content {
+  background: #f3f4f680;
+  position: relative;
+}
+
+
+
+svg.svg-inline--fa.fa-trash-alt.fa-w-14 {
+  position: absolute;
+  right: 5px  !important;
+  -webkit-transform: rotate(0deg) !important;
+  transform: rotate(0deg)  !important;
+  color: #1491c1  !important;
+  top: 5px  !important;
+  cursor: pointer  !important;
+
+  &:hover{
+  color: red !important;
+  }
+}
+
+.section-help article.node {
+  margin: 50px auto;
 }
