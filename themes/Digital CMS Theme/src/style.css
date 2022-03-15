@@ -4166,4 +4166,8 @@ div#block-views-block-moreinfosuser-block-1 {
 .js-form-item.form-item.js-form-type-select.form-item-field-payslocalisation.js-form-item-field-payslocalisation {
   display: none;
 }
+
+.js-form-item.form-item.js-form-type-select.form-item-field-payscontent.js-form-item-field-payscontent {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */
