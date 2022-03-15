@@ -144,6 +144,14 @@ h1.js-quickedit-page-title {
   margin: 0.5rem;
   position: relative;
 
+
+  .course-content{
+    display: none !important;
+  }
+
+
+
+
   p {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -586,6 +594,7 @@ form#node-sub-module-form {
 }
 
 .tw-grid.tw-grid-cols-4.tw-gap-1.tw-place-items-stretch > p {
+ // width: 30% !important;
   color: #5656568f;
 
   &:hover {
@@ -2179,6 +2188,11 @@ div#block-views-block-list-localization-block-1 h2 {
   font-size: 20px;
   line-height: 3rem;
 }
+div#block-views-block-list-localizationv2-block-1 h2 {
+  color: #1391c1;
+  font-size: 20px;
+  line-height: 3rem;
+}
 
 .align-left {
   float: inherit;
@@ -2629,7 +2643,7 @@ article .node-content,
     font-weight: normal !important;
     border-radius: 1px !important;
     margin: 2px 0px !important;
-    padding: 10px 36px 10px 0px !important;
+    padding: 10px 36px 10px 10px !important;
     position: relative !important;
     cursor: pointer !important;
     transition: 1s;
@@ -3166,7 +3180,7 @@ div#block-views-block-listelanguage-block-1 {
   top: 100px;
 }
 
-nav#block-digitalcmsmenu ul li:nth-child(3){
+nav#block-digitalcmsmenu ul li:nth-child(4){
   cursor: pointer;
 }
  
@@ -3482,10 +3496,66 @@ div#block-views-block-list-localization-block-1 footer {
   display: none;
 }
 
-//media query  HP externe
 
 
-// for extend screen HP externe
+
+div#block-views-block-dasbord-view-block-1:before {
+  content: '';
+  background: #f3f4f6;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  top: -36px;
+}
+
+
+h1.tw-leading-6.tw-font-medium.tw-text-black {
+  color: #2795c3 !important;
+  font-weight: 500 !important;
+}
+
+div#block-views-block-dasbord-view-block-1:before {
+  content: '';
+  background: #f3f4f6;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  top: -36px;
+}
+
+
+p.course-content {
+  background: #f3f4f680;
+  position: relative;
+}
+
+
+
+svg.svg-inline--fa.fa-trash-alt.fa-w-14 {
+  position: absolute;
+  right: 5px  !important;
+  -webkit-transform: rotate(0deg) !important;
+  transform: rotate(0deg)  !important;
+  color: #1491c1  !important;
+  top: 5px  !important;
+  cursor: pointer  !important;
+
+  &:hover{
+  color: red !important;
+  }
+}
+
+
+
+.section-help article.node {
+  margin: 50px auto;
+}
+
+
+//media query  HP externe and 8 K
+
+
+
 
 @media screen and (min-width:1900px) and (max-width:7680px) 
 {
@@ -3658,28 +3728,34 @@ input#edit-submit--2 {
 
 div#block-views-block-printpdftranslation-block-1 {
   position: absolute;
-  right: -60px;
+  right:320px;
   top: 60px;
 }
 
 }
-//for mac pac 
+// for extend screen Unicef PC
 
-@media screen and (max-width: 1440px)
+@media screen and (min-width: 1280px ) and (max-width:1899px) 
+
 {
-  
-
-}
-// for unicef pc UNICEF
-
-@media screen and (max-width: 1280px )
-{
-
 
   div#block-views-block-printpdftranslation-block-1 {
-    position: relative;
-    top: -45px;
+    position: absolute;
+    top: 111px;
     left: 655px;
+}
+
+
+
+
+div#block-views-block-languagesmstranslation-block-1 {
+  width: 70%;
+  margin: 30px 2rem !important;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 6px #2316161a !important;
+  box-shadow: 1px 1px 6px #2316161a !important;
 }
   input#edit-submit--2 {
     background: #52627273 !important;
@@ -3904,7 +3980,7 @@ form#node-language-form div#edit-actions #edit-submit {
 
 
 .separateur-comment {
-  width: 109% !important;
+  width: 107% !important;
 }
 .image-profile-user .name-profile-user {
  
@@ -3945,4 +4021,30 @@ div#block-views-block-dasbord-view-block-1:before {
   height: 100px;
   width: 100%;
   top: -36px;
+}
+
+
+p.course-content {
+  background: #f3f4f680;
+  position: relative;
+}
+
+
+
+svg.svg-inline--fa.fa-trash-alt.fa-w-14 {
+  position: absolute;
+  right: 5px  !important;
+  -webkit-transform: rotate(0deg) !important;
+  transform: rotate(0deg)  !important;
+  color: #1491c1  !important;
+  top: 5px  !important;
+  cursor: pointer  !important;
+
+  &:hover{
+  color: red !important;
+  }
+}
+
+.section-help article.node {
+  margin: 50px auto;
 }
