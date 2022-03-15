@@ -154,6 +154,10 @@ h1.js-quickedit-page-title {
   position: relative;
 }
 
+.tw-item-card .course-content {
+  display: none !important;
+}
+
 .tw-item-card p {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -3491,7 +3495,7 @@ div#block-views-block-listelanguage-block-1 {
   top: 100px;
 }
 
-nav#block-digitalcmsmenu ul li:nth-child(3) {
+nav#block-digitalcmsmenu ul li:nth-child(4) {
   cursor: pointer;
 }
 
@@ -3826,6 +3830,14 @@ svg.svg-inline--fa.fa-trash-alt.fa-w-14:hover {
 }
 
 @media screen and (min-width: 1900px) and (max-width: 7680px) {
+  div#block-views-block-contenttotranslate-block-1 {
+    width: 47% !important;
+    margin: 28px 2% 190px !important;
+    padding: 15px !important;
+    margin-bottom: 500px !important;
+    height: 121vh !important;
+    overflow-y: auto !important;
+  }
   .contentent-preview-good-format {
     padding: 10px;
     background: white;
@@ -4149,5 +4161,9 @@ div#block-views-block-moreinfosuser-block-1 {
   margin: auto;
   padding: 10px;
   border-radius: 5px;
+}
+
+.js-form-item.form-item.js-form-type-select.form-item-field-payslocalisation.js-form-item-field-payslocalisation {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
