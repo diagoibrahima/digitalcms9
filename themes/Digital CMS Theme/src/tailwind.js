@@ -737,7 +737,6 @@ jQuery(document).ready(function () {
     jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html('0 %');
   }
 
-
   //Dasboard 
 
   let cours = (jQuery('div#block-views-block-cardnbcours-block-1 header').text());
