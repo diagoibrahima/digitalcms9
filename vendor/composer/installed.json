@@ -8461,30 +8461,5 @@
         }
     ],
     "dev": true,
-    "dev-package-names": [
-        "chi-teck/drupal-code-generator",
-        "consolidation/annotated-command",
-        "consolidation/config",
-        "consolidation/filter-via-dot-access-data",
-        "consolidation/log",
-        "consolidation/output-formatters",
-        "consolidation/robo",
-        "consolidation/self-update",
-        "consolidation/site-alias",
-        "consolidation/site-process",
-        "dflydev/dot-access-data",
-        "drush/drush",
-        "enlightn/security-checker",
-        "grasmash/expander",
-        "league/container",
-        "nikic/php-parser",
-        "psy/psysh",
-        "symfony/filesystem",
-        "symfony/finder",
-        "symfony/polyfill-intl-grapheme",
-        "symfony/string",
-        "webflo/drupal-finder",
-        "webmozart/assert",
-        "webmozart/path-util"
-    ]
+    "dev-package-names": []
 }
