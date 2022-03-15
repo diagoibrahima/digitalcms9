@@ -30,6 +30,7 @@
         "drupal/restui": "^1.20",
         "drupal/sweetalert2": "9.1.x-dev@dev",
         "drupal/tmgmt": "^1.12",
+        "drush/drush": "^11",
         "phpoffice/phpspreadsheet": "^1.20"
     },
     "conflict": {
@@ -100,8 +101,5 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
-    },
-    "require-dev": {
-        "drush/drush": "^11.0"
     }
 }
