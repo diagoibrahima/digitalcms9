@@ -154,6 +154,10 @@ h1.js-quickedit-page-title {
   position: relative;
 }
 
+.tw-item-card .course-content {
+  display: none;
+}
+
 .tw-item-card p {
   font-size: 0.875rem;
   line-height: 1.25rem;
