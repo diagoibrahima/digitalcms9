@@ -155,7 +155,7 @@ h1.js-quickedit-page-title {
 }
 
 .tw-item-card .course-content {
-  display: none;
+  display: none !important;
 }
 
 .tw-item-card p {
@@ -3501,7 +3501,7 @@ div#block-views-block-listelanguage-block-1 {
   top: 100px;
 }
 
-nav#block-digitalcmsmenu ul li:nth-child(3) {
+nav#block-digitalcmsmenu ul li:nth-child(4) {
   cursor: pointer;
 }
 
