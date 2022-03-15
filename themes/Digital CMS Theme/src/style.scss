@@ -149,9 +149,6 @@ h1.js-quickedit-page-title {
     display: none !important;
   }
 
-
-
-
   p {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -3560,7 +3557,14 @@ svg.svg-inline--fa.fa-trash-alt.fa-w-14 {
 @media screen and (min-width:1900px) and (max-width:7680px) 
 {
   
-
+  div#block-views-block-contenttotranslate-block-1 {
+    width: 47% !important;
+    margin: 28px 2% 190px !important;
+    padding: 15px !important;
+    margin-bottom: 500px !important;
+    height: 121vh !important;
+    overflow-y: auto !important;
+}
   .contentent-preview-good-format {
     padding: 10px;
     background: white;
@@ -3998,53 +4002,15 @@ aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
 }
 
 
-
-div#block-views-block-dasbord-view-block-1:before {
-  content: '';
-  background: #f3f4f6;
-  position: absolute;
-  height: 100px;
-  width: 100%;
-  top: -36px;
+div#block-views-block-moreinfosuser-block-1 {
+  width: 50%;
+  background: white;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 
-h1.tw-leading-6.tw-font-medium.tw-text-black {
-  color: #2795c3 !important;
-  font-weight: 500 !important;
-}
-
-div#block-views-block-dasbord-view-block-1:before {
-  content: '';
-  background: #f3f4f6;
-  position: absolute;
-  height: 100px;
-  width: 100%;
-  top: -36px;
-}
-
-
-p.course-content {
-  background: #f3f4f680;
-  position: relative;
-}
-
-
-
-svg.svg-inline--fa.fa-trash-alt.fa-w-14 {
-  position: absolute;
-  right: 5px  !important;
-  -webkit-transform: rotate(0deg) !important;
-  transform: rotate(0deg)  !important;
-  color: #1491c1  !important;
-  top: 5px  !important;
-  cursor: pointer  !important;
-
-  &:hover{
-  color: red !important;
-  }
-}
-
-.section-help article.node {
-  margin: 50px auto;
+.js-form-item.form-item.js-form-type-select.form-item-field-payslocalisation.js-form-item-field-payslocalisation {
+  display: none;
 }

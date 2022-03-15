@@ -3836,6 +3836,14 @@ svg.svg-inline--fa.fa-trash-alt.fa-w-14:hover {
 }
 
 @media screen and (min-width: 1900px) and (max-width: 7680px) {
+  div#block-views-block-contenttotranslate-block-1 {
+    width: 47% !important;
+    margin: 28px 2% 190px !important;
+    padding: 15px !important;
+    margin-bottom: 500px !important;
+    height: 121vh !important;
+    overflow-y: auto !important;
+  }
   .contentent-preview-good-format {
     padding: 10px;
     background: white;
@@ -4197,5 +4205,9 @@ svg.svg-inline--fa.fa-trash-alt.fa-w-14:hover {
 
 .section-help article.node {
   margin: 50px auto;
+}
+
+.js-form-item.form-item.js-form-type-select.form-item-field-payslocalisation.js-form-item-field-payslocalisation {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
