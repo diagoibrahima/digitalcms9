@@ -98,20 +98,6 @@ class XlsExport {
 var hostname = window.location.hostname;
 var protocol = window.location.protocol;
 
-
-
-
-jQuery(document).ready(function(){
-
-  jQuery(".button-delete-section").click(function(){
-  
-    jQuery(".contextual.simpler_quickedit-do button.trigger.focusable ").click();
-    console.log("click delete")
-    alert("i am ready ")
-  
-  });
-});
-
 //export default XlsExport; // comment this line to babelize
 
 jQuery("form#node-content-edit-form").ready( function(){
@@ -129,12 +115,7 @@ jQuery('#buttonstatusserver').click(function () {
 
 
 // Appell API to get the url of the translation Server
-if(hostname==="localhost"){
-  var url = protocol+"//"+hostname+"/digitalcms9/serverconf";
-}else{
-  var url = protocol+"//"+hostname+"/serverconf";
-}
-  
+  let url = protocol+"//"+hostname+"/serverconf";
 //  console.log(url);
   fetch(url).then((response)=>
     response.json().then((data)=>{
@@ -195,12 +176,7 @@ function detectTopLevel(content){
     
     
     //alert(idnode);
-    console.log("je suis host" + hostname);
-    if(hostname==="localhost"){ 
-      var url2 = protocol+"//"+hostname+"/digitalcms9/rest/localizationList/"+idnode;
-    }else{
-    var url2 = protocol+"//"+hostname+"/rest/localizationList/"+idnode;  
-  }
+  let url2 = protocol+"//"+hostname+"/rest/localizationList/"+idnode;
   console.log(url2);
 
   fetch(url2).then((response)=>
@@ -211,20 +187,23 @@ function detectTopLevel(content){
 
         //Detecton le toplevel
         tabtoplevelexcel = detectTopLevel(translation.Translation);
+
         excelmodule = tabtoplevelexcel[0].toLowerCase();
         excelsubmodule = tabtoplevelexcel[1].toLowerCase();
+
         console.log("---------------------------");
         console.log("Top 1 "+excelmodule);
         console.log("Top 2"+excelsubmodule);
         console.log("---------------------------");
+
         excelregexa = new RegExp(`<${excelmodule}.*?>.*?<\/${excelmodule}>`, "g")
         excelregexb = new RegExp(`<${excelsubmodule}.*?>.*?<\/${excelsubmodule}>`, "g")
-
+        
         var smssplit = getSMS(translation.Translation);
         for(i=0; i<smssplit.length; i++){
           if(excelsubmodule == null){
             items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[0].replace(regex, ""),,smssplit[i]]);
-          }else{
+          }else {
             items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[0].replace(regex, ""),translation.Translation.match(excelregexb)[0].replace(regex, ""),smssplit[i]]);
           }
         }
@@ -237,7 +216,7 @@ function detectTopLevel(content){
       window.localStorage.removeItem(filename);
 
     })
-  );                                              
+  );
   
   });
 
@@ -483,26 +462,23 @@ jQuery('form#views-exposed-form-list-of-content-page-1').( function(){
 
 jQuery(document).ready(function () {
 
-
-  
-
-
- 
-
-
-
- // jQuery("article .node-content p").append('<i class="fa fa-trash-o button-delete-section" aria-hidden="true"></i>')
   jQuery('.module-title').removeClass('course-content')
 
    jQuery('article .node-content .module-title').append('<svg class="svg-inline--fa fa-chevron-down fa-w-14 expand-minimize-button text-light text-xl font-thin text-gray-400" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>');
 
  // var payspardefaut = jQuery("h6.country-of-userlog").text();
  // jQuery('select#edit-field-pays-teste-value option:contains('+payspardefaut+')').prop('selected',true); 
-  jQuery('.course-content , .video-embed-field-responsive-video').hide();
+  jQuery('.course-content').hide();
+  
+  //var payspardefaut = jQuery("h6.country-of-userlog").text();
+  //jQuery('select#edit-field-pays-teste-value option:contains('+payspardefaut+')').prop('selected',true); 
+
+  jQuery('#edit-field-descriptioncontent-wrapper label').val('Update description');
+
   jQuery('form').attr('autocomplete', 'off');
   jQuery('form#comment-form textarea ').attr('placeholder', 'Type a comment...✍️');
   jQuery('li.comment-add').remove();
-  jQuery('nav#block-digitalcmsmenu ul li:nth-child(4) ul').hide();
+  jQuery('nav#block-digitalcmsmenu ul li:nth-child(3) ul').hide();
   jQuery('.print__wrapper.print__wrapper--pdf').append('<svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg>');
   jQuery('textarea#edit-field-descriptioncontent-0-value').hide()
   jQuery('.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label').html('Add Description')
@@ -528,8 +504,8 @@ jQuery(document).ready(function () {
   //on change input title   & description
 
 
-  jQuery('nav#block-digitalcmsmenu ul li:nth-child(4)').click(function(){
-    jQuery('nav#block-digitalcmsmenu ul li:nth-child(4) ul').toggle(1000);
+  jQuery('nav#block-digitalcmsmenu ul li:nth-child(3)').click(function(){
+    jQuery('nav#block-digitalcmsmenu ul li:nth-child(3) ul').toggle(1000);
   }
   );
 
@@ -542,7 +518,7 @@ jQuery(document).ready(function () {
 
     jQuery("div#block-views-block-list-localization-block-1 .show-message  span.message-etat").each(function () {
 
-       if(jQuery(this).text()=='Pending' || jQuery(this).text()=='Pending'){
+       if(jQuery(this).text()=='Submit for review' || jQuery(this).text()=='Submit for review'){
 
          jQuery(this).addClass('statesubmiteforreviw').text('Pending');
        }
@@ -698,30 +674,27 @@ jQuery(document).ready(function () {
   //content completion ----------------  
 
   //nombre de message traduit
- // var nombredemessagetraduit = parseInt((jQuery('div#block-views-block-completionnbtraduction-block-1 header').text()));
+  var nombredemessagetraduit = parseInt((jQuery('div#block-views-block-completionnbtraduction-block-1 header').text()));
 
   // console.log(nombredemessagetraduit);
 
-  
-  //Total language dans la platform cta nombre de traduction a avoir
+  //total message
+  var totalmessage = parseInt((jQuery('div#block-views-block-completionnbmessage-block-1 header').text()));
+  //console.log(totalmessage);
 
-  var totalangues = parseInt((jQuery('div#block-views-block-completionnblangue-block-1 header').text()));
-  console.log(totalangues);
-//nombre elemet deja traduit
-  var totaltranduit =parseInt((jQuery("div#block-views-block-list-localization-block-1 footer").text()));
-//pourcentagfe de la traduction
-  contencompletionpourcentage =totaltranduit *100 /totalangues
-  console.log(contencompletionpourcentage);
+  var nblangue = jQuery('.nombredelangue').length;
+  // console.log(nblangue);
+
+
   //Nombre de message restant a traduire
-  var restotranslate = totalangues - totaltranduit;
-  console.log(restotranslate);
+  var restotranslate = totalmessage - nombredemessagetraduit;
 
   if (isNaN(restotranslate)) { restotranslate = 0; }
   //console.log(restotranslate);
 
- // var pourcentage = nombredemessagetraduit * 100 / (totalmessage * nblangue);
+  var pourcentage = nombredemessagetraduit * 100 / (totalmessage * nblangue);
 
-  var pourcentagemyInt = parseInt(contencompletionpourcentage);
+  var pourcentagemyInt = parseInt(pourcentage);
 
   //console.log(pourcentagemyInt);
 
@@ -752,8 +725,8 @@ jQuery(document).ready(function () {
   }
 
 
-  //Dasboard old 
-/*
+  //Dasboard 
+
   let cours = (jQuery('div#block-views-block-cardnbcours-block-1 header').text());
 
   jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
@@ -769,8 +742,6 @@ jQuery(document).ready(function () {
 
   locationRate = parseInt((totalenombremessagelocalized * 100) / (messagesimpe * nblangueused));
   jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(locationRate + '%');
-
-*/
 
   //console.log(totalenombremessagelocalized);
 
@@ -871,15 +842,7 @@ function detectTopLevel(content){
 //Detectons Top Level du contenu
     var tabtoplevel = detectTopLevel(description);
     tagmodule = tabtoplevel[0].toLowerCase();
-
-    console.log(tabtoplevel[1]);
-
-    if(tabtoplevel[1] ===undefined){
-      
-    }else{
-    var tagsubmodule = tabtoplevel[1].toLowerCase();
-  }
-    
+    tagsubmodule = tabtoplevel[1].toLowerCase();
 
     console.log("top level 1 "+tagmodule);
     console.log("top level 2 "+tagsubmodule);
@@ -905,6 +868,7 @@ function detectTopLevel(content){
             items.push([,,element.match(/.{1,160}/g)]);
           }
   });
+
   //console.table(items);
 
     jQuery(this).removeClass("tw-bg-blue-500");
@@ -1042,23 +1006,14 @@ function detectTopLevel(content){
 
         
 
-     jQuery('.contentent-preview-good-format').find('*').addClass('course-content');
-     var ckedi = jQuery('.contentent-preview-good-format').html();
-     var ck2 =   jQuery(".module-title span:nth-last-of-type(1)").remove()
-  //   console.log('===================Debut ck 2===================')
-    // console.log(ck2)
-
+        jQuery('.contentent-preview-good-format').find('*').addClass('course-content');
+        var ckedi = jQuery('.contentent-preview-good-format').html();
         CKEDITOR.instances['edit-body-0-value'].setData(ckedi);
+        
+
+     
+
       });
-
-     //remove all p 
-
-      jQuery('p').each(function() {
-        var $this = jQuery(this);
-        if($this.html().replace(/\s|&nbsp;/g, '').length == 0) {
-            $this.remove();
-        }
-    });
 
     
   
@@ -1078,7 +1033,7 @@ function detectTopLevel(content){
   });
   
   
-  jQuery('#edit-field-localization-channel').change(function() {
+    jQuery('#edit-field-localization-channel').change(function() {
   
     let channel=jQuery( "#edit-field-localization-channel option:selected" ).text();
   
@@ -1116,7 +1071,7 @@ function detectTopLevel(content){
 
   }
 
-  if (moderationstate == 'Pending') {
+  if (moderationstate == 'Submit for review') {
     jQuery('a.moderationStateButton.submit').remove();
     jQuery('a.moderationStateButton.sforreview').remove();
     jQuery('a.moderationStateButton.rsubmit').remove();
@@ -1183,7 +1138,7 @@ function detectTopLevel(content){
 
   });
 
-  /* Expand switch for one single learning module  new
+  // Expand switch for one single learning module  new
   jQuery('.blockmodule-titre-module').click(function () {
     //console.log(this);
 
@@ -1193,33 +1148,26 @@ function detectTopLevel(content){
 
   });
 
-  */
-
   var acc = document.getElementsByClassName("module-title");
   var i;
   
   for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {  
+    acc[i].addEventListener("click", function() {
+      
     var chevronbi = this.lastChild
-
-   // jQuery('module-title p').remove();
     //console.log(chevronbi)
   //jQuery(chevronbi).toggleClass('tranfromnation-chevreon');
   // this.childNodes.classList.toggle("tranfromnation-chevreon")
 
        panel = this.nextElementSibling;
         if (panel.style.display === "block") {
-          
-panel.style.display = "none";
-jQuery(chevronbi).removeClass('tranfromnation-chevreon');
-
+          panel.style.display = "none";
+  jQuery(chevronbi).removeClass('tranfromnation-chevreon');
          
          // jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
         } else {
-          
-panel.style.display = "block";
-jQuery(chevronbi).addClass('tranfromnation-chevreon');
-jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tranfromnation-chevreon");
+          panel.style.display = "block";
+  jQuery(chevronbi).addClass('tranfromnation-chevreon');
 
         //  jQuery('.svg-inline--fa.fa-w-14').addClass('tranfromnation-chevreon');
 
@@ -1231,15 +1179,12 @@ jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tra
      //   console.log(panel)
         if (panel.style.display === "block") {
   jQuery(chevronbi).removeClass('tranfromnation-chevreon');
-  
+        
           panel.style.display = "none";
        //  jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
         } else {
-          
           panel.style.display = "block";
   jQuery(chevronbi).addClass('tranfromnation-chevreon');
-jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tranfromnation-chevreon");
-
 
         //  jQuery('.svg-inline--fa.fa-w-14').addClass('tranfromnation-chevreon');
 
@@ -1251,12 +1196,7 @@ jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tra
 
 
 
-  jQuery('p').each(function() {
-    var $this = jQuery(this);
-    if($this.html().replace(/\s|&nbsp;/g, '').length == 0) {
-        $this.remove();
-    }
-});
+
 
 
 
@@ -1273,12 +1213,12 @@ jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tra
     if(expand == "Expand all"){
       jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Minimize')
       jQuery('.svg-inline--fa.fa-w-14').addClass('tranfromnation-chevreon');
-      jQuery('.course-content').show(600);
+      jQuery('.course-content').show();
     }else{
       jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Expand all')
     
       jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
-      jQuery('.course-content').hide(600);
+      jQuery('.course-content').hide();
 
     }
   //  expand == "Expand all" ? jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Minimize') : jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Expand all')
@@ -1309,9 +1249,7 @@ jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tra
   notefounddasbord == " The requested page could not be found. " ? jQuery('div#block-tailwindcss-content').text('') : jQuery('div#block-tailwindcss-content').removeClass('hidenotefoundasbord');
 
   // jQuery('.a.use-ajax').hide();
- // jQuery('<h1 class="titre-cms-translation"> CONTENT MANAGEMENT AND ADAPTATION PLATFORM </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name');
-
-  jQuery('<h1 class="titre-cms-translation"> Digital content management and translation system </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name');
+  jQuery('<h1 class="titre-cms-translation"> CONTENT MANAGEMENT AND ADAPTATION PLATFORM </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name');
   jQuery('<i class="fa fa-fw fa-user"></i>').insertBefore('input#edit-name');
   jQuery('<i class="fa fa-fw fa-lock"></i>').insertBefore('input#edit-pass');
   //jQuery('a.use-ajax').prepend('<i class="fas fa-plus-square"></i>');
@@ -1329,14 +1267,38 @@ jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tra
 
 
 
-  formcomment = jQuery('.node-content section').html();
-  jQuery(formcomment).insertBefore('div#block-views-block-listcomments-block-1');
 
- 
+  //bar chart
 
 
+  const labelsBarChart = [
+    'Content',
+    'Localizations',
+    'Messages',
+    'Messages translated'
+  ];
+  const dataBarChart = {
+    labels: labelsBarChart,
+    datasets: [{
+      label: 'Dataset Content management and adaption platform',
+      backgroundColor: '#36B1B4',
+      borderColor: '#36B1B4',
+      //data: [ cours, modulesdecourse, messagesimpetranslate, modulesdecourse ],
+      data: [10, 39, 50, 60]
+    }]
+  };
+
+  const configBarChart = {
+    type: 'bar',
+    data: dataBarChart,
+    options: {}
+  };
 
 
+  var chartBar = new Chart(
+    document.getElementById('chartBar'),
+    configBarChart
+  );
 
   jQuery('.module-section').each(function () {
 
@@ -1348,69 +1310,5 @@ jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tra
   });
 
 
-
-
-
-
 });
-
-
-
-  //bar chart
-  jQuery("div#block-views-block-cardnbcours-block-1").ready(function(){
-
-
-
-    let cours = (jQuery('div#block-views-block-cardnbcours-block-1 header').text());
-  console.log(cours)
-    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
-    let messagesimpe = (jQuery('div#block-views-block-cardnbmessage-block-1 header').text());
-    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messages').html(messagesimpe);
-    let messagesimpetranslate = (jQuery('div#block-views-block-cardnbmessagetranslated-block-1 header').text());
-    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(messagesimpetranslate);
-  
-    var nblangueused = jQuery('#block-views-block-cardnblangue-block-1 h3 a').length;
-    jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(nblangueused);
-    console.log(nblangueused)
-    let totaleoftranlationcours = jQuery('div#block-views-block-cardnbmessagelocalized-block-1 header').text();
-    console.log(totaleoftranlationcours)
-
-    locationRate = parseInt((totaleoftranlationcours * 100) / (cours * nblangueused));
-    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(locationRate + '%');
-  
-      const labelsBarChart = [
-        'Courses',
-        'Messages',
-        'Languages localization',
-        'Localization Rate'
-      ];
-      const dataBarChart = {
-        labels: labelsBarChart,
-        datasets: [{
-          label: 'Dataset Content management and adaption platform',
-          backgroundColor: '#36B1B4',
-          borderColor: '#36B1B4',
-          data: [ cours, messagesimpe, nblangueused, locationRate ],
-         // data: [10, 39, 50, 60]
-        }]
-      };
-    
-      const configBarChart = {
-        type: 'bar',
-        data: dataBarChart,
-        options: {}
-      };
-    
-    
-      var chartBar = new Chart(
-        document.getElementById('chartBar'),
-        configBarChart
-        
-      );
-     
-  
-    
-  
-      
-    });
 
