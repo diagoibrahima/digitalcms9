@@ -3374,17 +3374,6 @@ div#block-views-block-list-localization-block-1 .horizontal {
   bottom: 60px;
 }
 
-div#block-views-block-editcourse-block-1-2 .views-row span a {
-  color: #1491c1;
-  border: solid 2px;
-  border-style: dashed;
-  border-radius: 5px !important;
-  line-height: 3;
-  text-align: center;
-  width: 17vw;
-  right: 2%;
-}
-
 svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400 + a {
   position: absolute;
   right: 44px;
