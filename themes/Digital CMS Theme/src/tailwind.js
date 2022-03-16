@@ -685,29 +685,33 @@ jQuery(document).ready(function () {
   */
 
   //content completion ----------------  
+//content completion ----------------  
 
   //nombre de message traduit
-  var nombredemessagetraduit = parseInt((jQuery('div#block-views-block-completionnbtraduction-block-1 header').text()));
+ // var nombredemessagetraduit = parseInt((jQuery('div#block-views-block-completionnbtraduction-block-1 header').text()));
 
   // console.log(nombredemessagetraduit);
 
-  //total message
-  var totalmessage = parseInt((jQuery('div#block-views-block-completionnbmessage-block-1 header').text()));
-  //console.log(totalmessage);
+  
+  //Total language dans la platform cta nombre de traduction a avoir
 
-  var nblangue = jQuery('.nombredelangue').length;
-  // console.log(nblangue);
-
-
+  var totalangues = parseInt((jQuery('div#block-views-block-completionnblangue-block-1 header').text()));
+  console.log(totalangues);
+//nombre elemet deja traduit
+  var totaltranduit =parseInt((jQuery("div#block-views-block-list-localization-block-1 footer").text()));
+//pourcentagfe de la traduction
+  contencompletionpourcentage =totaltranduit *100 /totalangues
+  console.log(contencompletionpourcentage);
   //Nombre de message restant a traduire
-  var restotranslate = totalmessage - nombredemessagetraduit;
+  var restotranslate = totalangues - totaltranduit;
+  console.log(restotranslate);
 
   if (isNaN(restotranslate)) { restotranslate = 0; }
   //console.log(restotranslate);
 
-  var pourcentage = nombredemessagetraduit * 100 / (totalmessage * nblangue);
+ // var pourcentage = nombredemessagetraduit * 100 / (totalmessage * nblangue);
 
-  var pourcentagemyInt = parseInt(pourcentage);
+  var pourcentagemyInt = parseInt(contencompletionpourcentage);
 
   //console.log(pourcentagemyInt);
 
