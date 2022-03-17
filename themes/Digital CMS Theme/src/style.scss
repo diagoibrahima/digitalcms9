@@ -149,6 +149,9 @@ h1.js-quickedit-page-title {
     display: none !important;
   }
 
+
+
+
   p {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -2236,6 +2239,7 @@ p.commented-body {
   letter-spacing: 0px;
   text-align: initial;
   color: #a0aec0;
+  margin: 0px 0px 0px 42px;
 }
 
 .image-profile-user {
@@ -2259,12 +2263,14 @@ p.commented-date {
   color: #8ed1ec;
   font-size: 12px;
   text-align: initial;
+  margin: 0px 0px 0px 42px;
 }
 
 .commente-links {
   display: flex;
   margin: -15px 0px;
   font-size: 12px;
+  margin: 0px 0px 0px 42px;
 }
 
 .commente {
@@ -3058,16 +3064,7 @@ div#block-views-block-list-localization-block-1 .horizontal {
   bottom: 60px;
 }
 
-div#block-views-block-editcourse-block-1-2 .views-row span a {
-  color: #1491c1;
-  border: solid 2px;
-  border-style: dashed;
-  border-radius: 5px !important;
-  line-height: 3;
-  text-align: center;
-  width: 17vw;
-  right: 2%;
-}
+
 
 svg.svg-inline--fa.fa-chevron-down.fa-w-14.expand-minimize-button.text-light.text-xl.font-thin.text-gray-400+a {
 
@@ -3955,7 +3952,7 @@ form#node-localization-form div#edit-actions:after {
   position: absolute !important;
   background: white !important;
   height: 530px !important;
-  width: 106.5% !important;
+  width: 103.7% !important;
   left: -14px !important;
   bottom: 0px !important;
   z-index: 1 !important;
@@ -4012,4 +4009,45 @@ div#block-views-block-moreinfosuser-block-1 {
 
 .js-form-item.form-item.js-form-type-select.form-item-field-payscontent.js-form-item-field-payscontent {
   display: none;
+}
+
+
+nav#block-digitalcmsmenuuserreviwer {
+  margin: 10px;
+
+
+  li {
+    padding: 5px;
+}
+
+}
+
+
+form#views-exposed-form-list-localization-block-1 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: -20px 0px 20px;
+
+  select#edit-moderation-state {
+    background: none;
+    border: solid 1px #2995c3;
+    border-radius: 5px;
+    padding: 5px;
+    color: #2995c3;
+}
+
+input {
+  padding: 5px;
+  background: #2995c3;
+  color: white;
+  line-height: 1.5;
+  border-radius: 5px;
+  margin: 0px 5px;
+  border: solid 1px #2995c3;
+}
+
+
+
+
 }
