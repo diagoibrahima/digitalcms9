@@ -98,6 +98,7 @@ class XlsExport {
 var hostname = window.location.hostname;
 var protocol = window.location.protocol;
 
+
 //export default XlsExport; // comment this line to babelize
 
 jQuery("form#node-content-edit-form").ready( function(){
@@ -115,7 +116,12 @@ jQuery('#buttonstatusserver').click(function () {
 
 
 // Appell API to get the url of the translation Server
-  let url = protocol+"//"+hostname+"/serverconf";
+if(hostname==="localhost"){
+  var url = protocol+"//"+hostname+"/digitalcms9/serverconf";
+}else{
+  var url = protocol+"//"+hostname+"/serverconf";
+}
+  
 //  console.log(url);
   fetch(url).then((response)=>
     response.json().then((data)=>{
@@ -176,7 +182,12 @@ function detectTopLevel(content){
     
     
     //alert(idnode);
-  let url2 = protocol+"//"+hostname+"/rest/localizationList/"+idnode;
+    console.log("je suis host" + hostname);
+    if(hostname==="localhost"){ 
+      var url2 = protocol+"//"+hostname+"/digitalcms9/rest/localizationList/"+idnode;
+    }else{
+    var url2 = protocol+"//"+hostname+"/rest/localizationList/"+idnode;  
+  }
   console.log(url2);
 
   fetch(url2).then((response)=>
@@ -187,49 +198,37 @@ function detectTopLevel(content){
 
         //Detecton le toplevel
         tabtoplevelexcel = detectTopLevel(translation.Translation);
-        console.log("Result detect toplevel");
-        console.log(tabtoplevelexcel);
 
-        if(tabtoplevelexcel[1] !== undefined ){
-          excelsubmodule = tabtoplevelexcel[1].toLowerCase();
-          excelregexb = new RegExp(`<${excelsubmodule}.*?>.*?<\/${excelsubmodule}>`, "g");
-        }else excelsubmodule = null;
         excelmodule = tabtoplevelexcel[0].toLowerCase();
-        excelregexa = new RegExp(`<${excelmodule}.*?>.*?<\/${excelmodule}>`, "g");
-        /*
+        excelsubmodule = tabtoplevelexcel[1].toLowerCase();
+
         console.log("---------------------------");
         console.log("Top 1 "+excelmodule);
         console.log("Top 2"+excelsubmodule);
         console.log("---------------------------");
-        console.log(excelregexb);
-        */
-        var smssplit = getSMS(translation.Translation);
-        console.log("Translation Content");
-        console.log(translation.Translation);
-        for(k=0; k<translation.Translation.match(excelregexa).length; k++){
-          for(i=0; i<smssplit.length; i++){
-            if(excelsubmodule === null){
-              console.log("cas pas de submodule");
-              console.log(translation.Translation.match(excelregexa));
-              items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[k].replace(regex, ""),,smssplit[i]]);
-            }else {
-              console.log("cas submodule");
-              items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[0].replace(regex, ""),translation.Translation.match(excelregexb)[0].replace(regex, ""),smssplit[i]]);
-            }
-          }
-      }
 
+        excelregexa = new RegExp(`<${excelmodule}.*?>.*?<\/${excelmodule}>`, "g")
+        excelregexb = new RegExp(`<${excelsubmodule}.*?>.*?<\/${excelsubmodule}>`, "g")
+        
+        var smssplit = getSMS(translation.Translation);
+        for(i=0; i<smssplit.length; i++){
+          if(excelsubmodule == null){
+            items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[0].replace(regex, ""),,smssplit[i]]);
+          }else {
+            items2.push([translation.Cours,translation.language,translation.Channel,translation.Translation.match(excelregexa)[0].replace(regex, ""),translation.Translation.match(excelregexb)[0].replace(regex, ""),smssplit[i]]);
+          }
+          
+        }
         window.localStorage.setItem('filename', translation.Cours+"_translation");
       }
     //  console.log(items2);
       var filename2 = window.localStorage.getItem('filename');
       const xls = new XlsExport(items2, "monexcel");
       xls.exportToXLS(filename2);
-      window.localStorage.removeItem('filename');
+      window.localStorage.removeItem(filename);
 
-    }).catch(console.log("No translation"))
-    
-  );
+    })
+  );                                              
   
   });
 
@@ -475,19 +474,14 @@ jQuery('form#views-exposed-form-list-of-content-page-1').( function(){
 
 jQuery(document).ready(function () {
 
+ // jQuery("article .node-content p").append('<i class="fa fa-trash-o button-delete-section" aria-hidden="true"></i>')
   jQuery('.module-title').removeClass('course-content')
 
    jQuery('article .node-content .module-title').append('<svg class="svg-inline--fa fa-chevron-down fa-w-14 expand-minimize-button text-light text-xl font-thin text-gray-400" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>');
 
  // var payspardefaut = jQuery("h6.country-of-userlog").text();
  // jQuery('select#edit-field-pays-teste-value option:contains('+payspardefaut+')').prop('selected',true); 
-  jQuery('.course-content').hide();
-  
-  //var payspardefaut = jQuery("h6.country-of-userlog").text();
-  //jQuery('select#edit-field-pays-teste-value option:contains('+payspardefaut+')').prop('selected',true); 
-
-  jQuery('#edit-field-descriptioncontent-wrapper label').val('Update description');
-
+  jQuery('.course-content , .video-embed-field-responsive-video').hide();
   jQuery('form').attr('autocomplete', 'off');
   jQuery('form#comment-form textarea ').attr('placeholder', 'Type a comment...✍️');
   jQuery('li.comment-add').remove();
@@ -531,7 +525,7 @@ jQuery(document).ready(function () {
 
     jQuery("div#block-views-block-list-localization-block-1 .show-message  span.message-etat").each(function () {
 
-       if(jQuery(this).text()=='Submit for review' || jQuery(this).text()=='Submit for review'){
+       if(jQuery(this).text()=='Pending' || jQuery(this).text()=='Pending'){
 
          jQuery(this).addClass('statesubmiteforreviw').text('Pending');
        }
@@ -685,7 +679,6 @@ jQuery(document).ready(function () {
   */
 
   //content completion ----------------  
-//content completion ----------------  
 
   //nombre de message traduit
  // var nombredemessagetraduit = parseInt((jQuery('div#block-views-block-completionnbtraduction-block-1 header').text()));
@@ -741,8 +734,9 @@ jQuery(document).ready(function () {
     jQuery('p.tw-font-bold.tw-text-5xl.tw-text-center.tw-my-3.tw-text-red-600.tw-translations-indicator').html('0 %');
   }
 
-  //Dasboard 
 
+  //Dasboard old 
+/*
   let cours = (jQuery('div#block-views-block-cardnbcours-block-1 header').text());
 
   jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
@@ -758,6 +752,8 @@ jQuery(document).ready(function () {
 
   locationRate = parseInt((totalenombremessagelocalized * 100) / (messagesimpe * nblangueused));
   jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(locationRate + '%');
+
+*/
 
   //console.log(totalenombremessagelocalized);
 
@@ -858,7 +854,15 @@ function detectTopLevel(content){
 //Detectons Top Level du contenu
     var tabtoplevel = detectTopLevel(description);
     tagmodule = tabtoplevel[0].toLowerCase();
-    tagsubmodule = tabtoplevel[1].toLowerCase();
+
+    console.log(tabtoplevel[1]);
+
+    if(tabtoplevel[1] ===undefined){
+      
+    }else{
+    var tagsubmodule = tabtoplevel[1].toLowerCase();
+  }
+    
 
     console.log("top level 1 "+tagmodule);
     console.log("top level 2 "+tagsubmodule);
@@ -884,7 +888,6 @@ function detectTopLevel(content){
             items.push([,,element.match(/.{1,160}/g)]);
           }
   });
-
   //console.table(items);
 
     jQuery(this).removeClass("tw-bg-blue-500");
@@ -1022,14 +1025,23 @@ function detectTopLevel(content){
 
         
 
-        jQuery('.contentent-preview-good-format').find('*').addClass('course-content');
-        var ckedi = jQuery('.contentent-preview-good-format').html();
+     jQuery('.contentent-preview-good-format').find('*').addClass('course-content');
+     var ckedi = jQuery('.contentent-preview-good-format').html();
+     var ck2 =   jQuery(".module-title span:nth-last-of-type(1)").remove()
+  //   console.log('===================Debut ck 2===================')
+    // console.log(ck2)
+
         CKEDITOR.instances['edit-body-0-value'].setData(ckedi);
-        
-
-     
-
       });
+
+     //remove all p 
+
+      jQuery('p').each(function() {
+        var $this = jQuery(this);
+        if($this.html().replace(/\s|&nbsp;/g, '').length == 0) {
+            $this.remove();
+        }
+    });
 
     
   
@@ -1049,7 +1061,7 @@ function detectTopLevel(content){
   });
   
   
-    jQuery('#edit-field-localization-channel').change(function() {
+  jQuery('#edit-field-localization-channel').change(function() {
   
     let channel=jQuery( "#edit-field-localization-channel option:selected" ).text();
   
@@ -1087,7 +1099,7 @@ function detectTopLevel(content){
 
   }
 
-  if (moderationstate == 'Submit for review') {
+  if (moderationstate == 'Pending') {
     jQuery('a.moderationStateButton.submit').remove();
     jQuery('a.moderationStateButton.sforreview').remove();
     jQuery('a.moderationStateButton.rsubmit').remove();
@@ -1154,7 +1166,7 @@ function detectTopLevel(content){
 
   });
 
-  // Expand switch for one single learning module  new
+  /* Expand switch for one single learning module  new
   jQuery('.blockmodule-titre-module').click(function () {
     //console.log(this);
 
@@ -1164,26 +1176,33 @@ function detectTopLevel(content){
 
   });
 
+  */
+
   var acc = document.getElementsByClassName("module-title");
   var i;
   
   for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      
+    acc[i].addEventListener("click", function() {  
     var chevronbi = this.lastChild
+
+   // jQuery('module-title p').remove();
     //console.log(chevronbi)
   //jQuery(chevronbi).toggleClass('tranfromnation-chevreon');
   // this.childNodes.classList.toggle("tranfromnation-chevreon")
 
        panel = this.nextElementSibling;
         if (panel.style.display === "block") {
-          panel.style.display = "none";
-  jQuery(chevronbi).removeClass('tranfromnation-chevreon');
+          
+panel.style.display = "none";
+jQuery(chevronbi).removeClass('tranfromnation-chevreon');
+
          
          // jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
         } else {
-          panel.style.display = "block";
-  jQuery(chevronbi).addClass('tranfromnation-chevreon');
+          
+panel.style.display = "block";
+jQuery(chevronbi).addClass('tranfromnation-chevreon');
+jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tranfromnation-chevreon");
 
         //  jQuery('.svg-inline--fa.fa-w-14').addClass('tranfromnation-chevreon');
 
@@ -1195,12 +1214,15 @@ function detectTopLevel(content){
      //   console.log(panel)
         if (panel.style.display === "block") {
   jQuery(chevronbi).removeClass('tranfromnation-chevreon');
-        
+  
           panel.style.display = "none";
        //  jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
         } else {
+          
           panel.style.display = "block";
   jQuery(chevronbi).addClass('tranfromnation-chevreon');
+jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tranfromnation-chevreon");
+
 
         //  jQuery('.svg-inline--fa.fa-w-14').addClass('tranfromnation-chevreon');
 
@@ -1212,7 +1234,12 @@ function detectTopLevel(content){
 
 
 
-
+  jQuery('p').each(function() {
+    var $this = jQuery(this);
+    if($this.html().replace(/\s|&nbsp;/g, '').length == 0) {
+        $this.remove();
+    }
+});
 
 
 
@@ -1229,12 +1256,12 @@ function detectTopLevel(content){
     if(expand == "Expand all"){
       jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Minimize')
       jQuery('.svg-inline--fa.fa-w-14').addClass('tranfromnation-chevreon');
-      jQuery('.course-content').show();
+      jQuery('.course-content').show(600);
     }else{
       jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Expand all')
     
       jQuery('.svg-inline--fa.fa-w-14').removeClass('tranfromnation-chevreon');
-      jQuery('.course-content').hide();
+      jQuery('.course-content').hide(600);
 
     }
   //  expand == "Expand all" ? jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Minimize') : jQuery('span.expandalle-minimizeall-button.cursor-pointer').text('Expand all')
@@ -1265,7 +1292,9 @@ function detectTopLevel(content){
   notefounddasbord == " The requested page could not be found. " ? jQuery('div#block-tailwindcss-content').text('') : jQuery('div#block-tailwindcss-content').removeClass('hidenotefoundasbord');
 
   // jQuery('.a.use-ajax').hide();
-  jQuery('<h1 class="titre-cms-translation"> CONTENT MANAGEMENT AND ADAPTATION PLATFORM </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name');
+ // jQuery('<h1 class="titre-cms-translation"> CONTENT MANAGEMENT AND ADAPTATION PLATFORM </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name');
+
+  jQuery('<h1 class="titre-cms-translation"> Digital content management and translation system </h1>').insertBefore('.js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name');
   jQuery('<i class="fa fa-fw fa-user"></i>').insertBefore('input#edit-name');
   jQuery('<i class="fa fa-fw fa-lock"></i>').insertBefore('input#edit-pass');
   //jQuery('a.use-ajax').prepend('<i class="fas fa-plus-square"></i>');
@@ -1283,38 +1312,14 @@ function detectTopLevel(content){
 
 
 
+  formcomment = jQuery('.node-content section').html();
+  jQuery(formcomment).insertBefore('div#block-views-block-listcomments-block-1');
 
-  //bar chart
-
-
-  const labelsBarChart = [
-    'Content',
-    'Localizations',
-    'Messages',
-    'Messages translated'
-  ];
-  const dataBarChart = {
-    labels: labelsBarChart,
-    datasets: [{
-      label: 'Dataset Content management and adaption platform',
-      backgroundColor: '#36B1B4',
-      borderColor: '#36B1B4',
-      //data: [ cours, modulesdecourse, messagesimpetranslate, modulesdecourse ],
-      data: [10, 39, 50, 60]
-    }]
-  };
-
-  const configBarChart = {
-    type: 'bar',
-    data: dataBarChart,
-    options: {}
-  };
+ 
 
 
-  var chartBar = new Chart(
-    document.getElementById('chartBar'),
-    configBarChart
-  );
+
+
 
   jQuery('.module-section').each(function () {
 
@@ -1326,5 +1331,69 @@ function detectTopLevel(content){
   });
 
 
+
+
+
+
 });
+
+
+
+  //bar chart
+  jQuery("div#block-views-block-cardnbcours-block-1").ready(function(){
+
+
+
+    let cours = (jQuery('div#block-views-block-cardnbcours-block-1 header').text());
+  console.log(cours)
+    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
+    let messagesimpe = (jQuery('div#block-views-block-cardnbmessage-block-1 header').text());
+    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messages').html(messagesimpe);
+    let messagesimpetranslate = (jQuery('div#block-views-block-cardnbmessagetranslated-block-1 header').text());
+    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(messagesimpetranslate);
+  
+    var nblangueused = jQuery('#block-views-block-cardnblangue-block-1 h3 a').length;
+    jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(nblangueused);
+    console.log(nblangueused)
+    let totaleoftranlationcours = jQuery('div#block-views-block-cardnbmessagelocalized-block-1 header').text();
+    console.log(totaleoftranlationcours)
+
+    locationRate = parseInt((totaleoftranlationcours * 100) / (cours * nblangueused));
+    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(locationRate + '%');
+  
+      const labelsBarChart = [
+        'Courses',
+        'Messages',
+        'Languages localization',
+        'Localization Rate'
+      ];
+      const dataBarChart = {
+        labels: labelsBarChart,
+        datasets: [{
+          label: 'Dataset Content management and adaption platform',
+          backgroundColor: '#36B1B4',
+          borderColor: '#36B1B4',
+          data: [ cours, messagesimpe, nblangueused, locationRate ],
+         // data: [10, 39, 50, 60]
+        }]
+      };
+    
+      const configBarChart = {
+        type: 'bar',
+        data: dataBarChart,
+        options: {}
+      };
+    
+    
+      var chartBar = new Chart(
+        document.getElementById('chartBar'),
+        configBarChart
+        
+      );
+     
+  
+    
+  
+      
+    });
 
