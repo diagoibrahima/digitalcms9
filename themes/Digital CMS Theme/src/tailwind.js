@@ -456,7 +456,6 @@ document.getElementById('edit-field-localization-langue').addEventListener('chan
 });
 
 
-
 //jQuery('select#edit-field-localization-langue option:contains("French")').prop('selected',true); 
 
 });
