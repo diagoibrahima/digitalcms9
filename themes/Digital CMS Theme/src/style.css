@@ -4207,4 +4207,13 @@ form#views-exposed-form-list-localization-block-1 input {
     padding: 0px !important;
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  div#block-views-block-dasbord-view-block-1:before {
+    content: '';
+    background: #f3f4f6;
+    top: -65px;
+    position: absolute;
+  }
+}
 /*# sourceMappingURL=style.css.map */

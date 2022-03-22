@@ -4068,6 +4068,15 @@ aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
 
 @media screen and (min-width: 768px ) and (max-width:1024px) {
 
+  div#block-views-block-dasbord-view-block-1:before {
+    content: '';
+    background: #f3f4f6;
+    top: -65px;
+    position: absolute;
+}
+
+
+
 }
 //media query for mobil
 
