@@ -4083,5 +4083,32 @@ aside.md\:tw-w-1\/4.tw-p-4.tw-bg-green-500.tw-text-white.tw-font-semibold {
 
 @media screen and (min-width:480px ) and (max-width:700spx) {
 
+form#views-exposed-form-list-localization-block-1 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: -20px 0px 20px;
+  width: 30%;
+
+  select#edit-moderation-state {
+    background: none;
+    border: solid 1px #2995c3;
+    border-radius: 5px;
+    padding: 5px;
+    color: #2995c3;
 }
 
+input {
+  padding: 5px;
+  background: #2995c3;
+  color: white;
+  line-height: 1.5;
+  border-radius: 5px;
+  margin: 0px 5px;
+  border: solid 1px #2995c3;
+}
+
+
+
+}
+}

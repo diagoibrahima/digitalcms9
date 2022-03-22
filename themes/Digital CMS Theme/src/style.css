@@ -3854,6 +3854,7 @@ form#views-exposed-form-list-localization-block-1 {
           align-items: center;
   position: relative;
   margin: -20px 0px 20px;
+  width: 30%;
 }
 
 form#views-exposed-form-list-localization-block-1 select#edit-moderation-state {
@@ -4214,6 +4215,36 @@ form#views-exposed-form-list-localization-block-1 input {
     background: #f3f4f6;
     top: -65px;
     position: absolute;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 700spx) {
+  form#views-exposed-form-list-localization-block-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    margin: -20px 0px 20px;
+    width: 30%;
+  }
+  form#views-exposed-form-list-localization-block-1 select#edit-moderation-state {
+    background: none;
+    border: solid 1px #2995c3;
+    border-radius: 5px;
+    padding: 5px;
+    color: #2995c3;
+  }
+  form#views-exposed-form-list-localization-block-1 input {
+    padding: 5px;
+    background: #2995c3;
+    color: white;
+    line-height: 1.5;
+    border-radius: 5px;
+    margin: 0px 5px;
+    border: solid 1px #2995c3;
   }
 }
 /*# sourceMappingURL=style.css.map */
