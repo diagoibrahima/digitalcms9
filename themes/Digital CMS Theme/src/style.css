@@ -1056,8 +1056,8 @@ form#user-login-form:after {
   border-radius: 5px !important;
   line-height: 3;
   text-align: center;
-  width: 17vw;
-  right: 2%;
+  width: 22vw;
+  right: 10%;
   z-index: 10;
   margin: 20px 22px;
   position: relative;
@@ -3957,9 +3957,6 @@ form#views-exposed-form-list-localization-block-1 input {
     position: relative !important;
     top: 10px !important;
     display: block !important;
-  }
-  .dialog-off-canvas-main-canvas .add-translation {
-    width: 19vw !important;
   }
   div#block-views-block-languagesmstranslation-block-1 {
     margin: 30px 2rem !important;
