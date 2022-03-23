@@ -1393,8 +1393,8 @@ jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tra
     //chart
       const labelsBarChart = [
         'Courses',
-        'Messages',
-        'Languages localization',
+        'Translations',
+        'Languages',
         'Localization Rate'
       ];
       const dataBarChart = {
@@ -1403,7 +1403,7 @@ jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tra
           label: 'Dataset Content management and adaption platform',
           backgroundColor: '#36B1B4',
           borderColor: '#36B1B4',
-          data: [ cours, messagesimpe, nblangueused, locationRate ],
+          data: [ cours, totaleoftranlationcours, nblangueused, locationRate ],
          // data: [10, 39, 50, 60]
         }]
       };
