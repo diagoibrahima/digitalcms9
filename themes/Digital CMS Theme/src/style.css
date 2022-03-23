@@ -3821,7 +3821,69 @@ svg.svg-inline--fa.fa-trash-alt.fa-w-14:hover {
   margin: 50px auto;
 }
 
+div#block-views-block-moreinfosuser-block-1 {
+  width: 50%;
+  background: white;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.js-form-item.form-item.js-form-type-select.form-item-field-payslocalisation.js-form-item-field-payslocalisation {
+  display: none;
+}
+
+.js-form-item.form-item.js-form-type-select.form-item-field-payscontent.js-form-item-field-payscontent {
+  display: none;
+}
+
+nav#block-digitalcmsmenuuserreviwer {
+  margin: 10px;
+}
+
+nav#block-digitalcmsmenuuserreviwer li {
+  padding: 5px;
+}
+
+form#views-exposed-form-list-localization-block-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin: -20px 0px 20px;
+  width: 30%;
+}
+
+form#views-exposed-form-list-localization-block-1 select#edit-moderation-state {
+  background: none;
+  border: solid 1px #2995c3;
+  border-radius: 5px;
+  padding: 5px;
+  color: #2995c3;
+}
+
+form#views-exposed-form-list-localization-block-1 input {
+  padding: 5px;
+  background: #2995c3;
+  color: white;
+  line-height: 1.5;
+  border-radius: 5px;
+  margin: 0px 5px;
+  border: solid 1px #2995c3;
+}
+
 @media screen and (min-width: 1900px) and (max-width: 7680px) {
+  .tw-p-3 {
+    padding: 0.75rem !important;
+    margin: 15px -20px !important;
+    text-align: center;
+    width: 100% !important;
+    -webkit-box-shadow: 1px 1px 6px #2316161a;
+    box-shadow: 1px 1px 6px #2316161a;
+  }
   div#block-views-block-contenttotranslate-block-1 {
     width: 47% !important;
     margin: 28px 2% 190px !important;
@@ -4080,8 +4142,8 @@ svg.svg-inline--fa.fa-trash-alt.fa-w-14:hover {
   .tw-p-3 {
     padding: 0.75rem !important;
     text-align: center !important;
-    width: 92% !important;
-    margin: 15px 0px !important;
+    width: 100% !important;
+    margin: 15px -10px !important;
     -webkit-box-shadow: 1px 1px 6px #2316161a !important;
     box-shadow: 1px 1px 6px #2316161a !important;
   }
@@ -4147,56 +4209,42 @@ svg.svg-inline--fa.fa-trash-alt.fa-w-14:hover {
   }
 }
 
-div#block-views-block-moreinfosuser-block-1 {
-  width: 50%;
-  background: white;
-  margin: auto;
-  padding: 10px;
-  border-radius: 5px;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  div#block-views-block-dasbord-view-block-1:before {
+    content: '';
+    background: #f3f4f6;
+    top: -65px;
+    position: absolute;
+  }
 }
 
-.js-form-item.form-item.js-form-type-select.form-item-field-payslocalisation.js-form-item-field-payslocalisation {
-  display: none;
-}
-
-.js-form-item.form-item.js-form-type-select.form-item-field-payscontent.js-form-item-field-payscontent {
-  display: none;
-}
-
-nav#block-digitalcmsmenuuserreviwer {
-  margin: 10px;
-}
-
-nav#block-digitalcmsmenuuserreviwer li {
-  padding: 5px;
-}
-
-form#views-exposed-form-list-localization-block-1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-  margin: -20px 0px 20px;
-}
-
-form#views-exposed-form-list-localization-block-1 select#edit-moderation-state {
-  background: none;
-  border: solid 1px #2995c3;
-  border-radius: 5px;
-  padding: 5px;
-  color: #2995c3;
-}
-
-form#views-exposed-form-list-localization-block-1 input {
-  padding: 5px;
-  background: #2995c3;
-  color: white;
-  line-height: 1.5;
-  border-radius: 5px;
-  margin: 0px 5px;
-  border: solid 1px #2995c3;
+@media screen and (min-width: 480px) and (max-width: 700spx) {
+  form#views-exposed-form-list-localization-block-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    margin: -20px 0px 20px;
+    width: 30%;
+  }
+  form#views-exposed-form-list-localization-block-1 select#edit-moderation-state {
+    background: none;
+    border: solid 1px #2995c3;
+    border-radius: 5px;
+    padding: 5px;
+    color: #2995c3;
+  }
+  form#views-exposed-form-list-localization-block-1 input {
+    padding: 5px;
+    background: #2995c3;
+    color: white;
+    line-height: 1.5;
+    border-radius: 5px;
+    margin: 0px 5px;
+    border: solid 1px #2995c3;
+  }
 }
 /*# sourceMappingURL=style.css.map */
