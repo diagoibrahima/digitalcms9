@@ -26,7 +26,7 @@ RUN mv ${PHP_INI_DIR}/php.ini-production ${PHP_INI_DIR}/php.ini \
 
 COPY ./docker/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 
-COPY ./docker/nginx-block.conf /etc/nginx/sites-available/default 
+COPY ./docker/nginx-default.conf /etc/nginx/sites-available/default 
 
 COPY . /var/www/digitalcms9/
 
