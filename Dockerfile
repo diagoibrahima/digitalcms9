@@ -44,5 +44,6 @@ RUN curl -sS https://getcomposer.org/installer -o composer-setup.php \
     && rm -rf /var/cache/apk/*
 
 CMD ["php-fpm"]
+CMD ["nginx", "-g", "daemon off;"]
 
 EXPOSE 80
