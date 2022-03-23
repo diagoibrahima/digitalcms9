@@ -43,7 +43,7 @@ RUN curl -sS https://getcomposer.org/installer -o composer-setup.php \
     && rm -rf /tmp/pear \
     && rm -rf /var/cache/apk/*
 
-CMD ["php-fpm"]
+CMD ["php-fpm", "-D"]
 CMD ["nginx", "-g", "daemon off;"]
 
 EXPOSE 80
