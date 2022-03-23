@@ -1420,10 +1420,6 @@ jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tra
         configBarChart
         
       );
-     
-  
-    
-  
       
     });
 
