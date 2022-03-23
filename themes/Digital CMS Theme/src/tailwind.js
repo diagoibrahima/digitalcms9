@@ -152,12 +152,15 @@ if(hostname==="localhost"){
 
 // Function detect tops levels
 function detectTopLevel(content){
-  regex = /<h[1-6].*>.*<\/h[1-6]>/g
+  regexfirst = /<h[1-6].*>.*<\/h[1-6]>/g
   header_tags = [];
-  header_tags_populated = content.match(regex);
-  
-  for(i=0; i < header_tags_populated.length; i++){
-    header_tags.push(jQuery(header_tags_populated[i]).get(0).tagName);
+  header_tags_populated = content.match(regexfirst);
+
+  console.log("-------------------header_tags_populated----------------------");
+  console.log(header_tags_populated.length);
+
+  for(v=0; v < header_tags_populated.length; v++){
+    header_tags.push(jQuery(header_tags_populated[v]).get(0).tagName);
   }
   header_tags = [...new Set(header_tags)];
   header_tags.sort(); 
@@ -183,8 +186,15 @@ function detectTopLevel(content){
     
     
     //alert(idnode);
-  let url2 = protocol+"//"+hostname+"/rest/localizationList/"+idnode;
-  console.log(url2);
+
+  //alert(idnode);
+console.log("je suis host" + hostname);
+if(hostname==="localhost"){
+var url2 = protocol+"//"+hostname+"/digitalcms9/rest/localizationList/"+idnode;
+}else{
+var url2 = protocol+"//"+hostname+"/rest/localizationList/"+idnode;
+}
+console.log(url2);
 
   fetch(url2).then((response)=>
     response.json().then((data)=>{
@@ -1354,22 +1364,33 @@ jQuery(".bodyContentToTranslate .module-title .course-content").removeClass("tra
 
 
     let cours = (jQuery('div#block-views-block-cardnbcours-block-1 header').text());
-  console.log(cours)
-    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
-    let messagesimpe = (jQuery('div#block-views-block-cardnbmessage-block-1 header').text());
-    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messages').html(messagesimpe);
-    let messagesimpetranslate = (jQuery('div#block-views-block-cardnbmessagetranslated-block-1 header').text());
-    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(messagesimpetranslate);
+    if(cours===""){
+      jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html("0");
+    }else jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Cours').html(cours);
   
-    var nblangueused = jQuery('#block-views-block-cardnblangue-block-1 h3 a').length;
-    jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(nblangueused);
-    console.log(nblangueused)
     let totaleoftranlationcours = jQuery('div#block-views-block-cardnbmessagelocalized-block-1 header').text();
     console.log(totaleoftranlationcours)
 
+    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messages').html(totaleoftranlationcours);
+
+    //let messagesimpe = (jQuery('div#block-views-block-cardnbmessage-block-1 header').text());
+   // jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messages').html(messagesimpe);
+
+    let messagesimpetranslate = (jQuery('div#block-views-block-cardnbmessagetranslated-block-1 header').text());
+    jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(messagesimpetranslate);
+  
+    var nblangueused = jQuery('#block-views-block-cardnblangue-block-1 header').text();
+    jQuery('span.rounded-full.text-white.badge.bg-red-400.text-xs.Module').html(nblangueused);
+    //console.log(nblangueused)
+  
+
     locationRate = parseInt((totaleoftranlationcours * 100) / (cours * nblangueused));
+    if (isNaN(locationRate)) { locationRate = 0; }
     jQuery('span.rounded-full.text-white.badge.bg-teal-400.text-xs.Messagestranslated').html(locationRate + '%');
   
+
+
+    //chart
       const labelsBarChart = [
         'Courses',
         'Messages',
