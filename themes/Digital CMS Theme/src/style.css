@@ -4244,4 +4244,12 @@ form#views-exposed-form-list-localization-block-1 input {
     border: solid 1px #2995c3;
   }
 }
+
+nav#block-digitalcmsmenueditorendreviewer ul {
+  margin: 15px;
+}
+
+nav#block-digitalcmsmenueditorendreviewer li {
+  margin: 10px;
+}
 /*# sourceMappingURL=style.css.map */
