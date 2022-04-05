@@ -4209,7 +4209,7 @@ p.tw-rounded.tw-bg-red-100.tw-border.tw-border-red-500.tw-text-gray-800.p-1 {
 
 .dialog-off-canvas-main-canvas .breadcum {
   margin: 20px auto;
-  margin-left: 5%;
+  margin-left: 2%;
   color: #4b5366;
   font-size: 12px;
 }
@@ -4282,13 +4282,141 @@ div#block-views-block-list-localization-block-1 .horizontal {
    .contentent-preview-good-format .node-content p ,.DescriptioncontentValue{
   font-size: 10px;
 }
-label.js-form-required.form-required , .tilteconteValue , .live-preveiw-section .livepreview-content , .js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label{
+label.js-form-required.form-required , .tilteconteValue , .live-preveiw-section .livepreview-content , .js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label , label{
   font-size: 12px;
 }
 
 
 .tw-h-16 {
   height: 2rem!important;
+}
+
+.node-content-form, form#node-content-edit-form {
+  width: 45%;
+  margin: 5% 1%;
+  position: absolute;
+  top: 25px;
+}
+
+.js-form-item.form-item.js-form-type-textarea.form-item-field-descriptioncontent-0-value.js-form-item-field-descriptioncontent-0-value label {
+  cursor: pointer;
+  font-size: 12px;
+}
+
+input#edit-submit {
+  font-size: 10px !important;
+}
+
+.messageduformat-texteformat {
+  font-size: 9px !important;
+}
+.tw-item-card {
+  height: 90px;
+}
+
+.etattranslation {
+  background-color: gray;
+  color: white;
+  border-radius: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: small;
+  font-size: 12px;
+}
+
+#block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-titre-content {
+  font-size: 12px;
+  color: #1391c1;
+}
+#block-views-block-languagesmstranslation-block-1 .views-field.views-field-field-descriptino-content {
+  font-size: 10px;
+}
+
+div#block-views-block-languagesmstranslation-block-1 {
+  width: 68%;
+  margin: 0px 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 6px #2316161a !important;
+  box-shadow: 1px 1px 6px #2316161a !important;
+}
+input#edit-submit--2 {
+  background: #52627273 !important;
+  width: 90% !important;
+  margin-left: 7px;
+  margin-top: 0px;
+  font-size: 12px;
+  border-radius: 5px !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: white;
+}
+
+.no-comment {
+  font-size: 10px;
+}
+
+div#block-views-block-listcomments-block-1 {
+  margin: 20px 20px 0px 20px;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  line-height: 3;
+  width: 76%;
+  color: #575757;
+  -webkit-transition: 1s;
+  transition: 1s;
+  max-height: 330px;
+  overflow-y: auto;
+}
+
+article.node {
+  margin: 10px;
+  background: white;
+  -webkit-box-shadow: 1px 1px 6px #2316161a;
+  box-shadow: 1px 1px 6px #2316161a;
+  border-radius: 5px;
+  padding: 15px;
+  width: 68%;
+  position: relative !important;
+  display: block !important;
+}
+
+div#block-views-block-activityloglovalization-block-1 .tw-p-3 {
+  padding: 0.75rem !important;
+  margin: 1.3rem 1rem 0rem -1.3rem !important;
+  text-align: center;
+  -webkit-box-shadow: 1px 1px 6px #2316161a;
+  box-shadow: 1px 1px 6px #2316161a;
+}
+
+div#block-views-block-listcomments-block-1 {
+  margin: 20px 0px 0px -20px;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  line-height: 3;
+  width: 100%;
+  color: #575757;
+  -webkit-transition: 1s;
+  transition: 1s;
+  max-height: 330px;
+  overflow-y: auto;
+}
+form#comment-form:before {
+  content: '';
+  background: #f3f4f6;
+  position: absolute;
+  height: 31px;
+  width: 100%;
+  margin: -34px 10px;
+}
+
+a#pdflink {
+  margin: 0px 13px;
 }
 
 }
