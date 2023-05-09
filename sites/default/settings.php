@@ -793,55 +793,27 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  */
 #
 
-if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-  include $app_root . '/' . $site_path . '/settings.local.php';
-}
+//if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+//  include $app_root . '/' . $site_path . '/settings.local.php';
+//}
 
+// Let's use environment variables to configure drupal database connection
 
- //BD en 
-/*
-$databases['default']['default'] = array (
-  'database' => 'dev_drupal_lms',
-  'username' => 'dev_drupal_lms',
-  'password' => 'dev_drupal_lms',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-*/
+$host= isset(getenv("DRUPAL_DATABASE_HOST")) ?? getenv("DRUPAL_DATABASE_PORT") : "localhost";
+$dbport= isset(getenv("DRUPAL_DATABASE_PORT")) ?? getenv("DRUPAL_DATABASE_PORT") : "3306";
+$dbName= isset(getenv("DRUPAL_DATABASE_NAME")) ?? getenv("DRUPAL_DATABASE_PORT") : "digitalcms";
+$dbUser= isset(getenv("DRUPAL_DATABASE_USERNAME")) ?? getenv("DRUPAL_DATABASE_PORT") : "drupal";
+$dbPass= isset(getenv("DRUPAL_DATABASE_PASSWORD")) ?? getenv("DRUPAL_DATABASE_PORT") : "drupal";
 
-
-
-
-//BD en local 
-
-$databases['default']['default'] = array (
-  'database' => 'dev_drupal_lms_role_good',
-  'username' => 'root',
-  'password' => '',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);  
-
-
-//BD Preprod
-/*
  $databases['default']['default'] = array (
-  'database' => 'admin_test',
-  'username' => 'admin_test',
-  'password' => 'admin_test',
+  'database' => $dbName
+  'username' => $dbUser,
+  'password' => $dbPass,
   'prefix' => '',
-  'host' => 'drupal-dev-lms.wcar-t4d.info',
+  'host' => $host,
   'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );  
-*/
-
 
 $settings['config_sync_directory'] = 'sites/default/files/config_gPm33SuPxx6pVuIRBfdbEvgcvYFn3ygvCUzn45JtXwy20IJ_MkMorSDwfOfCKYuoyHXf2hRJgw/sync';

@@ -28,20 +28,27 @@ COPY ./docker/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 
 COPY ./docker/nginx-default.conf /etc/nginx/sites-available/default 
 
-COPY . /var/www/digitalcms9/
+COPY . /opt/digitalcms9/
 
-WORKDIR /var/www/digitalcms9
+ENV DRUPAL_VERSION 9.5.9
+
+WORKDIR /opt/digitalcms9
 
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php \
     && php composer-setup.php --install-dir=/usr/local/bin --filename=composer \
     && /usr/local/bin/composer install \
-    && chown -R www-data:www-data /var/www/digitalcms9 \
+    chown -R www-data:www-data && web/sites web/modules web/themes;
+    && rmdir /var/www/html \
+    && ln -sf /opt/digitalcms9 /var/www/html
+    && chown -R www-data:www-data /var/www/ \
     
     # POST RUN CLEAN
     && apt-get clean && rm -rf /var/lib/apt/lists/* \
     && docker-php-source delete \
     && rm -rf /tmp/pear \
     && rm -rf /var/cache/apk/*
+
+ENV PATH=${PATH}:/opt/digitalcms9/vendor/bin
 
 CMD ["php-fpm", "-D"]
 CMD ["nginx", "-g", "daemon off;"]
