@@ -39,9 +39,9 @@ RUN curl -sS https://getcomposer.org/installer -o composer-setup.php \
     && /usr/local/bin/composer install \
     chown -R www-data:www-data && web/sites web/modules web/themes;
     && rmdir /var/www/html \
-    && ln -sf /opt/digitalcms9 /var/www/html
+    && ln -sf /opt/digitalcms9 /var/www/html \
     && chown -R www-data:www-data /var/www/ \
-    
+
     # POST RUN CLEAN
     && apt-get clean && rm -rf /var/lib/apt/lists/* \
     && docker-php-source delete \
