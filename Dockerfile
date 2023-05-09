@@ -37,7 +37,7 @@ WORKDIR /opt/digitalcms9
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php \
     && php composer-setup.php --install-dir=/usr/local/bin --filename=composer \
     && /usr/local/bin/composer install \
-    && chown -R www-data:www-data web/sites web/modules web/themes \
+    && chown -R www-data:www-data /opt/digitalcms9 \
     && rmdir /var/www/html \
     && ln -sf /opt/digitalcms9 /var/www/html \
 
