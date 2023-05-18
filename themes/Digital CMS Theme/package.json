@@ -14,10 +14,9 @@
     "laravel-mix-purgecss": "^5.0.0-rc.1",
     "tailwindcss": "^1.9.6"
   },
+
   "devDependencies": {
     "glob-all": "^3.2.1"
   }
-
   
 }
-
